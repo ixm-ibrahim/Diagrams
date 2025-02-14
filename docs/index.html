@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Diagrams</title>
+  <title>Diagrams</title>
   <!-- Bulma CSS via CDN -->
   <link 
     rel="stylesheet" 
@@ -10,17 +10,39 @@
   
   <!-- Custom Styles -->
   <style>
-    /* A subtle neutral background color */
+    /* A subtle neutral background color 
     body {
-      background: #f8fafc; /* Off-white, slightly cool tone */
-    }
+      background: #f8fafc; /* Off-white, slightly cool tone **
+    }*/
 
-    /* If you prefer a background pattern, uncomment and use a pattern URL:
+    /* If you prefer a background pattern, uncomment and use a pattern URL:*/
     body {
-      background: #f8fafc url("https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble-outline.png");
+      background: #eef1f6 url("styles/double-bubble-outline.png") repeat;
       background-repeat: repeat;
     }
-    */
+  
+  
+    .hero {
+      background: linear-gradient(to bottom, #800000, #a52a2a); /* Maroon gradient */
+    }
+    /* Change the main title color 
+    .hero .title {
+      color: maroon !important;
+    }
+	.hero .subtitle {
+      color: maroon !important;
+    }
+	*/
+	
+    .title.main-title {
+      margin-bottom: 3rem !important; /* Force override Bulma's defaults */
+    }
+
+    /* Change the section headers to black */
+    h2.subtitle {
+      /*color: black !important;*/
+      /* font-weight: bold;  Optional: Make the headers bold to stand out more */
+    }
 
     /* Reduce bottom margin on headings */
     h2.subtitle,
@@ -32,16 +54,33 @@
     .content ul {
       margin-bottom: 1.5rem; 
     }
+  
+    /* Change list item link color to maroon */
+    .content a {
+      color: maroon !important;
+    }
+
+    /* On hover, slightly darken the maroon */
+    .content a:hover {
+      color: darkred !important;
+    }
   </style>
 </head>
 
 <body>
+ <!-- Main Title -->
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Diagrams</h1>
+        <h2 class="subtitle">Notes from my hobbies and studies</h2>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="content">
-
-        <!-- Main Title -->
-        <h1 class="title">Diagrams</h1>
 
         <!-- Arabic Section -->
         <h2 class="subtitle">
