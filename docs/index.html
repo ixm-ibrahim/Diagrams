@@ -3,175 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <title>Diagrams</title>
-  <!-- Bulma CSS via CDN -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  
-  <!-- Custom Styles -->
-  <style>
-    /* A subtle neutral background color 
-    body {
-      background: #f8fafc; /* Off-white, slightly cool tone **
-    }*/
-
-    /* If you prefer a background pattern, uncomment and use a pattern URL:*/
-    body {
-      background: #eef1f6 url("styles/double-bubble-outline.png") repeat;
-      background-repeat: repeat;
-    }
-  
-  
-    .hero {
-      background: linear-gradient(to bottom, #800000, #a52a2a); /* Maroon gradient */
-    }
-    /* Change the main title color 
-    .hero .title {
-      color: maroon !important;
-    }
-	.hero .subtitle {
-      color: maroon !important;
-    }
-	*/
-	
-    .title.main-title {
-      margin-bottom: 3rem !important; /* Force override Bulma's defaults */
-    }
-
-    /* Change the section headers to black */
-    h2.subtitle {
-      /*color: black !important;*/
-      /* font-weight: bold;  Optional: Make the headers bold to stand out more */
-    }
-
-    /* Reduce bottom margin on headings */
-    h2.subtitle,
-    h3.subtitle.is-4 {
-      margin-bottom: 0.5rem; 
-    }
-
-    /* Add extra margin below lists to separate them from the next heading */
-    .content ul {
-      margin-bottom: 1.5rem; 
-    }
-  
-    /* Change list item link color to maroon */
-    .content a {
-      color: maroon !important;
-    }
-
-    /* On hover, slightly darken the maroon */
-    .content a:hover {
-      color: darkred !important;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
- <!-- Main Title -->
-  <section class="hero is-info">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">Diagrams</h1>
-        <h2 class="subtitle">Notes from my hobbies and studies</h2>
+
+  <section class="banner">
+    <div class="banner-body">
+      <div class="wrapper">
+        <h1 class="main-heading">Diagrams</h1>
+        <h2 class="sub-heading">Notes from my hobbies and studies</h2>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="content">
+  <section class="main-content">
+    <div class="wrapper">
+      <div class="main-content">
 
         <!-- Arabic Section -->
-        <h2 class="subtitle">
-          <a href="Arabic/index.html" class="has-text-link">Arabic</a>
+        <h2 class="section-heading">
+          <a href="Arabic/index.html" class="black-link">Arabic</a>
         </h2>
         <ul>
-          <li><a href="Arabic/ArabicMap.html" class="has-text-primary">Arabic Map</a></li>
-          <li><a href="Arabic/ArabicMap_Planning_Notes.html" class="has-text-primary">Planning and Notes for the Arabic Map</a></li>
+          <li><a href="Arabic/ArabicMap.html" class="maroon-link">Arabic Map</a></li>
+          <li><a href="Arabic/ArabicMap_Planning_Notes.html" class="maroon-link">
+            Planning and Notes for the Arabic Map</a></li>
         </ul>
 
         <!-- Comparative Religion -->
-        <h2 class="subtitle">
-          <a href="Comparative%20Religion/index.html" class="has-text-link">Comparative Religion</a>
+        <h2 class="section-heading">
+          <a href="Comparative%20Religion/index.html" class="black-link">Comparative Religion</a>
         </h2>
         <ul>
-          <li><a href="Comparative%20Religion/Atheism.html" class="has-text-primary">Atheism</a></li>
-          <li><a href="Comparative%20Religion/Christianity.pdf" target="_blank" class="has-text-primary">Christianity (PDF)</a></li>
+          <li><a href="Comparative%20Religion/Atheism.html" class="maroon-link">
+            Atheism</a></li>
+          <li><a href="Comparative%20Religion/Christianity.pdf" target="_blank" class="maroon-link">
+            Christianity (PDF)</a></li>
         </ul>
 
         <!-- Qalam -->
-        <h2 class="subtitle">
-          <a href="Qalam/index.html" class="has-text-link">Qalam</a>
+        <h2 class="section-heading">
+          <a href="Qalam/index.html" class="black-link">Qalam</a>
         </h2>
         <ul>
-          <li><a href="Qalam/Fiqh_Year2.html" class="has-text-primary">Fiqh (Year 2)</a></li>
-          <li><a href="Qalam/Kitab%20ul-Buyu`_Year2.html" class="has-text-primary">Kitab ul-Buyu' (Year 2)</a></li>
+          <li><a href="Qalam/Fiqh_Year2.html" class="maroon-link">Fiqh (Year 2)</a></li>
+          <li><a href="Qalam/Kitab%20ul-Buyu`_Year2.html" class="maroon-link">
+            Kitab ul-Buyu' (Year 2)</a></li>
         </ul>
 
-        <!-- Images -->
-        <h1 class="title">Images</h1>
+        <!-- Images Heading -->
+        <h1 class="main-heading">Images</h1>
         <ul>
+
           <!-- Arabic Images -->
           <li>
-            <h3 class="subtitle is-4"><strong>Arabic</strong></h3>
+            <h3 class="minor-heading"><strong>Arabic</strong></h3>
             <ul>
-              <li><a href="Arabic/Images/Declensional Categories.png" target="_blank" class="has-text-primary">Declensional Categories</a></li>
-              <li><a href="Arabic/Images/Types of Isms.png" target="_blank" class="has-text-primary">Types of Isms (Incomplete)</a></li>
+              <li>
+                <a href="Arabic/Images/Declensional Categories.png" 
+                   target="_blank" 
+                   class="maroon-link">
+                  Declensional Categories
+                </a>
+              </li>
+              <li>
+                <a href="Arabic/Images/Types of Isms.png" 
+                   target="_blank" 
+                   class="maroon-link">
+                  Types of Isms (Incomplete)
+                </a>
+              </li>
             </ul>
           </li>
 
           <!-- Comparative Religion Images -->
           <li>
-            <h3 class="subtitle is-4"><strong>Comparative Religion</strong></h3>
+            <h3 class="minor-heading"><strong>Comparative Religion</strong></h3>
             <ul>
-              <li><a href="Comparative%20Religion/Images/Comparative%20Preservation.png" 
-                     target="_blank" class="has-text-primary">
+              <li>
+                <a href="Comparative%20Religion/Images/Comparative%20Preservation.png"
+                   target="_blank" 
+                   class="maroon-link">
                   Comparative Preservation (Islam vs. Christianity)
-              </a></li>
-              <li><a href="Comparative%20Religion/Images/God%20and%20Goodness%20-%20The Euthyphro%20Dilemma.png"
-                     target="_blank" class="has-text-primary">
+                </a>
+              </li>
+              <li>
+                <a href="Comparative%20Religion/Images/God%20and%20Goodness%20-%20The Euthyphro%20Dilemma.png"
+                   target="_blank" 
+                   class="maroon-link">
                   God and Goodness - The Euthyphro Dilemma
-              </a></li>
-              <li><a href="Comparative%20Religion/Images/Original%20Sin%20vs.%20Original%20Forgiveness.png" 
-                     target="_blank" class="has-text-primary">
+                </a>
+              </li>
+              <li>
+                <a href="Comparative%20Religion/Images/Original%20Sin%20vs.%20Original%20Forgiveness.png" 
+                   target="_blank" 
+                   class="maroon-link">
                   Original Sin vs. Original Forgiveness
-              </a></li>
-              <li><a href="Comparative%20Religion/Images/Relationship%20between%20Justice%20and%20Mercy.png" 
-                     target="_blank" class="has-text-primary">
+                </a>
+              </li>
+              <li>
+                <a href="Comparative%20Religion/Images/Relationship%20between%20Justice%20and%20Mercy.png" 
+                   target="_blank" 
+                   class="maroon-link">
                   Relationship between Divine Justice and Mercy
-              </a></li>
-              <li><a href="Comparative%20Religion/Images/St.%20Thomas%20Aquinas%20on%20Personhood.png"
-                     target="_blank" class="has-text-primary">
+                </a>
+              </li>
+              <li>
+                <a href="Comparative%20Religion/Images/St.%20Thomas%20Aquinas%20on%20Personhood.png"
+                   target="_blank" 
+                   class="maroon-link">
                   St. Thomas Aquinas on Personhood
-              </a></li>
-              <li><a href="Comparative%20Religion/Images/Steak%20and%20Fries%20for%20Islam.png" 
-                     target="_blank" class="has-text-primary">
+                </a>
+              </li>
+              <li>
+                <a href="Comparative%20Religion/Images/Steak%20and%20Fries%20for%20Islam.png" 
+                   target="_blank" 
+                   class="maroon-link">
                   Summary of Islam's Doctrinal Coherence over Christianity
-              </a></li>
-              <li><a href="Comparative%20Religion/Images/Steak%20and%20Fries%20vs.%20Christianity.png" 
-                     target="_blank" class="has-text-primary">
+                </a>
+              </li>
+              <li>
+                <a href="Comparative%20Religion/Images/Steak%20and%20Fries%20vs.%20Christianity.png" 
+                   target="_blank" 
+                   class="maroon-link">
                   Summary of Christianity's Doctrinal Inconsistencies Compared to Islam
-              </a></li>
+                </a>
+              </li>
             </ul>
           </li>
 
           <!-- Qalam Images -->
           <li>
-            <h3 class="subtitle is-4"><strong>Qalam</strong></h3>
+            <h3 class="minor-heading"><strong>Qalam</strong></h3>
             <ul>
-              <li><a href="Qalam/Images/Prayers.png" target="_blank" class="has-text-primary">Fard and Sunnah Prayers</a></li>
-              <li><a href="Qalam/Images/Hajj%20Vizualization.png" target="_blank" class="has-text-primary">Hajj Vizualization</a></li>
-              <li><a href="Qalam/Images/Kitab%20ul-Buyu`.png" target="_blank" class="has-text-primary">Kitab ul-Buyu (Summary)</a></li>
-              <li><a href="Qalam/Images/Fiqh%20-%20Prayer Visualization.png" target="_blank" class="has-text-primary">Prayer Visualization</a></li>
-              <li><a href="Qalam/Images/Scholarly%20Tree.png" target="_blank" class="has-text-primary">Scholarly Tree (Incomplete)</a></li>
-              <li><a href="Qalam/Images/True%20vs.%20False Dawn%20(Arabic,%20English).png" target="_blank" class="has-text-primary">True vs. False Dawn</a></li>
+              <li>
+                <a href="Qalam/Images/Prayers.png" 
+                   target="_blank" 
+                   class="maroon-link">
+                  Fard and Sunnah Prayers
+                </a>
+              </li>
+              <li>
+                <a href="Qalam/Images/Hajj%20Vizualization.png"
+                   target="_blank" 
+                   class="maroon-link">
+                  Hajj Vizualization
+                </a>
+              </li>
+              <li>
+                <a href="Qalam/Images/Kitab%20ul-Buyu`.png" 
+                   target="_blank" 
+                   class="maroon-link">
+                  Kitab ul-Buyu (Summary)
+                </a>
+              </li>
+              <li>
+                <a href="Qalam/Images/Fiqh%20-%20Prayer Visualization.png" 
+                   target="_blank" 
+                   class="maroon-link">
+                  Prayer Visualization
+                </a>
+              </li>
+              <li>
+                <a href="Qalam/Images/Scholarly%20Tree.png" 
+                   target="_blank" 
+                   class="maroon-link">
+                  Scholarly Tree (Incomplete)
+                </a>
+              </li>
+              <li>
+                <a href="Qalam/Images/True%20vs.%20False Dawn%20(Arabic,%20English).png" 
+                   target="_blank" 
+                   class="maroon-link">
+                  True vs. False Dawn
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
 
-      </div> <!-- /.content -->
-    </div> <!-- /.container -->
-  </section> <!-- /.section -->
+      </div> <!-- /.main-content -->
+    </div> <!-- /.wrapper -->
+  </section> <!-- /.page-section -->
 </body>
 </html>

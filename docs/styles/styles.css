@@ -1,0 +1,155 @@
+/****************************************************
+ * GLOBAL STYLES
+ ****************************************************/
+
+/* 
+   Body:
+   - Zero out default margin.
+   - Use a subtle pattern background (double-bubble-outline.png) 
+   - Light background color #eef1f6.
+*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef1f6 url("double-bubble-outline.png") repeat;
+  background-repeat: repeat;
+  padding: 0 10rem; /* Ensures content never touches screen edges */
+  box-sizing: border-box;
+}
+
+/* Ensures all containers, sections, and content have proper spacing */
+.wrapper,
+.page-section,
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Left & right padding */
+  box-sizing: border-box;
+}
+
+/****************************************************
+ * BANNER (Previously .hero in Bulma)
+ ****************************************************/
+
+/* 
+   .banner:
+   A full-width section with a maroon gradient background 
+   for the main heading & subtitle at the top.
+*/
+.banner {
+  background: linear-gradient(to bottom, #800000, #a52a2a);
+  padding: 2rem 1.5rem; /* vertical & horizontal spacing */
+  color: white;         /* ensure text is readable */
+}
+
+/* 
+   .banner-body:
+   An optional inner wrapper if you want 
+   any additional styling or spacing 
+   distinct from .banner.
+*/
+.banner-body {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+/****************************************************
+ * PAGE-SECTION (Previously .section in Bulma)
+ ****************************************************/
+
+.page-section {
+  padding: 2rem 1.5rem; 
+}
+
+/****************************************************
+ * WRAPPER (Replacing Bulma's .container)
+ ****************************************************/
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/****************************************************
+ * MAIN-CONTENT (Replacing Bulma's .content)
+ ****************************************************/
+
+.main-content {
+  line-height: 1.6;     /* nice line spacing */
+  margin-top: 1rem;
+}
+
+.main-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem; /* indent list items */
+}
+
+/****************************************************
+ * HEADINGS (Replacing .title, .subtitle, etc.)
+ ****************************************************/
+
+/* 
+  .main-heading: 
+  Large headings (similar to Bulma's "title").
+*/
+.main-heading {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+/*
+  .sub-heading:
+  Slightly smaller heading (similar to Bulma's "subtitle").
+*/
+.sub-heading {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+/*
+  .section-heading:
+  Another variant for your H2 headings, 
+  same idea as .sub-heading or more if you wish. 
+*/
+.section-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/*
+  .minor-heading:
+  Replaces .subtitle.is-4. 
+  For smaller sub-sections or H3 headings.
+*/
+.minor-heading {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+/****************************************************
+ * LINK COLORS
+ ****************************************************/
+
+.black-link, .maroon-link {
+  text-decoration: none; /* No underline by default */
+}
+
+/* Ensure color applies properly */
+.black-link {
+  color: black;
+}
+
+.maroon-link {
+  color: maroon;
+}
+
+/* Hover effect: Apply underline and color */
+.black-link:hover, .maroon-link:hover {
+  color: darkred !important; /* Ensures underline always applies */
+  text-decoration: underline !important;
+}
