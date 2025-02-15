@@ -135,21 +135,28 @@ body {
  * LINK COLORS
  ****************************************************/
 
-.black-link, .maroon-link {
-  text-decoration: none; /* No underline by default */
-}
-
-/* Ensure color applies properly */
 .black-link {
   color: black;
+  text-decoration: none;
 }
 
 .maroon-link {
   color: maroon;
+  text-decoration: none;
+}
+
+.white-link {
+  color: e0c9a6; /* soft beige */
+  text-decoration: none; /* No underline by default */
+}
+
+.white-link:hover {
+  color: black !important;
+  text-decoration: underline !important;
 }
 
 /* Hover effect: Apply underline and color */
 .black-link:hover, .maroon-link:hover {
-  color: darkred !important; /* Ensures underline always applies */
+  color: darkred !important;
   text-decoration: underline !important;
 }
