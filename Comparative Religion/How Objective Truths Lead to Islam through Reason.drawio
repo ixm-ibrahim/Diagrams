@@ -106,15 +106,163 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Master Diagram" id="q1TZ7uQ2KXKU_8ORelwv">
-    <mxGraphModel dx="5076" dy="1264" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="1654" background="#999999" math="0" shadow="0">
+    <mxGraphModel dx="4977" dy="1713" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="1654" background="#999999" math="0" shadow="0">
       <root>
         <mxCell id="mExRIxhNE1BHIPu0LiUs-0" />
         <mxCell id="mExRIxhNE1BHIPu0LiUs-1" parent="mExRIxhNE1BHIPu0LiUs-0" />
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-64" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#CCCCCC;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1240" y="600" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-52" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#CCCCCC;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="460" y="600" width="240" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-29" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#CCCCCC;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="460" y="240" width="240" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-40" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#CCCCCC;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="750" y="600" width="480" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-38" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-25" target="uHxNGxETZ01MsBiVxSH5-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-39" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-25" target="uHxNGxETZ01MsBiVxSH5-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-45" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-31" target="uHxNGxETZ01MsBiVxSH5-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-46" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-35" target="uHxNGxETZ01MsBiVxSH5-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-51" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-25" target="uHxNGxETZ01MsBiVxSH5-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-30" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="760" y="610" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur momentarily.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-31">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-30">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-32" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-30">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-33" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt; They are distinct between a start and end.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Start and End&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;start, end, between, transition, period, from, to&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Association&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;association&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, relation&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, like, with, similar, group, together, and&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, or&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-32">
+          <mxGeometry y="15" width="220" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-34" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1000" y="610" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur sequentially.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-35">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-34">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-36" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-34">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-37" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt; They distinctly occur &quot;before&quot; and &quot;after&quot;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Sequence&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;before, after&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, previous, next&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, sequence, transition, prior, follow&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Association&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;association&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, relation&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, like, with, similar, group, together, and&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, or&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-36">
+          <mxGeometry y="15" width="220" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-41" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="880" y="700" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;An event is the transition from &quot;not-occurring&quot; to &quot;occurring&quot;.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-42">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-41">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-43" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-41">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-44" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt; They transition from &quot;not-occurring&quot; to &quot;occurring&quot;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Event&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;event&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Start and End&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Possession&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;start, end, between, transition, period&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, from, to&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;{of, have, belong, possession&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, property&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, with, its&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Association&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;association&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, relation&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, like, with, similar, group, together, and&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, or&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-43">
+          <mxGeometry y="15" width="220" height="375" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-47" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="470" y="610" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur effortfully.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-48">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-47">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-49" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-47">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-50" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt; They are distinct between a start and end.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Start and End&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;start, end, between, transition, period, from, to&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Association&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;association&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, relation&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, like, with, similar, group, together, and&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, or&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-49">
+          <mxGeometry y="15" width="220" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-28" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-20" target="uHxNGxETZ01MsBiVxSH5-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-23" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-14" target="uHxNGxETZ01MsBiVxSH5-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-24" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="470" y="520" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur associatively.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-25">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-24">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-26" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-24">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-27" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do qualities occur?&lt;/b&gt; The type of differences across qualities are labelled &quot;associations&quot;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Association&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;association, relation, like, with, similar, group, together, and, or&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;quality, variety, flavor, kind, type, content,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;of, have&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, with, than, which}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{is, not, exist, real, occur, happen, appear, what, thing, nothing, phenomenon}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-26">
+          <mxGeometry y="15" width="220" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-19" value="" style="group" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="470" y="430" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur qualitatively.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-20">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-19">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-21" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-19">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-22" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;The differences are labelled &quot;qualities&quot;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;quality, variety, flavor, kind, type, content,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;of, have&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, with, than, which}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{is, not, exist, real, occur, happen, appear, what, thing, nothing, phenomenon}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-21">
+          <mxGeometry y="15" width="220" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-13" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="470" y="340" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Distinct phenomena occur.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-14">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-13">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-15" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-13">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-16" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena occur?&lt;/b&gt; Distinctly.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Distinction&lt;/b&gt;&lt;br&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, with, than, which}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{is, not, exist, real, occur, happen, appear, what, thing, nothing, phenomenon}&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-15">
+          <mxGeometry y="15" width="220" height="145" as="geometry" />
+        </mxCell>
         <mxCell id="uHxNGxETZ01MsBiVxSH5-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#FFFF99;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2670" y="740" width="240" height="610" as="geometry" />
+          <mxGeometry x="4500" y="1150" width="240" height="610" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-112" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#CCCCCC;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="-270" y="200" width="1680" height="700" as="geometry" />
+          <mxGeometry x="1560" y="610" width="1680" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-17" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-10" target="uHxNGxETZ01MsBiVxSH5-14">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Yg7MVec-9dlvVUTOqUPx-95" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#FF9999;opacity=50;" parent="mExRIxhNE1BHIPu0LiUs-1" vertex="1">
           <mxGeometry x="-2280" y="2970" width="240" height="610" as="geometry" />
@@ -2234,10 +2382,10 @@
           <mxGeometry x="5940" y="2720" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5owJehGFGUsabqxXrhj3-7" value="Sensational Observation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="mExRIxhNE1BHIPu0LiUs-1" vertex="1">
-          <mxGeometry x="3130" y="190" width="140" height="30" as="geometry" />
+          <mxGeometry x="2890" y="-130" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5owJehGFGUsabqxXrhj3-8" value="Feature Classification" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="mExRIxhNE1BHIPu0LiUs-1" vertex="1">
-          <mxGeometry x="3135" y="242" width="130" height="30" as="geometry" />
+          <mxGeometry x="2895" y="-78" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5owJehGFGUsabqxXrhj3-15" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" parent="mExRIxhNE1BHIPu0LiUs-1" source="5owJehGFGUsabqxXrhj3-9" target="5owJehGFGUsabqxXrhj3-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -2313,23 +2461,23 @@
           <mxGeometry y="15" width="220" height="105" as="geometry" />
         </mxCell>
         <mxCell id="Yg7MVec-9dlvVUTOqUPx-119" value="observation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="mExRIxhNE1BHIPu0LiUs-1" vertex="1">
-          <mxGeometry x="2920" y="180" width="80" height="30" as="geometry" />
+          <mxGeometry x="2680" y="-140" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Yg7MVec-9dlvVUTOqUPx-120" value="primitive identification" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="mExRIxhNE1BHIPu0LiUs-1" vertex="1">
-          <mxGeometry x="2900" y="292" width="130" height="30" as="geometry" />
+          <mxGeometry x="2660" y="-28" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Yg7MVec-9dlvVUTOqUPx-121" value="features" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="mExRIxhNE1BHIPu0LiUs-1" vertex="1">
-          <mxGeometry x="2935" y="382" width="60" height="30" as="geometry" />
+          <mxGeometry x="2695" y="62" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Yg7MVec-9dlvVUTOqUPx-122" value="classification" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="mExRIxhNE1BHIPu0LiUs-1" vertex="1">
-          <mxGeometry x="2930" y="470" width="90" height="30" as="geometry" />
+          <mxGeometry x="2690" y="150" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jIT7mPLLUSJobsST0USL-12" value="unsensed events occur" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2460" y="370" width="140" height="30" as="geometry" />
+          <mxGeometry x="2220" y="50" width="140" height="30" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A correlation is an association of sequential experiences.&amp;nbsp;&lt;/span&gt;" id="jIT7mPLLUSJobsST0USL-13">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=1;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-            <mxGeometry x="2400" y="280" width="220" height="50" as="geometry" />
+            <mxGeometry x="2160" y="-40" width="220" height="50" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="jIT7mPLLUSJobsST0USL-20" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
@@ -2349,16 +2497,16 @@
           <mxGeometry y="15" width="220" height="425" as="geometry" />
         </mxCell>
         <mxCell id="jIT7mPLLUSJobsST0USL-41" value="identification - classification of 1 occurrence" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2410" y="420" width="240" height="30" as="geometry" />
+          <mxGeometry x="2170" y="100" width="240" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jIT7mPLLUSJobsST0USL-42" value="assumption of universal continuity is not a leap beacuase the first continuity we experience is our own" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2180" y="-50" width="520" height="30" as="geometry" />
+          <mxGeometry x="1940" y="-370" width="520" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jIT7mPLLUSJobsST0USL-43" value="ontological extensions vvvv" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="3730" y="420" width="160" height="30" as="geometry" />
+          <mxGeometry x="3490" y="100" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jIT7mPLLUSJobsST0USL-52" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2360" y="60" width="220" height="50" as="geometry" />
+          <mxGeometry x="2120" y="-260" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;An expectation is .&lt;/span&gt;" id="jIT7mPLLUSJobsST0USL-53">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="jIT7mPLLUSJobsST0USL-52">
@@ -2374,7 +2522,7 @@
           <mxGeometry y="15" width="220" height="395" as="geometry" />
         </mxCell>
         <mxCell id="jIT7mPLLUSJobsST0USL-56" value="scoping is how we fill in the gaps of what we can&#39;t observe" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2280" y="8" width="310" height="30" as="geometry" />
+          <mxGeometry x="2040" y="-312" width="310" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jIT7mPLLUSJobsST0USL-18" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="mExRIxhNE1BHIPu0LiUs-1">
           <mxGeometry x="-1890" y="3200" width="220" height="5" as="geometry">
@@ -2417,10 +2565,10 @@
           <mxGeometry y="15" width="220" height="515" as="geometry" />
         </mxCell>
         <mxCell id="F2SmWwSTMA4iKvVuo_bI-0" value="composition is scopal... no, scopal is composition" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2360" y="240" width="260" height="30" as="geometry" />
+          <mxGeometry x="2120" y="-80" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="F2SmWwSTMA4iKvVuo_bI-1" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2380" y="170" width="220" height="50" as="geometry" />
+          <mxGeometry x="2140" y="-150" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A composition&lt;/span&gt;" id="F2SmWwSTMA4iKvVuo_bI-2">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="F2SmWwSTMA4iKvVuo_bI-1">
@@ -2592,7 +2740,7 @@
           <mxGeometry x="-1520" y="3850" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-25" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="460" y="210" width="220" height="50" as="geometry" />
+          <mxGeometry x="2290" y="620" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-26">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-25">
@@ -2608,7 +2756,7 @@
           <mxGeometry y="15" width="220" height="105" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-29" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="460" y="300" width="220" height="50" as="geometry" />
+          <mxGeometry x="2290" y="710" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Distinct phenomena occur.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-30">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-29">
@@ -2624,7 +2772,7 @@
           <mxGeometry y="15" width="220" height="185" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-33" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="460" y="480" width="220" height="50" as="geometry" />
+          <mxGeometry x="2290" y="890" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur associatively.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-34">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-33">
@@ -2639,22 +2787,6 @@
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-36" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt; Associations can be made between distinct phenomena.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Association&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;association, relation, like, with, similar, group, together, and, or&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-35">
           <mxGeometry y="15" width="220" height="265" as="geometry" />
         </mxCell>
-        <mxCell id="ASmkYjK9ElLdtuN8Vt9n-37" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="490" y="390" width="220" height="50" as="geometry" />
-        </mxCell>
-        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur qualitatively.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-38">
-          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-37">
-            <mxGeometry x="-30" width="220" height="50" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <mxCell id="ASmkYjK9ElLdtuN8Vt9n-39" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="ASmkYjK9ElLdtuN8Vt9n-37">
-          <mxGeometry x="-30" y="40" width="220" height="5" as="geometry">
-            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ASmkYjK9ElLdtuN8Vt9n-40" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt; They are distinct in quality.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;quality, variety, flavor, kind, type, content,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;of, have&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-39">
-          <mxGeometry y="15" width="220" height="245" as="geometry" />
-        </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-41" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-26" target="ASmkYjK9ElLdtuN8Vt9n-30">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -2662,7 +2794,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-48" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1180" y="480" width="220" height="50" as="geometry" />
+          <mxGeometry x="3010" y="890" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur sequentially.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-49">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-48">
@@ -2678,7 +2810,7 @@
           <mxGeometry y="15" width="220" height="305" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-54" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="220" y="480" width="220" height="50" as="geometry" />
+          <mxGeometry x="2050" y="890" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur sensationally.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-55">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-54">
@@ -2694,7 +2826,7 @@
           <mxGeometry y="15" width="220" height="245" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-58" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="700" y="480" width="220" height="50" as="geometry" />
+          <mxGeometry x="2530" y="890" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur volitionally.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-59">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-58">
@@ -2716,7 +2848,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-64" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="460" y="570" width="220" height="50" as="geometry" />
+          <mxGeometry x="2290" y="980" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Sensations and volition occur without each other.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-65">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-64">
@@ -2738,7 +2870,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-76" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="580" y="750" width="220" height="50" as="geometry" />
+          <mxGeometry x="2410" y="1160" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px;&quot;&gt;Volition is not perceived.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-77">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-76">
@@ -2754,7 +2886,7 @@
           <mxGeometry y="15" width="220" height="455" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-80" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="340" y="750" width="220" height="50" as="geometry" />
+          <mxGeometry x="2170" y="1160" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Sensations are not willed.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-81">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-80">
@@ -2770,7 +2902,7 @@
           <mxGeometry y="15" width="220" height="455" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-84" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="460" y="840" width="220" height="50" as="geometry" />
+          <mxGeometry x="2290" y="1250" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px;&quot;&gt;Sensations and volition are distinct from each other.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-85">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-84">
@@ -2787,16 +2919,16 @@
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-88" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-65" target="ASmkYjK9ElLdtuN8Vt9n-81">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="620" as="sourcePoint" />
+            <mxPoint x="2280" y="1030" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="520" y="640" />
+              <mxPoint x="2350" y="1050" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-89" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-65" target="ASmkYjK9ElLdtuN8Vt9n-77">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="640" y="640" />
+              <mxPoint x="2470" y="1050" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2807,7 +2939,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-93" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="-260" y="480" width="220" height="50" as="geometry" />
+          <mxGeometry x="1570" y="890" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena&amp;nbsp;occur externally.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-94">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-93">
@@ -2823,7 +2955,7 @@
           <mxGeometry y="15" width="220" height="245" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-97" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="-20" y="480" width="220" height="50" as="geometry" />
+          <mxGeometry x="1810" y="890" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena&amp;nbsp;occur internally.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-98">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-97">
@@ -2845,13 +2977,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-103" value="the first &quot;inside&quot; we experience is us inside our bodies" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2320" y="-130" width="290" height="30" as="geometry" />
+          <mxGeometry x="2080" y="-450" width="290" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-104" value="the first &quot;cause&quot; we experience is us &quot;realizing&quot; our will" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2320" y="-108" width="290" height="30" as="geometry" />
+          <mxGeometry x="2080" y="-428" width="290" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-105" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="940" y="480" width="220" height="50" as="geometry" />
+          <mxGeometry x="2770" y="890" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur momentarily.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-106">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-105">
@@ -2873,10 +3005,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-113" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#FFCC99;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2170" y="560" width="480" height="610" as="geometry" />
+          <mxGeometry x="4000" y="970" width="480" height="610" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-114" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2300" y="660" width="220" height="50" as="geometry" />
+          <mxGeometry x="4130" y="1070" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Information is the quality or association of a phenomenon.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-115">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-114">
@@ -2892,7 +3024,7 @@
           <mxGeometry y="15" width="220" height="355" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-118" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2300" y="750" width="220" height="50" as="geometry" />
+          <mxGeometry x="4130" y="1160" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Distinct information have distinct qualities.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-119">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-118">
@@ -2912,12 +3044,12 @@
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-123" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" source="ASmkYjK9ElLdtuN8Vt9n-125" target="ASmkYjK9ElLdtuN8Vt9n-115" parent="mExRIxhNE1BHIPu0LiUs-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2410" y="620" as="sourcePoint" />
-            <mxPoint x="2410" y="660" as="targetPoint" />
+            <mxPoint x="4240" y="1030" as="sourcePoint" />
+            <mxPoint x="4240" y="1070" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-124" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2300" y="570" width="220" height="50" as="geometry" />
+          <mxGeometry x="4130" y="980" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Qualities and associations are internal phenomena.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-125">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-124">
@@ -2933,7 +3065,7 @@
           <mxGeometry y="15" width="220" height="335" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-128" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2300" y="840" width="220" height="50" as="geometry" />
+          <mxGeometry x="4130" y="1250" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A feature is a distinct piece of information.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-129">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-128">
@@ -2952,7 +3084,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-133" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2300" y="930" width="220" height="50" as="geometry" />
+          <mxGeometry x="4130" y="1340" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Similar features have similar qualities.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-134">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-133">
@@ -2974,7 +3106,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-139" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2300" y="1020" width="220" height="50" as="geometry" />
+          <mxGeometry x="4130" y="1430" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A pattern is a quality of similar features.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-140">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-139">
@@ -2990,7 +3122,7 @@
           <mxGeometry y="15" width="220" height="355" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-143" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2180" y="1110" width="220" height="50" as="geometry" />
+          <mxGeometry x="4010" y="1520" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A class is a feature of similar patterns.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-144">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-143">
@@ -3012,13 +3144,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-150" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#FF9999;opacity=50;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1430" y="560" width="720" height="700" as="geometry" />
+          <mxGeometry x="3260" y="970" width="720" height="700" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-151" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" source="ASmkYjK9ElLdtuN8Vt9n-163" target="ASmkYjK9ElLdtuN8Vt9n-153" parent="mExRIxhNE1BHIPu0LiUs-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-152" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1680" y="1200" width="220" height="50" as="geometry" />
+          <mxGeometry x="3510" y="1610" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Consciousness is internal reality experiencing external reality.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-153">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-152">
@@ -3040,7 +3172,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-158" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1920" y="750" width="220" height="50" as="geometry" />
+          <mxGeometry x="3750" y="1160" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;An experience is an association of perceptions.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-159">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-158">
@@ -3056,7 +3188,7 @@
           <mxGeometry y="15" width="220" height="465" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-162" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1680" y="930" width="220" height="50" as="geometry" />
+          <mxGeometry x="3510" y="1340" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;A reaction is an action whose intent relates to a previous experience.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-163">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-162">
@@ -3075,7 +3207,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-167" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1560" y="840" width="220" height="50" as="geometry" />
+          <mxGeometry x="3390" y="1250" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;An action is the association of a cause with its effect.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-168">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-167">
@@ -3092,12 +3224,12 @@
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-171" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" source="ASmkYjK9ElLdtuN8Vt9n-184" target="ASmkYjK9ElLdtuN8Vt9n-176" parent="mExRIxhNE1BHIPu0LiUs-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1670" y="710" as="sourcePoint" />
+            <mxPoint x="3500" y="1120" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-172" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" source="ASmkYjK9ElLdtuN8Vt9n-184" target="ASmkYjK9ElLdtuN8Vt9n-180" parent="mExRIxhNE1BHIPu0LiUs-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1670" y="710" as="sourcePoint" />
+            <mxPoint x="3500" y="1120" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-173" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" source="ASmkYjK9ElLdtuN8Vt9n-176" target="ASmkYjK9ElLdtuN8Vt9n-168" parent="mExRIxhNE1BHIPu0LiUs-1">
@@ -3107,7 +3239,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-175" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1440" y="750" width="220" height="50" as="geometry" />
+          <mxGeometry x="3270" y="1160" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;A cause is the initiation of an event.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-176">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-175">
@@ -3123,7 +3255,7 @@
           <mxGeometry y="15" width="220" height="445" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-179" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1680" y="750" width="220" height="50" as="geometry" />
+          <mxGeometry x="3510" y="1160" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;An effect is an initiated event.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-180">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-179">
@@ -3139,7 +3271,7 @@
           <mxGeometry y="15" width="220" height="435" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-183" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1560" y="660" width="220" height="50" as="geometry" />
+          <mxGeometry x="3390" y="1070" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;An initiation is a volition that intends the occurrence of an event.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-184">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-183">
@@ -3148,16 +3280,16 @@
         </UserObject>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-185" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" source="ASmkYjK9ElLdtuN8Vt9n-188" target="ASmkYjK9ElLdtuN8Vt9n-184" parent="mExRIxhNE1BHIPu0LiUs-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1460" y="570" as="targetPoint" />
+            <mxPoint x="3290" y="980" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-186" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" source="ASmkYjK9ElLdtuN8Vt9n-188" target="ASmkYjK9ElLdtuN8Vt9n-192" parent="mExRIxhNE1BHIPu0LiUs-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2100" y="570" as="targetPoint" />
+            <mxPoint x="3930" y="980" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-187" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1680" y="570" width="220" height="50" as="geometry" />
+          <mxGeometry x="3510" y="980" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;An event is the transition from &quot;not-occurring&quot; to &quot;occurring&quot;.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-188">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-187">
@@ -3173,7 +3305,7 @@
           <mxGeometry y="15" width="220" height="375" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-191" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1800" y="660" width="220" height="50" as="geometry" />
+          <mxGeometry x="3630" y="1070" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A perception is the association of a sensation with an event.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-192">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-191">
@@ -3189,7 +3321,7 @@
           <mxGeometry y="15" width="220" height="425" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-195" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1560" y="700" width="220" height="5" as="geometry">
+          <mxGeometry x="3390" y="1110" width="220" height="5" as="geometry">
             <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -3202,14 +3334,14 @@
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-199" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-49" target="ASmkYjK9ElLdtuN8Vt9n-184">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1500" y="550" />
+              <mxPoint x="3330" y="960" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-200" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-49" target="ASmkYjK9ElLdtuN8Vt9n-192">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1620" y="550" />
+              <mxPoint x="3450" y="960" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -3229,7 +3361,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-207" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2420" y="1110" width="220" height="50" as="geometry" />
+          <mxGeometry x="4250" y="1520" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Sets of features that have similar patterns are analogous to each other.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-208">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-207">
@@ -3248,7 +3380,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-213" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="1800" y="840" width="220" height="50" as="geometry" />
+          <mxGeometry x="3630" y="1250" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;To learn is to transition from no experience to experience.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-214">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-213">
@@ -3267,9 +3399,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-219" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2680" y="750" width="220" height="50" as="geometry" />
+          <mxGeometry x="4510" y="1160" width="220" height="50" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;The past is the set of all phenomena that occurred &quot;before&quot;.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-220">
+        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;The present&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-220">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-219">
             <mxGeometry width="220" height="50" as="geometry" />
           </mxCell>
@@ -3288,21 +3420,21 @@
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-224" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-49" target="ASmkYjK9ElLdtuN8Vt9n-220">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2060" y="550" />
+              <mxPoint x="3890" y="960" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-225" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-34" target="ASmkYjK9ElLdtuN8Vt9n-220">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1690" y="550" />
+              <mxPoint x="3520" y="960" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-226" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2680" y="840" width="220" height="50" as="geometry" />
+          <mxGeometry x="4510" y="1250" width="220" height="50" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A memory is information of a past experience.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-227">
+        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;The past is the set of all phenomena that occurred &quot;before&quot;.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-227">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-226">
             <mxGeometry width="220" height="50" as="geometry" />
           </mxCell>
@@ -3317,9 +3449,9 @@
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-230" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-106" target="ASmkYjK9ElLdtuN8Vt9n-220">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2824.285714285714" y="740" as="targetPoint" />
+            <mxPoint x="4654.285714285714" y="1150" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1930" y="550" />
+              <mxPoint x="3760" y="960" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -3327,9 +3459,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-232" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2680" y="930" width="220" height="50" as="geometry" />
+          <mxGeometry x="4510" y="1340" width="220" height="50" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Memories are not presently experienced.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-233">
+        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;A memory is information of a past experience.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-233">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-232">
             <mxGeometry width="220" height="50" as="geometry" />
           </mxCell>
@@ -3343,7 +3475,7 @@
           <mxGeometry y="15" width="220" height="355" as="geometry" />
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-236" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
-          <mxGeometry x="2680" y="1020" width="220" height="50" as="geometry" />
+          <mxGeometry x="4510" y="1430" width="220" height="50" as="geometry" />
         </mxCell>
         <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Memories are not presently experienced.&lt;/span&gt;" id="ASmkYjK9ElLdtuN8Vt9n-237">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-236">
@@ -3363,6 +3495,108 @@
         </mxCell>
         <mxCell id="ASmkYjK9ElLdtuN8Vt9n-241" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="ASmkYjK9ElLdtuN8Vt9n-233" target="ASmkYjK9ElLdtuN8Vt9n-237">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-1" value="deprive of all sensations, what do you experience? heightened will" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1415" y="-322" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-2" value="if you can phenomenologically show that &quot;you&quot;exist, and derive the structure for ontology, then you can ontologically show that God exists" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1155" y="-182" width="690" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-3" value="1. Gain enough empirical observations&lt;br&gt;2. Label those observations&lt;br&gt;3. Identify patterns of those observations&lt;br&gt;4. Classify patterns" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1270" y="-102" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-4" value="why does the fact that we don&#39;t will sensations show that something else is/does?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1640" y="-100" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-5" value="every phenomenological reduction I did resulted in volitional terms" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1670" y="-68" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-6" value="where does the principle come from that something can&#39;t come from nothing?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1630" y="10" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-7" value="define nothing first, phenomenologically" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1750" y="40" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-8" value="the only thing that we know that comes from anything is volitional vs non-volitional" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1620" y="70" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-9" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="470" y="250" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur.&lt;/font&gt;" id="uHxNGxETZ01MsBiVxSH5-10">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-9">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-11" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-9">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-12" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Starting point:&lt;/b&gt; this either happens or does not.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{is, not, exist, real, occur, happen, appear, manifest, what, thing, nothing, phenomenon}&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-11">
+          <mxGeometry y="15" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-18" value="" style="group" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="2290" y="800" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 12px;&quot;&gt;Phenomena occur qualitatively.&lt;/font&gt;" id="ASmkYjK9ElLdtuN8Vt9n-38">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-18">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="ASmkYjK9ElLdtuN8Vt9n-39" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-18">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ASmkYjK9ElLdtuN8Vt9n-40" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do phenomena distinctly occur?&lt;/b&gt; They are distinct in quality.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;br&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;quality, variety, flavor, kind, type, content,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;of, have&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="ASmkYjK9ElLdtuN8Vt9n-39">
+          <mxGeometry y="15" width="220" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-53" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="2920" y="340" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Qualities and associations are internal phenomena.&lt;/span&gt;" id="uHxNGxETZ01MsBiVxSH5-54">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-53">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-55" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-53">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-56" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How do qualities and associations relate to phenomena?&lt;/b&gt; Phenomena have qualities and associations.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Possession&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{of, have, belong, possession, property, with, its&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Association&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;association&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, relation&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 11px;&quot;&gt;, like, with, similar, group, together, and&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, or&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;{&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;quality, variety, flavor, content&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling}&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;∪&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 11px;&quot;&gt;{will, volition, intention}&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;br&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;&amp;nbsp;phenomenon&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 11px;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-55">
+          <mxGeometry y="15" width="220" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-62" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-57" target="uHxNGxETZ01MsBiVxSH5-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;font-size: 12px;&quot;&gt;Qualities and associations are internal phenomena.&lt;/span&gt;" id="uHxNGxETZ01MsBiVxSH5-57">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+            <mxGeometry x="1250" y="610" width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-58" value="" style="group;treeMoving=1;" vertex="1" connectable="0" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1250" y="700" width="220" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Information is the quality or association of a phenomenon.&lt;/span&gt;" id="uHxNGxETZ01MsBiVxSH5-59">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;strokeWidth=2;fontSize=1;fontStyle=1;treeFolding=0;treeMoving=0;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-58">
+            <mxGeometry width="220" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-60" value="" style="swimlane;whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;gradientColor=#FFD966;swimlaneFillColor=#E6E6E6;connectable=1;allowArrows=0;treeFolding=1;treeMoving=1;expand=0;" vertex="1" collapsed="1" parent="uHxNGxETZ01MsBiVxSH5-58">
+          <mxGeometry y="40" width="220" height="5" as="geometry">
+            <mxRectangle x="-755" y="123.33" width="50.00000000000001" height="3.333333333333333" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-61" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;How are qualities that belong to a phenomenon labelled?&lt;/b&gt; Information.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;==================================&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Information&lt;/b&gt;&lt;br&gt;{information, property, about}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Possession&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{of, have, belong, possession, property, with, its}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Association ∪ Quality&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{association, relation, like, with, similar, group, together, and&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, or&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;} ∪ {quality, variety, flavor, content}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Distinction&lt;/b&gt;&lt;/div&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which}&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/font&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 11px;&quot;&gt;Sensation&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;∪ Volition&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{sensation, feeling} ∪ {will, volition, intention}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;-----------------------------------------------------------&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;&lt;b&gt;Phenomena&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;{is, not, exist, real, occur, happen, what, thing&lt;/span&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;, nothing&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, phenomenon&lt;/span&gt;&lt;span style=&quot;font-size: 11px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=#E6E6E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=1;treeFolding=0;expand=1;" vertex="1" parent="uHxNGxETZ01MsBiVxSH5-60">
+          <mxGeometry y="15" width="220" height="355" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-63" style="edgeStyle=elbowEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="mExRIxhNE1BHIPu0LiUs-1" source="uHxNGxETZ01MsBiVxSH5-25" target="uHxNGxETZ01MsBiVxSH5-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uHxNGxETZ01MsBiVxSH5-65" value="phenomenological limits expose ontological structure&lt;br&gt;we can&#39;t see structure, yet we know it&lt;br&gt;the more structure we know, the more limited possible ontology can be&lt;br&gt;the capacity for ontology [extensions] are limited by structural knowledge" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="mExRIxhNE1BHIPu0LiUs-1">
+          <mxGeometry x="1005" y="290" width="380" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
