@@ -37,18 +37,21 @@ I've also developed a formal methodology using directed acyclic graphs to ensure
 |---|---|---|---|---|
 | IA1 | Information is a quality or association. | PH4 | {information} | How do phenomena distinctly occur? Qualities and associations are labelled as "information". |
 | IA2 | Information belongs with a phenomenon. | IA1 | {about, belong, possess, have, source, from, to} | How does information occur? Information is "about" phenomena. |
-| IA3 | A feature is a distinct piece of information. | IA1| {feature} | How does information occur? Distinct pieces of information are labelled "features". |
-| IA4 | Awareness is the occurrence of information. | IA2,PH5| {awareness} | How does information occur? The occurrence of information is labelled "awareness". |
-| IA5 | A pattern is a similar quality that a set of features have. | IA2,IA3| {pattern, repetition, often} | How do features occur? A quality that a set of features share is labelled a "pattern". |
-| IA6 | A variation is a different quality that a set of features have. | IA2,IA3| {variation} | How do features occur? A quality that is different in a set of features is labelled a "variation". |
-| IA7 | A class is a similar quality that a set of patterns have. | IA5| {class} | How do patterns occur? A quality that a set of patterns share is labelled a "class". |
-| IA8 | Sets of features that have similar patterns are analogous to each other. | IA5| {analogy} | How do patterns occur? One set of features is labelled an "analogy" to another when they share a similar pattern. |
+| IA3 | A feature is a distinct piece of information. | IA1 | {feature} | How does information occur? Distinct pieces of information are labelled "features". |
+| IA4 | Awareness is the occurrence of information. | IA2,PH5 | {awareness} | How does information occur? The occurrence of information is labelled "awareness". |
+| IA5 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often} | How do features occur? A quality that a set of features share is labelled a "pattern". |
+| IA6 | A class is a similar quality that a set of patterns have. | IA5| {class} | How do patterns occur? A quality that a set of patterns share is labelled a "class". |
+| IA7 | Sets of features that have similar patterns are analogous to each other. | IA5 | {analogy} | How do patterns occur? One set of features is labelled an "analogy" to another when they share a similar pattern. |
+| IA8 | Sameness is the similarity of a pattern across its features. | IA5 | {same, identical} | How do features occur? The way in which a pattern is similar across its features is labelled "sameness". |
+| IA9 | Variation is the difference of a pattern across its features. | IA5 | {variation} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". |
+| IA10 | Independence is when variations in one pattern do not correlate with variations in another pattern. | IA9,T6 | {independence} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". |
+
 
 **4. Sensations & Volition**
 | ID | Node | Inherits From | Terms Introduced | Question Addressed |
 |---|---|---|---|---|
 | SV1 | Wanting occurs. | PH4 | {want, direction} | How do phenomena distinctly occur? With a quality of directedness toward something, which we label "want". |
-| SV2 | Intensity occurs. | PH4 | {intensity, strength, magnitude, variable} | How do phenomena distinctly occur? With degrees of force or strength, which we label "intensity". |
+| SV2 | Intensity occurs. | PH4 | {intensity, strength, magnitude, more, less} | How do phenomena distinctly occur? With degrees of force or strength, which we label "intensity". |
 | SV3 | Resistance occurs. | PH4 | {resistance, opposition} | How do phenomena distinctly occur? With a quality of being opposed or impeded, which we label "resistance". |
 | SV4 | Striving is wanting with intensity. | SV1,SV2 | {striving, urge} | How does wanting and intensity occur? When they occur together, we label it "striving". |
 | SV5 | Inclination is wanting without intensity. | SV1,SV2 | {inclination, predisposition} | How does wanting and intensity occur? When wanting occurs without intensity, we label it "inclination". |
@@ -63,6 +66,63 @@ I've also developed a formal methodology using directed acyclic graphs to ensure
 | SV14 | Struggle is compulsion with endurance. | SV10,SV11 | {struggle} | How does compulsion and endurance occur? When combined with endurance, we label it "struggle". |
 
 possibility is the absence of counter-will?
+
+-----------------
+
+**Important methodological note**: This is a phenomenological construction, so all terms should be understood phenomenologically. For example, when I say "thing," I mean "phenomenological occurrence" - not any ontological claim about objects or substances. The terms I introduce at each level are *labels* we assign to phenomenological observations, not claims about the intrinsic nature of experience. For example, "qualities" is simply what we call the distinctions we observe between phenomena.
+
+**1. Phenomenological Primitives**
+| ID | Node | Inherits From | Terms Introduced |
+|---|---|---|---|---|
+| PH1 | Phenomena occur. | --- | {is, not, occur, happen, feeling, appear, what, thing, nothing, phenomenon, any} |
+| PH2 | Distinct phenomena occur. | PH1 | {distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which, multiplicity} |
+| PH3 | Qualities occur. | PH2 | {quality, variety, flavor, kind, type, content, of, have, with} |
+| PH4 | Associations occur. | PH3 | {association, relation, like, with, similar, group, together, and, or} |
+| PH5 | Occurrence is a quality. | PH3 | {presence, absence} |
+
+**2. Temporality**
+| ID | Node | Inherits From | Terms Introduced |
+|---|---|---|---|---|
+| T1 | Phenomena occur sequentially. | PH4 | {before, after, previous, next, sequence, succession, prior, follow} |
+| T2 | Phenomena occur presently. | PH4 | {present, now, current, immediate} |
+| T3 | Past phenomena are before the present. | T1,T2 | {past, was, then} |
+| T4 | A memory is a present phenomena about a past phenomenon. | T3,IA2 | {memory} |
+| T5 | Change is the difference of qualities in a sequence. | T3 | {change, transition} |
+| T6 | A correlation is when a phenomenon often follows another. | T3,IA5 | {correlation} |
+| T7 | An event is the transition from "not-occurring" to "occurring". | T5,PH5 | {event, start, end, when, from, to} |
+
+**3. Information & Awareness**
+| ID | Node | Inherits From | Terms Introduced |
+|---|---|---|---|---|
+| IA1 | Information is a quality or association. | PH4 | {information} |
+| IA2 | Information belongs with a phenomenon. | IA1 | {about, belong, possess, have, source, from, to} |
+| IA3 | A feature is a distinct piece of information. | IA1 | {feature} |
+| IA4 | Awareness is the occurrence of information. | IA2,PH5 | {awareness} |
+| IA5 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often} |
+| IA6 | A class is a similar quality that a set of patterns have. | IA5| {class} |
+| IA7 | Sets of features that have similar patterns are analogous to each other. | IA5 | {analogy} |
+| IA8 | Sameness is the similarity of a pattern across its features. | IA5 | {same, identical} |
+| IA9 | Variation is the difference of a pattern across its features. | IA5 | {variation} |
+| IA10 | Independence is when variations in one pattern do not correlate with variations in another pattern. | IA9,T6 | {independence} |
+
+
+**4. Sensations & Volition**
+| ID | Node | Inherits From | Terms Introduced |
+|---|---|---|---|---|
+| SV1 | Wanting occurs. | PH4 | {want, direction} |
+| SV2 | Intensity occurs. | PH4 | {intensity, strength, magnitude, more, less} |
+| SV3 | Resistance occurs. | PH4 | {resistance, opposition} |
+| SV4 | Striving is wanting with intensity. | SV1,SV2 | {striving, urge} |
+| SV5 | Inclination is wanting without intensity. | SV1,SV2 | {inclination, predisposition} |
+| SV6 | Sensation is intensity without wanting. | SV1,SV2 | {sensation, feeling} |
+| SV7 | Difficulty is wanting with resistance. | SV1,SV3 | {difficulty} |
+| SV8 | Ease is wanting without resistance. | SV1,SV3 | {ease} |
+| SV9 | Volition is a striving whose occurrence and intensity are inclined. | SV4,SV5,PH5 | {volition, will, intention, voluntary} |
+| SV10 | Compulsion is a striving whose occurrence and intensity are not inclined. | SV4,SV5,PH5 | {compulsion, involuntary, desire} |
+| SV11 | Endurance is striving with resistance. | SV3,SV4 | {endurance} |
+| SV12 | An action is a volition or compulsion. | SV9,SV10 | {action} |
+| SV13 | Effort is volition with endurance. | SV9,SV11 | {effort} |
+| SV14 | Struggle is compulsion with endurance. | SV10,SV11 | {struggle} |
 
 -----------------
 
@@ -144,6 +204,163 @@ None of these explanations could be formulated or validated without investigator
 The objection also reverses the burden of proof. Rather than showing how alternative explanations make the phenomenology of willing and resistance unnecessary, the objector needs to explain how their preferred theories could be justified without relying on the very experiential capacities that phenomenological investigation reveals. How do we know that physical laws accurately describe reality? Through systematic experimental investigation that depends on reliable encounter with resistance patterns. How do we validate evolutionary theories? Through fossil evidence, genetic analysis, and experimental work that presupposes investigative reliability.
 
 The counter-will framework doesn't compete with scientific explanations - it provides their phenomenological foundation. Without reliable encounter with systematic resistance, there would be no experimental methodology, no way to distinguish between successful and failed theoretical predictions, no basis for preferring scientific theories over arbitrary speculation.
+
+-----------------
+
+Let's start with realizing that we have sensations - they just happen, because we feel them. This seems to indicate there's something real beyond us, and we're aware of it: the occurrence itself is our awareness.
+There are no hidden assumptions here! You can't reason or argue with what you directly sense; sensations either occur, or they don't.
+
+But wait - what is "external reality", "us", and "something", when we're just looking at what we experience? (phenomenology = "the study of what we sense/feel")
+How do I define "something" if it isn't something I can sense? How do I jump to "something that exists whether I sense it or not" when all I ever do is sense or feel things that happen to me?
+And what's "us", if not what's "internally real"? I can't see, touch, or otherwise sense... whatever "I" am. So how do I know it's there?
+In short: if I can't sense something that I can't sense (ie., what's externally real), then how do I know it's there?
+
+Hmm. If "something" = "what is sensed", and that's *all* the knowledge we have access to, then we have no way of defining "something" = "what we don't sense" - at least, without making assumptions.
+This means we still have hidden assumptions: we're assuming that there is some unsensed "something" that feels things (the self), and there are unsensed "somethings" that are beyond us (reality).
+
+Let's see. Whatever I experience now, I didn't experience before, and I can recognize new experiences based on previous ones. That means there's a set of all experiences I could have, and I'm only experiencing a subset of them now.
+If we're only experiencing a subset of all experiences, then that means there are experiences "out there" just waiting to be experienced! This is how we know that "external reality" exists.
+
+This also reveals that we have memory: feelings of things that happened "before", and that remembered experiences are distinct from what is happening "now".
+But wait - how do we know those "memories" are actually something that happened "before"? Memories occur "now", just like we experience sensations "now"... How do we know they actually happened "before"?
+
+Also, if we jump ahead, we know memories can be incorrect: they can reflect what happened "before", but they can also be inaccurate, in some way.
+So this means we just shifted the hidden assumptions: we're still assuming the reality of the past (since we don't experience it "now"), and we're assuming the accuracy of our memories.
+And this still doesn't resolve what "us" means.
+
+Ok, let's try again, this time focusing on "us" and "them". First of all, how do I know there's a distinction between "us" and "reality"? What do we phenomenologically mean when we use those two terms?
+Suppose there's no distinction between the two. Then everything we sense would be a product of whatever "us" is ("us" and "reality" would be the same thing, but I'm using "us" here because it feels closer to what "experiences" than "reality").
+If that's the case, then wouldn't we be able to control the sensations we feel? If the same "mind" or "soul" is behind both "us" and "reality", then wouldn't the source of our feeling of wanting effectively be the same source as our sensations?
+
+But there's a clear distinction in what we experience between what we want and what occurs. Even if what we want sometimes matches what happens (like moving an arm), it also doesn't (like you can't will yourself to fly, or will pain away).
+So this gives us an experiential basis for what we want: "internal" somethings are our wants, and "external" somethings are the sensations that occur regardless/independently.
+
+Hmm. This doesn't quite explain what we're looking for... neither term gives us the basis for the "source" of these phenomena, or where they come "from".
+So even though we can make distinctions between "internal" and "external", they're still only effects, and we're trying to find their source - the "cause" of those effects.
+What sources our wants? What sources our sensations? Both of these are "things" that we don't sense or feel. Let's ask a more basic question: what is a "source", experientially?
+
+Ok, let's try defining more clearly what we're looking for, as we seem to really be looking for an experiential grounding for some "source", or "something that causes something else" - and "independence" is related somehow.
+Let's start by defining "cause". What is a cause?
+
+Well, we already have observations that things occur, so let's note that they "start" and "end" - and include the earlier possibility that we don't experience all sensations "now".
+From all that, let's define an "event" as "the transition from not-occurring to occurring". This means that a "cause" is "what starts an event", or "what transitions non-occurence to occurence".
+Wow, look at the questions we can now ask. How can occurence arise from non-occurence? Can something come from nothing? I would have thought questions like these would come up when exploring cosmology and the Big Bang.
+Interestingly, if "something" is what we feel, and "nothing" is what we don't feel, then that means we can observe that something *can* come from nothing.
+
+But hold on a second. We're using "start" as a verb here ("cause" = "what starts an event"), which hasn't been grounded yet. We might as well be saying "what initiates an event".
+So what does "initiate" mean? This feels circular, because I want to define it as "to cause a process to begin" - but now I'm defining "cause" and "initiate" in terms of each other. Which term comes first?
+Equally important, "initiate" feels like it has a hidden assumption of agency - a "something" that "starts", or a "something" behind the occurrence of an event. Or, more precisely: "something" has to exist for "starts" to occur.
+
+Huh, this is interesting. Is our understanding of "cause" related to agency? Let's look at some scenarios to answer this. How do we know about "causes"? How are we defining it experientially?
+If I move my arm, I'm really saying that "my 'self' initiates/causes the arm's movement". Well, how do I know my arm moved? Because I feel the sensation of my arm moving. The sensation correlates with my want.
+
+So what if we're in a sensory deprivation chamber? Do we still have a concept of what a "cause" is? Well, we'd still feel our thoughts and emotions - even becoming more aware of our wants and volitions.
+(If we couldn't even think or imagine, we'd essentially be brain dead - we wouldn't be able to sense anything, nor even have the ability to "know" of our wants.)
+So we could still have the capacity to imagine - the "want" to think about things, and we can still sense the mental image that we experience. This would be the only way we could conceptualize a "cause".
+
+Does this apply elsewhere? Let's look at another case, where we could say "water causes plants to grow" or "the gears in a clock cause its hands to move".
+What are we really saying here? Does water "know" that the plant absorbed it? And what "is" water anyway? If we define it as molecules, then do the molecules "know"?
+Do the particles that make up molecules "know"? More extensively: is there any basic/ultimate definition of "water" that can ever "know" what happened?
+
+This applies to any object we can think of. Is there a basic definition of the clock's gears that "knows" what time its hands are pointing to?
+At this point, we need to ask: what is "knowledge"? Any occurrence is itself "awareness", so we can define "information" as "a quality of a phenomenon" (like hot, cold, pain, pleasure, happiness, thoughts).
+This doesn't really help here... are we saying that water (or any other object) is "aware" or "has knowledge" of what it's doing? Experientially, we can't even answer that: any answer has some hidden assumption.
+
+If we answer "no", we assume there's nothing that receives the knowledge of what the water does. If we answer "yes", we assume there is. Neither answer is without some hidden assumption.
+This even extends to the brain... It's made of the same materials as water and clocks - just with a different structure and properties.
+Does it "know" what senses it receives? The brain is "dark" in the sense that it doesn't actually "see" the light the eye sees, or "hear" the sounds the ear hears, or "touch" what the skin touches.
+The brain only processes electrical signals from the nerves. So where does all that data "go"? "We" aren't seeing what the eye sees: we're only seeing how the brain processes the electricity that came from the eye.
+And regardless of what happens physically, "light" (and any other quality we experience) is still sensed. What is doing the "seeing"? Where does all that data get sent "to", such that phenomena occur?
+
+Ok, I'm getting really overwhelmed here. I've got all these different ideas - sensations, memories, independence, causes, knowledge, brains - and I'm losing track of what I'm actually trying to figure out. Let me step back.
+What was I originally after? I wanted to show there's something external to us, something "real" beyond our experience - something that exists independent from us. How did I originally come to think of this idea?
+
+Earlier I had this intuition that we can distinguish internal from external based on control - we can't control all our sensations, right? That's what made me think there's something beyond us.
+Let's dig deeper into that distinction between what we can control and what we can't. Maybe we'll find something interesting there.
+And let's make this more concrete with an analogy, as it's hard to stay grounded with all these ideas floating around.
+
+Imagine a blind person navigating a maze. They can't see the walls - they have no idea what walls "look like" or what their true nature is. Yet they can somehow still navigate the maze.
+They can form a working understanding of what a "wall" is through touch and resistance. The wall is just "that thing that stops me from moving forward." Yet they have no perception or capacity to understand its visual qualities/properties.
+
+Huh, that's actually kind of profound. The blind person never needs to know the visual properties of walls to navigate perfectly well. They just need to know where the boundaries are.
+And thinking about it... aren't we all like that blind person? We don't know the "true nature" of anything - we just become aware of what we feel and put labels to them, and the ones relevant to anyone in a maze are "sensations" and "volitions".
+
+Let me investigate this more carefully. What happens when sensations and volitions come together?
+ - Sometimes sensations occur with volitions (I want to move my arm, and I feel it move)
+ - Sometimes volitions occur with sensations (I feel pain and want it to stop)
+ - Sometimes sensations occur without volitions (sudden loud noise)
+ - Sometimes volitions occur without sensations (wanting something abstract, like justice)
+
+So what does this tell us? Well, sensations can correlate with volition, yet fundamentally, sensations aren't willed into existence.
+And my wants somehow "know" about the sensations I feel (allowing me to react to them), yet volitions aren't sensed in the same way anything else is (I can't "see", "touch", or otherwise "sense" my wants).
+This means there's some kind of hard boundary between them, where some sort of data transfer occurs on this boundary: some volitions appear as sensational correlations, and all sensations appear as knowledge for volition.
+
+But wait - that's interesting. I'm now aware of a boundary, a limitation, and some properties it has. It's not something I see or touch or sense in the normal way, yet I still know about it.
+It's like... a negative phenomenon? I'm discovering it not through what's there, but through what I can't do.
+
+Going back to the blind person in the maze - they discover walls not by sensing what walls are, but by discovering where they can't go. The limitation itself becomes the discovery.
+They don't need to know walls are made of brick or wood or whatever - they just need to know "I can't pass through here."
+
+Oh! This is like the normal force in physics! When you push against a wall, it pushes back with equal force. The blind person discovers the wall exists precisely because it resists their forward motion.
+They're not initially labelling their discovery as "wall-ness" - they're discovering resistance, opposition to their will to move forward.
+
+So bringing this back to our situation... when I try to will away pain, or will myself to fly, or will objects to move with my mind, I'm discovering a "something" that independently resists my willing.
+Just like the blind person mapping out the maze by finding where they can't go, I'm mapping out reality by finding where my will can't extend.
+
+What if that's what ontology (the study of reality) really is? Not the study of "things we can only assume exist", but the direct mapping of these boundaries and resistances that we directly feel and experience.
+In this sense, we're in some kind of maze, figuring out its topology - not by seeing it directly, but by discovering where we can and can't go.
+
+This actually might be on to someothing... In physics, the normal force is the same type of force as what's pushing against it - it's just in the opposite direction (if I push with 10 Newtons of force, the wall pushes back with 10 Newtons).
+Same type of thing, just opposing - yet we know normal forces exist only because we can feel them. So, if we only feel this resistance when we exercise our will, is it similar?
+
+When I examine my will closely, it has two main properties: intensity (how strongly I want something) and direction (what specifically I want).
+And when I hit these resistances... they seem to have the same properties! There's an intensity to the resistance (how strongly it opposes me) and a direction (it opposes the specific thing I'm trying to will).
+
+If the resistance has the same essential properties as will - magnitude and direction - then these resistances can be thought of as a "normal will" (or, more intuitively, a "counter-will").
+It clearly is not my will, as it operates completely independently of what I want - just like how a normal force is independent of whatever force is acting upon it. THIS is our first discovery of independence.
+
+This might be it! I now don't need to make some logical leap from "I experience X" to "something external/independent causes X." The encounter with counter-will IS the direct discovery of something external/independent.
+I'm not inferring its existence - I'm running into it, just like the blind person runs into walls. When I try to will pain away, the counter-will maintains the pain. When I try to will myself to fly, the counter-will keeps me grounded.
+
+This limitation has the exact same properties as my will - direction, magnitude, response - yet it operates in complete independence from my own willing.
+So, in our search for "something" that can be defined by its independence, our wills and wants have been the key all along - not sensations.
+
+But wait... let me check my assumptions. What about when I successfully will something - like picking up a feather, or moving my arm? Isn't a "feather" just as real as a "wall"?
+Wait a minute. I just realized something important. What's the opposite of "limitation"? What's a "successful will"?
+
+Let's pick up the feather again. What's actually happening? I want to pick it up, and then... I do. But even in that success, I still have to:
+ - Reach to where the feather actually is (not where I might imagine it)
+ - Grip it in a way that matches its shape
+ - Lift with the right amount of force for its weight
+ - Feel its texture whether I want to or not
+So, even when I "succeed," I'm still conforming to something beyond my control. The feather may not resist as dramatically as a wall, but it still has its own "nature" that I must work with.
+
+Oh! This is really interesting. This means that *both* the wall and the feather reveal counter-will - it's just that the wall reveals it through dramatic resistance, while the feather reveals it through the specific ways I must interact with it.
+Think about it: I can't will the feather to be heavier or lighter. I can't will it to be in a different location. I can't will its texture to change. Even in successfully picking it up, I'm discovering its independent properties.
+Resistance, in this case, is not *just* about the prevention of our wants: it the allowance as well. The true resistance is that we can't decide when our wills succeed and when they fail...
+
+So the real insight is that we're ALWAYS encountering limitation - sometimes through intense resistance, sometimes through the specific patterns of how things yield to us. It's almost like a negotiation!
+When I type on a keyboard, each key has to be exactly where it is. When I walk across a room, I have to step where the floor actually exists. When I speak, I have to move my mouth in specific ways to make specific sounds.
+Every action, successful or not, is shaped by this "counter-will". Every movement I make is a negotiation with something beyond my control.
+
+This completely aligns with (and even strengthens) the blind man in a maze analogy. The "maze" isn't just a set of walls: it also includes where there aren't walls! The blind man didn't decide any of that - and he doesn't have to "assume" walls exist.
+They don't in the maze doesn't just discover walls through collision. They also discover open passages - but even those passages have specific widths, specific directions, specific shapes they must follow. The entire maze reveals itself through both resistance and accommodation.
+
+This is the observation I was missing! Now we have a grounded, phenomenological way of defining ontological objects: "real things" = "occurences of counter-will".
+This aligns perfectly with our intuitive understanding of reality: isn't just what stops us, but also what permits us - and only in specific ways. With everything we experience, the counter-will is always there shaping its occurence - whether we're struggling against a wall or effortlessly picking up a feather.
+I'm not occasionally bumping into an external world when things resist me. I'm constantly swimming through it, with every gesture and action revealing its contours.
+
+It even addresses the idea of “dreams”, “hallucinations”, or some other “ontological illusion”. Because we experience them, dreams and hallucinations are “real” in the sense that we feel them. Yet they are still “ontologically real” because their occurrence is still independent of our wants.
+And this will be more rigorously explore later, but it’s easy to see now how the “reality” of dreams is distinct from that of “awareness” - the phenomenological occurrence of both allows them to be distinguished.
+
+This is profound, because it literally applies to everything we feel and experience in every moment of existence. We don't need dramatic frustration to discover external reality.
+Every single thing we do - from breathing to thinking to moving - involves this dance with counter-will. We're always in contact with something beyond ourselves, something with its own nature that we must respect and work with.
+
+It’s exciting to think that this process is resolving the philosphical conundrum in a novel way - I haven’t seen anyone explore this like I have.
+What’s even more profound, is that - without even trying!! - this seems to align EXACTLY with Islam’s depiction of reality. God is simply the source of that “counter-will”, and *everything* - even our own wills! - are governed by His will. Even the concept that this world is an illusion in someway, or like a dream compared to the hereafter, can be addressed.
+All this would obviously need to be explored more in depth to see if it’s consistent, but just an interesting observation for now.
+
+The main objective is complete: we discovered the bridge to ontology from phenomenology, and seems to be objective - you can’t argue or reason with experience. And, with this bridge, we can now start exploring everything relevant to philosophy, from solipsism to atheism, to whether this counter-will is a unity or not, to the existence of other minds, to further exploration of will itself.
 
 -----------------
 
