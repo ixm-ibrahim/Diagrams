@@ -1,0 +1,84 @@
+# DAG Methodology: Critical Reading Instructions
+
+## What This DAG Is and Isn't
+
+This is a **phenomenological construction**, not an ontological theory. Every node describes what occurs in experience, not what exists behind experience.
+
+### Key Principle: We Are Only Labeling
+
+When we say "phenomena occur," we are NOT claiming:
+- That someone experiences them
+- That there's an experiencer
+- That there's a metaphysical substrate
+
+We ARE saying: "This happening happens" - pure occurrence without metaphysical baggage.
+
+## How to Read the DAG Structure
+
+### 1. Non-Linear Reading
+The DAG is a **complete graph** that should be read holistically, not sequentially. 
+
+**Correct reading**: Look up any referenced node wherever it appears in the document.
+**Incorrect reading**: Assuming nodes must be understood in document order.
+
+Example: If node T4 references IA2, go find IA2 wherever it is. The logical structure is:
+- IA2 exists somewhere in the complete graph
+- T4 can reference it
+- No circular dependency is created
+
+### 2. Understanding "Inherits From"
+When Node X inherits from Node Y, this means:
+- X uses the phenomenological observations established in Y
+- X builds upon Y's labels
+- The inheritance can cross categories and document sections
+
+### 3. Phenomenological Purity Test
+For each node, ask:
+- "Am I adding hidden assumptions about what exists?"
+- "Am I only describing what occurs?"
+- "Have I smuggled in an experiencer, subject, or substrate?"
+
+## Common Misreadings to Avoid
+
+### Misreading 1: "But who experiences this?"
+**Wrong**: "How can phenomena occur without someone experiencing them?"
+**Right**: Phenomena simply occur. The question of "who" is an ontological addition, not a phenomenological observation.
+
+### Misreading 2: "Wanting requires a wanter"
+**Wrong**: "The introduction of wanting assumes someone who wants"
+**Right**: "Wanting" is simply a label for a quality of directedness that occurs. No "wanter" is implied or required.
+
+### Misreading 3: "Sensations must be pure"
+**Wrong**: "SV6 is wrong because sensations can include wanting"
+**Right**: SV6 provides a label for a specific phenomenological pattern (intensity without wanting). Other patterns get other labels.
+
+### Misreading 4: "Awareness is too broad"
+**Wrong**: "If awareness is just occurrence of information, then everything is aware"
+**Right**: That's exactly the point. From a phenomenological perspective, occurrence IS awareness. If it didn't occur, we wouldn't be aware of it.
+
+## The Sensations Clarification
+
+Sensations are phenomena that:
+1. Come and go independently of wanting
+2. Can have wants attached to them (but the sensation itself isn't the want)
+3. Example: Pain occurs (sensation) + I want it to stop (volition)
+
+## How to Verify DAG Integrity
+
+1. **Trace dependencies**: Start from any node and trace back through "Inherits From"
+2. **Check for cycles**: If you encounter the same node twice, there's a circular dependency
+3. **Verify phenomenological purity**: Each node should only describe occurrences, not explain them
+
+## Remember: This Is Not Ontology
+
+We're not asking:
+- What sensations ARE
+- WHO experiences
+- WHAT causes phenomena
+
+We're only mapping:
+- What occurs
+- How occurrences relate
+- What patterns we observe
+
+The bridge to ontology comes LATER, through the discovery of counter-will. Don't jump ahead.
