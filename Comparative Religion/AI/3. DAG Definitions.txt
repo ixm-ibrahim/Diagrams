@@ -1,51 +1,57 @@
 **1. Phenomenological Primitives**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed |
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
 |---|---|---|---|---|
-| PH1 | Phenomena occur. | --- | {is, not, occur, happen, feeling, appear, what, thing, nothing, phenomenon, any} | Starting point: this either happens, or it does not. "Thing" here means any phenomenological occurrence, and "phenomenon" is our label for anything that occurs. |
-| PH2 | Distinct phenomena occur. | PH1 | {distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which, multiplicity} | In what way do phenomena occur? Distinctly, not as an undifferentiated mass. |
-| PH3 | Qualities occur. | PH2 | {quality, variety, flavor, kind, type, content, of, have, with} | How do phenomena distinctly occur? We label the distinctions between phenomena as "qualities". |
-| PH4 | Associations occur. | PH3 | {association, relation, like, with, similar, group, together, and, or} | How do qualities occur? With the primitive feeling that some phenomena are alike or belong together. We label these felt connections "associations". |
-| PH5 | Occurrence is a quality. | PH3 | {presence, absence} | How do phenomena distinctly occur? The distinction of their occurrence is a quality. |
+| PH1 | Phenomena occur. | --- | {is, not, occur, happen, feeling, appear, what, thing, nothing, phenomenon, any} | Starting point: this either happens, or it does not. "Thing" here means any phenomenological occurrence, and "phenomenon" is our label for anything that occurs. | Red, loud, hungry, happy, pain, want, 2, unicorn, etc. |
+| PH2 | Distinct phenomena occur. | PH1 | {distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which, multiplicity} | In what way do phenomena occur? Distinctly, not as an undifferentiated mass. | Red is different than hungry, which is different than loud |
+| PH3 | Qualities occur. | PH2 | {quality, variety, flavor, kind, type, content, of, have, with} | How do phenomena distinctly occur? We label the distinctions between phenomena as "qualities". | Red is a quality, hungry is a quality | 
+| PH4 | Associations occur. | PH3 | {association, relation, like, with, similar, group, together, and, or} | How do qualities occur? With the primitive feeling that some phenomena are alike or belong together. We label these felt connections "associations". | Red is like blue, hungry is like thirsty, happiness is like sadness, pleasure is like pain |
+| PH5 | Occurrence is a quality. | PH3 | {given, presence, absence} | How do phenomena distinctly occur? The distinction of their occurrence is a quality. | the "there-ness" of red, loud, hungry, pain, want, 2, unicorn, etc. |
 
 **2. Temporality**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed |
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
 |---|---|---|---|---|
-| T1 | Phenomena occur sequentially. | PH4 | {before, after, previous, next, sequence, succession, prior, follow} | How do phenomena occur? They occur with a feeling of "before" and "after". |
-| T2 | Phenomena occur presently. | PH4 | {present, now, current, immediate} | How do phenomena occur? They occur with a feeling of "now". |
-| T3 | Past phenomena are before the present. | T1,T2 | {past, was, then} | How do phenomena with the "before" quality occur? They are labelled as the "past". |
-| T4 | A memory is a present phenomena about a past phenomenon. | T3,IA2 | {memory} | How do past phenomena occur? They are labelled as "memories". |
-| T5 | Change is the difference of qualities in a sequence. | T3 | {change, transition} | How do phenomena distinctly occur? The difference in qualities are labelled "change". |
-| T6 | A correlation is when a phenomenon often follows another. | T3,IA5 | {correlation} | How do patterns occur with change? Phenomena that often occur after each other is labelled as a "correlation". |
-| T7 | An event is the transition from "not-occurring" to "occurring". | T5,PH5 | {event, start, end, when, from, to} | How do phenomena change? They transition between absence and presence. |
+| T1 | Phenomena occur sequentially. | PH4 | {before, after, previous, next, sequence, succession, prior, follow} | How do phenomena occur? They occur with a feeling of "before" and "after". | satisfaction comes after tasty, "wind on arm" feeling comes after "move arm" want |
+| T2 | Phenomena occur presently. | PH4 | {present, now, current, immediate} | How do phenomena occur? They occur with a feeling of "now". | ouch! |
+| T3 | Past phenomena are before the present. | T1,T2 | {past, was, then} | How do phenomena with the "before" quality occur? They are labelled as the "past". | ouch "before" is not like ouch "now" |
+| T4 | A memory is a present phenomena about a past phenomenon. | T3,IA2 | {memory} | How do past phenomena occur? They are labelled as "memories". | the feeling of "ouch before" occurs right now |
+| T5 | Change is the difference of qualities in a sequence. | T3 | {change, transition} | How do phenomena distinctly occur? The difference in qualities are labelled "change". | red changes to orange, pain changes to ease, silence changes to loudness |
+| T6 | A correlation is when a phenomenon often follows another. | T3,IA5 | {correlation} | How do patterns occur with change? Phenomena that often occur after each other is labelled as a "correlation". | loud sound often comes after a bright flash of light |
+| T7 | An event is the transition from "not-occurring" to "occurring". | T4,T5,PH5 | {event, start, end, when, from, to} | How do phenomena change? They transition between absence and presence. | the occurence of pain when no pain was felt before |
 
 **3. Information & Awareness**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed |
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
 |---|---|---|---|---|
-| IA1 | Information is a quality or association. | PH4 | {information} | How do phenomena distinctly occur? Qualities and associations are labelled as "information". |
-| IA2 | Information belongs with a phenomenon. | IA1 | {about, belong, possess, have, source, from, to} | How does information occur? Information is "about" phenomena. |
-| IA3 | A feature is a distinct piece of information. | IA1 | {feature} | How does information occur? Distinct pieces of information are labelled "features". |
-| IA4 | Awareness is the occurrence of information. | IA2,PH5 | {awareness} | How does information occur? The occurrence of information is labelled "awareness". |
-| IA5 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often} | How do features occur? A quality that a set of features share is labelled a "pattern". |
-| IA6 | A class is a similar quality that a set of patterns have. | IA5| {class} | How do patterns occur? A quality that a set of patterns share is labelled a "class". |
-| IA7 | Sets of features that have similar patterns are analogous to each other. | IA5 | {analogy} | How do patterns occur? One set of features is labelled an "analogy" to another when they share a similar pattern. |
-| IA8 | Sameness is the similarity of a pattern across its features. | IA5 | {same, identical} | How do features occur? The way in which a pattern is similar across its features is labelled "sameness". |
-| IA9 | Variation is the difference of a pattern across its features. | IA5 | {variation} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". |
-| IA10 | Independence is when variations in one pattern do not correlate with variations in another pattern. | IA9,T6 | {independence} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". |
+| IA1 | Information is a quality or association. | PH4,PH5 | {information} | How do phenomena distinctly occur? Qualities and associations are labelled as "information". | hungry, red is like blue, etc. |
+| IA2 | Information belongs with a phenomenon. | IA1 | {about, belong, possess, have, source, from, to} | How does information occur? Information is "about" phenomena. | what was felt is "red" or "2" or "want" or "loud" |
+| IA3 | A feature is a distinct piece of information. | IA1 | {feature} | How does information occur? Distinct pieces of information are labelled "features". | "red" is a feature of a rainbow |
+| IA4 | Awareness is the occurrence of information. | IA2 | {awareness} | How does information occur? The occurrence of information is labelled "awareness". | "red" occurring = "awareness of red" |
+| IA5 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often} | How do features occur? A quality that a set of features share is labelled a "pattern". | red and blue have the same quality of "color" |
+| IA6 | A class is a similar quality that a set of patterns have. | IA5| {class} | How do patterns occur? A quality that a set of patterns share is labelled a "class". | color and brightness have the same quality of "vision" |
+| IA7 | Sets of features that have similar patterns are analogous to each other. | IA5 | {analogy} | How do patterns occur? One set of features is labelled an "analogy" to another when they share a similar pattern. | both "loud and quiet" and "bright and dim" have the same pattern of "different intensities" |
+| IA8 | Sameness is the similarity of a pattern across its features. | IA5 | {same, identical} | How do features occur? The way in which a pattern is similar across its features is labelled "sameness". | apples and strawberries (both "fruits") are the same in "red" |
+| IA9 | Variation is the difference of a pattern across its features. | IA5 | {variation} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". | apples and strawberries (both "fruits") are different in "taste" |
+| IA10 | Independence is when variations in one pattern do not correlate with variations in another pattern. | IA9,T6 | {independence} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". | the taste fruits are independent from the sound of voices |
 
 
-**4. Sensations & Volition**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed |
+**4. Wanting & Intensity**
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
 |---|---|---|---|---|
-| SV1 | Wanting occurs. | PH4 | {want} | How do phenomena distinctly occur? With a quality of directedness toward something, which we label "want". |
-| SV2 | Intensity occurs. | PH4 | {intensity, strength, magnitude, more, less} | How do phenomena distinctly occur? With degrees of force or strength, which we label "intensity". |
-| SV3 | Direction is the wanted information. | SV1,IA1 | {direction, target, aim, purpose, toward} | How does striving occur? We label the information that has the "wanting" quality as "direction". |
-| SV4 | Striving is wanting with intensity. | SV1,SV2 | {striving, urge} | How does wanting and intensity occur? When they occur together, we label it "striving". |
-| SV5 | Inclination is wanting without intensity. | SV1,SV2 | {inclination, predisposition} | How does wanting and intensity occur? When wanting occurs without intensity, we label it "inclination". |
-| SV6 | Sensation is intensity without wanting. | SV1,SV2 | {sensation, feeling} | How does wanting and intensity occur? When intensity of any quality occurs without wanting, we label it "sensation". |
-| SV7 | Success is the occurrence of what is wanted. | SV3 | {success, achievement, accomplishment} | How does direction occur? When it occurs, we label it "success". |
-| SV8 | Failure is the non-occurrence of what is wanted. | SV3 | {failure} | How does direction occur? When it does not occur, we label it "failure". |
-| SV9 | Volition is a striving whose occurrence and intensity are inclined. | SV4,SV5,PH5 | {volition, will, intention, voluntary} | How does the occurrence of striving occur with inclination? When both its occurrence and intensity are themselves inclined (wanted without intensity), we label it "volition". |
-| SV10 | Compulsion is a striving whose occurrence and intensity are not inclined. | SV4,SV5,PH5 | {compulsion, involuntary, desire} | How does the occurrence of striving occur with inclination? When neither its occurrence nor intensity are themselves wanted, we label it "compulsion". |
+| WI1 | Wanting occurs. | PH4 | {want} | How do phenomena distinctly occur? With a quality of directedness toward something, which we label "want". | want of good taste, want of "move arm" |
+| WI2 | Intensity occurs. | PH4 | {intensity, strength, magnitude, more, less} | How do phenomena distinctly occur? With degrees of force or strength, which we label "intensity". | low pain vs. high pain, more red vs. less red, very hungry vs. very full |
+| WI3 | Direction is the wanted information. | SV1,IA1 | {direction, target, aim, purpose, toward} | How does striving occur? We label the information that has the "wanting" quality as "direction". | the "good taste" of a want |
+| WI4 | Striving is wanting with intensity. | SV1,SV2 | {striving, desire} | How does wanting and intensity occur? When they occur together, we label it "striving". | strong desire to feel pleasure, weak desire to taste vegetables |
+| WI5 | Inclination is wanting without intensity. | SV1,SV2 | {inclination, predisposition} | How does wanting and intensity occur? When wanting occurs without intensity, we label it "inclination". | the "there-ness" of a want |
+| WI6 | Sensation is intensity without wanting. | SV1,SV2 | {sensation, feeling} | How does wanting and intensity occur? When intensity of any quality occurs without wanting, we label it "sensation". | red, loud, 2, unicorn, hungry, happy |
+| WI7 | Success is the occurrence of what is wanted. | SV3 | {success, satisfaction, achievement, accomplishment} | How does direction occur? When it occurs, we label it "success". | "arm moves" occurs with "want to move arm" |
+| WI8 | Failure is the non-occurrence of what is wanted. | SV3 | {failure} | How does direction occur? When it does not occur, we label it "failure". | "fly" does not occur with "want to fly" |
+| WI9 | Volition is a striving whose occurrence and intensity are inclined. | SV4,SV5,PH5 | {volition, will, intention, voluntary} | How does the occurrence of striving occur with inclination? When both its occurrence and intensity are themselves inclined (wanted without intensity), we label it "volition". | "wanting food" occurs with "wanting to want food" |
+| WI10 | Compulsion is a striving whose occurrence and intensity are not inclined. | SV4,SV5,PH5 | {compulsion, involuntary, desire, urge} | How does the occurrence of striving occur with inclination? When neither its occurrence nor intensity are themselves wanted, we label it "compulsion". | "wanting cigarettes" occurs with "not wanting to want cigarettes" |
+| WI11 | An outcome is a success or failure. | SV7,SV8 | {outcome, result} | How do successes and failures occur? The occurrence of either one is labelled an "outcome". | whether or not "arm moves" occurs with "want to move arm" |
+| WI12 | Wants do not correlate with sensations. | SV6,IA10 | {} | How do wants and sensations occur? Wants occur independently from sensations. | "want to fly" does not correlate with "occurrence of flight" |
+| WI13 | Outcomes do not correlate with want. | SV11,IA10 | {} | How do outcomes and sensations occur? Wants occur independently from outcomes. | "want to fly" does not correlate with whether "flight" occurs or not |
 
-**5. Resistance***
+**5. ???***
+???
+
+**6. ???***
 ???
