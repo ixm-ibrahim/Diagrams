@@ -1,84 +1,166 @@
-# DAG Methodology: Critical Reading Instructions
+# DAG Methodology for Phenomenological Construction
 
-## What This DAG Is and Isn't
+## 1. Foundation
 
-This is a **phenomenological construction**, not an ontological theory. Every node describes what occurs in experience, not what exists behind experience.
+### What is a Phenomenological DAG?
 
-### Key Principle: We Are Only Labeling
+A phenomenological Directed Acyclic Graph (DAG) is a formal construction method that maps the relationships between experiential observations while preventing circular definitions and hidden assumptions. Each node represents a phenomenological observation—what occurs in experience—connected by inheritance relationships that ensure definitional clarity.
 
-When we say "phenomena occur," we are NOT claiming:
-- That someone experiences them
-- That there's an experiencer
-- That there's a metaphysical substrate
+### The Problem It Solves
 
-We ARE saying: "This happening happens" - pure occurrence without metaphysical baggage.
+Traditional philosophical construction faces three critical failures:
 
-## How to Read the DAG Structure
+1. **Circular Definition**: Terms defined using each other (e.g., "consciousness is awareness" while "awareness is conscious experience")
+2. **Hidden Assumptions**: Smuggling ontological claims into supposedly pure descriptions (e.g., assuming an experiencer when describing experience)
+3. **Definitional Regression**: Endless chains of undefined terms requiring further definition
 
-### 1. Non-Linear Reading
-The DAG is a **complete graph** that should be read holistically, not sequentially. 
+The DAG structure enforces mathematical rigor: you cannot reference what hasn't been established, making circular definitions impossible and hidden assumptions immediately visible.
 
-**Correct reading**: Look up any referenced node wherever it appears in the document.
-**Incorrect reading**: Assuming nodes must be understood in document order.
+## 2. Formal Structure
 
-Example: If node T4 references IA2, go find IA2 wherever it is. The logical structure is:
-- IA2 exists somewhere in the complete graph
-- T4 can reference it
-- No circular dependency is created
+### DAG Properties
 
-### 2. Understanding "Inherits From"
-When Node X inherits from Node Y, this means:
-- X uses the phenomenological observations established in Y
-- X builds upon Y's labels
-- The inheritance can cross categories and document sections
+A Directed Acyclic Graph ensures:
+- **Directionality**: Each edge points from foundational to derived concepts
+- **Acyclicity**: No node can reference itself through any path
+- **Topological Order**: Concepts build strictly upon previous foundations
 
-### 3. Phenomenological Purity Test
-For each node, ask:
-- "Am I adding hidden assumptions about what exists?"
-- "Am I only describing what occurs?"
-- "Have I smuggled in an experiencer, subject, or substrate?"
+### Node Anatomy
 
-## Common Misreadings to Avoid
+Each node contains six components:
 
-### Misreading 1: "But who experiences this?"
-**Wrong**: "How can phenomena occur without someone experiencing them?"
-**Right**: Phenomena simply occur. The question of "who" is an ontological addition, not a phenomenological observation.
+| Component | Purpose | Example |
+|-----------|---------|---------|
+| **ID** | Unique identifier for reference | PH1, T3, WI5 |
+| **Statement** | The phenomenological observation | "Phenomena occur sequentially" |
+| **Inherits From** | Parent nodes providing established terms | T1, T2 |
+| **Terms Introduced** | New labels (typically one primary term) | {memory} |
+| **Question Addressed** | The phenomenological problem being resolved | "How do past phenomena occur?" |
+| **Intuitive Example** | Concrete instance of the observation | "The feeling of 'ouch before' occurs right now" |
 
-### Misreading 2: "Wanting requires a wanter"
-**Wrong**: "The introduction of wanting assumes someone who wants"
-**Right**: "Wanting" is simply a label for a quality of directedness that occurs. No "wanter" is implied or required.
+### Inheritance Rules
 
-### Misreading 3: "Sensations must be pure"
-**Wrong**: "SV6 is wrong because sensations can include wanting"
-**Right**: SV6 provides a label for a specific phenomenological pattern (intensity without wanting). Other patterns get other labels.
+1. **Term Propagation**: A node has access to all terms from its parents and their ancestors
+2. **No Forward Reference**: A node cannot inherit from nodes defined later in the construction
+3. **Explicit Dependencies**: All conceptual dependencies must be declared in "Inherits From"
 
-### Misreading 4: "Awareness is too broad"
-**Wrong**: "If awareness is just occurrence of information, then everything is aware"
-**Right**: That's exactly the point. From a phenomenological perspective, occurrence IS awareness. If it didn't occur, we wouldn't be aware of it.
+### Primitive Nodes
 
-## The Sensations Clarification
+The foundation begins with primitive observations that inherit from nothing:
+- These are phenomenological axioms—observations so basic they require no prior terms
+- Example: "Phenomena occur" introduces {occur, phenomenon, happen, feeling}
+- These cannot be proven, only recognized or not recognized
 
-Sensations are phenomena that:
-1. Come and go independently of wanting
-2. Can have wants attached to them (but the sensation itself isn't the want)
-3. Example: Pain occurs (sensation) + I want it to stop (volition)
+## 3. Construction Methodology
 
-## How to Verify DAG Integrity
+### The Phenomenological Purity Principle
 
-1. **Trace dependencies**: Start from any node and trace back through "Inherits From"
-2. **Check for cycles**: If you encounter the same node twice, there's a circular dependency
-3. **Verify phenomenological purity**: Each node should only describe occurrences, not explain them
+Every node must describe only what occurs in experience, never what might exist behind experience.
 
-## Remember: This Is Not Ontology
+**Correct**: "Wanting occurs" (a directional quality is observed)  
+**Incorrect**: "A wanter has wants" (assumes an entity behind the phenomenon)
 
-We're not asking:
-- What sensations ARE
-- WHO experiences
-- WHAT causes phenomena
+This principle has three critical implications:
+1. **No Experiencer Assumption**: Phenomena occur without requiring someone experiencing them
+2. **No Causal Claims**: Describe patterns, not their supposed sources
+3. **No Metaphysical Substrate**: Label occurrences, not their alleged foundations
 
-We're only mapping:
-- What occurs
-- How occurrences relate
-- What patterns we observe
+### Progressive Term Introduction
 
-The bridge to ontology comes LATER, through the discovery of counter-will. Don't jump ahead.
+Each node should introduce at most one primary term, with supporting terms only as necessary:
+- This ensures conceptual clarity and prevents overloading
+- The new term must label the specific phenomenological pattern being identified
+- Example: Node T4 introduces "memory" to label "present phenomena about past phenomena"
+
+### Question-Driven Development
+
+Each node must address a specific phenomenological question arising from previous observations:
+1. The question emerges from gaps or ambiguities in inherited concepts
+2. The answer provides a new label for an observed pattern
+3. This creates natural conceptual progression
+
+### Verification Procedures
+
+Before accepting a new node:
+1. **Trace all dependencies**: Ensure every inherited term exists in parent nodes
+2. **Check phenomenological purity**: Confirm no ontological assumptions
+3. **Validate the question**: Verify it naturally arises from inherited concepts
+4. **Test the example**: Ensure it clearly illustrates the observation
+
+## 4. Usage Guide
+
+### Reading Non-Linearly
+
+The DAG is a complete graph meant to be navigated dynamically:
+- When encountering a reference (e.g., T4 inherits from IA2), locate that node wherever it appears
+- Categories (Phenomenological Primitives, Temporality, etc.) are organizational, not logical boundaries
+- The true structure is the inheritance network, not the document sequence
+
+### Adding New Nodes
+
+To extend the construction:
+
+1. **Identify the Gap**: What phenomenological question remains unaddressed?
+2. **Determine Parents**: Which existing nodes provide necessary terms?
+3. **Formulate the Observation**: Describe the pattern using only inherited terms
+4. **Introduce the Label**: What single term best captures this pattern?
+5. **Provide Clear Example**: What concrete instance makes this obvious?
+6. **Verify Independence**: Ensure no circular dependencies are created
+
+### Navigating Complex Inheritance
+
+When a node inherits from multiple parents:
+- It gains access to all terms from all inheritance chains
+- The combination often reveals new patterns not visible from single parents
+- Example: "Memory" (T4) requires both temporal concepts (T3) and information concepts (IA2)
+
+### Recognizing Proper Boundaries
+
+The construction should:
+- Stop at genuine phenomenological primitives (cannot be further reduced)
+- Continue while phenomenological questions remain
+- Never jump to ontological conclusions within the DAG itself
+
+## 5. Common Misinterpretations with Corrections
+
+### "But who experiences phenomena?"
+
+**Misinterpretation**: Phenomena require an experiencer to occur.
+
+**Correction**: This commits the ontological assumption error. Phenomenologically, we observe that phenomena occur—full stop. The question "who experiences" adds a theoretical layer beyond observation. Just as we don't ask "who gravitates" when observing gravitational effects, we don't need to posit an experiencer to acknowledge that experiencing happens.
+
+### "Wanting must come from a wanter"
+
+**Misinterpretation**: The node "Wanting occurs" implicitly assumes an agent who wants.
+
+**Correction**: "Wanting" labels a directional quality observed in experience—a pull toward something. This quality occurs without requiring us to posit a "wanter" any more than "redness occurs" requires a "reddener." The agent-action framework is a later theoretical construct, not a phenomenological given.
+
+### "This makes everything aware"
+
+**Misinterpretation**: If awareness equals information occurrence, then thermostats are aware.
+
+**Correction**: This confuses phenomenological description with ontological claims. When we say "awareness is the occurrence of information," we're labeling what we observe in experience, not making claims about thermostats. Whether non-experiential entities "have awareness" is an ontological question outside the DAG's scope.
+
+### "Sensations can include wanting"
+
+**Misinterpretation**: Node WI6 is wrong because sensations like hunger include wanting.
+
+**Correction**: The DAG distinguishes patterns, not essences. "Sensation" labels intensity-without-wanting (like pure color), while hunger would be sensation (the intensity) plus wanting (the directedness toward food). The framework provides labels for pure patterns and their combinations.
+
+### "The DAG must be read sequentially"
+
+**Misinterpretation**: Node T4 can't reference IA2 because Information comes "after" Temporality in the document.
+
+**Correction**: The document order is purely organizational. The DAG's logical structure is determined by inheritance arrows, not textual sequence. Like a mathematical proof that references earlier theorems regardless of page numbers, nodes reference each other based on logical, not textual, priority.
+
+### "Circular definitions are hidden"
+
+**Misinterpretation**: The DAG might have hidden circular definitions through long inheritance chains.
+
+**Correction**: The acyclic property makes hidden circles mathematically impossible. If A inherits from B, and B inherits from C, then C cannot inherit from A through any path. This is verifiable through standard graph algorithms—no faith required.
+
+### "This is just playing with words"
+
+**Misinterpretation**: The DAG merely relabels common concepts without adding understanding.
+
+**Correction**: The DAG enforces definitional rigor impossible in natural language. By requiring explicit inheritance and preventing forward reference, it exposes hidden assumptions and circular reasoning that ordinary language conceals. The constraint reveals structure, not just vocabulary.
