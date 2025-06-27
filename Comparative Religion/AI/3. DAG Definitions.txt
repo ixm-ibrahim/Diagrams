@@ -1,5 +1,5 @@
 **1. Phenomenological Primitives**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | PH1 | Phenomena occur. | --- | {is, not, occur, happen, feeling, appear, what, thing, nothing, phenomenon, primitive, raw, any} | Starting point: this either happens, or it does not. "Thing" here means any phenomenological occurrence, and "phenomenon" is our label for anything that occurs. | Red, loud, hungry, happy, pain, want, 2, unicorn, etc. |
 | PH2 | Distinct phenomena occur. | PH1 | {distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which, multiplicity} | In what way do phenomena occur? Distinctly, not as an undifferentiated mass. | Red is different than hungry, which is different than loud |
@@ -8,30 +8,30 @@
 | PH5 | Occurrence is a quality. | PH3 | {given, presence, absence} | How do phenomena distinctly occur? The distinction of their occurrence is a quality. | the "there-ness" of red, loud, hungry, pain, want, 2, unicorn, etc. |
 
 **2. Temporality**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | T1 | Phenomena occur sequentially. | PH4 | {before, after, previous, next, sequence, succession, prior, follow} | How do phenomena occur? They occur with a feeling of "before" and "after". | satisfaction comes after tasty, "wind on arm" feeling comes after "move arm" want |
 | T2 | Phenomena occur presently. | PH4 | {present, now, current, immediate} | How do phenomena occur? They occur with a feeling of "now". | ouch! |
-| T3 | Past phenomena are before the present. | T1,T2 | {past, was, then} | How do phenomena with the "before" quality occur? They are labelled as the "past". | ouch "before" is not like ouch "now" |
+| T3 | Past phenomena occur with the "before now" quality. | T1,T2 | {past, was, then} | How do phenomena with the "before" quality occur? They are labelled as the "past". | ouch "before" is not like ouch "now" |
 | T4 | Change is the difference of qualities in a sequence. | T3 | {change, transition} | How do phenomena distinctly occur? The difference in qualities are labelled "change". | red changes to orange, pain changes to ease, silence changes to loudness |
-| T5 | A correlation is when a phenomenon often follows another. | T3,IA5 | {correlation} | How do patterns occur with change? Phenomena that often occur after each other is labelled as a "correlation". | loud sound often comes after a bright flash of light |
+| T5 | A correlation is when a phenomenon often follows another. | T3,IA4,MP1 | {correlation} | How do patterns occur with change? Phenomena that often occur after each other is labelled as a "correlation". | loud sound often comes after a bright flash of light |
 | T6 | An event is the transition from "not-occurring" to "occurring". | T4,PH5,MP1 | {event, start, end, when, from, to} | How do phenomena change? They transition between absence and presence. | the occurence of pain when no pain was felt before |
 
 **3. Information & Awareness**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | IA1 | Information is a quality or association. | PH4,PH5 | {information, meaning} | How do phenomena distinctly occur? Qualities and associations are labelled as "information". | hungry, red is like blue, etc. |
-| IA2 | Information belongs with a phenomenon. | IA1 | {about, belong, possess, have, source, from, to, in, by} | How does information occur? Information is "about" phenomena. | what was felt is "red" or "2" or "want" or "loud" |
-| IA3 | A feature is a distinct piece of information. | IA1 | {feature} | How does information occur? Distinct pieces of information are labelled "features". | "red" is a feature of a rainbow |
-| IA4 | Awareness is the occurrence of information. | IA2 | {awareness} | How does information occur? The occurrence of information is labelled "awareness". | "red" occurring = "awareness of red" |
-| IA5 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often} | How do features occur? A quality that a set of features share is labelled a "pattern". | red and blue have the same quality of "color" |
-| IA6 | A class is a similar quality that a set of patterns have. | IA5| {class} | How do patterns occur? A quality that a set of patterns share is labelled a "class". | color and brightness have the same quality of "vision" |
-| IA7 | Sets of features that have similar patterns are analogous to each other. | IA5 | {analogy} | How do patterns occur? One set of features is labelled an "analogy" to another when they share a similar pattern. | both "loud and quiet" and "bright and dim" have the same pattern of "different intensities" |
-| IA8 | Sameness is the similarity of a pattern across its features. | IA5 | {same, identical} | How do features occur? The way in which a pattern is similar across its features is labelled "sameness". | apples and strawberries (both "fruits") are the same in "red" |
-| IA9 | Variation is the difference of a pattern across its features. | IA5 | {variation} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". | apples and strawberries (both "fruits") are different in "taste" |
+| IA2 | Information belongs with a phenomenon. | IA1 | {about, regarding, belong, possess, have, source, from, to, in, by} | How does information occur? Information is "about" phenomena. | what was felt is "red" or "2" or "want" or "loud" |
+| IA3 | A feature is a distinct piece of information. | IA1 | {feature} | How does information occur? Distinct pieces of information are labelled "features". | "red" is a feature of a rainbow |]
+| IA4 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often, match} | How do features occur? A quality that a set of features share is labelled a "pattern". | red and blue have the same quality of "color" |
+| IA5 | A class is a similar quality that a set of patterns have. | IA4| {class, genus, family} | How do patterns occur? A quality that a set of patterns share is labelled a "class". | color and brightness have the same quality of "vision" |
+| IA6 | Sets of features that have similar patterns are analogous to each other. | IA4 | {analogy} | How do patterns occur? One set of features is labelled an "analogy" to another when they share a similar pattern. | both "loud and quiet" and "bright and dim" have the same pattern of "different intensities" |
+| IA7 | Sameness is the similarity of a pattern across its features. | IA4 | {same, identical} | How do features occur? The way in which a pattern is similar across its features is labelled "sameness". | apples and strawberries (both "fruits") are the same in "red" |
+| IA8 | Variation is the difference of a pattern across its features. | IA4 | {variation} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". | apples and strawberries (both "fruits") are different in "taste" |
+| IA9 | Independence is when variations in one pattern do not correlate with variations in another pattern. | IA8,T5 | {independence} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". | the taste fruits are independent from the sound of voices |
 
 **4. Wanting & Intensity**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | WI1 | Wanting occurs. | PH4 | {want} | How do phenomena distinctly occur? With a quality of directedness toward something, which we label "want". | want of good taste, want of "move arm" |
 | WI2 | Intensity occurs. | PH4 | {intensity, strength, magnitude, more, less} | How do phenomena distinctly occur? With degrees of force or strength, which we label "intensity". | low pain vs. high pain, more red vs. less red, very hungry vs. very full |
@@ -46,10 +46,10 @@
 | WI11 | An outcome is a success or failure. | WI7,WI8 | {outcome, result} | How do successes and failures occur? The occurrence of either one is labelled an "outcome". | whether or not "arm moves" occurs with "want to move arm" |
 
 **5. Questions & Answers**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | QA1 | Learning is the occurrence of information. | IA1 | {learn} | How do wants and information occur? Wants that occur with information are labelled "questions". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
-| QA2 | A question is a want for possible information. | QA1,WI1,MP8 | {question} | How does learning and wants occur? Wanting to learn some pience of information is labelled a "question". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
+| QA2 | A question is a want for possible information. | QA1,WI1,MP9 | {question} | How does learning and wants occur? Wanting to learn some pience of information is labelled a "question". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
 | QA3 | An answer is the outcome of a question. | QA2,WI11 | {answer} | How do questions occur? Their outcome is labelled a "question". | what color are apples? red. what is a square circle? <shrug> |
 | QA4 | Knowledge is the successful result of a question. | QA3 | {knowledge} | How do answers occur? Successful answers are labelled "knowledge". | ??? |
 | QA5 | Ignorance is the failed result of a question. | QA3 | {ignorance} | How do answers occur? Failed answers are labelled "ignorance". | ??? |
@@ -57,31 +57,36 @@
 certainty? uncertainty?
 
 **6. Memory & Possibility**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
-| MP1 | A memory is a present phenomena about a past phenomenon. | T3,IA2 | {memory} | How do past phenomena occur? They are labelled as "memories". | the feeling of "ouch before" occurs right now |
-| MP2 | Recognition is when a present phenomenon is like a memory. | MP1 | {recognition} | How do memories occur with present phenomena? Present phenomena that are like a memory are labelled as "recognition". | "strawberry taste" is like a memory of "strawberry taste" |
+| MP1 | A memory is a present phenomenon about a past phenomenon. | T3,IA2 | {memory} | How do past phenomena occur? They are labelled as "memories". | the feeling of "ouch before" occurs right now |
+| MP2 | Recognition is when a present phenomenon is like a memory. | MP1 | {recognition, remembrance} | How do memories occur with present phenomena? Present phenomena that are like a memory are labelled as "recognition". | "strawberry taste" is like a memory of "strawberry taste" |
 | MP3 | Imagination is information from different memories. | MP1 | {imagination} | How do memories occur? When different pieces of information are taken from different memories, we label that "imagination". | gray + elephant, pink + elephant, 1 + 1, flat + earth, square + circle |
 | MP4 | A phenomenon is new when it occurs without recognition. | MP2 | {new, novel} | How do phenomena occur with memories? Phenomena that don't exist in memory are labelled "new". | tasting a new food, being intimate for the first time, seeing a new landmark |
 | MP5 | Visualization is the sensation of an imagination. | MP3,WI6 | {visualization, picturing, quasi-sensual} | How do phenomena distinctly occur? Distinct phenomena occur as "imagination". | the "color" of an imagined "elephant", the "number" of an imagined "quantity", the "truth" of an imagined "logical statement" |
 | MP6 | A thought is a set of imaginations and their associations. | MP3 | {thought, concept, idea, analysis} | How does imagination occur? Connected imaginations are labelled "thoughts". | {gray, elephant} with {big, cool}, {pink, elephant} with {fake, possible with pink paint}, {1, 1} with {2}  |
 | MP7 | Creativity is new imagination. | MP3,MP4 | {creativity} | How does imagination occur? New imaginations are labelled "creativity". | thinking of a new recipe, trying a new chess strategy, playing devil's advocate for a new concept |
-| MP8 | Possibility is a thought constrained by imagined limits. | MP6,CW3 | {possibility, potential, could} | How do imagination and limits occur? Thoughts constrained by imagined limits are labelled "possibilities". | {coin flip} has possibilities of {heads, tails}, {unicorn} has possibilities of {rainbow farts} |
+| MP8 | Imagination is independent from occurrence. | MP3,IA9 | {} | How does imagination occur? What occurs is imagined occurs independently from what . | thinking of a new recipe, trying a new chess strategy, playing devil's advocate for a new concept |
+| MP9 | Possibility is a thought constrained by imagined limits. | MP6,OB3 | {possibility, potential, could} | How do imagination and limits occur? Thoughts constrained by imagined limits are labelled "possibilities". | {coin flip} has possibilities of {heads, tails}, {unicorn} has possibilities of {rainbow farts} |
 
 concepts that can't be vizualized - square circle
 
-**7. Logic**
-| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example | 
+**7. Abstraction & Domain**
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
-| L1 | Independence is when variations in one pattern do not correlate with variations in another pattern. | IA9,T5 | {independence} | How do features occur? The way in which a pattern is different across its features is labelled a "variation". | the taste fruits are independent from the sound of voices |
+| AD1 | An abstraction is an imagined pattern. | IA4,MP3 | {abstraction, generalization} | How do patterns occur with imagination? Imagined patterns are labelled "abstractions". | the "redness" of imagined {apple, strawberry, blood, flowers} |
+| AD2 | A domain is a set of . | IA4,MP3 | {abstraction, generalization} | How do patterns occur with imagination? Imagined patterns are labelled "abstractions". | the "redness" of imagined {apple, strawberry, blood, flowers} |
 
 
-**8. Counter-Will***
-| CW1 | Wants do not correlate with sensations. | WI6,L1 | {} | How do wants and sensations occur? Wants occur independently from sensations. | "want to fly" does not correlate with "occurrence of flight" |
-| CW2 | Outcomes do not correlate with want. | WI11,L1 | {} | How do outcomes and sensations occur? Wants occur independently from outcomes. | "want to fly" does not correlate with whether "flight" occurs or not |
-| CW3 | A limit is what is independent from want. | CW1,CW2 | {limit, constraint, boundary} | How do wants occur with outcomes and sensations? What occurs independently from want is labelled a "limit". | "flight" is a limit to want, as well as all "sensations" and "outcomes" |
-| CW4 | Nature is the set of properties for a limit. | CW3 | {nature} | How do limits occur? A limit's properties is labelled its "nature". | "apple" has {"round", "red", "sweet"}, "arm movement" has {"wind feeling on arm", "proprioceptive awareness", "visuals of an arm changing"} |
-| CW5 | A structure is a set of limits. | CW3 | {structure, system, composition, build, topology} | How do limits occur? A set of them is labelled a "structure". | a "maze" is a structure built by "walls" of {hard, rough} and "passageways" of {breezy, ease} |
+**8. Ontological Bridge***
+| ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
+|---|---|---|---|---|
+| OB1 | Wants do not correlate with sensations. | WI6,IA9 | {} | How do wants and sensations occur? Wants occur independently from sensations. | "want to fly" does not correlate with "occurrence of flight" |
+| OB2 | Outcomes do not correlate with want. | WI11,IA9 | {} | How do outcomes and sensations occur? Wants occur independently from outcomes. | "want to fly" does not correlate with whether "flight" occurs or not |
+| OB3 | A limit is what is independent from want. | OB1,OB2 | {limit, constraint, boundary, against} | How do wants occur with outcomes and sensations? What occurs independently from want is labelled a "limit". | "flight" is a limit to want, as well as all "sensations" and "outcomes" |
+| OB4 | Nature is the set of properties for a limit. | OB3 | {nature} | How do limits occur? A limit's properties is labelled its "nature". | "apple" has {"round", "red", "sweet"}, "arm movement" has {"wind feeling on arm", "proprioceptive awareness", "visuals of an arm changing"} |
+| OB5 | A structure is a set of limits. | OB3 | {structure, system, composition, network, build, topology} | How do limits occur? A set of them is labelled a "structure". | a "maze" is a structure built by "walls" of {hard, rough} and "passageways" of {breezy, ease} |
+| OB6 | An object is a structure with nature. | OB4,OB5 | {object} | How do structures and natures occur? A structure with nature is labelled an "object". | a "maze" is {confusing}, a "hand" {moves, feels} |
 
 boundary? is what is limited
 resistance is the intensity of limit?
@@ -95,5 +100,5 @@ limits occur independently from striving.
 
 ???
 
-**6. ???***
+**9. ???***
 ???

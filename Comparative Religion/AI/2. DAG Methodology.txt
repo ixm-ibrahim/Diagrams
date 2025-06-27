@@ -34,7 +34,7 @@ Each node contains six components:
 | **ID** | Unique identifier for reference | PH1, T3, WI5 |
 | **Statement** | The phenomenological observation | "Phenomena occur sequentially" |
 | **Inherits From** | Parent nodes providing established terms | T1, T2 |
-| **Terms Introduced** | New labels (typically one primary term) | {memory} |
+| **Terms Introduced** | New labels (typically one primary term, along with common synonyms) | {memory} |
 | **Question Addressed** | The phenomenological problem being resolved | "How do past phenomena occur?" |
 | **Intuitive Example** | Concrete instance of the observation | "The feeling of 'ouch before' occurs right now" |
 
@@ -47,7 +47,7 @@ Each node contains six components:
 ### Primitive Nodes
 
 The foundation begins with primitive observations that inherit from nothing:
-- These are phenomenological axioms—observations so basic they require no prior terms
+- These are phenomenological axioms - observations so basic they require no prior terms
 - Example: "Phenomena occur" introduces {occur, phenomenon, happen, feeling}
 - These cannot be proven, only recognized or not recognized
 
@@ -55,13 +55,10 @@ The foundation begins with primitive observations that inherit from nothing:
 
 ### The Phenomenological Purity Principle
 
-Every node must describe only what occurs in experience, never what might exist behind experience.
-
-**Correct**: "Wanting occurs" (a directional quality is observed)  
-**Incorrect**: "A wanter has wants" (assumes an entity behind the phenomenon)
+Every node must describe only what occurs in experience: what might exist "behind" experience can't be assumed - it must be derived phenomenologically.
 
 This principle has three critical implications:
-1. **No Experiencer Assumption**: Phenomena occur without requiring someone experiencing them
+1. **No Experiencer Assumption**: Phenomena occur without requiring someone experiencing them (the "experiencer" would need to be derived later, not assumed now)
 2. **No Causal Claims**: Describe patterns, not their supposed sources
 3. **No Metaphysical Substrate**: Label occurrences, not their alleged foundations
 
@@ -127,7 +124,7 @@ The construction should:
 
 **Misinterpretation**: Phenomena require an experiencer to occur.
 
-**Correction**: This commits the ontological assumption error. Phenomenologically, we observe that phenomena occur—full stop. The question "who experiences" adds a theoretical layer beyond observation. Just as we don't ask "who gravitates" when observing gravitational effects, we don't need to posit an experiencer to acknowledge that experiencing happens.
+**Correction**: This commits the ontological assumption error. Phenomenologically, we observe that phenomena occur—full stop. The question "who experiences" adds a theoretical layer beyond observation. Just as we don't ask "who gravitates" when observing gravitational effects, we don't need to posit an experiencer to acknowledge that experiencing happens. We simply use what we experience to derive any term we need - including an "experiencer".
 
 ### "Wanting must come from a wanter"
 
@@ -145,7 +142,7 @@ The construction should:
 
 **Misinterpretation**: Node WI6 is wrong because sensations like hunger include wanting.
 
-**Correction**: The DAG distinguishes patterns, not essences. "Sensation" labels intensity-without-wanting (like pure color), while hunger would be sensation (the intensity) plus wanting (the directedness toward food). The framework provides labels for pure patterns and their combinations.
+**Correction**: The DAG distinguishes patterns, not essences (at least, until "essence" has been defined). "Sensation" labels intensity-without-wanting (like pure color), while hunger would be sensation (the intensity) plus wanting (the directedness toward food). The framework provides labels for pure patterns and their combinations.
 
 ### "The DAG must be read sequentially"
 
