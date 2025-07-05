@@ -23,7 +23,7 @@
 | IA1 | Information is a quality or association. | PH4,PH5 | {information, meaning} | How do phenomena distinctly occur? Qualities and associations are labelled as "information". | hungry, red is like blue, etc. |
 | IA2 | Information belongs with a phenomenon. | IA1 | {about, regarding, belong, possess, have, source, from, to, in, by} | How does information occur? Information is "about" phenomena. | what was felt is "red" or "2" or "want" or "loud" |
 | IA3 | A feature is a distinct piece of information. | IA1 | {feature} | How does information occur? Distinct pieces of information are labelled "features". | "red" is a feature of a rainbow |]
-| IA4 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often, match} | How do features occur? A quality that a set of features share is labelled a "pattern". | red and blue have the same quality of "color" |
+| IA4 | A pattern is a similar quality that a set of features have. | IA2,IA3 | {pattern, repetition, often} | How do features occur? A quality that a set of features share is labelled a "pattern". | red and blue have the same quality of "color" |
 | IA5 | A class is a similar quality that a set of patterns have. | IA4| {class, genus, family} | How do patterns occur? A quality that a set of patterns share is labelled a "class". | color and brightness have the same quality of "vision" |
 | IA6 | Sets of features that have similar patterns are analogous to each other. | IA4 | {analogy} | How do patterns occur? One set of features is labelled an "analogy" to another when they share a similar pattern. | both "loud and quiet" and "bright and dim" have the same pattern of "different intensities" |
 | IA7 | Sameness is the similarity of a pattern across its features. | IA4 | {same, identical} | How do features occur? The way in which a pattern is similar across its features is labelled "sameness". | apples and strawberries (both "fruits") are the same in "red" |
@@ -49,7 +49,7 @@
 | ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | QA1 | Learning is the occurrence of information. | IA1 | {learn} | How do wants and information occur? Wants that occur with information are labelled "questions". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
-| QA2 | A question is a want for possible information. | QA1,WI1,MP9 | {question} | How does learning and wants occur? Wanting to learn some pience of information is labelled a "question". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
+| QA2 | A question is a want for possible information. | QA1,WI1,MP9 | {question, inquiry} | How does learning and wants occur? Wanting to learn some pience of information is labelled a "question". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
 | QA3 | An answer is the outcome of a question. | QA2,WI11 | {answer} | How do questions occur? Their outcome is labelled a "question". | what color are apples? red. what is a square circle? <shrug> |
 | QA4 | Knowledge is the successful result of a question. | QA3 | {knowledge} | How do answers occur? Successful answers are labelled "knowledge". | ??? |
 | QA5 | Ignorance is the failed result of a question. | QA3 | {ignorance} | How do answers occur? Failed answers are labelled "ignorance". | ??? |
@@ -60,7 +60,7 @@ certainty? uncertainty?
 | ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | MP1 | A memory is a present phenomenon about a past phenomenon. | T3,IA2 | {memory} | How do past phenomena occur? They are labelled as "memories". | the feeling of "ouch before" occurs right now |
-| MP2 | Recognition is when a present phenomenon is like a memory. | MP1 | {recognition, remembrance} | How do memories occur with present phenomena? Present phenomena that are like a memory are labelled as "recognition". | "strawberry taste" is like a memory of "strawberry taste" |
+| MP2 | Recognition is when a phenomenon is like a memory. | MP1 | {recognition, remembrance} | How do memories occur with present phenomena? Phenomena that are like a memory are labelled as "recognition". | "current taste" is like a memory of "strawberry taste" |
 | MP3 | Imagination is information from different memories. | MP1 | {imagination} | How do memories occur? When different pieces of information are taken from different memories, we label that "imagination". | gray + elephant, pink + elephant, 1 + 1, flat + earth, square + circle |
 | MP4 | A phenomenon is new when it occurs without recognition. | MP2 | {new, novel} | How do phenomena occur with memories? Phenomena that don't exist in memory are labelled "new". | tasting a new food, being intimate for the first time, seeing a new landmark |
 | MP5 | Visualization is the sensation of an imagination. | MP3,WI6 | {visualization, picturing, quasi-sensual} | How do phenomena distinctly occur? Distinct phenomena occur as "imagination". | the "color" of an imagined "elephant", the "number" of an imagined "quantity", the "truth" of an imagined "logical statement" |
@@ -74,8 +74,13 @@ concepts that can't be vizualized - square circle
 **7. Abstraction & Domain**
 | ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
-| AD1 | An abstraction is an imagined pattern. | IA4,MP3 | {abstraction, generalization} | How do patterns occur with imagination? Imagined patterns are labelled "abstractions". | the "redness" of imagined {apple, strawberry, blood, flowers} |
-| AD2 | A domain is a set of . | IA4,MP3 | {abstraction, generalization} | How do patterns occur with imagination? Imagined patterns are labelled "abstractions". | the "redness" of imagined {apple, strawberry, blood, flowers} |
+| AD1 | An abstraction is an imagined pattern. | IA4,MP3 | {abstraction, generalization, concept} | How do patterns occur with imagination? Imagined patterns are labelled "abstractions". | the "redness" of imagined {apple, strawberry, blood, flowers} |
+| AD2 | A domain is the set of imaginations that have the same abstraction. | AD1 | {domain, scope, category} | How do abstractions occur with imaginations? Imaginations with the same abstractions is labelled a "domain". | "redness" has {apple, strawberry, blood}, "number" has {one, two, three} |
+| AD3 | A match is when a phenomenon is in a domain.| AD2 | {match, fit, satisfy, in} | How do domains occur? A phenomenon in a domain is labelled a "match". | apple is in the "red" domain |
+| AD4 | An intersection is when a phenomenon matches with different domains. | AD3 | {intersection} | How do matches occur with domains? A phenomenon that matches with multiple domains is labelled an "intersection". | apple intersects with the "red" and "round" domains |
+| AD5 | A domain contains another when it has the same pattern with additional features. | ?? | {??} | ??? ???. | ??? |
+| AD6 | A hierarchy is a set of domains and their associations. | ?? | {??} | ??? ???. | ??? |
+| AD7 | A phenomenon is meaningful when it matches with a domain in a hierarchy. | ?? | {??} | ??? ???. | ??? |
 
 
 **8. Ontological Bridge***
