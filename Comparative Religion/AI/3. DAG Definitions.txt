@@ -49,7 +49,7 @@
 | ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | QA1 | Learning is the occurrence of information. | IA1 | {learn} | How do wants and information occur? Wants that occur with information are labelled "questions". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
-| QA2 | A question is a want for possible information. | QA1,WI1,MP9 | {question, inquiry} | How does learning and wants occur? Wanting to learn some pience of information is labelled a "question". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
+| QA2 | A question is a want for information that matches a set of abstractions. | QA1,WI1,MP8 | {question, inquiry} | How does learning and wants occur? Wanting to learn information that satisfies a set of abstractions is labelled a "question". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |
 | QA3 | An answer is the outcome of a question. | QA2,WI11 | {answer} | How do questions occur? Their outcome is labelled a "question". | what color are apples? red. what is a square circle? <shrug> |
 | QA4 | Knowledge is the successful result of a question. | QA3 | {knowledge} | How do answers occur? Successful answers are labelled "knowledge". | ??? |
 | QA5 | Ignorance is the failed result of a question. | QA3 | {ignorance} | How do answers occur? Failed answers are labelled "ignorance". | ??? |
@@ -65,9 +65,8 @@ certainty? uncertainty?
 | MP4 | A phenomenon is new when it occurs without recognition. | MP2 | {new, novel} | How do phenomena occur with memories? Phenomena that don't exist in memory are labelled "new". | tasting a new food, being intimate for the first time, seeing a new landmark |
 | MP5 | Visualization is the sensation of an imagination. | MP3,WI6 | {visualization, picturing, quasi-sensual} | How do phenomena distinctly occur? Distinct phenomena occur as "imagination". | the "color" of an imagined "elephant", the "number" of an imagined "quantity", the "truth" of an imagined "logical statement" |
 | MP6 | A thought is a set of imaginations and their associations. | MP3 | {thought, concept, idea, analysis} | How does imagination occur? Connected imaginations are labelled "thoughts". | {gray, elephant} with {big, cool}, {pink, elephant} with {fake, possible with pink paint}, {1, 1} with {2}  |
-| MP7 | Creativity is new imagination. | MP3,MP4 | {creativity} | How does imagination occur? New imaginations are labelled "creativity". | thinking of a new recipe, trying a new chess strategy, playing devil's advocate for a new concept |
-| MP8 | Imagination is independent from occurrence. | MP3,IA9 | {} | How does imagination occur? What occurs is imagined occurs independently from what . | thinking of a new recipe, trying a new chess strategy, playing devil's advocate for a new concept |
-| MP9 | Possibility is a thought constrained by imagined limits. | MP6,OB3 | {possibility, potential, could} | How do imagination and limits occur? Thoughts constrained by imagined limits are labelled "possibilities". | {coin flip} has possibilities of {heads, tails}, {unicorn} has possibilities of {rainbow farts} |
+| MP7 | Imagination is independent from occurrence. | MP3,IA9 | {} | How does imagination occur? What occurs is imagined occurs independently from what . | thinking of a new recipe, trying a new chess strategy, playing devil's advocate for a new concept |
+| MP8 | Possibility is a thought constrained by imagined limits. | MP6,OB3 | {possibility, potential, could} | How do imagination and limits occur? Thoughts constrained by imagined limits are labelled "possibilities". | {coin flip} has possibilities of {heads, tails}, {unicorn} has possibilities of {rainbow farts} |
 
 concepts that can't be vizualized - square circle
 
@@ -75,12 +74,14 @@ concepts that can't be vizualized - square circle
 | ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
 | AD1 | An abstraction is an imagined pattern. | IA4,MP3 | {abstraction, generalization, concept} | How do patterns occur with imagination? Imagined patterns are labelled "abstractions". | the "redness" of imagined {apple, strawberry, blood, flowers} |
-| AD2 | A domain is the set of imaginations that have the same abstraction. | AD1 | {domain, scope, category} | How do abstractions occur with imaginations? Imaginations with the same abstractions is labelled a "domain". | "redness" has {apple, strawberry, blood}, "number" has {one, two, three} |
-| AD3 | A match is when a phenomenon is in a domain.| AD2 | {match, fit, satisfy, in} | How do domains occur? A phenomenon in a domain is labelled a "match". | apple is in the "red" domain |
-| AD4 | An intersection is when a phenomenon matches with different domains. | AD3 | {intersection} | How do matches occur with domains? A phenomenon that matches with multiple domains is labelled an "intersection". | apple intersects with the "red" and "round" domains |
-| AD5 | A domain contains another when it has the same pattern with additional features. | ?? | {??} | ??? ???. | ??? |
-| AD6 | A hierarchy is a set of domains and their associations. | ?? | {??} | ??? ???. | ??? |
-| AD7 | A phenomenon is meaningful when it matches with a domain in a hierarchy. | ?? | {??} | ??? ???. | ??? |
+| AD2 | An intension is the set of features in an abstraction. | AD1 | {intension} | How do abstractions occur? The features that an abstraction has is labelled an "intension". | the intension of "apple" is {fruit, crisp, has a core}, the intension of "fruit" is {grows out of a flower, has seeds} |
+| AD3 | A domain is the set of imaginations that have the same abstraction. | AD1 | {domain, scope, category} | How do abstractions occur with imaginations? Imaginations with the same abstractions is labelled a "domain". | "redness" has {apple, strawberry, blood}, "number" has {one, two, three} |
+| AD4 | An intersection is when a feature from one intension is the same as another. | AD2 | {intersection, overlap} | How do intensions occur? The same feature in different intensions is labelled an "intersection". | "red" is an intersection betweeen the apple:{red, crisp, has seeds} and rainbow:{red, orange, yellow, green, blue, purple} intensions |
+| AD5 | A match is when a phenomenon is in a domain.| AD3 | {match, fit, place, satisfy, in} | How do domains occur? A phenomenon in a domain is labelled a "match". | apple is in the "red" domain |
+| AD6 | A domain contains another when its intension is a subset of the other domain's intension. | AD4,AD5 | {contain, within, in, out} | How do domains occur? A domain is labelled to "contain" another when the contained domain has the same intension with more features. | "fruit" contains "apple" because fruit has {grows from flower, has seeds} while apple has {grows from flower, has seeds, red, sweet, crisp} |
+| AD7 | An conjunction is when a phenomenon in one domain matches with another. | AD5 | {conjunction} | How do matches occur with domains? A phenomenon that matches with multiple domains is labelled a "conjunction". | "apple" conjuncts with the "red" and "round" domains |
+| AD8 | A hierarchy is a set of domains and their associations. | AD6,AD7 | {hierarchy, taxonomy, classification, tree, map} | How do domains occur? The way in which domains are related to each other is labelled a "hierarchy". | the "food" hierarchy is where "food" contains "fruits" and "vegetables", "fruits" contains "apples" and "bananas", "vegetables" contains "carrots" and "peas" |
+| AD9 | A phenomenon is meaningful when it is placed within a hierarchy. | AD8 | {meaning, context} | How do hierarchies occur? The placement of a phenomenon in a hierarchy is labelled "meaningful". | "apple" is meaningful when it is placed in the "food" hierarchy, but is not meaningful in the "numbers" hierarchy |
 
 
 **8. Ontological Bridge***
