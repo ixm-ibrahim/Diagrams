@@ -1,0 +1,705 @@
+Tier 1: Foundational Inferences
+1. Something exists.
+Observations (non-exhaustive)
+ - You are currently reading and thinking about these words.
+ - You have memories of what you did earlier today.
+ - You perceive things through your senses, emotions, and intellect (the light from the screen, the thoughts that form that awareness, etc.).
+ - Any attempt to validate the denial of existence as a whole means that *something* is doing the denying.
+The Inference (and why)
+ - Something exists.
+     - This is the ultimate self-evident truth: its truth is demonstrated by the very act of questioning it.
+     - Reality can now be defined as "the set of all things".
+ - You can't have thoughts without a thinker, doubts without a doubter, or observations without an observer. It is the necessary starting point for all knowledge.
+     - As such, there can't be "nothing" on a fundamental level, as any single "thing" is the counterexample to show otherwise.
+What Happens When Not Inferred
+ - The pursuit of truth becomes impossible.
+     - If you don't accept that anything exists, then there is nothing for a statement to be true (or false) about.
+     - The entire concepts of knowledge, logic, and inquiry become meaningless because there is no subject matter to inquire about, all these sentences you've been reading themselves have no meaning, and there is no you to understand anything to begin with.
+
+2. Things are defined (or known) by their consistent properties.
+Observations (non-exhaustive)
+ - An apple is a red, spherical fruit with a particular taste.
+ - An orange is an orange, spherical fruit with a particular taste.
+ - A grapefruit is an orange, spherical fruit with a different particular taste.
+ - A rock has hardness and solidness. If the rock loses hardness and solidness, it is no longer defined as a rock.
+ - A triangle has 3 straight sides.
+ - Water is H2O and boils at 100°C. If it doesn't boil at 100°C, then it is not pure H2O.
+The Inference (and why)
+ - Things are defined by their consistent properties.
+     - We observe that for anything to be what it is, it must possess a stable nature or a set of core properties.
+     - If a property about a thing changes, then:
+         - The definition changes into a different thing (like a rock: rocks are consistently solid, and so if it becomes hotter and turns into a liquid, it's no longer considered a "rock" and now becomes "magma").
+         - The variability itself is a consistent property of the thing (like the hardness of a rock, as rocks can differ in how hard and soft they are - as long as they are solid).
+ - Objects are knowable because they have stable, consistent identities.
+What Happens When Not Inferred
+ - Knowledge becomes impossible.
+     - If things do not have a stable and consistent nature, then nothing can be reliably known - nothing for us to point to and learn more about.
+     - Scientific laws would be meaningless, language would be useless, and reality would be an incomprehensible chaos where a cat could become a dog for no reason.
+
+3. Things are identified (or known) by distinguishing their properties from others.
+Observations (non-exhaustive)
+ - A fruit is not a rock.
+ - A true statement is not a false statement.
+ - A man is not a woman.
+ - Pain is not pleasure.
+The Inference (and why)
+ - Things are identified (or known) by distinguishing their properties from others.
+     - The act of knowing what something is requires knowing what it is not (ie. a frame of reference). 
+ - Identification is an act of separation and distinction: we draw a conceptual line around a thing, separating it from everything else.
+     - That is what a "contradiction" is: when the distinguishing property between two objects is also shared by them (ex. triangles and squares are distinguished by the number of sides they have, and so it would be a contradiction to define a shape with both properties of 3 sides and 4 sides).
+         - This is the basis for "The Principle of Non-Contradiction", as there cannot be a true statement that has the same properties as a false statement (or vice versa).
+What Happens When Not Inferred
+ - Proper reasoning becomes impossible, and contradictions no longer become problematic.
+     - All distinctions would collapse into meaninglessness: "true" could simultaneously mean "false," "yes" could mean "no," and a thing could be both a rock and not a rock at the same time.
+ - You would not be capable of forming a single coherent sentence or thought.
+
+
+Tier 2: Epistemological Inferences
+4. All information comes from a source.
+Observations (non-exhaustive)
+ - A book has an author who wrote the words.
+ - A news report comes from a journalist who gathered the facts.
+ - The formation of an organism is directed by DNA.
+ - When we receive an anonymous letter, we know someone wrote it, even if we do not know who.
+ - When a scholar writes about something, he must have either copied it from someone else, organized pre-existing ideas (from other people or reality) into a new, unique concept, or made it up.
+ - An object at rest only moves when a force acts upon it.
+The Inference (and why)
+ - All information comes from a source.
+     - We observe that information does not spontaneously generate from nothingness: it always comes from somewhere.
+ - This inference allows every fact, claim, or piece of data to have an origin that can be investigated for its reliability.
+What Happens When Not Inferred
+ - Distinguishing fact from fiction becomes impossible.
+     - There would be no reason to question the origin of a claim, as information could just "be" without any source.
+     - If the source of information is meaningless, and truth is defined by reality (and falsehoods by their contradiction with reality), then falsehoods would become indistinguishable from truth.
+     - Concepts like evidence, credibility, and citation would be meaningless because the origin of information would be irrelevant.
+
+5. Phenomenal/conscious experience corresponds with reality.
+Observations (non-exhaustive)
+ - You can see because you have eyes.
+ - You can touch because you have nerves.
+ - You know where your hands and feet are (without seeing them) because you have proprioceptors.
+ - You can feel emotions because you have ____.
+ - You can think because you have ____.
+ - You can make decisions because you have ____.
+The Inference (and why)
+ - Phenomenal/conscious experience corresponds with reality.
+     - When the source of our phenomenal experience is removed, we lose the capacity for that experience (ex. you stop seeing when you close your eyes, you stop hearing when you cover your ears, you stop feeling when nothing touches your skin, etc.).
+ - This means that we can interpret our experience like sensors, receptors, and transducers: there exist some object that transforms what occurs in reality into our own awareness.
+What Happens When Not Inferred
+ - Learning about the world would be impossible, as you can't distinguish between "you" and "reality".
+     - Your awareness would somehow be completely detached from reality, making you unable to make useful associations (like pain with fire, sight with eyelids, etc.)
+     - Or, you would have to conclude that there is no "reason" or "source" for your experiences, making you unable to distinguish between a "you" and "reality".
+
+6. Perception, memory, and reasoning are imperfect and subject to error.
+Observations (non-exhaustive)
+ - A straight straw in a glass of water appears to be bent.
+ - Eyewitness testimonies of the same event often differ from one another in significant ways.
+ - People appear to generally favor evidence that confirms what they already think is true.
+ - History is filled with examples of widely held beliefs that were later proven to be completely wrong.
+ - Scientific paradoxes exist, where two established phenomena occur simultaneously in such a way that introduces a contradiction in an established explanation.
+ - Our minds and bodies appear to be susceptible to electrical and psychological influences.
+The Inference (and why)
+ - Perception, memory, and reasoning are imperfect and subject to error.
+     - We consistently observe that our senses can be deceived and our minds can make mistakes.
+ - This implies our knowledge is always provisional (subject to either future change or confirmation) and must be open to revision in light of new evidence.
+What Happens When Not Inferred
+ - Learning and self-correction become impossible.
+     - If we assume our minds are infallible, or that our knowledge is perfect and there is nothing else to learn (or, anything new must be filtered through our preconceived ideas), we prevent ourselves from being able to change our minds when we're wrong about something.
+     - This leads to a complete inability to identify and correct our own errors, preventing any growth in understanding.
+
+7. Truth is defined by reality, not by feelings or intuition.
+Observations (non-exhaustive)
+ - You can feel with certainty that a door is unlocked, but that feeling does not change the physical state of the lock.
+ - A person can feel that a particular investment is a "sure thing", but that intuition does not prevent it from failing.
+ - Two people can have opposite feelings about who should have won a game, but the final score is an objective fact.
+ - A mirage in the desert feels and looks real, but your desire for an oasis fails to correspond with reality.
+The Inference (and why)
+ - Truth is defined by reality, not by feelings or intuition.
+     - We observe that reality is the ultimate judge of whether a claim is true, regardless of our internal state of certainty.
+ - This means truth is objective because it is based on something outside of ourselves.
+What Happens When Not Inferred
+ - The pursuit of truth becomes a matter of personal preference.
+     - There would be no functional difference between a verifiable fact and a deeply felt opinion.
+     - Meaningful disagreement would be impossible, as every conflicting viewpoint would be "true" for the person holding it.
+
+8. Falsehood is defined by its contradiction, not by feelings or intuition.
+Observations (non-exhaustive)
+ - A suspect's alibi is proven false when it is shown he could not have been in two places at once.
+ - A scientific theory is discarded when its predictions contradict experimental results.
+ - A statement is known to be false if it contradicts a verifiable fact, such as the statement "the sky is green."
+ - Square circles don't exist, no matter how try to visualize it.
+ - An integer cannot be both even and odd.
+The Inference (and why)
+ - Falsehood is defined by contradiction, not by feelings or intuition.
+     - Because reality is consistent, a claim that is untrue (which would be inconsistent with reality) will inevitably clash with a known fact.
+ - This contradiction - the clashing of a claim with a fact - is the objective marker of falsehood, regardless of how plausible the false claim may feel.
+What Happens When Not Inferred
+ - Identifying falsehood becomes impossible.
+     - If contradiction is not the standard, any claim could be accepted so long as it "feels right".
+ - We would have no logical tool to reject misinformation or any belief that is inconsistent with the observable world.
+
+9. Speculation isn't refutation.
+Observations (non-exhaustive)
+ - If you see dark clouds and suddenly feel wet, saying "it's raining" matches what you observe - while saying "it might be aliens spraying water, but we don't know" is just a wild guess without any proof.
+ -When a doctor diagnoses a cold based on your symptoms like a runny nose and cough, that's better than saying "it could be anything unknown" without checking.
+ - In a puzzle, fitting a piece where it matches the picture is stronger than saying "any piece might work if we imagine a different picture we haven't seen".
+ - You know your phone is charged because the screen lights up, not because "it might be powered by magic we don't understand".
+ - Proving that the Earth is flat fundamentally leads to more questions than answers - even with more explanations.
+The Inference (and why)
+ - Speculation isn't refutation.
+     - We see that ideas tied to clear facts and patterns (what matches reality) explain and predict the world better than ideas built on unknowns or "what-ifs" without proof.
+     - In other words, correspondence with reality is a stronger basis for truth than ignorance or speculation.
+ - As a result, rules from what we've seen stay useful until real proof against them shows up.
+     - "Maybe" ideas don't disprove inferences that correspond with reality.
+     - In other words: if a claim can be made without definitive evidence, then it can also be dismissed without definitive evidence.
+What Happens When Not Inferred
+ - Truth becomes unattainable.
+     - All hypotheses would be equally strong based on "possibility", causing science to stall endlessly on speculations without needing evidence.
+     - This also makes truth and falsehood indistinguishable from one another, as false possibilities now have equal (or more) weight as the truth (without you ever being able to figure that out).
+     - We would be forced to ignore or reject valid evidence simply because it does not fit our oversimplified models.
+ - Knowledge would always reduce to skepticism or relativism, as no claim could be objectively preferred.
+     - Without correspondence with reality, the only alternative is emotion or ignorance: you could end up doubting everything or believing anything, as nothing could stand out without matching reality as the judge.
+
+10. Proper reasoning corresponds with reality.
+Observations (non-exhaustive)
+ - An engineer uses the laws/inferences of physics and mathematics to design a bridge that successfully stands in the real world.
+     - A bad engineer would create an unsuccessful bridge due to improperly applying the laws/inferences of physics and mathematics.
+ - A map (which is an abstract representation of terrain and geographical locations) allows us to successfully navigate a physical city.
+     - A bad map would misrepresent reality on some useful level, leading to getting lost.
+ - The inference that your eyes is the cause of your phenomenal sight corresponds with the lack of phenomenal sight any time your eye gets blocked.
+The Inference (and why)
+ - Proper reasoning corresponds with reality.
+     - We observe that the abstract rules of logic are incredibly effective at describing and predicting the physical world.
+ - This means sound thinking is not just useful in the mind: it is a tool that reliably connects to the way the universe actually works.
+What Happens When Not Inferred
+ - Knowledge becomes useless.
+     - There would be no reason to believe that our thoughts, plans, or scientific theories have any practical application, as there would be no correlation between our theories and what occurs in reality.
+  - We would be wholly unable to trust our own minds to solve real-world problems.
+
+11. Every inference has a limit.
+Observations (non-exhaustive)
+ - A fish can infer all the rules that govern its pond, but those rules don't apply to the forest beyond the pond.
+ - The laws of classical mechanics accurately describe the motion of baseballs, but they break down at the motion of atoms.
+ - The rules of chess apply perfectly within the game, but they are meaningless for playing checkers.
+ - All things originate from something else that is not the thing:
+     - Chickens and eggs come from each other, except for the first egg, which came from a non-chicken.
+         - Animals come from other animals, except for the first animal, which came from a non-animal.
+             - Life comes from other life, except for the first living thing, which came from a non-living thing.
+                 - Temporal things are made from other temporal things, except for the first temporal thing, which came from a non-temporal thing.
+                     - Our inferred law of causality ("all information comes from a source") describes events within time, so it cannot be applied to a reality that may exist outside of time.
+The Inference (and why)
+ - Every inference has a limit.
+     - We observe that rules and principles are derived from a specific context and may not apply outside of that context.
+ - This protects against overgeneralization, as any general rule we infer is limited by the scope of our observations.
+     - Therefore, this very principle - that "every inference has a limit" - must also have a limit, leading to the exploration of an ultimate, un-limited truth.
+What Happens When Not Inferred
+ - Knowledge becomes rigid and hyper-dogmatic.
+     - True inferences would be oversimplified, preventing the acceptance of more correct truths.
+     - We would mistakenly apply rules from one domain to another where they do not belong, leading to profound errors that appear beautifully sound.
+     - We would be forced to ignore or reject valid evidence simply because it does not fit our oversimplified models.
+ - This prevents us from achieving a more complete understanding by mistaking the limits of our inferences and understanding for the limits of reality itself.
+
+
+Tier 3: Universal Inferences
+12. Time (as we experience it) is linear and progresses asymmetrically.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - You can remember the past but you can't remember the future.
+ - An egg can be scrambled, but a scrambled egg can't be unscrambled.
+ - You experience events sequentially, one after the other, in a forward progression.
+ - We all age in one direction, from younger to older.
+The Inference (and why)
+ - Time (as you experience it) is a linear and asymmetrical progression.
+     - We observe that the flow of time has a clear direction that is tied to cause and effect.
+ - This means the past can be interpreted as fixed and unchangeable, while the future can be interpreted as open.
+What Happens When Not Inferred
+ - Our concepts of causality and history become meaningless.
+     - There would be no distinction between past, present, and future.
+     - Planning, learning from experience, and our entire perception of a life narrative would be impossible.
+
+13. Every thing that has a beginning has a preceding cause.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Speculation is not refutation".
+ - Glass shatters on the floor only after it has been dropped.
+ - A fire starts only after a spark meets fuel and oxygen.
+ - An object at rest only moves when a force acts upon it.
+ - You consistently observe that effects never precede their [inferred] causes.
+ - You know about the quadratic equation because someone else taught you.
+ - A scholar writing about a historical event must have learned from someone else or made it up.
+The Inference (and why)
+ - Every thing that has a beginning has a preceding cause.
+     - We infer this rule from our universal, unbroken experience that things do not happen without a reason.
+ - This reflects our observation that reality can be interpreted as an ordered chain of events, not a series of random, disconnected occurrences.
+     - Note that this even encompasses quantum events, as they are still correspond with probabilistic laws and wave functions.
+     - Our ignorance over what actually causes the wave function collapse is not a refutation of this inference.
+What Happens When Not Inferred
+ - Understanding reality becomes impossible.
+     - There would be no reason to expect the future to be connected to the past in any meaningful way.
+     - Science would be a pointless exercise, as experiments would have no reliable connection between actions and results.
+
+14. All things are contingent on their causes (that are not the thing).
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Speculation is not refutation".
+ - "Every thing that has a beginning has a preceding cause".
+ - The existence of this specific planet depends on a long chain of prior events that could have been different.
+ - A particular tree exists because a seed happened to fall in that specific spot and grow.
+ - The specific arrangement of continents on Earth is not the only possible arrangement.
+ - If a thing depends on a variable property to occur, then how it manifested is contingent on that particular value of that variable.
+ - For a conclusion to be valid, it must be contingent on premises that are not the conclusion itself.
+     - Otherwise, it would either be a tautology, circular reasoning, or infinite regression.
+ - All things originating from something else that is not the thing:
+     - Chickens and eggs come from each other, except for the first egg, which came from a non-chicken.
+         - Animals come from other animals, except for the first animal, which came from a non-animal.
+             - Life comes from other life, except for the first living thing, which came from a non-living thing.
+                 - Temporal things are made from other temporal things, except for the first temporal thing, which came from a non-temporal thing.
+                     - Our laws of causality are inferred from events within time, so they can't be applied to a reality that may exist outside of time.
+The Inference (and why)
+ - All things are contingent on their causes (that are not the thing).
+     - We observe that things in the universe depend on external conditions and prior causes for their existence.
+     - This must include the universe, as its existence depends on its initial/external conditions.
+     - This is what "determinism" is: where an effect is contingent on a particular set of initial causes.
+ - This means their existence is not a matter of logical necessity; they could have been otherwise.
+     - This is what a "possibility" is: what would have happened (in theory) based on manipulating variables and simulating the outcome based on a specified set of rules.
+What Happens When Not Inferred
+ - Reality would be impossible to explain.
+     - There would be no reason to ask "why" things are the way they are (ie. what something's "purpose" is), as they would have always existed that way (rather than "starting" from somewhere).
+     - All patterns and cycles would reduce to an infinite regress (ex. life would always come from other life, without a "first" living thing that came from non-life).
+
+15. Reality is ordered, operating on consistent and intelligible laws.
+Observations (non-exhaustive)
+ - "Proper reasoning corresponds with reality".
+ - The orbits of planets follow precise, predictable mathematical paths.
+ - Snowflakes consistently form in intricate, six-sided symmetrical patterns.
+ - The natural world is filled with complex systems that operate in a regular and orderly way.
+     - We are able to comprehend and describe these patterns using the abstract language of mathematics.
+The Inference (and why)
+ - Reality is ordered, operating according to consistent and intelligible laws.
+     - We observe that the universe is not a random chaos but is fundamentally structured and patterned.
+ - Its orderly nature allows our minds to grasp and understand its workings: we can reduce complex behavior into an encompassing set of rules/laws.
+What Happens When Not Inferred
+ - Reason becomes useless for understanding the world.
+     - There would be no patterns to discover, no laws to formulate, and no predictions to be made.
+     - The universe would be an incomprehensible mystery rather than a subject for rational investigation.
+
+16. Reality has a universally applicable set of fundamental laws.
+Observations (non-exhaustive)
+ - "Reality is ordered, operating according to consistent and intelligible laws".
+ - The law of gravity that makes an apple fall is the same law that holds galaxies together.
+ - The periodic table of elements is the same on Earth as it is in distant stars.
+ - The speed of light in a vacuum is a universal constant everywhere we measure it.
+ - All known life is based on the same fundamental DNA coding system.
+ - All things appear to be in pairs or contrasted against an opposite.
+The Inference (and why)
+ - Reality has a universally applicable set of fundamental laws.
+     - We observe that the rules governing reality are consistent and integrated across all of space and time.
+ - The universe can then be interpreted as a single, unified system (on a fundamental level), not a collection of separate domains with their own rules.
+What Happens When Not Inferred
+ - Knowledge would be fragmented and unreliable.
+     - We could never be confident that the laws of physics that work here would work on the Moon or in another galaxy.
+     - This would prevent us from forming a comprehensive understanding of reality as a whole.
+
+17. Reality tends to progress from order to disorder.
+Observations (non-exhaustive)
+ - "Time, as we experience it, is linear and progresses asymmetrically".
+ - A hot cup of coffee always cools down to room temperature; it never spontaneously heats up.
+ - A tidy room, if left alone, will gradually become messy and dusty.
+ - A sandcastle built with great effort is easily washed away into a simple pile of sand.
+ - Trust takes time to build, while the breaking of trust can take a moment.
+ - Everything ultimately dies.
+ - The Pareto Principle: 80% of a task takes 20% of the time, while the remaining 20% takes 80% of the time.
+     - Or, 20% of effort leads to 80% of the reward, while the remaining 80% of efforts gets you the remaining 20% of the reward.
+     - Order requires active maintenance, while disorder requires passive abandonment (or lack of intelligence).
+  - Energy tends to spread out and dissipate over time.
+The Inference (and why)
+ - Reality tends to progress from order to disorder.
+     - This inference is consistent across all fields of study, including physics, social interactions, etc.
+ - This means that the universe could be moments away from disorder on any level.
+     - Reality can now be interpreted as: all systems require active maintenance to counteract their natural decline.
+What Happens When Not Inferred
+ - It becomes difficult to accept the reality of your own deterioration, or that of the universe.
+ - It becomes difficult to understand or appreciate the immense and continuous effort required to create and maintain order on a consistent level, whether in a home, a relationship, a society, or science.
+
+
+Tier 3: Biological Inferences
+18. Life comes from other life, yet originated from non-life.
+Observations (non-exhaustive)
+ - "All information has a source".
+ - "Every inference has a limit".
+ - Every human being comes from human parents.
+ - A tree grows from a seed that came from another tree.
+ - Bacteria reproduce by dividing into new bacteria.
+ - All things originate from something else that is not the thing.
+ - There was a time in cosmological history when life didn't exist.
+     - There was a time where you didn't exist: you yourself weren't living, yet you became alive somehow.
+The Inference (and why)
+ - Life comes from other life, yet originated from non-life.
+     - We infer this from the consistent, unbroken observation that all life originates from prior life, and that there was once a time in which life did not exist.
+ - As such, even without knowing the precise means of how it came to be, life necessarily must have originated from a non-living source.
+      - Considering modern advancements in technology and our knowledge of the required environment for life to form, the conditions for the first living thing must have been incredibly and unusually specific for it to have formed.
+What Happens When Not Inferred
+ - The significance of your own existence would be diminished.
+     - It would be easy to take your own existence for granted, viewing it as a common accident rather than an extraordinary event.
+     - This would prevent you from asking deeper questions about the meaning or purpose of life, as its origin would seem unremarkable.
+
+19. Biological structures are goal-oriented.
+Observations (non-exhaustive)
+ - "All information has a source".
+ - The eye has a lens, iris, and retina that work together to allow specific function of seeing.
+ - The wings of a bird are structured with feathers, bones, and muscles to allow the specific function of flying.
+ - The components of a cell work together for the purpose of allowing the cell's survival and replication.
+ - The heart is structured as a muscular pump for allowing the specific function of circulating blood.
+ - Biological evolution appears to seek survival, favoring environmental advantages.
+The Inference (and why)
+ - Biological structures are goal-oriented.
+     - We observe that the parts of living organisms are not arranged randomly, where they are arranged to achieve a specific function that would otherwise be impossible.
+ - As such, biological components can be interpreted as having a goal or purpose.
+What Happens When Not Inferred
+ - Your lived experience becomes disconnected from your understanding of reality.
+     - We would be unable to understand the source or meaning of our own phenomenal feelings, as the systems that produce them would now be seen as purposeless.
+     - The concepts of health and sickness would lose their meaning, as there would be no standard of proper function for our organs to meet or fail.
+ - The pursuit of personal meaning would be undermined, as the very components of our being would be considered purposeless.
+
+20. Reality (and life) is a hierarchy of deeply interconnected systems.
+Observations (non-exhaustive)
+ - "Biological structures are goal-oriented".
+ - Bees rely on flowers for food, and flowers rely on bees for pollination.
+ - The water cycle connects the oceans, the atmosphere, and the land in a single system.
+ - The human body is a system of interdependent organs that must work together to sustain life.
+ - Predators and prey exist in a delicate ecological balance that affects the entire environment.
+The Inference (and why)
+ - Reality (and life) is a hierarchy of deeply interconnected systems.
+     - We observe that from the microscopic to the cosmic, things exist in complex relationships with one another.
+ - The function of the whole can be interpreted as composed of the unique arrangement of its individual parts.
+What Happens When Not Inferred
+ - You would fail to understand or comprehend any complex system
+     - This would prevent us from solving problems or inferring about systems that involve the interaction of multiple components.
+
+
+Tier 4: Cognitive Inferences
+21. Consciousness can't be reduced to purely physical components.
+Observations (non-exhaustive)
+ - Thoughts, feelings, and choices are associated with the brain.
+     - The brain is "dark" in the sense that it doesn't actually feel any sensations (such as light), rather it receives signals from various organs and identifies them as results from the different senses.
+ - A thought has no physical weight or dimensions.
+ - You experience your consciousness as a unified "I" that has phenomenal experiences, not as a collection of distinguishable chemical reactions.
+ - The subjective experience of "redness" is not the same "thing" as the light waves that cause it.
+     - To experience "redness", light would need to bounce off an object into our eyes, to which our eyes then transform the light into an electrical signal, which then gets passed through the brain via nerves, and from there we somehow experience a reconstruction of the signal as "redness".
+    - It is as if one of the functions of the brain is to transform the signal into a medium such that whatever component is responsible for consciousness can become aware of it - like how we view computer monitor to "see" what the computer is doing.
+ - All physical models explain what we can be conscious of, without explaining "why" there is qualia (felt, conscious experiences) to begin with.
+The Inference (and why)
+ - Consciousness cannot be reduced to purely physical components.
+     - We observe that our mental and emotional states have properties that physical objects do not.
+ - This means that reality can be interpreted as having both a physical dimension and a conscious dimension.
+What Happens When Not Inferred
+ - You can no longer infer an explanation for phenomenal consciousness or free will.
+     - If we possess phenomenal consciousness, and it's reduced to some physical component, then reality possessing phenomenal consciousness as well now becomes possible.
+     - There would no meaningful way to distinguish between animate and inanimate objects in terms of consciousness, as both are made of the same physical materials.
+ - You no longer have the capacity for free will.
+     - If your thoughts are just deterministic chemical reactions, then your "choices" are simply predetermined outcomes of those physical processes: there is no "you" to be actively "making" any choices.
+     - This reduces human beings to mere biological machines, as there is no meaningful distinction between a person and a complex robot.
+
+22. We are capable of intelligence, to form abstractions from observations.
+Observations (non-exhaustive)
+ - "Reality is ordered, operating on consistent and intelligible laws".
+ - You observe many individual dogs and form the abstract concept of "dog".
+ - You observe objects falling and infer the abstract law of "gravity".
+ - You use abstract symbols like numbers to count concrete objects.
+ - You can understand a general principle and apply it to a new, specific situation.
+The Inference (and why)
+ - You are capable of intelligence, forming abstractions from observations.
+     - We observe that the human mind can move beyond raw, particular sensory data to identify universal patterns, principles, and concepts.
+ - This ability to form abstract ideas is the basis for language, science, and all higher reasoning - including this very document.
+What Happens When Not Inferred
+ - Reason becomes impossible - especially the ability to infer general rules/laws from reality.
+     - We would be trapped in a world of raw, disconnected sensory experiences.
+     - Learning from the past, planning for the future, or creating categories to understand the world would be impossible, as all of these rely on abstracting general rules from specific examples.
+
+23. Intelligence correlates with success and purposeful/conscious complexity.
+Observations (non-exhaustive)
+ - "Biological structures are goal-oriented".
+ - "We are capable of intelligence, to form abstractions from observations".
+ - A squirrel that is more intelligent at finding and storing nuts is more likely to survive the winter.
+ - Human beings who plan and use reason tend to achieve their goals more effectively than those who do not.
+ - Complex, successful biological systems (like the human immune system) exhibit a high degree of information processing.
+ - In professional endeavors (from medicine to engineering to art), a higher degree of planning and intelligence allows for the capacity for more successful outcomes.
+The Inference (and why)
+ - Intelligence correlates with success and purposeful/conscious complexity.
+     - We consistently observe that the ability to process information and act purposefully provides a survival and success advantage.
+ - This suggests that intelligence is a powerful and effective force for navigating and shaping reality toward a desired outcome.
+
+What Happens When Not Inferred
+ - It would be impossible to have the capacity to distinguish the distinction between wisdom and insanity, as well as the capacity to distinguish truth from interconnected falsehoods.
+     - Random, thoughtless action would be just as effective as careful, intelligent planning.
+     - The development of complex life and human civilization, which are built on layers of successful information processing, would be an entirely unexplainable accident.
+
+24. Information is explicitly and implicitly communicated with language.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "We are capable of intelligence, to form abstractions from observations".
+ - A sentence in a book explicitly communicates a specific idea.
+ - The tone of voice, facial expression, and body language implicitly communicates emotional states
+ - A story can implicitly communicate a moral lesson without ever stating it directly.
+ - Body language can implicitly contradict what a person is saying explicitly.
+The Inference (and why)
+ - Information is explicitly and implicitly communicated with language.
+     - We observe that language operates on multiple levels, conveying both direct data and subtle context.
+ - This richness of communication is what allows for the formation of culture, deep relationships, and complex societies.
+What Happens When Not Inferred
+ - You would be unable to comprehend writing, poetry, sarcasm, emotional subtext, or any form of non-literal communication
+     - .You would be "literal-minded," unable to understand sarcasm, metaphors, emotional subtext, poetry, or any form of non-literal meaning.
+     - Communication would be reduced to a flat, robotic transfer of data.
+
+25. We have a disposition for having a purpose and feeling wanted.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "All things are contingent on their causes".
+ - People seek meaning and purpose in their work, family, hobbies, or religion.
+     - We feel a sense of inner peace when we think we know how the world works.
+     - We naturally feel a sense of an existential crisis when we feel like our lives are meaningless, or have no purpose.
+ - We naturally form groups, teams, communities, and nations.
+ - Prolonged loneliness and social isolation are major sources of human suffering.
+ - Feeling that you are a valued and needed part of a group is a profound source of psychological well-being.
+
+The Inference (and why)
+ - You have a disposition for having a purpose and feeling wanted.
+     - We observe that humans are not solitary creatures but are deeply driven by the need for meaning and belonging.
+ - This drive for purpose is a fundamental aspect of our conscious experience.
+
+What Happens When Not Inferred
+ - We would not feel empty if we fail to find meaning or purpose in our lives.
+     - The deep psychological pain caused by loneliness and meaninglessness would be a bizarre and nonsensical phenomenon.
+ - The entire structure of human society, which is built on community and shared purpose, would be unexplainable.
+     - It would be a mystery why people form families, communities, and nations.
+
+26. Our perception is susceptible to normalization and adaptation.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Perception, memory, and reasoning are imperfect and subject to error".
+ - When you first enter a room with a distinct smell, it's very noticeable, but after a while, you no longer perceive it.
+ - A luxury that once felt incredible quickly becomes the new baseline standard.
+ - We often "take for granted" the most constant aspects of our lives (like our health or loved ones) until there is a sudden change.
+The Inference (and why)
+ - Your perception is susceptible to normalization and adaptation.
+     - We observe that our minds create a "baseline" of what is normal based on consistent experience. This baseline filters our awareness, making constant things less noticeable and novel things more prominent.
+ - This is a vital cognitive shortcut that allows us to focus our attention on changes in our environment, but it can also blind us to pursuing and verifying the truth of our beliefs.
+     - This means that we naturally get accustomed to areas of knowledge, while areas of ignorance triggers more of our awareness.
+What Happens When Not Inferred
+ - We wouldn't ever get the feeling of "getting used to" things, and we would be immune to confirmation bias.
+     - The human ability to adapt to both wonderful and terrible long-term conditions would be a complete mystery.
+ - Every single sensation would be a constant, overwhelming distraction, making it impossible to focus on what is new or important.
+
+
+Tier 4: Moral Inferences
+27. We have the capacity to make choices, based on our knowledge and desires.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "All things are contingent on their causes".
+ - "Consciousness can't be reduced to purely physical components".
+ - You experience the internal sensation of deliberately weighing options before making a decision
+ - You can consciously decide to act against a strong emotional impulse (like anger, or short-term pleasure) in favor of an abstract, long-term goal.
+ - You can experience regret or satisfaction over choices we have made in the past.
+ - You hold people responsible for their actions, which assumes they could have chosen to act differently.
+The Inference (and why)
+ - You have the capacity to make choices, based on our knowledge and desires.
+     - We experience ourselves as agents who are capable of causing our own actions, as well as being capable of rejecting being passive observers of predetermined events..
+ - We can now interpret choices to be caused by our desires, with respect to our knowledge.
+     - This capacity for choice, or free will, is the foundation for moral responsibility.
+What Happens When Not Inferred
+ - The concepts of praise, blame, and responsibility become meaningless.
+     - It would be irrational to praise someone for a good deed or blame them for a crime if they were merely a biological machine executing its programming.
+     - Justice would be reduced to a mere tool for modifying behavior, no different from training an animal.
+
+28. We have a disposition towards concepts of morality.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - A small child will protest an action by saying, "That's not fair!"
+ - Every known human culture has developed a moral code with concepts of right and wrong.
+ - You feel internal emotions like guilt, shame, and righteous indignation.
+ - We tend to admire acts of self-sacrifice and condemn acts of senseless cruelty, even when they don't affect us directly.
+The Inference (and why)
+ - You have a disposition towards concepts of morality.
+     - We observe that human beings are naturally inclined to view the world through a moral lens.
+ - This means the morality can be interpreted as an innate part of the human condition.
+What Happens When Not Inferred
+ - The universal human experience of morality becomes an unexplainable.
+     - Concepts like human rights, heroism, and evil would be incomprehensible, as all moral language would be complete nonsense.
+
+29. We have a disposition towards concepts of justice.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "We have a disposition towards concepts of morality".
+ - You feel a deep sense of satisfaction when a villain in a story gets their "just deserts".
+ - The desire to see wrongs righted and victims compensated is a powerful social force.
+ - In legal systems, the punishment is expected to fit the crime.
+ - People generally feel outrage when the guilty go free or the innocent are punished.
+The Inference (and why)
+ - You have a disposition towards concepts of justice.
+     - We observe a universal human desire for proportionality and accountability, where actions have fitting consequences.
+ - We appear to be disposed to expecting fairness in the world - as in, everyone gets what they deserve.
+What Happens When Not Inferred
+ - The foundation of all legal systems would be arbitrary and irrational.
+     - The deep-seated human cry for fairness in the face of suffering would have to be dismissed as a meaningless emotional outburst.
+
+30. Our actions are a sign of our moral values.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - We have the capacity to make choices, based on our knowledge and desires".
+ - If a person consistently donates to charity, we infer they are a generous person.
+ - The words someone says can contradict their actions; "actions speak louder than words".
+ - We assess a person's priorities by observing where they spend their time and resources.
+The Inference (and why)
+ - Our actions are a sign of our moral values.
+     - We observe that our repeated, freely-made choices reveal our true internal commitments.
+ - This means that our behavior can be interpreted as the external manifestation of our internal character.
+What Happens When Not Inferred
+ - It would be impossible to ever assess a person's character.
+     - Trust would be impossible, as there would be no reliable way to know if someone is honest or dependable.
+     - We would not distinguish a virtuous person from a vicious person who simply says the right things.
+
+31. Morality does not necessarily correlate with our intentions and behavior.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "We have the capacity to make choices, based on our knowledge and desires".
+ - "Our actions are a sign of our moral values".
+ - An action performed with good intentions can have disastrous consequences (like accidentally giving a sick person the wrong medicine, thinking it's the right one).
+ - A person can do the "right thing" for the "wrong reason" (like donating to charity for public praise, not out of generosity).
+ - We often know what the right thing to do is, but fail to do it due to weakness or temptation.
+ - It is possible to feel deep regret for an action even if the outcome was positive.
+The Inference (and why)
+ - Morality does not necessarily correlate with our intentions and behavior.
+     - We observe that we can choose to be or not to be moral.
+What Happens When Not Inferred
+ - Moral evaluation would become hypersimplistic.
+     - Concepts like negligence, hypocrisy, and tragic moral luck would be incomprehensible.
+     - One would have to adopt either a pure consequentialism (only outcomes matter) or a pure intentionalism (only motives matter), both of which fail to capture our full moral experience.
+
+32. Truth is associated with good, while falsehood is associated with evil.
+Observations (non-exhaustive)
+ - "Truth is defined by reality, not by feelings or intuition".
+ - Trust, the foundation of all healthy relationships and societies, is built on telling the truth.
+ - Deception, lies, and fraud are primary tools of harm and exploitation.
+ - A just verdict in a court of law depends on discovering the truth of what occurred.
+ - We seek the truth to solve problems, heal illnesses, and build things that work - while falsehood in these areas leads to failure and harm.
+The Inference (and why)
+ - Truth is associated with good, while falsehood is associated with evil.
+     - We observe that alignment with reality (truth) leads to functionality, trust, and flourishing, while contradiction with reality (falsehood) leads to dysfunction, decay, and harm.
+ - This means truth is no longer just "true" but also "good", while falsehood is not longer just  "false" but also "bad".
+What Happens When Not Inferred
+ - Lies and deception would become morally neutral, just as morally significant as honesty and kindness.
+     - There would be no inherent "good" in knowing what is true.
+     - There would be no ethical foundation to condemn fraud, propaganda, or betrayal.
+
+
+Tier 4: Existential Inferences
+33. There is a seen reality, and an unseen reality.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Consciousness can't be reduced to purely physical components".
+ - We cannot see the laws of physics, only their consistent effects on the physical world.
+ - A magnetic field is invisible, yet its force can be clearly demonstrated.
+ - Your thoughts and feelings are real to you, but they are unobservable to anyone else.
+ - Abstract concepts like mathematics, justice, and love are real (they have effects) but have no physical weight or location.
+The Inference (and why)
+ - There is a seen reality, and an unseen reality.
+     - We consistently observe that the material world is governed and influenced by immaterial/unseen principles, laws, and consciousness.
+ - This means that reality can be interpreted as being more than governed by the sum of its physical parts.
+What Happens When Not Inferred
+ - All of science, mathematics, and philosophy would be meaningless.
+     - We would have to conclude that our own conscious mind does not exist, as it is not a physical object.
+     - The world would be reduced to a collection of objects with no underlying order, laws, or meaning.
+
+34. Reality is a mixture of pleasure & pain, as well as good & evil.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - We experience profound joy and profound suffering.
+ - The same day can contain moments of happiness and moments of grief.
+ - Nature is both breathtakingly beautiful (a sunset) and terrifyingly brutal (a natural disaster).
+ - Human history is a story of both incredible acts of love and compassion, and horrific acts of cruelty and hatred.
+The Inference (and why)
+ - Reality is a mixture of pleasure & pain, as well as good & evil.
+     - We observe that our existence is characterized by a fundamental duality of opposing forces and experiences.
+ - A complete picture of reality must account for both positive and negative aspects; ignoring one or the other would be oversimplifying reality.
+What Happens When Not Inferred
+ - Reality would either be purely good or evil, or being either wholly pleasure or pain.
+     - This world would need to be interpreted in terms akin to heaven or hell, with nothing being either worse or better than the world as it is now.
+     - You would either become a pure cynic who denies the existence of genuine good, or a naive optimist who ignores the reality of suffering.
+
+35. We have a disposition to dislike hardship & pain and pursue beauty & pleasure.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Reality is a mixture of pleasure & pain, as well as good & evil".
+ - An infant naturally cries from hunger and quiets when fed.
+ - You instinctively pull our hand away from a hot surface.
+ - We tend go to great lengths to create art, listen to music, and seek out beautiful landscapes.
+ - The pursuit of happiness is a primary motivator for human action across all cultures.
+The Inference (and why)
+ - You have a disposition to dislike hardship & pain and pursue beauty & pleasure.
+     - We observe a universal, innate orientation in living things towards states of well-being and away from states of harm.
+ - We then have the disposition to be actively directed toward certain goals and away from others.
+What Happens When Not Inferred
+ - The concept of motivation would be meaningless and unexplainable..
+     - There would be no reason to prefer health over sickness, peace over conflict, or joy over misery..
+     - There would be no rational basis for the fields of economics, art, or medicine.
+
+36. Falsehood is easier and more common, while good is harder and more valued.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Reality tends to progress from order to disorder".
+ - "Reality is a mixture of pleasure & pain, as well as good & evil".
+ - It is easier to tell a lie than to do the work of finding the truth.
+ - It is easier to neglect a relationship than to maintain it.
+ - It takes a great deal of communal effort to build a safe and just society, but it can be destroyed by the corruption and apathy of a single person.
+ - We praise virtues like courage, discipline, and honesty precisely because they are difficult and require effort to maintain.
+The Inference (and why)
+ - Falsehood is easier and more common, while good is harder and more valued.
+     - We observe that creating and maintaining order, truth, and goodness requires a constant input of energy and intention against a natural slide into disorder, falsehood, and decay.
+ - This means that "good" can be interpreted as more valuable than "falsehood", as its difficulty makes it more meaningful..
+What Happens When Not Inferred
+ - It would be equally easy to perform a good deed vs. a bad one, and the concept of virtue would be meaningless..
+     - We would have no reason to admire or strive for qualities like integrity or diligence.
+
+37. Reality could have been different.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Speculation is not refutation".
+ - "All things are contingent on their causes".
+ - You can conceive of and model (based on already-established inferred rules) alternative outcomes based on different starting conditions.
+     - You can imagine how history would have unfolded differently if a single key event had changed.
+     - If the asteroid that caused the extinction of the dinosaurs had missed, the entire evolutionary path of life on Earth would be unimaginably different.
+     - The fundamental constants of physics appear finely-tuned; if they were even slightly different, the universe as we know it could not exist.
+         - Moreover, any other simulated tuning reveals that fundamental things (such as matter and light) would not exist, let alone life - which requires even more fine tuning within that scope of fine tuning.
+         - Your own existence is the result of an incredibly specific and improbable chain of events; the slightest alteration anywhere along that chain, and you would not be here.
+The Inference (and why)
+ - Reality could have been different.
+     - We observe that the specific state of our reality - from the laws of physics to the details of our own lives - is the result of a long chain of tuned, contingent events.
+         - The universe is unique in that, while everything else must be contingent on another contingent thing, the universe itself must be contingent on something that is non-contingent itself.
+         - The introduction of atemporality allows for alternative tunings to be considered, as our inability to comprehend lack of contingency means there's no "reason" why the universe must be tuned one way or another.
+     - If history had occurred differently, reality would look different and would now be contingent on that change.
+         - Even if current events are the result of a deterministic chain going back to the start of the universe, then "reality could have been different" is still reduced to "reality could have had different initial starting conditions".
+ - This allows us to attach significance to an event based on probabilistic and statistical concepts.
+What Happens When Not Inferred
+ - Concepts such as necessity, possibility, and statistics would be meaningless.
+     - Low probability events would be equally significant as high-probability events.
+     - Speculation (without data) would be equally significant as improbability.
+     - You would fail to grasp the extraordinary improbability of your own life.
+ - The basis for wonder and awe about existence would be lost.
+
+38. We fear death, yet we will die.
+Observations (non-exhaustive)
+ - "All information comes from a source".
+ - "Reality tends to progress from order to disorder".
+ - All living things you observe eventually die. 
+     - You have no reason to believe we are an exception.
+ - You have a powerful, innate survival instinct and experience fear when your life is threatened.
+ - You contemplate our own future non-existence with anxiety, a feeling you don't have about the non-existence that preceded our birth.
+ - Much of human behavior (religion, the desire for legacy, art, and philosophy) can be interpreted as a way to come to terms with death.
+The Inference (and why)
+ - You fear death, yet you will die.
+     - We are beings who consciously understand the inevitability of our own end, and this knowledge creates a fundamental tension with our innate desire to continue existing.
+ - This is one of the strongest motivators for exploring questions about meaning, value, and what we do with our limited time.
+     - If death is our ultimate end, then we seem to desire why we were made alive to begin with.
+What Happens When Not Inferred
+ - Motivation for defining our purpose in life would decrease, and a vast portion of human motivation and culture would be unexplainable.
+     - The profound emotional weight of grief and the fear of death would have to be dismissed as an irrational, meaningless anomaly.

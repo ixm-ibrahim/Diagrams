@@ -1,0 +1,520 @@
+-------
+Tier 1:
+-------
+
+1. Historical Event
+Assumptions/Requirements (for value)
+ - The event must be ontologically possible, requiring:
+     - Internally consistent, without contradictions
+     - Externally consistent, corresponding perfectly with what is known about reality.
+ - It must be epistemologically distinguishable from falsehood (meaning there is a way to determine if it is true or not).
+      - In other words, it must have had the potential to generate evidence, plausibly leaving behind traces that can be discovered.
+ - Fabricated claims necessarily contain logical contradictions with reality.
+     - As such, there must be some criterion that distinguishes false supernatural events from true ones.
+
+Risks (if the following procedure isn't implemented properly)
+ 
+ - Fabrication or Mythologization
+     - The event may be a later invention or exaggeration of what actually happened.
+ 
+ - Misattribution
+     - The event could be incorrectly dated, located, or attributed to the wrong people.
+  
+ - Anachronistic Projection
+     - Details may be retroactively added that don’t align with the original event.
+-------
+
+
+-------
+Tier 2:
+-------
+
+2. Oral Eyewitness Testimony
+Assumptions/Requirements (for value)
+ - Witnesses were present.
+ - Witness accurately perceived the event, with:
+     - direct, first-hand perception
+     - good faith
+     - sound mind and memory
+     - accurate communication
+ - Cultural context supports reliable oral traditions.
+ - There should be access to the witnesses for direct recounting and verification of their testimony.
+
+Limits (what it can never speak to)
+ - Internal motivations of witnesses.
+ - Events beyond the witnesses' direct sensory experience.
+ - Quantitative data requiring measurement for verification.
+
+Risks
+    If Not Authentic
+ 
+         - Distortion
+             - Faulty memory, bad faith, or mental impairment can lead to inaccurate accounts.
+ 
+         - Fabrication and Exaggeration
+             - Witnesses can embellish events, which leads to false or exaggerated details being passed on.
+ 
+         - Cultural Misalignment
+             - Oral traditions become weaker if the cultural practices of a society do not support accuracy.
+ 
+    If Missing
+ 
+         - Over-Reliance on Secondary Sources
+             - Dependence on later writings increases risk of editorial bias or loss of important nuance.
+
+Mitigation
+    Risk Identification
+ 
+         - Distortion
+             - Check for inconsistencies in the testimony and evaluate potential bias by examining the historical context.
+ 
+         - Fabrication and Exaggeration
+             - Assess if the testimony is dissimilar from known facts.
+             - Ensure testimony is coherent with the witness' known actions.
+             - Check for absence (or mitigation) of self-serving motives.
+ 
+         - Cultural Misalignment
+             - Study the culture to see if it supports the accurate transmission of oral history.
+ 
+         - If Missing
+             - Scrutinize any written evidence more heavily for potential editorial bias.
+ 
+    Verifying Authenticity
+         - Cross-reference oral accounts with written testimony and archaeological evidence to reduce distortion.
+         - Ensure consistency with broader context to rule out anachronisms (details that don't fit the time period).
+         - Corroborating independent oral and written accounts mitigate exaggeration and expose distortion.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the content of the testimony to verify alignment with religious beliefs.
+-------
+
+3. Written Eyewitness Testimony
+Assumptions/Requirements (for value)
+ - The author was an eyewitness with education, resources, and literacy to record promptly.
+ - The document has been preserved in its original form or through verifiably accurate copies.
+ - The language and script of the document are decipherable and can be reliably translated without significant loss of meaning.
+
+Limits (what it can never speak to)
+ - Non-verbal elements of an event, like tone of voice or gestures (unless they are explicitly described in the text).
+ - Any events that were not directly witnessed by the author.
+ - The scientific causality behind an event, as the author would not have had modern empirical tools.
+ - Perspectives from non-eyewitnesses (who are not the author).
+
+Risks
+    If Not Authentic
+ 
+         - Forgery or Interpolation
+             - The document could have been written by a non-eyewitness or a false name.
+             - Later edits could have introduced false information to push an agenda.
+ 
+         - Translation Errors
+             - The degradation of language over time or simple mistranslation can obscure the original meaning.
+ 
+         - Bias
+             - The author's personal agenda (whether religious, political, good or bad faith) could have skewed the facts. 
+ 
+    If Missing
+ 
+         - Over-reliance on Oral Testimony or Archaeology
+             - Relying only on memory or artifacts risks creating gaps in the narrative's detail or leading to misinterpretation.
+ 
+         - Lack of a Fixed Reference
+             - Without a written record, oral traditions may change over time, and artifacts may lack the textual context needed for proper interpretation.
+
+Mitigation
+    Risk Identification
+ 
+         - Forgery
+             - Cross-reference different textual variants and the manuscript's history to detect edits.
+             - Check the author's claims against the historical context.
+ 
+         - Bias
+             - Assess the document for dissimilarity to known facts.
+             - Ensure testimony is coherent with the author's known actions.
+             - Check for absence (or mitigation) of self-serving motives.
+ 
+         - Translation Errors
+             - Study the culture to ensure support for textual accuracy.
+             - Enlist experts for precise translations.
+ 
+         - If Missing
+             - Scrutinize oral accounts more heavily for corroboration and potential distortion.
+ 
+    Verifying Authenticity
+         - Cross-reference the written testimony with oral accounts and archaeological evidence to reduce distortion and confirm details.
+         - Ensure the account is consistent with the broader historical context to rule out anachronisms.
+         - Corroborating the account with independent oral and written sources helps mitigate exaggeration and expose distortion.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the content of the testimony to verify alignment with religious beliefs.
+-------
+
+4. Archaeological Alignment
+Assumptions/Requirements (for value)
+ - The artifacts or sites discovered must be directly tied to the event.
+ - The excavation methods used to uncover the artifacts must have been rigorous and uncontaminated.
+ - The interpretation of the artifacts must align with historical records without forcing the evidence to fit a preconceived narrative.
+ - There must be comparative artifacts available from the same period to provide context for the analysis.
+
+Limits (what it can never speak to)
+ - Abstract ideas, beliefs, or spoken words, as these do not leave a physical trace.
+ - The identities or motivations of individuals, unless inscriptions are present.
+ - Transient events, such as speeches, that do not leave behind physical evidence.
+ - The emotional or psychological states of the people involved.
+
+Risks
+    If Not Authentic
+ 
+         - Misinterpretation
+             - Incorrectly dating an artifact or taking it out of context can lead to false conclusions.
+ 
+         - Contamination or Fraud
+             - Poor excavation practices or faked artifacts can distort the evidence.
+ 
+         - Overreach
+             - It is possible to assign undue significance to ambiguous findings that don't clearly support a specific claim. 
+ 
+    If Missing
+ 
+         - Lack of Tangible Proof
+             - Relying solely on texts or oral accounts risks ungrounded speculation about what actually happened.
+ 
+         - Weakened Validation
+             - Without physical evidence, historical narratives lack objective corroboration and are harder to prove.
+
+Mitigation
+    Risk Identification
+ 
+         - Misinterpretation
+             - Verify dating with independently corroborated methods, like radiocarbon dating and stratigraphy.
+             - Cross-check interpretations with textual records.
+ 
+         - Contamination or Fraud
+             - Assess the excavation protocols and the artifact's provenance (its chain of custody and origin).
+ 
+         - Overreach
+             - Ensure that interpretations align with minimal assumptions by using comparative artifacts and anthropological knowledge.
+ 
+         - If Missing
+             - Scrutinize oral and written accounts more heavily for corroboration and distortion.
+             - Seek indirect archaeological evidence that may be related.
+ 
+    Verifying Authenticity
+         - Cross-reference artifacts with oral and written testimony to confirm details within the broader historical context.
+         - Ensure consistency with the broader context to rule out anachronisms.
+         - Corroborate findings with independent archaeological discoveries to mitigate misinterpretation and fraud.
+ 
+    If Religious Beliefs are Already Established
+         - Assess archaeological finds through the religious context to verify the historical authenticity of related claims.
+-------
+
+
+-------
+Tier 3:
+-------
+
+5. Multiple Independent Corroborations
+Assumptions/Requirements (for value)
+ - The sources must be truly independent (ie. without common origins or influencing one another).
+ - There must be a sufficient number of sources to ensure statistical reliability.
+
+ - The sources must agree on the fundamental details of the event.
+     - Fundamental alignment, even with differences in secondary details, supports a reliable source.
+ - Diversity in the types of sources support greater historical coverage and reliability.
+ - The sources should be minimally influenced by overarching political or cultural pressures that could have skewed their accounts.
+
+Limits (what it can never speak to)
+ - The internal thoughts of the authors or witnesses.
+ - Unobservant processes that occurred during or after the testimony's recording.
+ - Non-existent sources that may have been filtered, censored, or destroyed over time.
+
+Risks
+    If Not Authentic
+ 
+         - Echo Chamber
+             - Sources that seem independent are actually dependent on each other, falsely inflating the event's reliability.
+ 
+         - Bias Propagation
+             - A shared agenda across multiple sources can skew the consensus and make a biased account seem objective. 
+ 
+    If Missing
+ 
+         - Single Source Vulnerability
+             - Relying on only one account makes the claim highly vulnerable to fabrication or an honest error.
+ 
+         - Incomplete Picture
+             - A lack of diverse sources can obscure alternative perspectives, leading to a one-sided understanding of the event.
+
+Mitigation
+    Risk Identification
+ 
+         - Echo Chamber
+             - Trace the origins and transmission paths of each source to confirm that they are truly independent.
+ 
+         - Bias Propagation
+             - Assess the historical and cultural contexts of the sources to identify any shared motives or agendas.
+ 
+         - If Missing
+             - Scrutinize the single source heavily for internal bias and distortion.
+             - Seek consistency with the broader historical context.
+ 
+    Verifying Authenticity
+         - Cross-reference all sources (written, oral, and archaeological) with each other to confirm the core facts of the event.
+         - Ensure the corroborated details are consistent with the broader historical context to rule out anachronisms.
+         - Greater diversity in the sources provides better historical coverage while simultaneously challenging potential biases.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 4:
+-------
+
+6. Unbroken Chain of Transmission
+Assumptions/Requirements (for value)
+ - The evidence has been continuously documented from its origin to the present without any significant gaps in the record.
+ - The custodians of the evidence have maintained accurate records of its handling, transfers, and storage.
+ - The methods of transmission have preserved the integrity of the evidence, which requires:
+     - physical protection
+     - accurate copying
+     - detailed logs
+ - The custodians have been trustworthy and resisted any incentives for tampering with the evidence.
+ - The chain must be accessible for verification, allowing scholars to reconstruct and trace its history.
+ - The overall strength of the chain is defined by its weakest link.
+
+Limits (what it can never speak to)
+ - The accuracy of the content if it was altered or incorrect before the chain of transmission began.
+ - Interpretive changes that occur over time without altering the physical artifact or document itself.
+ - The hidden motives of the custodians who preserved the evidence.
+
+Risks
+    If Not Authentic
+ 
+         - Alteration
+             - Undetected changes, such as editing or forgery, can introduce errors into the evidence.
+ 
+         - Untrustworthy Custodians
+             - Deliberate or negligent manipulation by handlers can skew the evidence.
+ 
+         - Loss of Integrity
+             - Weak links, gaps in the chain, environmental damage, or poor handling can compromise the evidence without detection. 
+ 
+    If Missing
+ 
+         - Provenance Doubts
+             - Without a clear chain of custody, the authenticity of the sources becomes questionable.
+ 
+         - Speculative Transmission
+             - Gaps in the record allow for assumptions about how the evidence was handled, which risks accepting a fabrication.
+ 
+         - Over-Reliance on Fragmented Evidence
+             - This increases vulnerability to bias or incomplete narratives from other sources.
+
+Mitigation
+    Risk Identification
+ 
+         - Alteration
+             - Examine the physical or digital artifacts for inconsistencies that could indicate tampering.
+ 
+         - Untrustworthy Custodians
+             - Cross-check custody logs against independent historical records of the institutions or handlers involved.
+ 
+         - Loss of Integrity
+             - Assess the evidence for signs of degradation.
+             - Compare different versions across various branches of transmission.
+ 
+         - If Missing
+             - Identify gaps through chronological analysis.
+             - Assess corroborative evidence from diverse sources to bridge them cautiously.
+ 
+    Verifying Authenticity
+         - Trace the chain backward using archival records, comparing multiple copies or versions to check for fidelity.
+         - Integrate scientific verification methods (like carbon dating or stylistic analysis) to build confidence that no anachronistic alterations were made.
+         - Cross-reference with multiple independent corroborations to expose any breaks or inconsistencies in the chain of transmission.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 5:
+-------
+
+7. Consistency with Broader Context
+Assumptions/Requirements (for value)
+ - An established baseline of verified historical, cultural, and scientific knowledge must exist for comparison.
+ - The details of the event must be specific enough to be tested against this broader context.
+ - The contextual knowledge used for comparison must be comprehensive and up-to-date, incorporating recent scholarship and discoveries.
+ - A neutral evaluation framework must be used, to avoid forcing the evidence to fit the context through selective interpretation while also avoiding hyper-skepticism.
+
+Limits (what it can never speak to)
+ - Unique or unprecedented aspects of the event that are not covered by existing knowledge.
+ - Subjective experiences or interpretations that are not tied to verifiable, external facts.
+
+Risks
+    If Not Authentic
+ 
+         - Forced Alignment
+             - Selectively choosing or misinterpreting the historical context can create a false consistency that masks a fabrication.
+             - Modern biases can project contemporary knowledge backward, which distorts the historical fit.
+ 
+         - Anachronistic Insertion
+             - The degradation of language over time or simple mistranslation can obscure the original meaning.
+ 
+         - Incomplete Context Exploitation
+             - Gaps in what is known about a historical period can allow unsubstantiated claims to appear consistent. 
+ 
+    If Missing
+ 
+         - Isolated Event Risk
+             - An event might seem plausible in a vacuum but could contradict wider historical patterns, leading to the acceptance of anomalies.
+ 
+         - Contextual Blind Spots
+             - Overlooking cultural or scientific improbabilities can incorrectly inflate an event's credibility.
+
+Mitigation
+    Risk Identification
+ 
+         - Forced Alignment
+             - Compare the event's details against multiple, diverse contextual sources to detect any cherry-picking of evidence.
+ 
+         - Anachronistic Insertion
+             - Cross-check timelines, language, and artifacts to ensure they are accurate for the specific period.
+ 
+         - Incomplete Context Exploitation
+             - Provisionally accept or reject claims based on the level of confidence in the overarching context (subject to later revision as more is learned).
+ 
+         - If Missing
+             - Scrutinize the chain of transmission more cautiously for signs of potential fabrication.
+ 
+    Verifying Authenticity
+         - Align the event with parallel historical records, archaeological data, and scientific principles to confirm that it fits the broader context.
+         - Continually update the context with new discoveries to refine the assessment of consistency over time.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 6:
+-------
+
+8. Resistance to Fabrication
+Assumptions/Requirements (for value)
+ - Every source has the potential to be fabricated, as human beings can manipulate information for personal gain.
+ - The sources should resist common political, religious, or personal motives that might lead to distorting, inventing, or exaggerating details.
+ - Claims that are embarrassing, counterproductive, or contrary to the source's known interests have a reduced risk of being fabricated...
+     - ... While they also possess a higher risk of being fabricated specifically for attention.
+ - There must be accessibility to contextual evidence, allowing scholars to evaluate the potential biases or motives behind a source.
+
+Limits (what it can never speak to)
+ - The internal thoughts or unexpressed motives of the source’s author.
+ - Events or details that were not recorded (even if they were authentic), as they were not relevant to the source's purpose.
+ - Absolute certainty of neutrality, as all sources may carry subtle or unconscious biases.
+
+Risks
+    If Not Authentic
+ 
+         - Hidden Agendas
+             - Undetected motives can lead to fabricated or heavily skewed accounts that appear genuine.
+ 
+         - False Neutrality
+             - Sources can appear to be unbiased but may subtly promote an agenda, which inflates their perceived reliability.
+ 
+         - Selective Reporting
+             - The omission of inconvenient details and the insertion of manipulated ones can create a misleading narrative. 
+ 
+    If Missing
+ 
+         - Increased Fabrication Risk
+             - A lack of resistance to fabrication in a source weakens the trustworthiness of other nodes in the evaluation.
+ 
+         - Over-Reliance on Biased Sources
+             - Depending on agenda-driven records reduces the overall reliability of the transmission.
+ 
+         - Unchallenged Narratives
+             - Single-perspective accounts can dominate the historical record without any checks for motive-driven alterations.
+
+Mitigation
+    Risk Identification
+ 
+         - Hidden Agendas
+             - Analyze the source’s historical and cultural context to identify potential motives for fabrication.
+ 
+         - False Neutrality
+             - Cross-check for the criterion of embarrassment or dissimilarity to detect subtle biases in a seemingly neutral account.
+ 
+         - Selective Reporting
+             - Compare the account with diverse, independent sources to identify significant omissions or inconsistencies.
+ 
+         - If Missing
+             - If it is significant to the claim that it's distinguishable from falsehood, yet it possesses a weak resistance to fabrication, then its logical resistance to fabrication must be more heavily scrutinized.
+ 
+    Verifying Authenticity
+         - Cross-reference the account with multiple independent corroborations to confirm details against sources that are likely free of the same agenda.
+         - Use consistency with the broader context to rule out any motive-driven anachronisms or exaggerations
+         - Apply scientific verification, like dating artifacts or stylistic analysis of texts, to support or challenge the source’s claims.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 7:
+-------
+
+9. Scientific Verification
+Assumptions/Requirements (for value)
+ - Surviving physical evidence that is directly linked to the event must exist and be accessible for testing.
+ - Reliable and validated scientific methods, like radiocarbon dating or textual analysis, must be applicable and accurately applied.
+ - There must be an unbroken chain of custody for the evidence to ensure its integrity from the moment of discovery to testing.
+ - The conclusions must be corroborated by independent sources or labs to minimize the risk of misinterpretation.
+
+Limits (what it can never speak to)
+ - Non-physical or intangible aspects of an event, such as thoughts, motivations, or spiritual claims that leave no material traces.
+
+Risks
+    If Not Authentic
+ 
+         - Methodological Errors
+             - Flawed techniques, contamination of samples, or outdated calibration can lead to inaccurate results.
+ 
+         - Interpretation Bias
+             - The scientists' preconceptions or external pressures can skew their analysis of the data.
+ 
+         - Forgery or Tampering
+             - Fabricated evidence or altered samples can produce misleading scientific verification. 
+ 
+    If Missing
+ 
+         - Unresolved Grounding
+             - Without scientific verification, claims about physical events may lack a firm grounding in empirical reality.
+
+Mitigation
+    Risk Identification
+ 
+         - Methodological Errors
+             - Review the testing protocols, lab accreditations, and any replication studies to check for flaws.
+ 
+         - Interpretation Bias
+             - Examine the scientists' affiliations for potential conflicts of interest and compare their findings with independent analyses.
+ 
+         - Forgery or Tampering
+             - Trace the chain of custody for all samples and use forensic markers to test for authenticity.
+ 
+         - If Missing
+             - Heighten the scrutiny of written and oral artifacts, checking closely for internal textual consistency and coherence.
+ 
+    Verifying Authenticity
+         - Replicate the tests in multiple independent labs to confirm the results and reduce the chance of error.
+         - Cross-reference scientific findings with archaeological alignment and the broader historical context to ensure there are no anachronisms or inconsistencies.
+         - Integrate the findings with multiple independent corroborations to challenge biases and expose potential forgeries.
+ 
+    If Religious Beliefs are Already Established
+         - Assess whether scientific findings are being interpreted neutrally or are being forced to fit pre-existing religious beliefs.
+-------
