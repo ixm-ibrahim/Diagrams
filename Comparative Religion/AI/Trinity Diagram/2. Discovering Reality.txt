@@ -31,6 +31,9 @@ The Inference (and why)
          - The definition changes into a different thing (like a rock: rocks are consistently solid, and so if it becomes hotter and turns into a liquid, it's no longer considered a "rock" and now becomes "magma").
          - The variability itself is a consistent property of the thing (like the hardness of a rock, as rocks can differ in how hard and soft they are - as long as they are solid).
  - Objects are knowable because they have stable, consistent identities.
+ - As such, we now have a basis for terms such as "fundamental" and "superficial":
+     - Fundamental properties refer to a thing's consistent properties, where its negation makes it not-the-thing (ex. rocks are solid, rocks have color, etc.).
+     - Superficial properties refer to a thing's inconsistent properties, where its negation does not make it not-the-thing (ex. rocks can be strong or brittle, rocks can be black or red, etc.).
 What Happens When Not Inferred
  - Knowledge becomes impossible.
      - If things do not have a stable and consistent nature, then nothing can be reliably known - nothing for us to point to and learn more about.
