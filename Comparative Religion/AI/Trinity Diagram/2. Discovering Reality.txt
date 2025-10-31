@@ -1,20 +1,27 @@
 Tier 1: Foundational Inferences
 1. Something exists.
 Observations (non-exhaustive)
+ - Ouch.
+ - Ah.
+ - Red.
+ - Tasty.
+ - Happy, sad, angry, satisfaction.
+ - Words, thoughts, meaning, understanding.
+ - Me, you, this, that.
  - You are currently reading and thinking about these words.
  - You have memories of what you did earlier today.
  - You perceive things through your senses, emotions, and intellect (the light from the screen, the thoughts that form that awareness, etc.).
- - Any attempt to validate the denial of existence as a whole means that *something* is doing the denying.
 The Inference (and why)
  - Something exists.
      - This is the ultimate self-evident truth: its truth is demonstrated by the very act of questioning it.
      - Reality can now be defined as "the set of all things".
  - You can't have thoughts without a thinker, doubts without a doubter, or observations without an observer. It is the necessary starting point for all knowledge.
      - As such, there can't be "nothing" on a fundamental level, as any single "thing" is the counterexample to show otherwise.
+     - Any attempt to validate the denial of existence as a whole means that *something* is doing the denying.
 What Happens When Not Inferred
- - The pursuit of truth becomes impossible.
+ - The pursuit of knowledge (and, by extension, distinguishing between truth and falsehood) becomes impossible.
      - If you don't accept that anything exists, then there is nothing for a statement to be true (or false) about.
-     - The entire concepts of knowledge, logic, and inquiry become meaningless because there is no subject matter to inquire about, all these sentences you've been reading themselves have no meaning, and there is no you to understand anything to begin with.
+     - The entire concepts of knowledge, logic, and inquiry become meaningless because there is no subject matter to inquire about, all these sentences you've been reading themselves have no meaning, and there is not even a you to understand a thing to begin with.
 
 2. Things are defined (or known) by their consistent properties.
 Observations (non-exhaustive)
@@ -37,7 +44,7 @@ The Inference (and why)
 What Happens When Not Inferred
  - Knowledge becomes impossible.
      - If things do not have a stable and consistent nature, then nothing can be reliably known - nothing for us to point to and learn more about.
-     - Scientific laws would be meaningless, language would be useless, and reality would be an incomprehensible chaos where a cat could become a dog for no reason.
+     - Scientific laws would be meaningless (with never-ending counterexamples), language would be useless (with the meaning of words always changing), and reality would be an incomprehensible chaos where a cat could become a dog for no reason.
 
 3. Things are identified (or known) by distinguishing their properties from others.
 Observations (non-exhaustive)
@@ -141,7 +148,7 @@ What Happens When Not Inferred
      - If contradiction is not the standard, any claim could be accepted so long as it "feels right".
  - We would have no logical tool to reject misinformation or any belief that is inconsistent with the observable world.
 
-9. Speculation isn't refutation.
+9. Speculation is neither proof nor refutation.
 Observations (non-exhaustive)
  - If you see dark clouds and suddenly feel wet, saying "it's raining" matches what you observe - while saying "it might be aliens spraying water, but we don't know" is just a wild guess without any proof.
  -When a doctor diagnoses a cold based on your symptoms like a runny nose and cough, that's better than saying "it could be anything unknown" without checking.
@@ -149,7 +156,7 @@ Observations (non-exhaustive)
  - You know your phone is charged because the screen lights up, not because "it might be powered by magic we don't understand".
  - Proving that the Earth is flat fundamentally leads to more questions than answers - even with more explanations.
 The Inference (and why)
- - Speculation isn't refutation.
+ - Speculation is neither proof nor refutation.
      - We see that ideas tied to clear facts and patterns (what matches reality) explain and predict the world better than ideas built on unknowns or "what-ifs" without proof.
      - In other words, correspondence with reality is a stronger basis for truth than ignorance or speculation.
  - As a result, rules from what we've seen stay useful until real proof against them shows up.
