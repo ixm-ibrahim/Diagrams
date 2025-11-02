@@ -303,13 +303,18 @@ Addressing Objections and Alternatives
          - This would be like saying an author is the book itself because the story is entirely composed of his creativity, or that he needs to physically become the ink and paper in order to compose a story.
 3. If God's will is the fundamental material of reality, does this mean our wills are fully determined by God, undermining our inferred capacity for free choice?
      - So far, this node focuses on the relationship between reality and God's will as a whole, without addressing the specifics of our wills yet or what free agency means - this is discussed further in a future node.
-         - For now, this raises an open question that must be carefully framed to avoid premature conclusions: either human wills are entirely determined by God's will (implying no true free will), or they include an indeterminate or atemporal element that allows for genuine agency within the contingent framework.
-     - If human wills are completely determined by God, this would appear to conflict with our prior inferences about morality, justice, and responsibility - but if our wills have an indeterminate component to it, then it appears to contradict our inference that all things are determined by God.
-         - As such, the question fundamentally reduces to: can God create something that is indeterministic or atemporal?
-     - If God is transcendent, capable of operating beyond the temporal rules He created, then we can't limit Him by those rules.
-         - To truly answer that question, we would need to witness an atemporal reality to see if other atemporal things exist or not.
-         - However, because we are limited in experiencing time linearly and we can't "see" the source of our phenomenal experience, we aren't equipped to properly answer that question, one way or another.
-         - As such, this question can be interpreted as a paradox, with the source of its resolution being direct experience with atemporality.
+         - For now, this raises an open question that must be carefully framed to avoid premature conclusions. The dilemma reduces to:
+             - If God's will determines everything, then our wills are actually determined by God - meaning that our wills aren't actually "free".
+             - But if we have "free" will, then it would need to be "free" from being determined by a prior cause - seemingly conflicting with God being the cause of all things.
+          -  This becomes significant because, if we don't have "free" will, then that appears to conflict with our prior inferences about morality, justice, and responsibility - how can our choices be considered "good" or "bad" if we don't have a choice in our actions? How can we be held accountable to them if none of us can choose otherwise?
+     - As such, the question fundamentally reduces to: can God determine/cause/create something that is indeterministic or atemporal?
+         - In other words, can our wills be dependent on God while also being "free" from reality's cause-and-effect?
+         - If this is possible, then it would require that our wills must exist in a unique "layer" of reality - one that is still created by God (and thus distinct from Him), but not part of the physical, deterministic universe (and thus distinct from it).
+     - If God is transcendent - capable of operating beyond the temporal rules He created - then we can't limit Him by those rules.
+         - Furthermore, our prior inference that identifies an "unseen" reality already establishes that our direct experience is limited and doesn't capture all of existence - thus allowing such a "layer" of reality to be possible.
+     - As such, to truly resolve this question, we would need to directly experience atemporality to observe if there is an hierarchy of atemporal things or not.
+         - However, because we are limited in experiencing time linearly without being able to "see" the source of our phenomenal experience, we aren't equipped to properly answer that question - one way or another.
+         - As such, this question can be interpreted as a paradox - the source of its resolution being direct experience with atemporality.
 -------
 
 6. God is intentionally subtle.
@@ -337,7 +342,7 @@ Addressing Objections and Alternatives
          - As such, it will be addressed more thoroughly in the following node.
      - To summarize: if God endowed us with both reason and will, and put us in a world where we can choose not to believe in Him, then this world must be a test for us to see what we'll choose to do and if we'll use our reason properly.
 3. What if God is just hiding, and none of this matters?
-     - The fact that we experience a universe where God is not obvious, yet we are driven to seek Him, contradicts the idea of a completely hidden creator.
+     - The fact that we experience a universe where God is not empirically obvious, yet we are still driven to seek Him by use of reason, contradicts the idea of a completely hidden creator.
          - If God has ultimate power, and He wants this world to be the way it is, then if He wanted to be completely hidden, no one would believe in Him.
          - If God has ultimate power over reality, and we exist within reality, then He has complete power over us: if He wanted to, he wouldn't have given us that drive to seek Him.
 -------
@@ -372,14 +377,15 @@ The Deduction (and why)
      - This also means that rationalizing falsehood is an act that does not correspond with God's will...
          - ... Which allows to discover that God is not the author of confusion.
 Addressing Objections and Alternatives
-1. Truth and reason are human constructs: different cultures have different "truths", so they can't correspond to a universal God's will.
+1. Truth and reason are human constructs: different cultures and individuals have different "truths", so they can't correspond to a universal God's will.
      - This claim contradicts with our inferences - especially "what is real = what is true" - as there are no observed contradictions in reality (but we do observe contradictions in human thought).
          - If a "truth" differs between different cultures, yet both occur, then there is some "unifying truth" or linguistic variation that explains both of them.
          - If a "truth" differs between different cultures, yet one or neither actually occur, then it can't be considered "truth" just because a large group of people do.
          - If a "truth" differs between different cultures, and it refers to a metaphysical claim, then this whole process will need to be applied to both of them to see which is more valid.
 2.1. Is something true because God wills it, or does God will it because it is true? (The Euthyphro Dilemma for truth)
      - Something is true because God wills it.
-         - "God wills it because it is true" would either be circular reasoning or tautological (depending on how you look at it), as God defines what is true - so we're really saying "God wills it because it is true, and it is true because God wills it", or more fundamentally, "God wills it because He wills it".
+         - "God wills it because it is true" would either be circular reasoning or tautological (depending on how you look at it), as God defines what is true.
+         - This is really saying "God wills it because it is true, and it is true because God wills it" - or, more fundamentally, "God wills it because He wills it".
 2.2. So then, isn't God's will arbitrary (meaningless and subjective, as it follows no objective standard)?
      - This is a false dilemma, as it is a category error to apply the standards of God's creations onto Himself.
          - If God is the one who defines what is true, then it is both objectively and subjectively true: objective in that it is real and true, and subjective in that this truth is relative to God.
@@ -393,8 +399,8 @@ Addressing Objections and Alternatives
          - Therefore, in order to know the answer to this question, you need to be equipped with a methodology that is grounded in reality that allows you to distinguish between the 3 options (which this whole process aims to do).
 4. If truth corresponds to God's will, and people do evil things, does this mean God wills evil things to be true?
      - This will be addressed more thoroughly in future nodes, but to summarize:
-         - Reality can only occur as God intends, so if evil occurs, then God must have allowed its existence.
-         - The underlying question to this is, "if God allows evil things to exist, does God want us to suffer, or does He want us to do evil things?"
+         - Reality can only occur as God intends - so, if evil occurs, then God must have allowed its existence.
+         - The underlying question to this is, "if God allows evil things to exist, then does He want us to suffer, or does He want us to do evil things?"
              - To answer to this question, we need to first define "evil", and identify what its purpose is.
                  - "Evil = what doesn't correspond with God's will"
                  - If God's will is the underlying fabric of reality, it means that He does allow people to do actions that go against His will.
@@ -434,20 +440,22 @@ The Deduction (and why)
      - And, if reality is a mixture of good and evil, and we can choose which moral systems to accept, then God also allows us to pursue good or evil as we wish.
 Addressing Objections and Alternatives
 1. If God's will is the fundamental material of reality, and everything is contingent on it, then how can we have a genuine will to choose - wouldn't all choices be predetermined by God's will?
-     - Firstly, we need ground ourselves in God's fundamental properties, namely His transcendence (atemporality and spatiality).
-         - This means that our perception of causality, which is grounded within time (as an effect comes after a cause), doesn't apply to God.
-         - This also means that we can't comprehend what's possible or not in an atemporal context, beyond recognizing its existence based on what we phenomenally experience and infer.
-     - Secondly: if our wills are fundamentally determined by physical processes that we don't control, then that contradicts our disposition for justice and morality or even having a "choice".
+     - Firstly, let's ground ourselves in God's necessary properties - specifically, His transcendence (atemporality and spatiality).
+         - Our perception of causality is grounded within time (since effects comes after their causes) - meaning that this understanding doesn't apply to God, who is outside of time.
+         - This also means that we can't comprehend what's possible or not in an atemporal context, outside of recognizing its existence based on what we phenomenally experience and infer.
+     - Secondly: if our wills are fundamentally determined by physical processes that we don't otherwise control, then that contradicts our disposition for justice and morality or even having a "choice".
          - To "choose", fundamentally, is to want something without coercion.
          - As such, we can't classify actions that are "coerced" by external processes to be a "choice".
-     - This means that, for us to have the capacity for choice, there needs to be an atemporal component to our wills (as atemporality is the only option we currently have that transcends physical processes).
-         - This aligns with our inference that "consciousness can't be reduced to purely physical components"...
-             - ... Which also suggests that the source of our phenomenal awareness is the same source as that of our wills.
-         - This also means that our wills fall under God's will in an atemporal context - which is beyond our comprehension of causality...
+     - This shows that the apparent conflict only exists if we assume our will is a temporal, physical process (which would be determined by prior causes).
+         - Considering that "atemporality" is the only option we currently have that transcends physical processes (and thus our perception of causality), this conflict would be resolved if our wills possessed an atemporal component to them.
+     - As a result, our wills must be "between" God and the observable/temporal universe: distinct from God (ie. is contingent on Him), and distinct from our perception of time and causality (ie. is fundamentally atemporal).
+         - This means that our wills fall under God's will in an atemporal context - which is beyond our comprehension of causality...
              - ... Which means that our wills are directly linked to God's will, such that our wills can be interpreted as "seeking permission" from Him to manifest in reality.
-     - Therefore, this is a paradox, not a contradiction.
-     - Therefore, this is a paradox, not a contradiction.
-         - We witness our own capacity for choices, and we witness our knowledge that God's will encompasses all of reality, yet can't comprehend their integration in an atemporal context - which we also bear witness to in our knowledge.
+         - This also aligns with our inference that "consciousness can't be reduced to purely physical components"...
+             - ... Which also suggests that the source of our phenomenal awareness is the same source as that of our wills.
+     - So: we witness our own capacity for choices, the knowledge that reality that is temporal and atemporal (and seen and unseen), and the knowledge that God's will encompasses all of that reality...
+         - ... While simultaneously being unable to comprehend atmporality, hierarchies within atemporality, or their integration with our wills in an atemporal context.
+     - Therefore, this is a paradox, not a contradiction - its source being our inability to comprehend atemporality.
          - This understanding actually resolves common misunderstandings with predestination and destiny:
             - Destiny is how one is currently oriented - a temporal perspective.
             - Predestiny is how one is ultimately oriented - an atemporal perspective.
@@ -543,7 +551,7 @@ Addressing Objections and Alternatives
      - This objection mischaracterizes the relationship between reason and faith as established within this framework. It assumes they are opposites, when in fact they are sequential.
          - "Faith" is simply a belief in which the foundational premise relies on the trustworthiness or knowledge rather than empirical observations.
              - For example, theists have faith in God -  not because they empirically see Him, but because they believe their scriptures are trustworthy with divine authority.
-             - Another example would be the very principles this process requires: we have faith that the laws we observe are universally applicable, even though we haven't actually observed every moment in reality to verify it ourselves.
+             - Another example would be the scientific principles this very process requires: we have faith that the laws we observe are universally applicable, even though we haven't actually observed every moment in reality to verify it ourselves.
          - As such, faith is actually a fundamental requirement in the pursuit of truth, where we put our faith into what we learn is consistent and trustworthy - which requires reason to identify.
              - If a religion demands faith by utilizing reason properly, then it corresponds with reality.
              - This exposes two different kinds of faith, blind faith, and rational faith - the fundamental difference being whether or not you've used reason to establish trustworthiness.
@@ -555,7 +563,7 @@ Addressing Objections and Alternatives
      - This view confuses personal application with objective truth, conflicting with the inferences that truth is defined by reality (not feelings) and that our purpose is God-given, not self-defined.
          - If the True religion corresponds to God's prescriptive will for how we live, it must be grounded in objective properties of God and reality, accessible through reason: a purely subjective "religion" would be limited by personal ignorance or biases (personal or cultural), preventing alignment with the ultimate purpose.
             - Our dispositions toward morality and justice imply a shared, universal standard: a personal approach risks rationalizing falsehood, as it lacks the humility to learn from more knowledgeable sources (especially, if there exists some source that is authorized by God Himself).
-         - In short, a personal religion might feel intimately personal and fulfilling, but without corresponding to God's objective purpose, it becomes indistinguishable from wishful thinking or self-deception.
+         - In short, a personal religion might feel more intimately personal and fulfilling, but without corresponding to God's objective purpose, it becomes indistinguishable from wishful thinking or self-deception.
 
 5. If the True religion corresponds to our purpose, why does reality include so much suffering and evil - wouldn't a purposeful God create a world where the True path is obvious and free of pain?
      - This question (like the previous nodes before this one that have an iteration of this question) conflates our desires with God's will: if pain exists, and God created everything intentionally, then it exists for a purpose.
@@ -564,12 +572,12 @@ Addressing Objections and Alternatives
          - As such, if God intentionally allow us to feel pain, yet also wants us to pursue truth, then perhaps He wants us to not let the pain we feel compel us from not pursuing the Truth.
              - This would make the purpose of our lives akin to a test - to see if we will stay steadfast on the pursuit of truth despite any feeling we experience, whether pain or pleasure.
                  - This seems aligned with reality, as innocent people exist (ie. people who appear not to have the capacity to choose right from wrong) yet they still experience pain - which poses no conflict between our predisposed sense of justice and reality.
-             - Another alternative could be that God's purpose for pain is to be a punishment for us, which requires defining what actions deserve which punishments.
-                 - This seems misaligned with reality, as innocent people exist (ie. people who appear not to have the capacity to choose right from wrong), meaning that if this pain is fundamentally a punishment, it would be for an action that we didn't commit (ie. something we didn't consciously choose to make) - which appears to contradict our predisposed sense of justice.
+             - Another alternative could be that God's purpose for pain is to be a punishment for us - which requires defining what actions deserve which punishments.
+                 - This seems misaligned with reality, as innocent people exist (ie. people who appear not to have the capacity to choose right from wrong) - meaning that if this pain is fundamentally a punishment, it would be for an action that we didn't commit (ie. something we didn't consciously choose to make) - which appears to contradict our predisposed sense of justice.
               - Regardless of what possibilities there are, it would need to be defined by the True religion.
          - In short: whatever the answer truly is, it would be defined by the True religion, not by our desires.
-                 - As such, we can't conclude that God us fundamentally purposeless from an argument that simply reduces to "we don't like pain".
-                 - Considering that world religions often claim that God is good, loving or merciful (which can seem antithetical to a God that would allow innocent people to feel pain), they would need to be assessed on if their narrative poses fundamental contradictions or not.
+              - As such, we can't conclude that God us fundamentally purposeless from an argument that simply reduces to "we don't like pain".
+              - Considering that world religions often claim that God is good, loving or merciful (which can seem antithetical to a God that would allow innocent people to feel pain), they would need to be assessed by the consistency of their narratives and whether their poses result in fundamental contradictions or not.
 -------
 
 
@@ -612,8 +620,8 @@ Addressing Objections and Alternatives
      - This objection creates a false dichotomy between faith and reason, assuming they are inherently opposed, but it overlooks how faith can be rational and grounded in reality without requiring empirical coercion.
          - If things are identified by distinguishing their properties from others, and proper reasoning corresponds with reality, then spiritual truths (unseen realities) must be distinguishable from falsehoods through their consistency with seen realities.
          - Otherwise, they become indistinguishable from invented fantasies or emotional preferences - how else would you distinguish between a true metaphysical claim and a false one?
-         - If a single, consistent God is the author of both dimensions (seen and unseen), they cannot be in fundamental contradiction.
-     - Faith, in the context of the True religion, is not blind but built on trustworthy sources that align with God's will.
+         - If a single, consistent God is the author of both dimensions (seen and unseen), then they cannot be in fundamental contradiction.
+     - Faith, in the context of the True religion, is not blind (ie. blind to reason) but built on trustworthy sources that align with God's will.
          - If reality is an expression of God's will, and truth corresponds to it, then genuine faith extends inferences from observable properties to unseen ones without contradiction.
          - If spiritual truth couldn't correspond at all, there would be no epistemological bridge between the reality we experience and the spiritual, contradicting the intentionality of God's creation, where all information comes from His will - the same source that sustains a unified reality.
 
@@ -687,13 +695,13 @@ The Deduction (and why)
 
 Addressing Objections and Alternatives
  
-1. This sounds like a bias. Since all religions claim to be the "true" one yet the fundamentally rely on faith in something unseen, isn't this "distinguishing" process just a way to rationalize a pre-selected belief?
+1. This sounds like a bias. Since all religions claim to be the "true" one, yet they fundamentally rely on faith in something unseen, isn't this "distinguishing" process just a way to rationalize a pre-selected belief?
      - This objection conflates blind faith with rational faith, forgetting that for faith to be valid, it requires rational assessment of a source's trustworthiness.
          - If truth is defined by reality (not feelings nor intuition), and proper reasoning corresponds with reality, then the distinguishing process is objective: religions can be tested against contradictions with observations and inferences - rather than starting from a pre-selected belief.
          - This whole methodology aims to check our own biases: it explicitly forbids starting with a chosen belief, requiring us to start with identifying universal observations of reality before assessing religions that align with those observations.
      - This is how blind faith is distinguished from rational faith: the former doesn't use reason to verify a source's correspondence with reality, while the latter does.
 
-2. False religions can mimic the True one closely (e.g., through sophisticated rationalizations or partial truths), making true distinguishability impractical or impossible for imperfect humans.
+2. False religions can mimic the True one closely (ex. through sophisticated rationalizations or partial truths), making true distinguishability impractical or impossible for imperfect humans.
      - While mimics can certainly appear genuine on the surface by appealing to certain truths in order to justify well-crafted falsehoods (and human ignorance and imperfection can delay detection), their integration will ultimately and necessarily reveal contradictions under deeper scrutiny (as falsehoods are inherently defined by their contradiction with reality).
          - If God is the author of both reality and the True religion, and all are consistent without contradiction, then any false religion will necessarily possess contradictions.
      - Distinguishability is practical through iterative reasoning: the accumulation of new knowledge will seamlessly integrate with the True religion, while mimics will necessarily accumulate flaws.
@@ -709,7 +717,7 @@ Addressing Objections and Alternatives
          - Any further knowledge requires education, struggle, and humility - without requiring specialized expertise to pursue.
 
 4. In a world with so many religions, distinguishability leads to dogmatism or conflict - it's better to assume they're indistinguishable to promote tolerance.
-     - Firstly, true tolerance is respecting the right of people to be wrong, not pretending that contradictions don't exist.
+     - Firstly, true tolerance is respecting the right of people to be wrong - not pretending that contradictions don't exist.
          - If God wants us to pursue Truth, and He created both us and those who we think are wrong, then His will has a more right to be obeyed than those who will be intolerant towards us to pursuing the truth.
          - This aligns with God's subtlety: if God wants us to arrive to the Truth without coercion, then forced conversions are meaningless, as they don't change what people internally believe.
      - As such, the true source of conflict primarily arises when rational differences in beliefs transform into arrogance, not when two different people discuss their differences with humility.
