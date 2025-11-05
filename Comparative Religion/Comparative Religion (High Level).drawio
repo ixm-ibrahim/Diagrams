@@ -1,13 +1,13 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7" pages="18">
   <diagram name="Introduction" id="OcMc1TD89lyCnE7k4u9A">
-    <mxGraphModel dx="1103" dy="753" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1242" dy="828" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="PzqoupTtZIXLCT9qukJP-0" />
         <mxCell id="PzqoupTtZIXLCT9qukJP-1" parent="PzqoupTtZIXLCT9qukJP-0" />
         <mxCell id="NfEoopE2q20AlTXDlQDK-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;strokeColor=default;fillColor=none;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="PzqoupTtZIXLCT9qukJP-1">
           <mxGeometry x="87" width="676.15" height="875" as="geometry" />
         </mxCell>
-        <mxCell id="OqC8i-drENe9sEOBw3kS-1" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;This project began with a simple question: &lt;b style=&quot;&quot;&gt;How can we distinguish between truth and falsehood?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;In a world saturated with belief, bias, and speculation, the pursuit of truth often gets buried beneath inherited assumptions and emotional comfort. I wanted to peel all that away - to start from the ground up, beginning only with what we directly experience and know to be real, and then reason forward using the same logic that governs every other reliable field of inquiry.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;The purpose of this work is not to defend a side but to identify the truth, and to remove the barriers that make truth inaccessible. Many discussions about God, scripture, or existence tend to collapse into two extremes - faith without verification or skepticism without coherence - and both fall short because they bypass and abandon reasoning when it becomes uncomfortable. The aim here is to expose the bridge between belief and reason - that faith, reason, and observation necessarily coexist - showing that truth can be mapped, step by step, through consistent inference.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;This project is built on hierarchical logic - a structure where each idea depends on something more fundamental beneath it. Every section begins from observable reality and ascends layer by layer toward higher-level claims. Each claim is evaluated by the same standard: does it remain consistent with what we already know to be true? And does it explain more with fewer assumptions than its alternatives?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;In other words:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;If two claims conflict, then only one can align fully with reality.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;If a claim cannot be tested by the same principles that test every other truth, then it cannot be reliably known.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;spacingTop=4;spacingLeft=6;spacingRight=6;" vertex="1" parent="PzqoupTtZIXLCT9qukJP-1">
+        <mxCell id="OqC8i-drENe9sEOBw3kS-1" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;This project begins with a simple question: &lt;b style=&quot;&quot;&gt;How can we distinguish between truth and falsehood?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;In a world saturated with belief, bias, and speculation, the pursuit of truth often gets buried beneath inherited assumptions and emotional comfort. I wanted to peel all that away - to start from the ground up, beginning only with what we directly experience and know to be real, and then reason forward using the same logic that governs every other reliable field of inquiry.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;The purpose of this work is not to defend a side but to identify the truth, and to remove the barriers that make truth inaccessible. Many discussions about God, scripture, or existence tend to collapse into two extremes - faith without verification or skepticism without coherence - and both fall short because they bypass and abandon reasoning when it becomes uncomfortable. The aim here is to expose the bridge between belief and reason - that faith, reason, and observation necessarily coexist - showing that truth can be mapped, step by step, through consistent inference.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;This project is built on hierarchical logic - a structure where each idea depends on something more fundamental beneath it. Every section begins from observable reality and ascends layer by layer toward higher-level claims. Each claim is evaluated by the same standard: does it remain consistent with what we already know to be true? And does it explain more with fewer assumptions than its alternatives?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;In other words:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;If two claims conflict, then only one can align fully with reality.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;If a claim cannot be tested by the same principles that test every other truth, then it cannot be reliably known.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;spacingTop=4;spacingLeft=6;spacingRight=6;" vertex="1" parent="PzqoupTtZIXLCT9qukJP-1">
           <mxGeometry x="100" y="75" width="650" height="290" as="geometry" />
         </mxCell>
         <UserObject label="&lt;font style=&quot;font-size: 17px;&quot;&gt;Introduction &amp;amp; Background&lt;/font&gt;" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="gpQ3GL357HhQMA6Q2Nzm-0">
@@ -1402,7 +1402,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="5.1. God&#39;s Existence (1/2)" id="wpfU1qMn-CJc2hLsmo2Y">
-    <mxGraphModel dx="1035" dy="690" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="591" dy="394" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="xU8i5WHc9yBozkm9Jjk--0" />
         <mxCell id="xU8i5WHc9yBozkm9Jjk--1" parent="xU8i5WHc9yBozkm9Jjk--0" />
@@ -1628,19 +1628,27 @@
         <mxCell id="YZqMC-y3LvAAL2BY0nUx-24" value="&lt;b&gt;&lt;font&gt;Alignment with Inferences from Reality&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" parent="zIg-R2NwNJPt9BGfDfAa-0" vertex="1">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,4td7CR43rWQwDV4hspUf" id="5LuVAzDafkuueuE2f3Gi-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="xU8i5WHc9yBozkm9Jjk--1">
+        <UserObject label="" link="data:page/id,4td7CR43rWQwDV4hspUf" id="QugWGYgKjgL4qu_BndqV-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="xU8i5WHc9yBozkm9Jjk--1">
+            <mxGeometry x="780" y="25" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="QugWGYgKjgL4qu_BndqV-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="QugWGYgKjgL4qu_BndqV-0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="49.82999999999999" as="sourcePoint" />
-              <mxPoint x="820" y="49.82999999999999" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="QugWGYgKjgL4qu_BndqV-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="QugWGYgKjgL4qu_BndqV-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="5.1. God&#39;s Existence (2/2)" id="4td7CR43rWQwDV4hspUf">
-    <mxGraphModel dx="1656" dy="4" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1242" dy="-272" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="QDhsdInRaVgg9gpE5JQB-0" />
         <mxCell id="QDhsdInRaVgg9gpE5JQB-1" parent="QDhsdInRaVgg9gpE5JQB-0" />
@@ -1891,19 +1899,27 @@
         <mxCell id="QDhsdInRaVgg9gpE5JQB-17" value="&lt;b&gt;&lt;font&gt;Conclusions&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="ML9JfPRL2OMM4K-oLYDR-2">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,wpfU1qMn-CJc2hLsmo2Y" id="U1xSaMkx9VoSRVXpbNlL-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="QDhsdInRaVgg9gpE5JQB-1">
+        <UserObject label="" link="data:page/id,wpfU1qMn-CJc2hLsmo2Y" id="KwOw5QolJIjtXPDDMoCl-2">
+          <mxCell style="group" vertex="1" connectable="0" parent="QDhsdInRaVgg9gpE5JQB-1">
+            <mxGeometry x="20" y="1125" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="U1xSaMkx9VoSRVXpbNlL-0">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="KwOw5QolJIjtXPDDMoCl-2">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="1149.67" as="sourcePoint" />
-              <mxPoint x="30" y="1149.67" as="targetPoint" />
+              <mxPoint x="50" y="24.670000000000073" as="sourcePoint" />
+              <mxPoint x="10" y="24.670000000000073" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="KwOw5QolJIjtXPDDMoCl-0" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;" vertex="1" parent="KwOw5QolJIjtXPDDMoCl-2">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="5.2. Historical Comparison (1/10)" id="UnD5iH2WOAX1UBhe1G6C">
-    <mxGraphModel dx="1461" dy="974" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1242" dy="828" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="W1TrKCJIQid8sVjI4NZf-0" />
         <mxCell id="W1TrKCJIQid8sVjI4NZf-1" parent="W1TrKCJIQid8sVjI4NZf-0" />
@@ -1982,25 +1998,25 @@
           <mxGeometry y="45" width="810" height="585" as="geometry" />
         </mxCell>
         <mxCell id="oElzQHF2Izg0Ac3k5PHF-24" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="oElzQHF2Izg0Ac3k5PHF-23" vertex="1">
-          <mxGeometry width="810" height="80" as="geometry" />
+          <mxGeometry width="810" height="75" as="geometry" />
         </mxCell>
         <mxCell id="oElzQHF2Izg0Ac3k5PHF-25" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Who were the eyewitnesses, and what did they bear witness to?&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=none;" parent="oElzQHF2Izg0Ac3k5PHF-24" vertex="1">
-          <mxGeometry width="180" height="80" as="geometry">
-            <mxRectangle width="180" height="80" as="alternateBounds" />
+          <mxGeometry width="180" height="75" as="geometry">
+            <mxRectangle width="180" height="75" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="oElzQHF2Izg0Ac3k5PHF-26" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Three significant events: Jesus&#39; 3-year earthly ministry, 40 days&amp;nbsp;of Jesus&#39; resurrection, and the post-resurrection vision that appeared to Paul&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Thousands of people witnessed Jesus&#39;s ministry (about 3 years long), while over 500 witnessed his 40-day bodily resurrection (between 30-33 AD). Finally, Paul witnessed a spiritual and personal vision of Jesus (between 33-36 AD).&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="oElzQHF2Izg0Ac3k5PHF-24" vertex="1">
-          <mxGeometry x="180" width="315" height="80" as="geometry">
-            <mxRectangle width="315" height="80" as="alternateBounds" />
+          <mxGeometry x="180" width="315" height="75" as="geometry">
+            <mxRectangle width="315" height="75" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="oElzQHF2Izg0Ac3k5PHF-27" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Two significant events: the Quran&#39;s revelation to the Prophet Muhammad over 23 years, and his character, personality, and ministry in that time period&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Tens of thousands of people witnessed the Quran&#39;s revelation to the Prophet Muhammad (which were unique, context-specific events that occurred from 610-632 AD), and even more witnessed his ministry in that time.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="oElzQHF2Izg0Ac3k5PHF-24" vertex="1">
-          <mxGeometry x="495" width="315" height="80" as="geometry">
-            <mxRectangle width="315" height="80" as="alternateBounds" />
+          <mxGeometry x="495" width="315" height="75" as="geometry">
+            <mxRectangle width="315" height="75" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="oElzQHF2Izg0Ac3k5PHF-28" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="oElzQHF2Izg0Ac3k5PHF-23" vertex="1">
-          <mxGeometry y="80" width="810" height="205" as="geometry" />
+          <mxGeometry y="75" width="810" height="205" as="geometry" />
         </mxCell>
         <mxCell id="oElzQHF2Izg0Ac3k5PHF-29" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;How reliable was the cultural&lt;br&gt;context for preserving oral tradition accurately?&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=none;" parent="oElzQHF2Izg0Ac3k5PHF-28" vertex="1">
           <mxGeometry width="180" height="205" as="geometry">
@@ -2018,21 +2034,21 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dUPqMebB6uiEhU2GmSwQ-0" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="oElzQHF2Izg0Ac3k5PHF-23" vertex="1">
-          <mxGeometry y="285" width="810" height="165" as="geometry" />
+          <mxGeometry y="280" width="810" height="170" as="geometry" />
         </mxCell>
         <mxCell id="dUPqMebB6uiEhU2GmSwQ-1" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;When was the text written and standardized, and by whom?&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=none;" parent="dUPqMebB6uiEhU2GmSwQ-0" vertex="1">
-          <mxGeometry width="180" height="165" as="geometry">
-            <mxRectangle width="180" height="165" as="alternateBounds" />
+          <mxGeometry width="180" height="170" as="geometry">
+            <mxRectangle width="180" height="170" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dUPqMebB6uiEhU2GmSwQ-2" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Written by multiple authors (not Jesus) sometime 10-70 years after Jesus&#39; ministry, while the canon was standardized in 382 AD by the Council of Rome&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;The earliest New Testament texts were written 7-12 years after Jesus&#39; ministry (in the earliest estimates), and were likely Galatians, Thessalonians (both by Paul), and possibly even James (although this is not a majority view). However (excluding James), Paul was not a witness to Jesus&#39; earthly ministry nor his resurrection - putting the Gospels (eyewitness accounts of Jesus&#39; ministry) being written later than the non-eyewitness accounts. This also means that none of the texts are authored by Jesus himself.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Meanwhile, heresies were prevalent from Paul&#39;s ministry and continued into 400 AD, with many apocryphal works being written throughout this time. This resulted in a gradual process of standardization that culminated in the Council of Rome in 382 AD, establishing the New Testament canon (which was first proposed by Irenaeus in 180 AD).&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="dUPqMebB6uiEhU2GmSwQ-0" vertex="1">
-          <mxGeometry x="180" width="315" height="165" as="geometry">
-            <mxRectangle width="315" height="165" as="alternateBounds" />
+        <mxCell id="dUPqMebB6uiEhU2GmSwQ-2" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Written by multiple authors (not Jesus) sometime 10-70 years after Jesus&#39; ministry, while the canon was standardized in 382 AD by the Council of Rome&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;The earliest New Testament texts were written 7-12 years after Jesus&#39; ministry (in the earliest estimates), and were likely Galatians, Thessalonians (both by Paul), and possibly even James (although this is not a majority view). However (excluding James), Paul was not a witness to Jesus&#39; earthly ministry nor his resurrection - and since the Gospels&lt;/font&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;(eyewitness accounts of Jesus&#39; ministry)&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;were written 10-70 years after Jesus (considering both early and late dating), this puts them being written at a later time than the non-eyewitness accounts. This also means that none of the texts are authored by Jesus himself.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Meanwhile, heresies were prevalent from Paul&#39;s ministry and continued into 400 AD, with many heretical/apocryphal works being written. This resulted in a gradual process of standardization that culminated in the Council of Rome in 382 AD, establishing the New Testament canon (which was first proposed by Irenaeus in 180 AD).&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="dUPqMebB6uiEhU2GmSwQ-0" vertex="1">
+          <mxGeometry x="180" width="315" height="170" as="geometry">
+            <mxRectangle width="315" height="170" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="dUPqMebB6uiEhU2GmSwQ-3" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Three significant events:&amp;nbsp;&lt;/b&gt;&lt;b&gt;the writing and ordering of the Quran during the Prophet Muhammad&#39;s life, the first complete written Quran being codified 2 years after his death, and the written standardization of the dialect/accent 20 years after his death&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;While the Quran was primarily memorized verbatim by the community, it was also written by the Prophet&#39;s scribes - namely, Zaid b. Thabit and his team - shortly after the revelation occurred. After his death, Abu Bakr (the first caliph after the Prophet) compiled the first written text of the entire Quran, as it was textually fragmented so far (because the Quran was revealed in context-specific situations). Finally, as Islam began to spread to the non-Arabian world, the dialect and diacritics were standardized 20 years after the Prophet&#39;s death by the fourth caliph, Uthman.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;As for the Prophet&#39;s life and character, this started to be written down within 100 years after the Prophet&#39;s death, with the most rigorous works (the 6 Sahih Collections) were written 200 years after his death (or 300-500 years for the Shia collections).&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="dUPqMebB6uiEhU2GmSwQ-0" vertex="1">
-          <mxGeometry x="495" width="315" height="165" as="geometry">
-            <mxRectangle width="315" height="165" as="alternateBounds" />
+          <mxGeometry x="495" width="315" height="170" as="geometry">
+            <mxRectangle width="315" height="170" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="oElzQHF2Izg0Ac3k5PHF-32" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="oElzQHF2Izg0Ac3k5PHF-23" vertex="1">
@@ -2056,17 +2072,25 @@
         <mxCell id="iLSEIGw3KWHkjSkyQQ1m-8" value="&lt;b&gt;&lt;font&gt;2. Oral, Written, and Archeological Presence&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFDEC9;gradientColor=#FFB663;strokeColor=#D69555;" parent="Wt12i36qYriK0fRUsXj2-4" vertex="1">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <mxCell id="Q5fPuT3i9zYJUYlqrMij-0" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Note that the following sections only compare trinitarianism (sourced by the Bible) and monotheism (sourced by the Quran). Even though Atheism&#39;s rebuttals fit the natural data, it neither explains why reality exists, nor does it actually refute (or reduce confidence in) the alignment of a transcendent creator with reality. And Polytheism is set aside becuase&amp;nbsp;a plurality of ultimate powers doesn’t naturally yield the unified, law-governed order we actually observe - and multiplying ultimate agents introduces unexplained conflict/coordination that the world’s tight regularities don’t display.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="W1TrKCJIQid8sVjI4NZf-1">
+        <mxCell id="Q5fPuT3i9zYJUYlqrMij-0" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Note that the following sections only compare trinitarianism (sourced by the New Testament) and monotheism (sourced by the Quran). Even though Atheism&#39;s rebuttals fit the natural data, it neither explains why reality exists, nor does it actually refute (or reduce confidence in) the alignment of a transcendent creator with reality. And Polytheism is set aside becuase&amp;nbsp;a plurality of ultimate powers doesn’t naturally yield the unified, law-governed order we actually observe - and multiplying ultimate agents introduces unexplained conflict/coordination that the world’s tight regularities don’t display.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="W1TrKCJIQid8sVjI4NZf-1">
           <mxGeometry x="20" y="85" width="810" height="55" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,wMXEoENK0W1JxD-Q2Zpp" id="o4nIDqdNb5IuQRjiJ8Rp-1">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="W1TrKCJIQid8sVjI4NZf-1">
+        <UserObject label="" link="data:page/id,wMXEoENK0W1JxD-Q2Zpp" id="KNi4WDPT7FqtEF7PLTvg-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="W1TrKCJIQid8sVjI4NZf-1">
+            <mxGeometry x="780" y="25" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="KNi4WDPT7FqtEF7PLTvg-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="KNi4WDPT7FqtEF7PLTvg-0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="49.800000000000004" as="sourcePoint" />
-              <mxPoint x="820" y="49.800000000000004" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="KNi4WDPT7FqtEF7PLTvg-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="KNi4WDPT7FqtEF7PLTvg-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2143,22 +2167,38 @@
         <mxCell id="owdOerk8Vaj5sQZDSKtN-172" value="&lt;b&gt;3. Assessment of the Chains of Transmission&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFF2CC;gradientColor=#FFD966;strokeColor=#D6B656;" vertex="1" parent="owdOerk8Vaj5sQZDSKtN-158">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,UL8_iZpFAf6A71DSmY-2" id="2wjxmOoMMnygiXJM4yvi-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="owdOerk8Vaj5sQZDSKtN-1">
+        <UserObject label="" link="data:page/id,UL8_iZpFAf6A71DSmY-2" id="_kmGyRaIT-F1WeQhbq-E-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="owdOerk8Vaj5sQZDSKtN-1">
+            <mxGeometry x="780" y="1125" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="_kmGyRaIT-F1WeQhbq-E-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="_kmGyRaIT-F1WeQhbq-E-0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="1149.5" as="sourcePoint" />
-              <mxPoint x="820" y="1149.5" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <UserObject label="" link="data:page/id,UnD5iH2WOAX1UBhe1G6C" id="VJZRaahSEqulSpQyjhGu-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="owdOerk8Vaj5sQZDSKtN-1">
+        <mxCell id="_kmGyRaIT-F1WeQhbq-E-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="_kmGyRaIT-F1WeQhbq-E-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,UnD5iH2WOAX1UBhe1G6C" id="_kmGyRaIT-F1WeQhbq-E-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="owdOerk8Vaj5sQZDSKtN-1">
+            <mxGeometry x="20" y="1125" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="_kmGyRaIT-F1WeQhbq-E-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="_kmGyRaIT-F1WeQhbq-E-3">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="1149.5" as="sourcePoint" />
-              <mxPoint x="30" y="1149.5" as="targetPoint" />
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="_kmGyRaIT-F1WeQhbq-E-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="_kmGyRaIT-F1WeQhbq-E-3">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2172,11 +2212,67 @@
             <mxGeometry x="20" y="2225" width="810" height="50" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-34" value="" style="group" vertex="1" connectable="0" parent="oTV51KeiLnIpI_8r1Urz-1">
-          <mxGeometry x="20" y="2565" width="810.0000000000001" height="700.000000000005" as="geometry" />
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-50" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-1">
+          <mxGeometry x="20" y="2335" width="810" height="250.00000000000023" as="geometry" />
         </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-35" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-34">
-          <mxGeometry y="45" width="810" height="655.000000000005" as="geometry" />
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-51" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-50">
+          <mxGeometry width="810" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-52" value="&lt;b style=&quot;font-size: x-small;&quot;&gt;What are the weakest links in the strongest chains of custodianship?&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=none;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-51">
+          <mxGeometry width="180" height="250" as="geometry">
+            <mxRectangle width="180" height="250" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-53" value="&lt;div&gt;&lt;font size=&quot;1&quot;&gt;&lt;b&gt;All chains have gaps (either relying on unknown transmission or lost works) except for the Pauline chain&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Synoptic Chains&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Both chains for Mark support the claim that he learned from Peter, but rely on lost work (Papias), an unnamed transmitter, and an unspecified oral tradition.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The chains for Matthew and Luke both depend on unknown transmitters, and Luke additionally relies on unknown source material.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;- Note that both Matthew and Mark state that none of the disciples witnessed the crucifixion (the most important theological event) - meaning that Peter (Mark&#39;s source) wouldn&#39;t have witnessed it either.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Johannine Chain&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The chain for John depends on Irenaeus, whose claim for John&#39;s authorship relies on Polycarp, who only orally testified this to Irenaeus without writing it in his work.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;- John is the only one who states that he witnessed the crucifixion.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Pauline Chain&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Paul&#39;s letters are self-attesting and corroborated by Clement of Rome.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Ignatius of Antioch also corroborates Paul, but his chain relies on unknown oral transmission.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Jewish Christian&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;/Nazarene&lt;/b&gt;&lt;b style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;, Ebionite, and Gnostic Chains&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- All orthodox-competing chains rely on lost work and unknown oral traditions.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The Gnostic chain is the exception in that their gospels are preserved, but their chain appears intentionally hidden (according to Irenaeus).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Notes: all chains about the earthly Jesus contain some degree of historical uncertainty.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-51">
+          <mxGeometry x="180" width="315" height="250" as="geometry">
+            <mxRectangle width="315" height="250" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-54" value="&lt;div&gt;&lt;font size=&quot;1&quot;&gt;&lt;b&gt;The potential weaknesses of the oral and textual chains are mitigated by the other&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Quranic Chain&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The standardized written text safeguarded by Hafsah is corroborated by mass memorization, while mass memorization is protected from alteration by the standardized text.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Hadith Chain (Sunni)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;The more narrators in a chain, the greater the risk of weakness - especially with single-narrator reports (known as &lt;i&gt;ahad&lt;/i&gt;&amp;nbsp;hadith).&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The science of authenticating hadith and examining narrators was established alongside the compilers, allowing hadith narrations to be classified based on their authenticity - and putting more pressure on the compilers for being reliable.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Hadith Chain (Shia)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Reliability is tied to the infallibility of the narrators, which is unfalsifiable and supported by fewer corroborating chains than in Sunni transmission - leaving greater room for weakness.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Notes: the Quran appears to be reliably preserved, while Hadith reliability is dependent on the strength of its compilers and methods.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-51">
+          <mxGeometry x="495" width="315" height="250" as="geometry">
+            <mxRectangle width="315" height="250" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-55" value="&lt;b&gt;3. Assessment of the Chains of Transmission (continued)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFF2CC;gradientColor=#FFD966;strokeColor=#D6B656;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-1">
+          <mxGeometry x="20" y="2290" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,Z-l9n-z4b5n7cfZyjVss" id="uhIlFulR-7L5x9yJP61l-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="oTV51KeiLnIpI_8r1Urz-1">
+            <mxGeometry x="780" y="2225" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="uhIlFulR-7L5x9yJP61l-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="uhIlFulR-7L5x9yJP61l-0">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="uhIlFulR-7L5x9yJP61l-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="uhIlFulR-7L5x9yJP61l-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,wMXEoENK0W1JxD-Q2Zpp" id="uhIlFulR-7L5x9yJP61l-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="oTV51KeiLnIpI_8r1Urz-1">
+            <mxGeometry x="20" y="2225" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="uhIlFulR-7L5x9yJP61l-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="uhIlFulR-7L5x9yJP61l-3">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="uhIlFulR-7L5x9yJP61l-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="uhIlFulR-7L5x9yJP61l-3">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="i9uRf7bMxYR_9wg2oDwC-0" value="" style="group" vertex="1" connectable="0" parent="oTV51KeiLnIpI_8r1Urz-1">
+          <mxGeometry x="20" y="2600" width="810.0000000000001" height="695.000000000005" as="geometry" />
+        </mxCell>
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-35" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="i9uRf7bMxYR_9wg2oDwC-0">
+          <mxGeometry y="45" width="810" height="650.000000000005" as="geometry" />
         </mxCell>
         <mxCell id="oTV51KeiLnIpI_8r1Urz-36" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-35">
           <mxGeometry width="810" height="170" as="geometry" />
@@ -2215,69 +2311,26 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="oTV51KeiLnIpI_8r1Urz-44" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-35">
-          <mxGeometry y="355" width="810" height="300" as="geometry" />
+          <mxGeometry y="355" width="810" height="295" as="geometry" />
         </mxCell>
         <mxCell id="oTV51KeiLnIpI_8r1Urz-45" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Is there anything anachronistic (historically or logically out of place) about the claim or its custodianship?&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=none;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-44">
-          <mxGeometry width="180" height="300" as="geometry">
-            <mxRectangle width="180" height="300" as="alternateBounds" />
+          <mxGeometry width="180" height="295" as="geometry">
+            <mxRectangle width="180" height="295" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="oTV51KeiLnIpI_8r1Urz-46" value="&lt;div&gt;&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Many examples against Jewish expectations&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Social and Cultural&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Female testimony was not considered credible, yet all 4 Gospels report that the first witnesses of Jesus&#39; resurrection were women.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Jews and Samaritans were hostile toward one another, yet Jesus is depicted engaging a Samaritan positively.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Despite purity laws and social boundaries, Jesus is shown dining with, healing, and ministering to those considered &quot;unclean&quot;, including tax collectors, lepers, prostitutes, and other outcasts.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;In a culture where superiors would not submit to inferiors, Jesus is baptized by John in an act of symbolic cleansing - despite John being lower in status.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Theological&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Although Jewish monotheism rejected the idea that God could be a man, Jesus is depicted as divine - God Himself. However, relative to Greco-Roman beliefs, this claim would not have seemed anachronistic.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Although Jewish tradition emphasized God&#39;s open and jealous self-disclosure, Jesus&#39; divine identity is portrayed as implied or veiled rather than explicit.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Although the expected Messiah would triumph, Jesus is portrayed as executed by Rome - a shameful death reserved for criminals. The resurrection resolves this issue, but the very concept of a dying-rising figure was not unusual in Greco-Roman contexts.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Despite the expectation that authentic messages would be clear and consistent from the start (and orally transmitted as such), the Gospels appear to reflect a rising Christology, with Jesus&#39;s divinity becoming more easily identifiable in later-written texts.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Notes: Jesus also reinterpreted Jewish understanding of the law (such as being more lenient with stoning, yet more strict with divorce), but these are non-fundamental. Also, regarding the rising Christology: some argue that this sign of changing what Jesus himself claimed, while others defend by defining it as progressive revelation, where different authors highlight different aspects of the complete, unified truth.&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-44">
-          <mxGeometry x="180" width="315" height="300" as="geometry">
-            <mxRectangle width="315" height="300" as="alternateBounds" />
+          <mxGeometry x="180" width="315" height="295" as="geometry">
+            <mxRectangle width="315" height="295" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="oTV51KeiLnIpI_8r1Urz-47" value="&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot; size=&quot;1&quot;&gt;&lt;b style=&quot;&quot;&gt;Many examples against the 7th century Arabian context&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Social and Cultural&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Females were seen as inferior to males, yet the Quran states that men and women are equal under the sight of God&lt;/font&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent;&quot;&gt;. When women weren&#39;t able to own property, inherit wealth, and consent to marriage, now they can. Where daughters could be buried alive due to her birth dishonoring her family, now that was considered a crime.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Despite deeply embedded tribalism (where &lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;an individual&#39;s identity, protection, nobility, and honor were entirely dependent on their tribe)&lt;/span&gt;&lt;font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;, the Quran states that the most noble in the sight of God are those who are most righteous.&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;- Despite Arabian expertise and history of established poetry and eloquence, the Quran&#39;s structure does not fall in any prior literary or oral genres.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Despite the Quran being considered the height of eloquence (even by its opponents), it is attributed to Muhammad - a man known to be illiterate. Yet there are many instances where the verses are immediately revealed in response to live, unpredictable situations - without later revision, proofreading, correction, or alteration to the original words.&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Theological&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- In a context in which religious scriptures are written by men (and are defended as divinely guided), the Quran claims to be authored by God Himself and&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;He will be the one to preserve it.&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;- Despite being geographically surrounded by polytheists (denying the hereafter), Jews (rejecting an Arab prophet), and Christians (upholding Trinitarian or heterodox views), the Quran proclaims a pure monotheism distinct from all three - though closest in form to Jewish belief.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 2px; background-color: transparent; text-align: center;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Notes: the Quran also reinterpreted Jewish understanding of the law (such as explaining why the laws were so strict) and Jesus&#39; identity as pure human being, but these are non-fundamental. Also, s&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;ome argue that the Quran&#39;s historical and natural claims are uniquely and strikingly consistent with established history and science, but&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;that is also non-fundamental.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-44">
-          <mxGeometry x="495" width="315" height="300" as="geometry">
-            <mxRectangle width="315" height="300" as="alternateBounds" />
+          <mxGeometry x="495" width="315" height="295" as="geometry">
+            <mxRectangle width="315" height="295" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-48" value="&lt;b&gt;&lt;font&gt;4. Alignment with Historical Context&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#D5E8D4;gradientColor=#97D077;strokeColor=#82B366;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-34">
+        <mxCell id="oTV51KeiLnIpI_8r1Urz-48" value="&lt;b&gt;&lt;font&gt;4. Alignment with Historical Context&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#D5E8D4;gradientColor=#97D077;strokeColor=#82B366;" vertex="1" parent="i9uRf7bMxYR_9wg2oDwC-0">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-49" value="" style="group" vertex="1" connectable="0" parent="oTV51KeiLnIpI_8r1Urz-1">
-          <mxGeometry x="20" y="2295" width="810.0000000000001" height="255" as="geometry" />
-        </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-50" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-49">
-          <mxGeometry y="45" width="810" height="210.00000000000023" as="geometry" />
-        </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-51" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-50">
-          <mxGeometry width="810" height="210" as="geometry" />
-        </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-52" value="&lt;b style=&quot;font-size: x-small;&quot;&gt;What are the weakest links in the strongest chains of custodianship?&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=none;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-51">
-          <mxGeometry width="180" height="210" as="geometry">
-            <mxRectangle width="180" height="210" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-53" value="&lt;div&gt;&lt;font size=&quot;1&quot;&gt;&lt;b&gt;All chains have gaps (either relying on unknown transmission or lost works) except for the Pauline chain&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Synoptic Chains&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Both chains for Mark support the claim that he learned from Peter, but rely on lost work (Papias), an unnamed transmitter, and an unspecified oral tradition.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The chains for Matthew and Luke both depend on unknown transmitters, and Luke additionally relies on unknown source material.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Johannine Chain&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The chain for John depends on Irenaeus, whose claim for John&#39;s authorship relies on Polycarp, who only orally testified this to Irenaeus without writing it in his work.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Pauline Chain&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Paul&#39;s letters are self-attesting and corroborated by Clement of Rome.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Ignatius of Antioch also corroborates Paul, but his chain relies on unknown oral transmission.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Jewish Christian&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;/Nazarene&lt;/b&gt;&lt;b style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;, Ebionite, and Gnostic Chains&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- All orthodox-competing chains rely on lost work and unknown oral traditions.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The Gnostic chain is the exception in that their gospels are preserved, but their chain appears intentionally hidden (according to Irenaeus).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Notes: all chains about the earthly Jesus contain some degree of historical uncertainty.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-51">
-          <mxGeometry x="180" width="315" height="210" as="geometry">
-            <mxRectangle width="315" height="210" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-54" value="&lt;div&gt;&lt;font size=&quot;1&quot;&gt;&lt;b&gt;The potential weaknesses of the oral and textual chains are mitigated by the other&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Quranic Chain&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The standardized written text safeguarded by Hafsah is corroborated by mass memorization, while mass memorization is protected from alteration by the standardized text.&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Hadith Chain (Sunni)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;The more narrators in a chain, the greater the risk of weakness - especially with single-narrator reports (known as &lt;i&gt;ahad&lt;/i&gt;&amp;nbsp;hadith).&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The science of authenticating hadith and examining narrators was established alongside the compilers, allowing hadith narrations to be classified based on their authenticity - and putting more pressure on the compilers for being reliable.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 2px; text-align: left;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Hadith Chain (Shia)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Reliability is tied to the infallibility of the narrators, which is unfalsifiable and supported by fewer corroborating chains than in Sunni transmission - leaving greater room for weakness.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Notes: the Quran appears to be reliably preserved, while Hadith reliability is dependent on the strength of its compilers and methods.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-51">
-          <mxGeometry x="495" width="315" height="210" as="geometry">
-            <mxRectangle width="315" height="210" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="oTV51KeiLnIpI_8r1Urz-55" value="&lt;b&gt;3. Assessment of the Chains of Transmission (continued)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFF2CC;gradientColor=#FFD966;strokeColor=#D6B656;" vertex="1" parent="oTV51KeiLnIpI_8r1Urz-49">
-          <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
-        </mxCell>
-        <UserObject label="" link="data:page/id,Z-l9n-z4b5n7cfZyjVss" id="_ltCUhcBLe8OOSR1DjUd-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="oTV51KeiLnIpI_8r1Urz-1">
-            <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="2249.5" as="sourcePoint" />
-              <mxPoint x="820" y="2249.5" as="targetPoint" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="" link="data:page/id,wMXEoENK0W1JxD-Q2Zpp" id="mmNU_rcrSJ0gps53V3x_-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="oTV51KeiLnIpI_8r1Urz-1">
-            <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="2249.5" as="sourcePoint" />
-              <mxPoint x="30" y="2249.5" as="targetPoint" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2292,7 +2345,7 @@
           </mxCell>
         </UserObject>
         <mxCell id="89arOQ_-ukhVWO6KoVRP-97" value="" style="group" vertex="1" connectable="0" parent="89arOQ_-ukhVWO6KoVRP-1">
-          <mxGeometry x="20" y="3395" width="810.0000000000001" height="1000.0000000000055" as="geometry" />
+          <mxGeometry x="20" y="3390" width="810.0000000000001" height="1000.0000000000055" as="geometry" />
         </mxCell>
         <mxCell id="89arOQ_-ukhVWO6KoVRP-98" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingRight=0;" vertex="1" parent="89arOQ_-ukhVWO6KoVRP-97">
           <mxGeometry y="45" width="810" height="955.000000000005" as="geometry" />
@@ -2341,7 +2394,7 @@
             <mxRectangle width="180" height="520" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="89arOQ_-ukhVWO6KoVRP-109" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Bad faith, revisionism, and gradual Christological development&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;If any significant fabrication or error occurred, then mainstream Christianity would fundamentally differ from Jesus&#39; original message. Evaluating custodianship therefore requires exposing the link between the historical Jesus and the earliest form of mainstream Christianity. Since Paul&#39;s letters are the earliest surviving Christian writings, and his theology later became mainstream, the question reduces to whether Paul&#39;s message corresponds to Jesus&#39; original ministry. This exposes the following potential sources of fabrication and error:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Jesus and Competing Claims&#39; Textual Silence&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Jesus didn&#39;t write any texts himself. Meanwhile, the writings of rival early Christian groups are entirely lost. It is therefore possible that competing portrayals aligned more closely with the historical Jesus - without us ever knowing with certainty.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Paul&#39;s Trustworthiness&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Paul never met the earthly Jesus and began preaching 1–6 years after the crucifixion. His letters were sent to communities 400–900 miles away (Rome even farther), and he claims that, 3 years after his conversion, his message was verified in a 15-day private meeting with Peter and James only in Jerusalem (Galatians 1:16-19).&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;If this authorization was private and self-attested, the strength of his claims rests entirely on Paul&#39;s personal trustworthiness, leaving room for undetectable error or bad faith.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Because his audiences lived far from Jerusalem, verification could take weeks or months, delaying correction and widening the window for doctrinal divergence during a time of competing claims.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Gospel Revisionism&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Knowledge of Jesus&#39; ministry comes primarily from the Gospels, which were written after Paul&#39;s preaching and rely on unknown transmitters and now-lost sources. It is therefore possible some (or all) were written to corroborate Paul&#39;s theology.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Earlier Gospel traditions appear to reflect a lower Christology&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;(ex. Mark doesn&#39;t even mention the virgin birth),&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;while later traditions exhibit a higher Christology&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;(ex. John presents Jesus as pre-existent and divine)&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;. As such, the it becomes possible that the Gospels correspond with a rising, new interpretation of Jesus&#39; message.&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- Looking at the Gospels&#39; earliest preserved manuscripts (in the 2&lt;sup&gt;nd&lt;/sup&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;and 3&lt;sup&gt;rd&lt;/sup&gt;&amp;nbsp;centuries), they contain a minority of variants that significantly affect the Christology of the affected passage. This raises the possibility that earlier copies may have had a different Christological rating than the ones we have now.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- Ignoring the synoptic chains&#39; reliance on unknown transmission and lost works, what is known from Q/Logia also reflects a lower Christology than later works. This makes it possible that earlier Christianities believed in a lower Christology than later ones.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Notes: the books of Acts, 2 Peter, and Jude are omitted here as they are not fundamental to these points.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Acts actually states that Paul immediately went to Jerusalem and was verified openly, which opens a discussion on whether the two accounts contradict (or if the account in Acts was actually referring to his second visit rather than his first).&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;Regardless, while Acts does give more information on Paul&#39;s first visit in Jerusalem, it was written after Paul&#39;s own letters were written (10-40 years later), and if it was authored by Luke, then he didn&#39;t meet the earthly Jesus either. Moreover, while 2 Peter attests to Paul&#39;s writings as scripture, it was written close to the time of Paul&#39;s death (15-20 years later) and shares over 70% of content with the book of Jude (and it is unknown which book took from what). As such, none of these&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;address the fundamental claim that Paul&#39;s theology differed from Jesus&#39; message, and they could themselves also have been written revisionally.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="89arOQ_-ukhVWO6KoVRP-107">
+        <mxCell id="89arOQ_-ukhVWO6KoVRP-109" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font size=&quot;1&quot;&gt;&lt;b&gt;Bad faith, revisionism, and gradual Christological development&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;If any significant fabrication or error occurred, then mainstream Christianity would fundamentally differ from Jesus&#39; original message. Evaluating custodianship therefore requires exposing the link between the historical Jesus and the earliest form of mainstream Christianity. Since Paul&#39;s letters are the earliest surviving Christian writings, and his theology later became mainstream, the question reduces to whether Paul&#39;s message corresponds to Jesus&#39; original ministry. This exposes the following potential sources of fabrication and error:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Jesus and Competing Claims&#39; Textual Silence&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Jesus didn&#39;t write any texts himself. Meanwhile, the writings of rival early Christian groups are entirely lost. It is therefore possible that competing portrayals aligned more closely with the historical Jesus - without us ever knowing with certainty.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Paul&#39;s Trustworthiness&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Paul never met the earthly Jesus and began preaching 1–6 years after the crucifixion. His letters were sent to communities 400–900 miles away (Rome even farther), and he claims that, 3 years after his conversion, his message was verified in a 15-day private meeting with Peter and James only in Jerusalem (Galatians 1:16-19).&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;If this authorization was private and self-attested, the strength of his claims rests entirely on Paul&#39;s personal trustworthiness, leaving room for undetectable error or bad faith.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Because his audiences lived far from Jerusalem, verification could take weeks or months, delaying correction and widening the window for doctrinal divergence during a time of competing claims.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Gospel Revisionism&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 8px;&quot;&gt;Knowledge of Jesus&#39; ministry comes primarily from the Gospels, which were written after Paul&#39;s preaching and rely on unknown transmitters and now-lost sources. It is therefore possible some (or all) were written to corroborate Paul&#39;s theology.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Earlier Gospel traditions appear to reflect a lower Christology&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;(ex. Mark doesn&#39;t even mention the virgin birth),&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;while later traditions exhibit a higher Christology&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;(ex. John presents Jesus as pre-existent and divine)&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;. As such, the it becomes possible that the Gospels correspond with a rising, new interpretation of Jesus&#39; message.&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- Looking at the Gospels&#39; earliest preserved manuscripts (in the 2&lt;sup&gt;nd&lt;/sup&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;and 3&lt;sup&gt;rd&lt;/sup&gt;&amp;nbsp;centuries), they contain a minority of variants that significantly affect the Christology of the affected passage. This raises the possibility that earlier copies may have had a different Christological rating than the ones we have now.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- Ignoring the synoptic chains&#39; reliance on unknown transmission and lost works, what is known from Q/Logia also reflects a lower Christology than later works. This makes it possible that earlier Christianities believed in a lower Christology than later ones.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px; color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Notes: the books of Acts, 2 Peter, and Jude are omitted here as they are not fundamental to these points.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Acts actually states that Paul immediately went to Jerusalem and was verified openly, which opens a discussion on whether the two accounts contradict (or if the account in Acts was actually referring to his second visit rather than his first, considering the similarities).&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;Regardless, while Acts does give more information on Paul&#39;s first visit in Jerusalem, it was written after Paul&#39;s own letters were written (10-40 years later), and if it was authored by Luke, then he didn&#39;t meet the earthly Jesus either. Moreover, while 2 Peter attests to Paul&#39;s writings as scripture, it was written close to the time of Paul&#39;s death (15-20 years later) and shares over 70% of content with the book of Jude (and it is unknown which book took from what). As such, none of these&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;address the fundamental claim that Paul&#39;s theology differed from Jesus&#39; message, and they could themselves also have been written revisionally.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" vertex="1" parent="89arOQ_-ukhVWO6KoVRP-107">
           <mxGeometry x="180" width="315" height="520" as="geometry">
             <mxRectangle width="315" height="520" as="alternateBounds" />
           </mxGeometry>
@@ -2354,27 +2407,43 @@
         <mxCell id="89arOQ_-ukhVWO6KoVRP-111" value="&lt;b&gt;&lt;font&gt;5. Resistance to Fabrication&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" vertex="1" parent="89arOQ_-ukhVWO6KoVRP-97">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,Gh7CGhRKrvzv2LP0f_I5" id="tjUoWVD0_9aVdx62Le2V-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="89arOQ_-ukhVWO6KoVRP-1">
+        <UserObject label="" link="data:page/id,Gh7CGhRKrvzv2LP0f_I5" id="B9e_uRnEQ87BeKIuk39W-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="89arOQ_-ukhVWO6KoVRP-1">
+            <mxGeometry x="780" y="3325" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="B9e_uRnEQ87BeKIuk39W-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="B9e_uRnEQ87BeKIuk39W-0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="3349.5" as="sourcePoint" />
-              <mxPoint x="820" y="3349.5" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <UserObject label="" link="data:page/id,UL8_iZpFAf6A71DSmY-2" id="dq6FKbTLmYaj9wcEMRN9-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="89arOQ_-ukhVWO6KoVRP-1">
+        <mxCell id="B9e_uRnEQ87BeKIuk39W-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="B9e_uRnEQ87BeKIuk39W-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,UL8_iZpFAf6A71DSmY-2" id="B9e_uRnEQ87BeKIuk39W-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="89arOQ_-ukhVWO6KoVRP-1">
+            <mxGeometry x="20" y="3325" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="B9e_uRnEQ87BeKIuk39W-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="B9e_uRnEQ87BeKIuk39W-3">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="3349.5" as="sourcePoint" />
-              <mxPoint x="30" y="3349.5" as="targetPoint" />
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="B9e_uRnEQ87BeKIuk39W-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="B9e_uRnEQ87BeKIuk39W-3">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="5.2. Historical Comparison (5/10)" id="Gh7CGhRKrvzv2LP0f_I5">
-    <mxGraphModel dx="1035" dy="-3710" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1242" dy="-3572" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="i-ldhcgxSOpe3z3huQwf-0" />
         <mxCell id="i-ldhcgxSOpe3z3huQwf-1" parent="i-ldhcgxSOpe3z3huQwf-0" />
@@ -2384,7 +2453,7 @@
           </mxCell>
         </UserObject>
         <mxCell id="i-ldhcgxSOpe3z3huQwf-147" value="" style="group" vertex="1" connectable="0" parent="i-ldhcgxSOpe3z3huQwf-1">
-          <mxGeometry x="20" y="4495" width="810.0000000000001" height="1000" as="geometry" />
+          <mxGeometry x="20" y="4490" width="810.0000000000001" height="1000" as="geometry" />
         </mxCell>
         <mxCell id="i-ldhcgxSOpe3z3huQwf-148" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingRight=0;" vertex="1" parent="i-ldhcgxSOpe3z3huQwf-147">
           <mxGeometry y="45" width="810" height="955" as="geometry" />
@@ -2428,22 +2497,38 @@
         <mxCell id="i-ldhcgxSOpe3z3huQwf-157" value="&lt;b&gt;&lt;font&gt;5. Resistance to Fabrication (continued)&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" vertex="1" parent="i-ldhcgxSOpe3z3huQwf-147">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,wSjUeYOFd7Q6O4Wm3PFX" id="q2SCGelippKD7BmHL0Tp-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="i-ldhcgxSOpe3z3huQwf-1">
+        <UserObject label="" link="data:page/id,wSjUeYOFd7Q6O4Wm3PFX" id="6bTaQLKQk2eAF2wyTSqd-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="i-ldhcgxSOpe3z3huQwf-1">
+            <mxGeometry x="780" y="4425" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="6bTaQLKQk2eAF2wyTSqd-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="6bTaQLKQk2eAF2wyTSqd-0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="4449.58" as="sourcePoint" />
-              <mxPoint x="820" y="4449.58" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <UserObject label="" link="data:page/id,Z-l9n-z4b5n7cfZyjVss" id="K4BuwmGhrPG0a0UoSIRh-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="i-ldhcgxSOpe3z3huQwf-1">
+        <mxCell id="6bTaQLKQk2eAF2wyTSqd-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="6bTaQLKQk2eAF2wyTSqd-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,Z-l9n-z4b5n7cfZyjVss" id="6bTaQLKQk2eAF2wyTSqd-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="i-ldhcgxSOpe3z3huQwf-1">
+            <mxGeometry x="20" y="4425" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="6bTaQLKQk2eAF2wyTSqd-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="6bTaQLKQk2eAF2wyTSqd-3">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="4449.58" as="sourcePoint" />
-              <mxPoint x="30" y="4449.58" as="targetPoint" />
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="6bTaQLKQk2eAF2wyTSqd-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="6bTaQLKQk2eAF2wyTSqd-3">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2458,7 +2543,7 @@
           </mxCell>
         </UserObject>
         <mxCell id="bwPMnbwdrdVlshME2wuY-83" value="" style="group" vertex="1" connectable="0" parent="bwPMnbwdrdVlshME2wuY-1">
-          <mxGeometry x="20" y="5595" width="810.0000000000001" height="979.9999999999973" as="geometry" />
+          <mxGeometry x="20" y="5590" width="810.0000000000001" height="979.9999999999973" as="geometry" />
         </mxCell>
         <mxCell id="bwPMnbwdrdVlshME2wuY-84" value="&lt;b&gt;&lt;font&gt;5. Resistance to Fabrication (continued)&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" vertex="1" parent="bwPMnbwdrdVlshME2wuY-83">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
@@ -2484,22 +2569,38 @@
             <mxRectangle width="315" height="935" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="" link="data:page/id,Qv_htXwKxnLwx0oGmtAl" id="cRJXfzhpWJLAn04-CBix-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="bwPMnbwdrdVlshME2wuY-1">
+        <UserObject label="" link="data:page/id,Qv_htXwKxnLwx0oGmtAl" id="cDfrxOZJRTFbDFn1Vne--0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="bwPMnbwdrdVlshME2wuY-1">
+            <mxGeometry x="780" y="5525" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="cDfrxOZJRTFbDFn1Vne--1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="cDfrxOZJRTFbDFn1Vne--0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="5549.5" as="sourcePoint" />
-              <mxPoint x="820" y="5549.5" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <UserObject label="" link="data:page/id,Gh7CGhRKrvzv2LP0f_I5" id="AZGe1c7k_P0H9bsR_vVe-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="bwPMnbwdrdVlshME2wuY-1">
+        <mxCell id="cDfrxOZJRTFbDFn1Vne--2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="cDfrxOZJRTFbDFn1Vne--0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,Gh7CGhRKrvzv2LP0f_I5" id="cDfrxOZJRTFbDFn1Vne--3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="bwPMnbwdrdVlshME2wuY-1">
+            <mxGeometry x="20" y="5525" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="cDfrxOZJRTFbDFn1Vne--4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="cDfrxOZJRTFbDFn1Vne--3">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="5549.5" as="sourcePoint" />
-              <mxPoint x="30" y="5549.5" as="targetPoint" />
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="cDfrxOZJRTFbDFn1Vne--5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="cDfrxOZJRTFbDFn1Vne--3">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2514,7 +2615,7 @@
           </mxCell>
         </UserObject>
         <mxCell id="5au36DQbYEKyrQLkCRli-90" value="" style="group" vertex="1" connectable="0" parent="5au36DQbYEKyrQLkCRli-1">
-          <mxGeometry x="20" y="6695" width="810.0000000000001" height="1000" as="geometry" />
+          <mxGeometry x="20" y="6690" width="810.0000000000001" height="1000" as="geometry" />
         </mxCell>
         <mxCell id="5au36DQbYEKyrQLkCRli-91" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingRight=0;" vertex="1" parent="5au36DQbYEKyrQLkCRli-90">
           <mxGeometry y="45" width="810" height="955" as="geometry" />
@@ -2540,22 +2641,38 @@
         <mxCell id="5au36DQbYEKyrQLkCRli-96" value="&lt;b&gt;&lt;font&gt;5. Resistance to Fabrication (continued)&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" vertex="1" parent="5au36DQbYEKyrQLkCRli-90">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <UserObject label="" link="data:page/id,pYsrYzmLpEQ3149J_62V" id="lispkXn3Pt-59pXbovTt-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="5au36DQbYEKyrQLkCRli-1">
+        <UserObject label="" link="data:page/id,pYsrYzmLpEQ3149J_62V" id="yZYlHcBrfYSUOh7GQxjy-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="5au36DQbYEKyrQLkCRli-1">
+            <mxGeometry x="780" y="6625" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="yZYlHcBrfYSUOh7GQxjy-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="yZYlHcBrfYSUOh7GQxjy-0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="6649.5" as="sourcePoint" />
-              <mxPoint x="820" y="6649.5" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <UserObject label="" link="data:page/id,wSjUeYOFd7Q6O4Wm3PFX" id="NGz03UjwgiYYzhz8Uvai-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="5au36DQbYEKyrQLkCRli-1">
+        <mxCell id="yZYlHcBrfYSUOh7GQxjy-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="yZYlHcBrfYSUOh7GQxjy-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,wSjUeYOFd7Q6O4Wm3PFX" id="yZYlHcBrfYSUOh7GQxjy-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="5au36DQbYEKyrQLkCRli-1">
+            <mxGeometry x="20" y="6625" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="yZYlHcBrfYSUOh7GQxjy-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="yZYlHcBrfYSUOh7GQxjy-3">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="6650" as="sourcePoint" />
-              <mxPoint x="30" y="6650" as="targetPoint" />
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="yZYlHcBrfYSUOh7GQxjy-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="yZYlHcBrfYSUOh7GQxjy-3">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -2570,7 +2687,7 @@
           </mxCell>
         </UserObject>
         <mxCell id="E-lLVu_PuySF5yxyRlK--140" value="" style="group" vertex="1" connectable="0" parent="E-lLVu_PuySF5yxyRlK--1">
-          <mxGeometry x="20" y="7795" width="810.0000000000001" height="1000" as="geometry" />
+          <mxGeometry x="20" y="7790" width="810.0000000000001" height="1000" as="geometry" />
         </mxCell>
         <mxCell id="E-lLVu_PuySF5yxyRlK--141" value="&lt;b&gt;&lt;font&gt;5. Resistance to Fabrication (continued)&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" vertex="1" parent="E-lLVu_PuySF5yxyRlK--140">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
@@ -2596,27 +2713,43 @@
             <mxRectangle width="315" height="955" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="" link="data:page/id,PScHr4ANaqiKAfRTAOgF" id="c8W-wXe7H0ivvtsHgVtx-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="E-lLVu_PuySF5yxyRlK--1">
+        <UserObject label="" link="data:page/id,PScHr4ANaqiKAfRTAOgF" id="PVQAwpFistHSUL6_AVzM-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="E-lLVu_PuySF5yxyRlK--1">
+            <mxGeometry x="780" y="7725" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="PVQAwpFistHSUL6_AVzM-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="PVQAwpFistHSUL6_AVzM-0">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="7749.5" as="sourcePoint" />
-              <mxPoint x="820" y="7749.5" as="targetPoint" />
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <UserObject label="" link="data:page/id,Qv_htXwKxnLwx0oGmtAl" id="mDXTKDp419B-zboPelzJ-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="E-lLVu_PuySF5yxyRlK--1">
+        <mxCell id="PVQAwpFistHSUL6_AVzM-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="PVQAwpFistHSUL6_AVzM-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,Qv_htXwKxnLwx0oGmtAl" id="PVQAwpFistHSUL6_AVzM-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="E-lLVu_PuySF5yxyRlK--1">
+            <mxGeometry x="20" y="7725" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="PVQAwpFistHSUL6_AVzM-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="PVQAwpFistHSUL6_AVzM-3">
             <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="7749.5" as="sourcePoint" />
-              <mxPoint x="30" y="7749.5" as="targetPoint" />
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="PVQAwpFistHSUL6_AVzM-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="PVQAwpFistHSUL6_AVzM-3">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="5.2. Historical Comparison (9/10)" id="PScHr4ANaqiKAfRTAOgF">
-    <mxGraphModel dx="828" dy="-8248" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1242" dy="-7972" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-0" />
         <mxCell id="jyyV_XFQdHlw1llUxg7D-1" parent="jyyV_XFQdHlw1llUxg7D-0" />
@@ -2625,51 +2758,35 @@
             <mxGeometry x="20" y="8825" width="810" height="50" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="" link="data:page/id,lD0beqhCFwfZuSMG6im9" id="YEmRQK298Iynh8VW5NTx-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="jyyV_XFQdHlw1llUxg7D-1">
-            <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="780" y="8849.5" as="sourcePoint" />
-              <mxPoint x="820" y="8849.5" as="targetPoint" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <UserObject label="" link="data:page/id,pYsrYzmLpEQ3149J_62V" id="vWJ16ozi8wY5PUWwStKg-0">
-          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="jyyV_XFQdHlw1llUxg7D-1">
-            <mxGeometry width="50" height="50" relative="1" as="geometry">
-              <mxPoint x="70" y="8850" as="sourcePoint" />
-              <mxPoint x="30" y="8850" as="targetPoint" />
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
-        <mxCell id="te8cKOeC2C6t-mMSs1cu-0" value="" style="group" vertex="1" connectable="0" parent="jyyV_XFQdHlw1llUxg7D-1">
-          <mxGeometry x="20" y="8895" width="810.0000000000001" height="835" as="geometry" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-24" value="" style="group" vertex="1" connectable="0" parent="jyyV_XFQdHlw1llUxg7D-1">
+          <mxGeometry x="20" y="8890" width="810.0000000000001" height="830" as="geometry" />
         </mxCell>
-        <mxCell id="jyyV_XFQdHlw1llUxg7D-114" value="&lt;b&gt;&lt;font&gt;6. Summary&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCDBFC;gradientColor=#9393E0;strokeColor=#8381BF;" vertex="1" parent="te8cKOeC2C6t-mMSs1cu-0">
+        <mxCell id="jyyV_XFQdHlw1llUxg7D-114" value="&lt;b&gt;&lt;font&gt;6a. Summary&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCDBFC;gradientColor=#9393E0;strokeColor=#8381BF;" vertex="1" parent="TcXx6wxsJZrjEGkitZ1k-24">
           <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
-        <mxCell id="jyyV_XFQdHlw1llUxg7D-115" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingBottom=0;" vertex="1" parent="te8cKOeC2C6t-mMSs1cu-0">
-          <mxGeometry y="45" width="810" height="790" as="geometry" />
+        <mxCell id="jyyV_XFQdHlw1llUxg7D-115" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingBottom=0;" vertex="1" parent="TcXx6wxsJZrjEGkitZ1k-24">
+          <mxGeometry y="45" width="810" height="785" as="geometry" />
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-116" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-115">
-          <mxGeometry width="810" height="75" as="geometry" />
+          <mxGeometry width="810" height="70" as="geometry" />
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-117" value="&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;Religious Comparison: God&#39;s Existence&lt;br&gt;&lt;/b&gt;(previous section)&lt;/span&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 1px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 5px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 8.5px;&quot;&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Does the belief system align&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;with reality?&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=none;align=center;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-116">
-          <mxGeometry width="180" height="75" as="geometry">
-            <mxRectangle width="180" height="75" as="alternateBounds" />
+          <mxGeometry width="180" height="70" as="geometry">
+            <mxRectangle width="180" height="70" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-118" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;Yes&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(pending superior textual authority)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=middle;spacingRight=1;spacingBottom=0;spacingLeft=1;spacingTop=0;align=center;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-116">
-          <mxGeometry x="180" width="315" height="75" as="geometry">
-            <mxRectangle width="315" height="75" as="alternateBounds" />
+          <mxGeometry x="180" width="315" height="70" as="geometry">
+            <mxRectangle width="315" height="70" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-119" value="&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp;Yes&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CBE2FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=middle;spacingRight=1;spacingBottom=0;spacingLeft=1;spacingTop=0;align=center;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-116">
-          <mxGeometry x="495" width="315" height="75" as="geometry">
-            <mxRectangle width="315" height="75" as="alternateBounds" />
+          <mxGeometry x="495" width="315" height="70" as="geometry">
+            <mxRectangle width="315" height="70" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-120" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-115">
-          <mxGeometry y="75" width="810" height="95" as="geometry" />
+          <mxGeometry y="70" width="810" height="95" as="geometry" />
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-121" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;1. Textual/Historical Claim&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 5px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;b style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-&amp;nbsp; What is the claim?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;- Is it ontologically possible and epistemologically attainable?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;- What are the criteria for success and failure?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#000000;overflow=hidden;fillColor=#F8CECC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=#EA6B66;align=left;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-120">
           <mxGeometry width="180" height="95" as="geometry">
@@ -2687,7 +2804,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-124" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-115">
-          <mxGeometry y="170" width="810" height="140" as="geometry" />
+          <mxGeometry y="165" width="810" height="140" as="geometry" />
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-125" value="&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 10px; font-weight: bold;&quot;&gt;2.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;Oral, Written, and Archaeological Presence&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 5px; font-weight: bold;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;- Who were the eyewitnesses, and what did they bear witness to?&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;- How reliable was the cultural context for preserving oral tradition accurately?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;- When was the text written and standardized, and by whom?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;- What corroborating archaeological finds are there?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#FFDEC9;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=#FFB663;align=left;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-124">
           <mxGeometry width="180" height="140" as="geometry">
@@ -2705,7 +2822,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-128" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-115">
-          <mxGeometry y="310" width="810" height="160" as="geometry" />
+          <mxGeometry y="305" width="810" height="160" as="geometry" />
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-129" value="&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 10px; font-weight: bold;&quot;&gt;3.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;Assessment of the Chains of Transmission&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 5px; font-weight: bold;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;How many independent streams of transmission are there, leading to the text&#39;s standardization?&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;Are there competing claims, and if so, what are their chains of transmission?&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;What are the strongest, independent chains of custodianship for each stream of transmission?&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;What are the weakest links in the strongest chains of custodianship?&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#FFF2CC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=#FFD966;align=left;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-128">
           <mxGeometry width="180" height="160" as="geometry">
@@ -2723,7 +2840,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-132" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-115">
-          <mxGeometry y="470" width="810" height="115" as="geometry" />
+          <mxGeometry y="465" width="810" height="115" as="geometry" />
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-133" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;4. Alignment with Historical Context&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 5px; font-weight: bold;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;What was the historical context throughout the chain of custodianship?&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;What were the standards of testimony and custodianship in this time?&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;Is there anything anachronistic (historically or logically out of place) about the claim or its custodianship?&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5E8D4;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=#97D077;align=left;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-132">
           <mxGeometry width="180" height="115" as="geometry">
@@ -2741,7 +2858,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-136" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-115">
-          <mxGeometry y="585" width="810" height="205" as="geometry" />
+          <mxGeometry y="580" width="810" height="205" as="geometry" />
         </mxCell>
         <mxCell id="jyyV_XFQdHlw1llUxg7D-137" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;5. Resistance to Fabrication&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 5px; font-weight: bold;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;b style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;What possibilities are there for fabrication and error in the claim?&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;How strongly does the claim resist fabrication and error?&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;What possibilities are there for fabrication and error with the claim&#39;s custodianship?&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;How strongly does the claim&#39;s custodianship resist fabrication and error?&amp;nbsp;&lt;br&gt;&lt;/b&gt;(Requirements for Trusting Defense)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;How strongly does the claim&#39;s custodianship resist fabrication and error?&lt;br&gt;&lt;/b&gt;(Texts)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 4px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;-&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;How strongly does the claim&#39;s custodianship resist fabrication and error?&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 8px;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 8px;&quot;&gt;Trustworthiness)&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#DAE8FC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;gradientColor=#7EA6E0;align=left;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-136">
           <mxGeometry width="180" height="205" as="geometry">
@@ -2758,199 +2875,242 @@
             <mxRectangle width="315" height="205" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-1" value="&lt;b&gt;&lt;font&gt;Comparative Summary&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCDBFC;gradientColor=#9393E0;strokeColor=#8381BF;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-1">
-          <mxGeometry x="20" y="9745" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        <mxCell id="rVNWP485nUd0LanyGQOG-0" value="" style="group" vertex="1" connectable="0" parent="jyyV_XFQdHlw1llUxg7D-1">
+          <mxGeometry x="20" y="9735" width="810.0000000000001" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-2" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingBottom=0;" vertex="1" parent="jyyV_XFQdHlw1llUxg7D-1">
-          <mxGeometry x="20" y="9790" width="810" height="90" as="geometry" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-1" value="&lt;b&gt;&lt;font&gt;6b. Comparative Summary&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCDBFC;gradientColor=#9393E0;strokeColor=#8381BF;" vertex="1" parent="rVNWP485nUd0LanyGQOG-0">
+          <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-2" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingBottom=0;" vertex="1" parent="rVNWP485nUd0LanyGQOG-0">
+          <mxGeometry y="45" width="810" height="105" as="geometry" />
         </mxCell>
         <mxCell id="1ATEd3fyY3c2ZhLfnWBL-3" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-2">
-          <mxGeometry width="810" height="30" as="geometry" />
+          <mxGeometry width="810" height="35" as="geometry" />
         </mxCell>
         <mxCell id="1ATEd3fyY3c2ZhLfnWBL-4" value="&lt;font&gt;&lt;br&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry width="60" height="30" as="geometry">
-            <mxRectangle width="60" height="30" as="alternateBounds" />
+          <mxGeometry width="60" height="35" as="geometry">
+            <mxRectangle width="60" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-224" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="60" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-224" value="&lt;span&gt;&lt;font&gt;Earliest Established Sources&lt;/font&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="60" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-254" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="135" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-8" value="Primary Method of Preservation" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="135" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-257" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="210" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-15" value="Secondary Method of Preservation" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="210" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-260" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="285" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-28" value="Language of Textual Preservation" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="285" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-263" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="360" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-31" value="Accessibility to Verification and Correctability" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="360" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-266" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="435" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-257" value="Verified by Messenger" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="435" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-269" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="510" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-21" value="Competing Claims to Source" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="510" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-272" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="585" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-263" value="Integrity of Transmission" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="585" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-275" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="660" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="hw1TlObQ9odLU05cq23O-0" value="Time of Full Textual Compilation" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="660" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-278" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
-          <mxGeometry x="735" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-269" value="Earliest Surviving Manuscripts" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;spacingTop=-2;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-3">
+          <mxGeometry x="735" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="1ATEd3fyY3c2ZhLfnWBL-122" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-2">
-          <mxGeometry y="30" width="810" height="30" as="geometry" />
+          <mxGeometry y="35" width="810" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-123" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;New Testament&lt;/font&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry width="60" height="30" as="geometry">
-            <mxRectangle width="60" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-123" value="&lt;span&gt;&lt;font&gt;New Testament&lt;/font&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry width="60" height="35" as="geometry">
+            <mxRectangle width="60" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-225" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="60" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-225" value="Secondary and tertiary sources, multiple authors" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="60" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-255" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="135" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-9" value="Oral transmission by eyewitnesses" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="135" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-258" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="210" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-16" value="Gospels and Epistles - written after the Messenger&#39;s life" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="210" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-261" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="285" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-29" value="Written in a different language to what the Messenger spoke" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="285" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-264" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="360" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-32" value="Limited to scholars with specialized knowledge, even until now" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="360" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-267" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="435" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-258" value="No - eyewitness accounts written 10-70 years later" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="435" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-270" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="510" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-22" value="Yes" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="510" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-273" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="585" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-264" value="Relies on lost works and unknown transmission" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="585" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-276" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="660" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="hw1TlObQ9odLU05cq23O-1" value="Proposed in 180 AD, completed by 382 AD (150-352 years later)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="660" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-279" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
-          <mxGeometry x="735" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-270" value="Within 100 years after the Messenger&#39;s life" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-122">
+          <mxGeometry x="735" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="1ATEd3fyY3c2ZhLfnWBL-132" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-2">
-          <mxGeometry y="60" width="810" height="30" as="geometry" />
+          <mxGeometry y="70" width="810" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-133" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Quran&lt;/font&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry width="60" height="30" as="geometry">
-            <mxRectangle width="60" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-133" value="&lt;span&gt;&lt;font&gt;Quran&lt;/font&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=8;gradientColor=none;align=center;fontStyle=1" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry width="60" height="35" as="geometry">
+            <mxRectangle width="60" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-226" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="60" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-226" value="Primary and secondary sources, single author" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="60" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-256" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="135" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-10" value="Communal &amp;amp; verbatim memorization by eyewitnesses" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="135" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-259" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="210" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-17" value="Written manuscripts during the Messenger&#39;s life" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="210" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-262" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="285" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-30" value="Written verbatim to the Messenger&#39;s spoken language" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="285" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-265" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="360" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-33" value="Publicly verifiable and correctable by a lay person" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="360" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-268" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="435" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-259" value="Yes" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="435" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-271" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="510" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="TcXx6wxsJZrjEGkitZ1k-23" value="No" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="510" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-274" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="585" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-265" value="Unbroken, public, redundant, &amp;amp; fully known" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="585" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-277" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="660" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="hw1TlObQ9odLU05cq23O-2" value="2 years later" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="660" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-280" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
-          <mxGeometry x="735" width="75" height="30" as="geometry">
-            <mxRectangle width="75" height="30" as="alternateBounds" />
+        <mxCell id="1ATEd3fyY3c2ZhLfnWBL-271" value="Within the Messenger&#39;s lifetime" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#D5D5D5;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=7;gradientColor=none;align=center;" vertex="1" parent="1ATEd3fyY3c2ZhLfnWBL-132">
+          <mxGeometry x="735" width="75" height="35" as="geometry">
+            <mxRectangle width="75" height="35" as="alternateBounds" />
           </mxGeometry>
+        </mxCell>
+        <UserObject label="" link="data:page/id,lD0beqhCFwfZuSMG6im9" id="S_a1RG3fl84if2AKcPTa-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="jyyV_XFQdHlw1llUxg7D-1">
+            <mxGeometry x="780" y="8825" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="S_a1RG3fl84if2AKcPTa-1">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="S_a1RG3fl84if2AKcPTa-0">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint y="25" as="sourcePoint" />
+              <mxPoint x="40" y="25" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="S_a1RG3fl84if2AKcPTa-2" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=-180;" vertex="1" parent="S_a1RG3fl84if2AKcPTa-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,pYsrYzmLpEQ3149J_62V" id="S_a1RG3fl84if2AKcPTa-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="jyyV_XFQdHlw1llUxg7D-1">
+            <mxGeometry x="20" y="8825" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" id="S_a1RG3fl84if2AKcPTa-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="S_a1RG3fl84if2AKcPTa-3">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="S_a1RG3fl84if2AKcPTa-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="S_a1RG3fl84if2AKcPTa-3">
+          <mxGeometry width="50" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="5.2. Historical Comparison (10/10)" id="lD0beqhCFwfZuSMG6im9">
-    <mxGraphModel dx="1774" dy="-8717" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1242" dy="-9072" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="cJVLKbOjtSgQkCSZX08d-0" />
         <mxCell id="cJVLKbOjtSgQkCSZX08d-1" parent="cJVLKbOjtSgQkCSZX08d-0" />
-        <mxCell id="cJVLKbOjtSgQkCSZX08d-75" value="&lt;b&gt;&lt;font&gt;7. Conclusion&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#E6D0DE;gradientColor=#D5739D;strokeColor=#996185;" vertex="1" parent="cJVLKbOjtSgQkCSZX08d-1">
-          <mxGeometry x="20" y="9995" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        <UserObject label="Historicity&amp;nbsp;Comparison: Bible vs. Quran (10/10)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="cJVLKbOjtSgQkCSZX08d-82">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" vertex="1" parent="cJVLKbOjtSgQkCSZX08d-1">
+            <mxGeometry x="20" y="9925" width="810" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="fmysGeRlq7T1k-986xeI-1" value="" style="group" vertex="1" connectable="0" parent="cJVLKbOjtSgQkCSZX08d-1">
+          <mxGeometry x="20" y="9990" width="810.0000000000001" height="1000" as="geometry" />
         </mxCell>
-        <mxCell id="cJVLKbOjtSgQkCSZX08d-76" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingBottom=0;" vertex="1" parent="cJVLKbOjtSgQkCSZX08d-1">
-          <mxGeometry x="20" y="10040" width="810" height="955" as="geometry" />
+        <mxCell id="cJVLKbOjtSgQkCSZX08d-75" value="&lt;b&gt;&lt;font&gt;7. Conclusion&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#E6D0DE;gradientColor=#D5739D;strokeColor=#996185;" vertex="1" parent="fmysGeRlq7T1k-986xeI-1">
+          <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="cJVLKbOjtSgQkCSZX08d-76" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;spacingBottom=0;" vertex="1" parent="fmysGeRlq7T1k-986xeI-1">
+          <mxGeometry y="45" width="810" height="955" as="geometry" />
         </mxCell>
         <mxCell id="cJVLKbOjtSgQkCSZX08d-77" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="cJVLKbOjtSgQkCSZX08d-76">
           <mxGeometry width="810" height="955" as="geometry" />
@@ -2970,19 +3130,24 @@
             <mxRectangle width="315" height="955" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <UserObject label="Historicity&amp;nbsp;Comparison: Bible vs. Quran (10/10)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="cJVLKbOjtSgQkCSZX08d-82">
-          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" vertex="1" parent="cJVLKbOjtSgQkCSZX08d-1">
-            <mxGeometry x="20" y="9925" width="810" height="50" as="geometry" />
+        <mxCell id="cJVLKbOjtSgQkCSZX08d-112" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;If truth is defined by consistency, and God is the Truth, and reality itself is sustained by His consistent and unwavering will, then the true religion (by definition) must reflect that same, maximal consistency in both its message and its preservation. As a result, a belief that must be presupposed or speculated about in order to be defended cannot be verified nor be distinguished from falsehood, and a system that cannot distinguish itself from a well-crafted falsehood cannot serve as a reliable guide to ultimate truth. And when we apply that to the Bible and Quran, we find that the direction of speculation flips: &lt;b&gt;the preservation of the Bible requires speculation to be true&lt;/b&gt;, while &lt;b&gt;the preservation of the Quran requires speculation to be false&lt;/b&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;For the New Testament, the central claim (that Jesus is divine in the Trinitarian sense) passes through transmission lines with anonymous or lost intermediaries, first-generation disputes, and later canon-setting. To keep that theology as original, we have to first assume that the winning stream preserved the authentic truth, that rising Christology is &quot;progressive revelation&quot; and not doctrinal evolution, and that rivals were mistaken. But this is self-referential: the doctrine is used to validate the text, and the text is used to validate the doctrine: the claim needs speculation to prove that it is true.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;For the Quran, the core claim (that this is the direct speech of God) is tied to the historical constraints that Muhammad publicly recited in real time, contemporaries mass-memorized the text verbatim, named scribes wrote while he was alive, it was compiled within about two years of his death, and its pronunciation was stabilized across the community within two decades. We still have very early manuscript evidence and a continuous oral tradition consistent with that, and no rival claims to the Quran&#39;s transmission exist. That means the usual path for post-founder corruption (quiet revision, doctrinal editing generations later) is largely blocked. To reject authenticity, you cannot point to a vague gap in transmission; you have to argue that Muhammad himself was fabricating, unstable, or otherwise the single point of failure. In other words, here the speculation runs the other way: the Quran does not need speculation to be true, it needs speculation to be false.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;In comparison with the New Testament, the Quran enters history with a different pattern of preservation - public, continuous, and empirically accessible - which makes fabrication difficult from the start. If we judged the Quran by the Bible&#39;s standards, it would exceed what Muslims even claim for it; and if we judged the Bible by the Quran&#39;s standards, it would collapse into one of the weakest narrations. The Quran&#39;s defenses are also stronger versions of the same categories: a “living tradition” is where the entire community safeguards the text, with any ordinary reciter being able to correct an authority (not a later attempt to harmonize conflicting lines); &quot;progressive revelation&quot; is where explicit claims unfolded while the Messenger is alive and accountable in public (not where key information is being written decades after his death); and &quot;God preserved the scripture&quot; is where preservation is obvious while incapacitating the plausibility of alternatives (not&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;where it requires speculation to do the same&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;). This also makes verification accessible: it is communal and daily, not dependent on specialists. By contrast, defending the New Testament&#39;s highest claims requires expert historical reconstruction to decide which sources are &quot;authentic&quot;, why rivals are invalid, and why one theological line alone goes back to Jesus without modification.&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 8px;&quot;&gt;&amp;nbsp;This raises a basic question: if revelation is meant to guide both the uneducated and the elite, why should access to salvation depend on arguments and knowledge that ordinary adherents cannot personally verify?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;All of this lands in the same place: a belief that must be presupposed in order to be defended cannot be independently verified or meaningfully distinguished from a well-crafted falsehood. And a system whose historical record is objectively weaker than that of a rival claim cannot be the final revelation of the God who authored reality, because the true religion cannot be less &quot;true&quot; - less consistent, less constrained against fabrication, less available to honest scrutiny - than a false one.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;From here, the question shifts. The Quran does not only claim preservation; it claims to be the direct speech of God, and it invites evaluation by its output. The next section asks whether its &quot;fruit&quot; - its inimitable internal coherence, moral structure, and correspondence with reality - actually reflects the character of the God it claims to speak for.&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#CBE2FF;fillColor=#CCFFCC;gradientDirection=east;fontSize=1;" vertex="1" parent="fmysGeRlq7T1k-986xeI-1">
+          <mxGeometry x="180" y="670" width="630" height="330" as="geometry" />
+        </mxCell>
+        <UserObject label="" link="data:page/id,PScHr4ANaqiKAfRTAOgF" id="ihz7weS6olrQnlx0yEaq-3">
+          <mxCell style="group;rotation=0;" vertex="1" connectable="0" parent="cJVLKbOjtSgQkCSZX08d-1">
+            <mxGeometry x="20" y="9925" width="50" height="50" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="cJVLKbOjtSgQkCSZX08d-112" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;If truth is defined by consistency, and God is the Truth, and reality itself is sustained by His consistent and unwavering will, then the true religion (by definition) must reflect that same, maximal consistency in both its message and its preservation. As a result, a belief that must be presupposed or speculated about in order to be defended cannot be verified nor be distinguished from falsehood, and a system that cannot distinguish itself from a well-crafted falsehood cannot serve as a reliable guide to ultimate truth. And when we apply that to the Bible and Quran, we find that the direction of speculation flips: &lt;b&gt;the preservation of the Bible requires speculation to be true&lt;/b&gt;, while &lt;b&gt;the preservation of the Quran requires speculation to be false&lt;/b&gt;.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;For the New Testament, the central claim (that Jesus is divine in the Trinitarian sense) passes through transmission lines with anonymous or lost intermediaries, first-generation disputes, and later canon-setting. To keep that theology as original, we have to first assume that the winning stream preserved the authentic truth, that rising Christology is &quot;progressive revelation&quot; and not doctrinal evolution, and that rivals were mistaken. But this is self-referential: the doctrine is used to validate the text, and the text is used to validate the doctrine: the claim needs speculation to prove that it is true.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;For the Quran, the core claim (that this is the direct speech of God) is tied to the historical constraints that Muhammad publicly recited in real time, contemporaries mass-memorized the text verbatim, named scribes wrote while he was alive, it was compiled within about two years of his death, and its pronunciation was stabilized across the community within two decades. We still have very early manuscript evidence and a continuous oral tradition consistent with that, and no rival claims to the Quran&#39;s transmission exist. That means the usual path for post-founder corruption (quiet revision, doctrinal editing generations later) is largely blocked. To reject authenticity, you cannot point to a vague gap in transmission; you have to argue that Muhammad himself was fabricating, unstable, or otherwise the single point of failure. In other words, here the speculation runs the other way: the Quran does not need speculation to be true, it needs speculation to be false.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;By contrast, the Quran enters history with a different pattern of preservation - public, continuous, and empirically accessible - which makes fabrication difficult from the start. If we judged the Quran by the Bible&#39;s standards, it would exceed what Muslims even claim for it; and if we judged the Bible by the Quran&#39;s standards, it would collapse into one of the weakest narrations. The Quran&#39;s defenses are also stronger versions of the same categories: a “living tradition” is where the entire community safeguards the text, with any ordinary reciter being able to correct an authority (not a later attempt to harmonize conflicting lines); &quot;progressive revelation&quot; is where explicit claims unfolded while the Messenger is alive and accountable in public (not where key information is being written decades after his death); and &quot;God preserved the scripture&quot; is where preservation is obvious while incapacitating the plausibility of alternatives (not&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;where it requires speculation to do the same&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;). This also makes verification accessible: it is communal and daily, not dependent on specialists. By contrast, defending the New Testament&#39;s highest claims requires expert historical reconstruction to decide which sources are &quot;authentic&quot;, why rivals are invalid, and why one theological line alone goes back to Jesus without modification.&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 8px;&quot;&gt;&amp;nbsp;This raises a basic question: if revelation is meant to guide both the uneducated and the elite, why should access to salvation depend on arguments and knowledge that ordinary adherents cannot personally verify?&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;All of this lands in the same place: a belief that must be presupposed in order to be defended cannot be independently verified or meaningfully distinguished from a well-crafted falsehood. And a system whose historical record is objectively weaker than that of a rival claim cannot be the final revelation of the God who authored reality, because the true religion cannot be less &quot;true&quot; - less consistent, less constrained against fabrication, less available to honest scrutiny - than a false one.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;From here, the question shifts. The Quran does not only claim preservation; it claims to be the direct speech of God, and it invites evaluation by its output. The next section asks whether its &quot;fruit&quot; - its inimitable internal coherence, moral structure, and correspondence with reality - actually reflects the character of the God it claims to speak for.&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#CBE2FF;fillColor=#CCFFCC;gradientDirection=east;fontSize=1;" vertex="1" parent="cJVLKbOjtSgQkCSZX08d-1">
-          <mxGeometry x="200" y="10665" width="630" height="330" as="geometry" />
-        </mxCell>
-        <mxCell id="AK3rYLbqj_ZXVMb6iB8x-1" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="cJVLKbOjtSgQkCSZX08d-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="70" y="9949.66" as="sourcePoint" />
-            <mxPoint x="30" y="9949.66" as="targetPoint" />
-          </mxGeometry>
+        <UserObject label="" id="ihz7weS6olrQnlx0yEaq-4">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="ihz7weS6olrQnlx0yEaq-3">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="ihz7weS6olrQnlx0yEaq-5" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;strokeColor=none;rotation=0;" vertex="1" parent="ihz7weS6olrQnlx0yEaq-3">
+          <mxGeometry width="50" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
