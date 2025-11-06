@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7" pages="19">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8" pages="19">
   <diagram name="Introduction" id="OcMc1TD89lyCnE7k4u9A">
     <mxGraphModel dx="1242" dy="828" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
@@ -25,7 +25,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0. Table of Contents" id="lkuSvPZcJC7dHRsydWrw">
-    <mxGraphModel dx="1242" dy="828" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1359" dy="828" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="ly8JA6_uQbLAdn4xGy72-0" />
         <mxCell id="ly8JA6_uQbLAdn4xGy72-1" parent="ly8JA6_uQbLAdn4xGy72-0" />
@@ -57,11 +57,11 @@
           </mxGeometry>
         </mxCell>
         <UserObject label="&lt;b&gt;Introduction &amp;amp; Background&lt;/b&gt;" link="data:page/id,OcMc1TD89lyCnE7k4u9A" id="ugc0nBVU4MK360f1604c-0">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="ly8JA6_uQbLAdn4xGy72-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" parent="ly8JA6_uQbLAdn4xGy72-1" vertex="1">
             <mxGeometry x="325" y="60" width="200" height="30" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="89URO06o1gQXvmFxeE-S-1" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;jumpSize=6;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endSize=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" target="89URO06o1gQXvmFxeE-S-3" parent="ly8JA6_uQbLAdn4xGy72-1" source="lm07IBAU_sPh5pll3IHb-2">
+        <mxCell id="89URO06o1gQXvmFxeE-S-1" style="edgeStyle=elbowEdgeStyle;shape=connector;rounded=1;jumpSize=6;orthogonalLoop=1;jettySize=auto;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;strokeWidth=1.5;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;endSize=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="ly8JA6_uQbLAdn4xGy72-1" source="lm07IBAU_sPh5pll3IHb-2" target="89URO06o1gQXvmFxeE-S-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="425" y="465" as="sourcePoint" />
           </mxGeometry>
@@ -97,7 +97,7 @@
           </mxCell>
         </UserObject>
         <UserObject label="&lt;span&gt;&lt;b&gt;7. Non-Fundamental Comparison:&lt;br&gt;Bible vs. Quran&lt;/b&gt;&lt;/span&gt;" link="data:page/id,XbJ0z0nIzhYvPX_4MN__" id="89URO06o1gQXvmFxeE-S-3">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;comic=0;strokeColor=#996185;fontSize=11;fillColor=#E6D0DE;gradientColor=#D5739D;arcSize=50;treeMoving=1;treeFolding=0;strokeWidth=0.5;" vertex="1" collapsed="1" parent="ly8JA6_uQbLAdn4xGy72-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;comic=0;strokeColor=#996185;fontSize=11;fillColor=#E6D0DE;gradientColor=#D5739D;arcSize=50;treeMoving=1;treeFolding=0;strokeWidth=0.5;" parent="ly8JA6_uQbLAdn4xGy72-1" vertex="1" collapsed="1">
             <mxGeometry x="305" y="500" width="240" height="35" as="geometry" />
           </mxCell>
         </UserObject>
@@ -3145,15 +3145,65 @@
     </mxGraphModel>
   </diagram>
   <diagram name="7. Non-Fundamental Comparison" id="XbJ0z0nIzhYvPX_4MN__">
-    <mxGraphModel dx="1242" dy="-9072" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="1213" dy="-9072" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="0ffwS5z20CiL1abtpJwu-0" />
         <mxCell id="0ffwS5z20CiL1abtpJwu-1" parent="0ffwS5z20CiL1abtpJwu-0" />
         <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="0ffwS5z20CiL1abtpJwu-2">
-          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" vertex="1" parent="0ffwS5z20CiL1abtpJwu-1">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
             <mxGeometry x="20" y="9925" width="810" height="50" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="X1ds6PABbdby7qqjh38H-14" value="&lt;b&gt;&lt;font&gt;1. What is the relationship between God&#39;s mercy/love, justice, and forgiveness (soteriology)?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="20" y="9995" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf1yWK0Lw0H-mV7IPuVQ-0" value="&lt;b&gt;&lt;font&gt;2. What is the source of the fundamental, theological difference in soteriology?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFDEC9;gradientColor=#FFB663;strokeColor=#D69555;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="20" y="10355" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="Fk_qG9YGPnuzH20UbjZS-0" value="&lt;b&gt;3. Which salvific narrative better fits reality?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFF2CC;gradientColor=#FFD966;strokeColor=#D6B656;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="20" y="10430" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="EYc5J0ixb2I8HEf8Tvmf-0" value="&lt;b&gt;&lt;font&gt;4. How well do the scriptures&#39; objective properties fit their internal claims?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#D5E8D4;gradientColor=#97D077;strokeColor=#82B366;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="20" y="10505" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="SICcQmrAYQ4tHytVPw1F-0" value="&lt;b&gt;&lt;font&gt;5. Does anything stand out from the organized religions?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="25" y="10580" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="Jj9n675K-Z2j2yZQ0L7o-0" value="&lt;b&gt;&lt;font&gt;6. Are these results internally consistent with previous conclusions?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCDBFC;gradientColor=#9393E0;strokeColor=#8381BF;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="25" y="10650" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="PJfseEPP3wY5v_qOuSvO-0" value="&lt;b&gt;&lt;font&gt;7. Conclusion&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#E6D0DE;gradientColor=#D5739D;strokeColor=#996185;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="25" y="10720" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="fdP4uL2IWqcHji0CoqKW-13" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
+          <mxGeometry x="20" y="10040" width="810" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="fdP4uL2IWqcHji0CoqKW-14" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="fdP4uL2IWqcHji0CoqKW-13" vertex="1">
+          <mxGeometry width="810" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="fdP4uL2IWqcHji0CoqKW-16" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Forgiveness is possible because justice is satisfied by Jesus satisfying the debt of humanity&#39;s sin out of God&#39;s love for us&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Justice&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Giving everyone what they deserve (ie. what they have a right to experience, based on how well they fulfilled their responsibilities).&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- More specifically, the debt of sin must be satisfied with a punishment - proportional to the sin&#39;s weight.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Forgiveness&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- When the punishment for a sin is removed.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- This can only occur &lt;i&gt;after&lt;/i&gt; the debt is satisfied (ie. the punishment is experienced) - either when the offender experiences it himself, or if someone else willingly intercedes and experiences it on their behalf.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Love/Mercy&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- God is love itself: the very essence of affectionately desiring our salvation and happiness.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- This is ultimately manifested in the Atonement, in which Jesus (the filiation - Person of the Son) satisfied humanity&#39;s debt through his resurrection (by defeating death - the ultimate result of Adam and Eve&#39;s original sin) - changing the fundamental salvific requirement from &quot;impossibily perfect righteousness and repentance&quot; to &quot;faith in Jesus Christ&quot; (ie. belief in his divinity).&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;God&#39;s forgiveness of our sins is only possible because justice is still being satisfied by means of the Atonement - saving us from the impossible debt of our own sins.&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="fdP4uL2IWqcHji0CoqKW-14" vertex="1">
+          <mxGeometry width="405" height="205" as="geometry">
+            <mxRectangle width="405" height="205" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fdP4uL2IWqcHji0CoqKW-17" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="fdP4uL2IWqcHji0CoqKW-14" vertex="1">
+          <mxGeometry x="405" width="405" height="205" as="geometry">
+            <mxRectangle width="405" height="205" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6EO3iycbL_vFDhKmOSQg-0" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="fdP4uL2IWqcHji0CoqKW-13" vertex="1">
+          <mxGeometry y="205" width="810" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="6EO3iycbL_vFDhKmOSQg-1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="6EO3iycbL_vFDhKmOSQg-0" vertex="1">
+          <mxGeometry width="405" height="95" as="geometry">
+            <mxRectangle width="405" height="95" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6EO3iycbL_vFDhKmOSQg-2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="6EO3iycbL_vFDhKmOSQg-0" vertex="1">
+          <mxGeometry x="405" width="405" height="95" as="geometry">
+            <mxRectangle width="405" height="95" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
