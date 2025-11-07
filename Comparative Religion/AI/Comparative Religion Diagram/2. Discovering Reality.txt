@@ -234,6 +234,7 @@ Observations (non-exhaustive)
  - Glass shatters on the floor only after it has been dropped.
  - A fire starts only after a spark meets fuel and oxygen.
  - An object at rest only moves when a force acts upon it.
+ - Your hand starts at a non-hand (arm), your arm starts at a non-arm (shoulder), your shoulder starts at a non-shoulder (etc.).
  - You consistently observe that effects never precede their [inferred] causes.
  - You know about the quadratic equation because someone else taught you.
  - A scholar writing about a historical event must have learned from someone else or made it up.
@@ -246,7 +247,7 @@ The Inference (and why)
 What Happens When Not Inferred
  - Understanding reality becomes impossible.
      - There would be no reason to expect the future to be connected to the past in any meaningful way.
-     - Science would be a pointless exercise, as experiments would have no reliable connection between actions and results.
+     - Science would be a pointless exercise, as experiments would have no reliable connection between tests and results.
 
 14. All things are contingent on their causes (that are not the thing).
 Observations (non-exhaustive)
