@@ -41,6 +41,14 @@ The Inference (and why)
  - As such, we now have a basis for terms such as "fundamental" and "superficial":
      - Fundamental properties refer to a thing's consistent properties, where its negation makes it not-the-thing (ex. rocks are solid, rocks have color, etc.).
      - Superficial properties refer to a thing's inconsistent properties, where its negation does not make it not-the-thing (ex. rocks can be strong or brittle, rocks can be black or red, etc.).
+ - We can also now understand comprehensibility and rationality:
+     - Comprehensibility is the ability to accurately visualize, represent, or imagine observations in the mind.
+     - Rationality is the ability to identify/define a concept based on the comprehensible association of known observations.
+ - As such, we can now distinguish between the various combinations of the two:
+     - Comprehensible & Rational: consistency between what is imagined and known observations (ex. a rock, 2+2=4, the mitochondria is the powerhouse of the cell)
+     - Comprehensible & Irrational: inconsistency between what is imagined and known observations (ex. a pink elephant, flying pig, talking door, any fiction story)
+     - Incomprehensible & Rational: inability to imagine known observations (ex. infinity, a color outside the visible spectrum, trying to remember before you were born)
+     - Incomprehensible & Irrational: inability to imagine unknown observations (ex. a square circle, a married bachelor, P and not P, neither P nor not P)
 What Happens When Not Inferred
  - Knowledge becomes impossible.
      - If things do not have a stable and consistent nature, then nothing can be reliably known - nothing for us to point to and learn more about.
@@ -126,6 +134,7 @@ Observations (non-exhaustive)
 The Inference (and why)
  - Truth is defined by reality, not by feelings or intuition.
      - We observe that reality is the ultimate judge of whether a claim is true, regardless of our internal state of certainty.
+     - This means that truth corresponds with rationality, not comprehensibility: it is possible for something to be true that you can't comprehend or fully understand.
  - This means truth is objective because it is based on something outside of ourselves.
 What Happens When Not Inferred
  - The pursuit of truth becomes a matter of personal preference.
@@ -142,6 +151,7 @@ Observations (non-exhaustive)
 The Inference (and why)
  - Falsehood is defined by contradiction, not by feelings or intuition.
      - Because reality is consistent, a claim that is untrue (which would be inconsistent with reality) will inevitably clash with a known fact.
+     - This means that falsehood corresponds with irrationality, not incomprehensibility.
  - This contradiction - the clashing of a claim with a fact - is the objective marker of falsehood, regardless of how plausible the false claim may feel.
 What Happens When Not Inferred
  - Identifying falsehood becomes impossible.
