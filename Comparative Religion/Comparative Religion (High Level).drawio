@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3" pages="25">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3" pages="26">
   <diagram name="Introduction" id="OcMc1TD89lyCnE7k4u9A">
     <mxGraphModel dx="2066" dy="1202" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
@@ -96,7 +96,7 @@
             <mxGeometry x="305" y="435" width="240" height="35" as="geometry" />
           </mxCell>
         </UserObject>
-        <UserObject label="&lt;span&gt;&lt;b&gt;7. Non-Fundamental Comparison:&lt;br&gt;Bible vs. Quran&lt;/b&gt;&lt;/span&gt;" link="data:page/id,XbJ0z0nIzhYvPX_4MN__" id="89URO06o1gQXvmFxeE-S-3">
+        <UserObject label="&lt;span&gt;&lt;b&gt;7. Non-Fundamental Comparison:&lt;br&gt;Bible vs. Quran&lt;/b&gt;&lt;/span&gt;" link="data:page/id,7nG7OUVYZ8CD-lsfqKBI" id="89URO06o1gQXvmFxeE-S-3">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;comic=0;strokeColor=#996185;fontSize=11;fillColor=#E6D0DE;gradientColor=#D5739D;arcSize=50;treeMoving=1;treeFolding=0;strokeWidth=0.5;" parent="ly8JA6_uQbLAdn4xGy72-1" vertex="1" collapsed="1">
             <mxGeometry x="305" y="500" width="240" height="35" as="geometry" />
           </mxCell>
@@ -3147,21 +3147,381 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="7. Non-Fundamental Comparison (1/6)" id="XbJ0z0nIzhYvPX_4MN__">
-    <mxGraphModel dx="914" dy="-8881" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+  <diagram name="7. Non-Fundamental Comparison (1/7)" id="7nG7OUVYZ8CD-lsfqKBI">
+    <mxGraphModel dx="1295" dy="-8533" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="zuZuHAAaARETqynN6Csq-0" />
+        <mxCell id="zuZuHAAaARETqynN6Csq-1" parent="zuZuHAAaARETqynN6Csq-0" />
+        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (1/7)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="zuZuHAAaARETqynN6Csq-2">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" vertex="1" parent="zuZuHAAaARETqynN6Csq-1">
+            <mxGeometry x="20" y="9920" width="810" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" link="data:page/id,XbJ0z0nIzhYvPX_4MN__" id="zuZuHAAaARETqynN6Csq-21">
+          <mxCell style="group" vertex="1" connectable="0" parent="zuZuHAAaARETqynN6Csq-1">
+            <mxGeometry x="780" y="9920" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="zuZuHAAaARETqynN6Csq-22" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#E6E6E6;gradientColor=none;strokeColor=none;rotation=-180;opacity=1;" vertex="1" parent="zuZuHAAaARETqynN6Csq-21">
+          <mxGeometry y="3.552713678800501e-15" width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" id="zuZuHAAaARETqynN6Csq-23">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="zuZuHAAaARETqynN6Csq-21">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint y="25.000000000000004" as="sourcePoint" />
+              <mxPoint x="40" y="25.000000000000004" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="zuZuHAAaARETqynN6Csq-4" value="&lt;b&gt;&lt;font&gt;1. What are the apparent similarities and differences between Islam and Christianity?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#F8CECC;gradientColor=#EA6B66;strokeColor=#B85450;" vertex="1" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="20" y="9985" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-0" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="20" y="10030" width="75" height="425" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-0">
+          <mxGeometry width="75" height="425" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;God&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-1">
+          <mxGeometry width="75" height="425" as="geometry">
+            <mxRectangle width="75" height="425" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-72" value="" style="group" vertex="1" connectable="0" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="95" y="10030" width="735" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-13" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-72">
+          <mxGeometry x="105" width="630" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-13">
+          <mxGeometry width="630" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-16" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Hear, O Israel: The Lord our God, &lt;b&gt;the Lord is one&lt;/b&gt;.&quot; (Deut 6:4)&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&#39;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;The most important one,&#39; answered Jesus, &#39;is this: ‘Hear, O Israel: &lt;b&gt;The Lord our God, the Lord is one&lt;/b&gt;.&#39;&quot; (Mark 12:29-31)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;For &lt;b&gt;there is one God&lt;/b&gt; and one mediator between God and mankind, the man Christ Jesus&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&quot; (1 Timothy 2:5)&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-14">
+          <mxGeometry width="315" height="75" as="geometry">
+            <mxRectangle width="315" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-17" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Your god is one God: There is no god but He&lt;/b&gt;, the All-Merciful, the Ever-Merciful.&quot; (Quran 2:163)&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;b&gt;That is God - your Lord! There is no god&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&amp;nbsp;˹worthy of worship˺ except Him&lt;/b&gt;. ˹He is˺ the Creator of all things, &lt;b&gt;so worship Him ˹alone˺&lt;/b&gt;. And He is the Maintainer of everything.&quot; (Quran 6:102)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;Say: &lt;b&gt;He is God, the One!&lt;/b&gt; God - the Sustainer&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;˹needed by all˺.&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;He neither begot any nor was He begotten,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;and there is none comparable unto Him&lt;/b&gt;.&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&quot; (Quran 112)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-14">
+          <mxGeometry x="315" width="315" height="75" as="geometry">
+            <mxRectangle width="315" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-68" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-13">
+          <mxGeometry y="75" width="630" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-69" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- God is Triune: One divine essence, Three Persons (Father, Son, Holy Spirit).&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-68">
+          <mxGeometry width="315" height="25" as="geometry">
+            <mxRectangle width="315" height="25" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-70" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- God&#39;s oneness is unitary and non-partitioned.&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-68">
+          <mxGeometry x="315" width="315" height="25" as="geometry">
+            <mxRectangle width="315" height="25" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-65" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-72">
+          <mxGeometry width="105" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-66" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-65">
+          <mxGeometry width="105" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-67" value="&lt;b style=&quot;font-size: 11px;&quot;&gt;God is One.&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-66">
+          <mxGeometry width="105" height="100" as="geometry">
+            <mxRectangle width="105" height="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-85" value="" style="group" vertex="1" connectable="0" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="95" y="10130" width="735" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-74" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-85">
+          <mxGeometry x="105" width="630" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-75" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-74">
+          <mxGeometry width="630" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-76" value="&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;H&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;e passed in front of Moses, proclaiming, “&lt;b&gt;The Lord, the Lord, the compassionate and gracious God, slow to anger, abounding in love and faithfulness, maintaining love to thousands, and forgiving wickedness, rebellion and sin&lt;/b&gt;...&quot; (Exodus 34:6-7)&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;The Lord is merciful and gracious, slow to anger, and plenteous in mercy&lt;/b&gt;.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;He will not always chide: neither will he keep his anger for ever.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;He hath not dealt with us after our sins; nor rewarded us according to our iniquities.&quot; (Psalm 103:8-10)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Whoever does not love does not know God, because &lt;b&gt;God is love&lt;/b&gt;. This is how God showed his love among us: He sent his one and only Son into the world that we might live through him. This is love: not that we loved God, but that &lt;b&gt;he loved us and sent his Son as an atoning sacrifice for our sins&lt;/b&gt;.&quot; (1 John 4:8-10)&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;But &lt;b&gt;because of his great love for us, God, who is rich in mercy, made us alive with Christ even when we were dead in transgression&lt;/b&gt;s—it is by grace you have been saved.&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&quot; (&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Ephesians 2:4-5&lt;/span&gt;&lt;font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;)&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-75">
+          <mxGeometry width="315" height="130" as="geometry">
+            <mxRectangle width="315" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-77" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;In the name of God, the All-Merciful, the Ever-Merciful&lt;/b&gt;: All praise is for God - Lord of the Worlds, &lt;b&gt;the All-Merciful, the Ever-Merciful&lt;/b&gt;&quot; (Quran 1:1-3)&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;And when those come to you who believe in Our verses, say, &#39;Peace be upon you. &lt;b&gt;Your Lord has decreed upon Himself mercy: that any of you who does wrong out of ignorance and then repents after that and corrects himself - indeed, He is Forgiving and Merciful&lt;/b&gt;.&#39;&quot; (Quran 6:54)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Ordain for us what is good in this life and the next. Indeed, we have turned to You ˹in repentance˺.” God replied, “As for My punishment, I afflict with it whom I will.&amp;nbsp;&lt;b&gt;But My mercy encompasses everything. I will ordain mercy for those who shun evil, practice regular charity, and believe in Our signs&lt;/b&gt;.&quot; (Quran 7:156)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;Say: &#39;O my Servants who have transgressed against their souls! &lt;b&gt;Despair not of the Mercy of God: for God forgives all sins: for, He is Oft-Forgiving, Ever-Merciful&lt;/b&gt;.&quot;&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;(Quran 39:53)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-75">
+          <mxGeometry x="315" width="315" height="130" as="geometry">
+            <mxRectangle width="315" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-78" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-74">
+          <mxGeometry y="130" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-79" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- God&#39;s love is His very nature, climaxing in the atonement.&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-78">
+          <mxGeometry width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-80" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- God inscribed mercy upon his nature (note that &quot;mercy&quot; in Arabic is a form of one-sided love - the stronger two-sided love is reserved for those who love God).&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-78">
+          <mxGeometry x="315" width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-81" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-85">
+          <mxGeometry width="105" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-82" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-81">
+          <mxGeometry width="105" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-83" value="&lt;b style=&quot;font-size: 11px;&quot;&gt;God is merciful, loving, and forgiving.&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-82">
+          <mxGeometry width="105" height="160" as="geometry">
+            <mxRectangle width="105" height="160" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-97" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="20" y="10455" width="75" height="355" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-98" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-97">
+          <mxGeometry width="75" height="355" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-99" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Morality&lt;br&gt;&amp;amp; Salvation&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-98">
+          <mxGeometry width="75" height="355" as="geometry">
+            <mxRectangle width="75" height="355" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-100" value="" style="group" vertex="1" connectable="0" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="95" y="10290" width="735" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-87" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-100">
+          <mxGeometry x="105" width="630" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-88" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-87">
+          <mxGeometry width="630" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-89" value="&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;But because of your stubbornness and your unrepentant heart, you are storing up wrath against yourself for the day of God’s wrath, when his righteous judgment will be revealed. &lt;b&gt;God &#39;will repay each person according to what they have done.&#39;&lt;/b&gt; To those who by persistence in doing good seek glory, honor and immortality, he will give eternal life. But for those who are self-seeking and who reject the truth and follow evil, there will be wrath and anger.&quot; (Romans 2:5-8)&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;For we must all appear before the judgment seat of Christ, so that &lt;/span&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;each of us may receive what is due us for the things done while in the body, whether good or bad&lt;/b&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;.&quot; (2 Corinthians 5:10)&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;.... The dead were judged according to what they had done as recorded in the books. The sea gave up the dead that were in it, and death and Hades gave up the dead that were in them, and &lt;b&gt;each person was judged according to what they had done&lt;/b&gt;.&quot; (&lt;/span&gt;&lt;/font&gt;&lt;font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Revelation 20:11-15)&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-88">
+          <mxGeometry width="315" height="135" as="geometry">
+            <mxRectangle width="315" height="135" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-90" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;Surely, God does not wrong (anyone), even to the measure of a particle&lt;/b&gt;. If it is a good deed, He multiplies it, and gives a great reward out of His Own pleasure.&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&quot; (Quran 4:40)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;We set up the scales of justice for the Day of Judgment, so no soul will be wronged in the least. &lt;b&gt;And ˹even˺ if a deed is the weight of a mustard seed, We will bring it forth.&lt;/b&gt; And sufficient are We as a ˹vigilant˺ Reckoner.&quot; (Quran 21:47)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;On that Day people will proceed in separate groups to be shown ˹the consequences of˺ their deeds.&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;So, whoever does any good act (even) to the weight of a particle will see it.&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&lt;b&gt;And whoever does evil (even) to the weight of a particle will see it&lt;/b&gt;.&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&quot;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;(Quran 99:7-8)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-88">
+          <mxGeometry x="315" width="315" height="135" as="geometry">
+            <mxRectangle width="315" height="135" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-91" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-87">
+          <mxGeometry y="135" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-92" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- God&#39;s justice and mercy are reconciled through Christ&#39;s vicarious substitution.&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-91">
+          <mxGeometry width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-93" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- God&#39;s justice is expressed without vicarious substitution.&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-91">
+          <mxGeometry x="315" width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-94" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-100">
+          <mxGeometry width="105" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-95" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-94">
+          <mxGeometry width="105" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-96" value="&lt;b style=&quot;font-size: 11px;&quot;&gt;God is perfectly just and will judge.&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-95">
+          <mxGeometry width="105" height="165" as="geometry">
+            <mxRectangle width="105" height="165" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-113" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="20" y="10810" width="75" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-114" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-113">
+          <mxGeometry width="75" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-115" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Jesus&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-114">
+          <mxGeometry width="75" height="175" as="geometry">
+            <mxRectangle width="75" height="175" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-11" value="" style="group" vertex="1" connectable="0" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="95" y="10810" width="735" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-11">
+          <mxGeometry x="105" width="630" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-2" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-1">
+          <mxGeometry width="630" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-3" value="&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Simon Peter answered, “&lt;b&gt;You are the Messiah&lt;/b&gt;, the Son of the living God.&quot; (Matthew 16:16)&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Moreover, demons came out of many people, shouting, &#39;You are the Son of God!&#39; But he rebuked them and would not allow them to speak, because &lt;b&gt;they knew he was the Messiah&lt;/b&gt;.&quot; (Luke 4:41)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;But these are written that you may believe that &lt;b&gt;Jesus is the Messiah, the Son of God&lt;/b&gt;, and that by believing you may have life in his name.&quot; (&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;John 20:31)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;He is dressed in a robe dipped in blood, and &lt;b&gt;his name is the Word of God&lt;/b&gt;.&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&quot; (Revelation 19:13)&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-2">
+          <mxGeometry width="315" height="145" as="geometry">
+            <mxRectangle width="315" height="145" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-4" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;˹Remember˺ when the angels proclaimed, “O Mary! &lt;b&gt;God gives you good news of a Word from Him, his name will be the Messiah, Jesus, son of Mary&lt;/b&gt;; honoured in this world and the Hereafter, and he will be one of those nearest ˹to God˺.&quot; (Quran 3:45)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;O People of the Book! Do not go to extremes regarding your faith; say nothing about God except the truth. &lt;b&gt;The Messiah, Jesus, son of Mary, was no more than a messenger of God and the fulfilment of His Word through Mary and a spirit ˹created by a command˺ from Him&lt;/b&gt;. So believe in God and His messengers and do not say, “Three.” Stop!—for your own good. God is only One God. Glory be to Him! He is far above having a son! To Him belongs whatever is in the heavens and whatever is on the earth. And God is sufficient as a Trustee of Affairs.&quot; (Quran 4:171)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;The Messiah, son of Mary, was no more than a messenger.&lt;/b&gt; ˹Many˺ messengers had ˹come and˺ gone before him. His mother was a woman of truth. They both ate food. See how We make the signs clear to them, yet see how they are deluded ˹from the truth˺!&quot;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;(Quran 5:75)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-2">
+          <mxGeometry x="315" width="315" height="145" as="geometry">
+            <mxRectangle width="315" height="145" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-5" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-1">
+          <mxGeometry y="145" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-6" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- Jesus is the divine Son of God, the Person of the Son.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- Jesus turned water into wine&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;(among other miracles)&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;.&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-5">
+          <mxGeometry width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-7" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Jesus is one of God&#39;s Messengers, who have all preached the Gospel&#39;s message.&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Jesus spoke at childbirth and turned clay birds into life&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;(among other miracles)&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;.&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-5">
+          <mxGeometry x="315" width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-8" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-11">
+          <mxGeometry width="105" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-9" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-8">
+          <mxGeometry width="105" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-10" value="&lt;b style=&quot;font-size: 11px;&quot;&gt;Jesus was born of the virgin Mary, performed miracles, is the Word of God, and is the Messiah.&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-9">
+          <mxGeometry width="105" height="175" as="geometry">
+            <mxRectangle width="105" height="175" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-23" value="" style="group" vertex="1" connectable="0" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="95" y="10605" width="735" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-13" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-23">
+          <mxGeometry x="105" width="630" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-13">
+          <mxGeometry width="630" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-15" value="&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;... &lt;b&gt;F&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;or all have sinned and fall short of the glory of God&lt;/b&gt;, and all are justified freely by his grace through the redemption that came by Christ Jesus.&quot; (Romans 3:23-24)&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;If we claim to be without sin, we deceive ourselves and the truth is not in us.&amp;nbsp;&lt;b&gt;If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness&lt;/b&gt;.&lt;/span&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&quot; (&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;1 John 1:8-9)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-14">
+          <mxGeometry width="315" height="70" as="geometry">
+            <mxRectangle width="315" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-16" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;...&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;and those who, when they happen to commit a shameful act or wrong themselves, remember God, then, seek forgiveness for their sins-&lt;b&gt;and who is there to forgive sins except God?&lt;/b&gt;-and do not persist in what they have done, knowingly.&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&quot; (Quran 3:135)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Say: &#39;O my Servants who have transgressed against their souls! Despair not of the Mercy of Allah: &lt;b&gt;for Allah forgives all sins&lt;/b&gt;: for He is Oft-Forgiving, Ever-Merciful.&#39;&quot;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;(Quran 39:53)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-14">
+          <mxGeometry x="315" width="315" height="70" as="geometry">
+            <mxRectangle width="315" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-17" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-13">
+          <mxGeometry y="70" width="630" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-18" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- The mechanism for God&#39;s forgiveness is linked to Christ&#39;s atonement.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-17">
+          <mxGeometry width="315" height="25" as="geometry">
+            <mxRectangle width="315" height="25" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-19" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- The mechanism for God&#39;s forgiveness is grounded as a direct interaction with God.&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-17">
+          <mxGeometry x="315" width="315" height="25" as="geometry">
+            <mxRectangle width="315" height="25" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-20" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-23">
+          <mxGeometry width="105" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-21" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-20">
+          <mxGeometry width="105" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-22" value="&lt;b style=&quot;font-size: 11px;&quot;&gt;Humans sin, need repentance, and need God&#39;s forgiveness.&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-21">
+          <mxGeometry width="105" height="95" as="geometry">
+            <mxRectangle width="105" height="95" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-24" value="" style="group" vertex="1" connectable="0" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="95" y="10700" width="735" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-25" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-24">
+          <mxGeometry x="105" width="630" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-26" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-25">
+          <mxGeometry width="630" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-27" value="&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Therefore &lt;b&gt;no one will be declared righteous in God’s sight by the works of the law&lt;/b&gt;; rather, through the law we become conscious of our sin.&quot; (Romans 3:20)&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;For &lt;b&gt;it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God—not by works&lt;/b&gt;, so that no one can boast.&quot; (&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Ephesians 2:8-10)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-26">
+          <mxGeometry width="315" height="80" as="geometry">
+            <mxRectangle width="315" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-28" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- On Aisha, who reported that God&#39;s Messenger used to say:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;Observe moderation (in doing deeds), and if you fail to observe it perfectly, try to do as much as you can do (to live up to this ideal of moderation) and &lt;b&gt;be happy for none would be able to get into Paradise because of his deeds alone&lt;/b&gt;. They (the Companions of the Holy Prophet) said: God&#39;s Messenger, not even you? Thereupon he said: Not even I, but that &lt;b&gt;God wraps me in His Mercy, and bear this in mind that the deed loved most by God is one which is done constantly even though it is small&lt;/b&gt;.&quot; (Sahih Muslim 2818a)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-26">
+          <mxGeometry x="315" width="315" height="80" as="geometry">
+            <mxRectangle width="315" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-29" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-25">
+          <mxGeometry y="80" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-30" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- Salvation is fundamentally grace through faith, where works are only its fruit/&lt;br&gt;evidence.&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-29">
+          <mxGeometry width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-31" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Salvation is fundamentally by God&#39;s mercy, which manifests through God&#39;s love of righteousness and weighing of our deeds&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;.&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-29">
+          <mxGeometry x="315" width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-32" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-24">
+          <mxGeometry width="105" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-33" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-32">
+          <mxGeometry width="105" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="I55OHFyqlXbNXwQoPFCH-34" value="&lt;b style=&quot;font-size: 11px;&quot;&gt;God merits righteousness, but no one &quot;earns&quot; Paradise/Heaven by human merit alone.&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="I55OHFyqlXbNXwQoPFCH-33">
+          <mxGeometry width="105" height="110" as="geometry">
+            <mxRectangle width="105" height="110" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-102" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="200" y="10455" width="630" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-103" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-102">
+          <mxGeometry width="630" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-104" value="&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;The one who sins is the one who will die. The child will not share the guilt of the parent, nor will the parent share the guilt of the child. &lt;/span&gt;&lt;b style=&quot;font-size: 8px;&quot;&gt;The righteousness of the righteous will be credited to them, and the wickedness of the wicked will be charged against them&lt;/b&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;.&quot; (Ezekiel 18:20)&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;For we will all stand before God’s judgment seat. It is written:&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&#39;As surely as I live, [says the Lord],&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;every knee will bow before me;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;every tongue will acknowledge God.&#39;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;So then, &lt;b&gt;each of us will give an account of ourselves to God&lt;/b&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&quot; (Romans 14:10-12)&lt;/span&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;When tempted, no one should say, &#39;God is tempting me.&#39; For God cannot be tempted by evil, nor does he tempt anyone; but &lt;b&gt;each person is tempted when they are dragged away by their own evil desire and enticed&lt;/b&gt;.&lt;/span&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&quot; (&lt;/span&gt;&lt;/font&gt;&lt;font style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;James 1:13-14)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-103">
+          <mxGeometry width="315" height="120" as="geometry">
+            <mxRectangle width="315" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-105" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;God does not charge a soul except [with that within] its capacity. I&lt;b&gt;t will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned&lt;/b&gt;.&lt;/span&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&quot; (Quran 2:286)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 8px;&quot;&gt;For him [i.e., each one] are successive [angels] before and behind him who protect him by the decree of God. Indeed, &lt;b&gt;God will not change the condition of a people until they change what is in themselves.&lt;/b&gt; And when God intends for a people ill, there is no repelling it. And there is not for them besides Him any patron.&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&quot; (Quran 13:11)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- &quot;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Whoever chooses to be guided, it is only for their own good. And whoever chooses to stray, it is only to their own loss.&lt;/b&gt; No soul burdened with sin will bear the burden of another. And We would never punish ˹a people˺ until We have sent a messenger ˹to warn them˺.&quot;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;(Quran 17:15)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-103">
+          <mxGeometry x="315" width="315" height="120" as="geometry">
+            <mxRectangle width="315" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-106" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-102">
+          <mxGeometry y="120" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-107" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-size: 8px;&quot;&gt;&amp;nbsp;- Salvation is achieved through Jesus&#39; atonement, not by our own righteousness - by God&#39;s grace.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-106">
+          <mxGeometry width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-108" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;&amp;nbsp;- Salvation is achieved by personal righteousness, made possible by God&#39;s mercy - by God&#39;s grace.&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;align=left;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-106">
+          <mxGeometry x="315" width="315" height="30" as="geometry">
+            <mxRectangle width="315" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-109" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" vertex="1" parent="zuZuHAAaARETqynN6Csq-1">
+          <mxGeometry x="95" y="10455" width="105" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-110" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-109">
+          <mxGeometry width="105" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="S8Pw8Tw3iUAq8b6uVJTt-111" value="&lt;b style=&quot;font-size: 11px;&quot;&gt;Humans are morally responsible agents.&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#E6E6E6;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=none;gradientDirection=east;" vertex="1" parent="S8Pw8Tw3iUAq8b6uVJTt-110">
+          <mxGeometry width="105" height="150" as="geometry">
+            <mxRectangle width="105" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="7. Non-Fundamental Comparison (2/7)" id="XbJ0z0nIzhYvPX_4MN__">
+    <mxGraphModel dx="914" dy="-8935" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="0ffwS5z20CiL1abtpJwu-0" />
         <mxCell id="0ffwS5z20CiL1abtpJwu-1" parent="0ffwS5z20CiL1abtpJwu-0" />
-        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (1/6)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="0ffwS5z20CiL1abtpJwu-2">
+        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (2/7)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="0ffwS5z20CiL1abtpJwu-2">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1">
             <mxGeometry x="20" y="9920" width="810" height="50" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="hrkE1YlLufl5ihLmMU30-3" value="" style="group" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1" connectable="0">
           <mxGeometry x="20" y="9985" width="810.0000000000001" height="560" as="geometry" />
-        </mxCell>
-        <mxCell id="X1ds6PABbdby7qqjh38H-14" value="&lt;b&gt;&lt;font&gt;1. What is the relationship between God&#39;s mercy/love, justice, and forgiveness (soteriology)?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#F8CECC;gradientColor=#EA6B66;strokeColor=#B85450;" parent="hrkE1YlLufl5ihLmMU30-3" vertex="1">
-          <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
         <mxCell id="fdP4uL2IWqcHji0CoqKW-13" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="hrkE1YlLufl5ihLmMU30-3" vertex="1">
           <mxGeometry y="45" width="810" height="515" as="geometry" />
@@ -3192,11 +3552,11 @@
             <mxRectangle width="405" height="275" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="GFbXLaLzuziWuIplYJXH-9" value="&lt;b&gt;2. What is the relationship between God&#39;s mercy/love, justice, and forgiveness (soteriology)?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFDEC9;gradientColor=#FFB663;strokeColor=#D69555;" vertex="1" parent="hrkE1YlLufl5ihLmMU30-3">
+          <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
         <mxCell id="O9XxhuduouKi74YElKZB-1" value="" style="group" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1" connectable="0">
           <mxGeometry x="20" y="10560" width="810.0000000000001" height="420" as="geometry" />
-        </mxCell>
-        <mxCell id="Lf1yWK0Lw0H-mV7IPuVQ-0" value="&lt;b&gt;&lt;font&gt;2. What is the source of the fundamental, theological difference in soteriology?&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFDEC9;gradientColor=#FFB663;strokeColor=#D69555;" parent="O9XxhuduouKi74YElKZB-1" vertex="1">
-          <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
         <mxCell id="jy06Roj5z7HLByKl-m8C-0" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="O9XxhuduouKi74YElKZB-1" vertex="1">
           <mxGeometry y="45" width="810" height="375" as="geometry" />
@@ -3227,6 +3587,9 @@
             <mxRectangle width="405" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="XDnQNUXUmKr4uib3tcu8-0" value="&lt;b&gt;3. What is the source of the fundamental, theological difference in soteriology?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFF2CC;gradientColor=#FFD966;strokeColor=#D6B656;" vertex="1" parent="O9XxhuduouKi74YElKZB-1">
+          <mxGeometry width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
         <UserObject label="" link="data:page/id,koprSnZA8Zx8r47souDI" id="BxZ52QN7PtRdhBBjAFhB-0">
           <mxCell style="group" parent="0ffwS5z20CiL1abtpJwu-1" vertex="1" connectable="0">
             <mxGeometry x="780" y="9920" width="50" height="50" as="geometry" />
@@ -3243,22 +3606,35 @@
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <UserObject label="" link="data:page/id,7nG7OUVYZ8CD-lsfqKBI" id="xpxPvFw1KCywsOg1OESM-0">
+          <mxCell style="group;rotation=-180;" vertex="1" connectable="0" parent="0ffwS5z20CiL1abtpJwu-1">
+            <mxGeometry x="20.000000000000007" y="9920" width="50" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="xpxPvFw1KCywsOg1OESM-1" value="" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#E6E6E6;gradientColor=none;strokeColor=none;rotation=-360;opacity=1;" vertex="1" parent="xpxPvFw1KCywsOg1OESM-0">
+          <mxGeometry width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="" id="xpxPvFw1KCywsOg1OESM-2">
+          <mxCell style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#B3B3B3;" edge="1" parent="xpxPvFw1KCywsOg1OESM-0">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="25" as="sourcePoint" />
+              <mxPoint x="10" y="25" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="7. Non-Fundamental Comparison (2/6)" id="koprSnZA8Zx8r47souDI">
-    <mxGraphModel dx="731" dy="-9085" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+  <diagram name="7. Non-Fundamental Comparison (3/7)" id="koprSnZA8Zx8r47souDI">
+    <mxGraphModel dx="1016" dy="-9080" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="sYscbi_ctIr7rLCjfTU3-0" />
         <mxCell id="sYscbi_ctIr7rLCjfTU3-1" parent="sYscbi_ctIr7rLCjfTU3-0" />
-        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (2/6)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="sYscbi_ctIr7rLCjfTU3-2">
+        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (3/7)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="sYscbi_ctIr7rLCjfTU3-2">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" parent="sYscbi_ctIr7rLCjfTU3-1" vertex="1">
             <mxGeometry x="20" y="9920" width="810" height="50" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="sYscbi_ctIr7rLCjfTU3-5" value="&lt;b&gt;3. Which salvific narrative better fits reality?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFF2CC;gradientColor=#FFD966;strokeColor=#D6B656;" parent="sYscbi_ctIr7rLCjfTU3-1" vertex="1">
-          <mxGeometry x="20" y="9985" width="810.0000000000001" height="44.9999999999999" as="geometry" />
-        </mxCell>
         <mxCell id="KHh0-gxxOiwRamkPE_v--0" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="sYscbi_ctIr7rLCjfTU3-1" vertex="1">
           <mxGeometry x="20" y="10030" width="810" height="220" as="geometry" />
         </mxCell>
@@ -3496,22 +3872,22 @@
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="wqzDi3H2TwTPRZB3JOWi-0" value="&lt;b&gt;4. Which salvific narrative better fits reality?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#D5E8D4;gradientColor=#97D077;strokeColor=#82B366;" vertex="1" parent="sYscbi_ctIr7rLCjfTU3-1">
+          <mxGeometry x="20" y="9985" width="810" height="45" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="7. Non-Fundamental Comparison (3/6)" id="Ly_KY-rEEE6EdX8WcNej">
-    <mxGraphModel dx="562" dy="-9269" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+  <diagram name="7. Non-Fundamental Comparison (4/7)" id="Ly_KY-rEEE6EdX8WcNej">
+    <mxGraphModel dx="1693" dy="-8533" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="7JXjeWlxQTD8vJp8OddA-0" />
         <mxCell id="7JXjeWlxQTD8vJp8OddA-1" parent="7JXjeWlxQTD8vJp8OddA-0" />
-        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (3/6)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="7JXjeWlxQTD8vJp8OddA-2">
+        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (4/7)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="7JXjeWlxQTD8vJp8OddA-2">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" parent="7JXjeWlxQTD8vJp8OddA-1" vertex="1">
             <mxGeometry x="20" y="9920" width="810" height="50" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="7JXjeWlxQTD8vJp8OddA-3" value="&lt;b&gt;3. Which salvific narrative better fits reality? (continued)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FFF2CC;gradientColor=#FFD966;strokeColor=#D6B656;" parent="7JXjeWlxQTD8vJp8OddA-1" vertex="1">
-          <mxGeometry x="20" y="9985" width="810.0000000000001" height="44.9999999999999" as="geometry" />
-        </mxCell>
         <mxCell id="uVht4GMKU5NwHKT9WBcc-0" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="7JXjeWlxQTD8vJp8OddA-1" vertex="1">
           <mxGeometry x="20" y="10030" width="810" height="330" as="geometry" />
         </mxCell>
@@ -3810,15 +4186,18 @@
             <mxRectangle width="160" height="430" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="RdZeSiheyACBelOjpGTK-0" value="&lt;b&gt;4. Which salvific narrative better fits reality? (continued)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#D5E8D4;gradientColor=#97D077;strokeColor=#82B366;" vertex="1" parent="7JXjeWlxQTD8vJp8OddA-1">
+          <mxGeometry x="20" y="9985" width="810" height="45" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="7. Non-Fundamental Comparison (4/6)" id="PLmkqsxnITHKim_g8YDk">
-    <mxGraphModel dx="521" dy="-9479" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+  <diagram name="7. Non-Fundamental Comparison (5/7)" id="PLmkqsxnITHKim_g8YDk">
+    <mxGraphModel dx="1355" dy="-8807" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="r1CXoWlgnHUmqX046EKh-0" />
         <mxCell id="r1CXoWlgnHUmqX046EKh-1" parent="r1CXoWlgnHUmqX046EKh-0" />
-        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (4/6)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="r1CXoWlgnHUmqX046EKh-2">
+        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (5/7)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="r1CXoWlgnHUmqX046EKh-2">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" parent="r1CXoWlgnHUmqX046EKh-1" vertex="1">
             <mxGeometry x="20" y="9920" width="810" height="50" as="geometry" />
           </mxCell>
@@ -4010,12 +4389,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="7. Non-Fundamental Comparison (5/6)" id="LI2GFc-XkK0uQYIzuWbe">
-    <mxGraphModel dx="818" dy="-9037" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+  <diagram name="7. Non-Fundamental Comparison (6/7)" id="LI2GFc-XkK0uQYIzuWbe">
+    <mxGraphModel dx="883" dy="-9187" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="s9g_Rb6IgTgleTRQmnDC-0" />
         <mxCell id="s9g_Rb6IgTgleTRQmnDC-1" parent="s9g_Rb6IgTgleTRQmnDC-0" />
-        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (5/6)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="s9g_Rb6IgTgleTRQmnDC-2">
+        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (6/7)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="s9g_Rb6IgTgleTRQmnDC-2">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" parent="s9g_Rb6IgTgleTRQmnDC-1" vertex="1">
             <mxGeometry x="20" y="9920" width="810" height="50" as="geometry" />
           </mxCell>
@@ -4052,9 +4431,6 @@
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <mxCell id="dyAkvh6oCZAIHyciMj3W-0" value="&lt;b&gt;&lt;font&gt;4. Which salvific narrative looks more like a corrupted version of the truth? (continued)&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#D5E8D4;gradientColor=#97D077;strokeColor=#82B366;" parent="s9g_Rb6IgTgleTRQmnDC-1" vertex="1">
-          <mxGeometry x="20" y="9985" width="810" height="45" as="geometry" />
-        </mxCell>
         <mxCell id="dyAkvh6oCZAIHyciMj3W-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="s9g_Rb6IgTgleTRQmnDC-1" vertex="1">
           <mxGeometry x="20" y="10030" width="75" height="785" as="geometry" />
         </mxCell>
@@ -4164,7 +4540,7 @@
         <mxCell id="j6Lz0SjBER47GQh4H0wA-6" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;swimlaneFillColor=none;" vertex="1" parent="j6Lz0SjBER47GQh4H0wA-5">
           <mxGeometry width="810" height="145" as="geometry" />
         </mxCell>
-        <mxCell id="j6Lz0SjBER47GQh4H0wA-8" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Christianity looks more like a corrupted version of Islam, while Islam looks more like a corrected version of Christianity&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Both religions affirm that God is One, ultimately loving, perfectly just and merciful, that He values and merits righteousness, and that He alone permits everything - including both our own wills and Satan’s influence. However, they manifest these same truths in very different ways, leading to fundamentally significant differences. As a result, this question does not deny the existence of any of these attributes on either side, but rather explores the nuances in how they manifest - allowing us to identify which drift (from one to the other) more closely matches with how a deceiver would act (assuming one side is fully True).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;If we assume Christianity is the original truth, then Islam&#39;s differences look like a drift that &lt;i&gt;sharpens&lt;/i&gt; God&#39;s oneness and rationality, &lt;i&gt;magnifies&lt;/i&gt; mercy and accountability, and &lt;i&gt;diminishes&lt;/i&gt; the emphasis on Satan&#39;s power. Likewise, if we assume Islam is the original truth, then Christianity&#39;s differences look like a drift that &lt;i&gt;increases&lt;/i&gt; God&#39;s expectations, &lt;i&gt;emphasizes&lt;/i&gt; Satan&#39;s power, &lt;i&gt;reduces&lt;/i&gt; God&#39;s oneness and original mercy, and &lt;i&gt;diminishes&lt;/i&gt; the salvific function of our good deeds, our spiritual status, and rationality. Neither one sacrifices God&#39;s justice, grace, and the reality of the law - merely redirecting how they manifest, as they are entirely coherent (within their own narratives).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;From this comparison, it is clear that a deceiver would align more with corrupting Islam into Christianity. In line with previous sections&#39; conclusions, Islam presents a more consistent divine system: God&#39;s transcendence is greater (without sacrificing intimate closeness), rationality is sharper (without denying mystery or our limits), God&#39;s mercy is immediate (as Christianity delays the application of Jesus&#39; atonement with Adam&#39;s sin), and righteousness and repentance are valued over sin (without removing our accountability or sin&#39;s ability to condemn). Even our status is more honored in Islam, with Adam being forgiven from his sin and us being born pure (rather than being punished and entering into a fallen state - &lt;i&gt;like Satan did&lt;/i&gt;).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;So, if a deceiver wants to misguide from the truth as much as possible, then reducing God&#39;s transcendence, mercy, and rationality, lowering our status, elevating Satan&#39;s emphasis, and redirecting our faith and hope in a way that God did not authorize all align with the transition from Islam to Christianity (making Islam look like Christianity&#39;s correction).&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=#CCE5FF;gradientDirection=east;align=center;" vertex="1" parent="j6Lz0SjBER47GQh4H0wA-6">
+        <mxCell id="j6Lz0SjBER47GQh4H0wA-8" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Christianity looks more like a corrupted version of Islam, while Islam looks more like a corrected version of Christianity&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;Both religions affirm that God is One, ultimately loving, perfectly just and merciful, that He values and merits righteousness, and that He alone permits everything - including both our own wills and Satan’s influence. However, they manifest these same truths in very different ways, leading to fundamentally significant differences. As a result, this question does not deny the existence of any of these attributes on either side, but rather explores the nuances in how they manifest - allowing us to identify which drift (from one to the other) more closely matches with how a deceiver would act (assuming one side is fully True).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;If we assume Christianity is the original truth, then Islam&#39;s differences look like a drift that &lt;i&gt;sharpens&lt;/i&gt; God&#39;s oneness and rationality, &lt;i&gt;magnifies&lt;/i&gt; mercy and accountability, and &lt;i&gt;diminishes&lt;/i&gt; the emphasis on Satan&#39;s power. Likewise, if we assume Islam is the original truth, then Christianity&#39;s differences look like a drift that &lt;i&gt;increases&lt;/i&gt; God&#39;s expectations, &lt;i&gt;emphasizes&lt;/i&gt; Satan&#39;s power, &lt;i&gt;reduces&lt;/i&gt; God&#39;s oneness and original mercy, and &lt;i&gt;diminishes&lt;/i&gt; the salvific function of our good deeds, our spiritual status, and rationality. Neither one sacrifices God&#39;s justice, grace, and the reality of the law - merely redirecting how they manifest, as they are entirely coherent (within their own narratives).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;From this comparison, it is clear that a deceiver would align more with corrupting Islam into Christianity. In line with previous sections&#39; conclusions, Islam presents a more consistent divine system: God&#39;s transcendence is greater (without sacrificing intimate closeness), rationality is sharper (without denying mystery or our limits), God&#39;s mercy is immediate (as Christianity delays the application of Jesus&#39; atonement with Adam&#39;s sin), and righteousness and repentance are valued over sin (without removing our accountability or sin&#39;s ability to condemn). Even our status is more honored in Islam, with Adam being forgiven from his sin and us being born pure (rather than being punished and entering into a fallen state - &lt;i&gt;like Satan did in both narratives&lt;/i&gt;).&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 2px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;So, if a deceiver wants to misguide from the truth as much as possible, then reducing God&#39;s transcendence, mercy, and rationality, lowering our status, elevating Satan&#39;s emphasis, and redirecting our faith and hope in a way that God did not authorize all align with the transition from Islam to Christianity (making Islam look like Christianity&#39;s correction).&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=middle;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;swimlaneFillColor=none;gradientColor=#CCE5FF;gradientDirection=east;align=center;" vertex="1" parent="j6Lz0SjBER47GQh4H0wA-6">
           <mxGeometry width="810" height="145" as="geometry">
             <mxRectangle width="810" height="145" as="alternateBounds" />
           </mxGeometry>
@@ -4237,25 +4613,22 @@
             <mxRectangle width="285" height="75" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="lMkcfi15N_d6SnLMHFdN-0" value="&lt;b&gt;5. Which salvific narrative looks more like a corrupted version of the truth?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" vertex="1" parent="s9g_Rb6IgTgleTRQmnDC-1">
+          <mxGeometry x="20" y="9985" width="810.0000000000001" height="44.9999999999999" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="7. Non-Fundamental Comparison (6/6)" id="-GhPysCdl3dY6KI0oGBY">
-    <mxGraphModel dx="971" dy="-8875" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
+  <diagram name="7. Non-Fundamental Comparison (7/7)" id="-GhPysCdl3dY6KI0oGBY">
+    <mxGraphModel dx="1270" dy="-8875" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="j_oFuNdxFaeKGMjj7mMN-0" />
         <mxCell id="j_oFuNdxFaeKGMjj7mMN-1" parent="j_oFuNdxFaeKGMjj7mMN-0" />
-        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (6/6) (WIP)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="j_oFuNdxFaeKGMjj7mMN-2">
+        <UserObject label="Non-Fundamental Comparison: Christianity vs. Islam (7/7) (WIP)" link="data:page/id,lkuSvPZcJC7dHRsydWrw" id="j_oFuNdxFaeKGMjj7mMN-2">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=20;" parent="j_oFuNdxFaeKGMjj7mMN-1" vertex="1">
             <mxGeometry x="20" y="9920" width="810" height="50" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="j_oFuNdxFaeKGMjj7mMN-3" value="&lt;b&gt;&lt;font&gt;5.&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;b&gt;How well do the scriptures&#39; objective properties fit their internal claims?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DAE8FC;gradientColor=#7EA6E0;strokeColor=#6C8EBF;" parent="j_oFuNdxFaeKGMjj7mMN-1" vertex="1">
-          <mxGeometry x="20" y="9985" width="810.0000000000001" height="44.9999999999999" as="geometry" />
-        </mxCell>
-        <mxCell id="j_oFuNdxFaeKGMjj7mMN-4" value="&lt;b&gt;&lt;font&gt;6.&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;b&gt;Does anything stand out from the organized religions?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCDBFC;gradientColor=#9393E0;strokeColor=#8381BF;" parent="j_oFuNdxFaeKGMjj7mMN-1" vertex="1">
-          <mxGeometry x="20" y="10460" width="810.0000000000001" height="44.9999999999999" as="geometry" />
-        </mxCell>
         <mxCell id="j_oFuNdxFaeKGMjj7mMN-5" value="&lt;b&gt;&lt;font&gt;7. Conclusion&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#E6D0DE;gradientColor=#D5739D;strokeColor=#996185;" parent="j_oFuNdxFaeKGMjj7mMN-1" vertex="1">
           <mxGeometry x="20" y="10580" width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
@@ -4275,22 +4648,6 @@
             <mxRectangle width="405" height="55" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j_oFuNdxFaeKGMjj7mMN-10" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="j_oFuNdxFaeKGMjj7mMN-1" vertex="1">
-          <mxGeometry x="20" y="10510" width="810" height="55" as="geometry" />
-        </mxCell>
-        <mxCell id="j_oFuNdxFaeKGMjj7mMN-11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="j_oFuNdxFaeKGMjj7mMN-10" vertex="1">
-          <mxGeometry width="810" height="55" as="geometry" />
-        </mxCell>
-        <mxCell id="j_oFuNdxFaeKGMjj7mMN-12" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCFFCC;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;strokeWidth=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="j_oFuNdxFaeKGMjj7mMN-11" vertex="1">
-          <mxGeometry width="405" height="55" as="geometry">
-            <mxRectangle width="405" height="55" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="j_oFuNdxFaeKGMjj7mMN-13" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- &quot;truth is timeless and cultureless&quot; and &quot;Islam is the most diverse religion&quot;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- zamzam miracle&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- largest yearly pilgrimage&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- the name &quot;Islam&quot;&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="j_oFuNdxFaeKGMjj7mMN-11" vertex="1">
-          <mxGeometry x="405" width="405" height="55" as="geometry">
-            <mxRectangle width="405" height="55" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="j_oFuNdxFaeKGMjj7mMN-14" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=1;" parent="j_oFuNdxFaeKGMjj7mMN-1" vertex="1">
           <mxGeometry x="20" y="10040" width="810" height="60" as="geometry" />
         </mxCell>
@@ -4302,7 +4659,7 @@
             <mxRectangle width="405" height="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j_oFuNdxFaeKGMjj7mMN-17" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- &quot;truth is timeless and cultureless&quot; and &quot;Quran is structurued achronologically&quot;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- quran claims to make clear what was obscured in previous scriptures (find verse that explicitly says that previous religions forgot a portion of the book), it is clearer and more comprehensible in the same areas that are otherweise implied or obscure&lt;/font&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="j_oFuNdxFaeKGMjj7mMN-15" vertex="1">
+        <mxCell id="j_oFuNdxFaeKGMjj7mMN-17" value="&lt;span style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=#CCE5FF;top=1;left=1;bottom=1;right=1;pointerEvents=1;fontSize=1;verticalAlign=top;fontColor=#000000;spacing=2;spacingLeft=1;spacingRight=1;spacingBottom=0;spacingTop=-2;" parent="j_oFuNdxFaeKGMjj7mMN-15" vertex="1">
           <mxGeometry x="405" width="405" height="60" as="geometry">
             <mxRectangle width="405" height="60" as="alternateBounds" />
           </mxGeometry>
@@ -4355,6 +4712,45 @@
         </mxCell>
         <mxCell id="0PPxjJeUm7LckkmzR1mT-4" value="christian god being loving isn&#39;t the point - its possible to show love without balancing other attributes" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
           <mxGeometry x="420" y="10925" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-0" value="truth is timeless and cultureless -&amp;gt; quran is structured achronologically and islam is most racially diverse religion" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="440" y="10115" width="315" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-1" value="same message over time&lt;br&gt;vs.&lt;br&gt;progressive message over time" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="495" y="10155" width="195" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-2" value="quran claims to clarify and fix previous corruptions" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="510" y="10215" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-3" value="written during messenger&#39;s life&lt;br&gt;vs.&lt;br&gt;written after messenger&#39;s life" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="480" y="10265" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-4" value="emphasis on reason in quran: same way to discover reality is same way to understand quran" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="435" y="10325" width="275" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-5" value="explicit in text&lt;br&gt;vs.&lt;br&gt;derived from church" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="515" y="10370" width="115" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-6" value="zamzam miracle" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="190" y="10240" width="115" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-7" value="largest yearly pilgrimage" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="175" y="10265" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-8" value="the concept &quot;islam&quot; matches what both narratives advocate for - what religion did jesus say he follows?" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="115" y="10300" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-9" value="jesus isn&#39;t the only gospel deliverer - many were them before him - and he did &quot;islam&quot; " style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="135" y="10340" width="245" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-10" value="both largest 2 global religions (christianity by those who call themselves christian, islam by single largest denomenation)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="55" y="10120" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_HzTZN63LpGycA2yV0qw-13" value="clergical hierarchy vs. no clergical hierarchy" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="155" y="10185" width="155" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3uNOg5ihNBIE8iqRePA-0" value="&lt;b&gt;6.&amp;nbsp;&lt;/b&gt;&lt;b&gt;Does anything else stand out from the scripture and organized religions?&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCDBFC;gradientColor=#9393E0;strokeColor=#8381BF;" vertex="1" parent="j_oFuNdxFaeKGMjj7mMN-1">
+          <mxGeometry x="20" y="9985" width="810.0000000000001" height="44.9999999999999" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
