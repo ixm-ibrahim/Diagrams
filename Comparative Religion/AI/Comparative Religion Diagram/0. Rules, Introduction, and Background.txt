@@ -1,0 +1,34 @@
+Introduction and Background
+ - This project begins with a simple question: How can we distinguish between truth and falsehood?
+ - In a world saturated with belief, bias, and speculation, the pursuit of truth often gets buried beneath inherited assumptions and emotional comfort. I wanted to peel all that away - to start from the ground up, beginning only with what we directly experience and know to be real, and then reason forward using the same logic that governs every other reliable field of inquiry.
+ - The purpose of this work is not to defend a particular side but to identify the truth and defend it instead, removing the barriers that make it inaccessible. The barriers that many discussions about God, scripture, or existence tend to have collapse into two extremes - faith without verification or skepticism without evidence - and both fall short because they bypass and abandon reasoning when it becomes uncomfortable. The aim here is to expose the bridge between belief and reason - that faith, reason, and observation necessarily coexist - showing that truth can be mapped, step by step, through consistent inference.
+ - This project is built on hierarchical logic - a structure where each idea depends on something more fundamental beneath it. Every section begins from observable reality (to identify fundamental, primary truths) and ascends layer by layer toward higher-level claims (using what we know to derive what encompasses them all). Each claim is evaluated by the same standard: does it remain consistent with what we already know to be true? And does it explain more with fewer assumptions than its alternatives?
+ - In other words:
+     - If two claims conflict, then only one can align fully with reality.
+     - If a claim cannot be tested by the same principles that test every other truth, then it cannot be reliably known.
+     - If a claim is known only when using an approach that obscures truth and relies on baseless circularity, then it is indistinguishable from falsehood (unless a stronger approach is used)
+
+
+Structure and Method
+ - The project is built as a logical map rather than a linear argument. Each header functions as a node - a concise statement of conclusion at that level - while the text beneath it provides the reasoning and evidence that led there. Every argument and worldview is first steelmanned - presented in its strongest, most coherent form before critique - so that no belief is dismissed prematurely or unfairly. This ensures that each claim - whether theistic or skeptical - is evaluated on its best possible grounds, and then compared directly against reality.
+     - A reader who only wants the overview can read the headers alone and still understand the logical skeleton of the argument.
+     - A reader who wants to verify can open a section and trace how each conclusion was derived.
+     - A reader who disagrees can immediately see where and why - since every conclusion explicitly depends on what precedes it.
+ - This modular hierarchy allows the work to scale without collapsing into narrative confusion. It also removes the intimidation of dense academic writing by revealing the structure of thought itself - where disagreement can be explicitly and precisely pinpointed rather than argued abstractly.
+
+
+Why this Approach Matters
+ - The modern, secular world often treats "truth" as fundamentally subjective, yet every field that actually works - science, language, mathematics - depends on the opposite: that contradictions cannot both be true, and that claims must correspond to reality. In questions of belief, this standard is often abandoned in favor of comfort, speculation, identity, or habit. But comfort is not evidence, and familiarity is not proof.
+ - This project restores clarity to belief by exposing its structure. Every conviction - religious, secular, or otherwise - rests on something, and that foundation can be traced, examined, and understood. By making reasoning hierarchical and transparent, the framework lets anyone navigate and see exactly what their worldview stands on: where it is grounded in fact, where it relies on inference, and where it rests on faith.
+ - Its goal is not to argue for or against belief, but to make belief visible - to demystify apparent complexity - turning confusion into awareness. In doing so, it offers a common ground for honest thought: a way for anyone, from any background, to see truth and falsehood for what they are, rather than what they feel.
+
+
+Rules of Reasoning (for readers and AI)
+ - In this conversation, prioritize truth-seeking and logical consistency above all. Apply these objective principles automatically in every response:
+    - Inferences are inductive: Derive general rules from specific observations; they hold as valid until clear counterexamples (not mere speculation) invalidate them. Do not treat unproven hypotheses (ex. speculative models in physics or philosophy) as equal to evidence-based inferences.
+    - Favor best-fit explanations: Use abductive reasoning to select hypotheses that explain the most data with the fewest assumptions (Occam's razor). Prioritize comprehensive, parsimonious models over fragmented or ad hoc alternatives. For each favoring decision, provide 2-3 specific, verifiable references or note if it's speculative. Fully steelman rebuttals with inductive examples before resolving.
+    - Avoid fallacies: Reject arguments from ignorance (ex. "possibilities exist because we don't know otherwise") and appeals to authority/mainstream views without valid, relevant evidence. Weigh arguments based on internal coherence (non-contradiction) and external consistency (alignment with empirical observations and verified data).
+    -  No false balance: Do not give equal weight to all claims, emphasizing both true and false claims out of "neutrality". The goal is truth, not comfort nor appeasing others. Favor the truth and expose weaknesses in arguments rigorously, and refine conclusions iteratively based on new evidence or challenges.
+    - Check biases: If a view seems mainstream, verify it against primary evidence, not popularity (ie. the hierarchal approach this project presents: identify the level where disagreements occur and why, then identify which side is stronger from there). Simulate debates by adequately steelmanning both sides, but always resolve based on soundness (ie. arguments rooted in earlier conclusions, not speculation).
+    - Refine iteratively: When challenged, reassess using these principles to converge towards soundness - updating only when new evidence demands it.
+    - Uniform application: Apply all principles evenly. Require specific references for external claims, flagging and correcting any double standards and baselessness.
