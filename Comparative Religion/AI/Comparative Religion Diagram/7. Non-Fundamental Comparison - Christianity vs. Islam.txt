@@ -376,10 +376,10 @@ evidence.
              - Justice is debt-centric: sin creates a spiritual debt that must be satisfied - such that it can be paid for by an eligible substitute.
              - Sin causes debt, but an eligible innocent can pay it instead of the guilty. This means that the essence of justice is settlement (with gratitude & love), not accountability - a weak fit with this inference.
          - Islam
-             - Justice is accountability-centric: the debt of sin (and reward of righteousness) is borne only by the guilty.
+             - Justice is credit-centric: both the debt of sin and reward of righteousness are borne only by the guilty.
              - Every soul bears its own burden - accountable only to their choices: those guilty of sin will receive its due, and those guilty of righteousness will receive its due - a strong fit with this inference.
          - Fundamental Difference
-             - "Justice is about debt (weak fit)" vs. "Justice is about credit (strong fit)"
+             - "Justice is about debt/settlement (weak fit)" vs. "Justice is about credit/accountability (strong fit)"
 
      C. "Falsehood is easier and more common, while good is harder and more valued."
          - This comes from the observation that righteousness (like order) requires personal maintenance - while sin (like disorder) requires personal neglect.
@@ -393,7 +393,7 @@ evidence.
              - "The effort for righteousness is not a basis for its value, out of God's mercy (partial fit)" vs. "The effort for righteousness is a basis for its value, out of God's mercy (strong fit)"
      D. 
          - Conclusion
-             - Islam: God accomplishes everything the Christian Jesus does, but with a more perfect form of accountability, consistency, and better fitting the mold of a "loving father" - allowing a stronger case for coherence to be built.
+             - Islam: God accomplishes everything the Christian Jesus does, but with a more original and perfect form of accountability, consistency, and better fitting the mold of a "loving father" - allowing a stronger case for coherence to be built.
              - At its root, the fundamental difference between the two narratives is how God’s justice is oriented (debt vs. credit) - and the basis for salvation follows from that.
              - For Christianity’s justice, all sins must be paid for. The core "debt of [human] sin" (loss of sanctifying grace) sits in a higher tier than any act of human righteousness: no amount of good deeds can recreate that grace - only participating in it (only if restored by God) - which is what God shows by expelling Adam from Eden. But, out of His mercy, God Himself satisfies this debt on our behalf through Christ - certainly revealing God's love for us. However, it also exposes concepts such as an innocent bearing the burden of the guilty (both in Adam’s descendants sharing the debt of his act and in Christ satisfying the debt for us), sin’s debt being valued in a higher category than righteousness’ credit (despite God's mercy), and God’s treatment of Adam after his sin being different than Christ's (ie. God in the human Person) treatment of sincere believers after their sins - each challenging our predisposition towards accountability and justice.
              - Meanwhile, Islam’s justice holds each person fully accountable for their own actions - crediting both sins and good deeds - with God, out of His mercy, valuing our sincere righteousness and repentance over our sins. God's relationship with Adam is the same as His relationship with us today: Adam sins, repents, and is forgiven, and is placed on earth fully forgiven and pure while being judged only for his own choices. As a result, this narrative does not accept concepts such as an innocent bearing the burden of the guilty (which would be unjust) or sin being valued more than righteousness (which would contradict God’s mercy and align with Satan’s desire for us to despair of it).
@@ -629,20 +629,90 @@ evidence.
 
 
 6. Does anything stand out from the scripture and organized religions?
- - A. ... (high level category)
-     - i. ... (specific thing)
+ - A. Scripture
+     - i. Language
          - Christianity
-             - (how it manifests)
+             - Messenger spoke Aramaic (as the language of his people), Hebrew (for Jewish liturgy), and possibly Koine Greek (for interaction with the Romans)
+             - Scripture is written in Koine Greek (international language of the Mediterranean)
+             - Liturgy is performed in Classical Latin (universal language of the Roman Empire)
          - Islam
-             - (how it manifests)
+             - Messenger spoke Arabic (as the language of his people)
+             - Scripture is revealed in eloquent Arabic (for rationality and miraculous inimitability)
+             - Liturgy is performed in eloquent Arabic (to recite in the language of the scripture)
+     - ii. Structure and Timelessness
+         - Christianity
+             - The scripture is structured chronologically and historically, contextualizing law and grace within specific covenants (ex. Abrahamic, Mosaic, Davidic, New)
+             - God reveals Himself through history, where the truth unfolds in a linear narrative (from Creation to Fall to Redemption to Restoration)
+             - Timelessness manifests by Christ's atonement being relevant to all times and places
+         - Islam
+             - The scripture is structured achronologically and pedagogically, abstracting away the historical context from passages and grouping verses to emphasize themes, patterns, and reminders
+             - God reveals Himself the same way across history, inspiring the same gospel and warnings to all mankind (through the Prophets, Messengers, and their scriptures)
+             - Timelessness manifests through the universality of the message (across time and culture) and by its atemporal structure (aligning with God's atemporality)
+     - iii. Faith and Reason
+         - Christianity
+             - Faith is trusting God on the authority of His revelation (as witnessed by the Church and scripture)
+             - Reason is used to interpret scripture, develop doctrine, and defend faith
+             - Some revealed truths (ex. the Trinity, Incarnation) exceed our capacity for reason (without contradicting it) - known as mysteries
+             - Pious acceptance of mystery is a virtue, in trusting God and the Church even when intellectual understanding is incomplete
+         - Islam
+             - Faith is affirmation of the heart, speech of the tongue, and action (manifestation of the will)
+             - Proper reasoning about reality is recognizing God and His revelation
+             - Faith is the continuation of reason, putting aside one's worldly desires for what they know to be true: there is no conflict between the two
+             - Improper use of reason is caused by deficiencies in the heart, not the mind: God inspired all mankind with the fitrah to witness His existence and submit to His will
+ - B. Organized Religion
+     - i. Global Population
+         - Christianity
+             - Christianity is the largest at 28.8%, and second largest by denomination at 14.4%
+             - Catholicism is 14.4%, all Protestants at 10.6%, and Orthodox at 3.5%
+         - Islam
+             - Islam is the second largest at 25.6%, and largest by denomination at 22.2%
+             - Sunni is 22.2%, Shia is 2.6%, all others <2%
+     - ii. Diversity
+         - Both Christianity and Islam are the most diverse religions in the world, with Christianity more concentrated in the West, and Islam more concentrated in the East
+     - iii. Clerical Hierarchy
+         - Christianity
+             - Formal clerical hierarchies exist (bishops, priests, deacons), with a defined chain of sacramental ordination and institutional authority
+         - Islam
+             - Religious authority is decentralized, without a central body of ordination
+     - iv. Origin of Name
+         - Christianity
+             - "Christian" originates from early followers of Jesus being called so by outsiders in Antioch, emphasizing Christ as the focal point of salvation and identity
+             - Jesus Christ practiced Judaism religiously, correcting it from its corrupt implementation and completing the faith with the New Covenant
+         - Islam
+             - "Islam" (ie. willful submission) is what God names His religion in the Quran, which is the covenant God ordained for all mankind (from Adam to now)
+             - All previous Prophets and Messengers were "Muslim": they submitted their will to God's will, and worshipped Him alone (even if their respective laws differed)
+     - v. Continuity of Apparent Miracles
+         - Christianity
+             - Healing and intervention miracles with saints, before and after their death
+             - Incorrupt bodies (ie. dead bodies that don't decompose properly) of certain saints, which are signs of sanctity and divine intervention
+             - Marian apparitions and other private revelations
+         - Islam
+             - The Quran's unique style of revelation, literary eloquence, and naturalistic accuracy is far beyond the capacity of any 7th century Arabian to produce
+             - The Zamzam well is the world's oldest continuously flowing spring of its magnitude, flowing uninterrupted for 4000-5000 years despite being in a desert and only being 30 meters deep - yet supplying water for millions of people per year
+             - Prophetic dreams
+
 
 
 7. Conclusion (ie. are these results internally consistent with previous conclusions? do they expose anything new?)
  - Summary
-     - Christianity
-         - 
-     - Islam
-         - 
+     1. What are the apparent similarities and differences between Islam and Christianity?
+         - Both religions differ in salvific mechanism but achieve the same result: God is One, just, merciful, loving, holds us accountable to our own actions, merits righteousness and condemns sin, and requires faith to be eligible for salvation.
+     2. What is the relationship between God's mercy/love, justice, and forgiveness (soteriology)?
+         - Christianity: Sin incurs a real debt (ie. death, loss of sanctifying grace) that we can't pay on our own, so God personally satisfies that burden for us (out of His love and to preserve perfect justice, such that we can be forgiven while also not leaving the debt unsettled)
+         - Islam: God holds us accountable only to our own actions, rewarding righteousness and condemning sin (such that the path to forgiveness is opened before the path to punishment, and good deeds can erase and transform bad deeds - both out of His mercy)
+     3. What is the source of the fundamental, theological difference in soteriology?
+         - Christianity: Adam earned the debt of original sin, which God (in the Person of Jesus) fulfilled its settlement and defeated death on our behalf (as finite mankind can't recreate a divine grace when lost, which can only be supplied by God)
+         - Islam: Adam slipped in his obedience to God, immediately repented, and was forgiven by God: an experience meant to teach him - and all mankind - of what his relationship with God is, what his purpose in life is, and who his enemy is
+     4. Which salvific narrative better fits reality?
+         - Christianity: Justice is fundamentally about settlement (sin creates a spiritual debt that must be satisfied - such that it can be paid for by an eligible substitute [in Christ])
+         - Islam: Justice is fundamentally about accountability (every soul bears only its own burden, such that both the debt of sin and reward of righteousness are borne only by the guilty)
+         - Results: Islam accomplishes everything the Christian Jesus does, but with a more perfect form of accountability, consistency, and better fitting the mold of a "loving father"
+     5. Which salvific narrative looks more like a corrupted version of the truth?
+         - Both religions affirm God's perfect justice and the need for God's grace and mercy - but they are redirected differently in both narratives
+         - Relative to Christianity, Islam sharpens God's oneness and rationality, magnifies mercy and accountability, and diminishes the emphasis on Satan's power
+         - Relative to Islam, Christianity increases God's expectations, emphasizes Satan's power, reduces God's oneness and original mercy, and diminishes the salvific function of our good deeds, our spiritual status, and rationality
+         - Results: Christianity looks more like a corrupted version of Islam, while Islam looks more like a corrected version of Christianity
+
  - Results
      - 
 
