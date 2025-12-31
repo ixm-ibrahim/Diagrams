@@ -75,14 +75,14 @@ Note that the following sections only compare trinitarianism (sourced by the New
 
 3. Assessment of the Chains of Transmission
 
- - How many independent streams of transmission are there, leading to the text's standardization?
+ - How many independent streams of transmission are there, leading to the text's standardization? (ie. According to accepted tradition, who were the custodians of the message until its standardization?)
      - New Testament
          - 3 main streams (the synoptic, johannine, and pauline chains) that merge with Irenaeus, leading directly to the Council of Rome.
          - The synoptic stream goes from: Jesus → Peter (and the other Apostles) → Mark → Matthew & Luke → Papias → Polycarp of Smyrna → Irenaeus of Lyons.
          - The johannine stream goes from: Jesus → John the Apostle → Polycarp of Smyrna → Irenaeus of Lyons.
          - The pauline stream goes from: Jesus (post-resurrection vision) → Paul → Clement of Rome → Ignatius of Antioch & Polycarp of Smyrna → Irenaeus of Lyons.
-         - From Irenaeus (from all three streams), we get: Irenaeus → Tertullian → Origen of Alexandria → Eusebius → Athanasius of Alexandria → the Council of Rome (led by Pope Damascus I).
-         - Notes: Irenaeus was the earliest to list the 4 gospels and Paul's letters as canon, while Athanasius made the first known list of the mainstream New Testament canon. Also, Matthew also was an eyewitness, but uses Mark's work (and other unknowns) as a reference.
+         - From Irenaeus (from all three streams), we get the patristic chain: Irenaeus → Tertullian → Origen of Alexandria → Eusebius → Athanasius of Alexandria → the Council of Rome (led by Pope Damascus I).
+         - Notes: Irenaeus was the earliest to list the 4 gospels and Paul's letters as canon, while Athanasius made the first known list of the mainstream New Testament canon. Also, even though Matthew was an eyewitness, he uses Mark's work (and other unknowns) as a reference. Luke uses Mark as well.
      - Quran
          - 2 main streams: the Quran and Hadith.
          - The Quranic stream goes from: Muhammad → scribes (led by Zaid b. Thabit) and memorizers (thousands, with hundreds memorizing the whole Quran) → Abu Bakr → Hafsa → Uthman.
@@ -101,11 +101,11 @@ Note that the following sections only compare trinitarianism (sourced by the New
          - No with the Quran, yes with the Hadith (Shia vs. Sunni).
          - There are no competing claims for the reliability or content of the Quran.
          - The closest comparison is the qira'at (diffferent accentual/dialectical recitations) that the Prophet himself is reported to have used, but they are all accepted as authentic and even continue to be openly recited today.
-         - The only other comparison is the report of the Satanic verses, mentioned by Muslim historians 100–250 years after the Prophet's death. When surah al-Najm was revealed (which ends with the command to prostrate to God) and the Prophet recited it publicly, the Makkan pagans are reported to have prostrated in awe of the Quran, their hearts touched by its power. Out of embarrassment, they later claimed they had heard 1-2 pagan-affirming verses and prostrated for that reason, alleging that Muhammad was tricked by Satan without realizing. However, this is a weak biographical report with no supporting transmission, no parallel incident in the historical record, and a motive (pagan embarrassment) that aligns more closely with their behavior outside of this incident. As such, it is not considered a successful challenge to the Quran's reliability or authority.
+         - The only other comparison is the report of the Satanic verses, mentioned by Muslim historians 100–250 years after the Prophet's death. When surah al-Najm was revealed (which ends with the command to prostrate to God) and the Prophet recited it publicly, the Makkan pagans are reported to have prostrated in awe of the Quran, their hearts touched by its power. Out of embarrassment, they later claimed they had heard 1-2 pagan-affirming verses and prostrated for that reason, alleging that Muhammad must have been tricked by Satan without realizing. However, this is a weak biographical report with no supporting transmission, no parallel incident in the historical record, and a motive (pagan embarrassment) that aligns more closely with their behavior outside of this incident. As such, it is not considered a successful challenge to the Quran's reliability or authority.
          - There was also the Shia/Sunni split, but they differed over the nature of Ali b. Abi Talib, which is who the Shia assert was the rightful caliph after the Prophet's death. They believed that those closest to the Prophet corrupted the religion after he died, fabricating reports in his name to gain political power. As such, they have their own set of hadith compilations, in which the Prophet entrusted the true interpretation of the religion with Ali and his descendants (including Fatima, the Prophet's daughter and Ali's wife).
          - The Shia Hadith stream goes from: Muhammad → Ali b. Abi Talib → Hasan & Husain b. Ali → Ali Zayn al-Abidin → Muhammad al-Baqir → Jafar al-Sadiq → (the remaining Twelver imams) → Al-Kulayni (compiler of Shia hadith).
 
- - What are the strongest, independent chains of custodianship for each stream of transmission?
+ - What are the strongest, independent chains of custodianship for each stream of transmission? (ie. How do we actually know what happened?)
      - New Testament
          - Custodianship converges with Irenaeus, Eusebius, and Paul.
          - Synoptic Chain (Mark)
@@ -147,7 +147,7 @@ Note that the following sections only compare trinitarianism (sourced by the New
                  - If a link between narrators is unknown, the hadith is given a very weak grading.
          - Hadith Chain (Shia)
              - 4 standardized compilations (al-Kulayni, Ibn Babawayh, al-Tusi) and more (ex. Bihar al-Anwar, Nahj al-Balagha, etc.) → students and companions of an infallible imam → line of infallible, divinely guided Imams → Muhammad
-         - Notes: the Islamic claim is that the angel Gabriel - also known as the Holy Spirit and responsible for conveying revelation to all Prophets - is the custodian of the Quran between God and Muhammad. The Quran further asserts that God Himself guarantees its preservation, reinforcing the belief that truth remains distinguishable from falsehood. Additionally, a core difference between Sunni and Shia theology is that Shia Muslims hold the lineage of Ali b. Abi Talib to be infallible for twelve generations.
+         - Notes: the Islamic claim is that the angel Gabriel - also known as the Holy Spirit and responsible for conveying revelation to all Prophets - is the custodian of the Quran between God and Muhammad. The Quran further asserts that God Himself guarantees its preservation, reinforcing the belief that truth remains distinguishable from falsehood. Additionally, a core difference between Sunni and Shia theology is that Shia Muslims hold the lineage of Ali b. Abi Talib to be infallible through their imams for twelve generations.
 
  - What are the weakest links in the strongest chains of custodianship?
      - New Testament
@@ -155,17 +155,18 @@ Note that the following sections only compare trinitarianism (sourced by the New
          - Synoptic Chains
              - Both chains for Mark support the claim that he learned from Peter, but rely on lost work (Papias), an unnamed transmitter, and an unspecified oral tradition.
              - The chains for Matthew and Luke both depend on unknown transmitters, and Luke additionally relies on unknown source material.
-                 - Note that both Matthew and Mark state that only the female disciples witnessed the crucifixion (the most important theological event) - meaning that Peter (Mark's source) wouldn't have witnessed it either.
+                 - Note that Matthew, Mark, and Luke state that only the female disciples witnessed the crucifixion (the most important theological event) - meaning that neither Peter (Mark's source) nor Matthew (another disciple of Jesus) witnessed it either.
          - Johannine Chain
              - The chain for John depends on Irenaeus, whose claim for John's authorship relies on Polycarp, who only orally testified this to Irenaeus without writing it in his work.
-                 - John is the only author who states that he witnessed the crucifixion.
+                 - John is the only Gospel author who states that he witnessed the crucifixion.
          - Pauline Chain
              - Paul's letters are self-attesting and corroborated by Clement of Rome.
              - Ignatius of Antioch also corroborates Paul, but his chain relies on unknown oral transmission.
          - Jewish Christian/Nazarene, Ebionite, and Gnostic Chains
              - All orthodox-competing chains rely on lost work and unknown oral traditions.
              - The Gnostic chain is the exception in that their gospels are preserved, but their chain appears intentionally hidden (according to Irenaeus).
-         - Notes: all chains about the earthly Jesus contain some degree of historical uncertainty.
+         -  
+Notes: all chains about the earthly Jesus contain varying degrees of historical uncertainty, with each relying on some unknown or uncorroborated transmission.
      - Quran
          - The potential weaknesses of the oral and textual chains are mitigated by the other.
          - Quranic Chain
@@ -175,7 +176,7 @@ Note that the following sections only compare trinitarianism (sourced by the New
              - The science of authenticating hadith and examining narrators was established alongside the compilers, allowing hadith narrations to be classified based on their authenticity - and putting more pressure on the compilers for being reliable.
          - Hadith Chain (Shia)
              - Reliability is tied to the infallibility of the narrators, which is unfalsifiable and supported by fewer corroborating chains than in Sunni transmission - leaving greater room for weakness.
-         - Notes: the Quran appears to be reliably preserved, while Hadith reliability is dependent on the strength of its compilers and methods.
+         - Notes: the Quran appears to be reliably preserved in history (verified at a later step), while Hadith reliability is dependent on the strength of its compilers and methods.
 
 
 
@@ -252,7 +253,7 @@ Note that the following sections only compare trinitarianism (sourced by the New
          - What is the epistemological difference between divine inspiration and demonic inspiration?
              - God, angels, and demons all act in mysterious ways, making it initially appear impossible to distinguish between them. Both are beyond our capacity to sensually witness and verify, yet if God is fundamentally True while demons preach falsehood, then a demonic influence will appeal to arguments that inhibit proper reasoning, thus disabling one's ability to distinguish truth from falsehood.
      - New Testament
-         - Strong by character assessment, weak by logical consistency - which is resolved by faithful history and textual preservation.
+         - Strong by character assessment, weak by logical consistency - which is resolved by faithful history and textual preservation by its custodians.
          - Deception and Dishonesty
              - Jesus gained little besides attention - both positive and negative. However, he is depicted as trying to conceal aspects of his identity (the “Messianic Secret”), meaning he intentionally wanted to suppress that same attention he was getting. As such, when paired with his apparent alignment with selfless moral values, the label of "liar" doesn't best fit him.
              - However, the claim of Jesus' divinity culminates in the Hypostatic Union (3 Persons, 1 God), where we've already established that there is no coherent, identifiable distinction between the Persons. This renders the doctrine epistemologically indistinguishable from a false or fabricated claim - unless its textual authority is proven perfect and superior to all alternatives (as the True religion of the True God is expected to be the epitome of epistemological truth, with all other false alternatives necessarily contradicting reality in some way). Thus, its certainty must be anchored in the New Testament's preservation.

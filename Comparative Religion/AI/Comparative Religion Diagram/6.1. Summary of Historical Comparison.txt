@@ -32,8 +32,8 @@
 
     C. Assessment of the Chains of Transmission
         - How many independent streams of transmission are there, leading to the text's standardization?
-            - New Testament: There are 3 main streams of transmission (the synoptic, johannine, and pauline chains) that merge with Irenaeus, leading directly to the Council of Rome.
-            - Quran: There are 2 main streams of transmission: the Quran and Hadith.
+            - There are 3 main streams of transmission (the synoptic, johannine, and pauline chains) that merge with Irenaeus, starting the patristic stream and leading directly to its standardization in the Council of Rome.
+            - There are 2 main streams of transmission: the Quran (through its eyewitnesses, both orally and textually) and Hadith (through chains of eyewitness testimony, until its textual standardization).
         - Are there competing claims, and if so, what are their chains of transmission?
             - New Testament: Yes - the Jewish Christians and Gnostics are competing claims to Jesus' message.
             - Quran: No competing claims to the Quran's transmission, while there are competing claims for the transmission of Hadith (Shia vs. Sunni).
@@ -60,7 +60,7 @@
             - New Testament: Jesus could theoretically be a liar, lunatic, or be under demonic influence.
             - Quran: Muhammad could theoretically be a liar, lunatic, or be under demonic influence.
         - How strongly does the claim resist fabrication and error?
-            - New Testament: Jesus' character assessment strongly resists being a liar, lunatic, or being under demonic influence, but the trinitarian doctrine is weak by logical consistency - which is resolved by faithful historical and textual preservation.
+            - New Testament: Jesus' character assessment strongly resists being a liar, lunatic, or being under demonic influence, but the trinitarian doctrine is weak by logical consistency - which is resolved by faithful historical and textual preservation by its custodians.
             - Quran: Muhammad's character assessment strongly resists being a liar, lunatic, or being under demonic influence.
         - What possibilities are there for fabrication and error with the claim's custodianship?
             - New Testament: The custodianship of Jesus' message could have been with bad faith, revisionism, and gradual Christological development.
