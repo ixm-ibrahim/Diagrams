@@ -1,7 +1,6 @@
 Note that the following sections only compare trinitarianism (sourced by the New Testament) and monotheism (sourced by the Quran). Even though Atheism's rebuttals fit the natural data, it neither explains why reality exists, nor does it actually refute (or reduce confidence in) the alignment of a transcendent creator with reality. And Polytheism is set aside because a plurality of ultimate powers doesn’t naturally yield the unified, law-governed order we actually observe - and multiplying ultimate agents introduces unexplained conflict/coordination that the world’s tight regularities don’t display.
 
 1. Textual/Historical Claim
- 
  - What is the claim?
      - New Testament
          - The Bible possesses a textual and historical preservation that is superior to all alternatives, which are not authorized by God (ie. deceptive or demonic in origin).
@@ -30,7 +29,6 @@ Note that the following sections only compare trinitarianism (sourced by the New
 
 
 2. Oral, Written, and Archaeological Presence
-
  - Who were the eyewitnesses, and what did they bear witness to?
      - New Testament
          - Three significant events: Jesus' 3-year earthly ministry, 40 days of Jesus' resurrection, and the post-resurrection vision that appeared to Paul.
@@ -74,7 +72,6 @@ Note that the following sections only compare trinitarianism (sourced by the New
 
 
 3. Assessment of the Chains of Transmission
-
  - How many independent streams of transmission are there, leading to the text's standardization? (ie. According to accepted tradition, who were the custodians of the message until its standardization?)
      - New Testament
          - 3 main streams (the synoptic, johannine, and pauline chains) that merge with Irenaeus, leading directly to the Council of Rome.
@@ -165,8 +162,7 @@ Note that the following sections only compare trinitarianism (sourced by the New
          - Jewish Christian/Nazarene, Ebionite, and Gnostic Chains
              - All orthodox-competing chains rely on lost work and unknown oral traditions.
              - The Gnostic chain is the exception in that their gospels are preserved, but their chain appears intentionally hidden (according to Irenaeus).
-         -  
-Notes: all chains about the earthly Jesus contain varying degrees of historical uncertainty, with each relying on some unknown or uncorroborated transmission.
+         - Notes: all chains about the earthly Jesus contain varying degrees of historical uncertainty, with each relying on some unknown or uncorroborated transmission.
      - Quran
          - The potential weaknesses of the oral and textual chains are mitigated by the other.
          - Quranic Chain
@@ -181,7 +177,6 @@ Notes: all chains about the earthly Jesus contain varying degrees of historical 
 
 
 4. Alignment with Historical Context
-
  - What was the historical context throughout the chain of custodianship?
      - New Testament
          - Three significant time periods: the crucifixion of Jesus, the destruction of the Jerusalem Temple, and the Bar Kokhba revolt.
@@ -234,7 +229,6 @@ Notes: all chains about the earthly Jesus contain varying degrees of historical 
 
 
 5. Resistance to Fabrication
-
  - What possibilities are there for fabrication and error in the claim?
      - New Testament
          - Liar, lunatic, or demonic influence.
@@ -672,8 +666,117 @@ Notes: all chains about the earthly Jesus contain varying degrees of historical 
 
 
 
-7. Conclusion
+6. Summary
+    Fundamental Comparison: God's Existence (previous section)
+        - Does the belief system align with reality?
+            - Trinitariansim: Yes (pending superior textual authority)
+            - Monotheism: Yes
 
+    A. Textual/Historical Claim
+        - What is the claim?
+            - New Testament: The Bible possesses a textual and historical preservation that is superior to all alternatives, which are not authorized by God (ie. deceptive or demonic in origin).
+            - Quran: The Quran possesses a preservation and inimitability that is superior to all alternatives, which are not authorized by God (ie. deceptive or demonic in origin).
+        - Is it ontologically possible and epistemologically attainable?
+            - New Testament: Yes: the claim is both theoretically possible and is able to be known.
+            - Quran: Yes: the claim is both theoretically possible and is able to be known.
+        - What are the criteria for success and failure?
+            - New Testament: Truth is defined/identified by consistency and reality, and falsehood by inconsistency and contradiction with reality.
+            - Quran: Truth is defined/identified by consistency and reality, and falsehood by inconsistency and contradiction with reality.
+
+    B. Oral, Written, and Archaeological Presence
+        - Who were the eyewitnesses, and what did they bear witness to?
+            - New Testament: Three significant events: Jesus' 3-year earthly ministry, 40 days of Jesus' resurrection, and the post-resurrection vision that appeared to Paul.
+            - Quran: Two significant events: the Quran's revelation to the Prophet Muhammad over 23 years, and his character, personality, and ministry in that time period.
+        - How reliable was the cultural context for preserving oral tradition accurately?
+            - New Testament: 1st century context preserved core concepts without necessary verbatim transmission.
+            - Quran: 7th century context preserved verbatim with the Quran, semi-verbatim preservation with the Prophet's life and character.
+        - When was the text written and standardized, and by whom?
+            - New Testament: The Gospels and Epistles were written by multiple authors (not Jesus) sometime 10-70 years after Jesus' ministry, while the canon was standardized in 382 AD by the Council of Rome.
+            - Quran: Three significant events: the writing and ordering of the Quran during the Prophet Muhammad's life, the first complete written Quran being codified 2 years after his death, and the written standardization of the dialect/accent 20 years after his death.
+        - What corroborating archaeological finds are there?
+            - New Testament: Archaeology shows strong historical and cultural corroboration, with earliest manuscripts of the New Testament dating to 125 AD.
+            - Quran: Archaeology shows overwhelming historical and cultural corroboration, with the earliest manuscripts dating to the Prophet's life.
+
+    C. Assessment of the Chains of Transmission
+        - How many independent streams of transmission are there, leading to the text's standardization?
+            - There are 3 main streams of transmission (the synoptic, johannine, and pauline chains) that merge with Irenaeus, starting the patristic stream and leading directly to its standardization in the Council of Rome.
+            - There are 2 main streams of transmission: the Quran (through its eyewitnesses, both orally and textually) and Hadith (through chains of eyewitness testimony, until its textual standardization).
+        - Are there competing claims, and if so, what are their chains of transmission?
+            - New Testament: Yes - the Jewish Christians and Gnostics are competing claims to Jesus' message.
+            - Quran: No competing claims to the Quran's transmission, while there are competing claims for the transmission of Hadith (Shia vs. Sunni).
+        - What are the strongest, independent chains of custodianship for each stream of transmission?
+            - New Testament: Custodianship converges with Irenaeus, Eusebius, and Paul.
+            - Quran: Quranic custodianship rests on Uthman, Hafsa, Abu Bakr, and those who memorized it verbatim, while Hadith custodianship converges with the textual compilations.
+        - What are the weakest links in the strongest chains of custodianship?
+            - New Testament: All chains have gaps (either relying on unknown transmission or lost works) - except for the Pauline chain.
+            - Quran: The potential weaknesses of the oral and textual chains are mitigated by the other.
+
+    D. Alignment with Historical Context
+        - What was the historical context throughout the chain of custodianship?
+            - New Testament: Three significant time periods: the crucifixion of Jesus, the destruction of the Jerusalem Temple, and the Bar Kokhba revolt.
+            - Quran: Three significant time periods: the time of Quranic revelation, the time of Quranic textual standardization, and the time of Hadith compilation.
+        - What were the standards of testimony and custodianship in this time?
+            - New Testament: Custodianship started with eyewitness testimony, gradually shifting towards scholarly textual standardization over time.
+            - Quran: Standard custodianship was communally verbatim oral transmission.
+        - Is there anything anachronistic (historically or logically out of place) about the claim or its custodianship?
+            - New Testament: Many anachronistic examples against Jewish expectations.
+            - Quran: Many anachronistic examples against the 7th century Arabian context.
+
+    E. Resistance to Fabrication
+        - What possibilities are there for fabrication and error in the claim?
+            - New Testament: Jesus could theoretically be a liar, lunatic, or be under demonic influence.
+            - Quran: Muhammad could theoretically be a liar, lunatic, or be under demonic influence.
+        - How strongly does the claim resist fabrication and error?
+            - New Testament: Jesus' character assessment strongly resists being a liar, lunatic, or being under demonic influence, but the trinitarian doctrine is weak by logical consistency - which is resolved by faithful historical and textual preservation by its custodians.
+            - Quran: Muhammad's character assessment strongly resists being a liar, lunatic, or being under demonic influence.
+        - What possibilities are there for fabrication and error with the claim's custodianship?
+            - New Testament: The custodianship of Jesus' message could have been with bad faith, revisionism, and gradual Christological development.
+            - Quran: The custodianship of the Quran could have been with preservation errors and contextual reinterpretation.
+        - How strongly does the claim's custodianship resist fabrication and error? (Requirements for Trusting Defense)
+            - New Testament: To verify strong custodianship of Jesus' message, Paul's reliability and alignment with what the earthly Jesus said needs to be independently established (before claiming truth).
+            - Quran: To verify strong custodianship of the Quran, all plausible natural pathways for fabrication or alteration need to be eliminated.
+        - How strongly does the claim's custodianship resist fabrication and error? (Texts)
+            - New Testament: Gospel custodianship, defending claims, and fabrication/error claims all fundamentally rely on speculation.
+            - Quran: Historical constraints only allow Muhammad as the Quran's origin, leaving no viable alternative authorship, transmission, or fabrication with its custodianship.
+        - How strongly does the claim's custodianship resist fabrication and error? (Trustworthiness)
+            - New Testament: Deception and/or demonic inspiration are both plausible explanations for Paul's work, with all defenses requiring retroactive assumptions of truth.
+            - Quran: All requirements for Muhammad fabricating the Quran are historically unsupported.
+
+    F. Comparative Summary
+        - Earliest Established Sources
+            - New Testament: secondary and tertiary sources, multiple authors
+            - Quran: primary and secondary sources, single author
+        - Primary Method of Preservation
+            - New Testament: oral transmission by eyewitnesses
+            - Quran: communal & verbatim memorization by eyewitnesses
+        - Secondary Method of Preservation
+            - New Testament: Gospels and Epistles - written after the Messenger's life
+            - Quran: written manuscripts during the Messenger's life
+        - Language of Textual Preservation
+            - New Testament: written in a different language to what the Messenger spoke
+            - Quran: written verbatim to the Messenger's spoken language
+        - Accessibility to Verification and Correctability
+            - New Testament: limited to scholars with specialized knowledge, even until now
+            - Quran: publicly verifiable and correctable by a lay person
+        - Verified by Messenger
+            - New Testament: no - eyewitness accounts written 10-70 years later
+            - Quran: yes
+        - Competing Claims to Source
+            - New Testament: yes
+            - Quran: no
+        - Integrity of Transmission
+            - New Testament: relies on lost works and unknown transmission
+            - Quran: unbroken, public, redundant, & fully known
+        - Time of Full Textual Compilation
+            - New Testament: proposed in 180 AD, completed by 382 AD (150-352 years later)
+            - Quran: 2 years later
+        - Earliest Surviving Manuscripts
+            - New Testament: within 100 years after the Messenger's life
+            - Quran: within the Messenger's lifetime
+
+
+
+7. Conclusion
  - How strong is the claim and its custodianship?
      - New Testament
          - Weak claim, moderate custodianship, all defenses requiring retroactive assumptions of truth

@@ -1,0 +1,1001 @@
+--------------------------------------------
+Philosophical Claim
+--------------------------------------------
+
+-------
+Tier 1:
+-------
+
+1. Philosophical/Religious Claim
+Assumptions/Requirements (for value)
+ - The claim must have a clear and precise definition, with unambiguous terms, such that it can be evaluated as "true" or "false".
+ - It must be presented as coherent and free of contradictions, so it can be distinguished from a falsehood.
+ - It must be substantive (ie. not tautological) and claim to be grounded in reality.
+ - The True religion should become more, not less, plausible as human knowledge expands.
+     - It must correspond with all of reality, so it should not fear new discoveries but should be able to integrate them seamlessly.
+
+Risks (if the following procedure isn't implemented properly)
+ 
+ - Vacuity or Triviality
+     - A claim without substance provides nothing concrete to test or defend.
+     - A claim that can't be assigned as "true" or "false" falls beyond the scope of reason.
+     - Without a clear claim, the entire process of evaluation cannot begin - leaving only un-testable opinions.
+ 
+ - Ambiguity Leading to Equivocation
+     - If terms are vague, then arguments can shift in meaning to explain apparent contradictions, rendering logical evaluation impossible.
+     - Evidence may be force-fitted to align with a belief, leading to premature commitment.
+ 
+ - Misalignment with Framework
+     -  The claim may not fit the philosophical or religious tradition it claims to represent, risking internal contradictions.
+-------
+
+
+-------
+Tier 2:
+-------
+
+2. Possesses Logical Structure
+Assumptions/Requirements (for value)
+ - The claim is presented as a structured argument (premises leading to a conclusion).
+ - All premises must be explicitly stated, with no hidden assumptions.
+ - The argument corresponds with reality such that it is externally consistent.
+ - The argument must follow established rules of logic (ex. inductive, deductive) such that it is internally consistent.
+
+Limits (what it can never speak to)
+ - The claim can't speak to a context beyond what the premises necessarily encompass.
+ - No valid argument can justify an internal contradiction.
+ - No sound argument can justify an external contradiction.
+
+Risks
+    If Invalid
+ 
+         - Formal and Informal Fallacies
+             - The argument's structure is flawed, meaning that the conclusion does not necessarily follow from the premises.
+             - The reasoning is flawed due to irrelevant information, emotional appeals, or other rhetorical tricks that persuasively make a false claim appear sound.
+ 
+         - Oversimplification
+             - Complexity may be reduced to overly rigid structures, ignoring nuances that lead to misleading deductions.
+ 
+         - Equivocation
+             - Terms may shift meanings across premises in order to resolve arising contradictions, creating an illusion of validity.
+ 
+    If Missing
+ 
+         - Ungrounded Assertion
+             - The claim becomes a mere statement without justification, making it impossible to evaluate (as "true" or "false") or distinguish from opinion.
+                 - Without a clear structure, evaluation defaults to subjective feelings, increasing vulnerability to bias.
+             - This makes it impossible to evaluate the claim rationally, as it necessarily reduces to "it's true because I say so".
+                 - The alternative would otherwise have been, "it's true because of evidence A, B, and C".
+
+Mitigation
+    Risk Identification
+ 
+         - Formal and Informal Fallacies
+             - Identify the structure of the argument to verify soundness and eliminate alternatives.
+             - Evaluate the relevance of each premise to the conclusion.
+             - Strip away appeals to emotion, authority, or popularity to see if the evidence still holds.
+ 
+         - Oversimplification
+             - Compare the structure to real-world observations to identify ignored variables or assumptions.
+ 
+         - Equivocation
+             - Define all key terms explicitly at the start and check for consistency throughout.
+ 
+         - If Missing
+             - The claim either requires blind faith to be considered true, or is simply considered an opinion.
+ 
+    Verifying Authenticity
+         - Break the argument down into its fundamental premises and conclusion.
+         - Ensure that each logical step follows valid rules of inference, creating an unbroken chain of reasoning from the premises to the conclusion.
+-------
+
+3. Possesses Objective Source
+Assumptions/Requirements (for value)
+ - The source of the claim (ex. a specific text, author, or tradition) must be identifiable and accessible for evaluation.
+ - The source must have a basis for its claims, whether through direct observation, logical deduction, or received tradition.
+ - The context of the source (whether historical, cultural, philosophical) must be knowable to assess potential biases.
+ - The source must be reliable and trustworthy, to verify resistance to agenda-driven influences.
+
+Limits (what it can never speak to)
+ - Purely subjective interpretations or personal revelations that lack external corroboration.
+ - The internal motivations or unstated assumptions of the author or tradition.
+
+Risks
+    If Invalid
+ 
+         - Unreliable Source
+             - The source is known for bias, frequent errors, or a clear agenda that undermines its credibility.
+ 
+         - Misattributed Source
+             - The claim is attributed to a respected authority who never actually made it, creating a false appeal to authority.
+ 
+         - Contextual Misalignment
+             - The source may be taken out of its original framework, leading to distorted interpretations.
+ 
+    If Missing
+ 
+         - Orphan Assertion
+             - The claim has no traceable origin, making it impossible to verify its context, development, or reliability.
+                 - This makes it indistinguishable from speculation.
+             - This significantly weakens the claim, as it could have come from an unreliable source without detection.
+
+Mitigation
+    Risk Identification
+ 
+         - Unreliable Source
+             -  Investigate the source's historical track record, known affiliations, and potential motives.
+             -  Compare its claims with those of independent, neutral sources.
+ 
+         - Misattributed Source
+             - Trace the claim back to its earliest known appearance to verify the attribution.
+ 
+         - Contextual Misalignment
+             - Study the full context to ensure the claim aligns with the source's intended meaning.
+ 
+         - If Missing
+             - The claim requires blind faith to be considered true, as its unknown origins makes it indistinguishable from speculation.
+ 
+    Verifying Authenticity
+         - Confirm that the source is cited accurately and that the claim is not taken out of context.
+         - Replicate the source's methodology: does it rely on evidence and reason, or does it appeal to emotion, wishful thinking, fabrication, or unverified authority?
+-------
+
+
+-------
+Tier 3:
+-------
+
+4. Axioms Grounded in Reality
+Assumptions/Requirements (for value)
+ - The argument's foundational starting points (ie. axioms) must correspond to universal, empirical observations or self-evident truths.
+     - This is opposed to speculation, or arguments from ignorance.
+ - Axioms must be fundamental, verifiable through repeated observation, and not themselves require proof within the logical system.
+ - They must be mutually consistent and not contradict one another.
+
+Limits (what it can never speak to)
+ - Abstract hypotheticals or unobservable realms without empirical ties.
+ - Axioms cannot be "proven" by the argument that rests upon them: their validity must be established externally.
+     - In other words, axioms are directly observed or inferred: they are "proven" by proving the system's internal and external consistency.
+
+Risks
+    If Invalid
+ 
+         - Ungrounded Abstractions
+             - The axioms are based on speculation, feelings, or cultural tradition rather than objective reality.
+             - Even if the entire logical structure is entirely valid, following those axioms, the conclusions would be disconnected from the truth.
+ 
+         - Contradictory Foundations
+             - The axioms conflict with each other, making any sound conclusion impossible and guaranteeing the incoherency of the system.
+ 
+         - Overgeneralization and Hidden Assumptions
+             - Axioms drawn from limited observations may not hold universally, causing false inferences.
+             - As such, unstated premises may sneak in, undermining the grounding.
+ 
+    If Missing
+ 
+         - Infinite Regress
+             - The argument lacks a solid starting point - meaning that all premises lack fundamental context.
+             - Every premise would require another premise to support it, leading to an endless chain of justifications with no foundation.
+
+Mitigation
+    Risk Identification
+ 
+         - Ungrounded Abstractions
+             -  Test each axiom against the foundational inferences derived from reality, detecting unverified assumptions.
+ 
+         - Contradictory Foundations
+             - Place the axioms side-by-side and examine if they can all be true simultaneously, rejecting any that contradict consistent observation.
+ 
+         - Overgeneralization and Hidden Assumptions
+             - Explicitly list all axioms and check for implicit ones.
+             - Verify axioms across diverse contexts to ensure universality.
+ 
+         - If Missing
+             - The claim fundamentally requires blind faith to be considered true, as it can never be fully grounded in reality.
+                 - Without grounding in reality, nothing could be considered "true" as all axioms would have equal weight, thus making it impossible to distinguish between "true" and "false" axioms.
+ 
+    Verifying Authenticity
+         - Ensure each axiom is a genuine first principle - a statement so fundamental that rejecting it would make further reasoning impossible.
+         - Ensure axioms align with established inferences from reality to rule out speculation.
+         - Confirm that the axioms are sufficient to support the rest of the argument without needing to introduce hidden assumptions later.
+-------
+
+
+-------
+Tier 4:
+-------
+
+5. Premises Grounded in Axioms
+Assumptions/Requirements (for value)
+ - Every premise used in the argument must either be a foundational axiom or be logically derived from one.
+ - The chain of derivation from axiom to premise must be explicit and follow valid rules of inference.
+ - There should be no "hidden" premises, leaps, or unstated assumptions.
+
+Limits (what it can never speak to)
+ - Empirical details requiring external evidence beyond the scope of the axioms.
+ - Probabilistic elements if axioms are purely deterministic.
+ - Subjective interpretations not derivable from the axioms.
+
+Risks
+    If Invalid
+ 
+         - Unsupported Premise
+             - A premise is asserted as if it were self-evident but is neither a foundational axiom nor derived from one.
+                 - This creates a weak link that could invalidate the entire argument.
+ 
+         - Logical Leaps
+             - The stated derivation of a premise from an axiom does not actually follow logically, even if strongly asserted.
+ 
+         - Inconsistent Application
+             - Premises could selectively apply axioms, leading to bias.
+             - Premises may stretch axioms beyond their grounded scope.
+ 
+    If Missing
+ 
+         - Incoherent Argument
+             - The argument jumps from axioms to a conclusion without the necessary intermediate premises to form a valid bridge.
+             - This allows false claims to appear valid, as they fundamentally require a logical gap in order to jump from a true premise to a false conclusion.
+             - Without grounding, false premises become vulnerable to ad hoc justifications, as they can now be molded to resist any objection.
+
+Mitigation
+    Risk Identification
+ 
+         - Unsupported Premise
+             -  For every premise, ask: "Is this an axiom, or how was it derived?"
+             -  Challenge any premise that cannot be traced back to the foundational axioms.
+ 
+         - Logical Leaps
+             - Explicitly map out the deductive or inductive steps from the axiom to the premise to ensure the connection is valid.
+ 
+         - Inconsistent Application
+             - Check for uniform use of axioms across all premises.
+             - Limit premises to direct implications of axioms.
+ 
+         - If Missing
+             - The claim requires blind faith to be considered true, as it is impossible to rationally defend the claim.
+ 
+    Verifying Authenticity
+         - Create a logical flowchart that traces each premise back to its foundational axioms.
+         - Articulate any implicit assumptions to turn them into explicit premises that can then be evaluated.
+-------
+
+
+-------
+Tier 5:
+-------
+
+6. Coherence and Internal Consistency
+Assumptions/Requirements (for value)
+ - A true logical claim must be able to withstand rigorous scrutiny, novel objections, and false counterarguments.
+     - All false claims necessarily contradict with reality.
+     - As such, even if false claims appear stronger at first, over time the true claim necessarily will correspond with reality stronger.
+ - The process must involve engaging with the strongest possible versions of objections (steelmanning), not weak or misrepresented versions (strawmanning).
+ - Both the objections and their responses must adhere to the same standards of logical rigor as the original claim.
+
+Limits (what it can never speak to)
+ - The sincerity or motivations of the one making the objections.
+ - Irrelevant or fallacious objections not grounded in logic.
+
+Risks
+    If Invalid
+ 
+         - Evasive Defense
+             - Objections are dismissed superficially (from using invalid reasoning) rather than refuted.
+ 
+         - Strawmanning
+             - Weakening objections by presenting them in a different (but easier way to address) makes the claim appear stronger.
+ 
+         - Ad Hoc Rescue
+             - The original claim is modified with novel, speculative, or unsupported exceptions solely to evade an objection.
+                 - This makes an argument from ignorance, allowing for the defense of any false claim.
+ 
+    If Missing
+ 
+         - Brittle Belief
+             - Without being tested against objections, a belief remains unverified and vulnerable.
+                 - It becomes impossible to distinguish it from the countless falsehoods that also lack a robust defense.
+                 - Relying on the luck of holding an untested belief is not a methodology for seeking truth - it's a passive stance that leaves one susceptible to error.
+             - This prevents you from confidently knowing if the claim is wrong or not, as it can't be verified as the "best" option if it is never compared with others.
+
+Mitigation
+    Risk Identification
+ 
+         - Evasive Defense
+             - Analyze the responses to objections: are they grounded in evidence, or do they rely on logical fallacies?
+         - Strawmanning
+             - "Steelman" objections instead: present them in their strongest form, then refute them.
+             - The Truth will never contradict reality, so presenting a false claim in its strongest form will only establish its own falsehood.
+ 
+         - Ad Hoc Rescue
+             - Check if the "solution" to an objection is a principled extension of the system's core axioms, or if it is an arbitrary patch with no other justification.
+ 
+         - If Missing
+             - The claim requires blind faith to be considered true, as you're trusting factors beyond your control for why you're on the true belief (rather than learning about reality in order to to distinguish between truth and falsehood).
+ 
+    Verifying Authenticity
+         - Actively seek out the most powerful and well-reasoned objections from opposing viewpoints.
+         - A claim demonstrates robustness if it can either (a) logically refute the objection or (b) integrate the objection's valid points in a way that strengthens the original claim's coherence and explanatory scope.
+-------
+
+
+-------
+Tier 6:
+-------
+
+7. Robustness to Objections
+Assumptions/Requirements (for value)
+ - A true logical claim must be able to withstand rigorous scrutiny, novel objections, and false counterarguments.
+     - All false claims necessarily contradict with reality.
+     - As such, even if false claims appear stronger at first, over time the true claim necessarily will correspond with reality stronger.
+ - The process must involve engaging with the strongest possible versions of objections (steelmanning), not weak or misrepresented versions (strawmanning).
+ - Both the objections and their responses must adhere to the same standards of logical rigor as the original claim.
+
+Limits (what it can never speak to)
+ - The sincerity or motivations of the one making the objections.
+ - Irrelevant or fallacious objections not grounded in logic.
+
+Risks
+    If Invalid
+ 
+         - Evasive Defense
+             - Objections are dismissed superficially (from using invalid reasoning) rather than refuted.
+ 
+         - Strawmanning
+             - Weakening objections by presenting them in a different (but easier way to address) makes the claim appear stronger.
+ 
+         - Ad Hoc Rescue
+             - The original claim is modified with novel, speculative, or unsupported exceptions solely to evade an objection.
+                 - This makes an argument from ignorance, allowing for the defense of any false claim.
+ 
+    If Missing
+ 
+         - Brittle Belief
+             - In a world where falsehood is necessarily more abundant for each truth, the probability that a claim is true is very slim - meaning that the probability of opposing beliefs being true is higher.
+                 - Of course, you could happen to already believe a true claim (without verifying it yourself), but then if everyone believed this (thus preventing them from considering alternatives that are true), then they'll never arrive at the truth.
+             - This prevents you from confidently knowing if the claim is wrong or not, as it can't ever be verified as the "best" option if you never compare it with others.
+
+Mitigation
+    Risk Identification
+ 
+         - Evasive Defense
+             - Analyze the responses to objections: are they grounded in evidence, or do they rely on logical fallacies?
+         - Strawmanning
+             - "Steelman" objections instead: present them in their strongest form, then refute them.
+             - The Truth will never contradict reality, so presenting a false claim in its strongest form will only establish its own falsehood.
+ 
+         - Ad Hoc Rescue
+             - Check if the "solution" to an objection is a principled extension of the system's core axioms, or if it is an arbitrary patch with no other justification.
+ 
+         - If Missing
+             - The claim requires blind faith to be considered true, as you're trusting factors beyond your control for why you're on the true belief (rather than educating yourself to be able to distinguish between truth and falsehood based on principles grounded in reality).
+ 
+    Verifying Authenticity
+         - Actively seek out the most powerful and well-reasoned objections from opposing viewpoints.
+         - A claim demonstrates robustness if it can either (a) logically refute the objection or (b) integrate the objection's valid points in a way that strengthens the original claim's coherence and explanatory scope.
+-------
+
+8. Absence of Alternate Explanation
+Assumptions/Requirements (for value)
+ - The claim must be the best-fit explanation, superior to alternatives in parsimony and explanatory power.
+     - It must be compared against other plausible, competing hypotheses.
+     - The best explanation is the one that accounts for the most data with the fewest unsupported assumptions (Occam's razor).
+ - The evaluation must be fair and apply the same standards of evidence and logic to all competing explanations.
+     - The claim's uniqueness (in its alignment with the Truth) must be demonstrable through comparison.
+     - Otherwise, no distinguishing between truth and falsehood will ever occur.
+
+Limits (what it can never speak to)
+ - Your own ignorance: this method can only identify the best explanation among the currently known and formulated options.
+     - But, arguments from ignorance are still invalid: speculation is not refutation.
+     - The absence of known alternate explanations is the goal, not absence of all speculative alternate explanations.
+ - Equally parsimonious explanations without decisive differentiators.
+
+Risks
+    If Invalid
+ 
+         - Confirmation Bias
+             - A preferred explanation is favored (due to bias) despite a simpler or more powerful alternative being available because the alternative is less comfortable or familiar.
+ 
+         - False Dilemma
+             - The choice is presented as being between the proposed claim and only one, often weak, alternative, when in fact other, stronger possibilities exist (that are simply unknown out of ignorance).
+ 
+    If Missing
+ 
+         - Premature Conclusion
+             - Without a thorough comparison to alternatives, a belief is adopted prematurely and lacks full justification
+                 - A claim's justification comes not only from its internal logic but also from its demonstrated superiority over competing explanations.
+                 - It might be a plausible explanation, but there would be no way to know if it is the best explanation, leaving the belief grounded in incomplete analysis rather than comparative evaluation.
+
+Mitigation
+    Risk Identification
+ 
+         - Confirmation Bias
+             -  Actively "steelman" competing hypotheses, articulating them in their most persuasive forms before comparing them.
+                 - If the best form of a competing argument can be refuted, then the claim must be stronger than the objection.
+ 
+         - False Dilemma
+             - Learn and discover all plausible alternatives rather than simply accepting the options presented.
+ 
+         - If Missing
+             - The claim requires blind faith to be considered true, as it is impossible to actually know its reliability.
+ 
+    Verifying Authenticity
+         - Systematically compare the competing explanations using abductive reasoning:
+             - Which one explains the most evidence (ie. corresponds with reality the most)?
+             - Which one requires the fewest unsupported assumptions (to converge on the one without any)?
+-------
+
+
+-------
+Tier 7:
+-------
+
+9. Iterative Verification
+Assumptions/Requirements (for value)
+ - Knowledge is provisional and must be open to revision in light of new, relevant evidence from any field (e.g., science, history, philosophy).
+     - A true claim will not only withstand new evidence but should actually be reinforced by it, its explanatory power necessarily growing over time.
+ - The process requires intellectual humility and a commitment to truth over wishful thinking and ignorance.
+     - Conclusions must be corroborated by independent iterations to minimize error.
+
+Limits (what it can never speak to)
+ - A final, unchanging conclusion: verification is an ongoing process of refinement, not a one-time event that ends in absolute certainty.
+     - Note that, if your claim is on the Truth, then the "changing conclusions" will be more and more non-fundamental with more iterations.
+
+Risks
+    If Invalid
+ 
+         - Arrogant, Stubborn, or Wishful Thinking
+             - New evidence that contradicts the claim is ignored, denied, or explained away with ad hoc rationalizations to protect the belief from being falsified.
+                 - The belief becomes a closed, non-falsifiable system - thus indistinguishable from a false belief.
+ 
+         - Incoherent Patchwork
+             - New evidence is haphazardly integrated without ensuring it is consistent with the system's core axioms, resulting in a belief system that becomes increasingly contradictory over time.
+ 
+    If Missing
+ 
+         - Blind Faith
+             - Without continually grounding beliefs in reality, then the claim becomes indistinguishable from false claims that initially appear true but can eventually be discovered to be false..
+
+Mitigation
+    Risk Identification
+ 
+         - Arrogant, Stubborn, or Wishful Thinking
+             -  Look for a pattern of dismissing or reinterpreting contradictory evidence rather than engaging with it honestly.
+             -  Check if the system has fundamentally changed or adapted in response to major scientific or philosophical discoveries.
+ 
+         - Incoherent Patchwork
+             - Test if recent additions or "updates" to the belief system are consistent with its foundational, non-negotiable axioms.
+ 
+         - If Missing
+             - The claim requires blind faith to be considered true, as it is impossible to establish confidence in its reliability over time.
+ 
+    Verifying Authenticity
+         - Actively seek new knowledge from relevant fields and test its compatibility with the claim.
+         - A claim demonstrates strong iterative verification if new discoveries fit naturally into its framework and are better explained by it than by competing theories.
+-------
+
+
+
+--------------------------------------------
+Historical Claim
+--------------------------------------------
+
+-------
+Tier 1:
+-------
+
+1. Historical Event
+Assumptions/Requirements (for value)
+ - The event must be ontologically possible, requiring:
+     - Internally consistent, without contradictions
+     - Externally consistent, corresponding perfectly with what is known about reality.
+ - It must be epistemologically distinguishable from falsehood (meaning there is a way to determine if it is true or not).
+      - In other words, it must have had the potential to generate evidence, plausibly leaving behind traces that can be discovered.
+ - Fabricated claims necessarily contain logical contradictions with reality.
+     - As such, there must be some criterion that distinguishes false supernatural events from true ones.
+
+Risks (if the following procedure isn't implemented properly)
+ 
+ - Fabrication or Mythologization
+     - The event may be a later invention or exaggeration of what actually happened.
+ 
+ - Misattribution
+     - The event could be incorrectly dated, located, or attributed to the wrong people.
+  
+ - Anachronistic Projection
+     - Details may be retroactively added that don’t align with the original event.
+-------
+
+
+-------
+Tier 2:
+-------
+
+2. Oral Eyewitness Testimony
+Assumptions/Requirements (for value)
+ - Witnesses were present.
+ - Witness accurately perceived the event, with:
+     - direct, first-hand perception
+     - good faith
+     - sound mind and memory
+     - accurate communication
+ - Cultural context supports reliable oral traditions.
+ - There should be access to the witnesses for direct recounting and verification of their testimony.
+
+Limits (what it can never speak to)
+ - Internal motivations of witnesses.
+ - Events beyond the witnesses' direct sensory experience.
+ - Quantitative data requiring measurement for verification.
+
+Risks
+    If Not Authentic
+ 
+         - Distortion
+             - Faulty memory, bad faith, or mental impairment can lead to inaccurate accounts.
+ 
+         - Fabrication and Exaggeration
+             - Witnesses can embellish events, which leads to false or exaggerated details being passed on.
+ 
+         - Cultural Misalignment
+             - Oral traditions become weaker if the cultural practices of a society do not support accuracy.
+ 
+    If Missing
+ 
+         - Over-Reliance on Secondary Sources
+             - Dependence on later writings increases risk of editorial bias or loss of important nuance.
+
+Mitigation
+    Risk Identification
+ 
+         - Distortion
+             - Check for inconsistencies in the testimony and evaluate potential bias by examining the historical context.
+ 
+         - Fabrication and Exaggeration
+             - Assess if the testimony is dissimilar from known facts.
+             - Ensure testimony is coherent with the witness' known actions.
+             - Check for absence (or mitigation) of self-serving motives.
+ 
+         - Cultural Misalignment
+             - Study the culture to see if it supports the accurate transmission of oral history.
+ 
+         - If Missing
+             - Scrutinize any written evidence more heavily for potential editorial bias.
+ 
+    Verifying Authenticity
+         - Cross-reference oral accounts with written testimony and archaeological evidence to reduce distortion.
+         - Ensure consistency with broader context to rule out anachronisms (details that don't fit the time period).
+         - Corroborating independent oral and written accounts mitigate exaggeration and expose distortion.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the content of the testimony to verify alignment with religious beliefs.
+-------
+
+3. Written Eyewitness Testimony
+Assumptions/Requirements (for value)
+ - The author was an eyewitness with education, resources, and literacy to record promptly.
+ - The document has been preserved in its original form or through verifiably accurate copies.
+ - The language and script of the document are decipherable and can be reliably translated without significant loss of meaning.
+
+Limits (what it can never speak to)
+ - Non-verbal elements of an event, like tone of voice or gestures (unless they are explicitly described in the text).
+ - Any events that were not directly witnessed by the author.
+ - The scientific causality behind an event, as the author would not have had modern empirical tools.
+ - Perspectives from non-eyewitnesses (who are not the author).
+
+Risks
+    If Not Authentic
+ 
+         - Forgery or Interpolation
+             - The document could have been written by a non-eyewitness or a false name.
+             - Later edits could have introduced false information to push an agenda.
+ 
+         - Translation Errors
+             - The degradation of language over time or simple mistranslation can obscure the original meaning.
+ 
+         - Bias
+             - The author's personal agenda (whether religious, political, good or bad faith) could have skewed the facts. 
+ 
+    If Missing
+ 
+         - Over-reliance on Oral Testimony or Archaeology
+             - Relying only on memory or artifacts risks creating gaps in the narrative's detail or leading to misinterpretation.
+ 
+         - Lack of a Fixed Reference
+             - Without a written record, oral traditions may change over time, and artifacts may lack the textual context needed for proper interpretation.
+
+Mitigation
+    Risk Identification
+ 
+         - Forgery
+             - Cross-reference different textual variants and the manuscript's history to detect edits.
+             - Check the author's claims against the historical context.
+ 
+         - Bias
+             - Assess the document for dissimilarity to known facts.
+             - Ensure testimony is coherent with the author's known actions.
+             - Check for absence (or mitigation) of self-serving motives.
+ 
+         - Translation Errors
+             - Study the culture to ensure support for textual accuracy.
+             - Enlist experts for precise translations.
+ 
+         - If Missing
+             - Scrutinize oral accounts more heavily for corroboration and potential distortion.
+ 
+    Verifying Authenticity
+         - Cross-reference the written testimony with oral accounts and archaeological evidence to reduce distortion and confirm details.
+         - Ensure the account is consistent with the broader historical context to rule out anachronisms.
+         - Corroborating the account with independent oral and written sources helps mitigate exaggeration and expose distortion.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the content of the testimony to verify alignment with religious beliefs.
+-------
+
+4. Archaeological Alignment
+Assumptions/Requirements (for value)
+ - The artifacts or sites discovered must be directly tied to the event.
+ - The excavation methods used to uncover the artifacts must have been rigorous and uncontaminated.
+ - The interpretation of the artifacts must align with historical records without forcing the evidence to fit a preconceived narrative.
+ - There must be comparative artifacts available from the same period to provide context for the analysis.
+
+Limits (what it can never speak to)
+ - Abstract ideas, beliefs, or spoken words, as these do not leave a physical trace.
+ - The identities or motivations of individuals, unless inscriptions are present.
+ - Transient events, such as speeches, that do not leave behind physical evidence.
+ - The emotional or psychological states of the people involved.
+
+Risks
+    If Not Authentic
+ 
+         - Misinterpretation
+             - Incorrectly dating an artifact or taking it out of context can lead to false conclusions.
+ 
+         - Contamination or Fraud
+             - Poor excavation practices or faked artifacts can distort the evidence.
+ 
+         - Overreach
+             - It is possible to assign undue significance to ambiguous findings that don't clearly support a specific claim. 
+ 
+    If Missing
+ 
+         - Lack of Tangible Proof
+             - Relying solely on texts or oral accounts risks ungrounded speculation about what actually happened.
+ 
+         - Weakened Validation
+             - Without physical evidence, historical narratives lack objective corroboration and are harder to prove.
+
+Mitigation
+    Risk Identification
+ 
+         - Misinterpretation
+             - Verify dating with independently corroborated methods, like radiocarbon dating and stratigraphy.
+             - Cross-check interpretations with textual records.
+ 
+         - Contamination or Fraud
+             - Assess the excavation protocols and the artifact's provenance (its chain of custody and origin).
+ 
+         - Overreach
+             - Ensure that interpretations align with minimal assumptions by using comparative artifacts and anthropological knowledge.
+ 
+         - If Missing
+             - Scrutinize oral and written accounts more heavily for corroboration and distortion.
+             - Seek indirect archaeological evidence that may be related.
+ 
+    Verifying Authenticity
+         - Cross-reference artifacts with oral and written testimony to confirm details within the broader historical context.
+         - Ensure consistency with the broader context to rule out anachronisms.
+         - Corroborate findings with independent archaeological discoveries to mitigate misinterpretation and fraud.
+ 
+    If Religious Beliefs are Already Established
+         - Assess archaeological finds through the religious context to verify the historical authenticity of related claims.
+-------
+
+
+-------
+Tier 3:
+-------
+
+5. Multiple Independent Corroborations
+Assumptions/Requirements (for value)
+ - The sources must be truly independent (ie. without common origins or influencing one another).
+ - There must be a sufficient number of sources to ensure statistical reliability.
+
+ - The sources must agree on the fundamental details of the event.
+     - Fundamental alignment, even with differences in secondary details, supports a reliable source.
+ - Diversity in the types of sources support greater historical coverage and reliability.
+ - The sources should be minimally influenced by overarching political or cultural pressures that could have skewed their accounts.
+
+Limits (what it can never speak to)
+ - The internal thoughts of the authors or witnesses.
+ - Unobservant processes that occurred during or after the testimony's recording.
+ - Non-existent sources that may have been filtered, censored, or destroyed over time.
+
+Risks
+    If Not Authentic
+ 
+         - Echo Chamber
+             - Sources that seem independent are actually dependent on each other, falsely inflating the event's reliability.
+ 
+         - Bias Propagation
+             - A shared agenda across multiple sources can skew the consensus and make a biased account seem objective. 
+ 
+    If Missing
+ 
+         - Single Source Vulnerability
+             - Relying on only one account makes the claim highly vulnerable to fabrication or an honest error.
+ 
+         - Incomplete Picture
+             - A lack of diverse sources can obscure alternative perspectives, leading to a one-sided understanding of the event.
+
+Mitigation
+    Risk Identification
+ 
+         - Echo Chamber
+             - Trace the origins and transmission paths of each source to confirm that they are truly independent.
+ 
+         - Bias Propagation
+             - Assess the historical and cultural contexts of the sources to identify any shared motives or agendas.
+ 
+         - If Missing
+             - Scrutinize the single source heavily for internal bias and distortion.
+             - Seek consistency with the broader historical context.
+ 
+    Verifying Authenticity
+         - Cross-reference all sources (written, oral, and archaeological) with each other to confirm the core facts of the event.
+         - Ensure the corroborated details are consistent with the broader historical context to rule out anachronisms.
+         - Greater diversity in the sources provides better historical coverage while simultaneously challenging potential biases.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 4:
+-------
+
+6. Unbroken Chain of Transmission
+Assumptions/Requirements (for value)
+ - The evidence has been continuously documented from its origin to the present without any significant gaps in the record.
+ - The custodians of the evidence have maintained accurate records of its handling, transfers, and storage.
+ - The methods of transmission have preserved the integrity of the evidence, which requires:
+     - physical protection
+     - accurate copying
+     - detailed logs
+ - The custodians have been trustworthy and resisted any incentives for tampering with the evidence.
+ - The chain must be accessible for verification, allowing scholars to reconstruct and trace its history.
+ - The overall strength of the chain is defined by its weakest link.
+
+Limits (what it can never speak to)
+ - The accuracy of the content if it was altered or incorrect before the chain of transmission began.
+ - Interpretive changes that occur over time without altering the physical artifact or document itself.
+ - The hidden motives of the custodians who preserved the evidence.
+
+Risks
+    If Not Authentic
+ 
+         - Alteration
+             - Undetected changes, such as editing or forgery, can introduce errors into the evidence.
+ 
+         - Untrustworthy Custodians
+             - Deliberate or negligent manipulation by handlers can skew the evidence.
+ 
+         - Loss of Integrity
+             - Weak links, gaps in the chain, environmental damage, or poor handling can compromise the evidence without detection. 
+ 
+    If Missing
+ 
+         - Provenance Doubts
+             - Without a clear chain of custody, the authenticity of the sources becomes questionable.
+ 
+         - Speculative Transmission
+             - Gaps in the record allow for assumptions about how the evidence was handled, which risks accepting a fabrication.
+ 
+         - Over-Reliance on Fragmented Evidence
+             - This increases vulnerability to bias or incomplete narratives from other sources.
+
+Mitigation
+    Risk Identification
+ 
+         - Alteration
+             - Examine the physical or digital artifacts for inconsistencies that could indicate tampering.
+ 
+         - Untrustworthy Custodians
+             - Cross-check custody logs against independent historical records of the institutions or handlers involved.
+ 
+         - Loss of Integrity
+             - Assess the evidence for signs of degradation.
+             - Compare different versions across various branches of transmission.
+ 
+         - If Missing
+             - Identify gaps through chronological analysis.
+             - Assess corroborative evidence from diverse sources to bridge them cautiously.
+ 
+    Verifying Authenticity
+         - Trace the chain backward using archival records, comparing multiple copies or versions to check for fidelity.
+         - Integrate scientific verification methods (like carbon dating or stylistic analysis) to build confidence that no anachronistic alterations were made.
+         - Cross-reference with multiple independent corroborations to expose any breaks or inconsistencies in the chain of transmission.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 5:
+-------
+
+7. Consistency with Broader Context
+Assumptions/Requirements (for value)
+ - An established baseline of verified historical, cultural, and scientific knowledge must exist for comparison.
+ - The details of the event must be specific enough to be tested against this broader context.
+ - The contextual knowledge used for comparison must be comprehensive and up-to-date, incorporating recent scholarship and discoveries.
+ - A neutral evaluation framework must be used, to avoid forcing the evidence to fit the context through selective interpretation while also avoiding hyper-skepticism.
+
+Limits (what it can never speak to)
+ - Unique or unprecedented aspects of the event that are not covered by existing knowledge.
+ - Subjective experiences or interpretations that are not tied to verifiable, external facts.
+
+Risks
+    If Not Authentic
+ 
+         - Forced Alignment
+             - Selectively choosing or misinterpreting the historical context can create a false consistency that masks a fabrication.
+             - Modern biases can project contemporary knowledge backward, which distorts the historical fit.
+ 
+         - Anachronistic Insertion
+             - The degradation of language over time or simple mistranslation can obscure the original meaning.
+ 
+         - Incomplete Context Exploitation
+             - Gaps in what is known about a historical period can allow unsubstantiated claims to appear consistent. 
+ 
+    If Missing
+ 
+         - Isolated Event Risk
+             - An event might seem plausible in a vacuum but could contradict wider historical patterns, leading to the acceptance of anomalies.
+ 
+         - Contextual Blind Spots
+             - Overlooking cultural or scientific improbabilities can incorrectly inflate an event's credibility.
+
+Mitigation
+    Risk Identification
+ 
+         - Forced Alignment
+             - Compare the event's details against multiple, diverse contextual sources to detect any cherry-picking of evidence.
+ 
+         - Anachronistic Insertion
+             - Cross-check timelines, language, and artifacts to ensure they are accurate for the specific period.
+ 
+         - Incomplete Context Exploitation
+             - Provisionally accept or reject claims based on the level of confidence in the overarching context (subject to later revision as more is learned).
+ 
+         - If Missing
+             - Scrutinize the chain of transmission more cautiously for signs of potential fabrication.
+ 
+    Verifying Authenticity
+         - Align the event with parallel historical records, archaeological data, and scientific principles to confirm that it fits the broader context.
+         - Continually update the context with new discoveries to refine the assessment of consistency over time.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 6:
+-------
+
+8. Resistance to Fabrication
+Assumptions/Requirements (for value)
+ - Every source has the potential to be fabricated, as human beings can manipulate information for personal gain.
+ - The sources should resist common political, religious, or personal motives that might lead to distorting, inventing, or exaggerating details.
+ - Claims that are embarrassing, counterproductive, or contrary to the source's known interests have a reduced risk of being fabricated...
+     - ... While they also possess a higher risk of being fabricated specifically for attention.
+ - There must be accessibility to contextual evidence, allowing scholars to evaluate the potential biases or motives behind a source.
+
+Limits (what it can never speak to)
+ - The internal thoughts or unexpressed motives of the source’s author.
+ - Events or details that were not recorded (even if they were authentic), as they were not relevant to the source's purpose.
+ - Absolute certainty of neutrality, as all sources may carry subtle or unconscious biases.
+
+Risks
+    If Not Authentic
+ 
+         - Hidden Agendas
+             - Undetected motives can lead to fabricated or heavily skewed accounts that appear genuine.
+ 
+         - False Neutrality
+             - Sources can appear to be unbiased but may subtly promote an agenda, which inflates their perceived reliability.
+ 
+         - Selective Reporting
+             - The omission of inconvenient details and the insertion of manipulated ones can create a misleading narrative. 
+ 
+    If Missing
+ 
+         - Increased Fabrication Risk
+             - A lack of resistance to fabrication in a source weakens the trustworthiness of other nodes in the evaluation.
+ 
+         - Over-Reliance on Biased Sources
+             - Depending on agenda-driven records reduces the overall reliability of the transmission.
+ 
+         - Unchallenged Narratives
+             - Single-perspective accounts can dominate the historical record without any checks for motive-driven alterations.
+
+Mitigation
+    Risk Identification
+ 
+         - Hidden Agendas
+             - Analyze the source’s historical and cultural context to identify potential motives for fabrication.
+ 
+         - False Neutrality
+             - Cross-check for the criterion of embarrassment or dissimilarity to detect subtle biases in a seemingly neutral account.
+ 
+         - Selective Reporting
+             - Compare the account with diverse, independent sources to identify significant omissions or inconsistencies.
+ 
+         - If Missing
+             - If it is significant to the claim that it's distinguishable from falsehood, yet it possesses a weak resistance to fabrication, then its logical resistance to fabrication must be more heavily scrutinized.
+ 
+    Verifying Authenticity
+         - Cross-reference the account with multiple independent corroborations to confirm details against sources that are likely free of the same agenda.
+         - Use consistency with the broader context to rule out any motive-driven anachronisms or exaggerations
+         - Apply scientific verification, like dating artifacts or stylistic analysis of texts, to support or challenge the source’s claims.
+ 
+    If Religious Beliefs are Already Established
+         - Assess the corroborated claims through the religious context to verify their historical authenticity.
+-------
+
+
+-------
+Tier 7:
+-------
+
+9. Scientific Verification
+Assumptions/Requirements (for value)
+ - Surviving physical evidence that is directly linked to the event must exist and be accessible for testing.
+ - Reliable and validated scientific methods, like radiocarbon dating or textual analysis, must be applicable and accurately applied.
+ - There must be an unbroken chain of custody for the evidence to ensure its integrity from the moment of discovery to testing.
+ - The conclusions must be corroborated by independent sources or labs to minimize the risk of misinterpretation.
+
+Limits (what it can never speak to)
+ - Non-physical or intangible aspects of an event, such as thoughts, motivations, or spiritual claims that leave no material traces.
+
+Risks
+    If Not Authentic
+ 
+         - Methodological Errors
+             - Flawed techniques, contamination of samples, or outdated calibration can lead to inaccurate results.
+ 
+         - Interpretation Bias
+             - The scientists' preconceptions or external pressures can skew their analysis of the data.
+ 
+         - Forgery or Tampering
+             - Fabricated evidence or altered samples can produce misleading scientific verification. 
+ 
+    If Missing
+ 
+         - Unresolved Grounding
+             - Without scientific verification, claims about physical events may lack a firm grounding in empirical reality.
+
+Mitigation
+    Risk Identification
+ 
+         - Methodological Errors
+             - Review the testing protocols, lab accreditations, and any replication studies to check for flaws.
+ 
+         - Interpretation Bias
+             - Examine the scientists' affiliations for potential conflicts of interest and compare their findings with independent analyses.
+ 
+         - Forgery or Tampering
+             - Trace the chain of custody for all samples and use forensic markers to test for authenticity.
+ 
+         - If Missing
+             - Heighten the scrutiny of written and oral artifacts, checking closely for internal textual consistency and coherence.
+ 
+    Verifying Authenticity
+         - Replicate the tests in multiple independent labs to confirm the results and reduce the chance of error.
+         - Cross-reference scientific findings with archaeological alignment and the broader historical context to ensure there are no anachronisms or inconsistencies.
+         - Integrate the findings with multiple independent corroborations to challenge biases and expose potential forgeries.
+ 
+    If Religious Beliefs are Already Established
+         - Assess whether scientific findings are being interpreted neutrally or are being forced to fit pre-existing religious beliefs.
+-------
