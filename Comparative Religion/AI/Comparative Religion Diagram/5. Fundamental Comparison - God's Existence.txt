@@ -26,8 +26,8 @@ of them without the others.
 
 4. All information comes from a source.
  - Atheism: No
-     - If each process always came from another process, then it results in an infinite regress - which is indistinguishable from a contradiction or false belief.
-     - Or, if the universe was created from nothing, then it didn't come "from" anything to begin with, which contradicts this inference.
+     - If each process always came from another process (without a cyclical limit), then it results in an infinite regress - which is indistinguishable from a contradiction or false belief.
+     - Or, if the universe was created from nothing, then it didn't come "from" anything to begin with - which contradicts this inference.
  - Polytheism: Yes
      - The universe came from the gods, while the gods are uncaused themselves.
      - If one god created the rest, then those gods would be contingent on the primary god.
@@ -43,7 +43,7 @@ of them without the others.
  - Atheism: Maybe
      - If true, then the universe would have to have been fundamentally created by a
 not-universe, which could have been some multiversal structure. However, this doesn't resolve the result of infinite regression, as now the question shifts to what caused the multiverse - without an observed answer.
-     - Also, any explanation for the universe's origin is speculative, requiring us to infer that "arguments from ignorance are stronger than arguments of best-fit". However, this would also require the contradiction of "speculation is neither proof nor refutation" - ie. "speculation is refutation".
+     - Also, any explanation for the universe's origin is speculative, requiring us to infer that "arguments from ignorance are stronger than arguments of best-fit". However, this would also require the contradiction of "speculation is neither proof nor refutation" - ie. "speculation is proof/refutation".
  - Polytheism: Yes
      - Reality is temporal and contingent, while the gods must be eternal and uncaused.
  - Trinitarianism: Yes
@@ -56,7 +56,7 @@ not-universe, which could have been some multiversal structure. However, this do
 +
 14. All things are contingent on their causes (that are not the thing).
  - Atheism: Yes
-     - Assuming "speculation is refutation", then the universe could be the one exception that was created by an infinite regress.
+     - Assuming "speculation is proof/refutation", then the universe could be the one exception that was created by an infinite regress.
  - Polytheism: Yes
      - The universe was created by a non-universe, the gods. And they never began, therefore they don't have a cause.
      - If some of the gods were created by others, then there is still some uncaused god that was the source of all the others.
@@ -80,7 +80,7 @@ not-universe, which could have been some multiversal structure. However, this do
 21. Consciousness can't be reduced to purely physical components.
  - Atheism: Maybe
      - Consciousness is observed to correlate with the brain, therefore it could be an emergent property from how it's structured.
-     - However, this still doesn't explain phenomenal consciousness, and if "speculation is refutation", then it could be because of some natural process that we simply don't know yet.
+     - However, this still doesn't explain phenomenal consciousness, and if "speculation is proof/refutation", then it could be because of some natural process that we simply don't know yet.
  - Polytheism: Yes
      - Just as the gods are spiritual in nature, so are we.
  - Trinitarianism: Yes
@@ -91,7 +91,7 @@ not-universe, which could have been some multiversal structure. However, this do
 
 23. Intelligence correlates with success and purposeful/conscious complexity.
  - Atheism: No
-     - The universe's complexity is random, and if "speculation is refutation", then the multiverse better fits reality than some divine guidance.
+     - The universe's complexity is random, and if "speculation is proof/refutation", then the multiverse better fits reality than some divine guidance.
  - Polytheism: Yes
      - The complexity of reality reflects the creativity of the gods.
  - Trinitarianism: Yes
@@ -113,8 +113,8 @@ not-universe, which could have been some multiversal structure. However, this do
 
 27. We have the capacity to make choices, based on our knowledge and desires.
  - Atheism: Maybe
-     - Assuming "speculation is refutation", then quantum randomness could explain whether or not we have an indeterministic will - although, this opens the door to all matter possessing such a will as well, as we are all made of the same materials.
-     - Or, if that isn't it, then this inference can't be true, as our "choices" are simply a necessary effect of a long chain of causes going back to the initial conditions of the universe.
+     - Assuming "speculation is proof/refutation", then quantum randomness could explain whether or not we have an indeterministic will - although, this opens the door to all matter possessing such a will as well, as we are all made of the same materials.
+     - Or, if that isn't it, then this inference can't be true, as our "choices" are simply a necessary effect of a long chain of complex (but ultimately deterministic) causes going back to the initial conditions of the universe.
  - Polytheism: Yes
      - If we have a spiritual component that explains our phenomenal experience, then that is the source of our ability to make choices.
  - Trinitarianism: Yes
@@ -139,7 +139,7 @@ not-universe, which could have been some multiversal structure. However, this do
 
 33. There is a seen reality, and an unseen reality.
  - Atheism: Yes
-     - Inferences, logic and math, dark matter and energy, etc. are all examples of realities that we can't see. But (assuming "speculation is refutation"), there is no evidence for unseen gods, angels, or demons - any spiritual, willful agent.
+     - Inferences, logic and math, dark matter and energy, etc. are all examples of realities that we can't see. But (assuming "speculation is proof/refutation"), there is no evidence for unseen gods, angels, or demons - any non-physical, willful agent.
  - Polytheism: Yes
      - We can see the physical realm without being able to see the spiritual realm.
  - Trinitarianism: Maybe
@@ -155,14 +155,14 @@ not-universe, which could have been some multiversal structure. However, this do
      - There are more ways to disobey the gods than to obey them.
  - Trinitarianism: Maybe
      - We live in a broken world, fallen short of God's grace, where perfect righteousness is impossible and evil runs free. The only exception is the perfect goodness of Jesus (God in the human Person), who fulfilled the weight of human sin and allowed us to achieve salvation through belief in him.
-     - Having said that, "good is harder and more valued" doesn't quite fit this narrative, as it can only be applied here in the context of salvation through God's perfection - not generally, as this inference implies.
+     - Having said that, "good is harder and more valued" doesn't quite fit this narrative, as it can only be applied here in the context of salvation through God's perfection - not generally with human actions, as this inference implies.
  - Monotheism: Yes
      - This world is a test of faith, to see if we will willingly choose to follow God's will instead of worldly distractions (both positive and negative). Even though evil is more prevalent than good, good is still weighted much more strongly than evil out of God's love and mercy. He always reveals His mercy before His punishment, from the first human being to us now.
 
 
 37. Reality could have been different.
  - Atheism: Yes
-     - Assuming "speculation is refutation", then this can be explained by quantum randomness and/or many-worlds theories.
+     - Assuming "speculation is proof/refutation", then this can be explained by quantum randomness and/or many-worlds theories.
  - Polytheism: Yes
      - The gods can will as they please.
  - Trinitarianism: Yes
@@ -173,7 +173,7 @@ not-universe, which could have been some multiversal structure. However, this do
 
 38. We fear death, yet we will die.
  - Atheism: Yes
-     - Assuming "speculation is refutation", then nothing happens after we die.
+     - Assuming "speculation is proof/refutation", then nothing happens after we die.
  - Polytheism: Yes
      - The gods will judge us as they please.
  - Trinitarianism: Yes
@@ -186,9 +186,9 @@ not-universe, which could have been some multiversal structure. However, this do
 Conclusion: does the belief system align with reality?
 
  - Atheism: No (internally contradictory)
-     - Every argument reduces to "any explanation with a supernatural god can be refuted with the possibility of a natural explanation". As such, to make Atheism align with reality, we are required to assume that "speculation is refutation" - thus equally weighting knowledge with ignorance.
-     - While this does allow us to dismiss arguments for God's existence in favor of unobserved possibilities that fit the data, it also doesn't refute the opposing claim (that God is real), nor does it prevent the opposition from making the same kind of argument in return (that He explains those possibilities and could have created those "natural processes" as well).
-     - As such, both a claim and its opposite can be valid under this argument, making truth fundamentally indistinguishable from falsehood and invalidating atheism's authority to make claims about reality.
+     - Every argument essentially reduces to "any explanation with a supernatural god can be refuted with the possibility of a natural explanation". As such, to make Atheism align with reality, we are required to assume that "speculation is proof/refutation" - thus equally weighting knowledge with ignorance.
+     - While this does allow us to dismiss arguments for God's existence in favor of unobserved possibilities that fit the data, it also doesn't actually refute the opposing claim (that God is real), nor does it prevent the opposition from making the same kind of argument in return (that God's existence explains those possibilities and could have created those "natural processes" as well).
+     - As such, both a claim and its opposite can be valid under this argument, making truth fundamentally indistinguishable from falsehood and invalidating Atheism's authority to make claims about reality.
 
  - Polytheism: No (not the best fit)
      - Reality doesn't support inferring a Polytheistic source of reality. Reality can be observed to operate under fundamental, universally applicable behaviors, and we were created with the capacity for logic that seeks and recognizes a single, fundamental cause for all things.

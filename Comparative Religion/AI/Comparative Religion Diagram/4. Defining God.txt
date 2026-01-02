@@ -27,6 +27,7 @@ Observations
              - ... In a world where consistent complexity is a sign of conscious intelligence, while inherent disorder is a sign of the lack thereof.
          - The universe is observed to have a fundamental beginning, which requires a trigger to cause its existence (as something can't come from nothing).
              - It would also require the trigger to be something that is fundamentally not the universe.
+         - Whatever the fundamental source of the universe is, it is defined with the label of "God".
 
 The Deduction (and why)
  - God possesses power and intelligence that encompasses all of reality.
@@ -36,8 +37,8 @@ The Deduction (and why)
          - This also demonstrates supreme conscious intelligence, as a creation of such consistently interconnected complexity requires knowledge of how to avoid the infinitely other alternatives that would cause the universe to crash and burn.
 
 Addressing Objections and Alternatives
- - These objections generally rely on the speculation that "possibilities exist because we don't know otherwise", but that's an argument from ignorance: it doesn't disprove the inductive inferences from what we observe in reality.
- - Without clear counterexamples that invalidate the patterns, we favor the best-fit explanation: a transcendent God as the source, which explains the data with fewer assumptions than multiplying unverified options.
+ - These objections generally rely on the speculation that "valid possibilities exist because we don't know otherwise", but that's an argument from ignorance: it doesn't disprove the inductive inferences from what we observe in reality.
+ - Without clear counterexamples that invalidate the patterns (and to iteratively converge upon the truth, such that it is distinguishable from falsehood), we favor the best-fit explanation: a transcendent God as the source, which explains the data with fewer assumptions than multiplying unverified options.
  
 1. The universe is just the result of random chance, meaning the universe is an unconscious "accident".
      - This claim solely depends on the assumption that there is no basis to believe in something that can't be seen when there are natural alternatives to consider, as "God" can't be seen and so it is irrational to consider Him as the universe's cause over possible theoretically natural explanations.
@@ -48,18 +49,18 @@ Addressing Objections and Alternatives
      - As such, this objection is just speculation without counterexamples: saying "random chance could explain it" doesn't disprove the inductive pattern of order requiring intelligence, as we observe no unguided examples of such complexity emerging.
 
 2. We can explain our fine-tuned universe with multiverse theory (as it would be just like the Earth is with other planets) as a rare universe among infinite universes in which life is possible.
-     - This doesn't explain anything, as it just transfers the discussion of the source of the universe back one layer: how then did the multiverse form?
+     - This doesn't explain anything, as it just redirects the discussion of the source of the universe back one layer: how then did the multiverse form?
      - Moreover, a "multiverse" is a theoretical, speculative, and unobserved concept, which we can't derive valid inferences from - as we can with reality.
-     - Finally, even if we assume that this multiverse is somehow "uncreated", it still is a less powerful explanation than that of God, as multiverse theory still can't explain phenomenal consciousness.
+     - Finally, even if we assume that this multiverse is somehow "uncreated" (as with God), it still is a less powerful explanation than that of God, as multiverse theory still doesn't explain phenomenal consciousness.
          - And we can't really conceive of an "uncreated" universe anyways, as something can't be caused by nothing - so a multiverse just introduces more "things" that need an explanation for how they came to be.
      - As such, this is an argument from ignorance - claiming "infinite universes could exist" treats lack of knowledge as refutation, but without counterexamples from reality, it doesn't invalidate the best-fit explanation of a single, intentional source.
 
 3. If everything has a cause, then God must have a cause as well.
      - This is more thoroughly addressed in future deductions, but in short: this is a category error, as this inference requires the flow of time to occur, and so if God is atemporal, then it would be irrational to apply the same requirements of temporality to something atemporal.
-     - As such, demanding a temporal cause for an atemporal being is speculation: no counterexample exists for atemporal things needing causes, so the inductive rule holds only for temporal reality.
+     - As such, demanding a cause (ie. a temporal property) for an atemporal being is speculation: no counterexample exists to show that atemporal "things" need causes, so the inductive rule holds only for temporal reality.
 
 4. There could be limits to God's power.
-     - We are limited by time and space, yet the origin of the universe can't be limited by time nor space - meaning God is not limited by time nor space.
+     - We are limited by time and space, yet the origin of the universe can't be limited by time nor space (as it transcends them) - meaning God is not limited by time nor space.
          - We are unable to conceive of a reality beyond time and space, so it is impossible for us to conceive of limits to God's power - especially with the vastness, tuning, and intelligence required to create the universe indicates that He could have made it any way He wanted.
          - It is impossible for us to rationally define a limit to the power of a being that is atemporal and non-physical; from our vantage point, this power is functionally infinite.
      - In short: speculating on limits without evidence doesn't refute the inference.
@@ -83,22 +84,24 @@ Observations
          - Time, as we experience it, is linear and progresses asymmetrically.
          - Every thing that has a beginning has a preceding cause.
          - Consciousness can't be reduced to purely physical components.
+
     Specific Observations
          - The universe is observed to have a fundamental beginning, which requires a trigger to cause its existence (as something can't come from nothing).
              - It would also require the trigger to be something that is fundamentally not the universe.
          - All things are contingent, originating from something else that is not the thing:
-             - Chickens and eggs come from each other, except for the first egg, which came from a non-chicken.
-                 - Animals come from other animals, except for the first animal, which came from a non-animal.
-                     - Life comes from other life, except for the first living thing, which came from a non-living thing.
-                         - Temporal things are made from other temporal things, except for the first temporal thing, which came from a non-temporal thing.
+             - Chickens and eggs come from each other - except for the first egg, which came from a non-chicken.
+                 - Animals come from other animals - except for the first animal, which came from a non-animal.
+                     - Life comes from other life - except for the first living thing, which came from a non-living thing.
+                         - Temporal things are made from other temporal things - except for the first temporal thing, which came from a non-temporal thing.
                              - Our laws of causality are inferred from events within time, so they can't be applied to a reality that may exist outside of time.
                              - In other words, all things are contingent on something else that is also contingent, except for the universe itself, which is contingent on something that isn't contingent itself.
-         - Unseen aspects like laws of physics, mathematics, and consciousness operate independently of physical constraints yet govern or emerge within them.
+         - Unseen "things" like laws of physics, mathematics, and consciousness operate independently of physical constraints yet govern or emerge within them.
              - The universe's order and laws apply universally, suggesting a source not limited by the spatial or temporal boundaries it creates.
+
 The Deduction (and why)
  - God transcends time and space.
      - If the universe is temporal and spatial, and the source of the universe must fundamentally be a non-universe, then the source of the universe must be atemporal and aspatial.
-     - If God is the source of the universe, and the source of the universe is atemporal and aspatial, then God must be atemporal and aspatial.
+     - If we define "God" as the source of the universe, and the source of the universe is atemporal and aspatial, then God must be atemporal and aspatial.
      - This has a number of implications:
          - God is eternal, experiencing no past, present, or future: He simply is (but not like how we imagine someone frozen in time, where they can't do anything).
          - God is immaterial, as he is not composed, caused, or governed by physical processes.
@@ -106,29 +109,34 @@ The Deduction (and why)
              - Not to mention that God would be the one to invent the reality of causation to begin with.
          - God is limitless/infinite, as any limit we can conceive of is structured within time and space - which He inherently transcends.
              - As such, no temporal terms/concepts/language can be applied to God without introducing inconsistencies.
+
 Addressing Objections and Alternatives
 1. There is no such thing as "atemporality" and "aspatiality".
      - If you've inferred that all created things fundamentally come from something different (taken from "all inferences have limits"), as well as the fact that reality only operates under a specific set of finely-tuned parameters, then the deduction that the universe must be caused by something that isn't the universe necessarily follows.
         - The universe is fundamentally composed of a spatial dimension and a temporal dimension - all space for all time. 
         - Therefore, it must have originated from an atemporal and aspatial source, to be consistent with your inferences.
         - To claim something like "atemporality doesn't really exist because we can't experience it" is like saying "gravity doesn't really exist because we can't experience it": in both cases, we infer that the effects must have come from some unseen fundamental cause, to which we're simply identifying/putting a name to it.
+
 2. God could be part of time and space, perhaps as an advanced being within a larger cosmos.
      - This claim makes God akin to an advanced alien, who could potentially have the technological power to simulate a reality that we all experience.
          - As such, this would make God contingent on prior causes.
          - This being would not then be identified as God to begin with, as this alternative explanation doesn't resolve the fundamental question of the universe's fundamental cause.
+
 3. The concept of existing "outside time and space" is meaningless, as we can't comprehend what that means.
-     - Firstly, it is a false equivalence to equate the limits of our understanding to the limits of reality, if you've previously inferred that "perception, memory, and reasoning are imperfect and subject to error".
-     - Secondly, transcendence is not meaningless because we can still define it by what it's not, if you've previously inferred that "things are identified (or known) by distinguishing their properties from others".
+     - Firstly, it is a false equivalence to equate the limits of our understanding to the limits of reality - if you've previously inferred that "perception, memory, and reasoning are imperfect and subject to error".
+     - Secondly, transcendence is not meaningless because we can still define it by what it's not - if you've previously inferred that "things are identified (or known) by distinguishing their properties from others".
          - If you're inferred that "all things are contingent on their causes (that are not the thing)", then you must infer that the origin of anything you observe must have an origin that is fundamentally not the thing.
          - If the universe is fundamental temporal and spatial, then its source must be atemporal and aspatial.
          - Note that this understanding doesn't require complete knowledge of how transcendence works in totality, it merely identifies fundamental properties that are useful for us to understand.
              - This is like our current understanding of quantum mechanics: we don't currently know what causes the collapse of the wave function, nor do we have a means to know if it's deterministic or indeterministic, yet we can still develop cutting-edge technology based on the little that we do know.
+
 4. If God is outside of time, how can He cause an event in time, like the universe's beginning?
      - A more encompassing and useful question would be, how could God create the universe without prior "materials"?
          - God is transcendent, so we can't project our notions of causality onto Him.
          - As such, the "how" is incomprehensible to us - we would first need the capacity to explore atemporality in the same way an atemporal being could.
              - This is akin to knowing about "infinity": we may be able to rationalize and define "infinity", but we can never truly wrap our minds around comprehending it to its full extent.
-             - We can only visualize infinity by its relationship to the numbers we can conceive of (ie. numbers can be increased without end, so "infinity" is that limit if we could do so).
+             - We can only visualize infinity by its relationship to the numbers we can conceive of (ie. numbers can be increased without end, so "infinity" is that limit - if we could do so).
+         - As a result, this is a paradox: we are incapable of answering this question given our incapacity to test atemporal phenomena, yet we know it must have occurred given that the universe must have had a beginning (that isn't the universe).
 -------
 
 3. God wanted the universe to be created exactly as it is.
@@ -142,7 +150,8 @@ Observations
          - Intelligence correlates with success and purposeful/conscious complexity.
          - There is a seen reality, and an unseen reality.
          - We fear death, yet we will all die.
-         - Reality could have been different
+         - Reality could have been different.
+
     Specific Observations
          - If the universe depends on precise tuning to exist, and the tuned values could have been different, then the universe could have been different.
              - Destruction is an easier task than creation and maintaining order, so these tunings exist despite that pattern.
@@ -150,35 +159,42 @@ Observations
              - The universe is unique in that, while everything else must be contingent on another contingent thing, the universe itself must be contingent on something that is non-contingent itself.
          - All things are intelligible under a teleogical (goal-oriented) framework, including biological structures (like our eyes and organs), physical structures (like the Earth and stars), and logical structures (like epistemology and fallacies).
              - Even metaphysical concepts can be seen teleologically, such as our own consciousness and our innate drive to search for our purpose.
+
 The Deduction (and why)
  - God wanted the universe to be created exactly as it is.
      - If the universe could have been different, and God consciously created the universe, then God could have wanted the universe to be different.
          - In other words, the universe is a product/result of God's will: He must have willfully/intentionally chosen this universe to exist as it does.
          - Additionally, if reality tends towards disorder and requires intelligent care to maintain its order, then the universe's maintenance must also be reduced to God's will.
      - This means that God intentionally created us, and with the desire to know our purpose (ie. to know what is wanted of us).
+
 Addressing Objections and Alternatives
 1. There is no governing will: it's all just random development.
      - To use the concept of "randomness" is to remove "purpose", "will", and "determinism" from the system, regardless if they are there or not.
          - For example, when we say that a coin toss is "random", we're saying that "we are ignoring the determining factors and looking at trends" of the coin toss.
-     - As such, the universe could both be random development and guided by a governing will, without contradiction, as the governing will could be choosing to create phenomena that we would classify as "random".
+     - As such, the universe could both be random development and guided by a governing will, without contradiction, as the governing will could be choosing to create phenomena that we would classify as "random" (from our own limits).
          - Even if we assume that there is a contradiction, then this claim is less supported by our inferences than the claim that there is a will, especially "intelligence correlates with success and purposeful/conscious complexity" in light of "reality tends to progress from order to disorder" and "all things are contingent on their causes (that are not the thing)".
+
 2. God could have wanted a different universe, with this one being an accident/error or some subconscious action - or, He only created the initial conditions without knowing how they evolve over time.
      - If God has such transcendent power to create the vast universe without prior "materials", and that destruction is an easier task than creation, then if God had so willed, He could have more easily destroyed this universe than to have created it.
-         - If God is beyond time (ie. He sees the entirety of the universe's timeline all at once), then we can't conclude that God can somehow be surprised by what He creates (ie. He creates something He didn't know would happen) - which this claim requires in order to be true.
-             - Furthermore, if the universe was created subconsciously, not only would this mean that God is somehow unaware that the universe exists, but it would also require some parallel force that God is not aware of (akin to how we are consciously unaware of what our brains do).
-             - This means that this "God" we were defining was actually this "atemporal brain" all along - which reduces this claim to "the universe was created by some unconscious process, not a conscious creator".
+         - If God is beyond time (ie. He sees the entirety of the universe's timeline all at once), then we can't conclude that God can somehow be surprised by what He creates (ie. He creates something He didn't know would happen in the future) - which this claim requires in order to be true.
+             - Furthermore, if the universe was created subconsciously, not only would this mean that God is somehow unaware that the universe exists, but it would also require some "higher" or "parallel" force that God is not aware of (akin to how we are consciously unaware of what our brains do).
+             - This means that this "God" we were defining was actually this "passive atemporal brain" all along - which reduces this claim to "the universe was created by some unconscious process, not a conscious creator".
              - As such, there is no basis for this claim - see "God possesses power and intelligence that encompasses all of reality" for the more complete explanation.
-         - If God has the knowledge and intelligence to know how His creations function, while also having the power to make it function any way He wants, then there is no basis to conclude that God can be surprised by anything He creates.3. This is just the Anthropic Principle: we only observe a fine-tuned universe because we couldn't exist to observe it otherwise.
-     - While this theory certainly addresses an observational bias in why we observe our specific conditions, its limit is still set at explaining the fundamental question of causality.
+         - If God has the knowledge and intelligence to know how His creations function, while also having the power to make it function any way He wants, then there is no basis to conclude that God can be surprised by anything He creates.
+
+3. This is just the Anthropic Principle: we only observe a fine-tuned universe because we couldn't exist to observe it otherwise.
+     - While this theory certainly addresses an observational bias in why we observe our specific conditions, it's still limited by being unable to explain the fundamental question of causality.
          - It's like saying we won some cosmic lottery: just because we're here to see it doesn't explain how or why the lottery was set up at all.
          - As such, the Anthropic principle is true within a temporal context, but does not address the source of that temporal context.
      - This means that God's will is a more encompassing explanation (as God would have authored the Anthropic Principle to begin with) - addressing both the source of our phenomenal consciousness and why the universe exists as it does to begin with.
+
 4. If reality is contingent, then it must operate according to its cause - meaning it couldn't have been different.
      - Our "could be different" observation comes from two sources:
          - Applying hypothesis and reasoning with the fine-tuning of the universe, allowing us to visualize what could occur according to the inferences and laws we know, if they were different.
          - Recognizing that what the universe is contingent on is fundamentally atemporal, meaning we can't project our understanding of cause and effect into that transcendent scope.
      - As such, this statement is misunderstanding where the "possible difference" is actually located, as the source of the difference must be transcendent (ie. what caused the universe to occur) rather than within the universe.
          - A more precise statement would be, "if reality is contingent on a transcendent cause, then it can't operate any differently than what that transcendent cause requires".
+
 5. If God wanted the universe "exactly as it is", why did He choose to do it?
      - This requires a different approach - a different source of information to answer - which is addressed in future nodes.
          - When we ask "why" of anything, we're really asking , "what is its purpose?", or, "for what reason is it wanted?"
@@ -208,13 +224,14 @@ Observations
          - The universe operates under unchanging, discoverable laws that apply universally without exception or contradiction.
              - These laws remain consistent over time, allowing predictions and scientific progress.
          - The concept of "change" is a temporal concept, as it requires a difference between "before" and "after".
-             - "Consistency" is the opposite of "change", as something without a different between "before" and "after" remains unchanging.
+             - "Consistency" is the opposite of "change", as something without a difference between "before" and "after" remains unchanging.
 
 The Deduction (and why)
  - God is consistent.
      - If "change" requires time to occur, and God is beyond time, then God is beyond change.
-         - This also means that God doesn't "change His mind", as we do, when we are surprised or learn about a better approach to something.
+         - This also means that God doesn't "change His mind", as we do - when we are surprised or learn about a better approach to something.
      - Reality's laws are observed to be consistent, which can only reflect the consistency of their creator (as a fundamentally changing/chaotic agent would not be capable of creating long-term consistency).
+
 Addressing Objections and Alternatives
 1. Consistency is just a human projection onto reality: we can't identify God's properties by it.
      - If consistency was limited to perception, everyone would perceive different things.
@@ -224,7 +241,8 @@ Addressing Objections and Alternatives
      - For us to be able to infer God's properties from reality, we need to ask, "what properties would a universe-creator need to create our universe?"
          - This question comes with the observation that a creation's properties reflects the knowledge and abilities of its creator, as we've already inferred that "intelligence correlates with success and purposeful/conscious complexity".
              - The strength of a house reflects the architectural knowledge of its creator; the realism of a painting reflects the creator's eye for detail, etc.
-         - As such, if the universe is fundamentally consistent, then its creator must have the capacity to create consistency - otherwise, if its creator was fundamentally inconsistent, then he wouldn't have the focus to produce consistent creations.
+         - As such, if the universe is fundamentally consistent, then its creator must have the capacity to create consistency - otherwise, if its creator was fundamentally inconsistent, then he wouldn't have the focus necessary to produce consistent creations.
+
 2. If God is consistent, why does reality include apparent paradoxes, like quantum randomness?
      - Firstly, paradoxes occur at the limits of our knowledge because we observe behaviors that our inferred laws don't fully explain.
          - This requires further study and guided observation to resolve - as opposed to a "contradiction", in which it can never be resolved.
@@ -233,7 +251,7 @@ Addressing Objections and Alternatives
              - According to this inference, it is inconceivable for reality to possess a contradiction.
      - Secondly, to address quantum behavior: even though we can't predict the outcome of a single quantum event, the statistical probabilities that model quantum systems are themselves consistent (ie. the rules of randomness are not random themselves).
          - This objection conflates unpredictability with inconsistency: while a single quantum event may be unpredictable to us, the statistical laws that govern quantum mechanics are incredibly stable and consistent.
-         - Furthermore, this inability fundamentally stems from ignorance on why the quantum wave function collapses, which means that, as of now, quantum randomness is a paradox, not a contradiction.
+         - Furthermore, this inability to predict quantum behavior fundamentally stems from ignorance on why the quantum wave function collapses, which means that, as of now, quantum randomness is a paradox, not a contradiction.
 
 3. God's consistency implies predictability, limiting omnipotence.
      - This is misapplying what we mean by "consistent":
@@ -244,7 +262,7 @@ Addressing Objections and Alternatives
          - We initially started by making observations of reality, and reducing the complexities to consistent rules that we noticed.
          - This consistency that we noticed is observed to be fundamental/structural - some abstract law that independent systems seem to follow, even though those systems are incredibly complex and diverse.
       - As such, God's consistency doesn't contradict His power - especially since we're observing His consistency by means of how He chooses to use His power!
-         - A good analogy is the game of chess: its are perfectly consistent and never change, but these unchanging rules allow for a near-infinite number of unique and creative games.
+         - A good analogy is the game of chess: its rules are perfectly consistent and never change, but these unchanging rules allow for a near-infinite number of unique and creative games.
          - Similarly, God's consistent nature is the foundation from which a vast diversity of actions and creations can originate - meaning His consistency is the source of His reliable power, not a limit upon it.
 
 4. Wouldn't a miracle be an act of inconsistency?
@@ -264,6 +282,7 @@ Observations
          - Everything that has a beginning has a preceding cause.
          - Reality has a universally applicable set of fundamental laws.
          - Reality tends to progress from order to disorder.
+
     Specific Observations
          - If the universe had a beginning and came from a transcendent source, then it must have been created without pre-existing materials by some transcendent means.
          - Reality is comprised of more than just physical objects, as it also includes:
@@ -276,14 +295,18 @@ Observations
              - The fact that reality persists moment to moment, despite the natural tendency toward disorder, suggests an active, ongoing "force" is required to sustain its existence and order.
                  - Without this sustained order, reality would collapse into chaos, as even minor deviations in fundamental constants would prevent the formation of matter, stars, or life.
                  - This "force" would be unseen and manifest at the smallest/deepest level of reality, comprising all things and the unseen structure between them.
+
 The Deduction (and why)
  - God's will is the fundamental material of reality.
-     - If the universe was created from a state of non-existence with no pre-existing matter, and God is the transcendent source, then the "substance" of creation cannot be temporal or physical: it must derive from something atemporal and non-material
-         - And, as there is nothing fundamentally else except Him, this "substance" can only be God's will
+     - If the universe was created from a state of non-existence with no pre-existing matter, and God is the transcendent source, then the "substance" of creation cannot be purely temporal or physical: it must derive from something atemporal and non-material.
+         - And, as there is nothing fundamentally else except Him, this "substance" can only be God's will.
+     - Therefore, we can interpret "reality = God's will" at a fundamental level.
          - This will is not a physical material like atoms or energy but the foundational "stuff" from which reality emerges: an atemporal force that imposes order, laws, and purpose onto what would otherwise be chaos or non-existence.
+         - This also means that the purpose of our phenomenal senses is to translate God's will into our awareness.
      - Consequently, the consistent laws of nature we observe are a direct reflection of God's unchanging will, while the ongoing persistence of reality against disorder demonstrates His sustained intentionality.
          - This means that reality is not self-sustaining or accidental, but rather a direct expression of God's consistent will and completely dependent on it.
          - This is also the reason that allows us to infer God's necessary properties from the structure of reality.
+
 Addressing Objections and Alternatives
 1. Science explains reality through fundamental laws and matter, without needing a "will" as material: this is just a God-of-the-gaps argument.
      - Firstly, science reduces to making inferences (using math, logic, etc.) that are useful enough that allow us to make predictions that come true, and you don't need to know everything in order for a science to be useful.
@@ -291,20 +314,22 @@ Addressing Objections and Alternatives
          - This is universally applicable, as you don't need to know how something fundamentally works: you don't need to have a PHD in math in order to make a circle or a wheel, or to have a PHD in logic to know that "apples are not rocks", etc.
          - As such, to make this statement more accurate: "science is useful in our lives without knowing how reality fundamentally operates".
      - Secondly, a quick aside into the God-of-the-gaps argument (that unexplained phenomena are due to divine intervention, rather than scientific understanding):
-         - This argument presupposes its premise (that reality is explained by science without needing God), as it challenges the claim that whatever we know occurs because of science, while whatever we don't know must occur because of God (ie. the more we know about reality, the less God is involved).
+         - This argument presupposes its premise (that reality is explained by science without needing God), as it challenges the claim that whatever we know occurs because of science, while whatever we don't know must occur because of God (ie. the more we know about reality, the less God is necessary to explain it).
              - The popular example of this is when Isaac Newton was discovering his laws of gravity, he would notice minor variations that his math could not explain, so he attributed those variations to God Himself - yet we can now explain those variations with Einstein's theories of relativity.
          - However, this claim has no basis: if reality truly is shaped by God, then both what we know and what we don't know are governed by His will.
              - As such, it would be wrong to assume that unexplained phenomena are due to divine intervention rather than scientific understanding, but not because all things can be explained without God, but rather because all phenomena can be explained with divine intervention, including what is known.
      - To conclude: just because we can benefit from science without knowing the full picture doesn't mean the full picture doesn't exist.
          - Science is the study of reality, while God's will is the explanation for why science functions the way it does: there is no contradiction between the two.
+
 2. This sounds like pantheism or panentheism, where God is identical to or infused in the universe in some way.
      - Not necessarily, as God is still transcendent: if the universe didn't exist, that doesn't necessitate that God doesn't exist - only that we won't exist to discover Him.
          - There is no basis for this inference, as we don't observe creators fundamentally becoming what they create.
          - This would be like saying an author is the book itself because the story is entirely composed of his creativity, or that he needs to physically become the ink and paper in order to compose a story.
+
 3. If God's will is the fundamental material of reality, does this mean our wills are fully determined by God, undermining our inferred capacity for free choice?
      - So far, this node focuses on the relationship between reality and God's will as a whole, without addressing the specifics of our wills yet or what free agency means - this is discussed further in a future node.
          - For now, this raises an open question that must be carefully framed to avoid premature conclusions. The dilemma reduces to:
-             - If God's will determines everything, then our wills are actually determined by God - meaning that our wills aren't actually "free".
+             - If God's will determines everything, then our wills are actually determined by God - meaning that our wills aren't actually "free" (from determinism).
              - But if we have "free" will, then it would need to be "free" from being determined by a prior cause - seemingly conflicting with God being the cause of all things.
           -  This becomes significant because, if we don't have "free" will, then that appears to conflict with our prior inferences about morality, justice, and responsibility - how can our choices be considered "good" or "bad" if we don't have a choice in our actions? How can we be held accountable to them if none of us can choose otherwise?
      - As such, the question fundamentally reduces to: can God determine/cause/create something that is indeterministic or atemporal?
@@ -324,26 +349,31 @@ Observations
          - There is a seen reality, and an unseen reality.
          - "We have a disposition for having a purpose and feeling wanted".
          - Reality could have been different.
+
     Specific Observations
          - We can't empirically observe God...
              - ... Yet we can still use reason to define Him, and seem predisposed to do so.
              - ... Yet we have in us a disposition to want to know our purpose in life, feeling an existential loneliness otherwise.
              - ... And He wanted reality to be that way.
+
 The Deduction (and why)
  - God is intentionally subtle.
      - If God transcends time and space with encompassing power and intelligence over all reality, and wanted the universe exactly as it is, then His presence must be deliberately veiled.
      - Otherwise, if He wanted Himself to be known in the same way as we know rocks and apples exist, then that is how reality would be.
+
 Addressing Objections and Alternatives
 1. Isn't this claim unfalsifiable? Any amount of evidence for God can be cited, while any lack of evidence is just re-interpreted as "subtlety."
      - No, as all these claims depend on the premises we've observed: if God wanted the universe to be as it is, and His will is the fundamental "stuff" of reality (see parallel nodes), then any emergent property of that universe must be intended as well.
      - This argument (as well as all other deductive arguments) doesn't stand on its own: if these premises are wrong, or if the whole logical structure is not correct (in which case, you'll have a problem with all these nodes, not just this one), only then could this claim be challenged.
+
 2. If God gave us the disposition to seek Him, why not just reveal Himself more plainly, instead of us having to rely on reason?
      - This question can be reduced to, "why did God make reality like this?"
          - As such, it will be addressed more thoroughly in the following node.
      - To summarize: if God endowed us with both reason and will, and put us in a world where we can choose not to believe in Him, then this world must be a test for us to see what we'll choose to do and if we'll use our reason properly.
+
 3. What if God is just hiding, and none of this matters?
      - The fact that we experience a universe where God is not empirically obvious, yet we are still driven to seek Him by use of reason, contradicts the idea of a completely hidden creator.
-         - If God has ultimate power, and He wants this world to be the way it is, then if He wanted to be completely hidden, no one would believe in Him.
+         - If God has ultimate power, and He wants this world to be the way it is, then if He wanted to be completely hidden, no one would believe in Him or even know about Him.
          - If God has ultimate power over reality, and we exist within reality, then He has complete power over us: if He wanted to, he wouldn't have given us that drive to seek Him.
 -------
 
@@ -363,11 +393,13 @@ Observations
          - Proper reasoning corresponds with reality.
          - Reality is ordered, operating on consistent and intelligible laws.
          - Truth is associated with good, while falsehood is associated with evil.
+
     Specific Observations
          - Proper reasoning leads to the truth.
          - What is true = what is real.
          - What is real = God's will.
          - Proper reasoning corresponds with reality.
+
 The Deduction (and why)
  - Truth and proper reason correspond with God's will.
      - If "truth" is defined by "what is real", and "God's will" defines "what is real", then "God's will" defines the "truth".
@@ -376,27 +408,32 @@ The Deduction (and why)
          - To implement proper reasoning is to align our minds with His will.
      - This also means that rationalizing falsehood is an act that does not correspond with God's will...
          - ... Which allows to discover that God is not the author of confusion.
+
 Addressing Objections and Alternatives
 1. Truth and reason are human constructs: different cultures and individuals have different "truths", so they can't correspond to a universal God's will.
      - This claim contradicts with our inferences - especially "what is real = what is true" - as there are no observed contradictions in reality (but we do observe contradictions in human thought).
          - If a "truth" differs between different cultures, yet both occur, then there is some "unifying truth" or linguistic variation that explains both of them.
          - If a "truth" differs between different cultures, yet one or neither actually occur, then it can't be considered "truth" just because a large group of people do.
          - If a "truth" differs between different cultures, and it refers to a metaphysical claim, then this whole process will need to be applied to both of them to see which is more valid.
+
 2.1. Is something true because God wills it, or does God will it because it is true? (The Euthyphro Dilemma for truth)
      - Something is true because God wills it.
          - "God wills it because it is true" would either be circular reasoning or tautological (depending on how you look at it), as God defines what is true.
          - This is really saying "God wills it because it is true, and it is true because God wills it" - or, more fundamentally, "God wills it because He wills it".
+
 2.2. So then, isn't God's will arbitrary (meaningless and subjective, as it follows no objective standard)?
      - This is a false dilemma, as it is a category error to apply the standards of God's creations onto Himself.
          - If God is the one who defines what is true, then it is both objectively and subjectively true: objective in that it is real and true, and subjective in that this truth is relative to God.
      - As such, none of this implies that God's will is meaningless or without purpose - quite the opposite, actually.
          - A will, by definition, is what defines purpose in something: for example, if I bake a cake for others to eat it, then its purpose is to be eaten.
          - If reality is a manifestation of God's will, then reality itself must be purposeful by definition.
+
 3. If truth and reason correspond with God's will, why do they sometimes lead to conclusions that seem to contradict religious claims?
      - This will be addressed more thoroughly in future nodes, but to summarize:
          - If there is a True religion, then there cannot be any contradictions between it and reality, as both are authored by God and He is necessarily consistent.
          - As such, if there are any apparent contradictions, it can only be for one of three reasons: because you lack the humility to change your mind/heart towards the truth, or because you don't have all the information required to realize that there's no contradiction, or because the religion you're following is actually false.
          - Therefore, in order to know the answer to this question, you need to be equipped with a methodology that is grounded in reality that allows you to distinguish between the 3 options (which this whole process aims to do).
+
 4. If truth corresponds to God's will, and people do evil things, does this mean God wills evil things to be true?
      - This will be addressed more thoroughly in future nodes, but to summarize:
          - Reality can only occur as God intends - so, if evil occurs, then God must have allowed its existence.
@@ -426,6 +463,7 @@ Observations
          - Morality does not necessarily correlate with our intentions and behavior.
          - Truth is associated with good, while falsehood is associated with evil.
          - We have a disposition for having a purpose and feeling wanted.
+
     Specific Observations
          - God is subtle: He created a reality where His existence is not empirically forced upon us, yet He is still discoverable through proper reason and humility...
              - ... In a reality (that He created) where there are alternative approaches with false beliefs.
@@ -438,6 +476,7 @@ The Deduction (and why)
  - God gave us a will to choose the values that govern how we live our lives.
      - If we can choose between believing in God and not believing in God, and He intentionally created us that way (such that our belief is not coerced), then He allows us the capacity to pursue falsehood if we choose to use our reason improperly.
      - And, if reality is a mixture of good and evil, and we can choose which moral systems to accept, then God also allows us to pursue good or evil as we wish.
+
 Addressing Objections and Alternatives
 1. If God's will is the fundamental material of reality, and everything is contingent on it, then how can we have a genuine will to choose - wouldn't all choices be predetermined by God's will?
      - Firstly, let's ground ourselves in God's necessary properties - specifically, His transcendence (atemporality and spatiality).
@@ -454,18 +493,20 @@ Addressing Objections and Alternatives
          - This also aligns with our inference that "consciousness can't be reduced to purely physical components"...
              - ... Which also suggests that the source of our phenomenal awareness is the same source as that of our wills.
      - So: we witness our own capacity for choices, the knowledge that reality that is temporal and atemporal (and seen and unseen), and the knowledge that God's will encompasses all of that reality...
-         - ... While simultaneously being unable to comprehend atmporality, hierarchies within atemporality, or their integration with our wills in an atemporal context.
+         - ... While simultaneously being unable to comprehend atemporality, hierarchies within atemporality, or their integration with our wills in an atemporal context.
      - Therefore, this is a paradox, not a contradiction - its source being our inability to comprehend atemporality.
          - This understanding actually resolves common misunderstandings with predestination and destiny:
             - Destiny is how one is currently oriented - a temporal perspective.
             - Predestiny is how one is ultimately oriented - an atemporal perspective.
             - Both exist and refer to the same phenomenon, only differing on the temporal/atemporal perspective by which you view it.
+
 2. This sounds like assuming free will exists just because we feel it does - what if it's an illusion, and all is determined by emergent physical causes?
      - This question conflates what's real with what you feel: even if you were only a brain in a jar right now (such that all stimuli are artificially produced - or, in other words, an emergent illusion), you can still distinguish multiple levels to your will that appear to transcend what is physical.
          - If you can distinguish between volition and compulsion, then you have identified that there is some component of your will that is internal, not external.
          - If you can choose not to satisfy or pursue some internal desire, then you have identified that there is some component of your will that is more fundamental than that of your internal, physical desires.
          - If you can distinguish between your capacity to choose when in a dream, hallucinating, or drunk in some way, versus when you're not, then you have identified that there is some component of your will that appears relative to your level of consciousness.
      - Furthermore, the relationship between phenomenal awareness and our wills seem to have a really convenient harmony: this understanding is able to provide a naturally-driven explanation that an illusionary claim does not have.
+
 3. Why would God give us this will if it allows for evil and suffering - couldn't He have made us automatically choose good?
      - If God intentionally created everything, including our wills to choose between good and evil, then there is some purpose to our ability to choose (as defined in previous nodes: "will = purpose").
          - This seems to be tied to God's subtlety, as if God was empirically apparent to us at all times, we would be less compelled to make a wrong choice when the right choice is so sensually obvious.
@@ -504,7 +545,7 @@ Observations
          - A "religion" is a way of life that is governed by a set of beliefs and values.
          - We are created with the capacity to choose between different religions...
              - ... In a world where false religions are real options.
-             - This choice is not coerced: even if we feel compelled to believe in something, we can still choose what to believe internally.
+             - This choice is not coerced: even if we feel compelled to believe in something externally, we can still choose what to believe internally.
          - Any True religion will be fundamentally founded on using proper reason to believe in God.
              - "Fundamental" here means that the religion's core appeals and invitations can be reduced to proper reasoning - thus allowing it to be distinguished from falsehood in this subtle reality.
                  - Appeals to emotion or intuition can exist, but they must operate within the framework of proper reasoning, not as a substitute for it.
@@ -525,10 +566,9 @@ The Deduction (and why)
          - This means that we can expect the True religion to transcend comfort and culture, as it guides towards what is right and true.
 
 Addressing Objections and Alternatives
- 
 1. What if there is no "True" religion - what if God doesn't have a specific purpose for us, or doesn't care how we live our lives?
      - This objection is inconsistent with the properties of God we have already deduced from reality.
-         - If we know that God has ultimate knowledge and power and wanted the universe to be created as it is, then that contradicts the claim that God is "indifferent".
+         - If we know that God has ultimate knowledge and power and wanted the universe to be created as it is (including us, and our desire for purpose), then that contradicts the claim that God is "indifferent".
              - If God was indifferent to His creation, then to Him, the universe as it is now would be meaningfully equivalent to any other universe (in which we wouldn't be alive) that He could have created.
              - If reality is sustained fundamentally on God's will - in a reality that requires active maintenance to fight against its tendency towards disorder - then He is intentionally maintaining reality, which contradicts what we would expect from a fundamentally indifferent God.
          - Without a prescriptive purpose, our dispositions toward morality, justice, and meaning would be unexplained anomalies: why would God create beings who yearn for a purpose that doesn't exist, or who can distinguish good from evil without an objective standard to align with?
@@ -615,7 +655,6 @@ The Deduction (and why)
          - As a result, the True religion will not demand that we believe in contradictions: any claims about unseen things must be logically consistent with the principles inferred from observable things.
 
 Addressing Objections and Alternatives
- 
 1. Religion is about faith in the unseen, not empirical facts. You can't test spiritual truth with physical reality.
      - This objection creates a false dichotomy between faith and reason, assuming they are inherently opposed, but it overlooks how faith can be rational and grounded in reality without requiring empirical coercion.
          - If things are identified by distinguishing their properties from others, and proper reasoning corresponds with reality, then spiritual truths (unseen realities) must be distinguishable from falsehoods through their consistency with seen realities.
@@ -632,7 +671,7 @@ Addressing Objections and Alternatives
              - Contradictions have depth because justifying them requires an infinite regress of explanations, or fundamentally appealing to emotion rather than correspondence with proper reason.
          - A "mystery" is a paradoxical gap in our knowledge that is beyond our limited human comprehension, which is expected to happen (as we've inferred that "perception, memory, and reasoning are imperfect and subject to error").
          - A "contradiction" is where the distinguishable difference between two things is also shared by them (like a square triangle), which cannot happen in the True religion.
-         - If a religion does not provide a meaningful distinguishing factor between "mysteries" and "contradictions", then it is fundamentally indistinguishable from a false religion, as any falsehood's "contradiction" can now be justified as a "mystery".
+         - If a religion does not provide a meaningful distinguishing factor between "mysteries" and "contradictions", then it is fundamentally indistinguishable from a false religion, as any falsehood's "contradiction" can now be justified as a "mystery" - without detection.
      - Ultimately, transcendence enhances correspondence: unseen claims build on seen foundations logically, ensuring the framework interprets reality accurately without demanding belief in impossibilities.
          - If no correspondence were needed, the True religion would be unverifiable, making it equivalent to any false one that invokes "mystery" to evade scrutiny - contradicting God's subtlety (which allows discovery through reason) and our capacity to distinguish good (truth-aligned) from evil (falsehood-aligned).
 
@@ -694,7 +733,6 @@ The Deduction (and why)
      - As such, even though falsehood may be more prevalent than truth, it shows that humble, iterative reasoning will necessarily converge on the Truth, aligning with God's subtlety in allowing Himself to be discoverable without coercion.
 
 Addressing Objections and Alternatives
- 
 1. This sounds like a bias. Since all religions claim to be the "true" one, yet they fundamentally rely on faith in something unseen, isn't this "distinguishing" process just a way to rationalize a pre-selected belief?
      - This objection conflates blind faith with rational faith, forgetting that for faith to be valid, it requires rational assessment of a source's trustworthiness.
          - If truth is defined by reality (not feelings nor intuition), and proper reasoning corresponds with reality, then the distinguishing process is objective: religions can be tested against contradictions with observations and inferences - rather than starting from a pre-selected belief.
@@ -763,7 +801,6 @@ The Deduction (and why)
      - This also means that the True religion can be interpreted as being embedded in the fabric of existence itself, distinguishable through properties that anyone can identify with proper reasoning.
 
 Addressing Objections and Alternatives
- 
 1. If the True religion is truly accessible to everyone, why do so many people follow false religions or reject religion altogether? Wouldn't accessibility imply universal agreement?
      - This objection conflates accessibility with acceptance:
          - "Accessibility" means that the opportunity to know is present, not that the conclusion is automatic or coerced.
