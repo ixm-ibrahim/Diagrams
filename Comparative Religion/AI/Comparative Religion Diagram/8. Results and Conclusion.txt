@@ -80,6 +80,120 @@ This project functions as that progressive filter, where each section adds a set
 
 
 
+------------------
+The Sieve of Truth
+------------------
+
+This project began with a simple question: How can we distinguish between truth and falsehood?
+ 
+Here is the sieve we built:
+ 
+    1. Pursuit of Truth: truth is external to me and anchored in reality, not my preference. If I am unwilling to be corrected, then I'm not pursuing truth but my own affirmation.
+    2. Discovering Reality: we observe stable patterns in reality - with limitations. Truth is neither identical to nor blocked by perception: it is found by iterative, consistent inference.
+    3. Building Confidence: no claim can justify itself by assuming itself: any method that can "prove" falsehood can't be used to verify truth.
+    4. Defining God: if the source of reality is defined as "God", and our purpose defined by "religion", then we can deduce:
+          - God possesses ultimate power, transcendence, intelligence, awareness, and will.
+          - The True religion corresponds to God's will, distinguishes mysteries from contradictions, and requires faith founded on reason.
+    5. Alignment with Reality: comparing various worldviews to these inferences and deductions results in:
+          - Rejection of Atheism and Polytheism
+          - Possibility of Trinitarianism - only if it has superior historicity to all other candidates, and only when also inferring that "inferring about reality doesn't lead to spiritual truth".
+    6. Historical Comparison: comparing the historicity of the New Testament (source of Trinitarianism) and the Quran (source of pure Monotheism) results in:
+          - New Testament's historicity requires speculation to be strong.
+          - Quran's historicity requires speculation to be weak.
+     7. Non-Fundamental Comparison: comparing the theology of Christianity (religion of the New Testament) and Islam (religion of the Quran) results in:
+          - Christianity appears more like a corruption of Islam.
+          - Islam appears more like a correction of Christianity.
+ 
+As the end of this process, the conclusion is not simply "Islam is true", but more specifically: if the goal is to distinguish truth from falsehood, and if we refuse methods that make fabrication indistinguishable from falsehood, and if we refuse methods that make fabrication indistinguishable from truth, then the remaining candidates must be the one that maximizes correspondence with reality, coherence, non-circular confidence, and historically constrained authority. Based on the evidence (shown previously in each section of the project), the only candidate that satisfies all this is Islam.
+
+
+------------------------
+The Cost of Disagreement
+------------------------
+ 
+You can disagree with the conclusion. But now you aren't forced to disagree vaguely: you can now validate any disagreement by identifying which filter you reject - and what that rejection forces you to accept instead. Below is the sieve again, but with the cost of disagreement at each step:
+
+1. Pursuit of Truth
+ - If you reject this:
+     - You are saying that truth is not defined externally: "reality" is [fundamentally] subjective and not something you have to submit to, nor can anyone else decide what your "truth" is.
+ - What you must commit to:
+     - If the truth is not decided externally, then it must be decided internally - meaning that conflicting beliefs are equally "true" for different people.
+     - You can no longer say other beliefs are "wrong" (except that you "don't like it"): they are simply living their truth, just like you.
+ - Why this matters:
+     - You no longer distinguish truth from falsehood; you only distinguish what you affirm from what you reject.
+
+2. Discovering Reality
+ - If you reject this:
+     - You are separating truth (or its accessibility) from reality and awareness.
+ - What you must commit to:
+     - Either:
+         a. speculation can count as truth
+         b. truth is unattainable in principle
+ - Why this matters:
+     - If either occurs, then a liar has the same [epistemic] authority as a truthful person: both appeal to unverifiable information, and all claims become equally undefeated.
+
+3. Building Confidence
+ - If you reject this:
+     - You are equating assertion, sincerity, or strength of belief with justification and proof.
+ - What you must commit to:
+     - You now must accept the validity of:
+         a. circular/baseless justification
+         b. confidence built on ignorance and speculation
+ - Why this matters:
+     - Fabrication and lies become indistinguishable from truth, because fabricators and liars can build closed loops too.
+
+4. Defining God
+ - If you reject this:
+     - You are separating the definition (ie. fundamental understanding) of God from correspondence with reality.
+ - What you must commit to:
+     - Theological contradictions can now be treated as mysteries, protecting any false belief from being identified as such.
+     - Faith can now be separated from reason.
+ - Why this matters:
+     - If mysteries are indistinguishable from contradictions, then no theological claim can ever be identified as false, for faith can now occur without (or against) reason - leaving deception without a mechanism for detection.
+
+5. Alignment with Reality
+ - If you reject this:
+     - Either:
+         a. you reject a previous inference
+         b. you've inferred something not mentioned above that opposes the deduced conclusions
+ - What you must commit to:
+     - Either:
+         a. speculation can refute or prove claims
+         b. open, blind rejection of clear observation
+         c. reality does not lead to metaphysics
+         d. you have knowledge not mentioned here
+ - Why this matters:
+     - If no additional [non-speculative] inference is found to oppose these conclusions, then both speculation and blind rejection can be used to justify both truth and falsehood.
+     - Otherwise, valid inferences are needed to prove these claims.
+
+6. Historical Comparison
+ - If you reject this:
+     - Either:
+         a. the evidence is wrong, or some is missing
+         b. you reject the process of building confidence in historical claims, specifically traceability and/or resistance to fabrication
+ - What you must commit to:
+     - If evidence is wrong, then it requires proof, or a competing explanation that encompasses the same data - without appealing to speculation.
+     - Otherwise, you accept the validity of:
+         a. trusting or rejecting unknown links, simply based on speculation
+         b. circular/baseless authentication
+ - Why this matters:
+     - True revelation becomes indistinguishable from fabrication, as fabricated sources depend on trusting unknown links and accepting circular/
+baseless authentication. 
+
+7. Non-Fundamental Comparison
+ - If you reject this:
+     - Either:
+         a. the evidence is wrong, or some is missing
+         b. you reject the relevance or process of assessing theological coherence
+ - What you must commit to:
+     - If evidence is wrong, then it requires proof.
+     - Otherwise: you accept that comparative coherence doesn't apply to theology, as the results only appear that way due to your own ignorance - which can never be resolved.
+ - Why this matters:
+     - Internal coherence is no longer required as a metric for a religion's truth - meaning that the internal claims of false religions are equally valid, for the falsehood is masked by ignorance of the fullness of the truth.
+
+At every stage, disagreement is possible - but the pattern is consistent, where the cost of disagreement is usually the same: you must grant falsehood the same priveleges as truth - or, reject the process itself, which requires the identification of an alternative - which dissolves the original question.
+
+
 ----------
 Conclusion
 ----------
