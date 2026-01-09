@@ -1,0 +1,246 @@
+
+The word "arbitrary" feels obvious, but it quietly carries multiple meanings in real arguments. The same is true of need (as in, “this needs an explanation”) and purpose (as in, “this has no purpose”). When these meanings aren’t made explicit, words can keep their emotional familiarity while losing fixed meaning - allowing arguments to borrow the emotional/intuitive force of an “obvious” word without earning it rationally - making claims sound stronger than they really are. The same term can be heard one way and used another way, people can end up disagreeing while talking past each other, and listeners may agree with a version of the claim the speaker never actually defended.
+
+This appendix does 2 things:
+     1. It gives [phenomenologically] grounded definitions for the relevant meanings of "purpose", "explanation", "need", and "arbitrary" (with examples as needed).
+     2. It shows how common objections to the project use these terms, what they implicitly commit to, and how those commitments are addressed by the project’s results.
+
+*Reminder of Phenomenological Grounding*
+ 
+Before assessing any claim or argument, we need to ensure our definitions are explicit and sound - and to define anything, we need to make sure that all terms are properly grounded [phenomenologically]. A term is grounded when its meaning is traceable to something we can directly recognize in experience [phenomenologically], such as "ouch", "trying", "remembering", "seeing", "being surprised", "resistance", "effort", "up", and so on.
+
+But many of the words we use in arguments are not referring to these "internal" experiences. Rather, they refer to the "external" side of experience - things we don't access [phenomenologically], but can still recognize by how they show up to us. So, an external term is grounded when its meaning is traceable to a stable feature of experience that we can also point to, such as "independence from my will" (things that occur whether I want to or not), "regularity" (it always or often happens the same way), "dependence" (one thing always follows another), and so on.
+
+With that grounding is place, we can now define the key terms used in common objections - so that each definition stays traceable to what it is meant to refer to, disagreements become precise and clear to everyone, and meaning can be grounded in a way that anyone can understand.
+
+*Definitions*
+
+Purpose
+     - What something is for - the "why" something matters, in the sense of its direction, goal, or intended end
+     - 2 possible meanings:
+          - Phenomenological/Intentional: the "end"/"direction" that is defined by your "aim" (ex. I reach for a cup "to drink water", I bake a cake "to feed guests", etc.)
+          - Non-Phenomenological/Functional: the "end"/"direction" that is not defined by your "aim" (ex. this key is "for that lock", this cake is "to be eaten", etc.)
+
+Explanation
+     - An answer to "why" (ie. the "what" of purpose) or "how" (ie. a causal chain of "why"s)
+     - 3 possible meanings:
+          - Causal: what is the cause?
+          - Intentional: what is someone's goal (ie. their will/aim)?
+          - Rule/pattern-based: what rule/pattern fits this behavior?
+
+Need
+     - An unavoidable pull; where X can't occur without Y
+     - 5 possible meanings:
+         1 - Survival: "X needs Y to survive (or exist)"
+         2 - Psychological/Personal: without X, I won't feel comfort or assurance
+         3 - Causal: given X, Y will occur regardless (whether you want it or not) - or, Y cannot occur unless X occurs
+         4 - Explanatory: to finish answering a question (ie. "if we stop here, the question isn't answered")
+         5 - Methodological: [logical] consistency is not achieved unless the rules/standards are followed (ie. "if the rules aren't followed, the conclusion is not valid")
+
+Arbitrary
+     - Lacking purpose
+     - 7 possible meanings:
+         1 - Subjective/Preference/Whim: something that occurs because of preference, not an external standard (ex. "I painted my room green because I like it")
+         2 - Accidental/Uncaused/Meaningless: something that lacks both preference and an external standard
+         3 - Lack of Integrity/Principle/Consistency: ad hoc rescue; falsely changing the rules (when confronted with a contradiction) in order to protect a claim
+         4 - Lack of Explanation: something that lacks an answer to explain its behavior
+           - Random (which itself has 3 possible meanings):
+         5      - Unpredictable: when outcomes consistently do not align with expectations with certainty (ex. the outcome of a coin toss, with certainty)
+         6      - Lack of Pattern/Undefinable: when there is no greater identifiable pattern or connection (ex. static noise)
+         7      - Lack of Purpose/Uncaused: same as Accidental definition
+
+*Common Arguments*
+
+1. "Purpose does not require a will."
+ - Equivalent Phrases
+     - "Purpose is emergent without needing any real will behind it."
+     - "Purpose can be purely functional - no mind is required."
+ - Intended Claim
+     - The concept of "purpose" does not imply an agent with a will: things can have functions (or be goal-directed) without being intended by anyone.
+     - As a result, inferring a "will beyond reality" from what is only perceived "purpose" is a category error: it invalidly requires "will" when only "purpose" is known.
+ - Required Commitments
+     - Either:
+          - The claim that "purpose only comes from my own will" - which means that "there are no external wills (that we can know of) that affect reality".
+          - The claim that "some purposes don't have wills".
+          - The claim that "purpose is just in the mind" - or "purpose itself doesn't ontologically exist" - thus eliminating the requirement for "will" altogether.
+          - The claim that "reality doesn't need 'purpose' to explain it" - thus eliminating the requirement for "will" altogether.
+ - How the Project Addresses These Commitments
+     - "There are no external wills (that we can know of)."
+          - Firstly, we define "causation" as the relationship between "my will" and certain "changes in reality" (ex. how your body moves, new thoughts that emerge, etc.) - and this is the only [phenomenological] grounding/observation we have for the concept.
+               - In other words, our direct observation of "cause" depends on a "will" and an "effect".
+               - Note that we are not [phenomenologically] aware of any will besides our own.
+          - Secondly, we observe "cause-and-effect" occurrences in reality (ex. water causing plants to grow, planets orbiting the sun because of gravity, other people reacting to what happens around them etc.).
+          - As a result, we have two options:
+               - Because we do not observe a "will" behind "cause-and-effect" occurrences, there must not be one - or, we can never know if there is one. These depend on the claim that "perception = reality", as if we can't perceive an external will, then it cannot exist or even arrive at knowing if one does exist.
+               - Because we have direct access to the "behind the scenes" of our own "cause-and-effect" occurrences, then there must be a "will" behind all others.
+          - This project rejects the "perception = reality" claim (see the Discovering Reality section) - making the "existence of an external will" claim a better fit with our observations.
+               - If you reject the existence of an external will, then you either accept that "perception = reality" or reject that "cause-and-effect" occurrences exist (or can even be observed) - meaning that you will need to define some other explanation that is a better fit with our observations of reality.
+     - "Some purposes don't have wills."
+          - This requires an epistemological distinction between a "purpose with will" and "purpose without will" - meaning, you must have observed some purpose that you know lacks a will.
+               - If this observation reduces to "perception = reality", see the response to the previous commitment.
+               - Otherwise, this needs to be proven: what observation (ie. source of information) did you make where you noticed that some purposes don't have wills?
+     - "Purpose is only in the mind."
+          - See the third objection.
+     - "Reality doesn't need 'purpose' to explain it."
+          - See the fourth objection.
+
+2. "The universe is arbitrary/has no purpose."
+ - Equivalent Phrases
+     - "There is no purpose to the universe."
+     - "Everything is arbitrary/meaningless."
+     - "Purpose is a human illusion."
+ - Intended Claim
+     - The universe - including human existence - doesn't have a "purpose", for there is no ultimate, conscious will that could have caused its existence.
+ - Required Commitments
+     - There is no explanation for the universe's existence.
+          - This means that no purpose for the universe can be identified, whether ontologically (ie. none exists) or epistemologically (ie. we can never find out).
+     - A will beyond the universe does not exist.
+          - If "purpose" comes from a "will", and there is no "purpose", then there is no "will".
+     - We've previously identified an intelligent will beyond the universe by connecting "reality is ordered" (despite "reality tends to progress to disorder" and "reality could have been different") to "intelligence correlates with purpose/consciousness".
+          - If these inferences are grounded in phenomenological awareness of your own will, intelligence, and pattern recognition (of the same effects in reality's structure), then this argument also must commit to the rejection of your own will, the link between intelligence and order, and/or the process itself of defining reality's structure from pattern recognition.
+ - How the Project Addresses These Commitments
+     - "No purpose for the universe can be identified", and "there is no will beyond the universe."
+          - The inferences in this project can be used to identify universal purpose, so this claim requires proof (ie. identifying the invalid inference/deduction and supplying an alternative that fits reality more encompassingly).
+     - "I reject the identification of my own will, the link between intelligence and order, or the idea that I can accurately define reality from my own awareness."
+          - If you reject phenomenological awareness of your own will - something that is felt/known, not argued - then you lack the capacity to identify others in reality.
+          - If you don't recognize the link between your own intelligence and order, then an external will can never be used to abductively explain reality's order.
+          - If you reject the process of defining reality itself, then see the Cost of Disagreement section in the project's conclusion for further commitments.
+
+3. "Purpose is a human illusion/false projection."
+Equivalent Phrases
+     - "Purpose only exists in the mind/imagination."
+	 - "Meaning is imagined, not real."
+ - Intended Claim
+     - The idea of "purpose" is purely psychological (ie. anything having "meaning" is only us falsely projecting "purpose" onto reality), not ontological (ie. not real).
+     - Applying what is in the imagination to reality is a category error, for imagination does not necessarily describe reality.
+ - Required Commitments
+     - Either:
+          - The validity of the "if I can't [phenomenologically] feel/know/observe X, then it doesn't (or can't) exist" argument.
+          - The argument that "purpose exists only in the imagination, and so external/ontological purpose does not exist."
+              - Based on the "universe is arbitrary" claim, this also claims that there's no external will (in which, further commitments are addressed in that section).
+              - Imagination encompasses both what exists in reality and what does not, so the argument for this claim needs to align with their distinction.
+ - How the Project Addresses These Commitments
+     - "If I can't phenomenologically feel/know/observe an external will (like I can with my own), then it doesn't (or can't) exist."
+          - This line reasoning of equates perception with reality, which redefines "truth" to be relative to your perception (rather than an independent reality).
+          - As such, this doesn't distinguish between truth and falsehood, for false perception exists - allowing falsehoods to be justified using the same argument.
+          - If you reject defining truth by reality (ie. claiming that false perception does not exist), then you either reject our capacity for knowing any truth, or you accept that truth is entirely subjective - see the Cost of Disagreement section in the project's conclusion for further commitments.
+     - The argument for "purpose only exists in the imagination" needs to align with "false imaginations" rather than "true imaginations".
+          - The distinction between true and false imaginations is whether or not they are observed in reality. Moreover, the distinction between true and false imaginations that cannot be seen or comprehended (as with metaphysical concepts) is whether or not there exists a rationally grounded definition.
+               - The definition of an "external will" is derived from applying pattern recognition between the ordered, external effects in reality (from the precedent of our own internal wills) and the external order of reality (which - from the only example we have with our own wills - can only be explained by coming from another will).
+               - Moreover, the only meaningful [phenomenological] definition for "reality" is anything that resists our will - which coherently explains this definition.
+          - So, for this claim to be a better fit than the results of this project, it will need to provide a rival definition for "reality" - one that still distinguishes between reality and perception - while also showing that the link between our phenomenal wills and reality can't be used to explain the reality that we don't will.
+               - If you reject the distinction between reality and perception, then it's the "if I don't feel X, it doesn't exist" argument - see above.
+
+4. "Reality doesn't need purpose/will to explain its behavior."
+ - Equivalent Phrases
+     - "The laws of physics just are."
+     - "The universe just is - no deeper explanation is required."
+ - Intended Claim
+     - Either:
+          - "Reality" can be rationally and completely understood without appealing to God (ie. some transcendent, conscious creator) for the answer.
+          - "What do we observe in reality?" is a more meaningful question than "why does reality exist?" or "what is reality's source?".
+ - Required Commitments
+     - Either:
+          - The validity of the "it just is" argument (ie. no further explanation is needed to answer the question).
+               - If you allow "it just is" to also answer any question (like "why do apples fall?" or "why do I feel pain?"), then this claim rejects the concept of external purpose/causation for all things - for there is no cause or explanation that is behind anything we phenomenally experience.
+               - Otherwise (if you can ask "why" for simpler questions, but not for reality itself), then the requirements for asking "why" to any question needs to be established first, before addressing this claim.
+                    - Given that "purpose" comes from "will", then the only limit to asking "why" is to "will" itself (ie. it is a category error to ask, "why did the will do that?")
+          - The question being addressed is, "what is the ultimate source of reality?" - and as such, responding to this with, "no answer is needed" is really saying, "the question is formulated wrong: it is a category error to associate 'source' with 'reality'."
+ - How the Project Addresses These Commitments
+     - "There is no external purpose/causation."
+          - The only phenomenological observation we have of "causation" is our own wills affecting the reality we observe. As a result, it is the only rational precedent/ possibility for how reality exists is (ie. by some external purpose/causation) - meaning that a rational answer to the question of "reality's source" does exist.
+          - As a result (given the existence of a rational answer for this question), this claim's line of reasoning does not distinguish between truth and falsehood, for falsehood can be justified in the exact same way (by countering a rational explanation with the rejection of the need for an answer).
+          - If you reject the concept of "reality's source" when a rational explanation exists, then arguing that reality "just is" is simply a preference to not answer the question - not a rational claim to be addressed.
+     - "It is a category error to associate 'source' with 'reality' (ie. 'reality' is not a thing that can rationally have a 'source')."
+          - We derived the concept of "reality's source" from inferring "everything that begins comes from a source" (the ontological form of "all information comes from a source") and applying that principle to reality, as we also deduce that the universe had a beginning.
+               - Moreover, if "ontological nothing" exists, then it is irrational to claim that "the universe came from nothing", for the universe literally wouldn't have come from anything to begin with.
+               - So, if we can't apply the "every inference has a limit" inference to reality with the "the universe came from nothing" claim, then it must have come a "something" that is fundamentally a non-universe - ie. neither space nor time.
+          - As a result, the claim of "reality has no concept of a source" is not the best-fit explanation, as the "reality does have a source" claim is rationally grounded.
+               - If you reject the concept of "reality's source" when a rational definition exists, then arguing that reality "just is" validates a form of reasoning that does not distinguish between truth and falsehood (for all falsehoods lack rationally grounded definitions).
+
+5. "This whole process is arbitrary: you chose the rules that conveniently lead to your conclusion."
+ - Equivalent Phrases
+     - "You picked this process because you like it/it leads to the conclusion you want."
+     - "Other epistemologies are equally valid."
+ - Intended Claim
+     - This project lacks integrity, arbitrarily cherry-picking a set of rules and observations - hiding what is essentially whim/preference.
+     - There are so many other approaches to truth, and this particular one was chosen just to make it seem like the conclusion is valid - when others wouldn't agree.
+ - Required Commitments
+     - Either:
+          - This project implements double standards - as in, the rules it derives are only selectively applied.
+          - All epistemologies (ie. approaches to truth) are equally valid.
+          - Another epistemology is better than this, and - out of the project's lack of integrity - has been omitted from the analysis.
+ - How the Project Addresses These Commitments
+     - "This project applies double standards" or "another epistemology is better than this".
+          - This will have to be proven (ie. identifying the double standard or better alternative) - otherwise, the claim reduces to "I don't agree, so it must be wrong".
+     - "All epistemologies are equally valid".
+          - This claim depends on the definition for "valid":
+               - If "valid" means "[logically] consistent", then that is precisely the same condition this project aims to uphold - and if that condition is challenged by this claim, then this claim is actually a double standard (ie. critiquing the project's rule for consistency, yet selectively allowing it for this claim).
+               - If "valid" means "sufficient", "meaningful", or some form of "it just is" (ie. the feeling of "good enough"), then see the "Reality doesn't need purpose/will to explain its behavior" section - as well as the Cost of Disagreement section in the conclusion.
+          - So, if you reject the project's implementation of consistency, it requires proof.
+
+6. "Randomness (and/or the laws of physics) better explain reality than God."
+ - Equivalent Phrases
+     - "The God-of-the-Gaps fallacy (ie. argument from ignorance): the more we know about reality and science, the less 'God' is required to explain it."
+     - "The universe could just be an emergent result of quantum fluctuations - this explains the universe just as well as (or even better than) God does."
+ - Intended Claim
+     - "Reality" can be rationally understood without appealing to God (ie. some transcendent, conscious creator) for the answer.
+     - The laws of physics explain reality just as well as God does - or even better, actually, because physics is testable and falsifiable, while God is not.
+ - Required Commitments
+     - An alternate explanation for reality equally (or with a better fit) explains reality.
+ - How the Project Addresses These Commitments
+     - "An alternate explanation for reality equally (or better) explains reality" and "the more we know about reality, the less 'God' is required to explain it".
+          - Firstly, the "laws of physics" are simply patterns in reality that we observe to occur without exception - and they are only meaningful within their context.
+               - Ex. Apples fall down, every time we try - except if its speed is greater than some value, in which it will either orbit or move away from the Earth. So, the inferred "law" is that "objects follow the path of some force (or forced path) we'll call gravity".
+               - As such, the subject of investigation would shift from "what causes apples to fall?" to "what causes gravity to function?", and neither of these arrive at a "fundamental cause" - which is what "God" claims to explain.
+          - Secondly, we did not derive our definition of "God" by looking at what we don't know - rather, we deduced God's definition from the inferences we do know. In other words, we didn't say, "we don't know ____, so it must be God" - rather, this project deduces, "God must be ____ because of ____ observation". And those deductions come from inferences that encompass all reality - just like laws of physics are inferred to encompass all reality.
+               - As such, the "God" explanation is not only meaningful for explaining what we don't know, but - more importantly - what we do know.
+               - Ex. Newton looks up in the sky and observes how the planets move according to God's plan/will. He discovers that they move predictably according to gravity, but doesn't know why their orbits have these strange variations that gravity doesn't explain. He deduces that God must be inserting those variations somehow - but note that this deduction does not eliminate the original claim: that the planets move according to God's plan/will.
+                - So, as "God" is claimed to be the fundamental cause/explanation of all things, any "law of reality" we observe is simply a discovery of how it manifests.
+          - As a result, to argue that "science explains reality as equally (or better than) God does" is to make a category error: if the "God" claim is understood properly, then all sciences and inferred laws are merely observed manifestations of God's will - meaning that "God" always explains reality at a higher level than any "law of reality" can explain.
+               - It's like saying "'falling down' explains the path of an apple just as well as 'gravity' does", which would be incorrect: they are at different levels of explanation (each within their own context) with the "gravity" explanation encompassing the "falling down" explanation - not contradicting it.
+               - So, if you reject the concept that God encompasses all laws of reality, then you either (see the Cost of Disagreement section for each):
+                    - Reject that laws are fundamentally inferred, not derived.
+                    - Reject the inferences that were made from reality.
+                    - Reject how "God" is derived from those inferences.
+     - Any variation of "quantum mechanics explains the fundamental cause of reality, so God isn't necessary".
+          - The fundamental behavior of quantum mechanics is decided by the "collapse of the wave function", by which there are two possibilities (and neither are confirmed, as both equally describe the data - see Appendix B): its randomness is truly fundamental (ie. it's indeterministic, lacking cause-and-effect - like the project's derivation of "will") or is a veil over some deeper behavior (ie. it's deterministic, possessing cause-and-effect - but we simply don't know how).
+               - Notably, both interpretations fit the "God" explanation as the mechanism/manifestation for God's will: if quantum behavior is indeterministic, then it would be fundamentally how God's will manifests into reality - and if it's deterministic, then quantum mechanics has still not reached the level of fundamental explanation.
+               - So, the "God" explanation still encompasses both cases - meaning that quantum mechanics does not explain reality at an equal or higher level.
+          - So, the claim that "quantum mechanics is a better explanation than God" is no different than the "laws of physics" argument - and because the fundamental behavior of the quantum wave function is currently unknown, to make an argument either way would be making a reverse argument from ignorance - using what we don't know to declare a metaphysical conclusion.
+
+7. "If God decides what is truth and He can do as He pleases, then His will is arbitrary."
+ - Equivalent Phrases
+     - "If things are true simply because God wills it, then 'truth' is subjective: just God's whim and ultimately doesn't matter."
+ - Intended Claim
+     - There is no external standard independent of God, so "truth" reduces to whatever God [subjectively] prefers.
+     - This makes "truth" arbitrary, as there is no "reason" for why anything is fundamentally true - and it could have been anything, if God so willed.
+ - Required Commitments
+     - Either:
+          - For "objective truth" to exist, then there must be an external standard above God.
+          - There is no "objective truth", if nothing is above God: it fundamentally reduces to God's subjective preference or power.
+          - God's will is fundamentally capricious - unguided by fundamental structure or consistency - as there is no external standard above God.
+ - How the Project Addresses These Commitments
+     - "For 'objective truth' to exist, then there must be an external standard above God".
+          - Firstly, this project identified "truth = reality", where "reality" occurs independently from our will/preference.
+          - Secondly, we defined "objective" to mean "relative to something external to us", and "subjective" to mean "relative to us".
+               - All of these terms are defined phenomenologically - defined by our involvement (or lack thereof).
+          - Thirdly, if "God's will" decides "reality", then "God's will" is the definition for "objective truth" - and "my will" is the definition for "subjective truth".
+               - In other words: "objective = God's will", and "subjective = my [phenomenological] will/preference".
+          - As a result, "objective truth" does not require a standard above God to exist
+               - If you reject "objective = God's will", then you are rejecting "truth = reality" and/or "objective = relative to something external to us" - see the Cost of Disagreement section.
+     - "'Objective truth' fundamentally reduces to God's subjective preference or power".
+          - If we define "objective = God's will" and "subjective = my will", then it is a category error to apply the concept of "subjectivity" to God (for He is not "me").
+               - However, if "subjective" is redefined as "relative to any will", and "God's will = God's preference and power", then yes: this claim is true.
+                    - In fact, with God, both objectivity and subjectivity can rationally apply without contradiction: "objective truth" is subjective, relative to God.
+                    - In other words: "objective truth" could have been different, if God had willed differently.
+           - As a result, this claim is only true if "subjective" is redefined to be "relative to any will" (not just "my" own) - which encompasses "subjective = my will".
+               - If you reject either of these definitions, then you are using a different epistemology than this project (or reject how definitions are identified phenomenologically) - see the "This Process is Arbitrary" argument and the Cost of Disagreement section.
+     - "God's will is fundamentally unguided by structure or consistency, as there is no external standard above God".
+          - Firstly, all definitions arise from phenomenological consistencies - see the entire Discovering Reality and Building Confidence sections.
+          - Secondly, if "reality = God's will", then His will necessarily possesses consistency.
+               - Note that the "God is consistent" claim is not arguing that "God's will must be monotonous or uniform in all things" - see the Defining God section.
+          - As a result, if God's will necessarily possesses consistency, then this claim becomes false.
+               - "No external/forced standard" does not imply "no standard at all" - God can choose to implement His will according to a standard of His choosing.
+                    - If you observe consistencies in reality but don't observe consistency in God, then this is an epistemological limit, not an ontological one (ie. a result of your ignorance or lack of awareness, not because it doesn't exist).
+               - If you reject this line of reasoning, then you reject the observation of any consistency at all (ontologically or epistemologically) - see all the linked sections above.

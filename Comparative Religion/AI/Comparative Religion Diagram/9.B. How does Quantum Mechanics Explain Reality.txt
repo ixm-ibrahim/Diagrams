@@ -1,0 +1,43 @@
+1. Ontological Determinsim
+
+In classical sciences, we already assume the world is ontologically deterministic (ie. inherently built on cause-effect relationships). We can epistemologically verify this by seeing if we can consistently predict observational results based on our theories of the initial conditions.
+
+
+2. Epistemological Randomness
+
+Based on that assumption, some behaviors (like weather) are ontologically deterministic but epistemologically probabilistic, as having epistemically perfect knowledge of the initial conditions is practically impossible. This means that some phenomena are more easily interpreted as random than as deterministic - just because it's impractical for us to see it otherwise.
+
+
+3. Quantum Behavior
+
+Then we get to quantum mechanics, where we notice two things:
+ 
+    1. Quantum behavior follows predictable trends when observing macroscopically, in which macroscopic outcomes are epistemologically probabilistic and ontologically deterministic (ie. given a random outcome, it must have followed a particular set of rules).
+ 
+    2. However, when detecting quantum particles individually, the results differ from the trends observed macroscopically. Furthermore, the outcomes don't correlate with any deterministic equation that we know of, rather their states are best predicted using a probabilistic approach.
+
+This means that the act/means of observation affects the state of the quantum system somehow, altering its behavior for some reason (possibly due to entanglement between the quantum system and the measuring apparatus).
+
+
+4. Possible Interpretations
+
+It is currently unknown what aspect of "observation" causes the quantum behavior to collapse from deterministic & macroscopic to a random & probabilistic. The options available to us are:
+
+    1. Ontologically random: this is it, there's nothing more meaningful to discover. While other theories (like gravity) don't fit with our understanding of quantum behavior yet - whatever it is - it will be reduced to being ontologically indeterministic.
+ 
+    2. Ontologically deterministic: while more intuitive, this requires non-local phenomena that doesn't fit with what we know on a classical level. While theoretically possible, all we know about it is that some behavior appears to correlate at a speed faster than light, which doesn't help narrow down a specific interpretation.
+
+
+5. Conclusion
+ 
+The core area of ignorance is about what exactly causes that collapse, and whether randomness is truly fundamental or a veil over deeper determinism. As such, the current understanding of quantum mechanics says nothing about which interpretation is correct, as both fit the data.
+
+However, despite our ignorance, our current understanding remains extraordinarily useful for modern technological advancements (such as transistors, lasers, MRI machines, and quantum computers), which rely on probabilistic predictions without needing a final ontological resolution.
+
+This is why the probabilistic model for quantum mechanics is portrayed as significantly successful:
+
+    1. We don't need to know how it really works in order to develop groundbreaking technologies.
+ 
+    2. Moreover, it will necessarily challenge some long-held belief about the nature of the world (either regarding inherent non-locality or inherent indeterminism).
+
+This exciting to both capitalist and secular audiences - which is why quantum mechanics is marketed as such in those societies.

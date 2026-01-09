@@ -88,6 +88,7 @@ This project began with a simple question: How can we distinguish between truth 
  
 Here is the sieve we built:
  
+    0. The Question: in a world where some things are true and others are false, how can we know which is which?
     1. Pursuit of Truth: truth is external to me and anchored in reality, not my preference. If I am unwilling to be corrected, then I'm not pursuing truth but my own affirmation.
     2. Discovering Reality: we observe stable patterns in reality - with limitations. Truth is neither identical to nor blocked by perception: it is found by iterative, consistent inference.
     3. Building Confidence: no claim can justify itself by assuming itself: any method that can "prove" falsehood can't be used to verify truth.
@@ -113,6 +114,15 @@ The Cost of Disagreement
  
 You can disagree with the conclusion. But now you aren't forced to disagree vaguely: you can now validate any disagreement by identifying which filter you reject - and what that rejection forces you to accept instead. Below is the sieve again, but with the cost of disagreement at each step:
 
+0. The Question
+ - If you reject this:
+     - You reject the relevance, importance, and/or coherence of the question itself
+ - What you must commit to:
+     - You reject the concepts of truth and falsehood - meaning there is no distinction between them
+     - Your own argument can't be true nor false
+ - Why this matters:
+     - If your own argument is neither true nor false, then it isn't a logical statement, to be addressed
+
 1. Pursuit of Truth
  - If you reject this:
      - You are saying that truth is not defined externally: "reality" is [fundamentally] subjective and not something you have to submit to, nor can anyone else decide what your "truth" is.
@@ -124,7 +134,9 @@ You can disagree with the conclusion. But now you aren't forced to disagree vagu
 
 2. Discovering Reality
  - If you reject this:
-     - You are separating truth (or its accessibility) from reality and awareness.
+     - Either:
+         a. You are separating truth (or its accessibility) from reality and awareness.
+         b. You claim that, because we can't observe all things, we can't know anything meaningfully.
  - What you must commit to:
      - Either:
          a. speculation can count as truth
