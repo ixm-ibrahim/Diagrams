@@ -11,7 +11,7 @@ Before assessing any claim or argument, we need to ensure our definitions are ex
 
 But many of the words we use in arguments are not referring to these "internal" experiences. Rather, they refer to the "external" side of experience - things we don't access [phenomenologically], but can still recognize by how they show up to us. So, an external term is grounded when its meaning is traceable to a stable feature of experience that we can also point to, such as "independence from my will" (things that occur whether I want to or not), "regularity" (it always or often happens the same way), "dependence" (one thing always follows another), and so on.
 
-With that grounding is place, we can now define the key terms used in common objections - so that each definition stays traceable to what it is meant to refer to, disagreements become precise and clear to everyone, and meaning can be grounded in a way that anyone can understand.
+With that grounding in place, we can now define the key terms used in common objections - so that each definition stays traceable to what it is meant to refer to, disagreements become precise and clear to everyone, and meaning can be grounded in a way that anyone can understand.
 
 *Definitions*
 
@@ -69,9 +69,9 @@ Arbitrary
           - Firstly, we define "causation" as the relationship between "my will" and certain "changes in reality" (ex. how your body moves, new thoughts that emerge, etc.) - and this is the only [phenomenological] grounding/observation we have for the concept.
                - In other words, our direct observation of "cause" depends on a "will" and an "effect".
                - Note that we are not [phenomenologically] aware of any will besides our own.
-          - Secondly, we observe "cause-and-effect" occurrences in reality (ex. water causing plants to grow, planets orbiting the sun because of gravity, other people reacting to what happens around them etc.).
+          - Secondly, we observe "cause-and-effect" occurrences in reality (ex. water causing plants to grow, planets orbiting the sun because of gravity, other people reacting to what happens around them, etc.).
           - As a result, we have two options:
-               - Because we do not observe a "will" behind "cause-and-effect" occurrences, there must not be one - or, we can never know if there is one. These depend on the claim that "perception = reality", as if we can't perceive an external will, then it cannot exist or even arrive at knowing if one does exist.
+               - Because we do not observe a "will" behind "cause-and-effect" occurrences, there must not be one - or, we can never know if there is one. These depend on the claim that "perception = reality", as if we can't perceive an external will, then it cannot exist, nor can we even arrive at knowing if one does exist.
                - Because we have direct access to the "behind the scenes" of our own "cause-and-effect" occurrences, then there must be a "will" behind all others.
           - This project rejects the "perception = reality" claim (see the Discovering Reality section) - making the "existence of an external will" claim a better fit with our observations.
                - If you reject the existence of an external will, then you either accept that "perception = reality" or reject that "cause-and-effect" occurrences exist (or can even be observed) - meaning that you will need to define some other explanation that is a better fit with our observations of reality.
