@@ -321,6 +321,69 @@ This exciting to both capitalist and secular audiences - which is why quantum me
 =====================================================================
 
 ---------------------------------------------------------------------
-Appendix D: 
+Appendix D: The Limits of Skepticism
 ---------------------------------------------------------------------
 
+
+
+
+=====================================================================
+
+---------------------------------------------------------------------
+Appendix E: Euthyphro's Dilemma
+---------------------------------------------------------------------
+
+Are things "good" because God wills is, or does He will what is "good"?
+ie. Did God create the standard of "goodness", or is it a standard He follows?
+ 
+This was originally a dilemma for polytheism, as the differing wills of the gods meant that "good" no longer has an objective basis: it's not a standard that they follow, but making the standard relative to any god's will would result in a contradiction with another god - who is equally demanding of worship. Which standard, then, do we follow, if we disobey a god either way - and there is no universal standard of "good" we can appeal to instead? This contradiction is apparent from the Religious Comparison section, as reality's consistency doesn't align with the narrative of differing wills.
+ 
+This is often seen as a dilimma for monotheists as well, resulting in a problem regardless of how the question is answered. If God is the decider of what is "good", then "good" is arbitrary and could have been anything - meaning if God wanted "cruelty" to be good, it would have been - and for no reason at all. But if God follows a standard of "goodness", then there exists a standard above God - meaning He is not "God" in the sense that He created and is in control of all things. In other words, monotheists must commit to either accepting that there is no distinguishable difference between a 'tyrant" God and a "good" God, or that God has some higher authority above Him - meaning that He isn't truly "God" to begin with.
+
+As such, this appendix serves to demystify the dilemma and ground it properly, assessing the validity of these commitments.
+
+
+*Definitions*
+
+Good: something desirable in its purpose
+     1. Efficiently Good: serves the purpose by which it was intended, or is an efficient means to achieve the desired result (like a tool)
+     2. Befittingly Good: possesses perfections proper to its nature
+     3. Selfish Good: of a nature to produce something desirable (independent of what's morally desirable)
+     4. Moral Good: pure and willful intentions and actions (relative to some objective standard)
+     5. Necessary/Sovereign/Supreme/Existential/Essential Good: "nature" of God by the befitting of His being, as everything He created is necessarily efficiently good and perfect (by definition of God being the Creator and nothing happens except by His will - the opposite of "arbitrary") - and as such, all creation is necessarily "good" in that it acts perfectly according to God's design (independent of moral eveil and what is desirable to us)
+	 
+Has opposite? (Evil: something undesirable)
+     1. Yes: it is evil if a thing does not fulfill the purpose it was created for
+     2. Yes: it is evil if something freely acts in a way unbefitting of its intended nature
+        No: a creation without will has no choice but to act perfectly befitting of its nature - it has no capacity to be evil (this includes will itself, as it has no choice but to exist)
+     3. Yes: it is evil if something produces undesirability
+     4. Yes: it is evil to act on impure intentions or actions (anything against the objective standard)
+     5. No: God's being is necessary (by definition), and His will is not arbitrary (in that He does something "randomly" or without will - see Appendix B) - whatever God creates or wills has a purpose (by definition of will or creation), and because His will is absolute, it has no choice or capacity to do anything except the purpose it was created for
+
+
+*Analysis*
+ 
+Premises
+     - Goodness refers to desirability and purpose
+     - There are many different kinds of "good"
+     - God is Good (necessarily and befittingly good)
+     - God wills whatever He wants, and whatever God wills (His creation) is good (necessarily and efficiently good)
+
+Test: "Good" needs to have the same meaning in both its uses in this question, so let's test each meaning and answer both sides simultaneously:
+     1. Efficiently Good: (yes/no) things are efficiently good because God wills them - God is the [necessary] standard for "goodness" here
+     2. Befittingly Good: (no/no) bad question, as God is befittingly good - and whatever He creates must "be"/"act" according to its purpose
+     3. Selfish Good: (yes/yes) not a contradiction, as whatever God wills is desirable to Himself by definition (this includes moral evil, as it serves some purpose in His design)
+     4. Moral Good: (kind of/kind of) bad question, as God allowed beings with free will the capacity for both moral goodness and evil - yet He prescribes them to act on moral goodness. So yes, God defines the line between moral goodness and evil AND He commands to do what is morally good - but moral evil has the freedom to exist under His will as well
+     5. Necessary Good: (yes/no) things are necessarily good because God is the one who willed them - which means that whatever God wills must be efficiently good according to His design
+
+
+*Conclusion*
+
+     - This question is ill-formed due to the ambiguity of its terms, and results in different answers once those terms are defined clearly.
+     - The first question is "yes" and the second is "no" as God is necessarily the standard for goodness and does not follow some external standard - and at the same time, He only prescribes what is morally good.
+     - This unpacks the intended dilemma for monotheists:
+          - If "moral evil" serves some purpose, then it is "necessarily good". And if God prescribes "moral good", then we now have a distinguishing factor between a "tyrant" God and a "good" God: a tyrant-god would prescribe "moral evil", whereas a good-God would prescribe "moral good".
+          - "God wills what He wants" does not mean that "God wills randomly" - meaning His will is not arbitrary.
+          - There is still no objective standard above God, as all standards begin with His will.
+     - This results in the question being a false dilemma for monotheists.
+     - See the following objections in Appendix B and in Defining God for further context.
