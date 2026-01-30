@@ -1,0 +1,81 @@
+Many objections to the results of this project effectively reduce to the skeptical argument:
+ 
+"You can’t really know X, because for all we know, some other unknown alternative could explain it better."
+ 
+At face value, this sounds humble: it acknowledges that our ignorance exceeds our knowledge. But notice what the objection is doing: it responds to a claim supported by evidence, defined constraints, or an articulated mechanism, without providing a competing explanation that has comparable evidence, constraints, or mechanism of its own. Instead, it appeals to the mere possibility of an imagined unknown, as if that is enough to defeat an argument. In other words, it smuggles in a new inference: "the possibility of being surprised by new information is a more rational stance than your knowledge - even when it lacks identifiable evidence".
+ 
+But treating this move as a valid refutation has a fatal consequence: it destroys rational preference. If an unconstrained "maybe" can defeat an evidence-based inference, then every claim - true or false - can be rejected by the same maneuver. The result is taking caution too far - leading to a method that collapses the difference between refuting a claim and merely not having certainty about it, effectively making truth and falsehood indistinguishable.
+
+For example, suppose you have a runny nose, cough, mild fever, and sore throat. A doctor says, "this is almost certainly a viral cold.” A skeptic can then reply:
+ 
+"You can't really know it's a cold, because for all we know, it could be some unknown disease that perfectly mimics cold symptoms."
+ 
+That reply sounds cautious, as it humbly allows for the possibility of more diseases than we know now - but it is actually not a refutation of the doctor's claim. It offers no constraint, no evidence, and no reason that the "unknown disease" is a live competitor rather than an imagined placeholder. If we allow that kind of possibility to defeat the inference, then the doctor can never diagnose anything - because for any observed symptom pattern, an unknown mimic is always imaginable. Even though medicine must remain open to rare or novel conditions to meet the expectation of new diseases, that openness is still managed through constraints (risk factors, prevalence, test results, red flags, differential diagnosis) - not by granting every imagination unknown equal weight.
+ 
+The project's results are simple: “it could be anything” is not a stronger explanation than one grounded in patterns and evidence It is unconstrained speculation: the objection is not "you failed to rule out a plausible rival" but actually "you failed to rule out the possibility of being wrong”. Without accompanying evidence and constraints, it's not skepticism anymore but hyperskepticism. Ignorance is used as a substitute for evidence, rather than as the normal remainder that exists after any finite inquiry. And any method that can reject evidence cannot distinguish truth from falsehood.
+
+This appendix does 4 things:
+     1. Defines what it means to “know” anything, and what it means to be "skeptical" of a claim.
+     2. Distinguishes the boundary between valid and invalid skepticism - preserving the ability to distinguish truth from falsehood.
+     3. Lists the ways in which skepticism can validly manifest, teaching how to test its validity.
+     4. Exposes how common objections to the project's results use skepticism incorrectly, and what they result in when framed properly.
+
+
+1. What does it mean to "know" anything? When something is "true" or "false", what does that mean?
+ - Knowledge
+     - To "know" something is to have awareness of some property or occurrence (whether "real" or an "illusion").
+     - Examples:
+         - "I know what an apple is" = "I have awareness of some set of properties that I call an 'apple'"
+         - "I know 2+2=4" = "I have awareness of a phenomenon where I put 2 sets of 2 objects together, and then suddenly I observe 4"
+         - "I know he is lying" = "I have awareness of some reality that contradicts the words he says"
+     - In other words, to "know" anything is not to have ontological omnicience (ie. knowing all things as they "really are"), but only to make any kind of identification or definition.
+ - Truth
+     - Knowledge is "true" when it corresponds with reality (not with feelings, intuition, or preference).
+     - Examples:
+         - The claim "apples exist" is true only if the identifying features of an apple can be observed.
+         - The claim "gravity causes apples to fall" is true only if the fundamental features of gravity align with the observation of a falling apple.
+         - The claim "he is trustworthy" is true only if his words do not contradict what occurs in reality.
+     - In other words, to know something is "true" is to have awareness of the fundamental features of some occurrence in reality.
+         - Note: context matters. "Apples exist" may not be true in the "Star Wars universe", and objects may not appear to fall in deep space, and someone can be trustworthy about one thing but a liar about another.
+ - Falsehood
+     - Knowledge is "false" when it contradicts with reality (not with feelings, intuition, or preference).
+     - Examples:
+         - The claim "square triangles exist" is false because no coherent definition can satisfy the constraints of both {3 sides} and {4 sides} at the same time.
+         - The claim "the Earth is flat" is false because {all observed properties of the Earth} contradicts with any definition made for a {flat Earth} - while being perfectly aligned with the definition for a {round Earth}.
+         - The claim "the liar is trustworthy" is false because "liars" are fundamentally defined by {words that contradict reality} while "trustworthy" is defined by {words that align with reality}, and those constraints are incompatible with each other.
+     - In other words, to know something is "false" is to have awareness that its defining features did not occur in reality.
+         - Note: context matters. A contradiction is only so when there is a conflict within the same context - a liar about apples can't be trustworthy about apples, but he could still be trustworthy about bananas.
+ - As a result, when we say anything is "true", we are not saying: "I know every feature about something". Rather, we are only saying: "I know enough features about something to identify it as real - ie. to distinguish it from competitors and contradictions". Since "enough" does not equal "all", this does mean that the scope of knowledge is always limited: there is always more that could be known - even about true things.
+ - But knowledge is also eliminative: as it grows, more alternatives are ruled out. What lies beyond that boundary are the eliminated contradictions, while what lies within that scope remains unknown - but still compatible with the truth. In other words, knowledge is a boundary of constraints: a shrinking circle that converges to a stable identification/definition (ie. truth), eliminates contradictory alternatives (ie. falsehood), and constrains what is unknown between known constraints.
+ - So when we are "skeptical,” this is the context it applies to: it targets and challenges what is known and their constraints.
+
+
+2. What does it mean to be "skeptical" of something?
+ - Skepticism
+     - To be "skeptical" of something is to doubt its alignment with reality, to lack verification of its constraints (ie. asking what would make the claim true or false, and what evidence or logic can distinguish it from its competitors).
+     - Examples:
+         - "I am skeptical that apples taste good" = "I doubt that my tasting of apples will align with how people enjoy their taste"
+         - "I am skeptical of the Earth being round" = "I have not seen enough evidence to constrain the {Earth's shape} to the full definition of {round}"
+         - "I am skeptical that he is telling the truth" = "I have not seen enough evidence to constrain {his words} with {what I know occurred in reality}"
+     - In other words, to be "skeptical" is not to reject a claim simply because unknowns exist, but to say: "I can’t constrain the presented evidence enough to rationally prefer the explanation over its competitors."
+ - Hyperskepticism
+     - To be "hyperskeptical" of something is to doubt its alignment with reality, regardless of the verification of its constraints (ie. being ambiguous about what would make the claim true or false, and what evidence or logic can distinguish it from its competitors).
+     - Examples:
+         - "I am skeptical that apples taste good" = "Even if I seem to like the taste of apples, it could be that my taste buds are malfunctioning, I could be dreaming, or my memory could be unreliable"
+         - "I am skeptical of the Earth being round" = "Even if the Earth looks round with my own eyes, it could be a simulation, a conspiracy, or some unknown phenomenon that perfectly mimics roundness"
+         - "I am skeptical that he is telling the truth" = "Even if his words seems to align with reality, it could be coincidence, or reality itself could be misleading in some unknown way"
+     - In other words, to be "hyperskeptical" is not to resolve doubt but to keep it alive by expanding the space of possibilities without adding new evidence - treating the general idea of being wrong as if it were evidence of being wrong.
+ - The Difference
+     - Knowledge
+         - Constraints are enough (or known) to distinguish the true claim from the false one
+         - "I have enough constraints to treat this as knowledge"
+     - Skepticism
+         - Constraints aren't enough (or known) to distinguish the true claim from the false one
+         - "I don't have enough constraints to treat this as knowledge"
+     - Hyperskepticism
+         - Constraints are never enough (or known) to distinguish the true claim from the false one
+         - "No amount of constraints can ever be enough to treat this as knowledge"
+ - In other words, "skepticism" preserves a claim's capacity to be "true", while hyperskepticism removes it - introducing the validity of ad hoc doubt.
+
+
+(WIP)
