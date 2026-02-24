@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="docTitle">Loading Map...</title>
+  
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="app-wrap" id="appContainer">
+    <header class="page-header" id="pageHeader">
+      <div class="header-top">
+        <h1 class="page-title" id="titleText">Loading...</h1>
+        <button class="chevron-toggle" id="chevronToggle" type="button" aria-expanded="true" aria-controls="headerCollapsible" aria-label="Collapse Header"></button>
+        <button class="btn-ui header-toggle" id="headerToggle" type="button" aria-expanded="false" aria-controls="headerCollapsible" aria-label="Toggle Menu">☰ Menu</button>
+      </div>
+
+      <div class="header-collapsible" id="headerCollapsible">
+        <div class="subtitle" id="subtitleText"></div>
+        <div class="header-bottom">
+          <nav class="nav-crumbs" aria-label="Breadcrumbs">
+            <a href="#" id="breadcrumbRoot">Home</a> 
+            <span class="sep" aria-hidden="true">›</span> 
+            <span class="current" aria-current="page" id="breadcrumbCurrent">Loading...</span>
+          </nav>
+          
+          <div class="search-group">
+            <div class="search-input-wrap">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" aria-label="Search map" />
+              
+              <button id="searchFilterBtn" class="search-filter-btn" type="button" aria-label="Search Options" aria-expanded="false">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+              </button>
+              
+              <div id="searchFilterMenu" class="search-filter-menu">
+			    <label class="filter-option">
+				  <input type="checkbox" id="toggleDeepSearch" checked>
+				  <span class="filter-text">Search deep contents</span>
+			    </label>
+			    <label class="filter-option">
+				  <input type="checkbox" id="toggleGlobalSearch" checked>
+				  <span class="filter-text">Search all pages (Global)</span>
+			    </label>
+			    <label class="filter-option">
+				  <input type="checkbox" id="toggleNestedSearch">
+				  <span class="filter-text">Search only current section</span>
+			    </label>
+			  </div>
+            </div>
+            <button class="btn-ui" id="themeToggle" type="button" aria-label="Toggle Dark Mode">🌙 Dark</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="map-container" id="mapContainer" role="main"></main>
+  </div>
+</body>
+</html>

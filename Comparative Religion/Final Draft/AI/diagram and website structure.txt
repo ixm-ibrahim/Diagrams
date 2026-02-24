@@ -1,0 +1,265 @@
+===============================================================================
+WEBSITE STRUCTURE SPEC (MINIMALIST, FRONT-FACING, DISAGREEMENT-NAV)
+===============================================================================
+
+CORE PRINCIPLE
+--------------
+Structure is the product. Content fills placeholders.
+Reader navigates by "duh" -> disagreement -> zoom into the exact link.
+
+PRIMARY GOAL
+------------
+Make every conclusion traceable with:
+- No hidden assumptions
+- Explicit move-type (what kind of reasoning step happened)
+- Explicit eliminations (what cannot be true if this is true)
+- Explicit unknown remainder (what this does NOT settle)
+
+SECONDARY GOAL
+--------------
+Keep cognitive load low:
+- 5–9 nodes per tier/section (hard cap)
+- 1–3 screens per node in default view
+- Deep dive is optional and contained
+
+VISUAL LEGEND (ALWAYS VISIBLE)
+------------------------------
+[COLOR] = Step/Tier number (primary orientation)
+NOTE: Move-type labeling is OPTIONAL and stays INSIDE nodes (not global UI).
+
+===============================================================================
+OBJECT MODEL (3 NESTED UI OBJECTS)
+===============================================================================
+
+(1) MAP PAGE  = a container showing 5–9 nodes at once (a tier view)
+(2) NODE CARD = one claim-unit (front face + collapsible internals)
+(3) DEEP DIVE = a node's derivation map (one page per node)
+
+RULE: Pages contain nodes. Nodes contain structure. Zoom opens deeper pages.
+
+Navigation modes:
+  (a) Atomic: step forward node-by-node (at the lowest level, with terminal nodes)
+  (b) Tree:   start high-level and expand only what you care about to the depth you want
+
+
+===============================================================================
+MAP PAGE TEMPLATE  (Page = a set of nodes)
+===============================================================================
+
+[PAGE HEADER — pinned, 1 screen max]
+  Title:        "# — Section Name"
+  Purpose:      1–2 sentences (what question this section answers)
+  Contract:     1 line: what counts as progress here
+  Legend bar:   [COLOR] step/tier indicator
+
+[PAGE NAV — constant]
+  Breadcrumbs:  Home > Section > (optional) Node
+  Search:       Find a claim / term
+  Jump list:    Disagreement hotspots (auto list of nodes with most objections)
+
+[PAGE BODY — the map]
+  Layout rule:  5–9 nodes visible (hard cap)
+  Grouping:     lanes/columns OR flowchart (whichever minimizes scanning and maximizes digestion)
+
+[CLICK BEHAVIOR]
+  Click node body  => opens NODE CARD (side panel/overlay)
+
+
+===============================================================================
+NODE CARD TEMPLATE  (Node = one claim + structured internals)
+===============================================================================
+
+NODE FRONT FACE (must be skimmable)
+-----------------------------------
+  [COLOR S#]  Node Title
+  Claim:     one sentence (no compound claims)
+  So-what:   one sentence (what this unlocks / what it forbids)
+
+  Primary action:
+    [ZOOM: DERIVATION MAP]  (one deep dive per node)
+
+  Quick jumps (anchors into the same deep dive page):
+    [OBSERVATIONS (INPUTS)] [RULE USED] [UNLOCKS] [ELIMINATES] [UNKNOWN] [OBJECTIONS]
+
+NODE INTERNALS (collapsible strips; no essays)
+----------------------------------------------
+  (1) OBSERVATIONS / INPUTS / DEPENDS ON
+      - 3–7 prerequisite node links (titles only)
+	  - "What we are starting from" (phenomenology-friendly)
+      - Each link has: [Jump to dependency in deep dive]
+
+  (2) RULE USED (internal-only; optional to show by default)
+      - 1–2 lines: what constraint makes this move valid
+	  - The minimum chain that gets from inputs → claim
+	      - No new sub-claims allowed; link out instead
+      - (Optional metadata tag: Identify / Infer / Deduce / Validate / Compare)
+
+  (3) OUTPUT / RESULT (restated with more context)
+      - 1–2 bullets clarifying the claim’s scope at this level
+
+  (4) UNLOCKS
+      - What this node allows future exploration of
+	  - Essentially "why this is important"
+      - 2–6 bullets, each:
+          "X allows exploration of Y because Z"
+
+  (4) ELIMINATES
+      - Concrete statements that cannot all be true with this node
+	  - Must be phrased in plain language
+      - 2–6 bullets, each:
+          "Alt X fails because dependency Y implies Z"
+		  etc.
+      - Each bullet has: [Jump to elimination-proof in deep dive]
+
+  (5) UNKNOWN REMAINDER (explicit boundary)
+      - What this node does NOT establish
+	  - Prevents overstated conclusions
+      - 1–4 bullets:
+          "Not concluded: ___ (reason: insufficient constraint / irrelevant)"
+      - Each bullet has: [Jump to boundary node in deep dive]
+
+  (6) OBJECTIONS / ALTERNATIVES (links only)
+      - Each objection must be classified (see OBJECTION TAXONOMY)
+      - 3–6 common objections as links
+      - Each link goes to the SAME deep dive page, focused on the objection lane
+      - No separate deep dives per objection
+
+  (7) TERMS / SOURCES
+      - only essentials needed for this node
+
+
+===============================================================================
+DEEP DIVE (DERIVATION MAP) TEMPLATE  (One per node)
+===============================================================================
+
+Purpose: show the internal structure of the node for readers who want proof-like visibility.
+
+Structure: equivalent to MAP PAGE template, with some additional sections
+
+[PINNED HEADER — always visible]
+  Target Node (same as parent node; semantically identical):
+    Title + Claim (1 sentence)
+
+  Parent-node summary pinned here (must match parent node):
+    Results (Output):      1–3 bullets
+    Eliminations:          2–6 bullets (titles only)
+    Unknown remainder:     1–4 bullets
+
+  Controls:
+    [Jump: Dependencies] [Jump: Elimination Proofs] [Jump: Boundaries] [Jump: Objections]
+    (Optional toggle) Show "Progress sidebar" (Known / Eliminated / Unknown)
+
+[MAP BODY — derivation only (no new conclusions)]
+  LANE A: Dependencies (what must hold)
+  LANE B: Derivation steps (how dependencies combine)
+  LANE C: Elimination proofs (why rivals fail)
+  LANE D: Boundaries / limits (why unknowns remain)
+  LANE E: Objections / alternatives (routes out)
+
+RULE: The terminal node in this map reproduces the Target Node exactly.
+
+[FOOTER]
+  Return to parent map
+  Next unlocked node (only if target holds)
+
+
+===============================================================================
+MOVE RULES (STANDARDIZED; SMALL SET)
+===============================================================================
+Move Types are fixed; Rules Used are fixed labels under each type.
+
+IDENTIFY (from observations → definition/recognition)
+- ID-Pattern: "This is X because it matches pattern P"
+- ID-Boundary: "This is NOT X because it violates boundary B"
+
+INFER (best explanation / probability update / constrained alternatives)
+- INF-BestFit: best explanation under constraints
+- INF-Update: evidence updates confidence (without certainty)
+- INF-Constraint: alternatives must be specified + constrained (no free skepticism)
+
+DEDUCE (logical entailment from premises)
+- DED-Entails: IF premises THEN conclusion
+- DED-Contradiction: contradiction forces rejection of at least one premise
+
+VALIDATE (coherence checks; category constraints)
+- VAL-Consistent: internal consistency check
+- VAL-Category: category error check (wrong type of claim)
+
+COMPARE (apply same constraints to two systems)
+- CMP-SameTest: identical test applied to both
+- CMP-Divergence: show where outputs diverge under same test
+
+===============================================================================
+OBJECTION TAXONOMY (STRICT; PREVENTS OBJECTION BLOAT)
+===============================================================================
+
+Every objection MUST be one of:
+
+(1) DEF DISPUTE
+    - "You mean X, I mean Y" / "Term is unclear"
+    - Action: link to glossary entry or create one
+
+(2) RULE DISPUTE
+    - "That inference/deduction is invalid" / "Wrong move type"
+    - Action: link to MOVE RULE and show which constraint fails
+
+(3) PREMISE DISPUTE
+    - "I reject dependency node #3" / "Input observation not granted"
+    - Action: link to that dependency node
+
+(4) CONCLUSION DISPUTE
+    - "I reject dependency node #3" / "Input observation not granted"
+    - Action: link to that dependency node
+
+Objection entries are short:
+- Title (one line)
+- One sentence header, with any supporting evidence for the objection
+- One link to dispute target, or if this is a terminal node, then the rebuttal
+
+
+===============================================================================
+MINIMAL CONTENT RULES (readable + precise)
+===============================================================================
+
+TEXT RULES
+  - One claim per node. No compound claims.
+  - Claim <= 25 words. So-what <= 25 words.
+  - Internals: links + short bullets, not paragraphs.
+  - Every eliminates bullet must point to a dependency used.
+  - Every node states at least 1 unknown remainder item.
+
+NODE COUNT RULES
+  - Map page: 5–9 nodes visible (hard cap)
+  - If exceeded: split into another map page/tier
+
+READER ENERGY RULE
+  - Skim page in <30 seconds: titles + claim + so-what only
+  - Everything else is on demand via collapsible strips + zoom
+
+NO-SMUGGLING RULE
+-----------------
+  - If the reader must accept a sub-claim for the node to work,
+    that sub-claim becomes its own node (dependency), not prose.
+
+
+===============================================================================
+TOP-LEVEL SITE SKELETON (Home)
+===============================================================================
+
+HOME MAP: "Project Results Overview"
+  [0] Introduction (not included in highest-level map)
+	  [1] Personal Investment
+	  [2] Discovering Reality
+	  [3] Building Confidence
+	  [4] Defining God
+	  [5] Alignment with Reality
+	  [6] Historical Reliability
+	  [7] Theological Comparison
+	  [8] Results / Conclusion
+  [9] Appendices (not included in highest-level map)
+
+RULE: Each Home node opens its Section Map Page (5–9 nodes)
+
+===============================================================================
+END SPEC
+===============================================================================
