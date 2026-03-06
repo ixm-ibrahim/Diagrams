@@ -94,7 +94,7 @@ button {
 
 .app-wrap {
   max-width: 1120px;
-  min-width: 450px;
+  min-width: 150px;
   margin: 0 auto;
   padding: 22px 18px 56px;
 }
@@ -450,7 +450,7 @@ body.is-focused .node-row:not(.is-active) {
 
 .map-spine {
   position: absolute;
-  left: 22px;
+  left: 31px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -472,12 +472,36 @@ body.is-focused .node-row:not(.is-active) {
 
 .node-row {
   display: grid;
-  grid-template-columns: 64px 1fr max-content;
-  grid-template-rows: auto auto;
+  grid-template-columns: max-content 1fr max-content; 
   column-gap: 6px;
   row-gap: 8px;
-  padding: 4px 0;
+  padding: 4px 0 0 0;
   position: relative;
+  
+  flex: 1;
+  min-width: 0;
+  
+  container-type: inline-size;
+  container-name: node-col;
+}
+
+/* Container Queries for Node Internals */
+@container node-col (max-width: 480px) {
+  .node-so-what { display: none; }
+  .node-card { min-height: auto; }
+  .node-card, .level-expander { z-index: 2; }
+}
+
+@container node-col (max-width: 250px) {
+  .node-controls {
+    width: 100%;
+    justify-content: space-between; /* Spreads pill to left and button to right */
+    margin-top: 4px;
+  }
+}
+
+.node-marker {
+  width: 64px; 
 }
 
 .node-marker {
@@ -567,6 +591,7 @@ body.is-focused .node-row:not(.is-active) {
   overflow: hidden;
   transition: transform 0.1s ease, box-shadow 0.15s ease;
   min-height: var(--node-min-h);
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -595,26 +620,27 @@ body.is-focused .node-row:not(.is-active) {
 
 .node-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allows controls to wrap securely below title without clipping */
   gap: 10px;
-  padding: 6px 14px;
+  padding: 10px 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.14);
   cursor: pointer;
 }
 
 .node-title {
+  display: block; /* Restored to standard block text to fix bullet spacing */
   margin: 0;
   font-size: 16.5px;
   font-weight: 950;
-  line-height: 1.22;
-  display: flex;
-  align-items: baseline;
+  line-height: 1.35; /* Adjusted slightly for standard block wrapping */
+  min-width: 120px; /* Forces wrap rather than crushing text */
 }
 
 .node-title .id {
   opacity: 0.5;
-  margin-right: 6px;
+  margin-right: 4px;
   font-weight: 800;
 }
 
@@ -622,8 +648,7 @@ body.is-focused .node-row:not(.is-active) {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
-  white-space: nowrap;
+  flex-wrap: wrap; /* Allows inner controls to drop down if they hit minimum width */
 }
 
 .node-so-what {
@@ -716,6 +741,7 @@ button.node-badge:active {
   border-color: rgba(16, 26, 53, 0.3);
 }
 
+/* Global button shrinking */
 @media (max-width: 768px) {
   .btn-derivation span.label {
     display: none;
@@ -733,36 +759,12 @@ button.node-badge:active {
 }
 
 @media (max-width: 500px) {
-  .node-controls {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
-    margin-top: 2px;
-  }
-  .node-header {
-    align-items: flex-start;
-    padding: 10px 12px;
-    border-bottom: none;
-  }
-  .node-so-what {
-    display: none;
-  }
-  .node-card {
-    min-height: auto;
-  }
-  .node-card,
-  .node-expander {
-    z-index: 2;
-  }
   .btn-derivation {
-    margin-left: 8px;
     margin-top: 8px;
     width: 44px;
     z-index: 1;
   }
   .btn-derivation::before {
-    width: 16px;
-    left: -16px;
     z-index: -1;
   }
 }
@@ -770,22 +772,33 @@ button.node-badge:active {
 /* =========================================================
    6. COMPONENTS: INTERNAL EXPANDER LOGIC
    ========================================================= */
-.node-expander {
-  grid-column: 2;
-  grid-row: 2;
+.level-expander {
+  width: 100%;
+  flex: 0 0 100%; 
+  padding-left: 70px; 
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s, transform 0.3s, margin-top 0.3s;
   opacity: 0;
   transform: translateY(-6px);
   margin-top: 0;
+  z-index: 10;
 }
 
-.node-expander.is-open {
+.level-expander.is-open {
   grid-template-rows: 1fr;
   opacity: 1;
   transform: translateY(0);
-  margin-top: 10px;
+  margin-top: -8px;
+  margin-bottom: 24px; 
+}
+
+@media (max-width: 1120px) {
+  .level-expander { padding-left: 62px; }
+}
+
+@media (max-width: 500px) {
+  .level-expander { padding-left: 18px; padding-right: 0; }
 }
 
 .exp-inner {
@@ -1300,7 +1313,7 @@ button.node-badge:active {
   display: flex;
   flex-direction: row; 
   align-items: stretch;
-  margin-bottom: 8px; /* 2. Tiny gap between containers */
+  margin-bottom: 8px; 
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--bg-0);
@@ -1309,10 +1322,9 @@ button.node-badge:active {
 }
 
 .search-result-box:first-of-type {
-  margin-top: 32px; /* 2. Large gap between page header and first container */
+  margin-top: 32px; 
 }
 
-/* 4. Let the header span full width when collapsed */
 .search-result-box.is-collapsed {
   flex-direction: column;
 }
@@ -1336,7 +1348,6 @@ button.node-badge:active {
   background: rgba(16, 26, 53, 0.02);
 }
 
-/* 4. Remove the side border when spanning full width */
 .search-result-box.is-collapsed .search-result-header {
   flex: none;
   border-right: none;
@@ -1363,14 +1374,13 @@ button.node-badge:active {
 .search-result-content {
   flex: 1;
   min-width: 0; 
-  padding-right: 24px; /* 5. Give derivation buttons breathing room so they don't clip */
+  padding-right: 24px; 
 }
 
 .search-result-box.is-collapsed .search-result-content {
   display: none;
 }
 
-/* Fallback for smaller screens */
 @media (max-width: 768px) {
   .search-result-box {
     flex-direction: column;
@@ -1381,4 +1391,36 @@ button.node-badge:active {
     border-bottom: 1px solid var(--border-thin);
     align-items: center;
   }
+}
+
+.level-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  column-gap: 16px;
+  row-gap: 0px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   SVG PROCEDURAL TIMELINE
+   ========================================================= */
+.dag-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dag-edge {
+  fill: none;
+  stroke: var(--spine);
+  stroke-width: 2px;
+  transition: stroke 0.3s ease;
 }

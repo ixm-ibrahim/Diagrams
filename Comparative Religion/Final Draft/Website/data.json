@@ -10,7 +10,8 @@
     {
       "id": "1",
       "parentId": null,
-      "nextSiblingId": "2",
+      "nextIds": ["2"],
+      "prevIds": [],
       "hasDerivation": true,
       "claim": "Truth-seeking requires a prior motivation to pursue objective reality over emotional comfort.",
       "soWhat": "It prevents inquiry from becoming a blind rationalization of pre-selected answers.",
@@ -61,7 +62,8 @@
     {
       "id": "2",
       "parentId": null,
-      "nextSiblingId": "3",
+      "nextIds": ["3"],
+      "prevIds": ["1"],
       "hasDerivation": true,
       "claim": "Reality can be inferred from experience under constraints.",
       "soWhat": "It validates careful inference while rejecting \"anything goes\" perception claims.",
@@ -96,7 +98,8 @@
     {
       "id": "3",
       "parentId": null,
-      "nextSiblingId": "4",
+      "nextIds": ["4"],
+      "prevIds": ["2"],
       "hasDerivation": true,
       "claim": "A method that can justify falsehood cannot verify truth.",
       "soWhat": "It rejects circular self-authentication and \"confidence by ignorance.\"",
@@ -131,7 +134,8 @@
     {
       "id": "4",
       "parentId": null,
-      "nextSiblingId": "5",
+      "nextIds": ["5"],
+      "prevIds": ["3"],
       "hasDerivation": true,
       "claim": "A true religion must be coherent and reason-supported.",
       "soWhat": "It creates testable constraints for what \"true revelation\" can look like.",
@@ -166,7 +170,8 @@
     {
       "id": "5",
       "parentId": null,
-      "nextSiblingId": "6",
+      "nextIds": ["6"],
+      "prevIds": ["4"],
       "hasDerivation": true,
       "claim": "Monotheism fits the constraints best; rivals fail or require extra authority.",
       "soWhat": "It pushes the bottleneck to historical reliability of scripture.",
@@ -201,7 +206,8 @@
     {
       "id": "6",
       "parentId": null,
-      "nextSiblingId": "7",
+      "nextIds": ["7"],
+      "prevIds": ["5"],
       "hasDerivation": true,
       "claim": "The Qur'an's preservation is constrained; the New Testament requires speculation.",
       "soWhat": "It collapses \"NT is more authoritative\" as a required premise.",
@@ -236,7 +242,8 @@
     {
       "id": "7",
       "parentId": null,
-      "nextSiblingId": "8",
+      "nextIds": ["8"],
+      "prevIds": ["6"],
       "hasDerivation": true,
       "claim": "Comparative theology favors Islam as correction over Christianity as corruption.",
       "soWhat": "It checks the conclusion using the same constraints, not a new standard.",
@@ -271,7 +278,8 @@
     {
       "id": "8",
       "parentId": null,
-      "nextSiblingId": null,
+      "nextIds": [],
+      "prevIds": ["7"],
       "hasDerivation": false,
       "claim": "Islam survives the full filter as the best constrained candidate.",
       "soWhat": "It turns 'belief' into a traceable structure, not a slogan.",
@@ -303,11 +311,12 @@
         ]}
       ]
     },
-	{
+    {
       "id": "1.1",
       "parentId": "1",
-      "nextSiblingId": "1.2",
-      "hasDerivation": false,
+      "nextIds": ["1.2"],
+      "prevIds": [],
+      "hasDerivation": true,
       "claim": "Establish the foundational coordinate system and background space color.",
       "soWhat": "A pitch-black or deep blue gradient serves as the infinite canvas for the galaxy.",
       "search": "coordinates background space canvas"
@@ -315,8 +324,9 @@
     {
       "id": "1.2",
       "parentId": "1",
-      "nextSiblingId": "1.3",
-      "hasDerivation": false,
+      "nextIds": ["1.3"],
+      "prevIds": ["1.1"],
+      "hasDerivation": true,
       "claim": "Generate the primary star field using high-frequency noise.",
       "soWhat": "This creates the distant, non-resolvable background stars.",
       "search": "star field noise high-frequency"
@@ -324,8 +334,9 @@
     {
       "id": "1.3",
       "parentId": "1",
-      "nextSiblingId": "1.4",
-      "hasDerivation": false,
+      "nextIds": ["1.4"],
+      "prevIds": ["1.2"],
+      "hasDerivation": true,
       "claim": "Implement fractional Brownian motion (fBm) for the galactic cloud structure.",
       "soWhat": "fBm layers multiple octaves of noise to simulate the organic, gaseous look.",
       "search": "fBm brownian motion octaves gas cloud"
@@ -333,8 +344,9 @@
     {
       "id": "1.4",
       "parentId": "1",
-      "nextSiblingId": "1.5",
-      "hasDerivation": false,
+      "nextIds": ["1.5"],
+      "prevIds": ["1.3"],
+      "hasDerivation": true,
       "claim": "Define the dense galactic core using a bright, warm color palette.",
       "soWhat": "The core provides the primary light source and visual anchor for the shader.",
       "search": "galactic core palette anchor light"
@@ -342,8 +354,9 @@
     {
       "id": "1.5",
       "parentId": "1",
-      "nextSiblingId": "1.6",
-      "hasDerivation": false,
+      "nextIds": ["1.6"],
+      "prevIds": ["1.4"],
+      "hasDerivation": true,
       "claim": "Carve out dark dust lanes using inverted, thresholded noise.",
       "soWhat": "Dust lanes add depth and realism by obscuring the background stars and core.",
       "search": "dust lanes inverted thresholded depth"
@@ -351,7 +364,8 @@
     {
       "id": "1.6",
       "parentId": "1",
-      "nextSiblingId": "1.7",
+      "nextIds": ["1.7"],
+      "prevIds": ["1.5"],
       "hasDerivation": false,
       "claim": "Add larger, distinct foreground stars with slight chromatic aberration or glow.",
       "soWhat": "Foreground stars break up the uniform noise and add a sense of scale.",
@@ -360,11 +374,102 @@
     {
       "id": "1.7",
       "parentId": "1",
-      "nextSiblingId": null,
+      "nextIds": [],
+      "prevIds": ["1.6"],
       "hasDerivation": false,
       "claim": "Composite all layers and apply post-processing like bloom or tonemapping.",
       "soWhat": "Compositing unifies the procedural layers into a cohesive depiction of the Milky Way.",
       "search": "composite layers post-processing bloom tonemapping"
+    },
+    {
+      "id": "2.1",
+      "parentId": "2",
+      "nextIds": ["2.2", "2.3", "2.4"],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Root of the DAG testing ground.",
+      "soWhat": "This node splits into three parallel parallel derivations."
+    },
+    {
+      "id": "2.2",
+      "parentId": "2",
+      "nextIds": ["2.5"],
+      "prevIds": ["2.1"],
+      "hasDerivation": true,
+      "claim": "Parallel Branch A.",
+      "soWhat": "Merges into Node 2.5."
+    },
+    {
+      "id": "2.3",
+      "parentId": "2",
+      "nextIds": ["2.5"],
+      "prevIds": ["2.1"],
+      "hasDerivation": true,
+      "claim": "Parallel Branch B.",
+      "soWhat": "Merges into Node 2.5."
+    },
+    {
+      "id": "2.4",
+      "parentId": "2",
+      "nextIds": ["2.5"],
+      "prevIds": ["2.1"],
+      "hasDerivation": true,
+      "claim": "Parallel Branch C.",
+      "soWhat": "Merges into Node 2.5."
+    },
+    {
+      "id": "2.5",
+      "parentId": "2",
+      "nextIds": ["2.6", "2.7"],
+      "prevIds": ["2.2", "2.3", "2.4"],
+      "hasDerivation": true,
+      "claim": "Convergence Point 1.",
+      "soWhat": "Catches the three branches, then immediately splits into two."
+    },
+    {
+      "id": "2.6",
+      "parentId": "2",
+      "nextIds": ["2.9"],
+      "prevIds": ["2.5"],
+      "hasDerivation": true,
+      "claim": "Upper Path of Split 2.",
+      "soWhat": "This node will need to visually span two rows to wait for Node 2.8 before merging."
+    },
+    {
+      "id": "2.7",
+      "parentId": "2",
+      "nextIds": ["2.8"],
+      "prevIds": ["2.5"],
+      "hasDerivation": true,
+      "claim": "Lower Path of Split 2.",
+      "soWhat": "Proceeds to a subsequent step before merging."
+    },
+    {
+      "id": "2.8",
+      "parentId": "2",
+      "nextIds": ["2.9"],
+      "prevIds": ["2.7"],
+      "hasDerivation": true,
+      "claim": "Intermediate Step.",
+      "soWhat": "Delays the merge so Node 2.6 and 2.8 can align horizontally."
+    },
+    {
+      "id": "2.9",
+      "parentId": "2",
+      "nextIds": ["2.10"],
+      "prevIds": ["2.6", "2.8"],
+      "hasDerivation": true,
+      "claim": "Convergence Point 2.",
+      "soWhat": "Brings the staggered branches back together."
+    },
+    {
+      "id": "2.10",
+      "parentId": "2",
+      "nextIds": [],
+      "prevIds": ["2.9"],
+      "hasDerivation": false,
+      "claim": "Final Node.",
+      "soWhat": "Returns to the standard linear flow to close out the branch."
     }
   ]
 }

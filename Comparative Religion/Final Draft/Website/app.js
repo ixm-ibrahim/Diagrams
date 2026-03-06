@@ -76,6 +76,235 @@ function getPerceptualHue(index, totalNodes) {
 
 /**
  * ==========================================
+ * DAG GRAPH ENGINE
+ * ==========================================
+ */
+const GraphEngine = {
+  computeLevels(visibleNodes) {
+    const nodeMap = new Map(visibleNodes.map(n => [n.id, n]));
+    const levels = new Map();
+    
+    // 1. Calculate vertical depth
+    function getLevel(nodeId) {
+      if (levels.has(nodeId)) return levels.get(nodeId);
+      const node = nodeMap.get(nodeId);
+      if (!node || !node.prevIds || node.prevIds.length === 0) {
+        levels.set(nodeId, 0);
+        return 0;
+      }
+      let maxPrevLevel = -1;
+      for (const prevId of node.prevIds) {
+        if (nodeMap.has(prevId)) {
+          maxPrevLevel = Math.max(maxPrevLevel, getLevel(prevId));
+        }
+      }
+      const level = maxPrevLevel + 1;
+      levels.set(nodeId, level);
+      return level;
+    }
+    
+    visibleNodes.forEach(n => getLevel(n.id));
+    
+    let maxLevel = -1;
+    for (const lvl of levels.values()) {
+        if (lvl > maxLevel) maxLevel = lvl;
+    }
+    
+    const rows = Array.from({ length: maxLevel + 1 }, () => []);
+    
+    // 2. Assign nodes to rows and inject Dummy Spacers for long edges
+    visibleNodes.forEach(node => {
+      const nodeLvl = levels.get(node.id);
+      rows[nodeLvl].push(node);
+      
+      if (node.nextIds) {
+        node.nextIds.forEach(nextId => {
+          if (!nodeMap.has(nextId)) return;
+          const nextLvl = levels.get(nextId);
+          // If the connection skips a row, inject an invisible dummy node
+          for (let i = nodeLvl + 1; i < nextLvl; i++) {
+            rows[i].push({ isDummy: true, sourceId: node.id, targetId: nextId });
+          }
+        });
+      }
+    });
+    
+    // 3. Sort columns horizontally to align children under parents
+    for (let i = 1; i <= maxLevel; i++) {
+      rows[i].sort((a, b) => {
+        const getBarycenter = (n) => {
+          // Find the average X-position of the node's parents
+          if (n.isDummy) {
+            return rows[i-1].findIndex(p => p.id === n.sourceId || (p.isDummy && p.sourceId === n.sourceId));
+          }
+          let sum = 0, count = 0;
+          n.prevIds.forEach(pid => {
+            const idx = rows[i-1].findIndex(p => p.id === pid || (p.isDummy && p.targetId === n.id && p.sourceId === pid));
+            if (idx !== -1) { sum += idx; count++; }
+          });
+          return count === 0 ? 0 : sum / count;
+        };
+        return getBarycenter(a) - getBarycenter(b);
+      });
+    }
+    
+    return rows;
+  }
+};
+
+/**
+ * ==========================================
+ * PROCEDURAL SVG DRAWING ENGINE
+ * ==========================================
+ */
+const SVGEngine = {
+  observer: null,
+
+  initResizeObserver() {
+    if (this.observer) return;
+    this.observer = new ResizeObserver(() => {
+      const viewEl = document.querySelector('.map-flow');
+      if (viewEl) {
+        const visibleNodes = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
+        this.draw(viewEl, visibleNodes);
+      }
+    });
+    this.observer.observe(document.getElementById('mapContainer'));
+  },
+
+  draw(viewEl, visibleNodes) {
+    let oldSvg = viewEl.querySelector('.dag-svg');
+    if (oldSvg) oldSvg.remove();
+
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'dag-svg');
+
+    const markerPositions = new Map();
+    const containerRect = viewEl.getBoundingClientRect();
+    
+    // We will dynamically find the exact X-coordinate of the main HTML spine
+    let trunkX = null;
+
+    // 1. Map Coordinates & Exact Card Boundaries
+    const nodeEls = viewEl.querySelectorAll('.node-row:not(.dummy-node)');
+    nodeEls.forEach((el, index) => {
+      const id = el.dataset.id;
+      const marker = el.querySelector('.node-marker');
+      const card = el.querySelector('.node-card');
+      if (!marker || !card) return;
+      
+      const rect = marker.getBoundingClientRect();
+      const cardRect = card.getBoundingClientRect();
+      
+      const x = rect.left - containerRect.left + (rect.width / 2);
+      const y = rect.top - containerRect.top + 22; 
+      
+      // The first node rendered defines the trunk's center (32px on desktop, 9px on mobile)
+      if (index === 0) trunkX = x;
+      
+      const levelGroup = el.closest('.level-group');
+      const levelRect = levelGroup.getBoundingClientRect();
+      const levelBottom = levelRect.bottom - containerRect.top;
+      
+      let gapBottom = levelBottom + 16; 
+      const nextGroup = levelGroup.nextElementSibling;
+      if (nextGroup && nextGroup.classList.contains('level-group')) {
+        gapBottom = nextGroup.getBoundingClientRect().top - containerRect.top;
+      }
+
+      const cardTop = cardRect.top - containerRect.top;
+      const cardBottom = cardRect.bottom - containerRect.top;
+      
+      markerPositions.set(id, { x, y, cardTop, cardBottom, levelBottom, gapBottom });
+    });
+
+    // 2. Create the Invisible Mask
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    const mask = document.createElementNS('http://www.w3.org/2000/svg', 'mask');
+    mask.setAttribute('id', 'trunkMask');
+
+    // Fill the mask with white (everything is visible by default)
+    const whiteBg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    whiteBg.setAttribute('x', '0');
+    whiteBg.setAttribute('y', '0');
+    whiteBg.setAttribute('width', '100%');
+    whiteBg.setAttribute('height', '100%');
+    whiteBg.setAttribute('fill', 'white');
+    mask.appendChild(whiteBg);
+
+    // Draw a black strip to "erase" the SVG exactly where the HTML spine sits
+    if (trunkX !== null) {
+      const blackStrip = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      blackStrip.setAttribute('x', trunkX - 1); // Spine is 2px wide, so offset by 1
+      blackStrip.setAttribute('y', '0');
+      blackStrip.setAttribute('width', '2');
+      blackStrip.setAttribute('height', '100%');
+      blackStrip.setAttribute('fill', 'black');
+      mask.appendChild(blackStrip);
+    }
+    defs.appendChild(mask);
+    svg.appendChild(defs);
+
+    // 3. Draw All Paths into a Single String
+    let allPathData = '';
+
+    visibleNodes.forEach(node => {
+      if (!node.nextIds || node.nextIds.length === 0) return;
+      
+      const start = markerPositions.get(node.id);
+      if (!start) return;
+
+      node.nextIds.forEach(nextId => {
+        const end = markerPositions.get(nextId);
+        if (!end) return;
+
+        if (Math.abs(start.x - end.x) < 5) {
+          // Straight vertical lines
+          allPathData += `M ${start.x} ${start.y} L ${end.x} ${end.y} `;
+        } else {
+          // Branching lateral lines
+          const dirX = end.x > start.x ? 1 : -1;
+          let dropY = start.cardBottom + (end.cardTop - start.cardBottom) / 2;
+          
+          if (start.gapBottom - start.levelBottom < 16) dropY -= 3; 
+
+          const actualRadius = Math.min(
+            12, 
+            Math.abs(end.x - start.x) / 2, 
+            Math.max(0, Math.abs(dropY - start.y) - 2),
+            Math.max(0, Math.abs(end.y - dropY) - 2)
+          );
+
+          allPathData += `
+            M ${start.x} ${start.y} 
+            L ${start.x} ${dropY - actualRadius}
+            Q ${start.x} ${dropY} ${start.x + actualRadius * dirX} ${dropY}
+            L ${end.x - actualRadius * dirX} ${dropY}
+            Q ${end.x} ${dropY} ${end.x} ${dropY + actualRadius}
+            L ${end.x} ${end.y}
+          `.trim().replace(/\s+/g, ' ') + ' ';
+        }
+      });
+    });
+
+    // 4. Render the Single SVG Object
+    if (allPathData) {
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('class', 'dag-edge');
+      path.setAttribute('d', allPathData.trim());
+      
+      // Apply the mask to prevent drawing over the HTML spine
+      path.setAttribute('mask', 'url(#trunkMask)'); 
+      
+      svg.appendChild(path);
+    }
+
+    viewEl.prepend(svg);
+  }
+};
+
+/**
+ * ==========================================
  * NAVIGATION & ROUTING CONTROLLER
  * ==========================================
  */
@@ -182,7 +411,6 @@ const Templates = {
         <p class="node-so-what">${node.soWhat}</p>
       </article>
       ${derivationHtml}
-      <div class="node-expander" id="exp-${node.id}" role="region" aria-labelledby="node-title-${node.id}"></div>
     `;
   },
   
@@ -297,6 +525,7 @@ const AppUI = {
     this.cacheDOM();
     AppState.applyTheme();
     this.bindEvents();
+	SVGEngine.initResizeObserver();
   },
 
   cacheDOM() {
@@ -383,19 +612,49 @@ const AppUI = {
       newView.innerHTML += `<div style="padding: 40px 20px; text-align: center; color: var(--text-muted);">No deeper derivations mapped for this claim yet.</div>`;
     } else {
       const fragment = document.createDocumentFragment();
-      visibleNodes.forEach(node => {
-        const row = document.createElement('div');
-        row.className = 'node-row';
-        row.dataset.id = node.id;
-        row.dataset.search = node.search;
-        row.innerHTML = Templates.nodeRow(node);
-        fragment.appendChild(row);
+      
+      // Calculate DAG rows
+      const groupedRows = GraphEngine.computeLevels(visibleNodes);
+      
+      groupedRows.forEach((rowNodes, index) => {
+        const levelContainer = document.createElement('div');
+        levelContainer.className = 'level-group';
+        levelContainer.dataset.level = index;
+        
+        rowNodes.forEach(node => {
+          // Render invisible spacer to maintain column structure
+          if (node.isDummy) {
+            const dummyEl = document.createElement('div');
+            dummyEl.className = 'node-row dummy-node';
+            dummyEl.style.flex = '1';
+            dummyEl.style.visibility = 'hidden';
+            levelContainer.appendChild(dummyEl);
+            return;
+          }
+          
+          // Render normal node
+          const row = document.createElement('div');
+          row.className = 'node-row';
+          row.dataset.id = node.id;
+          row.dataset.search = node.search;
+          row.innerHTML = Templates.nodeRow(node);
+          levelContainer.appendChild(row);
+        });
+		
+		// --- ADDED: Inject the shared drawer at the end of the flex-wrapped group ---
+        const expanderEl = document.createElement('div');
+        expanderEl.className = 'level-expander';
+        expanderEl.id = `exp-lvl-${index}`;
+        levelContainer.appendChild(expanderEl);
+        
+        fragment.appendChild(levelContainer);
       });
+      
       newView.appendChild(fragment);
     }
     return newView;
   },
-
+  
   /**
    * Prepends/Appends navigation cards for adjacent siblings if applicable.
    * @private
@@ -404,23 +663,27 @@ const AppUI = {
     const parentNode = AppState.currentParentId ? DataStore.map.get(AppState.currentParentId) : null;
     if (!parentNode) return;
 
-    const prevNode = DataStore.nodes.find(n => n.nextSiblingId === parentNode.id);
-    if (prevNode) {
-      const prevHeader = document.createElement('div');
-      prevHeader.className = 'sibling-nav-area prev';
-      prevHeader.innerHTML = `
-        <div class="sibling-label">Previous Step in Logic</div>
-        <button class="btn-sibling prev-btn trigger-derive" data-target="${prevNode.id}" type="button">
-          <span class="sibling-arrow">↑</span>
-          <span class="sibling-id">${DataStore.config.nodePrefix}${prevNode.id}.</span>
-          <span class="sibling-claim">${prevNode.claim}</span>
-        </button>
-      `;
-      view.prepend(prevHeader);
+    // Previous Sibling
+    if (parentNode.prevIds && parentNode.prevIds.length > 0) {
+      const prevNode = DataStore.map.get(parentNode.prevIds[0]);
+      if (prevNode) {
+        const prevHeader = document.createElement('div');
+        prevHeader.className = 'sibling-nav-area prev';
+        prevHeader.innerHTML = `
+          <div class="sibling-label">Previous Step in Logic</div>
+          <button class="btn-sibling prev-btn trigger-derive" data-target="${prevNode.id}" type="button">
+            <span class="sibling-arrow">↑</span>
+            <span class="sibling-id">${DataStore.config.nodePrefix}${prevNode.id}.</span>
+            <span class="sibling-claim">${prevNode.claim}</span>
+          </button>
+        `;
+        view.prepend(prevHeader);
+      }
     }
 
-    if (parentNode.nextSiblingId) {
-      const nextNode = DataStore.map.get(parentNode.nextSiblingId);
+    // Next Sibling
+    if (parentNode.nextIds && parentNode.nextIds.length > 0) {
+      const nextNode = DataStore.map.get(parentNode.nextIds[0]);
       if (nextNode) {
         const nextFooter = document.createElement('div');
         nextFooter.className = 'sibling-nav-area next';
@@ -436,7 +699,7 @@ const AppUI = {
       }
     }
   },
-
+  
   renderMapWithTransition(direction) {
     const oldViews = this.els.container.querySelectorAll('.map-flow, .search-result-box, .search-group');
     this.els.container.style.pointerEvents = 'none';
@@ -466,7 +729,12 @@ const AppUI = {
 
     this.els.container.appendChild(newView);
     window.scrollTo(0, 0); 
-
+	
+	requestAnimationFrame(() => {
+      const visibleNodes = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
+      SVGEngine.draw(newView, visibleNodes);
+    });
+	
     setTimeout(() => {
       oldViews.forEach(oldView => oldView.remove()); 
       newView.classList.remove('anim-enter-right', 'anim-enter-left', 'anim-enter-bottom', 'anim-enter-top');
@@ -720,14 +988,27 @@ const AppUI = {
     const row = document.querySelector(`.node-row[data-id="${id}"]`);
     if (!row) return;
 
-    const expander = document.getElementById(`exp-${id}`);
+    // Find the shared expander for this specific row/group
+    const levelGroup = row.closest('.level-group');
+    const expander = levelGroup.querySelector('.level-expander');
+    
     const headerBtn = row.querySelector('.node-header');
     const inlineBtn = row.querySelector('.trigger-inline');
 
     if (AppState.activeNodeId === id) {
       this.closeExpander(row, expander, headerBtn, inlineBtn);
     } else {
-      if (AppState.activeNodeId !== null) this.toggleExpander(AppState.activeNodeId);
+      // If another node is already open, close it first
+      if (AppState.activeNodeId !== null) {
+        const activeRow = document.querySelector(`.node-row[data-id="${AppState.activeNodeId}"]`);
+        if (activeRow) {
+          const activeGroup = activeRow.closest('.level-group');
+          const activeExpander = activeGroup.querySelector('.level-expander');
+          const activeHeaderBtn = activeRow.querySelector('.node-header');
+          const activeInlineBtn = activeRow.querySelector('.trigger-inline');
+          this.closeExpander(activeRow, activeExpander, activeHeaderBtn, activeInlineBtn);
+        }
+      }
       this.openExpander(id, row, expander, headerBtn, inlineBtn);
     }
   },
