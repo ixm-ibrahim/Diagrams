@@ -470,6 +470,159 @@
       "hasDerivation": false,
       "claim": "Final Node.",
       "soWhat": "Returns to the standard linear flow to close out the branch."
+    },
+	{
+      "id": "3.1",
+      "parentId": "3",
+      "nextIds": ["3.2", "3.3"],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Establish Test Planning and Control.",
+      "soWhat": "Defines the objectives and scope of the testing phase."
+    },
+    {
+      "id": "3.2",
+      "parentId": "3",
+      "nextIds": ["3.4", "3.5", "3.6"],
+      "prevIds": ["3.1"],
+      "hasDerivation": true,
+      "claim": "Perform Test Analysis.",
+      "soWhat": "Identifies what needs to be tested based on the requirements."
+    },
+    {
+      "id": "3.3",
+      "parentId": "3",
+      "nextIds": ["3.4", "3.5", "3.6"],
+      "prevIds": ["3.1"],
+      "hasDerivation": true,
+      "claim": "Develop Test Design.",
+      "soWhat": "Transforms test conditions into concrete test cases."
+    },
+    {
+      "id": "3.4",
+      "parentId": "3",
+      "nextIds": ["3.7", "3.8"],
+      "prevIds": ["3.2", "3.3"],
+      "hasDerivation": true,
+      "claim": "Execute Unit Testing.",
+      "soWhat": "Validates individual software components in isolation."
+    },
+    {
+      "id": "3.5",
+      "parentId": "3",
+      "nextIds": ["3.7", "3.8"],
+      "prevIds": ["3.2", "3.3"],
+      "hasDerivation": true,
+      "claim": "Execute Integration Testing.",
+      "soWhat": "Verifies the interfaces between interacting components."
+    },
+    {
+      "id": "3.6",
+      "parentId": "3",
+      "nextIds": ["3.7", "3.8"],
+      "prevIds": ["3.2", "3.3"],
+      "hasDerivation": true,
+      "claim": "Execute System Testing.",
+      "soWhat": "Evaluates the entire system's compliance with specified requirements."
+    },
+    {
+      "id": "3.7",
+      "parentId": "3",
+      "nextIds": ["3.9"],
+      "prevIds": ["3.4", "3.5", "3.6"],
+      "hasDerivation": true,
+      "claim": "Evaluate Exit Criteria.",
+      "soWhat": "Checks if the testing logs match the planned coverage objectives."
+    },
+    {
+      "id": "3.8",
+      "parentId": "3",
+      "nextIds": ["3.9"],
+      "prevIds": ["3.4", "3.5", "3.6"],
+      "hasDerivation": true,
+      "claim": "Compile Incident Reports.",
+      "soWhat": "Documents discrepancies between expected and actual outcomes."
+    },
+    {
+      "id": "3.9",
+      "parentId": "3",
+      "nextIds": ["3.10"],
+      "prevIds": ["3.7", "3.8"],
+      "hasDerivation": true,
+      "claim": "Conduct Test Closure Activities.",
+      "soWhat": "Consolidates data from completed test activities to finalize the cycle."
+    },
+    {
+      "id": "3.10",
+      "parentId": "3",
+      "nextIds": [],
+      "prevIds": ["3.9"],
+      "hasDerivation": false,
+      "claim": "Final QA Sign-off.",
+      "soWhat": "Releases the software component to the next stage of deployment."
+    },
+	{
+      "id": "4.1",
+      "parentId": "4",
+      "nextIds": ["4.2", "4.3", "4.4"],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Establish empirical baselines for inquiry.",
+      "soWhat": "Grounds the evaluation process in observable reality rather than assumption."
+    },
+    {
+      "id": "4.2",
+      "parentId": "4",
+      "nextIds": ["4.5"],
+      "prevIds": ["4.1"],
+      "hasDerivation": true,
+      "claim": "Apply logical filters.",
+      "soWhat": "Subjects the empirical data to strict laws of identity and non-contradiction."
+    },
+    {
+      "id": "4.3",
+      "parentId": "4",
+      "nextIds": ["4.7"],
+      "prevIds": ["4.1"],
+      "hasDerivation": true,
+      "claim": "Identify stable patterns of transmission.",
+      "soWhat": "Acts as the unbroken middle lane, carrying direct historical continuity forward."
+    },
+    {
+      "id": "4.4",
+      "parentId": "4",
+      "nextIds": ["4.6"],
+      "prevIds": ["4.1"],
+      "hasDerivation": true,
+      "claim": "Test for internal coherence.",
+      "soWhat": "Checks if the belief system's theology agrees with its own foundational texts."
+    },
+    {
+      "id": "4.5",
+      "parentId": "4",
+      "nextIds": ["4.7"],
+      "prevIds": ["4.2"],
+      "hasDerivation": true,
+      "claim": "Filter out inherent contradictions.",
+      "soWhat": "Removes frameworks that require logical exceptions to function."
+    },
+    {
+      "id": "4.6",
+      "parentId": "4",
+      "nextIds": ["4.7"],
+      "prevIds": ["4.4"],
+      "hasDerivation": true,
+      "claim": "Eliminate category errors.",
+      "soWhat": "Discards systems that confuse the necessary with the dependent."
+    },
+    {
+      "id": "4.7",
+      "parentId": "4",
+      "nextIds": [],
+      "prevIds": ["4.5", "4.3", "4.6"],
+      "hasDerivation": false,
+      "claim": "Synthesize validated beliefs.",
+      "soWhat": "Merges the filtered logic, stable patterns, and coherent categories into a final conclusion."
     }
   ]
 }
