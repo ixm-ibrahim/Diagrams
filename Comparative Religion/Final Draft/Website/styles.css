@@ -613,6 +613,12 @@ body.is-focused .node-row:not(.is-active) {
   z-index: 2;
 }
 
+/* Gap between consecutive level-groups so lateral SVG branches have visible
+   clearance from the card edges above and below.                              */
+.level-group + .level-group {
+  margin-top: 16px;
+}
+
 
 /* =============================================================================
    9. NODE MARKER — TIMELINE DOT & ARM
@@ -1139,6 +1145,28 @@ button.node-badge:active {
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+/* --- DOM spines for deeper indent depths in merged stacked groups ---
+ * The CSS ::before spine covers the anchor's depth. These DOM elements
+ * cover additional depths (depth 2, 3, etc.) within a merged run.        */
+.stacked-depth-spine {
+  position: absolute;
+  left: calc(var(--stacked-indent) * var(--indent-depth, 1) + var(--spine-left));
+  top: 0;
+  bottom: 0;
+  width: var(--spine-width);
+  background: linear-gradient(180deg, transparent, var(--spine-color) 12%, var(--spine-color) 88%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Suppress transitions during initial stacking ---
+ * Applied momentarily in Phase 1c so the browser doesn't animate
+ * from parallel → stacked on first render.                                 */
+.no-stack-transition .level-group[data-parallel] > .node-row,
+.no-stack-transition .level-group[data-parallel] > .dummy-node {
+  transition: none !important;
 }
 
 

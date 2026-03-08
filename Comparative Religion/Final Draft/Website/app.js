@@ -216,27 +216,29 @@ const SVGEngine = {
   observer: null,
   resizeTimeout: null,
 
+  /** Shared redraw trigger — called by both ResizeObserver and window resize. */
+  _scheduleRedraw() {
+    if (AppState.isTransitioning || AppState.isStackTransitioning) return;
+    const viewEl = document.querySelector('.map-flow');
+    if (viewEl) {
+      const visibleNodes = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
+      requestAnimationFrame(() => this.draw(viewEl, visibleNodes));
+    }
+  },
+
   initResizeObserver() {
     if (this.observer) return;
-    this.observer = new ResizeObserver(() => {
-      // Keep the guard to prevent drawing while switching pages
-      // or while stack/unstack CSS transitions are animating dots
-      if (AppState.isTransitioning || AppState.isStackTransitioning) return;
 
-	  // Clear the timer if the user is still resizing
-      //clearTimeout(this.resizeTimeout);
-	  
-	  // Set a 50ms delay before drawing
-      //this.resizeTimeout = setTimeout(() => {
-        const viewEl = document.querySelector('.map-flow');
-        if (viewEl) {
-          const visibleNodes = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
-          // Drawing directly in requestAnimationFrame ensures smooth "sliding"
-          requestAnimationFrame(() => this.draw(viewEl, visibleNodes));
-        }
-	  //}, 50);
-    });
+    // ResizeObserver catches container-level size changes (expander open/close,
+    // content reflow, container width changes below max-width).
+    this.observer = new ResizeObserver(() => this._scheduleRedraw());
     this.observer.observe(document.getElementById('mapContainer'));
+
+    // Window resize catches viewport-driven layout changes that don't alter
+    // the container's content rect — specifically, CSS media-query breakpoints
+    // that reassign layout tokens (e.g. --marker-col) while the container is
+    // pinned at max-width.
+    window.addEventListener('resize', () => this._scheduleRedraw());
   },
 
   /**
@@ -266,41 +268,67 @@ const SVGEngine = {
       const dotRect = dot.getBoundingClientRect();
       const cardRect = card.getBoundingClientRect();
 
-      // Dot center coordinates relative to the container
       const x = dotRect.left - containerRect.left + dotRect.width / 2;
       const y = dotRect.top - containerRect.top + dotRect.height / 2;
 
-      // First node defines the trunk axis for the mask
       if (index === 0) trunkX = x;
 
-      // Card boundaries for routing lateral paths
       const levelGroup = el.closest('.level-group');
-      const levelRect = levelGroup.getBoundingClientRect();
-      const levelBottom = levelRect.bottom - containerRect.top;
+      const expander = levelGroup.querySelector('.level-expander');
+      const expInner = expander?.querySelector('.exp-inner');
 
-      const nextGroup = levelGroup.nextElementSibling;
-      const gapBottom = (nextGroup?.classList.contains('level-group'))
-        ? nextGroup.getBoundingClientRect().top - containerRect.top
-        : levelBottom + 16;
-	  
-	  const expander = levelGroup.querySelector('.level-expander');
-	  const expInner = expander?.querySelector('.exp-inner');
+      const visualBottom = (expander?.classList.contains('is-open') && expInner) 
+        ? expInner.getBoundingClientRect().bottom - containerRect.top 
+        : cardRect.bottom - containerRect.top;
 
-	  // Use the inner box's bottom if it exists and is visible
-	  const visualBottom = (expander?.classList.contains('is-open') && expInner) 
-	    ? expInner.getBoundingClientRect().bottom - containerRect.top 
-	    : cardRect.bottom - containerRect.top;
-
-	  markerPositions.set(id, {
-	    x, y,
-	    cardTop: cardRect.top - containerRect.top,
-	    cardBottom: cardRect.bottom - containerRect.top,
-	    visualBottom, // Use this for the drop calculation
-	    gapBottom
-	  });
+      markerPositions.set(id, {
+        x, y,
+        cardTop: cardRect.top - containerRect.top,
+        cardBottom: cardRect.bottom - containerRect.top,
+        visualBottom,
+        _levelGroup: levelGroup
+      });
     });
 
-    // 2. Build mask to hide SVG paths behind the HTML spine
+    // 1b. Compute per-"visual row" layout metrics for SVG branch routing.
+    const visualRows = [];
+    const nodeToRowIdx = new Map();
+
+    viewEl.querySelectorAll('.level-group').forEach(group => {
+      if (group.style.display === 'none') return;
+
+      const isStacked = 'stacked' in group.dataset;
+      const isMergedStack = isStacked && !!group._dfsOrder;
+      const groupNodeIds = [...group.querySelectorAll(':scope > .node-row:not(.dummy-node)')]
+        .map(r => r.dataset.id)
+        .filter(id => markerPositions.has(id));
+
+      if (isMergedStack) {
+        for (const id of groupNodeIds) {
+          const idx = visualRows.length;
+          visualRows.push({ nodeIds: [id], bottom: markerPositions.get(id).visualBottom });
+          nodeToRowIdx.set(id, idx);
+        }
+      } else {
+        let maxBottom = 0;
+        for (const id of groupNodeIds) {
+          maxBottom = Math.max(maxBottom, markerPositions.get(id).visualBottom);
+        }
+        const idx = visualRows.length;
+        visualRows.push({ nodeIds: groupNodeIds, bottom: maxBottom });
+        for (const id of groupNodeIds) nodeToRowIdx.set(id, idx);
+      }
+    });
+
+    for (const [id, pos] of markerPositions) {
+      const idx = nodeToRowIdx.get(id);
+      if (idx === undefined) continue;
+      pos.rowBottom = visualRows[idx].bottom;
+      pos.prevRowBottom = idx > 0 ? visualRows[idx - 1].bottom : null;
+      delete pos._levelGroup;
+    }
+
+    // 2. Build mask
     const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
     const mask = document.createElementNS('http://www.w3.org/2000/svg', 'mask');
     mask.setAttribute('id', 'trunkMask');
@@ -325,25 +353,25 @@ const SVGEngine = {
     defs.appendChild(mask);
     svg.appendChild(defs);
 
-    // 2b. Compute edges to skip for stacked parallel groups.
-    //     When a group is stacked, the CSS ::before spine handles vertical
-    //     connections within the group. We only need ONE SVG branch into the
-    //     group (to the first node) and ONE branch out (from the last node)
-    //     per shared predecessor/successor.
+    // 2b. Compute skip edges and return branches
     const skipEdges = new Set();
+    const syntheticEdges = []; // Visually routes returning paths from deeper nodes
 
     viewEl.querySelectorAll('.level-group[data-stacked]').forEach(group => {
+      if (group.style.display === 'none') return;
+
       const nodeIds = [...group.querySelectorAll(':scope > .node-row')]
         .map(r => r.dataset.id);
       const nodeIdSet = new Set(nodeIds);
+      const dfsOrder = group._dfsOrder;
+      const isMerged = !!dfsOrder;
 
-      // --- Incoming edges: group by source, keep only first target ---
       const incomingBySource = new Map();
       nodeIds.forEach(nid => {
         const node = DataStore.map.get(nid);
         if (!node?.prevIds) return;
         node.prevIds.forEach(pid => {
-          if (nodeIdSet.has(pid)) return; // internal edge
+          if (nodeIdSet.has(pid)) return;
           if (!incomingBySource.has(pid)) incomingBySource.set(pid, []);
           incomingBySource.get(pid).push(nid);
         });
@@ -357,13 +385,12 @@ const SVGEngine = {
         });
       });
 
-      // --- Outgoing edges: group by target, keep only last source ---
       const outgoingByTarget = new Map();
       nodeIds.forEach(nid => {
         const node = DataStore.map.get(nid);
         if (!node?.nextIds) return;
         node.nextIds.forEach(nextId => {
-          if (nodeIdSet.has(nextId)) return; // internal edge
+          if (nodeIdSet.has(nextId)) return;
           if (!outgoingByTarget.has(nextId)) outgoingByTarget.set(nextId, []);
           outgoingByTarget.get(nextId).push(nid);
         });
@@ -376,60 +403,98 @@ const SVGEngine = {
           if (nodeIds.indexOf(s) !== lastIdx) skipEdges.add(`${s}→${target}`);
         });
       });
+
+      if (isMerged) {
+        const keptInternal = new Set();
+        for (let i = 0; i < dfsOrder.length - 1; i++) {
+          if (dfsOrder[i + 1].depth > dfsOrder[i].depth) {
+            // Outward branch (depth increases)
+            const srcNode = DataStore.map.get(dfsOrder[i].id);
+            if (srcNode?.nextIds?.includes(dfsOrder[i + 1].id)) {
+              keptInternal.add(`${dfsOrder[i].id}→${dfsOrder[i + 1].id}`);
+            }
+          } else if (dfsOrder[i + 1].depth < dfsOrder[i].depth) {
+            // Return branch (depth decreases) — visually reconnects back to the shallower timeline
+            syntheticEdges.push({ startId: dfsOrder[i].id, endId: dfsOrder[i + 1].id });
+          }
+        }
+
+        nodeIds.forEach(nid => {
+          const node = DataStore.map.get(nid);
+          if (!node?.nextIds) return;
+          node.nextIds.forEach(nextId => {
+            if (!nodeIdSet.has(nextId)) return; 
+            if (!keptInternal.has(`${nid}→${nextId}`)) {
+              skipEdges.add(`${nid}→${nextId}`);
+            }
+          });
+        });
+      }
+    });
+
+    // 2c. Bind DOM spines exactly to the nodes they connect
+    viewEl.querySelectorAll('.stacked-depth-spine').forEach(spine => {
+      const startPos = markerPositions.get(spine.dataset.startId);
+      const endPos = markerPositions.get(spine.dataset.endId);
+      if (startPos && endPos) {
+        const group = spine.closest('.level-group');
+        const groupRect = group.getBoundingClientRect();
+        const groupTop = groupRect.top - containerRect.top;
+        
+        spine.style.top = (startPos.y - groupTop) + 'px';
+        spine.style.bottom = (groupRect.height - (endPos.y - groupTop)) + 'px';
+      }
     });
 
     // 3. Build all path segments
     let allPathData = '';
-    const STRAIGHT_THRESHOLD = 5;  // Treat near-vertical connections as straight
+    const STRAIGHT_THRESHOLD = 5;  
     const MAX_CORNER_RADIUS = 12;
 
+    const drawEdge = (startId, endId) => {
+      const start = markerPositions.get(startId);
+      const end = markerPositions.get(endId);
+      if (!start || !end) return;
+
+      if (Math.abs(start.x - end.x) < STRAIGHT_THRESHOLD) {
+        allPathData += `M ${start.x} ${start.y} L ${end.x} ${end.y} `;
+      } else {
+        const dirX = end.x > start.x ? 1 : -1;
+        let dropY;
+        
+        if (dirX === 1) {
+          dropY = start.rowBottom + (end.cardTop - start.rowBottom) / 2;
+        } else {
+          const aboveBottom = end.prevRowBottom ?? start.rowBottom;
+          dropY = aboveBottom + (end.cardTop - aboveBottom) / 2;
+        }
+        
+        const radius = Math.min(
+          MAX_CORNER_RADIUS,
+          Math.abs(end.x - start.x) / 2,
+          Math.max(0, Math.abs(dropY - start.y) - 2),
+          Math.max(0, Math.abs(end.y - dropY) - 2)
+        );
+
+        allPathData += `M ${start.x} ${start.y} ` +
+          `L ${start.x} ${dropY - radius} ` +
+          `Q ${start.x} ${dropY} ${start.x + radius * dirX} ${dropY} ` +
+          `L ${end.x - radius * dirX} ${dropY} ` +
+          `Q ${end.x} ${dropY} ${end.x} ${dropY + radius} ` +
+          `L ${end.x} ${end.y} `;
+      }
+    };
+
+    // Draw normal edges
     visibleNodes.forEach(node => {
       if (!node.nextIds?.length) return;
-      const start = markerPositions.get(node.id);
-      if (!start) return;
-
       node.nextIds.forEach(nextId => {
-        if (skipEdges.has(`${node.id}→${nextId}`)) return;
-
-        const end = markerPositions.get(nextId);
-        if (!end) return;
-
-        if (Math.abs(start.x - end.x) < STRAIGHT_THRESHOLD) {
-          // Straight vertical connection
-          allPathData += `M ${start.x} ${start.y} L ${end.x} ${end.y} `;
-        } else {
-          // Lateral routed path: down → corner → horizontal → corner → down
-          const dirX = end.x > start.x ? 1 : -1;
-		  //let dropY = start.visualBottom + (end.cardTop - start.visualBottom) / 2;
-		  let dropY;
-          const earlyDrop = start.visualBottom + (start.gapBottom - start.visualBottom) / 2;
-          
-          if (dirX === 1) {
-            // Outward branch: drop early (in the gap immediately after start)
-            dropY = earlyDrop;
-          } else {
-            // Inward merge: drop late (just above the target node)
-            // This ensures timelines continuing straight past nested nodes don't merge early.
-            const lateDrop = end.cardTop - 16;
-            dropY = Math.max(earlyDrop, lateDrop);
-          }
-		  
-          const radius = Math.min(
-            MAX_CORNER_RADIUS,
-            Math.abs(end.x - start.x) / 2,
-            Math.max(0, Math.abs(dropY - start.y) - 2),
-            Math.max(0, Math.abs(end.y - dropY) - 2)
-          );
-
-          allPathData += `M ${start.x} ${start.y} ` +
-            `L ${start.x} ${dropY - radius} ` +
-            `Q ${start.x} ${dropY} ${start.x + radius * dirX} ${dropY} ` +
-            `L ${end.x - radius * dirX} ${dropY} ` +
-            `Q ${end.x} ${dropY} ${end.x} ${dropY + radius} ` +
-            `L ${end.x} ${end.y} `;
-        }
+        if (!skipEdges.has(`${node.id}→${nextId}`)) drawEdge(node.id, nextId);
       });
     });
+
+    // Draw explicitly returned depth branches
+    syntheticEdges.forEach(edge => drawEdge(edge.startId, edge.endId));
 
     // 4. Render single combined path
     if (allPathData) {
@@ -441,7 +506,7 @@ const SVGEngine = {
     }
 
     viewEl.prepend(svg);
-  }
+  },
 };
 
 
@@ -881,6 +946,65 @@ const AppUI = {
       }
     });
 
+    // Each parallel level-group is treated as its own independent "run"
+    // for stacking evaluation. This ensures each group's stacking threshold
+    // is based on its own flex-child count, preventing dummy-heavy deeper
+    // groups from forcing shallower groups (with fewer children) to stack.
+    // When a group stacks, its nodes are reordered in DFS order within
+    // that single level.
+    const parallelRuns = [];
+    allLevelGroups.forEach(group => {
+      if ('parallel' in group.dataset) {
+        parallelRuns.push([group]);
+      }
+    });
+
+    newView._parallelRuns = parallelRuns.map(groups => {
+      // Collect real node IDs and their indent depth (from the group)
+      const runNodeIds = new Set();
+      const nodeDepths = new Map();
+      groups.forEach(group => {
+        const depth = parseInt(group.style.getPropertyValue('--indent-depth')) || 1;
+        group.querySelectorAll(':scope > .node-row').forEach(row => {
+          runNodeIds.add(row.dataset.id);
+          nodeDepths.set(row.dataset.id, depth);
+        });
+      });
+
+      // Entry nodes: those with no predecessors inside the run
+      const entryIds = [];
+      for (const nid of runNodeIds) {
+        const node = DataStore.map.get(nid);
+        if (!(node.prevIds || []).some(pid => runNodeIds.has(pid))) entryIds.push(nid);
+      }
+
+      // DFS with prerequisite gating: only visit a node once ALL of its
+      // in-run predecessors have been visited. This produces the "tree-like"
+      // reading order (parent → children) while respecting multi-parent merges.
+      const visited = new Set();
+      const dfsOrder = [];
+      function visit(nodeId) {
+        if (visited.has(nodeId) || !runNodeIds.has(nodeId)) return;
+        const node = DataStore.map.get(nodeId);
+        for (const pid of (node.prevIds || [])) {
+          if (runNodeIds.has(pid) && !visited.has(pid)) return;
+        }
+        visited.add(nodeId);
+        dfsOrder.push({ id: nodeId, depth: nodeDepths.get(nodeId) });
+        for (const nextId of (node.nextIds || [])) visit(nextId);
+      }
+      entryIds.forEach(id => visit(id));
+
+      // Max flex-child count across groups (for stacking threshold)
+      let maxChildCount = 0;
+      groups.forEach(group => {
+        const n = group.querySelectorAll(':scope > .node-row, :scope > .dummy-node').length;
+        if (n > maxChildCount) maxChildCount = n;
+      });
+
+      return { groups, dfsOrder, maxChildCount, isStacked: false, savedChildren: null };
+    });
+
     newView.appendChild(fragment);
     return newView;
   },
@@ -951,6 +1075,15 @@ const AppUI = {
     // Phase 1b: Attach stacking observer for parallel groups
     this.setupStackingObserver(newView);
 
+    // Phase 1c: Apply stacking immediately if viewport is already narrow.
+    // Suppress CSS transitions so the stacked layout appears instantly —
+    // without this the browser would animate from parallel→stacked.
+    newView.classList.add('no-stack-transition');
+    this._checkStacking?.();
+    // Force layout so the stacked state is committed, then re-enable transitions
+    newView.offsetHeight;
+    newView.classList.remove('no-stack-transition');
+
     // Phase 2: Draw SVG connectors (needs layout to be settled)
     requestAnimationFrame(() => {
       const visibleNodes = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
@@ -985,6 +1118,19 @@ const AppUI = {
       requestAnimationFrame(() => SVGEngine.draw(newView, visibleNodes));
 
       AppState.isTransitioning = false;
+
+      // The ResizeObserver's initial fire may have been suppressed while
+      // isTransitioning was true. Run a manual stacking check now so
+      // pages that load at narrow widths stack immediately.
+      if (this._checkStacking?.()) {
+        AppState.isStackTransitioning = true;
+        clearTimeout(this._stackRedrawTimer);
+        this._stackRedrawTimer = setTimeout(() => {
+          AppState.isStackTransitioning = false;
+          const vis = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
+          requestAnimationFrame(() => SVGEngine.draw(newView, vis));
+        }, 420);
+      }
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
   },
 
@@ -1104,68 +1250,190 @@ const AppUI = {
   /* ------------------------------------------------------------------
    * Parallel → stacked layout observer
    *
-   * Monitors each parallel level-group's width. When the available
-   * width per flex child drops below STACK_THRESHOLD, the group switches
-   * to a stacked (indented list) layout via the data-stacked attribute.
+   * Monitors parallel level-groups and collapses entire "runs" of
+   * consecutive parallel groups together. When stacking, nodes from
+   * all groups in the run are merged into the first group (anchor) in
+   * DFS order so that children appear directly after their DAG parent.
    *
-   * The metric (groupWidth ÷ childCount) is stable regardless of whether
-   * the group is currently stacked or parallel — the group fills its
-   * parent container either way — so no hysteresis or special unstacking
-   * logic is needed. SVG redraws are suppressed during the CSS transition
-   * (400ms) and a single clean redraw fires at the end.
+   * The metric (anchorWidth ÷ maxChildCount) is stable regardless of
+   * stacked/parallel state because the anchor fills its parent either
+   * way, so no hysteresis is needed.
+   *
+   * SVG redraws are suppressed during the CSS transition (400ms) and a
+   * single clean redraw fires at the end.
    * ------------------------------------------------------------------ */
   stackingObserver: null,
   _stackRedrawTimer: null,
+  _checkStacking: null,
 
   setupStackingObserver(view) {
     if (this.stackingObserver) {
       this.stackingObserver.disconnect();
       this.stackingObserver = null;
     }
+    this._checkStacking = null;
 
-    const parallelGroups = view.querySelectorAll('.level-group[data-parallel]');
-    if (parallelGroups.length === 0) return;
+    const runs = view._parallelRuns;
+    if (!runs || runs.length === 0) return;
 
-    this.stackingObserver = new ResizeObserver(entries => {
-      if (AppState.isTransitioning) return;
-
+    // Shared check function — evaluates all runs against the threshold.
+    const checkStacking = () => {
       let changed = false;
+      for (const run of runs) {
+        const width = run.groups[0].getBoundingClientRect().width;
+        const shouldStack = run.maxChildCount > 1 && (width / run.maxChildCount) < STACK_THRESHOLD;
 
-      for (const entry of entries) {
-        const group = entry.target;
-        const flexChildren = group.querySelectorAll(':scope > .node-row, :scope > .dummy-node');
-        const count = flexChildren.length;
-        if (count <= 1) continue;
-
-        const widthPerChild = entry.contentRect.width / count;
-        const shouldStack = widthPerChild < STACK_THRESHOLD;
-        const isStacked = 'stacked' in group.dataset;
-
-        if (shouldStack && !isStacked) {
-          group.dataset.stacked = '';
+        if (shouldStack && !run.isStacked) {
+          this.stackRun(run);
           changed = true;
-        } else if (!shouldStack && isStacked) {
-          delete group.dataset.stacked;
+        } else if (!shouldStack && run.isStacked) {
+          this.unstackRun(run);
           changed = true;
         }
       }
+      return changed;
+    };
 
-      if (changed) {
-        // Suppress SVG redraws during the 400ms CSS transition, then
-        // do one clean redraw once all positions have settled.
-        AppState.isStackTransitioning = true;
-        clearTimeout(this._stackRedrawTimer);
-        this._stackRedrawTimer = setTimeout(() => {
-          AppState.isStackTransitioning = false;
-          requestAnimationFrame(() => {
-            const visibleNodes = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
-            SVGEngine.draw(view, visibleNodes);
-          });
-        }, 420);
+    // Expose for the transition-cleanup call
+    this._checkStacking = checkStacking;
+
+    const triggerRedraw = () => {
+      AppState.isStackTransitioning = true;
+      clearTimeout(this._stackRedrawTimer);
+      this._stackRedrawTimer = setTimeout(() => {
+        AppState.isStackTransitioning = false;
+        requestAnimationFrame(() => {
+          const visibleNodes = DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
+          SVGEngine.draw(view, visibleNodes);
+        });
+      }, 420);
+    };
+
+    this.stackingObserver = new ResizeObserver(() => {
+      if (AppState.isTransitioning) return;
+      // Always let checkStacking() run so DOM layout stays correct.
+      // Only defer the SVG redraw until CSS transitions settle.
+      // If new stacking changes occur during an existing transition,
+      // reset the timer so SVG draws after the *last* change + 420ms.
+      if (checkStacking()) triggerRedraw();
+    });
+
+    runs.forEach(run => run.groups.forEach(g => this.stackingObserver.observe(g)));
+  },
+
+  /**
+   * Collapses a run of consecutive parallel groups into the first group
+   * (anchor) with nodes reordered in DFS order and per-node indent depths.
+   */
+  stackRun(run) {
+    run.isStacked = true;
+
+    // Snapshot every group's children for later restoration
+    run.savedChildren = new Map();
+    run.groups.forEach(group => {
+      run.savedChildren.set(group, [...group.children]);
+    });
+
+    const anchor = run.groups[0];
+    const anchorExpander = anchor.querySelector('.level-expander');
+    const anchorDepth = parseInt(anchor.style.getPropertyValue('--indent-depth')) || 1;
+
+    // Collect every real node-row by ID across all groups in the run
+    const allRows = new Map();
+    run.groups.forEach(group => {
+      group.querySelectorAll(':scope > .node-row').forEach(row => {
+        allRows.set(row.dataset.id, row);
+      });
+    });
+
+    // Clear the anchor, then re-add node-rows in DFS order
+    while (anchor.firstChild) anchor.removeChild(anchor.firstChild);
+
+    run.dfsOrder.forEach(({ id, depth }) => {
+      const row = allRows.get(id);
+      if (row) {
+        row.style.setProperty('--indent-depth', depth);
+        anchor.appendChild(row);
       }
     });
 
-    parallelGroups.forEach(group => this.stackingObserver.observe(group));
+    // Expander stays at the end
+    anchor.appendChild(anchorExpander);
+    anchor.dataset.stacked = '';
+
+    // Store DFS order on anchor so SVGEngine can compute internal skip-edges
+    anchor._dfsOrder = run.dfsOrder;
+
+    // Create bounded DOM spines for each contiguous block of deeper indents.
+    // We store the start/end IDs so SVGEngine can measure exact bounds.
+    const maxDepth = Math.max(...run.dfsOrder.map(d => d.depth));
+    for (let d = anchorDepth + 1; d <= maxDepth; d++) {
+      let blockStart = null;
+      let blockEnd = null;
+
+      const flushBlock = () => {
+        // Only draw a vertical spine if the block spans more than one node
+        if (blockStart && blockEnd && blockStart.id !== blockEnd.id) {
+          const spine = document.createElement('div');
+          spine.className = 'stacked-depth-spine';
+          spine.style.setProperty('--indent-depth', d);
+          spine.dataset.startId = blockStart.id;
+          spine.dataset.endId = blockEnd.id;
+          anchor.insertBefore(spine, anchor.firstChild);
+        }
+        blockStart = null;
+        blockEnd = null;
+      };
+
+      run.dfsOrder.forEach(item => {
+        if (item.depth >= d) {
+          if (!blockStart) blockStart = item;
+          blockEnd = item;
+        } else {
+          flushBlock();
+        }
+      });
+      flushBlock();
+    }
+
+    // Empty and hide the remaining groups
+    for (let i = 1; i < run.groups.length; i++) {
+      const group = run.groups[i];
+      while (group.firstChild) group.removeChild(group.firstChild);
+      group.dataset.stacked = '';
+      group.style.display = 'none';
+    }
+  },
+  
+  /**
+   * Restores a stacked run to its original parallel level-group structure.
+   */
+  unstackRun(run) {
+    run.isStacked = false;
+
+    // Remove DOM spine elements and dfsOrder reference from anchor
+    const anchor = run.groups[0];
+    anchor.querySelectorAll('.stacked-depth-spine').forEach(el => el.remove());
+    delete anchor._dfsOrder;
+
+    // Put every group's original children back
+    run.groups.forEach(group => {
+      const origChildren = run.savedChildren?.get(group);
+      if (!origChildren) return;
+      while (group.firstChild) group.removeChild(group.firstChild);
+      origChildren.forEach(child => group.appendChild(child));
+      delete group.dataset.stacked;
+      group.style.display = '';
+    });
+
+    // Remove per-node indent overrides
+    run.groups.forEach(group => {
+      group.querySelectorAll(':scope > .node-row').forEach(row => {
+        row.style.removeProperty('--indent-depth');
+      });
+    });
+
+    run.savedChildren = null;
   },
 
   /* ------------------------------------------------------------------

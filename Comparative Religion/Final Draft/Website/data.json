@@ -546,7 +546,7 @@
     {
       "id": "3.9",
       "parentId": "3",
-      "nextIds": ["3.10"],
+      "nextIds": ["3.10", "3.11"],
       "prevIds": ["3.7", "3.8"],
       "hasDerivation": true,
       "claim": "Conduct Test Closure Activities.",
@@ -557,9 +557,18 @@
       "parentId": "3",
       "nextIds": [],
       "prevIds": ["3.9"],
-      "hasDerivation": false,
+      "hasDerivation": true,
       "claim": "Final QA Sign-off.",
       "soWhat": "Releases the software component to the next stage of deployment."
+    },
+    {
+      "id": "3.11",
+      "parentId": "3",
+      "nextIds": [],
+      "prevIds": ["3.9"],
+      "hasDerivation": false,
+      "claim": "Archive Testware and Handover.",
+      "soWhat": "Ensures test environments, scripts, and logs are preserved for future maintenance."
     },
 	{
       "id": "4.1",
@@ -623,6 +632,276 @@
       "hasDerivation": false,
       "claim": "Synthesize validated beliefs.",
       "soWhat": "Merges the filtered logic, stable patterns, and coherent categories into a final conclusion."
+    },
+	{
+      "id": "5.1",
+      "parentId": "5",
+      "nextIds": ["5.2", "5.3"],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Receive incoming web request.",
+      "soWhat": "The entry point for all client traffic at the edge network."
+    },
+    {
+      "id": "5.2",
+      "parentId": "5",
+      "nextIds": ["5.11"],
+      "prevIds": ["5.1"],
+      "hasDerivation": true,
+      "claim": "Serve from Edge Cache.",
+      "soWhat": "Bypasses backend processing entirely for previously cached responses."
+    },
+    {
+      "id": "5.3",
+      "parentId": "5",
+      "nextIds": ["5.4", "5.5"],
+      "prevIds": ["5.1"],
+      "hasDerivation": true,
+      "claim": "Route to Application Load Balancer.",
+      "soWhat": "Directs un-cached traffic deeper into the infrastructure."
+    },
+    {
+      "id": "5.4",
+      "parentId": "5",
+      "nextIds": ["5.11"],
+      "prevIds": ["5.3"],
+      "hasDerivation": true,
+      "claim": "Serve from CDN Storage.",
+      "soWhat": "Handles static assets (images, CSS) without hitting the application code."
+    },
+    {
+      "id": "5.5",
+      "parentId": "5",
+      "nextIds": ["5.6", "5.7"],
+      "prevIds": ["5.3"],
+      "hasDerivation": true,
+      "claim": "Pass to Application Server.",
+      "soWhat": "Initializes dynamic processing for the user's specific request."
+    },
+    {
+      "id": "5.6",
+      "parentId": "5",
+      "nextIds": ["5.11"],
+      "prevIds": ["5.5"],
+      "hasDerivation": true,
+      "claim": "Reject with 401 Unauthorized.",
+      "soWhat": "Short-circuits the request if authentication tokens are missing or invalid."
+    },
+    {
+      "id": "5.7",
+      "parentId": "5",
+      "nextIds": ["5.8", "5.9"],
+      "prevIds": ["5.5"],
+      "hasDerivation": true,
+      "claim": "Process Business Logic.",
+      "soWhat": "Executes the core application code for authenticated users."
+    },
+    {
+      "id": "5.8",
+      "parentId": "5",
+      "nextIds": ["5.11"],
+      "prevIds": ["5.7"],
+      "hasDerivation": true,
+      "claim": "Fetch from Read Replica.",
+      "soWhat": "Retrieves data from a read-only database node to distribute load."
+    },
+    {
+      "id": "5.9",
+      "parentId": "5",
+      "nextIds": ["5.10"],
+      "prevIds": ["5.7"],
+      "hasDerivation": true,
+      "claim": "Execute Write Transaction.",
+      "soWhat": "Prepares a database mutation for state-changing requests."
+    },
+    {
+      "id": "5.10",
+      "parentId": "5",
+      "nextIds": ["5.11"],
+      "prevIds": ["5.9"],
+      "hasDerivation": true,
+      "claim": "Commit to Primary Database.",
+      "soWhat": "Safely stores the new data with strict ACID guarantees."
+    },
+    {
+      "id": "5.11",
+      "parentId": "5",
+      "nextIds": [],
+      "prevIds": ["5.2", "5.4", "5.6", "5.8", "5.10"],
+      "hasDerivation": false,
+      "claim": "Return HTTP Response to Client.",
+      "soWhat": "The final stage where all execution paths consolidate and exit."
+    },
+	{
+      "id": "6.1",
+      "parentId": "6",
+      "nextIds": ["6.2", "6.3"],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Initialize Fragment Data.",
+      "soWhat": "Establishes the base UV coordinates and normal vectors for the pixel."
+    },
+    {
+      "id": "6.2",
+      "parentId": "6",
+      "nextIds": ["6.4", "6.5"],
+      "prevIds": ["6.1"],
+      "hasDerivation": true,
+      "claim": "Procedural Color Generation.",
+      "soWhat": "Calculates the intrinsic pigment and texture of the surface material."
+    },
+    {
+      "id": "6.3",
+      "parentId": "6",
+      "nextIds": ["6.6", "6.7"],
+      "prevIds": ["6.1"],
+      "hasDerivation": true,
+      "claim": "Illumination Mathematics.",
+      "soWhat": "Determines how external light sources interact with the surface geometry."
+    },
+    {
+      "id": "6.4",
+      "parentId": "6",
+      "nextIds": ["6.8"],
+      "prevIds": ["6.2"],
+      "hasDerivation": true,
+      "claim": "Apply Domain Warping.",
+      "soWhat": "Distorts the UV coordinate space to create organic, swirling patterns."
+    },
+    {
+      "id": "6.5",
+      "parentId": "6",
+      "nextIds": ["6.8"],
+      "prevIds": ["6.2"],
+      "hasDerivation": true,
+      "claim": "Evaluate fBm Noise.",
+      "soWhat": "Layers multiple octaves of high-frequency noise for granular detail."
+    },
+    {
+      "id": "6.6",
+      "parentId": "6",
+      "nextIds": ["6.8"],
+      "prevIds": ["6.3"],
+      "hasDerivation": true,
+      "claim": "Calculate Diffuse Reflection.",
+      "soWhat": "Computes the Lambertian scattering based on the incident light angle."
+    },
+    {
+      "id": "6.7",
+      "parentId": "6",
+      "nextIds": ["6.8"],
+      "prevIds": ["6.3"],
+      "hasDerivation": true,
+      "claim": "Calculate Specular Highlights.",
+      "soWhat": "Adds shiny, view-dependent reflections using the Blinn-Phong model."
+    },
+    {
+      "id": "6.8",
+      "parentId": "6",
+      "nextIds": [],
+      "prevIds": ["6.4", "6.5", "6.6", "6.7"],
+      "hasDerivation": false,
+      "claim": "Composite Final Fragment.",
+      "soWhat": "Multiplies the color channels with the illumination data for the final output."
+    },
+	{
+      "id": "7.1",
+      "parentId": "7",
+      "nextIds": ["7.2", "7.10"],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Initialize Deployment Action.",
+      "soWhat": "Kicks off the async build pipeline for the web environment."
+    },
+    {
+      "id": "7.2",
+      "parentId": "7",
+      "nextIds": ["7.3", "7.9"],
+      "prevIds": ["7.1"],
+      "hasDerivation": true,
+      "claim": "Provision Build Environment.",
+      "soWhat": "Sets up the container and installs required dependencies."
+    },
+    {
+      "id": "7.3",
+      "parentId": "7",
+      "nextIds": ["7.4", "7.8"],
+      "prevIds": ["7.2"],
+      "hasDerivation": true,
+      "claim": "Build Particle System.",
+      "soWhat": "Compiles the core application logic and real-time visual effects."
+    },
+    {
+      "id": "7.4",
+      "parentId": "7",
+      "nextIds": ["7.5", "7.7"],
+      "prevIds": ["7.3"],
+      "hasDerivation": true,
+      "claim": "Execute Asset Pipeline.",
+      "soWhat": "Processes raw static files into optimized web-ready formats."
+    },
+    {
+      "id": "7.5",
+      "parentId": "7",
+      "nextIds": ["7.6"],
+      "prevIds": ["7.4"],
+      "hasDerivation": true,
+      "claim": "Process Textures.",
+      "soWhat": "Reads high-resolution image files used for the web graphics."
+    },
+    {
+      "id": "7.6",
+      "parentId": "7",
+      "nextIds": ["7.11"],
+      "prevIds": ["7.5"],
+      "hasDerivation": true,
+      "claim": "Generate WebP Variants.",
+      "soWhat": "Compresses the textures into modern, highly optimized formats."
+    },
+    {
+      "id": "7.7",
+      "parentId": "7",
+      "nextIds": ["7.11"],
+      "prevIds": ["7.4"],
+      "hasDerivation": true,
+      "claim": "Minify JavaScript.",
+      "soWhat": "Strips out whitespace and obfuscates the client-side code to reduce payload size."
+    },
+    {
+      "id": "7.8",
+      "parentId": "7",
+      "nextIds": ["7.11"],
+      "prevIds": ["7.3"],
+      "hasDerivation": true,
+      "claim": "Generate Source Maps.",
+      "soWhat": "Creates mappings to allow debugging of the minified code in production."
+    },
+    {
+      "id": "7.9",
+      "parentId": "7",
+      "nextIds": ["7.11"],
+      "prevIds": ["7.2"],
+      "hasDerivation": true,
+      "claim": "Cache Node Modules.",
+      "soWhat": "Saves the dependency tree to speed up future pipeline executions."
+    },
+    {
+      "id": "7.10",
+      "parentId": "7",
+      "nextIds": ["7.11"],
+      "prevIds": ["7.1"],
+      "hasDerivation": true,
+      "claim": "Dispatch Webhook Notification.",
+      "soWhat": "Fires an alert to monitoring channels that a build has started."
+    },
+    {
+      "id": "7.11",
+      "parentId": "7",
+      "nextIds": [],
+      "prevIds": ["7.6", "7.7", "7.8", "7.9", "7.10"],
+      "hasDerivation": false,
+      "claim": "Finalize Live Release.",
+      "soWhat": "Gathers all async artifacts, publishes them to the CDN, and completes the deployment."
     }
   ]
 }
