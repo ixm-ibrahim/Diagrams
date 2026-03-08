@@ -1080,15 +1080,11 @@ button.node-badge:active {
   transition: opacity 0.35s ease;
 }
 
-.level-group[data-stacked]::before {
-  opacity: 1;
-}
+/* ::before spines are replaced by JS-positioned .stacked-indent-spine
+   elements that span across group boundaries for cross-group continuity.
+   Keep opacity at 0 (default from [data-parallel]::before).                  */
 
 /* --- Stacked node rows: full width minus indent ---                          */
-.level-group[data-stacked] {
-  row-gap: 2px;
-}
-
 .level-group[data-stacked] > .node-row {
   flex: 0 0 calc(100% - var(--stacked-indent) * var(--indent-depth, 1));
   margin-left: calc(var(--stacked-indent) * var(--indent-depth, 1));
