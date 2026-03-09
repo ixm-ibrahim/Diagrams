@@ -1,0 +1,94 @@
+/* =============================================================================
+   base.css — Reset, Body, App Shell
+   =============================================================================
+   Global reset, body background with layered radial gradients and tint system,
+   app-wrap max-width container, and focus-dimming overlay.
+
+   Depends on: tokens.css (--bg-0, --bg-1, --glass, --text, --font-sans,
+               --border, --text-faint, --spine-color, --radius-lg)
+
+   HTML classes styled here:
+     body, .app-wrap, body.is-focused .node-row, .theme-transition
+   ============================================================================= */
+
+
+/* Reset
+   ----------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* Body: layered background with dynamic tint system
+   ----------------------------------------------------------------------------- */
+/*
+ * Two CSS custom properties drive the background tint gradients:
+ *   --bg-tint       (left side)  — reflects the current page's hue
+ *   --bg-tint-right (right side) — reflects the active expander's hue
+ * Both are set/cleared by AppState.updateTints() in JS.
+ */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  overflow-y: scroll;
+  background:
+    radial-gradient(100vw 100vh at 100% 50%, var(--bg-tint-right, transparent), transparent 70%),
+    radial-gradient(100vw 100vh at 0% 50%, var(--bg-tint, transparent), transparent 70%),
+    radial-gradient(1200px 620px at 14% 0%, rgba(110, 140, 255, 0.12), transparent 60%),
+    radial-gradient(980px 540px at 88% 10%, rgba(255, 110, 190, 0.08), transparent 55%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  min-height: 100vh;
+  transition: background 0.3s ease;
+  background-attachment: fixed;
+}
+
+
+/* App shell container
+   ----------------------------------------------------------------------------- */
+.app-wrap {
+  max-width: var(--app-max-width);
+  min-width: var(--app-min-width);
+  margin: 0 auto;
+  padding: var(--app-pad-top) var(--app-pad-side) var(--app-pad-bottom);
+}
+
+
+/* Focus dimming: when an expander is open, fade all non-active node rows
+   ----------------------------------------------------------------------------- */
+body.is-focused .node-row:not(.is-active) {
+  opacity: 0.45;
+  filter: blur(0.6px);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover brightens a dimmed row so users can read it without clicking */
+body.is-focused .node-row:not(.is-active):hover {
+  opacity: 0.85;
+  filter: blur(0);
+}
+
+
+/* Theme transition overlay: smooth color changes during theme toggle
+   ----------------------------------------------------------------------------- */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.3s ease, background 0.3s ease, color 0.3s ease,
+              border-color 0.3s ease, box-shadow 0.3s ease !important;
+}

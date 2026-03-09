@@ -1,0 +1,38 @@
+/* =============================================================================
+   animations.css — Page Transition Animations
+   =============================================================================
+   Directional slide animations for page navigation transitions.
+
+   Duration is driven by --page-transition-duration in tokens.css.
+   The JS constant ANIMATION_SPEEDS.CSS_TRANSITION_MS in constants.js
+   must be kept in sync (both default to 500ms / 0.5s).
+
+   Direction mapping (set by ui-render.js):
+     depth:        enter-right  / exit-left    (drill in)
+     surface:      enter-left   / exit-right   (drill out)
+     lateral-next: enter-bottom / exit-top     (next sibling)
+     lateral-prev: enter-top    / exit-bottom  (prev sibling)
+
+   Depends on: tokens.css (--page-transition-duration)
+   HTML classes styled here:
+     .anim-enter-right, .anim-exit-left, .anim-enter-left, .anim-exit-right,
+     .anim-enter-bottom, .anim-exit-top, .anim-enter-top, .anim-exit-bottom
+   ============================================================================= */
+
+.anim-enter-right  { animation: slideInRight  var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-left    { animation: slideOutLeft   var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-enter-left   { animation: slideInLeft    var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-right   { animation: slideOutRight  var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-enter-bottom { animation: slideInBottom  var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-top     { animation: slideOutTop    var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-enter-top    { animation: slideInTop     var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-bottom  { animation: slideOutBottom var(--page-transition-duration) cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+@keyframes slideInRight   { from { transform: translateX(60px);  opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutLeft   { from { transform: none; opacity: 1; } to { transform: translateX(-60px);  opacity: 0; } }
+@keyframes slideInLeft    { from { transform: translateX(-60px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutRight  { from { transform: none; opacity: 1; } to { transform: translateX(60px);   opacity: 0; } }
+@keyframes slideInBottom  { from { transform: translateY(40px);  opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutTop    { from { transform: none; opacity: 1; } to { transform: translateY(-40px);  opacity: 0; } }
+@keyframes slideInTop     { from { transform: translateY(-40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutBottom { from { transform: none; opacity: 1; } to { transform: translateY(40px);   opacity: 0; } }

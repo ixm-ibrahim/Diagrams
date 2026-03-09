@@ -16,6 +16,8 @@ const ANIMATION_SPEEDS = {
  */
 const SPINE_FADE_PX = 60;
 
+let maskCounter = 0;
+
 /**
  * Per-flex-child width threshold (px) below which a parallel level-group
  * collapses into a stacked indented list.
@@ -463,9 +465,10 @@ const SVGEngine = {
       });
     }
 
+    const maskId = `timelineMask-${++maskCounter}`;
     const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
     const mask = document.createElementNS('http://www.w3.org/2000/svg', 'mask');
-    mask.setAttribute('id', 'timelineMask');
+    mask.setAttribute('id', maskId);
 
     const whiteBg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
     whiteBg.setAttribute('x', '0');
@@ -655,7 +658,7 @@ const SVGEngine = {
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       path.setAttribute('class', 'dag-edge');
       path.setAttribute('d', allPathData.trim());
-      path.setAttribute('mask', 'url(#timelineMask)');
+      path.setAttribute('mask', `url(#${maskId})`);
       svg.appendChild(path);
     }
 

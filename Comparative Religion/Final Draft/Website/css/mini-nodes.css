@@ -1,0 +1,151 @@
+/* =============================================================================
+   mini-nodes.css — Recursive Mini-Node Components
+   =============================================================================
+   Expandable nested sub-arguments within the expander panel. Each mini-node
+   has a trigger button (title) and a content wrap (detail + sub-sections +
+   nested children). Supports arbitrary depth.
+
+   Depends on tokens.css:
+     --border-thin, --text, --text-muted, --mini-bg,
+     --mini-content-bg, --mini-content-shadow
+
+   HTML classes styled here:
+     .mini-stack, .mini-node, .mini-trigger, .mini-content-wrap,
+     .sub-section, .sub-label, .sub-body
+   ============================================================================= */
+
+
+/* Stack container: vertical list of mini-nodes
+   ----------------------------------------------------------------------------- */
+.mini-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  text-align: left;
+}
+
+
+/* Individual mini-node card
+   ----------------------------------------------------------------------------- */
+.mini-node {
+  border: 1px solid var(--border-thin);
+  border-radius: 12px;
+  background: var(--mini-bg);
+  overflow: hidden;
+  text-align: left;
+}
+
+
+/* Trigger button (title bar)
+   ----------------------------------------------------------------------------- */
+.mini-trigger {
+  width: 100%;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 13.5px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mini-trigger .id {
+  opacity: 0.5;
+  margin-right: 6px;
+  font-weight: 800;
+}
+
+/* Collapse chevron */
+.mini-trigger::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s, opacity 0.15s;
+  opacity: 0.6;
+  margin-left: auto;
+  margin-right: 6px;
+}
+
+/* Chevron hover feedback */
+.mini-trigger:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(1px, 1px);
+}
+
+.mini-node.is-open > .mini-trigger::after {
+  transform: rotate(-45deg);
+}
+
+.mini-node.is-open > .mini-trigger:hover::after {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+/* Content wrap: animated collapse via grid-template-rows
+   Timing controlled by --collapse-duration in tokens.css (set to 0s to disable).
+   ----------------------------------------------------------------------------- */
+.mini-content-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--collapse-duration) ease;
+  border-top: 1px solid var(--border-thin);
+  background: var(--mini-content-bg);
+  box-shadow: var(--mini-content-shadow);
+  text-align: left;
+}
+
+.mini-content-inner {
+  overflow: hidden;
+  padding: 0 14px;
+}
+
+.mini-node.is-open > .mini-content-wrap {
+  grid-template-rows: 1fr;
+}
+
+.mini-node.is-open > .mini-content-wrap .mini-content-inner {
+  padding: 0 14px 14px;
+}
+
+
+/* Sub-sections within mini-node content
+   ----------------------------------------------------------------------------- */
+.sub-section {
+  margin-top: 12px;
+  text-align: left;
+}
+
+.sub-label {
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  letter-spacing: 0.6px;
+  text-align: left;
+}
+
+.sub-body {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.45;
+  text-align: left;
+}
+
+
+/* Nested mini-nodes: slightly tighter styling
+   ----------------------------------------------------------------------------- */
+.mini-content-wrap .mini-node {
+  margin-top: 10px;
+  border-left-width: 4px;
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: none;
+}

@@ -1,0 +1,230 @@
+/* =============================================================================
+   node-card.css — Node Card Component
+   =============================================================================
+   Styles the .node-card article element and its children: header, title,
+   controls, parent badge, so-what paragraph. Includes container queries
+   for responsive card internals.
+
+   Per-node colors are set inline by JS as custom properties:
+     --n-border-dark/light: card border
+     --n-top/bottom: card gradient
+     --p-border-dark/light: parent badge dot color
+
+   Depends on tokens.css:
+     --radius-lg, --shadow, --shadow-deep, --node-min-h, --border,
+     --text, --text-muted, --text-faint, --font-mono, --bg-0
+
+   HTML classes styled here:
+     .node-card, .node-header, .node-title, .claim-text,
+     .node-controls, .node-so-what, .node-badge, .badge-dot, .btn-ui
+   ============================================================================= */
+
+
+/* Card container
+   ----------------------------------------------------------------------------- */
+.node-card {
+  /* Theme-aware border: switches between dark/light via data-theme */
+  --n-border: var(--n-border-dark);
+  --p-border: var(--p-border-dark);
+
+  grid-row: 1;
+  grid-column: 2;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--n-border);
+  background: linear-gradient(180deg, var(--n-top), var(--n-bottom));
+  color: #081023;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+  min-height: var(--node-min-h);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  container-type: inline-size;
+  container-name: node-col;
+}
+
+[data-theme="light"] .node-card {
+  --n-border: var(--n-border-light);
+  --p-border: var(--p-border-light);
+}
+
+.node-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-deep);
+}
+
+/* Subtle diagonal-line texture overlay */
+.node-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(800px 180px at 20% 0%, rgba(255, 255, 255, 0.55), transparent 55%),
+    repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.045) 0 2px, rgba(0, 0, 0, 0) 2px 6px);
+  opacity: 0.22;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+
+/* Card header: title + controls in a flex row
+   ----------------------------------------------------------------------------- */
+/*
+ * Default (so-what visible): controls are pinned top-right. Title truncates
+ * via min-width: 0 rather than wrapping controls to a new line.
+ * When so-what is hidden (container ≤300px), the header loosens to allow wrap.
+ */
+.node-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: var(--card-header-gap);
+  padding: var(--card-header-pad-v) var(--card-header-pad-h);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+
+
+/* Title: ID number as hanging-indent column + claim text
+   ----------------------------------------------------------------------------- */
+.node-title {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  font-size: var(--card-title-size);
+  font-weight: 950;
+  line-height: 1.35;
+  min-width: 0;
+  flex: 1;
+}
+
+.node-title .id {
+  opacity: 0.5;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Claim text fills remaining title space; wrapped lines align to right of ID */
+.node-title .claim-text {
+  min-width: 0;
+}
+
+
+/* Controls: badge + Expand button pinned together
+   ----------------------------------------------------------------------------- */
+.node-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* So-what summary paragraph
+   ----------------------------------------------------------------------------- */
+.node-so-what {
+  margin: 0;
+  color: rgba(8, 16, 35, 0.64);
+  font-size: var(--card-body-size);
+  line-height: 1.42;
+  padding: var(--card-body-pad);
+  flex: 1;
+}
+
+
+/* Parent badge pill
+   ----------------------------------------------------------------------------- */
+.node-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-mono);
+  font-size: var(--card-badge-size);
+  color: rgba(0, 0, 0, 0.72);
+}
+
+button.node-badge {
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+button.node-badge:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+button.node-badge:active {
+  transform: scale(0.96);
+}
+
+.badge-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--p-border);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+
+/* Utility button (used for Expand button inside cards, and header controls)
+   ----------------------------------------------------------------------------- */
+.btn-ui {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.1);
+  color: inherit;
+  font-size: var(--btn-font-size);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.btn-ui:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ui:active {
+  transform: translateY(0) scale(0.97);
+}
+
+[data-theme="light"] .btn-ui {
+  background: rgba(16, 26, 53, 0.05);
+}
+
+
+/* Container queries: responsive card internals
+   ----------------------------------------------------------------------------- */
+
+/* ≤300px: hide so-what, loosen header wrap, switch title to inline */
+@container node-col (max-width: 300px) {
+  .node-so-what { display: none; }
+  .node-header { flex-wrap: wrap; border-bottom: none; }
+  .node-title { display: block; min-width: 120px; flex: 1; }
+  .node-title .id { margin-right: 4px; }
+  .node-controls { flex-shrink: 1; flex-wrap: wrap; }
+}
+
+@media (max-width: 500px) {
+  .node-card { min-height: auto; z-index: 2; }
+}
+
+/* ≤200px: controls wrap to full-width row */
+@container node-col (max-width: 200px) {
+  .node-controls {
+    width: 100%;
+    margin-top: 4px;
+  }
+}

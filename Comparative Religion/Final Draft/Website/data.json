@@ -902,6 +902,897 @@
       "hasDerivation": false,
       "claim": "Finalize Live Release.",
       "soWhat": "Gathers all async artifacts, publishes them to the CDN, and completes the deployment."
+    },
+	{
+      "id": "1.1.3",
+      "parentId": "1.1",
+      "nextIds": ["1.1.4"],
+      "prevIds": ["1.1.2"],
+      "hasDerivation": false,
+      "claim": "Execute step three of the linear sequence.",
+      "soWhat": "Ensures the midpoint processing is completed."
+    },
+    {
+      "id": "1.1.5",
+      "parentId": "1.1",
+      "nextIds": [],
+      "prevIds": ["1.1.4"],
+      "hasDerivation": false,
+      "claim": "Conclude the linear sequence.",
+      "soWhat": "Finalizes the execution path."
+    },
+    {
+      "id": "1.1.1",
+      "parentId": "1.1",
+      "nextIds": ["1.1.2"],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 1] Initialize the linear test sequence.",
+      "soWhat": "Starts the straightforward 1-to-5 procedural flow."
+    },
+    {
+      "id": "1.1.4",
+      "parentId": "1.1",
+      "nextIds": ["1.1.5"],
+      "prevIds": ["1.1.3"],
+      "hasDerivation": false,
+      "claim": "Execute step four of the linear sequence.",
+      "soWhat": "Prepares the data for finalization."
+    },
+    {
+      "id": "1.1.2",
+      "parentId": "1.1",
+      "nextIds": ["1.1.3"],
+      "prevIds": ["1.1.1"],
+      "hasDerivation": false,
+      "claim": "Execute step two of the linear sequence.",
+      "soWhat": "Passes the initial data down the chain."
+    },
+    {
+      "id": "1.2.11",
+      "parentId": "1.2",
+      "nextIds": [],
+      "prevIds": ["1.2.9"],
+      "hasDerivation": false,
+      "claim": "Archive Testware and Handover.",
+      "soWhat": "Ensures test environments, scripts, and logs are preserved for future maintenance."
+    },
+    {
+      "id": "1.2.2",
+      "parentId": "1.2",
+      "nextIds": ["1.2.4", "1.2.5", "1.2.6"],
+      "prevIds": ["1.2.1"],
+      "hasDerivation": false,
+      "claim": "Perform Test Analysis.",
+      "soWhat": "Identifies what needs to be tested based on the requirements."
+    },
+    {
+      "id": "1.2.7",
+      "parentId": "1.2",
+      "nextIds": ["1.2.9"],
+      "prevIds": ["1.2.4", "1.2.5", "1.2.6"],
+      "hasDerivation": false,
+      "claim": "Evaluate Exit Criteria.",
+      "soWhat": "Checks if the testing logs match the planned coverage objectives."
+    },
+    {
+      "id": "1.2.1",
+      "parentId": "1.2",
+      "nextIds": ["1.2.2", "1.2.3"],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 3] Establish Test Planning and Control.",
+      "soWhat": "Defines the objectives and scope of the testing phase."
+    },
+    {
+      "id": "1.2.9",
+      "parentId": "1.2",
+      "nextIds": ["1.2.10", "1.2.11"],
+      "prevIds": ["1.2.7", "1.2.8"],
+      "hasDerivation": false,
+      "claim": "Conduct Test Closure Activities.",
+      "soWhat": "Consolidates data from completed test activities to finalize the cycle."
+    },
+    {
+      "id": "1.2.4",
+      "parentId": "1.2",
+      "nextIds": ["1.2.7", "1.2.8"],
+      "prevIds": ["1.2.2", "1.2.3"],
+      "hasDerivation": false,
+      "claim": "Execute Unit Testing.",
+      "soWhat": "Validates individual software components in isolation."
+    },
+    {
+      "id": "1.2.8",
+      "parentId": "1.2",
+      "nextIds": ["1.2.9"],
+      "prevIds": ["1.2.4", "1.2.5", "1.2.6"],
+      "hasDerivation": false,
+      "claim": "Compile Incident Reports.",
+      "soWhat": "Documents discrepancies between expected and actual outcomes."
+    },
+    {
+      "id": "1.2.3",
+      "parentId": "1.2",
+      "nextIds": ["1.2.4", "1.2.5", "1.2.6"],
+      "prevIds": ["1.2.1"],
+      "hasDerivation": false,
+      "claim": "Develop Test Design.",
+      "soWhat": "Transforms test conditions into concrete test cases."
+    },
+    {
+      "id": "1.2.10",
+      "parentId": "1.2",
+      "nextIds": [],
+      "prevIds": ["1.2.9"],
+      "hasDerivation": false,
+      "claim": "Final QA Sign-off.",
+      "soWhat": "Releases the software component to the next stage of deployment."
+    },
+    {
+      "id": "1.2.5",
+      "parentId": "1.2",
+      "nextIds": ["1.2.7", "1.2.8"],
+      "prevIds": ["1.2.2", "1.2.3"],
+      "hasDerivation": false,
+      "claim": "Execute Integration Testing.",
+      "soWhat": "Verifies the interfaces between interacting components."
+    },
+    {
+      "id": "1.2.6",
+      "parentId": "1.2",
+      "nextIds": ["1.2.7", "1.2.8"],
+      "prevIds": ["1.2.2", "1.2.3"],
+      "hasDerivation": false,
+      "claim": "Execute System Testing.",
+      "soWhat": "Evaluates the entire system's compliance with specified requirements."
+    },
+    {
+      "id": "1.3.5",
+      "parentId": "1.3",
+      "nextIds": ["1.3.7"],
+      "prevIds": ["1.3.2"],
+      "hasDerivation": false,
+      "claim": "Filter out inherent contradictions.",
+      "soWhat": "Removes frameworks that require logical exceptions to function."
+    },
+    {
+      "id": "1.3.2",
+      "parentId": "1.3",
+      "nextIds": ["1.3.5"],
+      "prevIds": ["1.3.1"],
+      "hasDerivation": false,
+      "claim": "Apply logical filters.",
+      "soWhat": "Subjects the empirical data to strict laws of identity and non-contradiction."
+    },
+    {
+      "id": "1.3.7",
+      "parentId": "1.3",
+      "nextIds": [],
+      "prevIds": ["1.3.5", "1.3.3", "1.3.6"],
+      "hasDerivation": false,
+      "claim": "Synthesize validated beliefs.",
+      "soWhat": "Merges the filtered logic, stable patterns, and coherent categories into a final conclusion."
+    },
+    {
+      "id": "1.3.1",
+      "parentId": "1.3",
+      "nextIds": ["1.3.2", "1.3.3", "1.3.4"],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 4] Establish empirical baselines for inquiry.",
+      "soWhat": "Grounds the evaluation process in observable reality rather than assumption."
+    },
+    {
+      "id": "1.3.4",
+      "parentId": "1.3",
+      "nextIds": ["1.3.6"],
+      "prevIds": ["1.3.1"],
+      "hasDerivation": false,
+      "claim": "Test for internal coherence.",
+      "soWhat": "Checks if the belief system's theology agrees with its own foundational texts."
+    },
+    {
+      "id": "1.3.6",
+      "parentId": "1.3",
+      "nextIds": ["1.3.7"],
+      "prevIds": ["1.3.4"],
+      "hasDerivation": false,
+      "claim": "Eliminate category errors.",
+      "soWhat": "Discards systems that confuse the necessary with the dependent."
+    },
+    {
+      "id": "1.3.3",
+      "parentId": "1.3",
+      "nextIds": ["1.3.7"],
+      "prevIds": ["1.3.1"],
+      "hasDerivation": false,
+      "claim": "Identify stable patterns of transmission.",
+      "soWhat": "Acts as the unbroken middle lane, carrying direct historical continuity forward."
+    },
+    {
+      "id": "1.4.8",
+      "parentId": "1.4",
+      "nextIds": [],
+      "prevIds": ["1.4.4", "1.4.5", "1.4.6", "1.4.7"],
+      "hasDerivation": false,
+      "claim": "Composite Final Fragment.",
+      "soWhat": "Multiplies the color channels with the illumination data for the final output."
+    },
+    {
+      "id": "1.4.4",
+      "parentId": "1.4",
+      "nextIds": ["1.4.8"],
+      "prevIds": ["1.4.2"],
+      "hasDerivation": false,
+      "claim": "Apply Domain Warping.",
+      "soWhat": "Distorts the UV coordinate space to create organic, swirling patterns."
+    },
+    {
+      "id": "1.4.1",
+      "parentId": "1.4",
+      "nextIds": ["1.4.2", "1.4.3"],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 6] Initialize Fragment Data.",
+      "soWhat": "Establishes the base UV coordinates and normal vectors for the pixel."
+    },
+    {
+      "id": "1.4.6",
+      "parentId": "1.4",
+      "nextIds": ["1.4.8"],
+      "prevIds": ["1.4.3"],
+      "hasDerivation": false,
+      "claim": "Calculate Diffuse Reflection.",
+      "soWhat": "Computes the Lambertian scattering based on the incident light angle."
+    },
+    {
+      "id": "1.4.2",
+      "parentId": "1.4",
+      "nextIds": ["1.4.4", "1.4.5"],
+      "prevIds": ["1.4.1"],
+      "hasDerivation": false,
+      "claim": "Procedural Color Generation.",
+      "soWhat": "Calculates the intrinsic pigment and texture of the surface material."
+    },
+    {
+      "id": "1.4.7",
+      "parentId": "1.4",
+      "nextIds": ["1.4.8"],
+      "prevIds": ["1.4.3"],
+      "hasDerivation": false,
+      "claim": "Calculate Specular Highlights.",
+      "soWhat": "Adds shiny, view-dependent reflections using the Blinn-Phong model."
+    },
+    {
+      "id": "1.4.3",
+      "parentId": "1.4",
+      "nextIds": ["1.4.6", "1.4.7"],
+      "prevIds": ["1.4.1"],
+      "hasDerivation": false,
+      "claim": "Illumination Mathematics.",
+      "soWhat": "Determines how external light sources interact with the surface geometry."
+    },
+    {
+      "id": "1.4.5",
+      "parentId": "1.4",
+      "nextIds": ["1.4.8"],
+      "prevIds": ["1.4.2"],
+      "hasDerivation": false,
+      "claim": "Evaluate fBm Noise.",
+      "soWhat": "Layers multiple octaves of high-frequency noise for granular detail."
+    },
+    {
+      "id": "1.5.10",
+      "parentId": "1.5",
+      "nextIds": ["1.5.11"],
+      "prevIds": ["1.5.1"],
+      "hasDerivation": false,
+      "claim": "Dispatch Webhook Notification.",
+      "soWhat": "Fires an alert to monitoring channels that a build has started."
+    },
+    {
+      "id": "1.5.3",
+      "parentId": "1.5",
+      "nextIds": ["1.5.4", "1.5.8"],
+      "prevIds": ["1.5.2"],
+      "hasDerivation": false,
+      "claim": "Build Particle System.",
+      "soWhat": "Compiles the core application logic and real-time visual effects."
+    },
+    {
+      "id": "1.5.7",
+      "parentId": "1.5",
+      "nextIds": ["1.5.11"],
+      "prevIds": ["1.5.4"],
+      "hasDerivation": false,
+      "claim": "Minify JavaScript.",
+      "soWhat": "Strips out whitespace and obfuscates the client-side code to reduce payload size."
+    },
+    {
+      "id": "1.5.1",
+      "parentId": "1.5",
+      "nextIds": ["1.5.2", "1.5.10"],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 7] Initialize Deployment Action.",
+      "soWhat": "Kicks off the async build pipeline for the web environment."
+    },
+    {
+      "id": "1.5.9",
+      "parentId": "1.5",
+      "nextIds": ["1.5.11"],
+      "prevIds": ["1.5.2"],
+      "hasDerivation": false,
+      "claim": "Cache Node Modules.",
+      "soWhat": "Saves the dependency tree to speed up future pipeline executions."
+    },
+    {
+      "id": "1.5.5",
+      "parentId": "1.5",
+      "nextIds": ["1.5.6"],
+      "prevIds": ["1.5.4"],
+      "hasDerivation": false,
+      "claim": "Process Textures.",
+      "soWhat": "Reads high-resolution image files used for the web graphics."
+    },
+    {
+      "id": "1.5.11",
+      "parentId": "1.5",
+      "nextIds": [],
+      "prevIds": ["1.5.6", "1.5.7", "1.5.8", "1.5.9", "1.5.10"],
+      "hasDerivation": false,
+      "claim": "Finalize Live Release.",
+      "soWhat": "Gathers all async artifacts, publishes them to the CDN, and completes the deployment."
+    },
+    {
+      "id": "1.5.2",
+      "parentId": "1.5",
+      "nextIds": ["1.5.3", "1.5.9"],
+      "prevIds": ["1.5.1"],
+      "hasDerivation": false,
+      "claim": "Provision Build Environment.",
+      "soWhat": "Sets up the container and installs required dependencies."
+    },
+    {
+      "id": "1.5.8",
+      "parentId": "1.5",
+      "nextIds": ["1.5.11"],
+      "prevIds": ["1.5.3"],
+      "hasDerivation": false,
+      "claim": "Generate Source Maps.",
+      "soWhat": "Creates mappings to allow debugging of the minified code in production."
+    },
+    {
+      "id": "1.5.4",
+      "parentId": "1.5",
+      "nextIds": ["1.5.5", "1.5.7"],
+      "prevIds": ["1.5.3"],
+      "hasDerivation": false,
+      "claim": "Execute Asset Pipeline.",
+      "soWhat": "Processes raw static files into optimized web-ready formats."
+    },
+    {
+      "id": "1.5.6",
+      "parentId": "1.5",
+      "nextIds": ["1.5.11"],
+      "prevIds": ["1.5.5"],
+      "hasDerivation": false,
+      "claim": "Generate WebP Variants.",
+      "soWhat": "Compresses the textures into modern, highly optimized formats."
+    },
+	{
+        "id": "2.3.8",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.9"
+        ],
+        "prevIds": [
+            "2.3.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 8",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.2.1",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.2",
+            "2.2.5"
+        ],
+        "prevIds": [],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 1",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.1.9",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.12"
+        ],
+        "prevIds": [
+            "2.1.3",
+            "2.1.4",
+            "2.1.6",
+            "2.1.7",
+            "2.1.8"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 9",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.3.5",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.6",
+            "2.3.8",
+            "2.3.10"
+        ],
+        "prevIds": [
+            "2.3.1"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 5",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.1.3",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.9",
+            "2.1.10",
+            "2.1.11"
+        ],
+        "prevIds": [
+            "2.1.2"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 3",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.2.8",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.12"
+        ],
+        "prevIds": [
+            "2.2.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 8",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.1.11",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.12"
+        ],
+        "prevIds": [
+            "2.1.3",
+            "2.1.4",
+            "2.1.6",
+            "2.1.7",
+            "2.1.8"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 11",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.3.11",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.12"
+        ],
+        "prevIds": [
+            "2.3.10"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 11",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.3.13",
+        "parentId": "2.3",
+        "nextIds": [],
+        "prevIds": [
+            "2.3.3",
+            "2.3.4",
+            "2.3.9",
+            "2.3.12"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 13",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.2.4",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.12"
+        ],
+        "prevIds": [
+            "2.2.2"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 4",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.2.9",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.10"
+        ],
+        "prevIds": [
+            "2.2.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 9",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.1.5",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.6",
+            "2.1.7",
+            "2.1.8"
+        ],
+        "prevIds": [
+            "2.1.1"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 5",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.3.6",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.7"
+        ],
+        "prevIds": [
+            "2.3.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 6",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.2.2",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.3",
+            "2.2.4"
+        ],
+        "prevIds": [
+            "2.2.1"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 2",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.3.2",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.3",
+            "2.3.4"
+        ],
+        "prevIds": [
+            "2.3.1"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 2",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.3.1",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.2",
+            "2.3.5"
+        ],
+        "prevIds": [],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 1",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.1.4",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.9",
+            "2.1.10",
+            "2.1.11"
+        ],
+        "prevIds": [
+            "2.1.2"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 4",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.2.11",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.12"
+        ],
+        "prevIds": [
+            "2.2.10"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 11",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.1.2",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.3",
+            "2.1.4"
+        ],
+        "prevIds": [
+            "2.1.1"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 2",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.3.3",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.13"
+        ],
+        "prevIds": [
+            "2.3.2"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 3",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.1.1",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.2",
+            "2.1.5"
+        ],
+        "prevIds": [],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 1",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.2.6",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.7"
+        ],
+        "prevIds": [
+            "2.2.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 6",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.3.7",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.9"
+        ],
+        "prevIds": [
+            "2.3.6"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 7",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.3.9",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.13"
+        ],
+        "prevIds": [
+            "2.3.7",
+            "2.3.8"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 9",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.2.3",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.12"
+        ],
+        "prevIds": [
+            "2.2.2"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 3",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.1.8",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.9",
+            "2.1.10",
+            "2.1.11"
+        ],
+        "prevIds": [
+            "2.1.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 8",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.3.10",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.11"
+        ],
+        "prevIds": [
+            "2.3.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 10",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.1.10",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.12"
+        ],
+        "prevIds": [
+            "2.1.3",
+            "2.1.4",
+            "2.1.6",
+            "2.1.7",
+            "2.1.8"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 10",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.2.12",
+        "parentId": "2.2",
+        "nextIds": [],
+        "prevIds": [
+            "2.2.3",
+            "2.2.4",
+            "2.2.7",
+            "2.2.8",
+            "2.2.11"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 12",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.2.7",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.12"
+        ],
+        "prevIds": [
+            "2.2.6"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 7",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.1.7",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.9",
+            "2.1.10",
+            "2.1.11"
+        ],
+        "prevIds": [
+            "2.1.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 7",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.3.12",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.13"
+        ],
+        "prevIds": [
+            "2.3.11"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 12",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.1.12",
+        "parentId": "2.1",
+        "nextIds": [],
+        "prevIds": [
+            "2.1.9",
+            "2.1.10",
+            "2.1.11"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 12",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.2.5",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.6",
+            "2.2.8",
+            "2.2.9"
+        ],
+        "prevIds": [
+            "2.2.1"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 5",
+        "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+        "id": "2.1.6",
+        "parentId": "2.1",
+        "nextIds": [
+            "2.1.9",
+            "2.1.10",
+            "2.1.11"
+        ],
+        "prevIds": [
+            "2.1.5"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.1] Node 6",
+        "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+        "id": "2.3.4",
+        "parentId": "2.3",
+        "nextIds": [
+            "2.3.13"
+        ],
+        "prevIds": [
+            "2.3.2"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.3] Node 4",
+        "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+        "id": "2.2.10",
+        "parentId": "2.2",
+        "nextIds": [
+            "2.2.11"
+        ],
+        "prevIds": [
+            "2.2.9"
+        ],
+        "hasDerivation": false,
+        "claim": "[2.2] Node 10",
+        "soWhat": "Placeholder for 2.2 DAG structure."
     }
   ]
 }

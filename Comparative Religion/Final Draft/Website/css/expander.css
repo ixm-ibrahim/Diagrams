@@ -1,0 +1,365 @@
+/* =============================================================================
+   expander.css — Expander Panel, Logic Sections, Tabs, Actions, Bullets
+   =============================================================================
+   The inline detail panel that slides open below a node card.
+   Animates via grid-template-rows (0fr → 1fr).
+
+   Depends on tokens.css:
+     --expander-pad, --radius-lg, --radius-md, --border, --border-thin,
+     --panel-bg, --panel-accent, --shadow, --header-ink, --text, --text-muted,
+     --text-faint, --font-mono, --mini-bg, --mini-content-bg, --mini-content-shadow
+
+   HTML classes styled here:
+     .level-expander, .exp-inner, .logic-group, .logic-section, .logic-header,
+     .logic-content, .tab-area, .tab-list, .btn-tab, .tab-panel,
+     .panel-action-slot, .btn-action, .bullets
+   ============================================================================= */
+
+
+/* Expander container: animates open via grid-template-rows
+   ----------------------------------------------------------------------------- */
+.level-expander {
+  width: 100%;
+  flex: 0 0 100%;
+  padding-left: var(--expander-pad);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s, transform 0.3s, margin-top 0.3s;
+  opacity: 0;
+  transform: translateY(-6px);
+  margin-top: 0;
+  z-index: 10;
+}
+
+.level-expander.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: -8px;
+  margin-bottom: 24px;
+  pointer-events: auto;
+}
+
+.exp-inner {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel-bg), var(--panel-accent));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+
+/* Logic sections (row-type sections inside expander)
+   ----------------------------------------------------------------------------- */
+.logic-section {
+  --logic-pad-left: 14px;
+  --logic-circle: 22px;
+
+  border-top: 1px solid var(--border);
+  padding: 12px var(--logic-pad-left);
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px;
+}
+
+.logic-section:first-child {
+  border-top: none;
+}
+
+.logic-header {
+  color: var(--header-ink);
+  font-weight: 950;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Step number circle */
+.logic-header::before {
+  content: attr(data-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--logic-circle);
+  height: var(--logic-circle);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* Collapse chevron */
+.logic-header::after {
+  content: "";
+  margin-left: auto;
+  margin-right: 12px;
+  align-self: flex-start;
+  margin-top: 8px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s, opacity 0.15s;
+  opacity: 0.6;
+}
+
+/* Chevron hover feedback */
+.logic-header:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(1px, 1px);
+}
+
+.logic-section.is-collapsed .logic-header::after {
+  transform: rotate(-45deg);
+}
+
+.logic-section.is-collapsed .logic-header:hover::after {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+/* Animated collapse via grid-template-rows (configurable: --collapse-duration) */
+.logic-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows var(--collapse-duration) ease;
+}
+
+.logic-content-inner {
+  overflow: hidden;
+}
+
+.logic-section.is-collapsed .logic-content {
+  grid-template-rows: 0fr;
+}
+
+/* Vertical connecting line between sections */
+.logic-section::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--logic-pad-left) + (var(--logic-circle) / 2) - 1px);
+  top: 44px;
+  bottom: -3px;
+  width: 2px;
+  background: var(--border);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* Arrow at bottom of connecting line */
+.logic-section::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--logic-pad-left) + (var(--logic-circle) / 2) - 5px);
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--border);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .logic-section {
+    grid-template-columns: 1fr;
+  }
+  .logic-content {
+    padding-left: calc(var(--logic-circle) + 12px);
+  }
+}
+
+
+/* Tab area & action buttons
+   ----------------------------------------------------------------------------- */
+.tab-area {
+  border-top: 1px solid var(--border);
+  background: var(--mini-bg);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 8px 12px;
+  align-items: end;
+}
+
+.tab-list {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-tab {
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-tab:hover {
+  transform: translateY(-1px);
+}
+
+.btn-tab[aria-selected="true"] {
+  background: var(--text);
+  color: var(--bg-0);
+  border-color: var(--text);
+  font-weight: 950;
+  transform: translateY(-1px);
+}
+
+.panel-action-slot {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease,
+              color 0.15s ease, transform 0.1s ease;
+}
+
+.btn-action:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .btn-action:hover {
+  background: rgba(16, 26, 53, 0.05);
+}
+
+/* "Disagree? See derivation" button */
+.btn-action.btn-derivation-disagree {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+.btn-action.btn-derivation-disagree:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fecaca;
+}
+.btn-action.btn-derivation-disagree:active {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #450a0a;
+  font-weight: 700;
+}
+[data-theme="light"] .btn-action.btn-derivation-disagree {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: rgba(220, 38, 38, 0.2);
+  color: #b91c1c;
+}
+[data-theme="light"] .btn-action.btn-derivation-disagree:hover {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+  color: #991b1b;
+}
+[data-theme="light"] .btn-action.btn-derivation-disagree:active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Agree/disagree pressed states */
+.btn-action.btn-agree[aria-pressed="true"] {
+  background: #22c55e; border-color: #22c55e; color: #042f14; font-weight: 700;
+}
+
+/* Disagree arrow: shifts right on hover (same behavior as derive button) */
+.action-arrow {
+  display: inline-block;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.btn-derivation-disagree:hover .action-arrow {
+  transform: translateX(3px);
+  opacity: 1;
+}
+.btn-action.btn-disagree[aria-pressed="true"] {
+  background: #ef4444; border-color: #ef4444; color: #450a0a; font-weight: 700;
+}
+[data-theme="light"] .btn-action.btn-agree[aria-pressed="true"] {
+  background: #16a34a; border-color: #16a34a; color: #ffffff;
+}
+[data-theme="light"] .btn-action.btn-disagree[aria-pressed="true"] {
+  background: #dc2626; border-color: #dc2626; color: #ffffff;
+}
+
+.tab-panel {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  .tab-area { grid-template-columns: 1fr; }
+  .tab-panel { grid-column: 1; grid-row: 2; }
+  .panel-action-slot {
+    grid-column: 1; grid-row: 3;
+    justify-self: flex-start; margin-top: 4px;
+  }
+}
+
+
+/* Bullet lists
+   ----------------------------------------------------------------------------- */
+.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  text-align: left;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.42;
+}
+
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transform: translateY(-50%);
+}
