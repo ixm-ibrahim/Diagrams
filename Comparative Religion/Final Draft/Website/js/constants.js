@@ -7,7 +7,7 @@
  *
  * Dependencies: none
  *
- * Consumers: state.js, svg-engine.js, ui-render.js, ui-expander.js,
+ * Consumers: state.js, ui-render.js, ui-expander.js,
  *            ui-layout.js, ui-events.js
  * =============================================================================
  */
@@ -21,12 +21,6 @@ export const ANIMATION_SPEEDS = {
   CSS_TRANSITION_MS: 500,
   SCROLL_DELAY_MS: 510
 };
-
-/**
- * Maximum pixel distance over which a spine fades from solid to transparent.
- * Clamped to 30% of the spine's total height so short spines don't over-fade.
- */
-export const SPINE_FADE_PX = 60;
 
 /**
  * Per-flex-child width threshold (px) below which a parallel level-group
@@ -57,17 +51,6 @@ export const STACK_THRESHOLD = 270;
  * 200 px gives enough room for a card title + badge at all breakpoints.
  */
 export const DEEP_NODE_MIN_WIDTH = 200;
-
-/**
- * Horizontal pixel distance below which two marker dots are considered
- * vertically aligned (straight line, no bend needed).
- */
-export const STRAIGHT_THRESHOLD = 5;
-
-/**
- * Maximum radius (px) for rounded corners on SVG connector bends.
- */
-export const MAX_CORNER_RADIUS = 12;
 
 /**
  * Debounce delay (ms) for search input.

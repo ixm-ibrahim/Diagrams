@@ -7,8 +7,7 @@
  *
  * Dependencies: data-store.js (DataStore), state.js (AppState),
  *               templates.js (expander, tabContent),
- *               constants.js (ANIMATION_SPEEDS),
- *               svg-engine.js (draw — for SVG redraw after expander resize)
+ *               constants.js (ANIMATION_SPEEDS)
  * Consumers: ui-events.js (calls toggleExpander on click)
  * =============================================================================
  */
@@ -17,7 +16,6 @@ import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
 import { expander as expanderTemplate, tabContent } from './templates.js';
 import { ANIMATION_SPEEDS } from './constants.js';
-import { draw as drawSVG } from './svg-engine.js';
 
 /**
  * Toggles the expander for the given node ID.
@@ -106,7 +104,6 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
     expander.style.flex = '';
     if (!expander.classList.contains('is-open')) expander.innerHTML = '';
     expander.style.transition = '';
-    redrawSVG();
   }, cleanupDelay);
 }
 
@@ -144,8 +141,6 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     });
 
     scrollToView(row);
-    // Redraw SVG after expander is fully open
-    setTimeout(() => redrawSVG(), ANIMATION_SPEEDS.CSS_TRANSITION_MS);
   });
 }
 
@@ -211,15 +206,3 @@ function scrollToView(el) {
   }, ANIMATION_SPEEDS.SCROLL_DELAY_MS);
 }
 
-/* ---------------------------------------------------------------------------
- * SVG redraw helper
- * --------------------------------------------------------------------------- */
-
-function redrawSVG() {
-  const viewEl = document.querySelector('.map-flow');
-  if (!viewEl) return;
-  const visibleNodes = DataStore.nodes.filter(
-    n => n.parentId === AppState.currentParentId
-  );
-  requestAnimationFrame(() => drawSVG(viewEl, visibleNodes));
-}

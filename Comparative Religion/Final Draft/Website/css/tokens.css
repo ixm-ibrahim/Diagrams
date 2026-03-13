@@ -34,7 +34,10 @@
   --shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
   --shadow-deep: 0 16px 40px rgba(0, 0, 0, 0.42);
   --spine-color: rgba(233, 240, 255, 0.18);
+  --spine-color-solid: rgb(233, 240, 255);
+  --spine-opacity: 0.18;
   --spine-glow: rgba(110, 140, 255, 0.18);
+  --spine-glow-solid: rgba(110, 140, 255, 1);
   --header-ink: #ffffff;
 
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -60,7 +63,10 @@
   --shadow: 0 12px 30px rgba(16, 26, 53, 0.12);
   --shadow-deep: 0 18px 46px rgba(16, 26, 53, 0.14);
   --spine-color: rgba(16, 26, 53, 0.14);
+  --spine-color-solid: rgb(16, 26, 53);
+  --spine-opacity: 0.14;
   --spine-glow: rgba(90, 120, 255, 0.14);
+  --spine-glow-solid: rgba(90, 120, 255, 1);
   --header-ink: #000000;
 }
 

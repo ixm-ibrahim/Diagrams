@@ -11,7 +11,7 @@
  *               state.js (AppState),
  *               constants.js (ANIMATION_SPEEDS),
  *               sibling-nav.js (renderSiblingNavigation),
- *               svg-engine.js (draw)
+ *               svg-engine.js (draw — currently a no-op, connectors removed)
  * Consumers: navigation.js (renderMapWithTransition),
  *            main.js (init)
  * =============================================================================
@@ -81,7 +81,22 @@ export function init() {
 export function buildView() {
   const newView = document.createElement('div');
   newView.className = 'map-flow';
-  newView.innerHTML = '<div class="map-spine" aria-hidden="true"></div>';
+
+  // Glow sits outside the timeline-layer (unaffected by layer opacity)
+  const glow = document.createElement('div');
+  glow.className = 'map-spine-glow';
+  glow.setAttribute('aria-hidden', 'true');
+  newView.appendChild(glow);
+
+  // Timeline layer: compositing container for spine + SVG.
+  // Container-level opacity makes overlapping opaque elements safe.
+  const timelineLayer = document.createElement('div');
+  timelineLayer.className = 'timeline-layer';
+  timelineLayer.setAttribute('aria-hidden', 'true');
+  const spine = document.createElement('div');
+  spine.className = 'map-spine';
+  timelineLayer.appendChild(spine);
+  newView.appendChild(timelineLayer);
 
   const visibleNodes = DataStore.nodes.filter(
     n => n.parentId === AppState.currentParentId
@@ -696,13 +711,14 @@ export function renderMapWithTransition(direction) {
   renderSiblingNavigation(newView);
   container.appendChild(newView);
 
-  // Phase 2: Draw SVG connectors (needs layout to settle — double rAF)
+  // Phase 2: Draw SVG connectors (needs layout to settle)
   const visibleNodes = DataStore.nodes.filter(
     n => n.parentId === AppState.currentParentId
   );
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => drawSVG(newView, visibleNodes));
-  });
+  setTimeout(() => {
+    try { drawSVG(newView, visibleNodes); }
+    catch (err) { console.error('[UI] Phase 2 drawSVG threw:', err); }
+  }, 50);
 
   // Phase 3: Animate old out, new in
   oldViews.forEach(oldView => {
@@ -724,7 +740,10 @@ export function renderMapWithTransition(direction) {
     container.style.overflow = '';
 
     // Final SVG redraw after layout is fully settled
-    requestAnimationFrame(() => drawSVG(newView, visibleNodes));
+    setTimeout(() => {
+      try { drawSVG(newView, visibleNodes); }
+      catch (err) { console.error('[UI] Phase 4 drawSVG threw:', err); }
+    }, 50);
 
     AppState.isTransitioning = false;
   }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);

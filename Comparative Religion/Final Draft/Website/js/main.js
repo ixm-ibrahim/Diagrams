@@ -14,7 +14,7 @@
  *   6. NavigationController.init — reads URL, triggers first render
  *
  * Dependencies: data-store.js, state.js, ui-header.js, ui-render.js,
- *               ui-events.js, navigation.js, svg-engine.js
+ *               ui-events.js, navigation.js, svg-engine.js (resize observer only)
  * =============================================================================
  */
 
@@ -24,7 +24,7 @@ import * as UIHeader from './ui-header.js';
 import * as UIRender from './ui-render.js';
 import * as UIEvents from './ui-events.js';
 import { NavigationController } from './navigation.js';
-import { initResizeObserver, draw as drawSVG } from './svg-engine.js';
+import { initResizeObserver } from './svg-engine.js';
 import { updateStackedGroups } from './ui-layout.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -58,14 +58,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (AppState.isTransitioning) return;
         const viewEl = document.querySelector('.map-flow');
         if (!viewEl) return;
-        const didChange = updateStackedGroups(viewEl, mapContainer.offsetWidth);
-        // When stacking state changes, marker positions shift — redraw SVG
-        if (didChange) {
-          const visibleNodes = DataStore.nodes.filter(
-            n => n.parentId === AppState.currentParentId
-          );
-          requestAnimationFrame(() => drawSVG(viewEl, visibleNodes));
-        }
+        updateStackedGroups(viewEl, mapContainer.offsetWidth);
       }).observe(mapContainer);
     }
 
