@@ -289,14 +289,29 @@ export function buildView() {
               }
             });
           });
-          // Pure internal convergence (no outside parents) is normally
-          // stopped here, but when dummies coexist in the row they steal
-          // width from the descendants.  Zone-absorbing those descendants
-          // lets their level-group collapse (only dummies remain → hidden),
-          // giving the zone column full width.
+          // Convergence: fewer descendants than zone-parents means
+          // branches are merging.  Stop if:
+          //   - any parent is outside the zone (external merge), or
+          //   - collapsing to a single node with no dummies (single-thread
+          //     continuation, no width-stealing to compensate).
+          // Continue if 2+ descendants remain and all parents are internal —
+          // this is a fan-in that's still parallel and should stay in the
+          // stacked outline.  Also continue when dummies coexist (they
+          // steal width, so absorbing lets the level-group collapse).
           if (descendants.length < zoneParents.size) {
+            if (outsideParents.size > 0) break;
             const rowHasDummies = nextRow.some(n => n.isDummy);
-            if (outsideParents.size > 0 || !rowHasDummies) break;
+            if (descendants.length <= 1 && !rowHasDummies) break;
+          }
+          // Don't absorb if outside parents sit in the same row as the
+          // zone's trigger nodes — they're parallel siblings in another
+          // group, so absorbing the descendants into just this zone would
+          // misposition them (they should span ALL parent groups).
+          if (outsideParents.size > 0) {
+            const sameRowIds = new Set(
+              rowNodes.filter(n => !n.isDummy).map(n => n.id)
+            );
+            if ([...outsideParents].some(pid => sameRowIds.has(pid))) break;
           }
           // Don't absorb if more of the descendants' parents are outside
           // the zone than inside — the row is a merge point that should
@@ -304,7 +319,18 @@ export function buildView() {
           if (outsideParents.size > zoneParents.size) break;
 
           const ids = descendants.map(n => n.id);
-          zoneRows.push({ rowIdx: r, nodeIds: ids });
+          // Compute the zone row's own stacking threshold so
+          // updateStackedGroups only absorbs it when the row would
+          // actually be too narrow to stay parallel.
+          let zrWeight = 0;
+          for (let ci = 0; ci < nextRow.length; ci++) {
+            if (!nextRow[ci].isDummy && ids.includes(nextRow[ci].id)) {
+              zrWeight += (weights[r] ? weights[r][ci] : 1) || 1;
+            }
+          }
+          if (zrWeight === 0) zrWeight = ids.length;
+          const zrStackAt = Math.round(STACK_THRESHOLD * ids.length / zrWeight);
+          zoneRows.push({ rowIdx: r, nodeIds: ids, stackAt: zrStackAt });
           ids.forEach(id => zoneSet.add(id));
         }
 
@@ -517,23 +543,48 @@ function computeZoneOrder(allZoneIds) {
     visited.add(id);
 
     // --- Compute indent depth ---
+    // Depth tracks the "parallel breadth" of the DAG at each generation.
+    // Expansion (fewer parents → more children) increases depth.
+    // Convergence (more parents → fewer children) decreases depth.
+    // Equal breadth keeps depth unchanged.
     const zoneParents = zoneParentsOf.get(id);
     let depth;
     if (zoneParents.length === 0) {
       depth = 1;                                       // entry point
     } else if (zoneParents.length === 1) {
-      depth = (depths.get(zoneParents[0]) || 1) + 1;  // single parent
+      // Single parent — always indent one level deeper.
+      // Zones only absorb rows with 2+ descendants, so the parent always
+      // has siblings at its depth.  A child must indent to show hierarchy.
+      const parentDepth = depths.get(zoneParents[0]) || 1;
+      depth = parentDepth + 1;
     } else {
-      // Multiple zone-parents.  Determine if they're siblings (same zone-
-      // grandparents) or from genuinely different branches.
-      //   Siblings  → normal child: go one level deeper (max + 1).
-      //   Different → merge-back: stay at deepest parent's depth (max).
-      const refGP = (zoneParentsOf.get(zoneParents[0]) || []).slice().sort().join(',');
-      const allSiblings = zoneParents.every(pid =>
-        (zoneParentsOf.get(pid) || []).slice().sort().join(',') === refGP
-      );
+      // Multiple zone-parents.
       const maxParentDepth = Math.max(...zoneParents.map(pid => depths.get(pid) || 1));
-      depth = allSiblings ? maxParentDepth + 1 : maxParentDepth;
+      const minParentDepth = Math.min(...zoneParents.map(pid => depths.get(pid) || 1));
+
+      if (minParentDepth !== maxParentDepth) {
+        depth = maxParentDepth;    // deep merge → merge-back
+      } else {
+        // Same-depth parents: compare breadth to decide direction.
+        // Collect the union of all zone-children these parents produce.
+        const parentChildUnion = new Set();
+        for (const pid of zoneParents) {
+          const pNode = DataStore.map.get(pid);
+          if (pNode) {
+            (pNode.nextIds || []).filter(nid => zoneSet.has(nid))
+              .forEach(nid => parentChildUnion.add(nid));
+          }
+        }
+        const childCount  = parentChildUnion.size;
+        const parentCount = zoneParents.length;
+        if (childCount > parentCount) {
+          depth = maxParentDepth + 1;                   // expansion
+        } else if (childCount < parentCount) {
+          depth = Math.max(1, maxParentDepth - 1);      // convergence
+        } else {
+          depth = maxParentDepth;                        // same breadth
+        }
+      }
     }
     depths.set(id, depth);
     order.push({ id, depth });

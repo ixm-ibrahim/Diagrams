@@ -1248,6 +1248,11 @@ const AppUI = {
     headerBtn.setAttribute('aria-expanded', 'false');
     if (inlineBtn) inlineBtn.textContent = 'Expand';
 
+    // Animate sibling spacers closed
+    document.querySelectorAll('.expander-spacer').forEach(s => {
+      s.style.height = '0px';
+    });
+
     row.classList.remove('is-active');
     document.body.classList.remove('is-focused');
     AppState.activeNodeId = null;
@@ -1256,13 +1261,18 @@ const AppUI = {
     // Move expander back to end of level-group (may have been repositioned
     // in stacked mode by openExpander).
     const levelGroup = row.closest('.level-group');
-    if (levelGroup) levelGroup.appendChild(expander);
+    if (levelGroup) {
+      levelGroup.appendChild(expander);
+    }
     expander.style.marginLeft = '';
+    expander.style.marginRight = '';
     expander.style.flex = '';
+    expander.style.width = '';
 
     // Deferred cleanup: clear innerHTML after the CSS transition completes
     setTimeout(() => {
       if (!expander.classList.contains('is-open')) expander.innerHTML = '';
+      document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
   },
 
@@ -1270,25 +1280,71 @@ const AppUI = {
     const nodeData = DataStore.map.get(id);
     if (!nodeData) return;
 
-    // In stacked mode, move the expander to right after the clicked row
-    // so it doesn't appear at the end of the entire level-group.
     const levelGroup = row.closest('.level-group');
-    if (levelGroup?.hasAttribute('data-stacked')) {
+    const stackGroup = row.closest('.stack-group');
+
+    if (stackGroup) {
+      // Stacked mode: move after the clicked row
       row.after(expander);
-      // Match the row's stacked indent so the expander aligns with the card
-      const indentDepth = row.style.getPropertyValue('--indent-depth') || '0';
-      expander.style.marginLeft = `calc(var(--stacked-indent) * ${indentDepth})`;
-      expander.style.flex = `0 0 calc(100% - var(--stacked-indent) * ${indentDepth})`;
+      // Break out using negative margins on both sides (avoids explicit
+      // pixel width which inflates the stack-group's intrinsic cross-size).
+      const lgRect = levelGroup.getBoundingClientRect();
+      const sgRect = stackGroup.getBoundingClientRect();
+      const breakoutLeft = sgRect.left - lgRect.left;
+      const breakoutRight = lgRect.right - sgRect.right;
+
+      expander.style.flex = '0 0 auto';
+      expander.style.width = 'auto';
+      expander.style.marginLeft = `-${breakoutLeft}px`;
+      expander.style.marginRight = `-${breakoutRight}px`;
     }
 
     expander.innerHTML = Templates.expander(nodeData);
     this.bindTabEvents(expander, nodeData);
     this.bindActionEvents(expander);
 
+    // Measure content height and create sibling spacers
+    let spacerHeight = 0;
+    if (stackGroup) {
+      const expInner = expander.querySelector('.exp-inner');
+      spacerHeight = expInner ? expInner.scrollHeight + 16 : 0;
+      const clickedRect = row.getBoundingClientRect();
+      const clickedTop = clickedRect.top;
+      const expanderStart = clickedRect.bottom;
+      const siblingStacks = levelGroup.querySelectorAll(':scope > .stack-group');
+      siblingStacks.forEach(sg => {
+        if (sg === stackGroup) return;
+        const spacer = document.createElement('div');
+        spacer.className = 'expander-spacer';
+        const siblingRows = sg.querySelectorAll(':scope > .node-row');
+        let insertAfter = null;
+        for (const sibRow of siblingRows) {
+          const sibRect = sibRow.getBoundingClientRect();
+          const sameLevelOrAbove = sibRect.top <= clickedTop + 5;
+          const endsAboveExpander = sibRect.bottom <= expanderStart + 5;
+          if (sameLevelOrAbove && endsAboveExpander) {
+            insertAfter = sibRow;
+          }
+        }
+        if (insertAfter) {
+          insertAfter.after(spacer);
+        } else {
+          sg.prepend(spacer);
+        }
+      });
+    }
+
     requestAnimationFrame(() => {
       expander.classList.add('is-open');
       headerBtn.setAttribute('aria-expanded', 'true');
       if (inlineBtn) inlineBtn.textContent = 'Hide';
+
+      // Animate spacers to match expander height
+      if (spacerHeight > 0) {
+        document.querySelectorAll('.expander-spacer').forEach(s => {
+          s.style.height = spacerHeight + 'px';
+        });
+      }
 
       row.classList.add('is-active');
       document.body.classList.add('is-focused');

@@ -59,9 +59,9 @@ const SPINE_HALF_W = 1;
 
 let redrawTimer = null;
 
-function scheduleRedraw() {
+export function scheduleRedraw() {
   if (AppState.isTransitioning || AppState.isStackTransitioning) return;
-  if (redrawTimer) return;                // coalesce rapid-fire calls
+  if (redrawTimer) return;
   redrawTimer = setTimeout(() => {
     redrawTimer = null;
     const viewEl = document.querySelector('.map-flow');
@@ -83,6 +83,10 @@ export function initResizeObserver() {
   observer = new ResizeObserver(() => scheduleRedraw());
   observer.observe(container);
   window.addEventListener('resize', () => scheduleRedraw());
+
+  // Listen for expander open/close settling — ui-expander.js dispatches this
+  // event so it doesn't need to import scheduleRedraw (avoids module coupling).
+  document.addEventListener('expander-settled', () => scheduleRedraw());
 }
 
 /* ---------------------------------------------------------------------------
@@ -92,6 +96,12 @@ export function initResizeObserver() {
 /**
  * Collects marker dot positions and card bounds for every visible node.
  * Returns a Map<nodeId, {x, y, depth, cardTop, cardBottom, visualBottom}>.
+ *
+ * When an open expander exists in a level-group, ALL sibling nodes in that
+ * group receive the expander's bottom as their visualBottom.  This ensures
+ * that downstream visual-row grouping and transition-metric computation
+ * uniformly account for the extra height regardless of which specific node
+ * the expander is attached to or tiny cardTop bucketing differences.
  */
 function collectMarkerPositions(viewEl, containerRect) {
   const positions = new Map();
@@ -111,16 +121,6 @@ function collectMarkerPositions(viewEl, containerRect) {
     // Skip hidden/collapsed nodes (zero-size markers from display:none ancestors)
     if (dotRect.width === 0 && dotRect.height === 0) return;
 
-    // Check for open expander below this card
-    const expander = row.nextElementSibling;
-    const expInner = expander?.classList.contains('level-expander') &&
-                     expander.classList.contains('is-open')
-      ? expander.querySelector('.exp-inner')
-      : null;
-    const visualBottom = expInner
-      ? expInner.getBoundingClientRect().bottom - containerRect.top
-      : cardRect.bottom - containerRect.top;
-
     const depth = parseInt(row.style.getPropertyValue('--indent-depth')) || 0;
 
     positions.set(id, {
@@ -129,7 +129,42 @@ function collectMarkerPositions(viewEl, containerRect) {
       depth,
       cardTop: cardRect.top - containerRect.top,
       cardBottom: cardRect.bottom - containerRect.top,
-      visualBottom
+      visualBottom: cardRect.bottom - containerRect.top
+    });
+  });
+
+  // --- Propagate open-expander height to ALL sibling nodes in the same
+  //     level-group.  An expander is a level-group–wide panel; its height
+  //     must be reflected by every node in the group so that visual-row
+  //     computation and transition metrics shift uniformly.
+  //
+  //     Search WITHOUT `:scope >` so we also find expanders that were
+  //     moved inside a stack-group by openExpander (stacked mode). ---
+  const levelGroups = viewEl.querySelectorAll('.level-group:not([data-zone-absorbed])');
+  levelGroups.forEach(group => {
+    const openExp = group.querySelector('.level-expander.is-open');
+    if (!openExp) return;
+
+    const expInner = openExp.querySelector('.exp-inner');
+    if (!expInner) return;
+
+    const expRect = expInner.getBoundingClientRect();
+    // Skip zero-height expanders (still animating or collapsed)
+    if (expRect.height < 1) return;
+
+    const expBottom = expRect.bottom - containerRect.top;
+
+    // Apply to every node-row in this group (direct children AND
+    // nodes inside stack-groups)
+    const nodeRows = group.querySelectorAll(
+      ':scope > .node-row, :scope > .stack-group > .node-row'
+    );
+    nodeRows.forEach(row => {
+      const id = row.dataset.id;
+      const pos = positions.get(id);
+      if (pos && expBottom > pos.visualBottom) {
+        pos.visualBottom = expBottom;
+      }
     });
   });
 
@@ -704,7 +739,7 @@ export function draw(viewEl, visibleNodes) {
           }
 
           // For edges INTO a stacked group, redirect to the group's first node
-          const effectiveTarget = tgtStacked ? groupFirst.get(tgtGroup) : nextId;
+          let effectiveTarget = tgtStacked ? groupFirst.get(tgtGroup) : nextId;
           // For edges FROM a stacked group, source is already the last node (filtered above)
           const effectiveSource = srcStacked ? groupLast.get(srcGroup) : node.id;
 
@@ -714,11 +749,32 @@ export function draw(viewEl, visibleNodes) {
           // the source. These arise when a redirected group-first node sits
           // on the same row as the source (e.g. 2.1.3 → 2.1.6 on page 2.1),
           // which would produce a backwards U-shaped path.
+          //
+          // However, when the skip fires on a REDIRECTED target, fall back to
+          // the actual target node.  Off-trunk sources (e.g. 2.1.4) need their
+          // own edge to children deep inside a stack-group even when the
+          // group-first node sits above them.
           const srcPos = positions.get(effectiveSource);
-          const tgtPos = positions.get(effectiveTarget);
+          let tgtPos = positions.get(effectiveTarget);
           if (srcPos && tgtPos) {
-            const srcBottom = srcPos.rowBottom || srcPos.visualBottom;
-            if (tgtPos.cardTop <= srcBottom) return;
+            // Use cardBottom (not rowBottom) — rowBottom can be inflated by
+            // an open expander in the same level-group, which would cause
+            // edges from unrelated sibling nodes to be wrongly skipped.
+            const srcBottom = srcPos.cardBottom || srcPos.visualBottom;
+            if (tgtPos.cardTop <= srcBottom) {
+              // Redirected target is above source — try the actual target
+              if (effectiveTarget !== nextId) {
+                const actualTgtPos = positions.get(nextId);
+                if (actualTgtPos && actualTgtPos.cardTop > srcBottom) {
+                  effectiveTarget = nextId;
+                  tgtPos = actualTgtPos;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
           }
 
           // Deduplicate: same effective edge may arise from multiple DAG edges
@@ -796,6 +852,7 @@ export function draw(viewEl, visibleNodes) {
   oldIndentSpines.forEach(el => el.remove());
   renderTarget.appendChild(svg);
   newIndentSpines.forEach(s => renderTarget.appendChild(s));
+
 }
 
 
@@ -821,12 +878,30 @@ function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX,
 
   // Pre-compute terminal return mergeY so spine bottoms can be capped
   // to prevent overlap with the return curve SVG strokes.
+  //
+  // Instead of assuming a fixed 20px gap, measure the actual gap to the
+  // next trunk-level node below the zone.  This keeps the terminal return
+  // curve aligned with parallel edges that share the same destination
+  // (they use getTransitionMetrics which measures the real gap).
   const termLastId = displayOrder[displayOrder.length - 1];
   const termLastPos = positions.get(termLastId);
   let terminalMergeY = null;
   if (termLastPos && Math.abs(termLastPos.x - zoneTrunkX) >= STRAIGHT_THRESHOLD) {
     const termRowBottom = termLastPos.rowBottom || termLastPos.visualBottom;
-    terminalMergeY = termRowBottom + 10; // standardGap (20) / 2
+    const returnTargetXEarly = mainTrunkX !== null ? mainTrunkX : zoneTrunkX;
+    // Find the closest node below the zone at the return target X
+    let nextTrunkCardTop = null;
+    for (const [, pos] of positions) {
+      if (Math.abs(pos.x - returnTargetXEarly) < STRAIGHT_THRESHOLD && pos.cardTop > termRowBottom) {
+        if (nextTrunkCardTop === null || pos.cardTop < nextTrunkCardTop) {
+          nextTrunkCardTop = pos.cardTop;
+        }
+      }
+    }
+    const actualGap = nextTrunkCardTop !== null
+      ? nextTrunkCardTop - termRowBottom
+      : 20;  // fallback
+    terminalMergeY = termRowBottom + actualGap / 2;
   }
 
   // --- Generate indent spine HTML elements (Rule 4 — depth continue) ---
@@ -935,15 +1010,27 @@ function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX,
         }
       }
 
-      // Compute merge Y: below the last row
+      // Compute merge Y: below the last row.
+      // Use the actual gap to the next trunk node (matching getTransitionMetrics)
+      // so parallel edges and terminal returns align perfectly.
       const rowBottomOfLast = lastPos.rowBottom || lastPos.visualBottom;
-      const standardGap = 20;
-      const mergeY = rowBottomOfLast + standardGap / 2;
+      const returnTargetX = mainTrunkX !== null ? mainTrunkX : zoneTrunkX;
+      let nextTrunkCardTop = null;
+      for (const [, pos] of positions) {
+        if (Math.abs(pos.x - returnTargetX) < STRAIGHT_THRESHOLD && pos.cardTop > rowBottomOfLast) {
+          if (nextTrunkCardTop === null || pos.cardTop < nextTrunkCardTop) {
+            nextTrunkCardTop = pos.cardTop;
+          }
+        }
+      }
+      const actualGap = nextTrunkCardTop !== null
+        ? nextTrunkCardTop - rowBottomOfLast
+        : 20;  // fallback
+      const mergeY = rowBottomOfLast + actualGap / 2;
 
       // Rule 5 — Deepest Merge: ONLY the deepest spine gets a return curve.
       // Intermediate spines (Rule 6) just fade — no merge curves needed.
-      // Target: mainTrunkX if provided (partial stacking), else zoneTrunkX.
-      const returnTargetX = mainTrunkX !== null ? mainTrunkX : zoneTrunkX;
+      // Target: returnTargetX computed above.
 
       if (deepestX !== null && Math.abs(deepestX - returnTargetX) >= STRAIGHT_THRESHOLD) {
         const dirX = returnTargetX > deepestX ? 1 : -1;
@@ -1143,7 +1230,11 @@ function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunkX,
     if (sampleIds.length > 0) {
       const samplePos = positions.get(sampleIds[0]);
       if (samplePos) {
-        standardGap = samplePos.cardTop - visualRows[firstTerminalRowIdx - 1].bottom;
+        const rawGap = samplePos.cardTop - visualRows[firstTerminalRowIdx - 1].bottom;
+        // When an open expander inflates the previous row's bottom beyond the
+        // terminal nodes' cardTop the raw gap goes negative.  Clamp to the
+        // default so the merge line always lands *below* maxRowBottom.
+        standardGap = Math.max(rawGap, 20);
       }
     }
   }

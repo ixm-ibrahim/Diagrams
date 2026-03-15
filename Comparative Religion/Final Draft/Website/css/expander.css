@@ -36,9 +36,11 @@
   grid-template-rows: 1fr;
   opacity: 1;
   transform: translateY(0);
-  margin-top: -8px;
-  margin-bottom: 24px;
+  margin-top: calc(-8px + var(--parallel-pull, 0px));
+  margin-bottom: 8px;
   pointer-events: auto;
+  position: relative;
+  z-index: 20;
 }
 
 .exp-inner {
@@ -47,6 +49,17 @@
   background: linear-gradient(180deg, var(--panel-bg), var(--panel-accent));
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
+}
+
+/* Sibling-column spacer: inserted in parallel stack-groups to keep columns
+   aligned when an expander opens in one column.  Animates from 0 to the
+   expander's content height so subsequent nodes push down uniformly. */
+.expander-spacer {
+  flex: 0 0 auto;
+  height: 0;
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  pointer-events: none;
 }
 
 

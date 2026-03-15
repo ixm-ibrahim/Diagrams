@@ -1134,8 +1134,10 @@ button.node-badge:active {
   grid-template-rows: 1fr;
   opacity: 1;
   transform: translateY(0);
-  margin-top: -8px;
-  margin-bottom: 24px;
+  margin-top: calc(-8px + var(--parallel-pull, 0px));
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 20;
 }
 
 .exp-inner {
