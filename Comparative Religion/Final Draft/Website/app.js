@@ -953,7 +953,7 @@ const AppUI = {
     this.els.pageHeader = byId('pageHeader');
     this.els.searchFilterBtn = byId('searchFilterBtn');
     this.els.searchFilterMenu = byId('searchFilterMenu');
-    this.els.toggleDeepSearch = byId('toggleDeepSearch');
+    this.els.toggleNodeContentsSearch = byId('toggleNodeContentsSearch');
     this.els.toggleGlobalSearch = byId('toggleGlobalSearch');
     this.els.toggleNestedSearch = byId('toggleNestedSearch');
   },
@@ -1879,16 +1879,16 @@ const AppUI = {
    * ------------------------------------------------------------------ */
 
   /** Recursively flattens complex data structures into searchable text. */
-  getDeepText(items) {
+  getNestedText(items) {
     if (!items) return '';
     return items.map(item => {
       if (typeof item === 'string') return item;
       let text = `${item.title || ''} ${item.detail || ''}`;
       if (item.subSections) {
         text += ' ' + item.subSections.map(sub =>
-          `${sub.label || ''} ${this.getDeepText(sub.items)}`).join(' ');
+          `${sub.label || ''} ${this.getNestedText(sub.items)}`).join(' ');
       }
-      if (item.children) text += ' ' + this.getDeepText(item.children);
+      if (item.children) text += ' ' + this.getNestedText(item.children);
       return text;
     }).join(' ');
   },
@@ -1921,9 +1921,9 @@ const AppUI = {
     // Match against searchable text
     const matches = searchPool.filter(node => {
       let text = `${node.claim} ${node.soWhat} ${node.search || ''}`;
-      if (AppState.searchConfig.deep && node.sections) {
+      if (AppState.searchConfig.nodeContents && node.sections) {
         text += ' ' + node.sections.map(sec =>
-          `${sec.title || ''} ${this.getDeepText(sec.items)}`).join(' ');
+          `${sec.title || ''} ${this.getNestedText(sec.items)}`).join(' ');
       }
       return text.toLowerCase().includes(query);
     });
@@ -2024,12 +2024,12 @@ const AppUI = {
 
     // Search config toggles (global and nested are mutually exclusive)
     const updateSearchConfig = () => {
-      AppState.searchConfig.deep = this.els.toggleDeepSearch.checked;
+      AppState.searchConfig.nodeContents = this.els.toggleNodeContentsSearch.checked;
       AppState.searchConfig.global = this.els.toggleGlobalSearch.checked;
       if (this.els.searchInput.value) this.handleSearch(this.els.searchInput.value);
     };
 
-    this.els.toggleDeepSearch?.addEventListener('change', updateSearchConfig);
+    this.els.toggleNodeContentsSearch?.addEventListener('change', updateSearchConfig);
     this.els.toggleGlobalSearch?.addEventListener('change', (e) => {
       if (e.target.checked && this.els.toggleNestedSearch) this.els.toggleNestedSearch.checked = false;
       updateSearchConfig();

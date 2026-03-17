@@ -75,7 +75,7 @@
 
               <div id="searchFilterMenu" class="search-filter-menu">
                 <label class="filter-option">
-                  <input type="checkbox" id="toggleDeepSearch" checked>
+                  <input type="checkbox" id="toggleNodeContentsSearch" checked>
                   <span class="filter-text">Search node contents</span>
                 </label>
                 <label class="filter-option">
@@ -88,7 +88,21 @@
                 </label>
               </div>
             </div>
-            <button class="btn-ui" id="themeToggle" type="button" aria-label="Toggle Dark Mode">🌙 Dark</button>
+            <button class="btn-icon-expand" id="exportBtn" type="button" aria-label="Export nodes as JSON">
+              <svg class="btn-icon-expand__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="btn-icon-expand__label">Export</span>
+            </button>
+            <button class="btn-icon-expand" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+              <span class="btn-icon-expand__icon btn-icon-expand__emoji" id="themeIcon" aria-hidden="true">🌙</span>
+              <span class="btn-icon-expand__label" id="themeLabel">Dark</span>
+            </button>
           </div>
         </div>
       </div>

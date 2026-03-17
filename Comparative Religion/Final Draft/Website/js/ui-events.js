@@ -15,6 +15,7 @@ import { AppState } from './state.js';
 import { NavigationController } from './navigation.js';
 import { toggleExpander } from './ui-expander.js';
 import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
+import { exportNodes } from './ui-export.js';
 
 /** Cached DOM elements. Populated by init(). */
 const els = {};
@@ -32,9 +33,10 @@ export function init() {
   els.searchInput        = document.getElementById('searchInput');
   els.searchFilterBtn    = document.getElementById('searchFilterBtn');
   els.searchFilterMenu   = document.getElementById('searchFilterMenu');
-  els.toggleDeepSearch   = document.getElementById('toggleDeepSearch');
+  els.toggleNodeContentsSearch   = document.getElementById('toggleNodeContentsSearch');
   els.toggleGlobalSearch = document.getElementById('toggleGlobalSearch');
   els.toggleNestedSearch = document.getElementById('toggleNestedSearch');
+  els.exportBtn          = document.getElementById('exportBtn');
 
   bindThemeToggle();
   bindHeaderToggles();
@@ -44,6 +46,7 @@ export function init() {
   bindSearchInput();
   bindSearchFilter();
   bindSearchCheckboxes();
+  bindExportButton();
 }
 
 /* ---------------------------------------------------------------------------
@@ -52,10 +55,14 @@ export function init() {
 function bindThemeToggle() {
   if (!els.themeToggle) return;
 
+  els.themeIcon  = document.getElementById('themeIcon');
+  els.themeLabel = document.getElementById('themeLabel');
+
   // Wire the callback so AppState can update button text without importing UI
   AppState.onThemeChanged = (newTheme) => {
     const isLight = newTheme === 'light';
-    els.themeToggle.textContent = isLight ? '☀️ Light' : '🌙 Dark';
+    if (els.themeIcon)  els.themeIcon.textContent  = isLight ? '☀️' : '🌙';
+    if (els.themeLabel) els.themeLabel.textContent  = isLight ? 'Light' : 'Dark';
     els.themeToggle.setAttribute(
       'aria-label',
       `Switch to ${isLight ? 'dark' : 'light'} mode`
@@ -197,14 +204,14 @@ function bindSearchFilter() {
 function bindSearchCheckboxes() {
   /** Reads all three checkboxes and pushes their state into AppState. */
   const syncConfig = () => {
-    AppState.searchConfig.nodeContents = els.toggleDeepSearch?.checked  ?? true;
+    AppState.searchConfig.nodeContents = els.toggleNodeContentsSearch?.checked  ?? true;
     AppState.searchConfig.global = els.toggleGlobalSearch?.checked ?? true;
     AppState.searchConfig.nested = els.toggleNestedSearch?.checked ?? false;
     rerunActiveSearch();
   };
 
   // "Search node contents" — independent, just sync state
-  els.toggleDeepSearch?.addEventListener('change', syncConfig);
+  els.toggleNodeContentsSearch?.addEventListener('change', syncConfig);
 
   // "Search all pages (Global)" — unchecks nested when checked
   els.toggleGlobalSearch?.addEventListener('change', (e) => {
@@ -221,6 +228,13 @@ function bindSearchCheckboxes() {
     }
     syncConfig();
   });
+}
+
+/* ---------------------------------------------------------------------------
+ * Export button
+ * --------------------------------------------------------------------------- */
+function bindExportButton() {
+  els.exportBtn?.addEventListener('click', () => exportNodes());
 }
 
 /* ---------------------------------------------------------------------------

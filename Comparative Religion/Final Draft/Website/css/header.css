@@ -281,6 +281,75 @@
 }
 
 
+/* Icon-expand buttons (Export, Theme toggle)
+   ----------------------------------------------------------------------------- *
+   Default: icon-only pill.  On hover the label slides in from the right.
+   Inside the mobile hamburger menu (≤550 px) the label is always visible.        */
+
+.btn-icon-expand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background 0.15s ease, border-color 0.15s ease,
+              gap 0.25s ease, padding 0.25s ease;
+}
+
+[data-theme="light"] .btn-icon-expand {
+  background: rgba(16, 26, 53, 0.04);
+}
+
+.btn-icon-expand:hover {
+  background: var(--border-thin);
+  border-color: var(--text-faint);
+  gap: 6px;
+  padding: 7px 12px 7px 8px;
+}
+
+.btn-icon-expand:active {
+  transform: scale(0.97);
+}
+
+/* Icon (SVG or emoji) */
+.btn-icon-expand__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-icon-expand__emoji {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Label: hidden by default, revealed on hover */
+.btn-icon-expand__label {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width 0.25s ease, opacity 0.2s ease;
+}
+
+.btn-icon-expand:hover .btn-icon-expand__label {
+  max-width: 80px;   /* generous upper bound — actual width is content-driven */
+  opacity: 1;
+}
+
+
 /* Mobile breakpoint (≤550px): hamburger replaces chevron
    ----------------------------------------------------------------------------- */
 @media (max-width: 550px) {
@@ -321,5 +390,15 @@
   .search-input-wrap {
     max-width: none;
     flex: 1;
+  }
+
+  /* In the mobile menu, always show button labels (no hover needed) */
+  .btn-icon-expand {
+    gap: 6px;
+    padding: 7px 12px 7px 8px;
+  }
+  .btn-icon-expand__label {
+    max-width: 80px;
+    opacity: 1;
   }
 }

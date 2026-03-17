@@ -92,7 +92,7 @@ function handleSearch(rawQuery) {
       if (node._searchFull === undefined) {
         node._searchFull = (node._searchBase + ' ' +
           node.sections.map(sec =>
-            `${sec.title || ''} ${getDeepText(sec.items)}`
+            `${sec.title || ''} ${getNestedText(sec.items)}`
           ).join(' ')
         ).toLowerCase();
       }
@@ -278,17 +278,17 @@ export function highlightMatches(el, query) {
 }
 
 /** Recursively flattens section items into searchable text. */
-function getDeepText(items) {
+function getNestedText(items) {
   if (!items) return '';
   return items.map(item => {
     if (typeof item === 'string') return item;
     let text = `${item.title || ''} ${item.detail || ''}`;
     if (item.subSections) {
       text += ' ' + item.subSections.map(sub =>
-        `${sub.label || ''} ${getDeepText(sub.items)}`
+        `${sub.label || ''} ${getNestedText(sub.items)}`
       ).join(' ');
     }
-    if (item.children) text += ' ' + getDeepText(item.children);
+    if (item.children) text += ' ' + getNestedText(item.children);
     return text;
   }).join(' ');
 }
