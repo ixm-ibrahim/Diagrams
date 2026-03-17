@@ -26,8 +26,9 @@ export const AppState = {
   isStackTransitioning: false,
 
   searchConfig: {
-    deep: true,
-    global: true
+    nodeContents: true,
+    global: true,
+    nested: false
   },
 
   /**

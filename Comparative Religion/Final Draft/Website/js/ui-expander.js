@@ -16,6 +16,7 @@ import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
 import { expander as expanderTemplate, tabContent } from './templates.js';
 import { ANIMATION_SPEEDS } from './constants.js';
+import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
 
 /**
  * Toggles the expander for the given node ID.
@@ -24,7 +25,11 @@ import { ANIMATION_SPEEDS } from './constants.js';
  * @param {string} id — node ID
  */
 export function toggleExpander(id) {
-  const row = document.querySelector(`.node-row[data-id="${id}"]`);
+  // When search results duplicate a node-row from the hidden map-flow,
+  // querySelectorAll may return both.  Prefer the visible one (offsetParent
+  // is null for elements inside display:none ancestors).
+  const allRows = document.querySelectorAll(`.node-row[data-id="${id}"]`);
+  const row = Array.from(allRows).find(r => r.offsetParent !== null) || allRows[0];
   if (!row) return;
 
   const levelGroup = row.closest('.level-group');
@@ -41,9 +46,11 @@ export function toggleExpander(id) {
   } else {
     // Close any previously open expander instantly (no reverse animation)
     if (AppState.activeNodeId !== null) {
-      const activeRow = document.querySelector(
+      const activeRows = document.querySelectorAll(
         `.node-row[data-id="${AppState.activeNodeId}"]`
       );
+      const activeRow = Array.from(activeRows).find(r => r.offsetParent !== null)
+        || activeRows[0];
       if (activeRow) {
         const g = activeRow.closest('.level-group');
         // The expander might be in the level-group, in an adjacent
@@ -68,6 +75,27 @@ export function toggleExpander(id) {
 /* ---------------------------------------------------------------------------
  * Close
  * --------------------------------------------------------------------------- */
+
+/**
+ * Immediately resets all expander-related state without requiring DOM
+ * references to the active row. Use when the DOM is about to be rebuilt
+ * (e.g. search results changing) and the active row may no longer exist.
+ */
+export function forceCloseExpander() {
+  if (AppState.activeNodeId === null) return;
+
+  // Best-effort DOM cleanup — the elements may already be removed
+  document.querySelectorAll('.node-row.is-active').forEach(r => r.classList.remove('is-active'));
+  document.querySelectorAll('.level-expander.is-open').forEach(e => {
+    e.classList.remove('is-open');
+    e.innerHTML = '';
+  });
+  document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
+
+  AppState.activeNodeId = null;
+  AppState.updateTints({ expander: 'transparent' });
+  document.body.classList.remove('is-focused');
+}
 
 /**
  * @param {boolean} animated — true for reverse animation, false for instant snap
@@ -238,6 +266,10 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
   bindTabEvents(expander, nodeData);
   bindActionEvents(expander);
 
+  // Highlight search matches inside the expander content when in search mode
+  const searchQuery = getActiveSearchQuery();
+  if (searchQuery) highlightMatches(expander, searchQuery);
+
   // Measure the expander's natural content height (before animation starts)
   // so we can create matching spacers in sibling stack-group columns.
   let spacerHeight = 0;
@@ -368,6 +400,10 @@ function renderTabPanel(nodeData, key) {
     s => s.type === 'tab' && s.title === key
   );
   panel.innerHTML = tabContent(section?.items || [], section?.numbered || false);
+
+  // Highlight search matches in the newly rendered tab panel
+  const searchQuery = getActiveSearchQuery();
+  if (searchQuery) highlightMatches(panel, searchQuery);
 }
 
 /* ---------------------------------------------------------------------------

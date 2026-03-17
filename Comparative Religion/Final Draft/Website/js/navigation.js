@@ -16,6 +16,7 @@ import { AppState } from './state.js';
 import { DataStore } from './data-store.js';
 import { updateHeaderContext } from './ui-header.js';
 import { renderMapWithTransition } from './ui-render.js';
+import { clearSearchResults } from './ui-search.js';
 
 export const NavigationController = {
   init() {
@@ -77,6 +78,7 @@ export const NavigationController = {
   loadState(nodeId, historyAction = 'push', explicitDirection = null) {
     const searchInput = document.getElementById('searchInput');
     if (searchInput?.value) searchInput.value = '';
+    clearSearchResults();
 
     const prevId = AppState.currentParentId;
     const direction = explicitDirection || this.getDirection(prevId, nodeId);

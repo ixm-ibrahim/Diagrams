@@ -1,0 +1,180 @@
+/* =============================================================================
+   search-results.css — Search Result Styling
+   =============================================================================
+   Styles for grouped search results: result boxes (cards), collapsible headers,
+   and the no-results state. Uses CSS custom properties from tokens.css for
+   theme compatibility.
+
+   HTML structure expected:
+     .search-results-wrap
+       .search-result-box
+         .search-result-header  (role="button", toggles .is-collapsed on box)
+         .search-result-content.map-flow  (holds .level-group > .node-row cards)
+
+   Consumed by: index.html (stylesheet link)
+   ============================================================================= */
+
+
+/* Results wrapper
+   ----------------------------------------------------------------------------- */
+.search-results-wrap {
+  padding: var(--flow-pad-v) 0;
+  margin-top: var(--flow-margin-top);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* Result group box (card)
+   ----------------------------------------------------------------------------- */
+.search-result-box {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-0);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-box.is-collapsed {
+  flex-direction: column;
+}
+
+
+/* Group header (left sidebar / collapsible trigger)
+   ----------------------------------------------------------------------------- */
+.search-result-header {
+  flex: 0 0 220px;
+  padding: 20px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-right: 1px solid var(--border-thin);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  user-select: none;
+  line-height: 1.4;
+}
+
+[data-theme="light"] .search-result-header {
+  background: rgba(16, 26, 53, 0.02);
+}
+
+.search-result-box.is-collapsed .search-result-header {
+  flex: none;
+  border-right: none;
+  border-bottom: 1px solid var(--border-thin);
+}
+
+/* Chevron indicator */
+.search-result-header::after {
+  content: "";
+  flex-shrink: 0;
+  margin-top: 4px;
+  margin-left: 12px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+}
+
+.search-result-box.is-collapsed .search-result-header::after {
+  transform: rotate(-45deg);
+}
+
+/* Header title text */
+.search-result-title {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+
+/* Result content area (right side / collapsible body)
+   ----------------------------------------------------------------------------- */
+.search-result-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Override .map-flow defaults inside result content so it fits flush */
+.search-result-content.map-flow {
+  margin-top: 0;
+  padding-bottom: 16px;
+}
+
+.search-result-box.is-collapsed .search-result-content {
+  display: none;
+}
+
+
+/* Search term highlight
+   ----------------------------------------------------------------------------- */
+.search-highlight {
+  background: rgba(255, 196, 0, 0.35);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+[data-theme="light"] .search-highlight {
+  background: rgba(255, 196, 0, 0.45);
+}
+
+
+/* Focus dimming: when an expander is open, dim result boxes that don't
+   contain the active node. Mirrors body.is-focused .node-row:not(.is-active)
+   from base.css but applied at the group level so the entire card dims.
+   ----------------------------------------------------------------------------- */
+body.is-focused .search-result-box:not(:has(.node-row.is-active)) {
+  opacity: 0.45;
+  filter: blur(0.6px);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+body.is-focused .search-result-box:not(:has(.node-row.is-active)):hover {
+  opacity: 0.85;
+  filter: blur(0);
+}
+
+/* The box containing the active node should NOT dim its non-active rows —
+   the base.css rule already dims individual rows, and double-dimming the
+   box + rows would make the active row's siblings nearly invisible. */
+body.is-focused .search-result-box:has(.node-row.is-active) .node-row:not(.is-active) {
+  opacity: 0.65;
+  filter: none;
+}
+
+
+/* No-results message
+   ----------------------------------------------------------------------------- */
+.search-no-results {
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-top: var(--flow-margin-top);
+}
+
+
+/* Responsive: stack header above content on narrow viewports
+   ----------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .search-result-box {
+    flex-direction: column;
+  }
+
+  .search-result-header {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-thin);
+  }
+}

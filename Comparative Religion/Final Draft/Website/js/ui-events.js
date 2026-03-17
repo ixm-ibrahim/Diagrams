@@ -14,6 +14,7 @@
 import { AppState } from './state.js';
 import { NavigationController } from './navigation.js';
 import { toggleExpander } from './ui-expander.js';
+import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
 
 /** Cached DOM elements. Populated by init(). */
 const els = {};
@@ -23,17 +24,26 @@ const els = {};
  * Call once during bootstrap, after data is loaded.
  */
 export function init() {
-  els.container      = document.getElementById('mapContainer');
-  els.pageHeader     = document.getElementById('pageHeader');
-  els.headerToggle   = document.getElementById('headerToggle');
-  els.chevronToggle  = document.getElementById('chevronToggle');
-  els.themeToggle    = document.getElementById('themeToggle');
+  els.container        = document.getElementById('mapContainer');
+  els.pageHeader       = document.getElementById('pageHeader');
+  els.headerToggle     = document.getElementById('headerToggle');
+  els.chevronToggle    = document.getElementById('chevronToggle');
+  els.themeToggle      = document.getElementById('themeToggle');
+  els.searchInput        = document.getElementById('searchInput');
+  els.searchFilterBtn    = document.getElementById('searchFilterBtn');
+  els.searchFilterMenu   = document.getElementById('searchFilterMenu');
+  els.toggleDeepSearch   = document.getElementById('toggleDeepSearch');
+  els.toggleGlobalSearch = document.getElementById('toggleGlobalSearch');
+  els.toggleNestedSearch = document.getElementById('toggleNestedSearch');
 
   bindThemeToggle();
   bindHeaderToggles();
   bindMapClicks();
   bindBreadcrumbClicks();
   bindEscapeKey();
+  bindSearchInput();
+  bindSearchFilter();
+  bindSearchCheckboxes();
 }
 
 /* ---------------------------------------------------------------------------
@@ -146,6 +156,74 @@ function bindEscapeKey() {
 }
 
 /* ---------------------------------------------------------------------------
+ * Search input (debounced)
+ * --------------------------------------------------------------------------- */
+function bindSearchInput() {
+  els.searchInput?.addEventListener('input', (e) => {
+    debouncedSearch(e.target.value);
+  });
+}
+
+/* ---------------------------------------------------------------------------
+ * Search filter dropdown toggle + click-outside-to-close
+ * --------------------------------------------------------------------------- */
+function bindSearchFilter() {
+  // Button toggles dropdown open/closed
+  els.searchFilterBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = els.searchFilterMenu.classList.toggle('is-open');
+    els.searchFilterBtn.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Click anywhere outside the dropdown closes it
+  document.addEventListener('click', (e) => {
+    if (
+      els.searchFilterMenu?.classList.contains('is-open') &&
+      !e.target.closest('.search-input-wrap')
+    ) {
+      els.searchFilterMenu.classList.remove('is-open');
+      els.searchFilterBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+/* ---------------------------------------------------------------------------
+ * Search config checkboxes
+ *
+ * Global ↔ Nested are mutually exclusive (checking one unchecks the other).
+ * Node Contents is independent.
+ * Every change syncs to AppState.searchConfig immediately.
+ * --------------------------------------------------------------------------- */
+function bindSearchCheckboxes() {
+  /** Reads all three checkboxes and pushes their state into AppState. */
+  const syncConfig = () => {
+    AppState.searchConfig.nodeContents = els.toggleDeepSearch?.checked  ?? true;
+    AppState.searchConfig.global = els.toggleGlobalSearch?.checked ?? true;
+    AppState.searchConfig.nested = els.toggleNestedSearch?.checked ?? false;
+    rerunActiveSearch();
+  };
+
+  // "Search node contents" — independent, just sync state
+  els.toggleDeepSearch?.addEventListener('change', syncConfig);
+
+  // "Search all pages (Global)" — unchecks nested when checked
+  els.toggleGlobalSearch?.addEventListener('change', (e) => {
+    if (e.target.checked && els.toggleNestedSearch) {
+      els.toggleNestedSearch.checked = false;
+    }
+    syncConfig();
+  });
+
+  // "Search only current page" — unchecks global when checked
+  els.toggleNestedSearch?.addEventListener('change', (e) => {
+    if (e.target.checked && els.toggleGlobalSearch) {
+      els.toggleGlobalSearch.checked = false;
+    }
+    syncConfig();
+  });
+}
+
+/* ---------------------------------------------------------------------------
  * Breadcrumb click delegation (outside the map container)
  * --------------------------------------------------------------------------- */
 function bindBreadcrumbClicks() {
@@ -159,3 +237,4 @@ function bindBreadcrumbClicks() {
     }
   });
 }
+
