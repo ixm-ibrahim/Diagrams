@@ -135,13 +135,13 @@
    from base.css but applied at the group level so the entire card dims.
    ----------------------------------------------------------------------------- */
 body.is-focused .search-result-box:not(:has(.node-row.is-active)) {
-  opacity: 0.45;
-  filter: blur(0.6px);
+  opacity: var(--dim-opacity);
+  filter: blur(var(--dim-blur));
   transition: opacity 0.25s ease, filter 0.25s ease;
 }
 
 body.is-focused .search-result-box:not(:has(.node-row.is-active)):hover {
-  opacity: 0.85;
+  opacity: var(--dim-active-opacity);
   filter: blur(0);
 }
 

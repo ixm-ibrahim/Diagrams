@@ -102,6 +102,10 @@
   width: 100%;
   position: relative;
   z-index: 2;
+  /* overflow: visible (explicit) — node card box-shadow glows must not be
+     clipped by any ancestor in the .map-container > .map-flow > .level-group
+     > .node-row chain. Never set overflow: hidden here. */
+  overflow: visible;
 }
 
 /* Gap between consecutive level-groups so lateral SVG branches have visible
@@ -218,6 +222,9 @@
   position: relative;
   flex: 1;
   min-width: 0;
+  /* overflow: visible (explicit) — must not clip the node card's box-shadow
+     glows that extend outside the card's border-box. Never set hidden here. */
+  overflow: visible;
 }
 
 
@@ -418,17 +425,49 @@
 .dag-edge {
   fill: none;
   stroke: var(--spine-color-solid);
-  stroke-width: 2px;
+  stroke-width: var(--spine-width);
 }
 
 
-/* Empty page message: shown when a node has no child derivations
+/* Empty page messages: shown when a node has no child derivations
    ----------------------------------------------------------------------------- */
+
+/* Terminal variant: node card is rendered above this message, so keep it
+   left-aligned and unobtrusive — it's a footnote, not a hero element. */
 .empty-page-message {
-  padding: 40px 20px;
+  padding: 16px 20px 40px;
   padding-left: var(--expander-pad);
   text-align: left;
-  color: var(--text-muted);
+  color: var(--text-faint);
   font-size: var(--card-body-size);
+  font-style: italic;
   line-height: 1.5;
+}
+
+/* Undeveloped variant: no card above, so fill the space and centre the message.
+   Works with both light and dark themes via CSS custom properties. */
+.empty-page-message--undeveloped {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 48px 32px;
+  padding-left: 32px; /* override the expander-pad indent */
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.7;
+  gap: 14px;
+}
+
+.empty-page-message--undeveloped::before {
+  content: '◎';
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  opacity: 0.35;
+  color: var(--text-muted);
+  pointer-events: none;
 }

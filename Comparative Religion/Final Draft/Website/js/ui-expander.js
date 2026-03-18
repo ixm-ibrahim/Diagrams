@@ -1,24 +1,21 @@
-/**
- * =============================================================================
- * ui-expander.js — Expander Panel Management
- * =============================================================================
- * Manages the inline detail panel that opens below a node card.
- * Only one expander can be open at a time across the entire page.
- *
+/* === ui-expander.js — Expander Panel Management ===
  * Dependencies: data-store.js (DataStore), state.js (AppState),
- *               templates.js (expander, tabContent),
+ *               templates.js (expander),
  *               constants.js (ANIMATION_SPEEDS),
- *               ui-agreement.js (applyVoteStates — restores vote states in expander)
- * Consumers: ui-events.js (calls toggleExpander on click)
- * =============================================================================
- */
+ *               ui-agreement.js (applyVoteStates),
+ *               ui-search.js (getActiveSearchQuery, highlightMatches),
+ *               ui-expander-content.js (bindTabEvents, scrollToView)
+ * Consumers: ui-events.js (calls toggleExpander on click),
+ *            other modules (call forceCloseExpander)
+ * ================================================================ */
 
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
-import { expander as expanderTemplate, tabContent } from './templates.js';
-import { ANIMATION_SPEEDS } from './constants.js';
+import { expander as expanderTemplate } from './templates.js';
+import { ANIMATION_SPEEDS, CSS_TRANSITION_MS, FOCUS_DIM_DELAY_RATIO, EXPANDER_SPACER_MARGIN_PX } from './constants.js';
 import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
 import { applyVoteStates } from './ui-agreement.js';
+import { bindTabEvents, scrollToView } from './ui-expander-content.js';
 
 /**
  * Toggles the expander for the given node ID.
@@ -146,7 +143,7 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
       if (AppState.activeNodeId === null) {
         document.body.classList.remove('is-focused');
       }
-    }, ANIMATION_SPEEDS.CSS_TRANSITION_MS * 0.6);
+    }, CSS_TRANSITION_MS * FOCUS_DIM_DELAY_RATIO);
   } else {
     document.body.classList.remove('is-focused');
   }
@@ -280,8 +277,8 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
   if (stackGroup) {
     const expInner = expander.querySelector('.exp-inner');
     // scrollHeight gives full content height even while grid-template-rows: 0fr
-    // +16 accounts for the expander's net margin effect (-8 top + 24 bottom)
-    spacerHeight = expInner ? expInner.scrollHeight + 16 : 0;
+    // +EXPANDER_SPACER_MARGIN_PX accounts for the expander's net margin effect (-8 top + 24 bottom)
+    spacerHeight = expInner ? expInner.scrollHeight + EXPANDER_SPACER_MARGIN_PX : 0;
 
     // Create spacers in each sibling stack-group so nodes below the
     // expander in ALL columns shift down.  Use index-based placement:
@@ -326,7 +323,7 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     // 2. Ensure level-group is tall enough for content below
     if (expander.style.position === 'absolute') {
       const expInner = expander.querySelector('.exp-inner');
-      const expHeight = expInner ? expInner.scrollHeight + 16 : 0;
+      const expHeight = expInner ? expInner.scrollHeight + EXPANDER_SPACER_MARGIN_PX : 0;
       const topOffset = parseFloat(expander.style.top) || 0;
 
       // Create spacers in sibling stack-groups to push their content down.
@@ -380,51 +377,3 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     scrollToView(row);
   });
 }
-
-/* ---------------------------------------------------------------------------
- * Tab events
- * --------------------------------------------------------------------------- */
-
-function bindTabEvents(expander, nodeData) {
-  const tabBtns = expander.querySelectorAll('.btn-tab');
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.setAttribute('aria-selected', b === btn));
-      renderTabPanel(nodeData, btn.dataset.key);
-    });
-  });
-  // Render the first tab's content
-  if (tabBtns.length > 0) renderTabPanel(nodeData, tabBtns[0].dataset.key);
-}
-
-function renderTabPanel(nodeData, key) {
-  const panel = document.getElementById(`panel-${nodeData.id}`);
-  if (!panel) return;
-  const section = (nodeData.sections || []).find(
-    s => s.type === 'tab' && s.title === key
-  );
-  panel.innerHTML = tabContent(section?.items || [], section?.numbered || false);
-
-  // Highlight search matches in the newly rendered tab panel
-  const searchQuery = getActiveSearchQuery();
-  if (searchQuery) highlightMatches(panel, searchQuery);
-}
-
-
-/* ---------------------------------------------------------------------------
- * Scroll into view
- * --------------------------------------------------------------------------- */
-
-function scrollToView(el) {
-  setTimeout(() => {
-    const rect = el.getBoundingClientRect();
-    if (rect.bottom > window.innerHeight) {
-      const headerHeight = document.getElementById('pageHeader')?.offsetHeight ?? 0;
-      window.scrollTo({
-        top: window.scrollY + rect.top - headerHeight - 24,
-        behavior: 'smooth'
-      });
-    }
-  }, ANIMATION_SPEEDS.SCROLL_DELAY_MS);
-}
-

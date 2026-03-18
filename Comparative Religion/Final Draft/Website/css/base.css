@@ -33,6 +33,20 @@ button {
 }
 
 
+/* Register tint properties as <color> so CSS can interpolate them during
+   transitions. Without @property the browser treats them as opaque strings
+   and snaps rather than fading.                                               */
+@property --bg-tint {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+@property --bg-tint-right {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+
 /* Body: layered background with dynamic tint system
    ----------------------------------------------------------------------------- */
 /*
@@ -40,6 +54,7 @@ button {
  *   --bg-tint       (left side)  — reflects the current page's hue
  *   --bg-tint-right (right side) — reflects the active expander's hue
  * Both are set/cleared by AppState.updateTints() in JS.
+ * @property registration above enables smooth color interpolation.
  */
 body {
   margin: 0;
@@ -53,7 +68,10 @@ body {
     radial-gradient(980px 540px at 88% 10%, rgba(255, 110, 190, 0.08), transparent 55%),
     linear-gradient(180deg, var(--bg-0), var(--bg-1));
   min-height: 100vh;
-  transition: background 0.3s ease;
+  transition:
+    background var(--theme-transition-duration) ease,
+    --bg-tint var(--tint-transition-duration) ease,
+    --bg-tint-right var(--tint-transition-duration) ease;
   background-attachment: fixed;
 }
 
@@ -71,14 +89,14 @@ body {
 /* Focus dimming: when an expander is open, fade all non-active node rows
    ----------------------------------------------------------------------------- */
 body.is-focused .node-row:not(.is-active) {
-  opacity: 0.45;
-  filter: blur(0.6px);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  opacity: var(--dim-opacity);
+  filter: blur(var(--dim-blur));
+  transition: opacity var(--theme-transition-duration) ease, filter var(--theme-transition-duration) ease;
 }
 
 /* Hover brightens a dimmed row so users can read it without clicking */
 body.is-focused .node-row:not(.is-active):hover {
-  opacity: 0.85;
+  opacity: var(--dim-active-opacity);
   filter: blur(0);
 }
 
@@ -89,6 +107,6 @@ body.is-focused .node-row:not(.is-active):hover {
 .theme-transition *,
 .theme-transition *::before,
 .theme-transition *::after {
-  transition: background-color 0.3s ease, background 0.3s ease, color 0.3s ease,
-              border-color 0.3s ease, box-shadow 0.3s ease !important;
+  transition: background-color var(--theme-transition-duration) ease, background var(--theme-transition-duration) ease, color var(--theme-transition-duration) ease,
+              border-color var(--theme-transition-duration) ease, box-shadow var(--theme-transition-duration) ease !important;
 }

@@ -40,6 +40,51 @@
   --spine-glow-solid: rgba(110, 140, 255, 1);
   --header-ink: #ffffff;
 
+  /* Agreement system — glow & button base colors (dark theme)
+   * Used by agreement.css for vote buttons and glow effects.              */
+  --agree-color: #22c55e;
+  --agree-color-dark: #16a34a;
+  --agree-color-deep: #15803d;
+  --agree-rgb: 34, 197, 94;
+  --agree-dark-rgb: 22, 163, 74;
+  --disagree-color: #ef4444;
+  --disagree-color-dark: #dc2626;
+  --disagree-color-deep: #b91c1c;
+  --disagree-rgb: 239, 68, 68;
+  --disagree-dark-rgb: 220, 38, 38;
+
+  /* Focus dimming — opacity / blur for non-active rows when expander open */
+  --dim-opacity: 0.45;
+  --dim-active-opacity: 0.85;
+  --dim-blur: 0.6px;
+
+  /* Theme transition — duration for smooth color changes on theme toggle.
+   * JS constant THEME_TRANSITION_MS in constants.js MUST match (300ms).   */
+  --theme-transition-duration: 0.3s;
+
+  /* Animation slide distances — how far elements translate during page
+   * transition keyframes (horizontal and vertical).                       */
+  --slide-distance-x: 60px;
+  --slide-distance-y: 40px;
+
+  /* Vote button sizing — compact icon vote buttons on node cards          */
+  --vote-btn-size: 29px;
+  --vote-btn-font-size: 15px;
+  --vote-label-max-width: 80px;
+
+  /* Glow intensity — master knob (0–1) for agreement glow effects.
+   * Scales outer spread, core glow, inset, and border opacity.            */
+  --glow-intensity: 0.875;
+
+  /* Tint transition — shared duration for background, expander, and glow
+   * tint animations when agreement state changes.                         */
+  --tint-transition-duration: 0.5s;
+
+  /* Expander tint — opacity of the agreement-colored gradient wash at the
+   * top of expanded node panels. Increase for a stronger tint.            */
+  --expander-tint-opacity: 0.35;
+  --expander-tint-reach: 55%;
+
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
@@ -68,6 +113,19 @@
   --spine-glow: rgba(90, 120, 255, 0.14);
   --spine-glow-solid: rgba(90, 120, 255, 1);
   --header-ink: #000000;
+
+  /* Agreement colors — light theme uses darker shades for contrast */
+  --agree-color: #16a34a;
+  --agree-color-dark: #15803d;
+  --agree-rgb: 22, 163, 74;
+  --agree-dark-rgb: 22, 163, 74;
+  --disagree-color: #dc2626;
+  --disagree-color-dark: #b91c1c;
+  --disagree-rgb: 220, 38, 38;
+  --disagree-dark-rgb: 220, 38, 38;
+
+  --expander-tint-opacity: 0.25;
+  --expander-tint-reach: 50%;
 }
 
 
@@ -100,7 +158,7 @@
   --app-pad-bottom: 56px;
 
   /* Animation timing: single source of truth for page transition duration.
-   * JS constant ANIMATION_SPEEDS.CSS_TRANSITION_MS in constants.js MUST match.
+   * JS constant CSS_TRANSITION_MS in constants.js MUST match (500ms = 0.5s).
    * Used by: animations.css, and any component that needs transition-aware timing. */
   --page-transition-duration: 0.5s;
 

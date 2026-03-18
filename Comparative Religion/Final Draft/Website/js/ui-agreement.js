@@ -1,7 +1,5 @@
-/**
- * =============================================================================
- * ui-agreement.js — Vote Storage, Propagation & DOM Sync
- * =============================================================================
+/* === ui-agreement.js — Vote Storage, Propagation & DOM Sync ===
+ *
  * Stores explicit user votes (agree / disagree) per node in localStorage,
  * computes glow propagation across the entire node graph, and applies
  * visual states (button selection, glow classes) to the DOM.
@@ -21,13 +19,14 @@
  *   5. Downward fill: non-authoritative pages inherit from parent node's state.
  *   6. Auto-cleanup: disagreeing clears downstream agrees on same page.
  *
- * Dependencies: data-store.js (DataStore — for node graph)
+ * Dependencies: data-store.js (DataStore — for node graph),
+ *              ui-agreement-panel.js (initSummaryPanel)
  * Consumers: ui-events.js (setVote), ui-render.js (applyVoteStates),
- *            main.js (init)
- * =============================================================================
- */
+ *           main.js (init)
+ * ================================================================== */
 
 import { DataStore } from './data-store.js';
+import { initSummaryPanel, renderSummaryPanel as renderPanel } from './ui-agreement-panel.js';
 
 const STORAGE_KEY = 'agreement-votes';
 
@@ -45,12 +44,31 @@ let propagated = {};
 export function init() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) votes = JSON.parse(raw);
+    if (raw) {
+      try {
+        votes = JSON.parse(raw);
+      } catch {
+        // Corrupted JSON — clear the bad data and start fresh so the app
+        // doesn't crash on every load. Matches test case: manually corrupt
+        // the key → app starts clean instead of erroring.
+        console.warn(
+          '[Agreement] Corrupted vote data in localStorage — clearing and starting fresh.'
+        );
+        try { localStorage.removeItem(STORAGE_KEY); } catch { /* storage unavailable */ }
+        votes = {};
+      }
+    }
   } catch {
+    // localStorage is disabled entirely (e.g. private browsing with strict
+    // settings, or a browser that blocks storage access). Votes work for the
+    // current session but won't persist across refreshes.
+    console.warn(
+      '[Agreement] localStorage unavailable — votes will not persist across sessions.'
+    );
     votes = {};
   }
+  initSummaryPanel({ resetAll, applyVoteStates });
   recompute();
-  initSummaryPanel();
 }
 
 /* ---------------------------------------------------------------------------
@@ -60,7 +78,11 @@ export function init() {
 function save() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(votes));
-  } catch { /* silent */ }
+  } catch (err) {
+    // QuotaExceededError, SecurityError (storage disabled), or similar.
+    // Votes continue working for this session — they just won't survive a refresh.
+    console.warn('[Agreement] Could not save votes to localStorage:', err.name);
+  }
 }
 
 /**
@@ -146,6 +168,7 @@ export function resetAll() {
   votes = {};
   propagated = {};
   save();
+  renderPanel(votes);
 }
 
 /* ===========================================================================
@@ -159,7 +182,10 @@ function recompute() {
   // No disagrees → no propagation needed (agrees only take effect
   // relative to a disagree; explicit agree buttons are shown via applyVoteStates)
   const hasDisagree = Object.values(votes).some(v => v === 'disagree');
-  if (!hasDisagree) return;
+  if (!hasDisagree) {
+    renderPanel(votes);
+    return;
+  }
 
   // --- Build lookup structures ---
   const nodeMap = DataStore.map;                       // Map<id, node>
@@ -182,6 +208,8 @@ function recompute() {
   const upwardReds = new Set();
 
   const MAX_ITER = 50;
+  let convergedAt = -1;   // -1 means we hit the cap without stabilising
+
   for (let iter = 0; iter < MAX_ITER; iter++) {
     let changed = false;
 
@@ -214,8 +242,26 @@ function recompute() {
       }
     }
 
-    if (!changed) break;
+    if (!changed) {
+      convergedAt = iter + 1;
+      break;
+    }
   }
+
+  if (convergedAt === -1) {
+    console.warn(
+      `[Agreement] Propagation hit the ${MAX_ITER}-iteration cap — ` +
+      'result may be incomplete.'
+    );
+  } else {
+    console.debug(
+      `[Agreement] Propagation converged in ${convergedAt} ` +
+      `${convergedAt === 1 ? 'iteration' : 'iterations'}.`
+    );
+  }
+
+  // Update summary panel after computation
+  renderPanel(votes);
 
   // --- Downward propagation: top-down fill for non-authoritative pages ---
   allPageIds.sort((a, b) => depth(a) - depth(b));  // shallowest first
@@ -272,6 +318,11 @@ function propagatePage(pageNodes, isAuthoritative, parentState, upwardReds) {
   // --- Helper: compute a single node from its prevs + explicit vote ---
   function computeNode(node) {
     if (votes[node.id] === 'disagree') return 'red';
+    // Upward reds (node forced red because its child derivation page has
+    // reds) must survive regardless of whether the node has predecessors
+    // on this page. Without this check, first-nodes that were forced red
+    // by upward propagation would be overwritten to 'green' below.
+    if (upwardReds.has(node.id)) return 'red';
     // Agrees are handled in Pass 2 (backward BFS), not here.
     // Red must flow past agree nodes in Pass 1 so the backward pass
     // can carve out the correct green zone between disagree and agree.
@@ -279,7 +330,7 @@ function propagatePage(pageNodes, isAuthoritative, parentState, upwardReds) {
     const prevsOnPage = (node.prevIds || []).filter(pid => pageNodeIds.has(pid));
     if (prevsOnPage.length > 0) {
       const anyPrevRed = prevsOnPage.some(pid => propagated[pid] === 'red');
-      return (anyPrevRed || upwardReds.has(node.id)) ? 'red' : 'green';
+      return anyPrevRed ? 'red' : 'green';
     }
     // First node (no predecessors on page)
     if (isAuthoritative && hasDisagreeOnPage) return 'green';
@@ -391,9 +442,14 @@ function depth(id) {
  * Walk every vote button in `root` and set its aria-pressed + is-auto state
  * to match: (1) the explicit vote if one exists, or (2) the propagated state.
  *
- * @param {HTMLElement} [root=document]
+ * Always pass an explicit root (e.g. the map container or a freshly built
+ * newView) so the queries are scoped to the visible content rather than the
+ * entire document. The default falls back to #mapContainer for safety.
+ *
+ * @param {HTMLElement} [root]
  */
-export function applyVoteStates(root = document) {
+export function applyVoteStates(root) {
+  if (!root) root = document.getElementById('mapContainer') ?? document;
   // --- Update vote buttons ---
   root.querySelectorAll('[data-node-id][data-vote]').forEach(btn => {
     const nodeId   = btn.dataset.nodeId;
@@ -433,116 +489,16 @@ export function applyVoteStates(root = document) {
     card.classList.toggle('glow-core',       explicit === 'disagree');
     card.classList.toggle('glow-core-agree', explicit === 'agree');
 
-    // Also mark the parent .node-row so we can target the sibling derive button
+    // Also mark the parent .node-row so we can target the sibling
+    // derive button and the adjacent level-expander's tint overlay.
     const row = card.closest('.node-row');
     if (row) {
       row.classList.toggle('row-core',       explicit === 'disagree');
       row.classList.toggle('row-core-agree', explicit === 'agree');
+      row.classList.toggle('row-red',        effective === 'red');
+      row.classList.toggle('row-green',      effective === 'green');
     }
   });
 
-  // --- Update summary panel ---
-  renderSummaryPanel();
 }
 
-/* ===========================================================================
- * VOTE SUMMARY PANEL
- * =========================================================================== */
-
-/** Cached summary panel DOM refs. Populated by initSummaryPanel(). */
-const sp = {};
-
-/** Bind toggle, reset, and confirm events. Called once from init(). */
-function initSummaryPanel() {
-  sp.panel      = document.getElementById('voteSummary');
-  sp.toggle     = document.getElementById('voteSummaryToggle');
-  sp.count      = document.getElementById('voteSummaryCount');
-  sp.body       = document.getElementById('voteSummaryBody');
-  sp.list       = document.getElementById('voteSummaryList');
-  sp.reset      = document.getElementById('voteSummaryReset');
-  sp.confirm    = document.getElementById('voteSummaryConfirm');
-  sp.confirmYes = document.getElementById('voteSummaryConfirmYes');
-  sp.confirmNo  = document.getElementById('voteSummaryConfirmNo');
-  if (!sp.panel) return;
-
-  // Toggle open/closed
-  sp.toggle.addEventListener('click', () => {
-    const isOpen = sp.panel.getAttribute('aria-expanded') === 'true';
-    sp.panel.setAttribute('aria-expanded', !isOpen);
-    sp.toggle.setAttribute('aria-expanded', !isOpen);
-  });
-
-  // Reset All → show confirmation
-  sp.reset.addEventListener('click', () => {
-    sp.confirm.hidden = false;
-    sp.reset.hidden   = true;
-  });
-
-  // Confirm yes → clear everything
-  sp.confirmYes.addEventListener('click', () => {
-    resetAll();
-    // Re-apply to current page
-    const container = document.getElementById('mapContainer');
-    if (container) applyVoteStates(container);
-  });
-
-  // Confirm no → cancel
-  sp.confirmNo.addEventListener('click', () => {
-    sp.confirm.hidden = true;
-    sp.reset.hidden   = false;
-  });
-
-  // Vote list item clicks are handled by the vote-link delegation in ui-events.js
-
-  // Initial render
-  renderSummaryPanel();
-}
-
-/**
- * Rebuild the summary panel contents from the current votes.
- * Hides the panel entirely when no votes exist.
- */
-function renderSummaryPanel() {
-  if (!sp.panel) return;
-
-  const voteEntries = Object.entries(votes);
-  const count = voteEntries.length;
-
-  // Hide/show panel
-  sp.panel.hidden = count === 0;
-  if (count === 0) return;
-
-  // Update count badge
-  sp.count.textContent = count;
-
-  // Reset confirmation state
-  sp.confirm.hidden = true;
-  sp.reset.hidden   = false;
-
-  // Sort votes by node ID (numeric segment order, matching the argument structure)
-  voteEntries.sort((a, b) => {
-    const pa = a[0].split('.').map(Number);
-    const pb = b[0].split('.').map(Number);
-    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
-      const sa = pa[i] ?? -1;
-      const sb = pb[i] ?? -1;
-      if (sa !== sb) return sa - sb;
-    }
-    return 0;
-  });
-
-  // Build list HTML
-  sp.list.innerHTML = voteEntries.map(([nodeId, vote]) => {
-    const node = DataStore.map.get(nodeId);
-    const claim = node?.claim ?? '';
-    const snippet = claim.length > 60 ? claim.slice(0, 57) + '...' : claim;
-    const iconClass = vote === 'disagree' ? 'is-disagree' : 'is-agree';
-    const parentId = node?.parentId ?? 'null';
-    return `<li class="vote-summary__item vote-link" data-node-id="${nodeId}"
-                data-target="${parentId}" role="button" tabindex="0">
-      <span class="vote-summary__item-icon ${iconClass}"></span>
-      <span class="vote-summary__item-id">${nodeId}.</span>
-      <span class="vote-summary__item-text">${snippet}</span>
-    </li>`;
-  }).join('');
-}

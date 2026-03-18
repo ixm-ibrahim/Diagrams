@@ -36,11 +36,11 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  /* Fixed 24×24 icon area so size is identical regardless of card width */
-  width: 24px;
-  height: 24px;
+  /* Fixed icon area so size is identical regardless of card width */
+  width: var(--vote-btn-size);
+  height: var(--vote-btn-size);
   padding: 0;
-  font-size: 12px;
+  font-size: var(--vote-btn-font-size);
   font-weight: 600;
   color: var(--text-muted);
   background: rgba(128, 128, 128, 0.12);
@@ -59,9 +59,9 @@
 .btn-vote-agree:hover {
   width: auto;
   padding: 0 10px 0 6px;
-  background: rgba(34, 197, 94, 0.15);
-  border-color: rgba(34, 197, 94, 0.4);
-  color: #16a34a;
+  background: rgba(var(--agree-rgb), 0.15);
+  border-color: rgba(var(--agree-rgb), 0.4);
+  color: var(--agree-color-dark);
   transform: translateY(-1px);
 }
 
@@ -69,9 +69,9 @@
 .btn-vote-disagree:hover {
   width: auto;
   padding: 0 10px 0 6px;
-  background: rgba(239, 68, 68, 0.15);
-  border-color: rgba(239, 68, 68, 0.4);
-  color: #dc2626;
+  background: rgba(var(--disagree-rgb), 0.15);
+  border-color: rgba(var(--disagree-rgb), 0.4);
+  color: var(--disagree-color-dark);
   transform: translateY(-1px);
 }
 
@@ -99,7 +99,7 @@
 }
 
 .btn-vote:hover .btn-vote__label {
-  max-width: 80px;
+  max-width: var(--vote-label-max-width);
   opacity: 1;
 }
 
@@ -107,68 +107,68 @@
 /* Agree button — clicked/selected state
    ----------------------------------------------------------------------------- */
 .btn-vote-agree[aria-pressed="true"] {
-  width: 24px;
-  background: #22c55e;
-  border-color: #22c55e;
+  width: var(--vote-btn-size);
+  background: var(--agree-color);
+  border-color: var(--agree-color);
   color: #052e16;
-  box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 8px rgba(var(--agree-rgb), 0.4);
 }
 
 .btn-vote-agree[aria-pressed="true"]:hover {
   width: auto;
-  background: #16a34a;
-  border-color: #16a34a;
+  background: var(--agree-color-dark);
+  border-color: var(--agree-color-dark);
   color: #ffffff;
-  box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 10px rgba(var(--agree-rgb), 0.5);
 }
 
 /* Auto-selected (propagated) — dimmer */
 .btn-vote-agree.is-auto[aria-pressed="true"] {
-  width: 24px;
-  background: rgba(34, 197, 94, 0.25);
-  border-color: rgba(34, 197, 94, 0.35);
-  color: #15803d;
+  width: var(--vote-btn-size);
+  background: rgba(var(--agree-rgb), 0.25);
+  border-color: rgba(var(--agree-rgb), 0.35);
+  color: var(--agree-color-deep);
   box-shadow: none;
 }
 
 .btn-vote-agree.is-auto[aria-pressed="true"]:hover {
   width: auto;
-  background: rgba(34, 197, 94, 0.35);
-  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(var(--agree-rgb), 0.35);
+  border-color: rgba(var(--agree-rgb), 0.5);
 }
 
 
 /* Disagree button — clicked/selected state
    ----------------------------------------------------------------------------- */
 .btn-vote-disagree[aria-pressed="true"] {
-  width: 24px;
-  background: #ef4444;
-  border-color: #ef4444;
+  width: var(--vote-btn-size);
+  background: var(--disagree-color);
+  border-color: var(--disagree-color);
   color: #450a0a;
-  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 0 8px rgba(var(--disagree-rgb), 0.4);
 }
 
 .btn-vote-disagree[aria-pressed="true"]:hover {
   width: auto;
-  background: #dc2626;
-  border-color: #dc2626;
+  background: var(--disagree-color-dark);
+  border-color: var(--disagree-color-dark);
   color: #ffffff;
-  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 10px rgba(var(--disagree-rgb), 0.5);
 }
 
 /* Auto-selected (propagated) — dimmer */
 .btn-vote-disagree.is-auto[aria-pressed="true"] {
-  width: 24px;
-  background: rgba(239, 68, 68, 0.25);
-  border-color: rgba(239, 68, 68, 0.35);
-  color: #b91c1c;
+  width: var(--vote-btn-size);
+  background: rgba(var(--disagree-rgb), 0.25);
+  border-color: rgba(var(--disagree-rgb), 0.35);
+  color: var(--disagree-color-deep);
   box-shadow: none;
 }
 
 .btn-vote-disagree.is-auto[aria-pressed="true"]:hover {
   width: auto;
-  background: rgba(239, 68, 68, 0.35);
-  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(var(--disagree-rgb), 0.35);
+  border-color: rgba(var(--disagree-rgb), 0.5);
 }
 
 
@@ -181,54 +181,54 @@
 }
 
 [data-theme="light"] .btn-vote-agree:hover {
-  background: rgba(22, 163, 74, 0.12);
-  border-color: rgba(22, 163, 74, 0.4);
-  color: #15803d;
+  background: rgba(var(--agree-rgb), 0.12);
+  border-color: rgba(var(--agree-rgb), 0.4);
+  color: var(--agree-color-deep);
 }
 
 [data-theme="light"] .btn-vote-disagree:hover {
-  background: rgba(220, 38, 38, 0.12);
-  border-color: rgba(220, 38, 38, 0.4);
-  color: #b91c1c;
+  background: rgba(var(--disagree-rgb), 0.12);
+  border-color: rgba(var(--disagree-rgb), 0.4);
+  color: var(--disagree-color-deep);
 }
 
 [data-theme="light"] .btn-vote-agree[aria-pressed="true"] {
-  background: #16a34a;
-  border-color: #16a34a;
+  background: var(--agree-color);
+  border-color: var(--agree-color);
   color: #ffffff;
-  box-shadow: 0 0 8px rgba(22, 163, 74, 0.35);
+  box-shadow: 0 0 8px rgba(var(--agree-rgb), 0.35);
 }
 
 [data-theme="light"] .btn-vote-agree[aria-pressed="true"]:hover {
-  background: #15803d;
-  border-color: #15803d;
+  background: var(--agree-color-dark);
+  border-color: var(--agree-color-dark);
   color: #ffffff;
 }
 
 [data-theme="light"] .btn-vote-agree.is-auto[aria-pressed="true"] {
-  background: rgba(22, 163, 74, 0.18);
-  border-color: rgba(22, 163, 74, 0.3);
-  color: #15803d;
+  background: rgba(var(--agree-rgb), 0.18);
+  border-color: rgba(var(--agree-rgb), 0.3);
+  color: var(--agree-color-deep);
   box-shadow: none;
 }
 
 [data-theme="light"] .btn-vote-disagree[aria-pressed="true"] {
-  background: #dc2626;
-  border-color: #dc2626;
+  background: var(--disagree-color);
+  border-color: var(--disagree-color);
   color: #ffffff;
-  box-shadow: 0 0 8px rgba(220, 38, 38, 0.35);
+  box-shadow: 0 0 8px rgba(var(--disagree-rgb), 0.35);
 }
 
 [data-theme="light"] .btn-vote-disagree[aria-pressed="true"]:hover {
-  background: #b91c1c;
-  border-color: #b91c1c;
+  background: var(--disagree-color-dark);
+  border-color: var(--disagree-color-dark);
   color: #ffffff;
 }
 
 [data-theme="light"] .btn-vote-disagree.is-auto[aria-pressed="true"] {
-  background: rgba(220, 38, 38, 0.18);
-  border-color: rgba(220, 38, 38, 0.3);
-  color: #b91c1c;
+  background: rgba(var(--disagree-rgb), 0.18);
+  border-color: rgba(var(--disagree-rgb), 0.3);
+  color: var(--disagree-color-deep);
   box-shadow: none;
 }
 
@@ -237,29 +237,29 @@
    These complement the explicit pressed states already in expander.css
    ----------------------------------------------------------------------------- */
 .btn-action.btn-agree.is-auto[aria-pressed="true"] {
-  background: rgba(34, 197, 94, 0.25);
-  border-color: rgba(34, 197, 94, 0.35);
-  color: #15803d;
+  background: rgba(var(--agree-rgb), 0.25);
+  border-color: rgba(var(--agree-rgb), 0.35);
+  color: var(--agree-color-deep);
   font-weight: 600;
 }
 
 .btn-action.btn-disagree.is-auto[aria-pressed="true"] {
-  background: rgba(239, 68, 68, 0.25);
-  border-color: rgba(239, 68, 68, 0.35);
-  color: #b91c1c;
+  background: rgba(var(--disagree-rgb), 0.25);
+  border-color: rgba(var(--disagree-rgb), 0.35);
+  color: var(--disagree-color-deep);
   font-weight: 600;
 }
 
 [data-theme="light"] .btn-action.btn-agree.is-auto[aria-pressed="true"] {
-  background: rgba(22, 163, 74, 0.18);
-  border-color: rgba(22, 163, 74, 0.3);
-  color: #15803d;
+  background: rgba(var(--agree-rgb), 0.18);
+  border-color: rgba(var(--agree-rgb), 0.3);
+  color: var(--agree-color-deep);
 }
 
 [data-theme="light"] .btn-action.btn-disagree.is-auto[aria-pressed="true"] {
-  background: rgba(220, 38, 38, 0.18);
-  border-color: rgba(220, 38, 38, 0.3);
-  color: #b91c1c;
+  background: rgba(var(--disagree-rgb), 0.18);
+  border-color: rgba(var(--disagree-rgb), 0.3);
+  color: var(--disagree-color-deep);
 }
 
 
@@ -271,7 +271,7 @@
   }
 
   .btn-vote:hover {
-    width: 24px;
+    width: var(--vote-btn-size);
     padding: 0;
   }
 
@@ -291,70 +291,68 @@
    proportionally. Default is 0.75 (~75% of maximum).
    ============================================================================= */
 
-:root {
-  --glow-intensity: 0.875;
-}
+/* --glow-intensity is defined in tokens.css (0.875 default) */
 
 /* Dark theme glows */
 .node-card.glow-red {
   box-shadow:
-    0 0 calc(18px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.34 * var(--glow-intensity))),
-    0 0 calc(6px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.45 * var(--glow-intensity))),
-    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(239, 68, 68, calc(0.12 * var(--glow-intensity)));
-  border-color: rgba(239, 68, 68, calc(0.6 * var(--glow-intensity)));
+    0 0 calc(18px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.34 * var(--glow-intensity))),
+    0 0 calc(6px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.45 * var(--glow-intensity))),
+    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(var(--disagree-rgb), calc(0.12 * var(--glow-intensity)));
+  border-color: rgba(var(--disagree-rgb), calc(0.6 * var(--glow-intensity)));
 }
 
 .node-card.glow-red:hover {
   box-shadow:
-    0 0 calc(24px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.42 * var(--glow-intensity))),
-    0 0 calc(8px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.55 * var(--glow-intensity))),
-    inset 0 0 calc(16px * var(--glow-intensity)) 0 rgba(239, 68, 68, calc(0.14 * var(--glow-intensity)));
+    0 0 calc(24px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.42 * var(--glow-intensity))),
+    0 0 calc(8px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.55 * var(--glow-intensity))),
+    inset 0 0 calc(16px * var(--glow-intensity)) 0 rgba(var(--disagree-rgb), calc(0.14 * var(--glow-intensity)));
 }
 
 .node-card.glow-green {
   box-shadow:
-    0 0 calc(18px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.34 * var(--glow-intensity))),
-    0 0 calc(6px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.45 * var(--glow-intensity))),
-    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(34, 197, 94, calc(0.12 * var(--glow-intensity)));
-  border-color: rgba(34, 197, 94, calc(0.6 * var(--glow-intensity)));
+    0 0 calc(18px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.34 * var(--glow-intensity))),
+    0 0 calc(6px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.45 * var(--glow-intensity))),
+    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(var(--agree-rgb), calc(0.12 * var(--glow-intensity)));
+  border-color: rgba(var(--agree-rgb), calc(0.6 * var(--glow-intensity)));
 }
 
 .node-card.glow-green:hover {
   box-shadow:
-    0 0 calc(24px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.42 * var(--glow-intensity))),
-    0 0 calc(8px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.55 * var(--glow-intensity))),
-    inset 0 0 calc(16px * var(--glow-intensity)) 0 rgba(34, 197, 94, calc(0.14 * var(--glow-intensity)));
+    0 0 calc(24px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.42 * var(--glow-intensity))),
+    0 0 calc(8px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.55 * var(--glow-intensity))),
+    inset 0 0 calc(16px * var(--glow-intensity)) 0 rgba(var(--agree-rgb), calc(0.14 * var(--glow-intensity)));
 }
 
 /* Light theme glows */
 [data-theme="light"] .node-card.glow-red {
   box-shadow:
-    0 0 calc(16px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.28 * var(--glow-intensity))),
-    0 0 calc(5px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.38 * var(--glow-intensity))),
-    inset 0 0 calc(12px * var(--glow-intensity)) 0 rgba(220, 38, 38, calc(0.08 * var(--glow-intensity)));
-  border-color: rgba(220, 38, 38, calc(0.55 * var(--glow-intensity)));
+    0 0 calc(16px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.28 * var(--glow-intensity))),
+    0 0 calc(5px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.38 * var(--glow-intensity))),
+    inset 0 0 calc(12px * var(--glow-intensity)) 0 rgba(var(--disagree-dark-rgb), calc(0.08 * var(--glow-intensity)));
+  border-color: rgba(var(--disagree-dark-rgb), calc(0.55 * var(--glow-intensity)));
 }
 
 [data-theme="light"] .node-card.glow-red:hover {
   box-shadow:
-    0 0 calc(22px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.36 * var(--glow-intensity))),
-    0 0 calc(7px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.48 * var(--glow-intensity))),
-    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(220, 38, 38, calc(0.1 * var(--glow-intensity)));
+    0 0 calc(22px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.36 * var(--glow-intensity))),
+    0 0 calc(7px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.48 * var(--glow-intensity))),
+    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(var(--disagree-dark-rgb), calc(0.1 * var(--glow-intensity)));
 }
 
 [data-theme="light"] .node-card.glow-green {
   box-shadow:
-    0 0 calc(16px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.28 * var(--glow-intensity))),
-    0 0 calc(5px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.38 * var(--glow-intensity))),
-    inset 0 0 calc(12px * var(--glow-intensity)) 0 rgba(22, 163, 74, calc(0.08 * var(--glow-intensity)));
-  border-color: rgba(22, 163, 74, calc(0.55 * var(--glow-intensity)));
+    0 0 calc(16px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.28 * var(--glow-intensity))),
+    0 0 calc(5px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.38 * var(--glow-intensity))),
+    inset 0 0 calc(12px * var(--glow-intensity)) 0 rgba(var(--agree-dark-rgb), calc(0.08 * var(--glow-intensity)));
+  border-color: rgba(var(--agree-dark-rgb), calc(0.55 * var(--glow-intensity)));
 }
 
 [data-theme="light"] .node-card.glow-green:hover {
   box-shadow:
-    0 0 calc(22px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.36 * var(--glow-intensity))),
-    0 0 calc(7px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.48 * var(--glow-intensity))),
-    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(22, 163, 74, calc(0.1 * var(--glow-intensity)));
+    0 0 calc(22px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.36 * var(--glow-intensity))),
+    0 0 calc(7px * var(--glow-intensity)) calc(2px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.48 * var(--glow-intensity))),
+    inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(var(--agree-dark-rgb), calc(0.1 * var(--glow-intensity)));
 }
 
 
@@ -366,58 +364,58 @@
 @keyframes core-shadow-pulse {
   0%, 100% {
     box-shadow:
-      0 0 calc(36px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.6 * var(--glow-intensity))),
-      0 0 calc(14px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.8 * var(--glow-intensity))),
-      inset 0 0 calc(24px * var(--glow-intensity)) 0 rgba(239, 68, 68, calc(0.22 * var(--glow-intensity)));
+      0 0 calc(36px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.6 * var(--glow-intensity))),
+      0 0 calc(14px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.8 * var(--glow-intensity))),
+      inset 0 0 calc(24px * var(--glow-intensity)) 0 rgba(var(--disagree-rgb), calc(0.22 * var(--glow-intensity)));
   }
   50% {
     box-shadow:
-      0 0 calc(26px * var(--glow-intensity)) calc(7px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.4 * var(--glow-intensity))),
-      0 0 calc(10px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.6 * var(--glow-intensity))),
-      inset 0 0 calc(18px * var(--glow-intensity)) 0 rgba(239, 68, 68, calc(0.14 * var(--glow-intensity)));
+      0 0 calc(26px * var(--glow-intensity)) calc(7px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.4 * var(--glow-intensity))),
+      0 0 calc(10px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.6 * var(--glow-intensity))),
+      inset 0 0 calc(18px * var(--glow-intensity)) 0 rgba(var(--disagree-rgb), calc(0.14 * var(--glow-intensity)));
   }
 }
 
 @keyframes core-shadow-pulse-light {
   0%, 100% {
     box-shadow:
-      0 0 calc(30px * var(--glow-intensity)) calc(9px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.5 * var(--glow-intensity))),
-      0 0 calc(12px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.7 * var(--glow-intensity))),
-      inset 0 0 calc(20px * var(--glow-intensity)) 0 rgba(220, 38, 38, calc(0.16 * var(--glow-intensity)));
+      0 0 calc(30px * var(--glow-intensity)) calc(9px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.5 * var(--glow-intensity))),
+      0 0 calc(12px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.7 * var(--glow-intensity))),
+      inset 0 0 calc(20px * var(--glow-intensity)) 0 rgba(var(--disagree-dark-rgb), calc(0.16 * var(--glow-intensity)));
   }
   50% {
     box-shadow:
-      0 0 calc(20px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.32 * var(--glow-intensity))),
-      0 0 calc(8px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.5 * var(--glow-intensity))),
-      inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(220, 38, 38, calc(0.1 * var(--glow-intensity)));
+      0 0 calc(20px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.32 * var(--glow-intensity))),
+      0 0 calc(8px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.5 * var(--glow-intensity))),
+      inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(var(--disagree-dark-rgb), calc(0.1 * var(--glow-intensity)));
   }
 }
 
 .node-card.glow-core {
-  border-color: rgba(239, 68, 68, 0.95);
+  border-color: rgba(var(--disagree-rgb), 0.95);
   border-width: 3px;
   animation: core-shadow-pulse 2.5s ease-in-out infinite;
 }
 
 .node-card.glow-core:hover {
   box-shadow:
-    0 0 calc(40px * var(--glow-intensity)) calc(12px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.7 * var(--glow-intensity))),
-    0 0 calc(16px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(239, 68, 68, calc(0.85 * var(--glow-intensity))),
-    inset 0 0 calc(26px * var(--glow-intensity)) 0 rgba(239, 68, 68, calc(0.26 * var(--glow-intensity)));
+    0 0 calc(40px * var(--glow-intensity)) calc(12px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.7 * var(--glow-intensity))),
+    0 0 calc(16px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(var(--disagree-rgb), calc(0.85 * var(--glow-intensity))),
+    inset 0 0 calc(26px * var(--glow-intensity)) 0 rgba(var(--disagree-rgb), calc(0.26 * var(--glow-intensity)));
   animation: none;
 }
 
 [data-theme="light"] .node-card.glow-core {
-  border-color: rgba(220, 38, 38, 0.85);
+  border-color: rgba(var(--disagree-dark-rgb), 0.85);
   border-width: 3px;
   animation: core-shadow-pulse-light 2.5s ease-in-out infinite;
 }
 
 [data-theme="light"] .node-card.glow-core:hover {
   box-shadow:
-    0 0 calc(34px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.6 * var(--glow-intensity))),
-    0 0 calc(14px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(220, 38, 38, calc(0.75 * var(--glow-intensity))),
-    inset 0 0 calc(22px * var(--glow-intensity)) 0 rgba(220, 38, 38, calc(0.2 * var(--glow-intensity)));
+    0 0 calc(34px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.6 * var(--glow-intensity))),
+    0 0 calc(14px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(var(--disagree-dark-rgb), calc(0.75 * var(--glow-intensity))),
+    inset 0 0 calc(22px * var(--glow-intensity)) 0 rgba(var(--disagree-dark-rgb), calc(0.2 * var(--glow-intensity)));
   animation: none;
 }
 
@@ -426,39 +424,39 @@
    reach the sibling .btn-derivation from CSS.
    ----------------------------------------------------------------------------- */
 .row-core > .btn-derivation {
-  background: rgba(239, 68, 68, 0.2);
-  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(var(--disagree-rgb), 0.2);
+  border-color: rgba(var(--disagree-rgb), 0.5);
   color: #fca5a5;
-  box-shadow: 0 0 10px 2px rgba(239, 68, 68, 0.25);
+  box-shadow: 0 0 10px 2px rgba(var(--disagree-rgb), 0.25);
   animation: core-shadow-pulse 2.5s ease-in-out infinite;
 }
 
 .row-core > .btn-derivation:hover {
-  background: rgba(239, 68, 68, 0.35);
-  border-color: rgba(239, 68, 68, 0.7);
+  background: rgba(var(--disagree-rgb), 0.35);
+  border-color: rgba(var(--disagree-rgb), 0.7);
   color: #fecaca;
-  box-shadow: 0 0 14px 4px rgba(239, 68, 68, 0.35);
+  box-shadow: 0 0 14px 4px rgba(var(--disagree-rgb), 0.35);
   animation: none;
   transform: translateY(-2px) scale(1.04);
 }
 
 .row-core > .btn-derivation::before {
-  background: rgba(239, 68, 68, 0.5);
+  background: rgba(var(--disagree-rgb), 0.5);
 }
 
 [data-theme="light"] .row-core > .btn-derivation {
-  background: rgba(220, 38, 38, 0.12);
-  border-color: rgba(220, 38, 38, 0.4);
-  color: #b91c1c;
-  box-shadow: 0 0 8px 2px rgba(220, 38, 38, 0.2);
+  background: rgba(var(--disagree-dark-rgb), 0.12);
+  border-color: rgba(var(--disagree-dark-rgb), 0.4);
+  color: var(--disagree-color-deep);
+  box-shadow: 0 0 8px 2px rgba(var(--disagree-dark-rgb), 0.2);
   animation: core-shadow-pulse-light 2.5s ease-in-out infinite;
 }
 
 [data-theme="light"] .row-core > .btn-derivation:hover {
-  background: rgba(220, 38, 38, 0.22);
-  border-color: rgba(220, 38, 38, 0.6);
+  background: rgba(var(--disagree-dark-rgb), 0.22);
+  border-color: rgba(var(--disagree-dark-rgb), 0.6);
   color: #991b1b;
-  box-shadow: 0 0 12px 3px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 0 12px 3px rgba(var(--disagree-dark-rgb), 0.3);
   animation: none;
 }
 
@@ -469,96 +467,96 @@
 @keyframes core-green-pulse {
   0%, 100% {
     box-shadow:
-      0 0 calc(36px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.6 * var(--glow-intensity))),
-      0 0 calc(14px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.8 * var(--glow-intensity))),
-      inset 0 0 calc(24px * var(--glow-intensity)) 0 rgba(34, 197, 94, calc(0.22 * var(--glow-intensity)));
+      0 0 calc(36px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.6 * var(--glow-intensity))),
+      0 0 calc(14px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.8 * var(--glow-intensity))),
+      inset 0 0 calc(24px * var(--glow-intensity)) 0 rgba(var(--agree-rgb), calc(0.22 * var(--glow-intensity)));
   }
   50% {
     box-shadow:
-      0 0 calc(26px * var(--glow-intensity)) calc(7px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.4 * var(--glow-intensity))),
-      0 0 calc(10px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.6 * var(--glow-intensity))),
-      inset 0 0 calc(18px * var(--glow-intensity)) 0 rgba(34, 197, 94, calc(0.14 * var(--glow-intensity)));
+      0 0 calc(26px * var(--glow-intensity)) calc(7px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.4 * var(--glow-intensity))),
+      0 0 calc(10px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.6 * var(--glow-intensity))),
+      inset 0 0 calc(18px * var(--glow-intensity)) 0 rgba(var(--agree-rgb), calc(0.14 * var(--glow-intensity)));
   }
 }
 
 @keyframes core-green-pulse-light {
   0%, 100% {
     box-shadow:
-      0 0 calc(30px * var(--glow-intensity)) calc(9px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.5 * var(--glow-intensity))),
-      0 0 calc(12px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.7 * var(--glow-intensity))),
-      inset 0 0 calc(20px * var(--glow-intensity)) 0 rgba(22, 163, 74, calc(0.16 * var(--glow-intensity)));
+      0 0 calc(30px * var(--glow-intensity)) calc(9px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.5 * var(--glow-intensity))),
+      0 0 calc(12px * var(--glow-intensity)) calc(4px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.7 * var(--glow-intensity))),
+      inset 0 0 calc(20px * var(--glow-intensity)) 0 rgba(var(--agree-dark-rgb), calc(0.16 * var(--glow-intensity)));
   }
   50% {
     box-shadow:
-      0 0 calc(20px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.32 * var(--glow-intensity))),
-      0 0 calc(8px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.5 * var(--glow-intensity))),
-      inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(22, 163, 74, calc(0.1 * var(--glow-intensity)));
+      0 0 calc(20px * var(--glow-intensity)) calc(6px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.32 * var(--glow-intensity))),
+      0 0 calc(8px * var(--glow-intensity)) calc(3px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.5 * var(--glow-intensity))),
+      inset 0 0 calc(14px * var(--glow-intensity)) 0 rgba(var(--agree-dark-rgb), calc(0.1 * var(--glow-intensity)));
   }
 }
 
 .node-card.glow-core-agree {
-  border-color: rgba(34, 197, 94, 0.95);
+  border-color: rgba(var(--agree-rgb), 0.95);
   border-width: 3px;
   animation: core-green-pulse 2.5s ease-in-out infinite;
 }
 
 .node-card.glow-core-agree:hover {
   box-shadow:
-    0 0 calc(40px * var(--glow-intensity)) calc(12px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.7 * var(--glow-intensity))),
-    0 0 calc(16px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(34, 197, 94, calc(0.85 * var(--glow-intensity))),
-    inset 0 0 calc(26px * var(--glow-intensity)) 0 rgba(34, 197, 94, calc(0.26 * var(--glow-intensity)));
+    0 0 calc(40px * var(--glow-intensity)) calc(12px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.7 * var(--glow-intensity))),
+    0 0 calc(16px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(var(--agree-rgb), calc(0.85 * var(--glow-intensity))),
+    inset 0 0 calc(26px * var(--glow-intensity)) 0 rgba(var(--agree-rgb), calc(0.26 * var(--glow-intensity)));
   animation: none;
 }
 
 [data-theme="light"] .node-card.glow-core-agree {
-  border-color: rgba(22, 163, 74, 0.85);
+  border-color: rgba(var(--agree-dark-rgb), 0.85);
   border-width: 3px;
   animation: core-green-pulse-light 2.5s ease-in-out infinite;
 }
 
 [data-theme="light"] .node-card.glow-core-agree:hover {
   box-shadow:
-    0 0 calc(34px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.6 * var(--glow-intensity))),
-    0 0 calc(14px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(22, 163, 74, calc(0.75 * var(--glow-intensity))),
-    inset 0 0 calc(22px * var(--glow-intensity)) 0 rgba(22, 163, 74, calc(0.2 * var(--glow-intensity)));
+    0 0 calc(34px * var(--glow-intensity)) calc(10px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.6 * var(--glow-intensity))),
+    0 0 calc(14px * var(--glow-intensity)) calc(5px * var(--glow-intensity)) rgba(var(--agree-dark-rgb), calc(0.75 * var(--glow-intensity))),
+    inset 0 0 calc(22px * var(--glow-intensity)) 0 rgba(var(--agree-dark-rgb), calc(0.2 * var(--glow-intensity)));
   animation: none;
 }
 
 /* Derivation button emphasis on core agreement nodes */
 .row-core-agree > .btn-derivation {
-  background: rgba(34, 197, 94, 0.2);
-  border-color: rgba(34, 197, 94, 0.5);
+  background: rgba(var(--agree-rgb), 0.2);
+  border-color: rgba(var(--agree-rgb), 0.5);
   color: #86efac;
-  box-shadow: 0 0 10px 2px rgba(34, 197, 94, 0.25);
+  box-shadow: 0 0 10px 2px rgba(var(--agree-rgb), 0.25);
   animation: core-green-pulse 2.5s ease-in-out infinite;
 }
 
 .row-core-agree > .btn-derivation:hover {
-  background: rgba(34, 197, 94, 0.35);
-  border-color: rgba(34, 197, 94, 0.7);
+  background: rgba(var(--agree-rgb), 0.35);
+  border-color: rgba(var(--agree-rgb), 0.7);
   color: #bbf7d0;
-  box-shadow: 0 0 14px 4px rgba(34, 197, 94, 0.35);
+  box-shadow: 0 0 14px 4px rgba(var(--agree-rgb), 0.35);
   animation: none;
   transform: translateY(-2px) scale(1.04);
 }
 
 .row-core-agree > .btn-derivation::before {
-  background: rgba(34, 197, 94, 0.5);
+  background: rgba(var(--agree-rgb), 0.5);
 }
 
 [data-theme="light"] .row-core-agree > .btn-derivation {
-  background: rgba(22, 163, 74, 0.12);
-  border-color: rgba(22, 163, 74, 0.4);
-  color: #15803d;
-  box-shadow: 0 0 8px 2px rgba(22, 163, 74, 0.2);
+  background: rgba(var(--agree-dark-rgb), 0.12);
+  border-color: rgba(var(--agree-dark-rgb), 0.4);
+  color: var(--agree-color-deep);
+  box-shadow: 0 0 8px 2px rgba(var(--agree-dark-rgb), 0.2);
   animation: core-green-pulse-light 2.5s ease-in-out infinite;
 }
 
 [data-theme="light"] .row-core-agree > .btn-derivation:hover {
-  background: rgba(22, 163, 74, 0.22);
-  border-color: rgba(22, 163, 74, 0.6);
+  background: rgba(var(--agree-dark-rgb), 0.22);
+  border-color: rgba(var(--agree-dark-rgb), 0.6);
   color: #166534;
-  box-shadow: 0 0 12px 3px rgba(22, 163, 74, 0.3);
+  box-shadow: 0 0 12px 3px rgba(var(--agree-dark-rgb), 0.3);
   animation: none;
 }
 
@@ -576,7 +574,19 @@
   border-radius: var(--radius-md);
   margin-top: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.2s ease;
+  /* Expand / contract animation when the panel appears or disappears.
+     height is set explicitly by JS; overflow clips during transition. */
+  overflow: hidden;
+  transition: height 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease;
+}
+
+/* Collapsed state: zero height, invisible, no margin gap */
+.vote-summary.is-collapsed {
+  height: 0 !important;
+  opacity: 0;
+  margin-top: 0;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 /* Toggle bar (always visible when panel is shown) */
@@ -669,23 +679,23 @@
 }
 
 .vote-summary__item-icon.is-disagree {
-  background: #ef4444;
-  box-shadow: 0 0 6px rgba(239, 68, 68, 0.4);
+  background: var(--disagree-color);
+  box-shadow: 0 0 6px rgba(var(--disagree-rgb), 0.4);
 }
 
 .vote-summary__item-icon.is-agree {
-  background: #22c55e;
-  box-shadow: 0 0 6px rgba(34, 197, 94, 0.4);
+  background: var(--agree-color);
+  box-shadow: 0 0 6px rgba(var(--agree-rgb), 0.4);
 }
 
 [data-theme="light"] .vote-summary__item-icon.is-disagree {
-  background: #dc2626;
-  box-shadow: 0 0 4px rgba(220, 38, 38, 0.3);
+  background: var(--disagree-color);
+  box-shadow: 0 0 4px rgba(var(--disagree-dark-rgb), 0.3);
 }
 
 [data-theme="light"] .vote-summary__item-icon.is-agree {
-  background: #16a34a;
-  box-shadow: 0 0 4px rgba(22, 163, 74, 0.3);
+  background: var(--agree-color);
+  box-shadow: 0 0 4px rgba(var(--agree-dark-rgb), 0.3);
 }
 
 .vote-summary__item-id {
@@ -714,8 +724,8 @@
 .vote-summary__reset {
   padding: 5px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(var(--disagree-rgb), 0.3);
+  background: rgba(var(--disagree-rgb), 0.08);
   color: #fca5a5;
   font-size: 12px;
   font-weight: 600;
@@ -724,19 +734,19 @@
 }
 
 .vote-summary__reset:hover {
-  background: rgba(239, 68, 68, 0.18);
-  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(var(--disagree-rgb), 0.18);
+  border-color: rgba(var(--disagree-rgb), 0.5);
 }
 
 [data-theme="light"] .vote-summary__reset {
-  color: #b91c1c;
-  background: rgba(220, 38, 38, 0.06);
-  border-color: rgba(220, 38, 38, 0.25);
+  color: var(--disagree-color-deep);
+  background: rgba(var(--disagree-dark-rgb), 0.06);
+  border-color: rgba(var(--disagree-dark-rgb), 0.25);
 }
 
 [data-theme="light"] .vote-summary__reset:hover {
-  background: rgba(220, 38, 38, 0.14);
-  border-color: rgba(220, 38, 38, 0.4);
+  background: rgba(var(--disagree-dark-rgb), 0.14);
+  border-color: rgba(var(--disagree-dark-rgb), 0.4);
 }
 
 /* Inline confirmation prompt */
@@ -758,8 +768,8 @@
 .vote-summary__confirm-yes {
   padding: 4px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(239, 68, 68, 0.5);
-  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(var(--disagree-rgb), 0.5);
+  background: rgba(var(--disagree-rgb), 0.15);
   color: #fca5a5;
   font-size: 12px;
   font-weight: 600;
@@ -767,11 +777,11 @@
 }
 
 .vote-summary__confirm-yes:hover {
-  background: rgba(239, 68, 68, 0.3);
+  background: rgba(var(--disagree-rgb), 0.3);
 }
 
 [data-theme="light"] .vote-summary__confirm-yes {
-  color: #b91c1c;
+  color: var(--disagree-color-deep);
 }
 
 .vote-summary__confirm-no {

@@ -1,37 +1,15 @@
+/* === sibling-nav.js — Sibling Navigation Logic === */
 /**
- * =============================================================================
- * sibling-nav.js — Sibling Navigation Logic
- * =============================================================================
- * Computes and renders navigation for derivation pages.
+ * Computes and renders navigation groups (prev/next/parallel/cross-parent)
+ * for derivation pages. Terminal pages use previousParentId for depth
+ * preservation during lateral traversal.
  *
- * Navigation groups (rendered top-to-bottom):
- *   TOP:    "Continue from Previous Section" (cross-parent)
- *           "Previous Step(s) in Logic"      (prevIds)
- *           "Parallel Step(s)"               (same-predecessor siblings before)
- *   BOTTOM: "Parallel Step(s)"               (same-predecessor siblings after)
- *           "Next Step(s) in Logic"           (nextIds)
- *           "Continue to Next Section"        (cross-parent)
- *
- * Each group gets ONE shared label, with all its buttons underneath.
- * Cross-parent buttons embed data-direction so the transition animates
- * laterally instead of as a "surface" move.
- *
- * Terminal pages (hasDerivation: false, no children) use
- * AppState.previousParentId to preserve traversal depth: if we arrived
- * from inside a sibling's children, the back-button targets that child
- * (exit/entry node), not the sibling itself.
- *
- * Dependencies: data-store.js (DataStore), state.js (AppState)
- * Consumers: ui-render.js (calls renderSiblingNavigation)
- * =============================================================================
+ * Dependencies: data-store.js, state.js
+ * Consumers:    ui-render.js (calls renderSiblingNavigation)
  */
 
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
-
-/* ---------------------------------------------------------------------------
- * Helpers
- * --------------------------------------------------------------------------- */
 
 function nodeIndex(id) {
   return DataStore.nodes.findIndex(n => n.id === id);
@@ -83,22 +61,7 @@ function resolveDepthTarget(siblingId, direction) {
   return DataStore.map.get(siblingId);
 }
 
-/* ---------------------------------------------------------------------------
- * Core computation
- * --------------------------------------------------------------------------- */
-
-/**
- * @typedef {Object} NavGroup
- * @property {string} label   — shared header text
- * @property {string} type    — 'prev'|'next'|'parallel'|'cross'
- * @property {string} btnClass — CSS class for direction hover
- * @property {Array<{node: Object, arrow: string, direction?: string}>} items
- */
-
-/**
- * Computes grouped navigation for the current page.
- * @returns {{ top: NavGroup[], bottom: NavGroup[] }}
- */
+/** Computes grouped navigation for the current page. */
 export function computeSiblingNav() {
   const parentNode = AppState.currentParentId
     ? DataStore.map.get(AppState.currentParentId)
@@ -265,10 +228,6 @@ export function computeSiblingNav() {
 function makeGroup(label, type, btnClass, items) {
   return { label, type, btnClass, items };
 }
-
-/* ---------------------------------------------------------------------------
- * DOM rendering
- * --------------------------------------------------------------------------- */
 
 export function renderSiblingNavigation(view) {
   const { top, bottom } = computeSiblingNav();

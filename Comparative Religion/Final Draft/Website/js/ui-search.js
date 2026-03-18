@@ -16,7 +16,7 @@
  * =============================================================================
  */
 
-import { SEARCH_DEBOUNCE_MS } from './constants.js';
+import { SEARCH_DEBOUNCE_MS, MAX_RESULTS } from './constants.js';
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
 import { nodeRow } from './templates.js';
@@ -24,9 +24,6 @@ import { forceCloseExpander } from './ui-expander.js';
 
 /** Debounce timer ID. */
 let searchTimeout = null;
-
-/** Maximum results to render (prevents DOM explosion on short queries). */
-const MAX_RESULTS = 100;
 
 /**
  * Debounced search entry point. Call on every input event.

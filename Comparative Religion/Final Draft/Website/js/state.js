@@ -24,6 +24,7 @@ export const AppState = {
   previousParentId: null,   // tracks where we navigated from (for depth preservation)
   isTransitioning: false,
   isStackTransitioning: false,
+  _themeTransitionTimeout: null,   // tracks pending theme-transition class removal
 
   searchConfig: {
     nodeContents: true,
@@ -46,7 +47,10 @@ export const AppState = {
     this.theme = this.theme === 'light' ? 'dark' : 'light';
     localStorage.setItem('theme', this.theme);
     this.applyTheme();
-    setTimeout(
+    // Clear any pending removal timeout before scheduling a new one so rapid
+    // clicks don't strip the class while the most recent transition is still running.
+    clearTimeout(this._themeTransitionTimeout);
+    this._themeTransitionTimeout = setTimeout(
       () => document.body.classList.remove('theme-transition'),
       THEME_TRANSITION_MS
     );

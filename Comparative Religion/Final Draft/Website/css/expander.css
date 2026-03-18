@@ -49,6 +49,72 @@
   background: linear-gradient(180deg, var(--panel-bg), var(--panel-accent));
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
+  position: relative;
+}
+
+/* Agreement tint — subtle color wash from the top edge reflecting the node's
+   propagated agree/disagree state. Uses ::before so it layers above the panel
+   background but below the content. The .row-red / .row-green classes are
+   set on .node-row by applyVoteStates(); the adjacent-sibling selector (+)
+   reaches the expander that follows the row in the DOM.
+
+   The ::before is ALWAYS present on open expanders (opacity 0) so that when
+   an agreement state appears or changes, the tint fades in smoothly rather
+   than popping.                                                               */
+
+/* Content sits above the tint overlay */
+.level-expander.is-open .exp-inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Always-present tint layer — invisible until an agreement class activates it */
+.level-expander.is-open .exp-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--tint-transition-duration) ease;
+}
+
+/* Red tint (disagree) — fade in */
+.node-row.row-red + .level-expander.is-open .exp-inner::before {
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--disagree-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
+}
+
+/* Green tint (agree) — fade in */
+.node-row.row-green + .level-expander.is-open .exp-inner::before {
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--agree-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
+}
+
+/* Light theme uses --dark-rgb variants; opacity & reach override in tokens.css */
+[data-theme="light"] .node-row.row-red + .level-expander.is-open .exp-inner::before {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--disagree-dark-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
+}
+
+[data-theme="light"] .node-row.row-green + .level-expander.is-open .exp-inner::before {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--agree-dark-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
 }
 
 /* Sibling-column spacer: inserted in parallel stack-groups to keep columns

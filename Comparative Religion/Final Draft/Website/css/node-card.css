@@ -34,8 +34,17 @@
   background: linear-gradient(180deg, var(--n-top), var(--n-bottom));
   color: #081023;
   box-shadow: var(--shadow);
+  /* overflow: hidden clips child content to the border-radius (rounded corners).
+     It does NOT clip this element's own box-shadow — per CSS spec, box-shadow is
+     drawn in the decoration layer outside the border-box and is unaffected by the
+     element's own overflow. Agreement glows (set by agreement.css) are therefore
+     always visible as long as no ANCESTOR has overflow: hidden. The map container
+     and its intermediate wrappers (.map-flow, .level-group, .node-row) intentionally
+     have no overflow restriction so glows at page edges are never clipped. */
   overflow: hidden;
-  transition: transform 0.1s ease, box-shadow 0.15s ease;
+  transition: transform 0.1s ease,
+              box-shadow var(--tint-transition-duration) ease,
+              border-color var(--tint-transition-duration) ease;
   min-height: var(--node-min-h);
   height: 100%;
   display: flex;

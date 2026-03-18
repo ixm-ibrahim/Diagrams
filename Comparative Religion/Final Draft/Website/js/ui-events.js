@@ -1,18 +1,16 @@
+/* === ui-events.js — Event Binding === */
 /**
- * =============================================================================
- * ui-events.js — Event Binding
- * =============================================================================
- * Single module for all event listeners. Uses event delegation where possible
- * to minimize listener count.
+ * Single module for all event listeners. Uses event delegation where possible.
  *
- * Dependencies: state.js (AppState), navigation.js (NavigationController),
- *               ui-expander.js (toggleExpander)
- * Consumers: main.js (calls init once during bootstrap)
- * =============================================================================
+ * Dependencies: state.js, navigation.js, ui-expander.js, ui-search.js,
+ *               ui-export.js, ui-agreement.js
+ * Consumers:    main.js (calls init once during bootstrap)
  */
 
 import { AppState } from './state.js';
+import { DataStore } from './data-store.js';
 import { NavigationController } from './navigation.js';
+import { SCROLL_TO_NODE_DELAY_MS } from './constants.js';
 import { toggleExpander } from './ui-expander.js';
 import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
 import { exportNodes } from './ui-export.js';
@@ -50,9 +48,6 @@ export function init() {
   bindExportButton();
 }
 
-/* ---------------------------------------------------------------------------
- * Theme toggle
- * --------------------------------------------------------------------------- */
 function bindThemeToggle() {
   if (!els.themeToggle) return;
 
@@ -75,9 +70,6 @@ function bindThemeToggle() {
   els.themeToggle.addEventListener('click', () => AppState.toggleTheme());
 }
 
-/* ---------------------------------------------------------------------------
- * Header collapse toggles (desktop chevron + mobile hamburger)
- * --------------------------------------------------------------------------- */
 function bindHeaderToggles() {
   // Mobile hamburger menu
   els.headerToggle?.addEventListener('click', () => {
@@ -96,13 +88,7 @@ function bindHeaderToggles() {
   });
 }
 
-/* ---------------------------------------------------------------------------
- * Delegated map container click handler
- *
- * Single listener on #mapContainer handles all interactive elements.
- * Priority order: trigger-derive → search-result-header → node-header
- *                 → logic-header → mini-trigger
- * --------------------------------------------------------------------------- */
+/** Delegated click handler on #mapContainer for all interactive elements. */
 function bindMapClicks() {
   els.container?.addEventListener('click', (e) => {
     // Vote buttons: compact icon buttons on non-terminal cards (.btn-vote)
@@ -110,6 +96,8 @@ function bindMapClicks() {
     const voteBtn = e.target.closest('.btn-vote, .btn-action[data-vote]');
     if (voteBtn) {
       e.stopPropagation(); // prevent bubbling to node-header
+      // Guard: ignore vote clicks during page transitions (half-rendered state)
+      if (AppState.isTransitioning) return;
       const nodeId    = voteBtn.dataset.nodeId;
       const vote      = voteBtn.dataset.vote;   // 'agree' or 'disagree'
       const isPressed = voteBtn.getAttribute('aria-pressed') === 'true';
@@ -138,6 +126,11 @@ function bindMapClicks() {
       const targetId = deriveBtn.dataset.target === 'null'
         ? null
         : deriveBtn.dataset.target;
+      // Guard: if target node doesn't exist in the data, log and bail
+      if (targetId != null && !DataStore.map.has(targetId)) {
+        console.warn(`[derive] Target node "${targetId}" not found in DataStore. Ignoring click.`);
+        return;
+      }
       const direction = deriveBtn.dataset.direction || null;
       NavigationController.navigate(targetId, direction);
       return;
@@ -155,6 +148,8 @@ function bindMapClicks() {
     // Node card header: toggle expander
     const nodeHeader = e.target.closest('.node-header');
     if (nodeHeader) {
+      // Guard: ignore expander clicks during page transitions (view is half-rendered)
+      if (AppState.isTransitioning) return;
       const card = nodeHeader.closest('.node-card');
       if (card) toggleExpander(card.dataset.id);
       return;
@@ -179,9 +174,6 @@ function bindMapClicks() {
   });
 }
 
-/* ---------------------------------------------------------------------------
- * Escape key: closes active expander
- * --------------------------------------------------------------------------- */
 function bindEscapeKey() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && AppState.activeNodeId !== null) {
@@ -190,18 +182,12 @@ function bindEscapeKey() {
   });
 }
 
-/* ---------------------------------------------------------------------------
- * Search input (debounced)
- * --------------------------------------------------------------------------- */
 function bindSearchInput() {
   els.searchInput?.addEventListener('input', (e) => {
     debouncedSearch(e.target.value);
   });
 }
 
-/* ---------------------------------------------------------------------------
- * Search filter dropdown toggle + click-outside-to-close
- * --------------------------------------------------------------------------- */
 function bindSearchFilter() {
   // Button toggles dropdown open/closed
   els.searchFilterBtn?.addEventListener('click', (e) => {
@@ -222,13 +208,7 @@ function bindSearchFilter() {
   });
 }
 
-/* ---------------------------------------------------------------------------
- * Search config checkboxes
- *
- * Global ↔ Nested are mutually exclusive (checking one unchecks the other).
- * Node Contents is independent.
- * Every change syncs to AppState.searchConfig immediately.
- * --------------------------------------------------------------------------- */
+/** Global ↔ Nested are mutually exclusive; Node Contents is independent. */
 function bindSearchCheckboxes() {
   /** Reads all three checkboxes and pushes their state into AppState. */
   const syncConfig = () => {
@@ -258,16 +238,10 @@ function bindSearchCheckboxes() {
   });
 }
 
-/* ---------------------------------------------------------------------------
- * Export button
- * --------------------------------------------------------------------------- */
 function bindExportButton() {
   els.exportBtn?.addEventListener('click', () => exportNodes());
 }
 
-/* ---------------------------------------------------------------------------
- * Breadcrumb click delegation (outside the map container)
- * --------------------------------------------------------------------------- */
 function bindBreadcrumbClicks() {
   document.addEventListener('click', (e) => {
     const crumb = e.target.closest('.crumb-link');
@@ -294,7 +268,7 @@ function bindBreadcrumbClicks() {
       } else {
         // Navigate, then scroll after the transition settles
         NavigationController.navigate(targetPage);
-        setTimeout(() => scrollToNode(nodeId), 600);
+        setTimeout(() => scrollToNode(nodeId), SCROLL_TO_NODE_DELAY_MS);
       }
     }
   });
