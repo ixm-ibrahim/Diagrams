@@ -7,7 +7,8 @@
  *
  * Dependencies: data-store.js (DataStore), state.js (AppState),
  *               templates.js (expander, tabContent),
- *               constants.js (ANIMATION_SPEEDS)
+ *               constants.js (ANIMATION_SPEEDS),
+ *               ui-agreement.js (applyVoteStates — restores vote states in expander)
  * Consumers: ui-events.js (calls toggleExpander on click)
  * =============================================================================
  */
@@ -17,6 +18,7 @@ import { AppState } from './state.js';
 import { expander as expanderTemplate, tabContent } from './templates.js';
 import { ANIMATION_SPEEDS } from './constants.js';
 import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
+import { applyVoteStates } from './ui-agreement.js';
 
 /**
  * Toggles the expander for the given node ID.
@@ -264,7 +266,9 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
 
   expander.innerHTML = expanderTemplate(nodeData);
   bindTabEvents(expander, nodeData);
-  bindActionEvents(expander);
+
+  // Restore persisted vote states on the freshly rendered expander buttons
+  applyVoteStates(expander);
 
   // Highlight search matches inside the expander content when in search mode
   const searchQuery = getActiveSearchQuery();
@@ -406,25 +410,6 @@ function renderTabPanel(nodeData, key) {
   if (searchQuery) highlightMatches(panel, searchQuery);
 }
 
-/* ---------------------------------------------------------------------------
- * Action events (agree/disagree toggles)
- * --------------------------------------------------------------------------- */
-
-function bindActionEvents(expander) {
-  const agreeBtn = expander.querySelector('.btn-agree');
-  const disagreeBtn = expander.querySelector('.btn-disagree');
-
-  if (agreeBtn && disagreeBtn) {
-    agreeBtn.addEventListener('click', () => {
-      agreeBtn.setAttribute('aria-pressed', 'true');
-      disagreeBtn.setAttribute('aria-pressed', 'false');
-    });
-    disagreeBtn.addEventListener('click', () => {
-      disagreeBtn.setAttribute('aria-pressed', 'true');
-      agreeBtn.setAttribute('aria-pressed', 'false');
-    });
-  }
-}
 
 /* ---------------------------------------------------------------------------
  * Scroll into view

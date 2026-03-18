@@ -304,6 +304,28 @@
   font-weight: 700;
 }
 
+/* Agree/disagree hover states */
+.btn-action.btn-agree:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #16a34a;
+}
+.btn-action.btn-disagree:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #dc2626;
+}
+[data-theme="light"] .btn-action.btn-agree:hover {
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(22, 163, 74, 0.4);
+  color: #15803d;
+}
+[data-theme="light"] .btn-action.btn-disagree:hover {
+  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(220, 38, 38, 0.4);
+  color: #b91c1c;
+}
+
 /* Agree/disagree pressed states */
 .btn-action.btn-agree[aria-pressed="true"] {
   background: #22c55e; border-color: #22c55e; color: #042f14; font-weight: 700;

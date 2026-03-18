@@ -55,6 +55,22 @@ export function nodeRow(node) {
         </div>
       </div>
       <p class="node-so-what">${node.soWhat}</p>
+      <div class="node-vote-buttons" data-node-id="${node.id}">
+        <button class="btn-vote btn-vote-agree" type="button" aria-pressed="false"
+          aria-label="I agree with ${node.id}" data-vote="agree" data-node-id="${node.id}">
+          <svg class="btn-vote__icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+            <path d="M2 10.5a1.5 1.5 0 1 1 3 0v6a1.5 1.5 0 0 1-3 0v-6ZM6 10.333v5.43a2 2 0 0 0 1.106 1.79l.05.025A4 4 0 0 0 8.943 18h5.416a2 2 0 0 0 1.962-1.608l1.2-6A2 2 0 0 0 15.559 8H12V4a2 2 0 0 0-2-2 1 1 0 0 0-1 1v.667a4 4 0 0 1-.8 2.4L6.8 7.933a4 4 0 0 0-.8 2.4Z"/>
+          </svg>
+          <span class="btn-vote__label">I agree</span>
+        </button>
+        <button class="btn-vote btn-vote-disagree" type="button" aria-pressed="false"
+          aria-label="I disagree with ${node.id}" data-vote="disagree" data-node-id="${node.id}">
+          <svg class="btn-vote__icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+            <path d="M18 9.5a1.5 1.5 0 1 1-3 0v-6a1.5 1.5 0 0 1 3 0v6ZM14 9.667V4.236a2 2 0 0 0-1.106-1.789l-.05-.025A4 4 0 0 0 11.057 2H5.641a2 2 0 0 0-1.962 1.608l-1.2 6A2 2 0 0 0 4.441 12H8v4a2 2 0 0 0 2 2 1 1 0 0 0 1-1v-.667a4 4 0 0 1 .8-2.4l1.4-1.867a4 4 0 0 0 .8-2.4Z"/>
+          </svg>
+          <span class="btn-vote__label">I disagree</span>
+        </button>
+      </div>
     </article>
     ${derivationHtml}
   `;
@@ -79,8 +95,10 @@ export function expander(node) {
       type="button" data-target="${node.id}">Disagree? See how this is derived <span class="action-arrow">→</span></button>`;
   } else {
     actionHtml = `
-      <button class="btn-action btn-agree" type="button" aria-pressed="true">I agree</button>
-      <button class="btn-action btn-disagree" type="button" aria-pressed="false">I disagree</button>
+      <button class="btn-action btn-agree" type="button" aria-pressed="false"
+        data-vote="agree" data-node-id="${node.id}">I agree</button>
+      <button class="btn-action btn-disagree" type="button" aria-pressed="false"
+        data-vote="disagree" data-node-id="${node.id}">I disagree</button>
     `;
   }
   const actionSlotHtml = `<div class="panel-action-slot">${actionHtml}</div>`;

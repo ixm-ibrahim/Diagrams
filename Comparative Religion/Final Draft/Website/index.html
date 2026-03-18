@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/mini-nodes.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/search-results.css" />
+  <link rel="stylesheet" href="css/agreement.css" />
 
   <!-- JS: ES modules loaded via main.js entry point -->
   <script type="module" src="js/main.js"></script>
@@ -106,6 +107,26 @@
           </div>
         </div>
       </div>
+
+      <section class="vote-summary" id="voteSummary" hidden>
+        <button class="vote-summary__toggle" id="voteSummaryToggle" type="button"
+                aria-expanded="false" aria-controls="voteSummaryBody">
+          <span class="vote-summary__title">Your Positions:</span>
+          <span class="vote-summary__count" id="voteSummaryCount">0</span>
+          <span class="vote-summary__chevron" aria-hidden="true"></span>
+        </button>
+        <div class="vote-summary__body" id="voteSummaryBody">
+          <ul class="vote-summary__list" id="voteSummaryList"></ul>
+          <div class="vote-summary__actions">
+            <button class="vote-summary__reset" id="voteSummaryReset" type="button">Reset All</button>
+          </div>
+          <div class="vote-summary__confirm" id="voteSummaryConfirm" hidden>
+            <span>Clear all positions?</span>
+            <button class="vote-summary__confirm-yes" id="voteSummaryConfirmYes" type="button">Yes, reset</button>
+            <button class="vote-summary__confirm-no" id="voteSummaryConfirmNo" type="button">Cancel</button>
+          </div>
+        </div>
+      </section>
     </header>
 
     <main class="map-container" id="mapContainer" role="main"></main>

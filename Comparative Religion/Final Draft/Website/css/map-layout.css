@@ -22,8 +22,10 @@
    ----------------------------------------------------------------------------- */
 .map-container {
   position: relative;
-  overflow-x: hidden;
   min-height: 60vh;
+  /* overflow-x is NOT set here — the JS transition code applies overflow:hidden
+     temporarily during page animations. Permanent clipping would cut off
+     derivation buttons and glow effects near the right edge. */
 }
 
 

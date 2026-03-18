@@ -16,6 +16,7 @@ import { NavigationController } from './navigation.js';
 import { toggleExpander } from './ui-expander.js';
 import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
 import { exportNodes } from './ui-export.js';
+import { setVote, applyVoteStates } from './ui-agreement.js';
 
 /** Cached DOM elements. Populated by init(). */
 const els = {};
@@ -104,6 +105,33 @@ function bindHeaderToggles() {
  * --------------------------------------------------------------------------- */
 function bindMapClicks() {
   els.container?.addEventListener('click', (e) => {
+    // Vote buttons: compact icon buttons on non-terminal cards (.btn-vote)
+    // and full-sized buttons in terminal node expanders (.btn-action[data-vote])
+    const voteBtn = e.target.closest('.btn-vote, .btn-action[data-vote]');
+    if (voteBtn) {
+      e.stopPropagation(); // prevent bubbling to node-header
+      const nodeId    = voteBtn.dataset.nodeId;
+      const vote      = voteBtn.dataset.vote;   // 'agree' or 'disagree'
+      const isPressed = voteBtn.getAttribute('aria-pressed') === 'true';
+      const isAuto    = voteBtn.classList.contains('is-auto');
+
+      if (isPressed && !isAuto) {
+        // Explicitly selected → toggle off (remove the explicit vote;
+        // node may revert to auto-selected from propagation)
+        setVote(nodeId, null);
+      } else {
+        // Not selected, or auto-selected from propagation →
+        // create / upgrade to an explicit vote
+        setVote(nodeId, vote);
+      }
+
+      // Recompute propagation already ran inside setVote();
+      // now sync every visible button on the page at once
+      applyVoteStates(els.container);
+
+      return;
+    }
+
     // Navigation: derive buttons, sibling nav, badge pills
     const deriveBtn = e.target.closest('.trigger-derive');
     if (deriveBtn) {
@@ -248,7 +276,43 @@ function bindBreadcrumbClicks() {
       NavigationController.navigate(
         crumb.dataset.target === 'null' ? null : crumb.dataset.target
       );
+      return;
+    }
+
+    // Vote summary panel links: navigate to the node's page, then scroll
+    // to the specific node. If already on that page, just scroll.
+    const voteLink = e.target.closest('.vote-link');
+    if (voteLink) {
+      e.preventDefault();
+      const targetPage = voteLink.dataset.target === 'null' ? null : voteLink.dataset.target;
+      const nodeId     = voteLink.dataset.nodeId;
+      const alreadyOnPage = AppState.currentParentId === targetPage;
+
+      if (alreadyOnPage) {
+        // Just scroll to the node
+        scrollToNode(nodeId);
+      } else {
+        // Navigate, then scroll after the transition settles
+        NavigationController.navigate(targetPage);
+        setTimeout(() => scrollToNode(nodeId), 600);
+      }
     }
   });
+}
+
+/** Scroll a node card into view by its ID. */
+function scrollToNode(nodeId) {
+  const card = document.querySelector(`.node-card[data-id="${nodeId}"]`);
+  if (!card) return;
+  const headerHeight = document.getElementById('pageHeader')?.offsetHeight ?? 0;
+  const summaryHeight = document.getElementById('voteSummary')?.offsetHeight ?? 0;
+  const rect = card.getBoundingClientRect();
+  const offset = headerHeight + summaryHeight + 20;
+  if (rect.top < offset || rect.bottom > window.innerHeight) {
+    window.scrollTo({
+      top: window.scrollY + rect.top - offset,
+      behavior: 'smooth'
+    });
+  }
 }
 

@@ -11,7 +11,8 @@
  *               state.js (AppState),
  *               constants.js (ANIMATION_SPEEDS),
  *               sibling-nav.js (renderSiblingNavigation),
- *               svg-engine.js (draw — currently a no-op, connectors removed)
+ *               svg-engine.js (draw),
+ *               ui-agreement.js (applyVoteStates — restores glows after render)
  * Consumers: navigation.js (renderMapWithTransition),
  *            main.js (init)
  * =============================================================================
@@ -25,6 +26,7 @@ import { ANIMATION_SPEEDS, STACK_THRESHOLD, DEEP_NODE_MIN_WIDTH } from './consta
 import { renderSiblingNavigation } from './sibling-nav.js';
 import { draw as drawSVG } from './svg-engine.js';
 import { updateStackedGroups } from './ui-layout.js';
+import { applyVoteStates } from './ui-agreement.js';
 
 /** Cached container element. Set by init(). */
 let container = null;
@@ -753,14 +755,24 @@ export function renderMapWithTransition(direction) {
   container.style.pointerEvents = 'none';
   AppState.isTransitioning = true;
 
-  // Lock container height to prevent layout jump during transition
-  container.style.minHeight = `${container.offsetHeight}px`;
-  container.style.overflow = 'hidden';
+  // Lock container height to prevent layout jump during transition.
+  // Skip on initial render (no old views) to avoid a brief overflow clip
+  // that cuts off derivation buttons and glow effects.
+  const hasOldViews = oldViews.length > 0;
+  if (hasOldViews) {
+    container.style.minHeight = `${container.offsetHeight}px`;
+    // Clip old views individually instead of the whole container,
+    // so derivation buttons and glow effects on the new view aren't cut off.
+    oldViews.forEach(v => { v.style.overflow = 'hidden'; });
+  }
 
   // Phase 1: Build new view
   const newView = buildView();
   renderSiblingNavigation(newView);
   container.appendChild(newView);
+
+  // Restore persisted vote button states on the freshly rendered nodes
+  applyVoteStates(newView);
 
   // Phase 2: Draw SVG connectors (needs layout to settle)
   const visibleNodes = DataStore.nodes.filter(
@@ -788,7 +800,6 @@ export function renderMapWithTransition(direction) {
     newView.classList.remove(...Object.values(ENTER_CLASS));
     container.style.pointerEvents = '';
     container.style.minHeight = '';
-    container.style.overflow = '';
 
     // Final SVG redraw after layout is fully settled
     setTimeout(() => {

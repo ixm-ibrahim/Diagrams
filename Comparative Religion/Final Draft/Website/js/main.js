@@ -26,6 +26,7 @@ import * as UIEvents from './ui-events.js';
 import { NavigationController } from './navigation.js';
 import { initResizeObserver } from './svg-engine.js';
 import { updateStackedGroups } from './ui-layout.js';
+import * as Agreement from './ui-agreement.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
@@ -37,6 +38,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 2. Apply persisted theme (sets data-theme on <html>)
     AppState.applyTheme();
+
+    // 2b. Load persisted agreement votes from localStorage
+    Agreement.init();
 
     // 3–5. Initialize UI modules (each caches its own DOM refs)
     UIHeader.init();
@@ -67,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `Bootstrap complete: ${DataStore.nodes.length} nodes, ` +
       `theme="${AppState.theme}"`
     );
-    window.__debug = { DataStore, AppState, NavigationController };
+    window.__debug = { DataStore, AppState, NavigationController, Agreement };
 
   } catch (error) {
     console.error('Failed to load page data:', error);
