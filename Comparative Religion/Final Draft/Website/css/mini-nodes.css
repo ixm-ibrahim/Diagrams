@@ -149,3 +149,14 @@
   background: rgba(255, 255, 255, 0.01);
   box-shadow: none;
 }
+
+
+/* Keyboard focus indicator
+   ----------------------------------------------------------------------------- */
+
+/* Mini-trigger is full-width — use inset ring so .mini-node's overflow:hidden
+   won't clip an outward outline at the rounded corners.                        */
+.mini-trigger:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--focus-ring);
+}

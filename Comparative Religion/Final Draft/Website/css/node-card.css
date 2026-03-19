@@ -42,7 +42,7 @@
      and its intermediate wrappers (.map-flow, .level-group, .node-row) intentionally
      have no overflow restriction so glows at page edges are never clipped. */
   overflow: hidden;
-  transition: transform 0.1s ease,
+  transition: transform var(--transition-fast) ease,
               box-shadow var(--tint-transition-duration) ease,
               border-color var(--tint-transition-duration) ease;
   min-height: var(--node-min-h);
@@ -163,13 +163,15 @@
 
 button.node-badge {
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  transition: background var(--transition-base) ease, transform var(--transition-fast) ease, box-shadow var(--transition-base) ease;
 }
 
 button.node-badge:hover {
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
+  text-decoration: underline;
+  color: var(--focus-ring);
 }
 
 button.node-badge:active {
@@ -196,7 +198,7 @@ button.node-badge:active {
   font-size: var(--btn-font-size);
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  transition: background var(--transition-base) ease, transform var(--transition-fast) ease, box-shadow var(--transition-base) ease;
 }
 
 .btn-ui:hover {
@@ -217,23 +219,50 @@ button.node-badge:active {
 /* Container queries: responsive card internals
    ----------------------------------------------------------------------------- */
 
-/* ≤300px: hide so-what, loosen header wrap, switch title to inline */
-@container node-col (max-width: 300px) {
-  .node-so-what { display: none; }
-  .node-header { flex-wrap: wrap; border-bottom: none; }
+/* ≤300px: collapse so-what text (keep the element so the header border-bottom
+   dividing line stays visible), loosen header wrap, switch title to inline.
+   Vote buttons slide up into the space the paragraph vacated.                */
+@container node-col (max-width: 400px) {
+  .node-so-what {
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .node-header { flex-wrap: wrap; }
   .node-title { display: block; min-width: 120px; flex: 1; }
   .node-title .id { margin-right: 4px; }
   .node-controls { flex-shrink: 1; flex-wrap: wrap; }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .node-card { min-height: auto; z-index: 2; }
 }
 
 /* ≤200px: controls wrap to full-width row */
-@container node-col (max-width: 200px) {
+@container node-col (max-width: 325px) {
   .node-controls {
     width: 100%;
     margin-top: 4px;
   }
+}
+
+
+/* Keyboard focus indicators
+   ----------------------------------------------------------------------------- */
+
+/* Node header: full-width within the card — use inset ring so the card's
+   overflow:hidden does not clip an outward outline at the rounded edges.      */
+.node-header:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--focus-ring);
+}
+
+/* Expand button, parent badge — standard outward ring (small, discrete).
+   outline-offset:2px keeps the ring clear of the button's own border.         */
+.btn-ui:focus-visible,
+button.node-badge:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }

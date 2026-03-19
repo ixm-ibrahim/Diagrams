@@ -4,9 +4,10 @@
  * terminal return curves, and parallel column spines.
  *
  * Dependencies: svg-geometry.js
- * Consumers:    svg-engine.js, svg-stacked.js
+ * Consumers:    svg-engine.js, svg-stacked.js, svg-partial.js
  */
 
+import { SVG_OVERLAP, MIN_ROW_GAP } from './constants.js';
 import {
   STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS,
   getTransitionMetrics, getBranchRadius
@@ -33,15 +34,14 @@ function drawBranchPath(startId, endId, positions) {
 
   const dirX = end.x > start.x ? 1 : -1;
   const y = metrics.joinY;
-  const OVERLAP = 2;
 
   return [
-    `M ${start.x} ${y - r - OVERLAP}`,
+    `M ${start.x} ${y - r - SVG_OVERLAP}`,
     `L ${start.x} ${y - r}`,
     `Q ${start.x} ${y} ${start.x + dirX * r} ${y}`,
     `L ${end.x - dirX * r} ${y}`,
     `Q ${end.x} ${y} ${end.x} ${y + r}`,
-    `L ${end.x} ${y + r + OVERLAP}`,
+    `L ${end.x} ${y + r + SVG_OVERLAP}`,
   ].join(' ') + ' ';
 }
 
@@ -140,14 +140,14 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
   const firstTerminalRowIdx = Math.min(
     ...terminalOffSpine.map(n => nodeToRowIdx.get(n.id)).filter(i => i !== undefined)
   );
-  let standardGap = 20;
+  let standardGap = MIN_ROW_GAP;
   if (firstTerminalRowIdx > 0 && visualRows[firstTerminalRowIdx]) {
     const sampleIds = visualRows[firstTerminalRowIdx].nodeIds;
     if (sampleIds.length > 0) {
       const samplePos = positions.get(sampleIds[0]);
       if (samplePos) {
         const rawGap = samplePos.cardTop - visualRows[firstTerminalRowIdx - 1].bottom;
-        standardGap = Math.max(rawGap, 20);
+        standardGap = Math.max(rawGap, MIN_ROW_GAP);
       }
     }
   }

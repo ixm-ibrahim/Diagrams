@@ -20,6 +20,7 @@
 
 import { DataStore, loadMapData } from './data-store.js';
 import { AppState } from './state.js';
+import { VOTE_EXPAND_THRESHOLD } from './constants.js';
 import * as UIHeader from './ui-header.js';
 import * as UIRender from './ui-render.js';
 import * as UIEvents from './ui-events.js';
@@ -30,6 +31,18 @@ import * as Agreement from './ui-agreement.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
+    // 0. Compute viewport-relative page width cap from monitor resolution.
+    //    screen.width gives the monitor width in CSS pixels.
+    //    --app-width-ratio (0.65) is the fraction of the screen to use.
+    //    --app-max-width CSS fallback (1120px) acts as a floor so the cap
+    //    never goes below a usable size on small monitors — small screens
+    //    fill 100%, large screens get the ratio-based cap with side margins.
+    const cs = getComputedStyle(document.documentElement);
+    const ratio = parseFloat(cs.getPropertyValue('--app-width-ratio')) || 0.65;
+    const floor = parseInt(cs.getPropertyValue('--app-max-width'), 10) || 1120;
+    const cap = Math.max(Math.round(screen.width * ratio), floor);
+    document.documentElement.style.setProperty('--app-max-width', `${cap}px`);
+
     const mapName =
       new URLSearchParams(window.location.search).get('map') || 'data';
 
@@ -64,6 +77,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!viewEl) return;
         updateStackedGroups(viewEl, mapContainer.offsetWidth);
       }).observe(mapContainer);
+    }
+
+    // 9. Toggle .vote-expanded on node cards when they cross the width
+    //    threshold. Uses ResizeObserver + class toggle (not @container query)
+    //    so CSS transitions fire in both expand and collapse directions.
+    if (mapContainer) {
+      const voteObserver = new ResizeObserver(entries => {
+        for (const entry of entries) {
+          const card = entry.target;
+          const narrow = entry.contentBoxSize?.[0]?.inlineSize < VOTE_EXPAND_THRESHOLD
+                      ?? entry.contentRect.width < VOTE_EXPAND_THRESHOLD;
+          card.classList.toggle('vote-expanded', narrow);
+        }
+      });
+      // Observe all current cards and any new ones added after navigation.
+      const observeCards = () => {
+        mapContainer.querySelectorAll('.node-card').forEach(card => {
+          if (!card.dataset.voteObserved) {
+            card.dataset.voteObserved = '1';
+            voteObserver.observe(card);
+          }
+        });
+      };
+      observeCards();
+      // Re-observe after page transitions (new cards enter the DOM).
+      new MutationObserver(observeCards).observe(mapContainer, { childList: true, subtree: true });
     }
 
     // Dev convenience

@@ -8,6 +8,7 @@
  * Consumers: ui-agreement.js (initSummaryPanel)
  * ============================================================ */
 
+import { SNIPPET_MAX_LENGTH, SNIPPET_TRUNCATE_AT } from './constants.js';
 import { DataStore } from './data-store.js';
 
 /** Cached summary panel DOM refs. Populated by initSummaryPanel(). */
@@ -164,7 +165,7 @@ export function renderSummaryPanel(votes) {
   sp.list.innerHTML = voteEntries.map(([nodeId, vote]) => {
     const node = DataStore.map.get(nodeId);
     const claim = node?.claim ?? '';
-    const snippet = claim.length > 60 ? claim.slice(0, 57) + '...' : claim;
+    const snippet = claim.length > SNIPPET_MAX_LENGTH ? claim.slice(0, SNIPPET_TRUNCATE_AT) + '...' : claim;
     const iconClass = vote === 'disagree' ? 'is-disagree' : 'is-agree';
     const parentId = node?.parentId ?? 'null';
     return `<li class="vote-summary__item vote-link" data-node-id="${nodeId}"

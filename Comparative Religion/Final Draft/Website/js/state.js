@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-import { THEME_TRANSITION_MS } from './constants.js';
+import { THEME_TRANSITION_MS, TINT_SATURATION, TINT_LIGHTNESS, TINT_ALPHA } from './constants.js';
 
 export const AppState = {
   theme: localStorage.getItem('theme') || 'dark',
@@ -75,7 +75,7 @@ export const AppState = {
    *
    * Examples:
    *   AppState.updateTints({ page: 'transparent', expander: 'transparent' });
-   *   AppState.updateTints({ expander: `hsla(${hue}, 80%, 50%, 0.35)` });
+   *   AppState.updateTints({ expander: `hsla(${hue}, ${TINT_SATURATION}%, ${TINT_LIGHTNESS}%, ${TINT_ALPHA})` });
    * ------------------------------------------------------------------ */
   updateTints({ page, expander } = {}) {
     const style = document.body.style;

@@ -24,12 +24,12 @@
   padding-left: var(--expander-pad);
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.3s, transform 0.3s, margin-top 0.3s;
+  transition: grid-template-rows var(--transition-expander) cubic-bezier(0.4, 0, 0.2, 1),
+              opacity var(--transition-expander), transform var(--transition-expander), margin-top var(--transition-expander);
   opacity: 0;
   transform: translateY(-6px);
   margin-top: 0;
-  z-index: 10;
+  z-index: var(--z-expander);
 }
 
 .level-expander.is-open {
@@ -40,7 +40,7 @@
   margin-bottom: 8px;
   pointer-events: auto;
   position: relative;
-  z-index: 20;
+  z-index: var(--z-expander-open);
 }
 
 .exp-inner {
@@ -123,7 +123,7 @@
 .expander-spacer {
   flex: 0 0 auto;
   height: 0;
-  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: height var(--transition-expander) cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   pointer-events: none;
 }
@@ -187,7 +187,7 @@
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
-  transition: transform 0.2s, opacity 0.15s;
+  transition: transform var(--transition-medium), opacity var(--transition-base);
   opacity: 0.6;
 }
 
@@ -287,7 +287,7 @@
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
+  transition: background var(--transition-base) ease, transform var(--transition-fast) ease;
 }
 
 .btn-tab:hover {
@@ -323,8 +323,8 @@
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
-  transition: background 0.15s ease, border-color 0.15s ease,
-              color 0.15s ease, transform 0.1s ease;
+  transition: background var(--transition-base) ease, border-color var(--transition-base) ease,
+              color var(--transition-base) ease, transform var(--transition-fast) ease;
 }
 
 .btn-action:hover {
@@ -400,7 +400,7 @@
 /* Disagree arrow: shifts right on hover (same behavior as derive button) */
 .action-arrow {
   display: inline-block;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition: transform var(--transition-base) ease, opacity var(--transition-base) ease;
 }
 .btn-derivation-disagree:hover .action-arrow {
   transform: translateX(3px);
@@ -463,4 +463,23 @@
   border-radius: 50%;
   background: var(--text-muted);
   transform: translateY(-50%);
+}
+
+
+/* Keyboard focus indicators
+   ----------------------------------------------------------------------------- */
+
+/* Logic section header: full-width within the panel — use inset ring so the
+   expander's overflow:hidden doesn't clip an outward outline at the edges.    */
+.logic-header:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--focus-ring);
+  border-radius: 4px;
+}
+
+/* Tab buttons and action buttons inside the expander panel */
+.btn-tab:focus-visible,
+.btn-action:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }

@@ -6,11 +6,25 @@
  * Each function takes data and returns an HTML string.
  *
  * Dependencies: data-store.js (DataStore.map for parent lookups)
- * Consumers: ui-render.js (nodeRow), ui-expander.js (expander, tabContent)
+ * Consumers: ui-render.js (nodeRow), ui-expander.js (expander),
+ *            ui-expander-content.js (tabContent), ui-search.js (nodeRow)
  * =============================================================================
  */
 
 import { DataStore } from './data-store.js';
+
+/* ---------------------------------------------------------------------------
+ * Helpers
+ * --------------------------------------------------------------------------- */
+
+/** Escape a string for safe use inside an HTML attribute (title, aria-label). */
+function escapeAttr(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
 
 /* ---------------------------------------------------------------------------
  * Node row (card + marker + derive button)
@@ -26,7 +40,8 @@ export function nodeRow(node) {
 
   const badgeHtml = parentNode
     ? `<button class="node-badge trigger-derive" type="button" data-target="${badgeTarget}"
-         aria-label="Go to parent step ${parentNode.id}">
+         aria-label="Go to parent step ${parentNode.id}"
+         title="${parentNode.id}. ${escapeAttr(parentNode.claim)}">
          <span class="badge-dot"></span>${parentNode.id}</button>`
     : '';
 
@@ -47,7 +62,7 @@ export function nodeRow(node) {
       style="--n-border-dark: ${node.color.borderDark}; --n-border-light: ${node.color.borderLight};
              --n-top: ${node.color.top}; --n-bottom: ${node.color.bottom};
              --p-border-dark: ${pillColorDark}; --p-border-light: ${pillColorLight};">
-      <div class="node-header" role="button" aria-expanded="false">
+      <div class="node-header" role="button" tabindex="0" aria-expanded="false">
         <h2 class="node-title"><span class="id">${node.id}.</span><span class="claim-text">${node.claim}</span></h2>
         <div class="node-controls">
           ${badgeHtml}
@@ -140,7 +155,7 @@ function logicRow(label, items, step, isNumbered) {
 
   return `
     <div class="logic-section">
-      <div class="logic-header" data-step="${step}" aria-expanded="true" role="button">${label}</div>
+      <div class="logic-header" data-step="${step}" role="button" tabindex="0" aria-expanded="true">${label}</div>
       <div class="logic-content"><div class="logic-content-inner">${content}</div></div>
     </div>
   `;

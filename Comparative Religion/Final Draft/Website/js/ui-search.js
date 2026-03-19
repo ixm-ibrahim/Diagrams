@@ -12,7 +12,10 @@
  * Dependencies: constants.js (SEARCH_DEBOUNCE_MS),
  *               data-store.js (DataStore), state.js (AppState),
  *               templates.js (nodeRow)
- * Consumers: ui-events.js (calls debouncedSearch on input)
+ * Consumers: ui-events.js (calls debouncedSearch on input),
+ *            ui-expander.js (getActiveSearchQuery, highlightMatches),
+ *            ui-expander-content.js (getActiveSearchQuery, highlightMatches),
+ *            navigation.js (clearSearchResults)
  * =============================================================================
  */
 
@@ -261,7 +264,8 @@ export function highlightMatches(el, query) {
     }
   }
 
-  // Phase 2: wrap each match
+  // Phase 2: wrap each match (iterate backward to prevent index shifting —
+  // splitting a text node changes the offsets of all subsequent nodes)
   for (let i = nodesToSplit.length - 1; i >= 0; i--) {
     const { node, index, length } = nodesToSplit[i];
     const after = node.splitText(index + length);

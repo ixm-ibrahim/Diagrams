@@ -18,6 +18,40 @@ import { updateHeaderContext } from './ui-header.js';
 import { renderMapWithTransition } from './ui-render.js';
 import { clearSearchResults } from './ui-search.js';
 
+/* ---------------------------------------------------------------------------
+ * Module-level cache for node index lookups in getDirection()
+ * --------------------------------------------------------------------------- */
+
+let nodeIndexCache = null;
+let lastNodesLength = 0;
+
+/**
+ * Invalidates the cache if DataStore.nodes has changed.
+ * Uses array length as a cheap heuristic — if the node count changes,
+ * the cache is stale and must be rebuilt.
+ */
+function invalidateCacheIfNeeded() {
+  if (lastNodesLength !== DataStore.nodes.length) {
+    nodeIndexCache = null;
+    lastNodesLength = DataStore.nodes.length;
+  }
+}
+
+/**
+ * Builds the node index cache on first use.
+ * @returns {Map<string, number>} id → index
+ */
+function getNodeIndexCache() {
+  invalidateCacheIfNeeded();
+  if (nodeIndexCache === null) {
+    nodeIndexCache = new Map();
+    DataStore.nodes.forEach((n, idx) => {
+      nodeIndexCache.set(n.id, idx);
+    });
+  }
+  return nodeIndexCache;
+}
+
 export const NavigationController = {
   init() {
     window.addEventListener('popstate', (e) => {
@@ -61,8 +95,9 @@ export const NavigationController = {
 
     // Same-parent lateral
     if (fromNode && toNode && fromNode.parentId === toNode.parentId) {
-      const fromIndex = DataStore.nodes.findIndex(n => n.id === fromId);
-      const toIndex = DataStore.nodes.findIndex(n => n.id === toId);
+      const cache = getNodeIndexCache();
+      const fromIndex = cache.get(fromId) ?? -1;
+      const toIndex = cache.get(toId) ?? -1;
       return toIndex > fromIndex ? 'lateral-next' : 'lateral-prev';
     }
 

@@ -9,6 +9,7 @@
  * Consumers:    ui-render.js, main.js
  */
 
+import { NOMINAL_SPINE_WIDTH } from './constants.js';
 import { AppState } from './state.js';
 import { DataStore } from './data-store.js';
 import {
@@ -26,9 +27,16 @@ let redrawTimer = null;
  * Resize handling
  * --------------------------------------------------------------------------- */
 
+/**
+ * Debounces SVG redraws to the next frame. Multiple rapid calls (e.g. from
+ * resize events or expander animations) are batched into a single draw().
+ * No-ops while a page or stacking transition is in progress.
+ */
 export function scheduleRedraw() {
   if (AppState.isTransitioning || AppState.isStackTransitioning) return;
   if (redrawTimer) return;
+  // setTimeout(fn, 0) defers execution to the next macrotask, allowing the
+  // browser to coalesce multiple synchronous resize/mutation events into one redraw.
   redrawTimer = setTimeout(() => {
     redrawTimer = null;
     const viewEl = document.querySelector('.map-flow');
@@ -57,10 +65,24 @@ export function initResizeObserver() {
  * Main draw function
  * --------------------------------------------------------------------------- */
 
+/**
+ * Main SVG rendering entry point. Expects a rendered `.map-flow` element
+ * already in the DOM with laid-out node cards. Measures marker positions,
+ * computes connector geometry, and produces:
+ *   - A single `<svg class="dag-svg">` containing all edge paths
+ *   - `<div class="stacked-indent-spine">` elements for indent-level spines
+ *   - Snapped positioning for the main `.map-spine` trunk line
+ *
+ * @param {HTMLElement} viewEl - the `.map-flow` element containing node cards
+ * @param {Array<Object>} visibleNodes - node objects visible on the current page
+ */
 export function draw(viewEl, visibleNodes) {
   const timelineLayer = viewEl.querySelector('.timeline-layer');
   const renderTarget = timelineLayer || viewEl;
 
+  // Remove previous SVG and indent spines before redrawing. Old elements must
+  // be cleaned up first because each draw() rebuilds them from scratch based on
+  // current marker positions — stale elements would overlap or misalign.
   const oldSvg = renderTarget.querySelector('.dag-svg');
   const oldIndentSpines = renderTarget.querySelectorAll('.stacked-indent-spine');
 
@@ -93,8 +115,17 @@ export function draw(viewEl, visibleNodes) {
   const allPathData = [];
   const stackGroups = viewEl.querySelectorAll('.stack-group');
 
+  // --- Layout mode detection ---
+  // Three mutually exclusive layout modes determine how edges are drawn:
+  //   1. Fully stacked: every level-group has ≤1 direct node-row (all parallel
+  //      groups have been wrapped into stack-group columns). Process the entire
+  //      page as one unified stacked zone with indent spines.
+  //   2. Partially stacked: some level-groups contain stack-groups alongside
+  //      parallel nodes. Each stack-group zone is processed independently,
+  //      with cross-zone edges routed between stacked and non-stacked nodes.
+  //   3. Pure parallel: no stack-groups exist. Standard edge paths are drawn
+  //      between parallel node markers using branch/merge curves.
   if (stackGroups.length > 0) {
-    // Check if page is fully stacked
     const levelGroups = viewEl.querySelectorAll('.level-group:not([data-zone-absorbed])');
     let isFullyStacked = true;
     for (const lg of levelGroups) {
@@ -137,7 +168,7 @@ export function draw(viewEl, visibleNodes) {
     indentSpines.push(...buildColumnSpines(visibleNodes, positions, trunkX));
   }
 
-  // Device-pixel-perfect spine width: round the nominal 2 CSS-px to the
+  // Device-pixel-perfect spine width: round the nominal NOMINAL_SPINE_WIDTH CSS-px to the
   // nearest whole number of device pixels so every spine and SVG stroke
   // occupies an exact device-pixel count with zero anti-aliasing.
   //   DPR 0.9  → round(1.8)/0.9 = 2/0.9  ≈ 2.222px → exactly 2 device px
@@ -148,14 +179,16 @@ export function draw(viewEl, visibleNodes) {
   //   DPR 2.0  → round(4.0)/2.0 = 4/2.0  = 2.000px → exactly 4 device px
   // Setting --spine-width on :root propagates to .map-spine, .marker-arm,
   // .btn-derivation::before, .dag-edge stroke-width, and --spine-left calc.
-  const dpr = window.devicePixelRatio || 1;
-  const perfectWidth = Math.round(2 * dpr) / dpr;
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const perfectWidth = Math.round(NOMINAL_SPINE_WIDTH * devicePixelRatio) / devicePixelRatio;
   const halfW = perfectWidth / 2;
   document.documentElement.style.setProperty('--spine-width', `${perfectWidth}px`);
 
   // Render SVG paths — uses integer CSS coordinates (from collectMarkerPositions)
   // so curve control points stay clean and anti-alias consistently across DPRs.
-  const combinedPath = allPathData.join('').trim();
+  // Filter out any path segments containing NaN (from stale/missing positions during
+  // layout transitions) to avoid invalid SVG d-attribute errors in the console.
+  const combinedPath = allPathData.filter(p => p && !p.includes('NaN')).join('').trim();
   if (combinedPath) {
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     path.setAttribute('class', 'dag-edge');
@@ -166,7 +199,7 @@ export function draw(viewEl, visibleNodes) {
   // Snap .map-spine left position to device pixel grid.
   const mapSpineEl = viewEl.querySelector('.map-spine');
   if (mapSpineEl && trunkX !== null) {
-    mapSpineEl.style.left = `${Math.round((trunkX - halfW) * dpr) / dpr}px`;
+    mapSpineEl.style.left = `${Math.round((trunkX - halfW) * devicePixelRatio) / devicePixelRatio}px`;
   }
 
   // Build indent spine HTML elements
@@ -179,7 +212,7 @@ export function draw(viewEl, visibleNodes) {
       : 'var(--spine-color-solid)';
 
     // Snap left edge to device pixel grid for zero anti-aliasing.
-    const snappedLeft = Math.round((spineInfo.x - halfW) * dpr) / dpr;
+    const snappedLeft = Math.round((spineInfo.x - halfW) * devicePixelRatio) / devicePixelRatio;
 
     const spine = document.createElement('div');
     spine.className = 'stacked-indent-spine';

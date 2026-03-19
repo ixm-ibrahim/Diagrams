@@ -71,6 +71,9 @@
   --vote-btn-size: 29px;
   --vote-btn-font-size: 15px;
   --vote-label-max-width: 80px;
+  /* Expanded max-width: icon + label + padding + gap. Must be a numeric
+   * value (not auto) so CSS can transition between collapsed and expanded. */
+  --vote-btn-expanded-max: calc(var(--vote-btn-size) + var(--vote-label-max-width) + 16px);
 
   /* Glow intensity — master knob (0–1) for agreement glow effects.
    * Scales outer spread, core glow, inset, and border opacity.            */
@@ -87,6 +90,40 @@
 
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* Transition Durations — used across animations and transitions.
+   * These durations scale consistently across the application.             */
+  --transition-fast: 0.1s;
+  --transition-base: 0.15s;
+  --transition-medium: 0.2s;
+  --transition-slow: 0.25s;
+  --transition-expander: 0.3s;
+
+  /* Z-index Layers — stacking context for overlapping elements.
+   * Controls visual depth: timeline < groups < expanders < header/dropdown.*/
+  --z-timeline: 0;
+  --z-level-group: 2;
+  --z-expander: 10;
+  --z-expander-open: 20;
+  --z-header: 100;
+  --z-dropdown: 200;
+
+  /* Spacing Scale — consistent spacing throughout the application.
+   * Used for margins, padding, gaps, and alignment.                       */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+
+  /* Search Highlight Colors — for highlighting search results.            */
+  --highlight-color: rgba(255, 196, 0, 0.35);
+  --highlight-color-strong: rgba(255, 196, 0, 0.45);
+
+  /* Keyboard focus ring — shared :focus-visible indicator across all
+   * interactive components. Aliases --spine-glow-solid so it inherits
+   * automatic theme switching (bright blue in dark, deeper blue in light). */
+  --focus-ring: var(--spine-glow-solid);
 }
 
 [data-theme="light"] {
@@ -126,6 +163,10 @@
 
   --expander-tint-opacity: 0.25;
   --expander-tint-reach: 50%;
+
+  /* Search highlight colors for light theme — slightly adjusted for contrast */
+  --highlight-color: rgba(255, 196, 0, 0.25);
+  --highlight-color-strong: rgba(255, 196, 0, 0.35);
 }
 
 
@@ -150,7 +191,11 @@
   --node-min-h: 80px;
   --spine-width: 2px;
 
-  /* App shell */
+  /* App shell — page cap is a fixed pixel value computed from the monitor's
+   * screen resolution × --app-width-ratio (set by JS at init via screen.width).
+   * Below that cap the page fills 100% (no side margins).
+   * Fallback: 1120px if JS hasn't run yet.                                */
+  --app-width-ratio: 0.65;
   --app-max-width: 1120px;
   --app-min-width: 350px;
   --app-pad-top: 22px;
@@ -313,7 +358,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   :root {
     --marker-col: 18px;
     --node-col-gap: 0px;

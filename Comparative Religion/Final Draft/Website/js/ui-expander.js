@@ -12,7 +12,7 @@
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
 import { expander as expanderTemplate } from './templates.js';
-import { ANIMATION_SPEEDS, CSS_TRANSITION_MS, FOCUS_DIM_DELAY_RATIO, EXPANDER_SPACER_MARGIN_PX } from './constants.js';
+import { ANIMATION_SPEEDS, CSS_TRANSITION_MS, FOCUS_DIM_DELAY_RATIO, EXPANDER_SPACER_MARGIN_PX, TINT_SATURATION, TINT_LIGHTNESS, TINT_ALPHA } from './constants.js';
 import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
 import { applyVoteStates } from './ui-agreement.js';
 import { bindTabEvents, scrollToView } from './ui-expander-content.js';
@@ -84,12 +84,17 @@ export function forceCloseExpander() {
   if (AppState.activeNodeId === null) return;
 
   // Best-effort DOM cleanup — the elements may already be removed
-  document.querySelectorAll('.node-row.is-active').forEach(r => r.classList.remove('is-active'));
-  document.querySelectorAll('.level-expander.is-open').forEach(e => {
+  // Consolidate three separate querySelectorAll calls into one pass
+  const activeRows = document.querySelectorAll('.node-row.is-active');
+  const openExpanders = document.querySelectorAll('.level-expander.is-open');
+  const spacers = document.querySelectorAll('.expander-spacer');
+
+  activeRows.forEach(r => r.classList.remove('is-active'));
+  openExpanders.forEach(e => {
     e.classList.remove('is-open');
     e.innerHTML = '';
   });
-  document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
+  spacers.forEach(s => s.remove());
 
   AppState.activeNodeId = null;
   AppState.updateTints({ expander: 'transparent' });
@@ -176,7 +181,12 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
   if (animated) {
     // DOM moves after animation is complete — moving mid-animation kills it
     setTimeout(() => {
+      // Check BEFORE cleanup() clears expander.innerHTML whether focus
+      // was inside the panel so we can return it to the node header.
+      const shouldReturnFocus = expander.contains(document.activeElement);
       cleanup();
+      // Return focus to the node header if it was in the closing panel
+      if (shouldReturnFocus && headerBtn) headerBtn.focus();
       // Force SVG redraw after the expander DOM has settled — the
       // ResizeObserver may not fire a final event once the CSS animation
       // reaches 0fr, leaving the SVG connectors at stale positions.
@@ -306,6 +316,8 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     });
   }
 
+  // requestAnimationFrame defers to after the browser completes layout, ensuring
+  // the expander's initial 0fr state is rendered before triggering the 1fr animation.
   requestAnimationFrame(() => {
     expander.classList.add('is-open');
     headerBtn.setAttribute('aria-expanded', 'true');
@@ -364,7 +376,7 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     document.body.classList.add('is-focused');
     AppState.activeNodeId = id;
     AppState.updateTints({
-      expander: `hsla(${nodeData.hue}, 80%, 50%, 0.35)`
+      expander: `hsla(${nodeData.hue}, ${TINT_SATURATION}%, ${TINT_LIGHTNESS}%, ${TINT_ALPHA})`
     });
 
     // Force SVG redraw after the open animation settles so connectors
@@ -375,5 +387,14 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
 
     scrollToView(row);
+
+    // Keyboard focus: move focus to the first interactive element in the
+    // expander after the animation has settled.  preventScroll suppresses
+    // the browser's own scroll-on-focus so our scrollToView() drives it.
+    setTimeout(() => {
+      if (AppState.activeNodeId !== id) return; // closed before timeout fired
+      const focusTarget = expander.querySelector('.btn-tab, .btn-action');
+      if (focusTarget) focusTarget.focus({ preventScroll: true });
+    }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
   });
 }

@@ -251,10 +251,12 @@ function buildOrderedRunsForStacking(rowNodes) {
  * @param {HTMLElement[]} allLevelGroups — level-group elements (index = rowIdx)
  */
 export function applyCascadeStacking(allLevelGroups) {
-  // Use the largest --marker-col value (64 px) for a conservative estimate.
-  // This ensures the cascade triggers early enough even if the viewport
-  // later widens above the 1120 px breakpoint where marker-col is 64 px.
-  const indent = 64;
+  // Read the actual stacked indent from CSS so the cascade threshold
+  // matches the real layout rather than a hardcoded worst-case estimate.
+  // Falls back to 64px if the CSS variable is unavailable.
+  const indent = parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue('--stacked-indent'), 10
+  ) || 64;
 
   // Build nodeId → rowIdx lookup from the level-group DOM.
   const nodeRowIdx = new Map();
@@ -332,14 +334,17 @@ export function applyCascadeStacking(allLevelGroups) {
 
         if (!parentGroup) continue; // can't cascade further
 
-        // The child's cascade threshold is the container width below which
-        // the child zone's deepest node is too thin.  The parent must stack
-        // at those widths so it absorbs the child and gives it more room.
-        const newStackAt = Math.max(parentGroup.stackAt, needed);
+        // Store the cascade threshold separately from the group's own
+        // stackAt.  stackAt controls when the group's own cards are too
+        // narrow (per-child < STACK_THRESHOLD).  cascadeStackAt controls
+        // when zone children would be too thin — it only prevents UN-stacking,
+        // it doesn't force stacking when per-child width is still healthy.
+        const prev = parentGroup.cascadeStackAt || 0;
+        const newCascade = Math.max(prev, needed);
 
-        if (newStackAt <= parentGroup.stackAt) continue; // already sufficient
+        if (newCascade <= prev) continue;
 
-        parentGroup.stackAt = newStackAt;
+        parentGroup.cascadeStackAt = newCascade;
         cascadeOccurred = true;
       }
     }

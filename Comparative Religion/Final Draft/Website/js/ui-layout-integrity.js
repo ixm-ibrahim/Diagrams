@@ -9,6 +9,14 @@
  * Consumers:    ui-layout.js
  */
 
+/**
+ * Enforces expander positioning invariants after stacking transitions.
+ * Ensures the open expander is the immediate next sibling of the active
+ * node-row, and that every visible level-group has exactly one
+ * .level-expander element.
+ *
+ * @param {HTMLElement} viewEl — the .map-flow container
+ */
 export function ensureExpanderIntegrity(viewEl) {
   const openExp = viewEl.querySelector('.level-expander.is-open');
   const activeRow = viewEl.querySelector('.node-row.is-active');

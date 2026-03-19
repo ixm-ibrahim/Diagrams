@@ -31,9 +31,9 @@
   flex-direction: column;
   position: sticky;
   top: 12px;
-  z-index: 100;
+  z-index: var(--z-header);
   backdrop-filter: blur(12px);
-  transition: background 0.25s ease, box-shadow 0.25s ease;
+  transition: background var(--transition-slow) ease, box-shadow var(--transition-slow) ease;
 }
 
 /* Opaque on hover so content beneath doesn't distract */
@@ -75,7 +75,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
+  transition: color var(--transition-medium) ease;
   margin-left: auto;
 }
 
@@ -90,7 +90,7 @@
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(225deg);
-  transition: transform 0.2s ease;
+  transition: transform var(--transition-medium) ease;
   margin-top: 4px;
 }
 
@@ -147,7 +147,7 @@
   opacity: 0.8;
   padding: 2px 6px;
   border-radius: 6px;
-  transition: opacity 0.15s ease, background 0.15s ease, transform 0.1s ease;
+  transition: opacity var(--transition-base) ease, background var(--transition-base) ease, transform var(--transition-fast) ease;
   display: inline-block;
 }
 
@@ -214,7 +214,12 @@
   border: 1px solid var(--border);
   background: rgba(0, 0, 0, 0.1);
   color: inherit;
-  outline: none;
+  outline: none; /* suppressed here; restored via :focus-visible below */
+}
+
+.search-input-wrap input:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 0;
 }
 
 .search-input-wrap input::placeholder {
@@ -235,7 +240,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background var(--transition-base) ease, color var(--transition-base) ease;
 }
 
 .search-filter-btn:hover,
@@ -256,7 +261,7 @@
   display: none;
   flex-direction: column;
   gap: 12px;
-  z-index: 200;
+  z-index: var(--z-dropdown);
   min-width: 200px;
 }
 
@@ -301,8 +306,8 @@
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
-  transition: background 0.15s ease, border-color 0.15s ease,
-              gap 0.25s ease, padding 0.25s ease;
+  transition: background var(--transition-base) ease, border-color var(--transition-base) ease,
+              gap var(--transition-slow) ease, padding var(--transition-slow) ease;
 }
 
 [data-theme="light"] .btn-icon-expand {
@@ -341,11 +346,31 @@
   max-width: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-width 0.25s ease, opacity 0.2s ease;
+  transition: max-width var(--transition-slow) ease, opacity var(--transition-medium) ease;
 }
 
 .btn-icon-expand:hover .btn-icon-expand__label {
   max-width: 80px;   /* generous upper bound — actual width is content-driven */
+  opacity: 1;
+}
+
+
+/* Keyboard focus indicators
+   ----------------------------------------------------------------------------- */
+
+/* Icon-expand buttons (Export, Theme toggle) and header toggles */
+.btn-icon-expand:focus-visible,
+.chevron-toggle:focus-visible,
+.header-toggle:focus-visible,
+.search-filter-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Breadcrumb links — show focus ring and full opacity */
+.nav-crumbs a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
   opacity: 1;
 }
 

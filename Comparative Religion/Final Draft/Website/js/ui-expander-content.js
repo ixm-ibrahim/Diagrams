@@ -6,7 +6,7 @@
  * ============================================================= */
 
 import { tabContent } from './templates.js';
-import { ANIMATION_SPEEDS } from './constants.js';
+import { ANIMATION_SPEEDS, EXPANDER_SCROLL_OFFSET } from './constants.js';
 import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
 
 /**
@@ -59,7 +59,7 @@ export function scrollToView(el) {
     if (rect.bottom > window.innerHeight) {
       const headerHeight = document.getElementById('pageHeader')?.offsetHeight ?? 0;
       window.scrollTo({
-        top: window.scrollY + rect.top - headerHeight - 24,
+        top: window.scrollY + rect.top - headerHeight - EXPANDER_SCROLL_OFFSET,
         behavior: 'smooth'
       });
     }

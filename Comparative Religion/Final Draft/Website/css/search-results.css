@@ -82,7 +82,7 @@
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
-  transition: transform 0.2s ease;
+  transition: transform var(--transition-medium) ease;
   opacity: 0.6;
 }
 
@@ -119,14 +119,14 @@
 /* Search term highlight
    ----------------------------------------------------------------------------- */
 .search-highlight {
-  background: rgba(255, 196, 0, 0.35);
+  background: var(--highlight-color);
   color: inherit;
   border-radius: 2px;
   padding: 0 1px;
 }
 
 [data-theme="light"] .search-highlight {
-  background: rgba(255, 196, 0, 0.45);
+  background: var(--highlight-color-strong);
 }
 
 
@@ -137,7 +137,7 @@
 body.is-focused .search-result-box:not(:has(.node-row.is-active)) {
   opacity: var(--dim-opacity);
   filter: blur(var(--dim-blur));
-  transition: opacity 0.25s ease, filter 0.25s ease;
+  transition: opacity var(--transition-slow) ease, filter var(--transition-slow) ease;
 }
 
 body.is-focused .search-result-box:not(:has(.node-row.is-active)):hover {

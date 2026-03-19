@@ -1,8 +1,12 @@
-/* === ui-render-weights.js — Flex weight computation and DFS zone ordering === */
+/* === ui-render-weights.js — Flex Weight Computation & DFS Zone Ordering === */
 /**
+ * Computes proportional flex weights for parallel node layouts and DFS
+ * ordering with indent depths for stacked zones. Flex weights ensure
+ * child nodes inherit their parent's share of row width (tree-proportional).
+ *
  * Dependencies: data-store.js (DataStore)
- * Consumers: ui-render.js (buildView)
- * =============================================================================
+ * Consumers:    ui-render.js (computeFlexWeights, buildOrderedRuns),
+ *               ui-render-stacking.js (computeZoneOrder)
  */
 
 import { DataStore } from './data-store.js';

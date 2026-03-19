@@ -10,7 +10,7 @@
 import { AppState } from './state.js';
 import { DataStore } from './data-store.js';
 import { NavigationController } from './navigation.js';
-import { SCROLL_TO_NODE_DELAY_MS } from './constants.js';
+import { SCROLL_TO_NODE_DELAY_MS, SCROLL_PADDING_PX } from './constants.js';
 import { toggleExpander } from './ui-expander.js';
 import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
 import { exportNodes } from './ui-export.js';
@@ -42,6 +42,7 @@ export function init() {
   bindMapClicks();
   bindBreadcrumbClicks();
   bindEscapeKey();
+  bindKeyboardActivation();
   bindSearchInput();
   bindSearchFilter();
   bindSearchCheckboxes();
@@ -182,6 +183,33 @@ function bindEscapeKey() {
   });
 }
 
+/**
+ * Keyboard activation for role="button" elements that are divs (not <button>).
+ * Fires their click handler on Enter or Space, matching the ARIA button pattern.
+ * Defensive: browsers fire click for Enter on role="button" natively, but
+ * Space requires an explicit handler in some environments.
+ */
+function bindKeyboardActivation() {
+  els.container?.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+
+    // Node header: toggle expander
+    const nodeHeader = e.target.closest('.node-header[role="button"]');
+    if (nodeHeader) {
+      e.preventDefault(); // prevent Space from scrolling the page
+      nodeHeader.click();
+      return;
+    }
+
+    // Logic section header: toggle collapse
+    const logicHeader = e.target.closest('.logic-header[role="button"]');
+    if (logicHeader) {
+      e.preventDefault();
+      logicHeader.click();
+    }
+  });
+}
+
 function bindSearchInput() {
   els.searchInput?.addEventListener('input', (e) => {
     debouncedSearch(e.target.value);
@@ -281,7 +309,7 @@ function scrollToNode(nodeId) {
   const headerHeight = document.getElementById('pageHeader')?.offsetHeight ?? 0;
   const summaryHeight = document.getElementById('voteSummary')?.offsetHeight ?? 0;
   const rect = card.getBoundingClientRect();
-  const offset = headerHeight + summaryHeight + 20;
+  const offset = headerHeight + summaryHeight + SCROLL_PADDING_PX;
   if (rect.top < offset || rect.bottom > window.innerHeight) {
     window.scrollTo({
       top: window.scrollY + rect.top - offset,

@@ -269,8 +269,9 @@ export function renderMapWithTransition(direction) {
   const hasOldViews = oldViews.length > 0;
   if (hasOldViews) {
     container.style.minHeight = `${container.offsetHeight}px`;
-    // Clip old views individually instead of the whole container,
-    // so derivation buttons and glow effects on the new view aren't cut off.
+    // Apply overflow:hidden to each OLD view individually (not the container),
+    // so the new view's derivation buttons and glow effects aren't clipped,
+    // while the old views' exit-animation overflow is still contained.
     oldViews.forEach(v => { v.style.overflow = 'hidden'; });
   }
 

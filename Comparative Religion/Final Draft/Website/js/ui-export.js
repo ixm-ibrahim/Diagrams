@@ -15,6 +15,7 @@
  * =============================================================================
  */
 
+import { FILENAME_MAX_LENGTH } from './constants.js';
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
 import { computeLevels } from './graph-engine.js';
@@ -200,7 +201,7 @@ function buildSearchFilename() {
   const input = document.getElementById('searchInput');
   const raw = input?.value?.trim() || '';
 
-  if (raw.length === 0 || raw.length > 30) return 'search-results.json';
+  if (raw.length === 0 || raw.length > FILENAME_MAX_LENGTH) return 'search-results.json';
 
   const safe = raw
     .toLowerCase()

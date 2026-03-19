@@ -32,7 +32,7 @@
   margin-left: var(--derive-gap);
   margin-top: var(--derive-btn-offset-top);
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
+  transition: background var(--transition-base) ease, transform var(--transition-fast) ease;
 }
 
 /* Horizontal arm: connects the card's right edge to the button */
@@ -50,7 +50,7 @@
 /* Arrow span: shifts right on hover to emphasize direction */
 .btn-derivation span:last-child {
   display: inline-block;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition: transform var(--transition-base) ease, opacity var(--transition-base) ease;
 }
 
 .btn-derivation:hover {
@@ -82,7 +82,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .btn-derivation {
     margin-top: 8px;
     z-index: 1;
@@ -90,4 +90,12 @@
   .btn-derivation::before {
     z-index: -1;
   }
+}
+
+
+/* Keyboard focus indicator
+   ----------------------------------------------------------------------------- */
+.btn-derivation:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }

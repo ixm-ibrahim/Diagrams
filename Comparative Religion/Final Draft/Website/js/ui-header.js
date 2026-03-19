@@ -10,6 +10,7 @@
  * =============================================================================
  */
 
+import { TINT_SATURATION, TINT_LIGHTNESS, TINT_ALPHA } from './constants.js';
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
 
@@ -57,7 +58,7 @@ export function updateHeaderContext() {
     if (!parentNode) return;
 
     AppState.updateTints({
-      page: `hsla(${parentNode.hue}, 80%, 50%, 0.35)`
+      page: `hsla(${parentNode.hue}, ${TINT_SATURATION}%, ${TINT_LIGHTNESS}%, ${TINT_ALPHA})`
     });
 
     const prefix = DataStore.config.nodePrefix;

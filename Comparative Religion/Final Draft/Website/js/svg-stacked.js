@@ -7,6 +7,7 @@
  * Consumers:    svg-engine.js
  */
 
+import { MIN_SPINE_HEIGHT, MIN_ROW_GAP } from './constants.js';
 import {
   STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS, SPINE_FADE_PX,
   getTransitionMetrics, getBranchRadius
@@ -118,7 +119,7 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
         }
       }
     }
-    const actualGap = nextTrunkCardTop !== null ? nextTrunkCardTop - termRowBottom : 20;
+    const actualGap = nextTrunkCardTop !== null ? nextTrunkCardTop - termRowBottom : MIN_ROW_GAP;
     terminalMergeY = termRowBottom + actualGap / 2;
   }
 
@@ -148,14 +149,14 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
       if (nextDepth < block.depth) {
         if (exitMetrics) {
           const r = getBranchRadius(block.endId, block.nextId, positions);
-          bottom = Math.max(top + 8, exitMetrics.joinY - r);
+          bottom = Math.max(top + MIN_SPINE_HEIGHT, exitMetrics.joinY - r);
           const endDepth = positions.get(block.endId)?.depth ?? depthMap.get(block.endId) ?? block.depth;
           fade = endDepth > block.depth;
         }
       } else if (nextDepth === block.depth) {
         if (exitMetrics) {
           const r = getBranchRadius(block.endId, block.nextId, positions);
-          bottom = Math.max(top + 8, exitMetrics.joinY - r);
+          bottom = Math.max(top + MIN_SPINE_HEIGHT, exitMetrics.joinY - r);
         }
         fade = true;
       }
@@ -209,7 +210,7 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
           }
         }
       }
-      const actualGap = nextTrunkCardTop !== null ? nextTrunkCardTop - rowBottomOfLast : 20;
+      const actualGap = nextTrunkCardTop !== null ? nextTrunkCardTop - rowBottomOfLast : MIN_ROW_GAP;
       const mergeY = rowBottomOfLast + actualGap / 2;
 
       if (deepestX !== null && Math.abs(deepestX - returnTargetX) >= STRAIGHT_THRESHOLD) {

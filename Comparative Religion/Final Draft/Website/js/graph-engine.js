@@ -35,13 +35,13 @@ export function computeLevels(visibleNodes) {
       return 0;
     }
 
-    let maxPrev = -1;
+    let maxPrevLevel = -1;
     for (const prevId of node.prevIds) {
       if (nodeMap.has(prevId)) {
-        maxPrev = Math.max(maxPrev, getLevel(prevId));
+        maxPrevLevel = Math.max(maxPrevLevel, getLevel(prevId));
       }
     }
-    const level = maxPrev + 1;
+    const level = maxPrevLevel + 1;
     levels.set(nodeId, level);
     return level;
   }
@@ -74,8 +74,11 @@ export function computeLevels(visibleNodes) {
     }
   });
 
-  // Sort each row by barycenter (average position of parents in the row above)
-  // to minimize visual edge crossings.
+  // Barycenter sorting: minimize visual edge crossings by positioning each
+  // node near the average column index of its parents in the row above.
+  // Nodes whose parents cluster on the left sort leftward, and vice versa.
+  // This is a standard DAG layout heuristic that produces cleaner diagrams
+  // than naive insertion order, especially for wide graphs with many edges.
   for (let i = 1; i <= maxLevel; i++) {
     rows[i].sort((a, b) => {
       const barycenter = (n) => {

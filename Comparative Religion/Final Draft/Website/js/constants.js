@@ -7,9 +7,11 @@
  *
  * Dependencies: none
  *
- * Consumers: state.js, ui-render.js, ui-expander.js,
- *            ui-layout.js, ui-events.js, ui-search.js,
- *            svg-geometry.js, svg-engine.js, ui-events.js
+ * Consumers: state.js, ui-render.js, ui-expander.js, ui-expander-content.js,
+ *            ui-layout.js, ui-events.js, ui-search.js, ui-export.js,
+ *            ui-agreement-panel.js, ui-render-stacking.js,
+ *            svg-geometry.js, svg-engine.js, svg-stacked.js, svg-paths.js,
+ *            main.js
  * =============================================================================
  */
 
@@ -74,7 +76,7 @@ export const FOCUS_DIM_DELAY_RATIO = 0.6;
  * The metric (groupWidth / childCount) is stable regardless of stacked/unstacked
  * state because the group fills its parent either way, so no hysteresis is needed.
  */
-export const STACK_THRESHOLD = 270;
+export const STACK_THRESHOLD = 350;
 
 /**
  * Minimum effective card width (px) for the deepest node in a stacked zone.
@@ -88,7 +90,7 @@ export const STACK_THRESHOLD = 270;
  *
  * 200 px gives enough room for a card title + badge at all breakpoints.
  */
-export const DEEP_NODE_MIN_WIDTH = 200;
+export const DEEP_NODE_MIN_WIDTH = 300;
 
 /* ---------------------------------------------------------------------------
  * SVG geometry constants
@@ -105,6 +107,78 @@ export const MAX_CORNER_RADIUS = 12;
 
 /** Half of the spine width (--spine-width: 2px). Used for SVG mask alignment. */
 export const SPINE_HALF_W = 1;
+
+/** The CSS spine width in px (before DPR adjustment). */
+export const NOMINAL_SPINE_WIDTH = 2;
+
+/* ---------------------------------------------------------------------------
+ * SVG and visual layout constants
+ * --------------------------------------------------------------------------- */
+
+/** Branch path overlap value (px) for smoother corner transitions. */
+export const SVG_OVERLAP = 2;
+
+/** Default gap between rows (px) when computing terminal return targets. */
+export const DEFAULT_ROW_GAP = 20;
+
+/** Minimum gap between rows (px). */
+export const MIN_ROW_GAP = 20;
+
+/** Minimum spine block height (px) before spine rendering is skipped. */
+export const MIN_SPINE_HEIGHT = 8;
+
+/** Radius constraint adjustment (px) for corner calculations. */
+export const RADIUS_ADJUST = 2;
+
+/**
+ * Visual row bucketing granularity (px). Markers whose cardTop values are
+ * within this many pixels of each other are grouped into the same visual row.
+ * This prevents floating-point rounding from splitting parallel nodes into
+ * separate rows when they're meant to be side-by-side.
+ */
+export const ROW_BUCKET_PX = 5;
+
+/* ---------------------------------------------------------------------------
+ * Tint/color values
+ * --------------------------------------------------------------------------- */
+
+/** Saturation percentage for tint colors (hsla). */
+export const TINT_SATURATION = 80;
+
+/** Lightness percentage for tint colors (hsla). */
+export const TINT_LIGHTNESS = 50;
+
+/** Alpha/opacity for tint colors (hsla). */
+export const TINT_ALPHA = 0.35;
+
+/* ---------------------------------------------------------------------------
+ * UI scroll and layout thresholds
+ * --------------------------------------------------------------------------- */
+
+/** Padding (px) when scrolling nodes into view. */
+export const SCROLL_PADDING_PX = 20;
+
+/** Scroll adjustment threshold (px) when layout changes. */
+export const SCROLL_ADJUST_THRESHOLD = 60;
+
+/** Top padding (px) applied during scroll-to-view operations. */
+export const SCROLL_TOP_PADDING = 16;
+
+/** Additional scroll offset (px) for expander content scrolling. */
+export const EXPANDER_SCROLL_OFFSET = 24;
+
+/** Maximum snippet length (chars) for text truncation. */
+export const SNIPPET_MAX_LENGTH = 60;
+
+/** Truncate snippet at this length (chars) before adding ellipsis. */
+export const SNIPPET_TRUNCATE_AT = 57;
+
+/** Maximum filename length (chars) for exported files. */
+export const FILENAME_MAX_LENGTH = 30;
+
+/** Card width (px) at which vote buttons expand to show labels.
+ *  Must match the @container node-col breakpoint in node-card.css (400px). */
+export const VOTE_EXPAND_THRESHOLD = 400;
 
 /* ---------------------------------------------------------------------------
  * Search

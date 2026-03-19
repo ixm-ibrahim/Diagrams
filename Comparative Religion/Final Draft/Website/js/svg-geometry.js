@@ -5,14 +5,15 @@
  *
  * Dependencies: constants.js (SPINE_FADE_PX, STRAIGHT_THRESHOLD,
  *               MAX_CORNER_RADIUS, SPINE_HALF_W)
- * Consumers:    svg-engine.js, svg-paths.js, svg-stacked.js
+ * Consumers:    svg-engine.js, svg-paths.js, svg-stacked.js, svg-partial.js
  */
 
 import {
   SPINE_FADE_PX,
   STRAIGHT_THRESHOLD,
   MAX_CORNER_RADIUS,
-  SPINE_HALF_W
+  SPINE_HALF_W,
+  ROW_BUCKET_PX
 } from './constants.js';
 
 // Re-export so existing consumers that import from svg-geometry.js keep working
@@ -23,12 +24,16 @@ export { SPINE_FADE_PX, STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS, SPINE_HALF_W };
  * --------------------------------------------------------------------------- */
 
 /**
- * Collects marker dot positions and card bounds for every visible node.
- * Returns a Map<nodeId, {x, y, depth, cardTop, cardBottom, visualBottom}>.
+ * Measures all node marker dot positions and card bounding boxes from the
+ * live DOM, returning a position map used by all SVG drawing routines.
  *
  * When an open expander exists in a level-group, ALL sibling nodes in that
  * group receive the expander's bottom as their visualBottom so downstream
  * visual-row grouping accounts for the extra height uniformly.
+ *
+ * @param {HTMLElement} viewEl - the `.map-flow` element containing node cards
+ * @param {DOMRect} containerRect - bounding rect of the viewEl (for coordinate offset)
+ * @returns {Map<string, {x: number, y: number, depth: number, cardTop: number, cardBottom: number, visualBottom: number}>}
  */
 export function collectMarkerPositions(viewEl, containerRect) {
   const positions = new Map();
@@ -99,9 +104,14 @@ export function collectMarkerPositions(viewEl, containerRect) {
  * --------------------------------------------------------------------------- */
 
 /**
- * Builds visual row groups from level-groups in the DOM.
- * Each visual row contains the node IDs and the maximum bottom Y coordinate.
- * Returns { visualRows, nodeToRowIdx }.
+ * Groups node markers into visual rows by Y-coordinate bucketing. Markers
+ * whose cardTop values fall within ROW_BUCKET_PX pixels of each other are
+ * placed in the same visual row. Each row tracks the maximum bottom Y so
+ * downstream gap calculations know where the row ends.
+ *
+ * @param {HTMLElement} viewEl - the `.map-flow` element
+ * @param {Map<string, Object>} positions - marker positions from collectMarkerPositions
+ * @returns {{ visualRows: Array<{nodeIds: string[], bottom: number}>, nodeToRowIdx: Map<string, number> }}
  */
 export function buildVisualRows(viewEl, positions) {
   const visualRows = [];
@@ -119,7 +129,7 @@ export function buildVisualRows(viewEl, positions) {
       const pos = positions.get(id);
       if (!pos) return;
 
-      const bucket = Math.round(pos.cardTop / 5) * 5;
+      const bucket = Math.round(pos.cardTop / ROW_BUCKET_PX) * ROW_BUCKET_PX;
       if (!rowBuckets.has(bucket)) rowBuckets.set(bucket, []);
       rowBuckets.get(bucket).push(id);
     });
@@ -153,14 +163,27 @@ export function buildVisualRows(viewEl, positions) {
  * --------------------------------------------------------------------------- */
 
 /**
- * Computes the transition geometry between two nodes.
- * Returns { joinY, radius, gapTop, gapBottom, gap } or null.
+ * Computes the curve geometry between two connected visual rows. Determines
+ * the vertical midpoint where branch curves bend (joinY) and the appropriate
+ * corner radius.
+ *
+ * @param {string} startId - source node ID
+ * @param {string} endId - target node ID
+ * @param {Map<string, Object>} positions - marker positions
+ * @returns {{ joinY: number, radius: number, gapTop: number, gapBottom: number, gap: number } | null}
+ *   joinY is the Y-coordinate where a branch curve meets the trunk (the bend point)
  */
 export function getTransitionMetrics(startId, endId, positions) {
   const start = positions.get(startId);
   const end = positions.get(endId);
   if (!start || !end) return null;
 
+  // "Gap" is the vertical whitespace between two connected rows — the space
+  // where SVG curves bend. Multiple gap values handle edge cases:
+  //   - gapTop: bottom edge of the source row (accounts for expanders)
+  //   - effectiveGapTop: adjusted for intervening rows that extend below gapTop
+  //   - gapBottom: top edge of the target node's card
+  //   - gap: the actual usable vertical space for the curve bend
   const gapTop = start.rowBottom !== undefined ? start.rowBottom : start.visualBottom;
 
   let effectiveGapTop = (end.prevRowBottom !== undefined && end.prevRowBottom > gapTop)
@@ -176,14 +199,23 @@ export function getTransitionMetrics(startId, endId, positions) {
   }
 
   const gap = Math.max(0, gapBottom - effectiveGapTop);
-  const joinY = effectiveGapTop + gap / 2;
+  // branchBendY: the Y-coordinate where branch curves meet the horizontal segment
+  const branchBendY = effectiveGapTop + gap / 2;
+
+  // Guard: if any position measurement was missing or produced non-finite values
+  // (e.g. during mid-transition DOM states), bail out so callers skip this edge.
+  if (!Number.isFinite(branchBendY)) return null;
 
   const dx = Math.abs(end.x - start.x);
+  // Radius is constrained by three factors to ensure the curve always fits:
+  //   1. MAX_CORNER_RADIUS — aesthetic cap so curves don't become too round
+  //   2. dx / 2 — can't exceed half the horizontal distance (curves would overlap)
+  //   3. gap / 2 - 1 — can't exceed half the vertical gap (curves would clip into cards)
   const radius = dx < STRAIGHT_THRESHOLD
     ? 0
     : Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, gap / 2 - 1));
 
-  return { joinY, radius, gapTop: effectiveGapTop, gapBottom, gap };
+  return { joinY: branchBendY, radius, gapTop: effectiveGapTop, gapBottom, gap };
 }
 
 /* ---------------------------------------------------------------------------
@@ -191,9 +223,15 @@ export function getTransitionMetrics(startId, endId, positions) {
  * --------------------------------------------------------------------------- */
 
 /**
- * Computes the radius for a branch-enter or branch-return curve.
- * Constrained by horizontal distance and vertical distance from dot
- * centers to the bend point.
+ * Computes the corner radius for a branch curve (enter or return).
+ * The radius is constrained by horizontal distance, vertical distance from
+ * each dot center to the bend point, and the MAX_CORNER_RADIUS cap — ensuring
+ * the curve always fits within the available space without clipping nodes.
+ *
+ * @param {string} startId - source node ID
+ * @param {string} endId - target node ID
+ * @param {Map<string, Object>} positions - marker positions
+ * @returns {number} corner radius in pixels
  */
 export function getBranchRadius(startId, endId, positions) {
   const start = positions.get(startId);
@@ -205,6 +243,10 @@ export function getBranchRadius(startId, endId, positions) {
   if (dx < STRAIGHT_THRESHOLD) return 0;
 
   const y = metrics.joinY;
+  // Guard: if joinY is somehow missing or non-finite, bail out to avoid NaN
+  // propagating through all downstream path arithmetic.
+  if (!Number.isFinite(y)) return 0;
+
   const startVertical = Math.max(0, y - start.y);
   const endVertical = Math.max(0, end.y - y);
 

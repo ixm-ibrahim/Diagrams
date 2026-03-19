@@ -11,12 +11,66 @@
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
 
+/* ---------------------------------------------------------------------------
+ * Module-level cache for node lookups
+ * --------------------------------------------------------------------------- */
+
+let nodeIdToIndexCache = null;
+let parentIdToChildrenCache = null;
+let lastNodesLength = 0;
+
+/**
+ * Invalidates the caches if DataStore.nodes has changed.
+ * Uses array length as a cheap heuristic — if the node count changes,
+ * the cache is stale and must be rebuilt.
+ */
+function invalidateCacheIfNeeded() {
+  if (lastNodesLength !== DataStore.nodes.length) {
+    nodeIdToIndexCache = null;
+    parentIdToChildrenCache = null;
+    lastNodesLength = DataStore.nodes.length;
+  }
+}
+
+/**
+ * Builds the node index cache on first use.
+ * @returns {Map<string, number>} id → index
+ */
+function getNodeIndexCache() {
+  invalidateCacheIfNeeded();
+  if (nodeIdToIndexCache === null) {
+    nodeIdToIndexCache = new Map();
+    DataStore.nodes.forEach((n, idx) => {
+      nodeIdToIndexCache.set(n.id, idx);
+    });
+  }
+  return nodeIdToIndexCache;
+}
+
+/**
+ * Builds the children cache on first use.
+ * @returns {Map<string, Array>} parentId → children
+ */
+function getChildrenCache() {
+  invalidateCacheIfNeeded();
+  if (parentIdToChildrenCache === null) {
+    parentIdToChildrenCache = new Map();
+    DataStore.nodes.forEach(n => {
+      if (!parentIdToChildrenCache.has(n.parentId)) {
+        parentIdToChildrenCache.set(n.parentId, []);
+      }
+      parentIdToChildrenCache.get(n.parentId).push(n);
+    });
+  }
+  return parentIdToChildrenCache;
+}
+
 function nodeIndex(id) {
-  return DataStore.nodes.findIndex(n => n.id === id);
+  return getNodeIndexCache().get(id) ?? -1;
 }
 
 function childrenOf(parentId) {
-  return DataStore.nodes.filter(n => n.parentId === parentId);
+  return getChildrenCache().get(parentId) ?? [];
 }
 
 function getEntryNodes(parentId) {
@@ -110,6 +164,11 @@ export function computeSiblingNav() {
   const parallelAfter = parallelSiblings.filter(s => nodeIndex(s.id) > myIndex);
 
   // --- Cross-parent boundary traversal ---
+  // When the current page is the first or last child of its parent (no
+  // prev/next siblings within the same parent scope), we look one level up
+  // to find navigation targets across parent boundaries. For example, if
+  // the current page is the first child and has no prevNodes, we find the
+  // parent's predecessor siblings and target their last exit nodes.
   const crossPrev = [];
   const crossNext = [];
 
@@ -118,9 +177,9 @@ export function computeSiblingNav() {
     const grandSiblings = DataStore.nodes.filter(
       n => n.parentId === parent?.parentId
     );
-    const gids = new Set(grandSiblings.map(n => n.id));
+    const grandSiblingIds = new Set(grandSiblings.map(n => n.id));
 
-    (parent?.prevIds || []).filter(pid => gids.has(pid)).forEach(prevPid => {
+    (parent?.prevIds || []).filter(parentId => grandSiblingIds.has(parentId)).forEach(prevPid => {
       const children = childrenOf(prevPid);
       if (children.length > 0) {
         const exits = getExitNodes(prevPid);
@@ -140,9 +199,9 @@ export function computeSiblingNav() {
     const grandSiblings = DataStore.nodes.filter(
       n => n.parentId === parent?.parentId
     );
-    const gids = new Set(grandSiblings.map(n => n.id));
+    const grandSiblingIds = new Set(grandSiblings.map(n => n.id));
 
-    (parent?.nextIds || []).filter(nid => gids.has(nid)).forEach(nextPid => {
+    (parent?.nextIds || []).filter(nextId => grandSiblingIds.has(nextId)).forEach(nextPid => {
       const children = childrenOf(nextPid);
       if (children.length > 0) {
         const entries = getEntryNodes(nextPid);
@@ -229,6 +288,13 @@ function makeGroup(label, type, btnClass, items) {
   return { label, type, btnClass, items };
 }
 
+/**
+ * Renders sibling navigation areas (prev/next/parallel) into the given view.
+ * Computes navigation groups via computeSiblingNav(), then creates DOM elements
+ * for "top" groups (prepended above content) and "bottom" groups (appended below).
+ *
+ * @param {HTMLElement} view - the `.map-flow` element to prepend/append navigation into
+ */
 export function renderSiblingNavigation(view) {
   const { top, bottom } = computeSiblingNav();
   const prefix = DataStore.config.nodePrefix;

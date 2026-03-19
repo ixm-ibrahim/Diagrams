@@ -30,7 +30,7 @@
  * =============================================================================
  */
 
-import { STACK_THRESHOLD } from './constants.js';
+import { STACK_THRESHOLD, SCROLL_ADJUST_THRESHOLD, SCROLL_TOP_PADDING } from './constants.js';
 import {
   wrapStackGroup,
   handlePartialZone,
@@ -74,8 +74,6 @@ export function updateStackedGroups(viewEl, containerWidth) {
     catch { return; }
 
     groups.forEach(({ nodeIds, stackAt, combinedWeight, zoneRows, zoneOrder }) => {
-      const shouldStack = containerWidth < stackAt;
-
       // Locate the first node — it tells us the current wrapping state
       const firstNode = levelGroup.querySelector(
         `:scope > .node-row[data-id="${nodeIds[0]}"], ` +
@@ -84,6 +82,10 @@ export function updateStackedGroups(viewEl, containerWidth) {
       if (!firstNode) return;
 
       const isStacked = firstNode.parentElement.classList.contains('stack-group');
+
+      // Stack when the group's own per-child width drops below STACK_THRESHOLD.
+      // Symmetric: same threshold for stacking and un-stacking — no hysteresis.
+      const shouldStack = containerWidth < stackAt;
 
       if (shouldStack && !isStacked) {
         // --- Wrap ---
@@ -132,12 +134,12 @@ export function updateStackedGroups(viewEl, containerWidth) {
     if (activeRowAfter) {
       const activeTopAfter = activeRowAfter.getBoundingClientRect().top;
       const drift = Math.abs(activeTopAfter - activeTopBefore);
-      if (drift > 60) {
+      if (drift > SCROLL_ADJUST_THRESHOLD) {
         // Node moved substantially — scroll so its top edge sits just
         // below the page header with some padding.
         const header = document.querySelector('.app-header, #pageHeader, header');
         const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
-        const targetTop = Math.max(headerBottom, 0) + 16;
+        const targetTop = Math.max(headerBottom, 0) + SCROLL_TOP_PADDING;
         window.scrollTo({
           top: window.scrollY + activeTopAfter - targetTop,
           behavior: 'smooth'
