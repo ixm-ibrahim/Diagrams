@@ -1,0 +1,373 @@
+/* =============================================================================
+   tokens.css — Design Tokens
+   =============================================================================
+   ALL visual colors, layout dimensions, and responsive overrides live here.
+   No component rules. Every other CSS file imports values from this file
+   by referencing var(--token-name).
+
+   To add a new theme: duplicate the [data-theme="light"] block.
+   To adjust a breakpoint: change the @media query and its token overrides.
+
+   Consumed by: every other CSS file.
+   ============================================================================= */
+
+
+/* -----------------------------------------------------------------------------
+   Theme Colors (Dark = default)
+   ----------------------------------------------------------------------------- */
+:root {
+  --bg-0: #0b1020;
+  --bg-1: #070a12;
+  --text: #f2f5ff;
+  --text-muted: #a9b6d3;
+  --text-faint: rgba(233, 240, 255, 0.55);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-thin: rgba(255, 255, 255, 0.08);
+  --glass: rgba(255, 255, 255, 0.15);
+  --panel-bg: #0f1730;
+  --panel-accent: #111b36;
+
+  --mini-bg: rgba(255, 255, 255, 0.02);
+  --mini-content-bg: rgba(0, 0, 0, 0.3);
+  --mini-content-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  --shadow-deep: 0 16px 40px rgba(0, 0, 0, 0.42);
+  --spine-color: rgba(233, 240, 255, 0.18);
+  --spine-color-solid: rgb(233, 240, 255);
+  --spine-opacity: 0.18;
+  --spine-glow: rgba(110, 140, 255, 0.18);
+  --spine-glow-solid: rgba(110, 140, 255, 1);
+  --header-ink: #ffffff;
+
+  /* Agreement system — glow & button base colors (dark theme)
+   * Used by agreement.css for vote buttons and glow effects.              */
+  --agree-color: #22c55e;
+  --agree-color-dark: #16a34a;
+  --agree-color-deep: #15803d;
+  --agree-rgb: 34, 197, 94;
+  --agree-dark-rgb: 22, 163, 74;
+  --disagree-color: #ef4444;
+  --disagree-color-dark: #dc2626;
+  --disagree-color-deep: #b91c1c;
+  --disagree-rgb: 239, 68, 68;
+  --disagree-dark-rgb: 220, 38, 38;
+
+  /* Focus dimming — opacity / blur for non-active rows when expander open */
+  --dim-opacity: 0.45;
+  --dim-active-opacity: 0.85;
+  --dim-blur: 0.6px;
+
+  /* Theme transition — duration for smooth color changes on theme toggle.
+   * JS constant THEME_TRANSITION_MS in constants.js MUST match (300ms).   */
+  --theme-transition-duration: 0.3s;
+
+  /* Animation slide distances — how far elements translate during page
+   * transition keyframes (horizontal and vertical).                       */
+  --slide-distance-x: 60px;
+  --slide-distance-y: 40px;
+
+  /* Vote button sizing — compact icon vote buttons on node cards          */
+  --vote-btn-size: 29px;
+  --vote-btn-font-size: 15px;
+  --vote-label-max-width: 80px;
+  /* Expanded max-width: icon + label + padding + gap. Must be a numeric
+   * value (not auto) so CSS can transition between collapsed and expanded. */
+  --vote-btn-expanded-max: calc(var(--vote-btn-size) + var(--vote-label-max-width) + 16px);
+
+  /* Glow intensity — master knob (0–1) for agreement glow effects.
+   * Scales outer spread, core glow, inset, and border opacity.            */
+  --glow-intensity: 0.875;
+
+  /* Tint transition — shared duration for background, expander, and glow
+   * tint animations when agreement state changes.                         */
+  --tint-transition-duration: 0.5s;
+
+  /* Expander tint — opacity of the agreement-colored gradient wash at the
+   * top of expanded node panels. Increase for a stronger tint.            */
+  --expander-tint-opacity: 0.35;
+  --expander-tint-reach: 55%;
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* Transition Durations — used across animations and transitions.
+   * These durations scale consistently across the application.             */
+  --transition-fast: 0.1s;
+  --transition-base: 0.15s;
+  --transition-medium: 0.2s;
+  --transition-slow: 0.25s;
+  --transition-expander: 0.3s;
+
+  /* Z-index Layers — stacking context for overlapping elements.
+   * Controls visual depth: timeline < groups < expanders < header/dropdown.*/
+  --z-timeline: 0;
+  --z-level-group: 2;
+  --z-expander: 10;
+  --z-expander-open: 20;
+  --z-header: 100;
+  --z-dropdown: 200;
+
+  /* Spacing Scale — consistent spacing throughout the application.
+   * Used for margins, padding, gaps, and alignment.                       */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+
+  /* Search Highlight Colors — for highlighting search results.            */
+  --highlight-color: rgba(255, 196, 0, 0.35);
+  --highlight-color-strong: rgba(255, 196, 0, 0.45);
+
+  /* Keyboard focus ring — shared :focus-visible indicator across all
+   * interactive components. Aliases --spine-glow-solid so it inherits
+   * automatic theme switching (bright blue in dark, deeper blue in light). */
+  --focus-ring: var(--spine-glow-solid);
+}
+
+[data-theme="light"] {
+  --bg-0: #f6f7fb;
+  --bg-1: #eef1f8;
+  --text: #101a35;
+  --text-muted: #475577;
+  --text-faint: rgba(16, 26, 53, 0.55);
+  --border: rgba(16, 26, 53, 0.14);
+  --border-thin: rgba(16, 26, 53, 0.10);
+  --glass: rgba(255, 255, 255, 0.90);
+  --panel-bg: #ffffff;
+  --panel-accent: #f4f6fb;
+
+  --mini-bg: rgba(16, 26, 53, 0.02);
+  --mini-content-bg: rgba(16, 26, 53, 0.05);
+  --mini-content-shadow: inset 0 3px 8px rgba(16, 26, 53, 0.04);
+
+  --shadow: 0 12px 30px rgba(16, 26, 53, 0.12);
+  --shadow-deep: 0 18px 46px rgba(16, 26, 53, 0.14);
+  --spine-color: rgba(16, 26, 53, 0.14);
+  --spine-color-solid: rgb(16, 26, 53);
+  --spine-opacity: 0.14;
+  --spine-glow: rgba(90, 120, 255, 0.14);
+  --spine-glow-solid: rgba(90, 120, 255, 1);
+  --header-ink: #000000;
+
+  /* Agreement colors — light theme uses darker shades for contrast */
+  --agree-color: #16a34a;
+  --agree-color-dark: #15803d;
+  --agree-rgb: 22, 163, 74;
+  --agree-dark-rgb: 22, 163, 74;
+  --disagree-color: #dc2626;
+  --disagree-color-dark: #b91c1c;
+  --disagree-rgb: 220, 38, 38;
+  --disagree-dark-rgb: 220, 38, 38;
+
+  --expander-tint-opacity: 0.25;
+  --expander-tint-reach: 50%;
+
+  /* Search highlight colors for light theme — slightly adjusted for contrast */
+  --highlight-color: rgba(255, 196, 0, 0.25);
+  --highlight-color-strong: rgba(255, 196, 0, 0.35);
+}
+
+
+/* -----------------------------------------------------------------------------
+   Layout Dimensions
+   ----------------------------------------------------------------------------- */
+
+/*
+ * MARKER ANATOMY (left-to-right):
+ *   |<-- marker-col ---------------------------------->|
+ *   |   [spine]   ●(dot)----(arm)---▶   | card...     |
+ *   |          dot-offset-left                         |
+ *   |                arm-left  arm-width  arrow-left   |
+ *
+ * Spine is auto-centered: --spine-left = (marker-col - spine-width) / 2.
+ * Changing --marker-col automatically realigns the spine.
+ */
+
+:root {
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --node-min-h: 80px;
+  --spine-width: 2px;
+
+  /* App shell — page cap is a fixed pixel value computed from the monitor's
+   * screen resolution × --app-width-ratio (set by JS at init via screen.width).
+   * Below that cap the page fills 100% (no side margins).
+   * Fallback: 1120px if JS hasn't run yet.                                */
+  --app-width-ratio: 0.65;
+  --app-max-width: 1120px;
+  --app-min-width: 350px;
+  --app-pad-top: 22px;
+  --app-pad-side: 18px;
+  --app-pad-bottom: 56px;
+
+  /* Animation timing: single source of truth for page transition duration.
+   * JS constant CSS_TRANSITION_MS in constants.js MUST match (500ms = 0.5s).
+   * Used by: animations.css, and any component that needs transition-aware timing. */
+  --page-transition-duration: 0.5s;
+
+  /* Collapse animation for logic sections and mini-nodes inside expanders.
+   * Set to 0s to disable animation (instant toggle).                          */
+  --collapse-duration: 0.25s;
+
+  /* Vertical gap between consecutive level-groups (DAG rows).
+   * This is the clearance SVG branch connectors route through.
+   * Also used as the column-gap for side-by-side parallel cards.              */
+  --level-gap: 8px;
+  --parallel-col-gap: 16px;
+
+  /* Map flow container: top/bottom padding and gap below header.              */
+  --flow-pad-v: 10px;
+  --flow-margin-top: 14px;
+
+  /* Node row internals: gap between grid columns is --node-col-gap,
+   * row-gap between card and any sub-rows, row top padding.                   */
+  --node-row-gap: 8px;
+  --node-row-pad-top: 4px;
+
+  /* Card header spacing */
+  --card-header-gap: 10px;
+  --card-header-pad-v: 10px;
+  --card-header-pad-h: 14px;
+
+  /* Card so-what paragraph padding */
+  --card-body-pad: 14px 14px 16px;
+
+  /* Card typography */
+  --card-title-size: 16.5px;
+  --card-body-size: 13px;
+  --card-badge-size: 12px;
+  --btn-font-size: 13px;
+
+  /* Derive button */
+  --derive-btn-height: 34px;
+  --derive-btn-offset-top: 6px;
+
+  /* Node row grid: [marker-col] [card: 1fr] [derive-col: max-content]
+   * --marker-col controls the leftmost column width.
+   * --node-col-gap is the gap between all three grid columns.                 */
+  --marker-col: 64px;
+  --node-col-gap: 6px;
+
+  /* Spine: auto-centered within the marker column.                            */
+  --spine-left: calc((var(--marker-col) - var(--spine-width)) / 2);
+
+  /* Marker dot (timeline circle):
+   * --marker-dot-size: circle diameter.
+   * --marker-dot-offset-top: vertical offset from row top to circle top
+   *   (aligns the circle with the card header baseline).                      */
+  --marker-dot-size: 16px;
+  --marker-dot-offset-top: 14px;
+
+  /* Marker arm and arrow (procedurally derived from --marker-col)
+   * --marker-arrow-gap: distance from arrow tip to the column's right edge.   */
+  --marker-arrow-width: 10px;
+  --marker-arrow-gap: 6px;
+  --marker-arrow-left: calc(var(--marker-col) - var(--marker-arrow-width) - var(--marker-arrow-gap));
+
+  --marker-arm-left: calc(var(--marker-col) / 2.3);
+  --marker-arm-width: calc(var(--marker-arrow-left) - var(--marker-arm-left) + 2px);
+  --marker-arm-display: block;
+
+  /* Derive button:
+   * --derive-btn-width: fixed button width.
+   * --derive-arm-width: length of the connecting line (::before pseudo).
+   * --derive-gap: margin-left between card edge and the arm.
+   *
+   * Derived layout totals used for parallel card equalization:
+   * --derive-total: full button's layout footprint (width + margin).
+   * --parallel-derive-total: condensed button's footprint.
+   * --derive-width-diff: the difference — applied as extra flex-basis on
+   *   the last parallel node so all cards in the row resolve to equal 1fr.    */
+  --derive-btn-width: 130px;
+  --derive-arm-width: 28px;
+  --derive-gap: 20px;
+  --derive-total: calc(var(--derive-btn-width) + var(--derive-gap));
+  --parallel-derive-total: calc(var(--parallel-derive-btn-width) + var(--parallel-derive-gap));
+  --derive-width-diff: calc(var(--derive-total) - var(--parallel-derive-total));
+
+  /* Expander panel and sibling-nav left padding.
+   * Aligns expanded content with the card column.                             */
+  --expander-pad: calc(var(--marker-col) + var(--node-col-gap));
+  --sibling-pad: calc(var(--marker-col) + var(--node-col-gap));
+
+  /* Parallel layout: when nodes sit side-by-side in a DAG row.
+   * Non-last derive buttons are condensed; last keeps the full button.
+   * Non-first markers shift the dot left and shrink the column.
+   *
+   * --parallel-derive-*: condensed button dimensions.
+   * --parallel-marker-col: tighter marker column for non-first parallel nodes.
+   *   Auto-computed to end just past the shifted arrow-tip (10px arrow + 2px).
+   * --marker-diff: width saved by the smaller column, used as flex-basis
+   *   compensation on first-parallel nodes so all cards resolve equally.       */
+  --parallel-derive-btn-width: 28px;
+  --parallel-derive-gap: 4px;
+  --parallel-derive-arm: 12px;
+  --parallel-marker-col: calc(var(--marker-arrow-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + 25px);
+  --marker-diff: calc(var(--marker-col) - var(--parallel-marker-col));
+  --parallel-shift: 13px;
+
+  /* Stacked parallel: indent per nesting depth when parallel nodes collapse
+   * into a vertical indented list. Uses --marker-col for visual consistency.  */
+  --stacked-indent: var(--marker-col);
+}
+
+
+/* -----------------------------------------------------------------------------
+   Responsive Breakpoint Overrides
+   -----------------------------------------------------------------------------
+   Each breakpoint reassigns layout tokens. All component rules automatically
+   adapt because they reference the tokens, not raw pixel values.
+
+   CSS LIMITATION: @media and @container queries cannot use var(), so threshold
+   values are hardcoded literals. This table is the single source of truth.
+   If you change a threshold, grep for the old value across all CSS files.
+
+   VIEWPORT BREAKPOINTS (used in @media queries):
+     1120px — app max-width boundary. Content starts touching viewport edges.
+              Files: tokens.css, (header.css Phase 2)
+     768px  — tablet. Derive label hidden, grids collapse.
+              Files: tokens.css, derive-button.css, (header.css, expander.css)
+     550px  — mobile header. Hamburger replaces chevron.
+              Files: (header.css Phase 2)
+     500px  — minimal marker. Arm hidden, dot shrinks.
+              Files: tokens.css, map-layout.css, node-card.css, derive-button.css
+
+   CONTAINER QUERY BREAKPOINTS (used in @container queries):
+     300px  — card internals. So-what hidden, header loosens.
+              Files: node-card.css
+     200px  — card internals. Controls wrap to full-width row.
+              Files: node-card.css
+
+   JS THRESHOLD (in constants.js):
+     290px  — STACK_THRESHOLD. Per-child width below which parallel runs stack.
+              File: constants.js                                               */
+
+@media (max-width: 1120px) {
+  :root {
+    --marker-col: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --derive-btn-width: 54px;
+    --derive-gap: 8px;
+    --derive-arm-width: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    --marker-col: 18px;
+    --node-col-gap: 0px;
+    --marker-dot-size: 12px;
+    --marker-dot-offset-top: 16px;
+    --marker-arm-display: none;
+    --derive-btn-width: 44px;
+    /* Arm hidden at this breakpoint — parallel markers use the same column.   */
+    --parallel-marker-col: var(--marker-col);
+    --stacked-indent: 28px;
+  }
+}

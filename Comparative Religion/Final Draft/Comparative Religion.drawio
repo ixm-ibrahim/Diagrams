@@ -1,0 +1,165 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="4">
+  <diagram name="Introduction" id="eKSKFbOxI6hfEGdXwg86">
+    <mxGraphModel dx="2377" dy="1602" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FAF7F2" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-28" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="1090" width="840" x="5" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-26" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=0.5;dashed=1;dashPattern=12 12;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint y="545" as="sourcePoint" />
+            <mxPoint x="840" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-3" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="95" as="sourcePoint" />
+            <mxPoint x="835" y="95" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-4" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="195" as="sourcePoint" />
+            <mxPoint x="835" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-5" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="295" as="sourcePoint" />
+            <mxPoint x="835" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-6" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="395" as="sourcePoint" />
+            <mxPoint x="835" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-7" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="495" as="sourcePoint" />
+            <mxPoint x="835" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-8" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="595" as="sourcePoint" />
+            <mxPoint x="835" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-9" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="695" as="sourcePoint" />
+            <mxPoint x="835" y="695" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-10" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="795" as="sourcePoint" />
+            <mxPoint x="835" y="795" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-11" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="895" as="sourcePoint" />
+            <mxPoint x="835" y="895" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-12" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="5" y="995" as="sourcePoint" />
+            <mxPoint x="835" y="995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-15" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="70" y="5" as="sourcePoint" />
+            <mxPoint x="70" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-16" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="5" as="sourcePoint" />
+            <mxPoint x="170" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-17" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="5" as="sourcePoint" />
+            <mxPoint x="270" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-18" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="5" as="sourcePoint" />
+            <mxPoint x="370" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-19" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="470" y="5" as="sourcePoint" />
+            <mxPoint x="470" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-20" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="570" y="5" as="sourcePoint" />
+            <mxPoint x="570" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-21" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="670" y="5" as="sourcePoint" />
+            <mxPoint x="670" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-22" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;dashPattern=1 2;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="770" y="5" as="sourcePoint" />
+            <mxPoint x="770" y="1085" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gKmLk_J6SsKJBl4I6__H-24" edge="1" parent="gKmLk_J6SsKJBl4I6__H-28" style="endArrow=none;html=1;rounded=0;strokeWidth=0.5;dashed=1;dashPattern=12 12;opacity=50;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="1090" as="sourcePoint" />
+            <mxPoint x="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Rules" id="ghJOcOny4rys1LhLxlTN">
+    <mxGraphModel dx="1426" dy="961" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0">
+      <root>
+        <mxCell id="AX4XMft4UHfSyVon83J7-0" />
+        <mxCell id="AX4XMft4UHfSyVon83J7-1" parent="AX4XMft4UHfSyVon83J7-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Table of Contents" id="jCPifMdVxWkcM3ZPz1wR">
+    <mxGraphModel dx="1426" dy="961" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0">
+      <root>
+        <mxCell id="d_N2TpSQOdHlQ9NKiyAk-0" />
+        <mxCell id="d_N2TpSQOdHlQ9NKiyAk-1" parent="d_N2TpSQOdHlQ9NKiyAk-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Map" id="NyObpPbH-R6i7u2jqYVz">
+    <mxGraphModel dx="1426" dy="961" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#CCCCCC" math="0" shadow="0">
+      <root>
+        <mxCell id="YWZ2uFaouK5j4Wh0WGzf-0" />
+        <mxCell id="YWZ2uFaouK5j4Wh0WGzf-1" parent="YWZ2uFaouK5j4Wh0WGzf-0" />
+        <UserObject label="&lt;font style=&quot;font-size: 20px;&quot;&gt;Introduction&lt;/font&gt;" id="c40Rn5kzhZeR7Li9UMA0-0">
+          <mxCell parent="YWZ2uFaouK5j4Wh0WGzf-1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#E6E6E6;fontSize=1;" vertex="1">
+            <mxGeometry height="50" width="810" x="20" y="15" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="c40Rn5kzhZeR7Li9UMA0-1" parent="YWZ2uFaouK5j4Wh0WGzf-1" style="rounded=0;whiteSpace=wrap;html=1;pointerEvents=0;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;spacingTop=4;spacingLeft=6;spacingRight=6;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;This project begins with a simple question: &lt;b style=&quot;&quot;&gt;How can we distinguish between truth and falsehood?&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;In a world saturated with belief, bias, and speculation, the pursuit of truth often gets buried beneath inherited assumptions and emotional comfort. I wanted to peel all that away - to start from the ground up, beginning only with what we directly experience and know to be real, and then reason forward using the same logic that governs every other reliable field of inquiry.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;The purpose of this work is not to defend a particular side but to identify the truth and defend it instead, removing the barriers that make it inaccessible. The barriers that many discussions about God, scripture, or existence tend to have collapse into two extremes - faith without verification or skepticism without evidence - and both fall short because they bypass and abandon reasoning when it becomes uncomfortable. The aim here is to expose the bridge between belief and reason - that faith, reason, and observation necessarily coexist - showing that truth can be mapped, step by step, through consistent inference.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;This project is built on hierarchical logic - a structure where each idea depends on something more fundamental beneath it. Every section begins from observable reality (to identify fundamental, primary truths) and ascends layer by layer toward higher-level claims (using what we know to derive what encompasses them all). Each claim is evaluated by the same standard: does it remain consistent with what we already know to be true? And does it explain more with fewer assumptions than its alternatives?&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;In other words:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;If two claims conflict, then only one can align fully with reality.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;If a claim cannot be tested by the same principles that test every other truth, then it cannot be reliably known.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;- If a claim is known only when using an approach that obscures truth and relies on baseless circularity, then it is indistinguishable from falsehood (unless a stronger approach is used)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="305" width="810" x="20" y="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

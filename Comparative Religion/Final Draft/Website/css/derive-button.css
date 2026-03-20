@@ -1,0 +1,101 @@
+/* =============================================================================
+   derive-button.css — Derivation Button
+   =============================================================================
+   The "Derivation →" button in the third grid column of each node row.
+   Includes the horizontal connecting arm (::before pseudo-element) that
+   visually links the card to the button.
+
+   Depends on tokens.css:
+     --derive-btn-width, --derive-gap, --derive-arm-width, --border,
+     --text, --spine-color
+
+   HTML classes styled here:
+     .btn-derivation, .btn-derivation .label
+   ============================================================================= */
+
+.btn-derivation {
+  grid-row: 1;
+  grid-column: 3;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--derive-btn-height);
+  width: var(--derive-btn-width);
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text);
+  position: relative;
+  margin-left: var(--derive-gap);
+  margin-top: var(--derive-btn-offset-top);
+  cursor: pointer;
+  transition: background var(--transition-base) ease, transform var(--transition-fast) ease;
+}
+
+/* Horizontal arm: connects the card's right edge to the button */
+.btn-derivation::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--derive-arm-width));
+  top: 50%;
+  width: var(--derive-arm-width);
+  height: var(--spine-width);
+  background: var(--spine-color);
+  transform: translateY(-50%);
+}
+
+/* Arrow span: shifts right on hover to emphasize direction */
+.btn-derivation span:last-child {
+  display: inline-block;
+  transition: transform var(--transition-base) ease, opacity var(--transition-base) ease;
+}
+
+.btn-derivation:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-derivation:hover span:last-child {
+  transform: translateX(3px);
+  opacity: 1;
+}
+
+.btn-derivation:active {
+  transform: translateY(0) scale(0.95);
+}
+
+[data-theme="light"] .btn-derivation:hover {
+  background: rgba(16, 26, 53, 0.15);
+  border-color: rgba(16, 26, 53, 0.3);
+}
+
+
+/* Tablet: hide label text (button shows just "→")
+   Dimension changes handled by breakpoint tokens in tokens.css. */
+@media (max-width: 768px) {
+  .btn-derivation .label {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .btn-derivation {
+    margin-top: 8px;
+    z-index: 1;
+  }
+  .btn-derivation::before {
+    z-index: -1;
+  }
+}
+
+
+/* Keyboard focus indicator
+   ----------------------------------------------------------------------------- */
+.btn-derivation:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}

@@ -1,0 +1,1939 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="docTitle">Project Overview - Map</title>
+
+  <style>
+    /* =========================================================
+       1. DESIGN TOKENS & THEMES
+       ========================================================= */
+    :root {
+      /* Sizing & Borders */
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --node-max-width: 880px;
+      --node-min-h: 80px;
+
+      /* Colors - Dark (Default) */
+      --bg-0: #0b1020;
+      --bg-1: #070a12;
+      --text: #f2f5ff;
+      --text-muted: #a9b6d3;
+      --text-faint: rgba(233, 240, 255, 0.55);
+      --border: rgba(255, 255, 255, 0.12);
+      --border-thin: rgba(255, 255, 255, 0.08);
+      --glass: rgba(255, 255, 255, 0.15);
+      --panel-bg: #0f1730;
+      --panel-accent: #111b36;
+      
+      /* Mini-Node Specific Colors */
+      --mini-bg: rgba(255, 255, 255, 0.02);
+      --mini-content-bg: rgba(0, 0, 0, 0.3);
+      --mini-content-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.2);
+
+      /* Shadows & Accents */
+      --shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+      --shadow-deep: 0 16px 40px rgba(0, 0, 0, 0.42);
+      --spine: rgba(233, 240, 255, 0.18);
+      --spine-glow: rgba(110, 140, 255, 0.18);
+      --header-ink: #ffffff;
+
+      /* Typography */
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    [data-theme="light"] {
+      /* Colors - Light Override */
+      --bg-0: #f6f7fb;
+      --bg-1: #eef1f8;
+      --text: #101a35;
+      --text-muted: #475577;
+      --text-faint: rgba(16, 26, 53, 0.55);
+      --border: rgba(16, 26, 53, 0.14);
+      --border-thin: rgba(16, 26, 53, 0.10);
+      --glass: rgba(255, 255, 255, 0.90);
+      --panel-bg: #ffffff;
+      --panel-accent: #f4f6fb;
+      
+      --mini-bg: rgba(16, 26, 53, 0.02);
+      --mini-content-bg: rgba(16, 26, 53, 0.05);
+      --mini-content-shadow: inset 0 3px 8px rgba(16, 26, 53, 0.04);
+
+      --shadow: 0 12px 30px rgba(16, 26, 53, 0.12);
+      --shadow-deep: 0 18px 46px rgba(16, 26, 53, 0.14);
+      --spine: rgba(16, 26, 53, 0.14);
+      --spine-glow: rgba(90, 120, 255, 0.14);
+      --header-ink: #000000;
+    }
+
+    /* =========================================================
+       2. BASE STYLES & RESET
+       ========================================================= */
+    * { 
+      box-sizing: border-box; 
+    }
+    
+    /* Prevent iOS/Safari from auto-inflating text in landscape mode */
+    html, body {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--text);
+      background:
+        radial-gradient(1200px 620px at 14% 0%, rgba(110,140,255,0.18), transparent 60%),
+        radial-gradient(980px 540px at 88% 10%, rgba(255,110,190,0.12), transparent 55%),
+        linear-gradient(180deg, var(--bg-0), var(--bg-1));
+      min-height: 100vh;
+      transition: background 0.3s ease;
+    }
+
+    a { 
+      text-decoration: none; 
+      color: inherit; 
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* Main Application Wrapper */
+    .app-wrap {
+      max-width: 1120px;
+      min-width: 450px;
+      margin: 0 auto;
+      padding: 22px 18px 56px;
+    }
+
+    /* Global Focus Utility */
+    body.is-focused .node-row:not(.is-active) { 
+      opacity: 0.45; 
+      filter: blur(0.6px); 
+    }
+
+    /* =========================================================
+       3. COMPONENTS: HEADER & NAVIGATION
+       ========================================================= */
+    .page-header {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.02));
+      border-radius: var(--radius-lg);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      padding: 16px 20px 12px;
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+    
+    .header-top { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      gap: 12px; 
+    }
+    
+    .page-title { 
+      margin: 0; 
+      font-size: 22px; 
+      letter-spacing: 0.2px; 
+      line-height: 1.2; 
+    }
+    
+    .header-toggle { 
+      display: none; 
+    }
+
+    /* Desktop Header Collapse Chevron */
+    .chevron-toggle {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+      margin-left: auto;
+    }
+    
+    .chevron-toggle:hover {
+      color: var(--text);
+    }
+    
+    .chevron-toggle::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(225deg); /* Points UP when expanded */
+      transition: transform 0.2s ease;
+      margin-top: 4px;
+    }
+    
+    /* State: Desktop Collapsed */
+    .page-header.is-desktop-collapsed .chevron-toggle::after {
+      transform: rotate(45deg); /* Points DOWN when collapsed */
+      margin-top: -4px;
+    }
+    
+    .page-header.is-desktop-collapsed .header-collapsible {
+      display: none;
+    }
+    
+    .header-collapsible { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 10px; 
+      margin-top: 6px; 
+    }
+    
+    .subtitle { 
+      color: var(--text-muted); 
+      font-size: 13px; 
+      line-height: 1.45; 
+    }
+
+    .header-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid var(--border-thin);
+      padding-top: 12px;
+    }
+
+    .nav-crumbs { 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      color: var(--text-muted); 
+      font-size: 13px; 
+    }
+    
+    .nav-crumbs a { 
+      color: var(--text); 
+      font-weight: 600; 
+      opacity: 0.8; 
+    }
+    
+    .nav-crumbs .sep { 
+      color: var(--text-faint); 
+      font-size: 14px; 
+    }
+    
+    .nav-crumbs .current { 
+      font-weight: 700; 
+    }
+
+    /* Common UI Button */
+    .btn-ui {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.1);
+      color: inherit;
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s ease;
+    }
+    
+    .btn-ui:hover { 
+      background: rgba(255,255,255,0.08); 
+    }
+    
+    [data-theme="light"] .btn-ui { 
+      background: rgba(16,26,53,0.05); 
+    }
+
+    /* Search Input */
+    .search-group { 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      flex: 1; 
+      justify-content: flex-end; 
+    }
+    
+    .search-input-wrap { 
+      position: relative; 
+      max-width: 340px; 
+      width: 100%; 
+      min-width: 190px; 
+    }
+    
+    .search-icon { 
+      position: absolute; 
+      left: 12px; 
+      top: 50%; 
+      transform: translateY(-50%); 
+      opacity: 0.7; 
+      font-size: 14px; 
+    }
+    
+    .search-input-wrap input {
+      width: 100%;
+      padding: 7px 12px 7px 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.1);
+      color: inherit;
+      outline: none;
+    }
+    
+    .search-input-wrap input::placeholder { 
+      color: var(--text-faint); 
+    }
+
+    /* Mobile Header Collapse logic */
+    @media (max-width: 550px) {
+      .chevron-toggle {
+        display: none; /* Hide chevron when mobile menu takes over */
+      }
+      .page-header { 
+        padding: 12px 16px; 
+        background: var(--bg-0); 
+        backdrop-filter: none; 
+      }
+      .header-toggle { 
+        display: block; 
+        padding: 6px 12px; 
+        font-size: 14px; 
+        font-weight: bold; 
+      }
+      .header-collapsible { 
+        display: none; 
+        margin-top: 12px; 
+        padding-top: 12px; 
+        border-top: 1px solid var(--border-thin); 
+      }
+      .page-header.is-expanded .header-collapsible { 
+        display: flex; 
+      }
+      .header-bottom { 
+        border-top: none; 
+        padding-top: 0; 
+        flex-direction: column; 
+        align-items: stretch; 
+        gap: 12px; 
+      }
+      .search-group { 
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+      }
+      .search-input-wrap { 
+        max-width: none; 
+        flex: 1; 
+      }
+    }
+
+    /* =========================================================
+       4. COMPONENTS: MAP STRUCTURE & TIMELINE
+       ========================================================= */
+    .map-flow { 
+      position: relative; 
+      padding: 10px 0; 
+      margin-top: 14px; 
+    }
+    
+    .map-spine {
+      position: absolute;
+      left: 22px; 
+      top: 0; 
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--spine) 5%, var(--spine) 95%, transparent);
+    }
+    
+    .map-spine::after {
+      content: "";
+      position: absolute; 
+      left: 50%; 
+      top: 40px; 
+      transform: translateX(-50%);
+      width: 8px; 
+      height: calc(100% - 80px);
+      background: radial-gradient(closest-side, var(--spine-glow), transparent 80%);
+      filter: blur(2px); 
+      opacity: 0.6;
+    }
+
+    .node-row {
+      display: grid;
+      grid-template-columns: 64px minmax(0, var(--node-max-width)) max-content;
+      grid-template-rows: auto auto;
+      column-gap: 6px;
+      row-gap: 8px;
+      padding: 4px 0;
+      position: relative;
+    }
+
+    .node-marker { 
+      position: relative; 
+      display: flex; 
+      align-items: flex-start; 
+      justify-content: center; 
+      grid-row: 1 / span 2; 
+    }
+    
+    .node-marker::before {
+      content: ""; 
+      width: 16px; 
+      height: 16px; 
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2); 
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+      margin-top: 14px; 
+      z-index: 2;
+    }
+    
+    [data-theme="light"] .node-marker::before { 
+      background: rgba(16,26,53,0.1); 
+    }
+    
+    .node-marker::after {
+      content: ""; 
+      position: absolute; 
+      left: 28px; 
+      top: 22px; 
+      width: 22px; 
+      height: 2px; 
+      background: var(--spine);
+    }
+    
+    .marker-arrow-tip {
+      position: absolute; 
+      left: 48px; 
+      top: 17px; 
+      width: 0; 
+      height: 0;
+      border-top: 6px solid transparent; 
+      border-bottom: 6px solid transparent; 
+      border-left: 10px solid var(--spine);
+    }
+
+    /* Node Map Responsive Breakpoints */
+    @media (max-width: 1120px) { 
+      .node-row { grid-template-columns: 56px 1fr max-content; } 
+    }
+    
+    @media (max-width: 500px) {
+      .node-row { 
+        grid-template-columns: 18px 1fr max-content; 
+        column-gap: 0; 
+      } 
+      .map-spine { 
+        left: 8px; 
+      } 
+      .node-marker::before { 
+        width: 12px; 
+        height: 12px; 
+        margin-top: 16px; 
+        margin-left: 0; 
+      }
+      .node-marker::after, 
+      .marker-arrow-tip { 
+        display: none; 
+      }
+    }
+
+    /* =========================================================
+       5. COMPONENTS: MAIN NODE CARD
+       ========================================================= */
+    .node-card {
+      /* Setup dynamic alias that swaps based on theme */
+      --n-border: var(--n-border-dark);
+      
+      grid-row: 1; 
+      grid-column: 2;
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--n-border);
+      background: linear-gradient(180deg, var(--n-top), var(--n-bottom));
+      color: #081023;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.1s ease, box-shadow 0.15s ease;
+      min-height: var(--node-min-h);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    [data-theme="light"] .node-card {
+      --n-border: var(--n-border-light);
+    }
+    
+    .node-card:hover { 
+      transform: translateY(-2px); 
+      box-shadow: var(--shadow-deep); 
+    }
+    
+    .node-card::before {
+      content: ""; 
+      position: absolute; 
+      inset: 0;
+      background: radial-gradient(800px 180px at 20% 0%, rgba(255,255,255,0.55), transparent 55%),
+                  repeating-linear-gradient(135deg, rgba(0,0,0,0.045) 0 2px, rgba(0,0,0,0) 2px 6px);
+      opacity: 0.22; 
+      pointer-events: none; 
+      mix-blend-mode: soft-light;
+    }
+
+    .node-header {
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      gap: 10px; 
+      padding: 6px 14px; 
+      border-bottom: 1px solid rgba(0,0,0,0.14);
+      cursor: pointer;
+    }
+    
+    .node-title {
+      margin: 0; 
+      font-size: 16.5px; 
+      font-weight: 950; 
+      line-height: 1.22;
+      display: flex; 
+      align-items: baseline;
+    }
+    
+    .node-title .id { 
+      opacity: 0.5; 
+      margin-right: 6px; 
+      font-weight: 800; 
+    }
+    
+    .node-controls {
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      flex-shrink: 0; 
+      white-space: nowrap;
+    }
+
+    .node-so-what { 
+      margin: 0; 
+      color: rgba(8,16,35,0.64); 
+      font-size: 13px; 
+      line-height: 1.42; 
+      padding: 14px 14px 16px; 
+      flex: 1; 
+    }
+
+    .node-badge {
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      padding: 6px 12px;
+      border-radius: 999px; 
+      border: 1px solid rgba(0,0,0,0.2);
+      background: rgba(255,255,255,0.55); 
+      font-family: var(--font-mono);
+      font-size: 12px; 
+      color: rgba(0,0,0,0.72);
+    }
+    
+    .badge-dot { 
+      width: 9px; 
+      height: 9px; 
+      border-radius: 50%; 
+      background: var(--n-border); /* Inherits swapped value */
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.35); 
+    }
+
+    /* Derivation Outer Button */
+    .btn-derivation {
+      grid-row: 1; 
+      grid-column: 3; 
+      align-self: flex-start;
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center;
+      gap: 8px; 
+      height: 34px; 
+      padding: 0 14px; 
+      border-radius: 999px; 
+      border: 1px solid var(--border);
+      background: var(--border-thin); 
+      color: var(--text);
+      position: relative; 
+      margin-left: 20px; 
+      margin-top: 6px; 
+    }
+    
+    .btn-derivation::before { 
+      content: ""; 
+      position: absolute; 
+      left: -28px; 
+      top: 50%; 
+      width: 28px; 
+      height: 2px; 
+      background: var(--spine); 
+      transform: translateY(-50%); 
+    }
+
+    /* Node Card & Button Breakpoints */
+    @media (max-width: 768px) {
+      .btn-derivation span.label { display: none; } 
+      .btn-derivation { 
+        margin-left: 8px; 
+        padding: 0; 
+        width: 54px; 
+        justify-content: center; 
+      } 
+      .btn-derivation::before { 
+        width: 16px; 
+        left: -16px; 
+      } 
+    }
+
+    @media (max-width: 500px) {
+      .node-controls { 
+        flex-direction: column; 
+        align-items: flex-end; 
+        gap: 6px; 
+        margin-top: 2px; 
+      }
+      .node-header { 
+        align-items: flex-start; 
+        padding: 10px 12px; 
+        border-bottom: none; /* Hide dividing line */
+      }
+      .node-so-what {
+        display: none; /* Hide subtext completely */
+      }
+      .node-card {
+        min-height: auto; /* Let card securely shrink to just the header */
+      }
+      .node-card, 
+      .node-expander { 
+        z-index: 2; 
+      } 
+      .btn-derivation { 
+        margin-left: 8px; 
+        margin-top: 8px; 
+        width: 44px; 
+        z-index: 1; 
+      }
+      .btn-derivation::before { 
+        width: 16px; 
+        left: -16px; 
+        z-index: -1; 
+      }
+    }
+
+    /* =========================================================
+       6. COMPONENTS: INTERNAL EXPANDER LOGIC
+       ========================================================= */
+    .node-expander {
+      grid-column: 2; 
+      grid-row: 2;
+      display: grid;
+      grid-template-rows: 0fr; 
+      transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s, transform 0.3s, margin-top 0.3s;
+      opacity: 0; 
+      transform: translateY(-6px);
+      margin-top: 0;
+    }
+    
+    .node-expander.is-open { 
+      grid-template-rows: 1fr; 
+      opacity: 1; 
+      transform: translateY(0); 
+      margin-top: 10px; 
+    }
+
+    .exp-inner {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--panel-bg), var(--panel-accent));
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    /* Logic Section Rows */
+    .logic-section { 
+      border-top: 1px solid var(--border); 
+      padding: 12px 14px; 
+      position: relative; 
+      display: grid; 
+      grid-template-columns: 180px 1fr; 
+      gap: 12px; 
+    }
+    
+    .logic-section:first-child { 
+      border-top: none; 
+    }
+    
+    .logic-header { 
+      color: var(--header-ink); 
+      font-weight: 950; 
+      font-size: 14px;
+      display: flex; 
+      align-items: flex-start; 
+      gap: 10px; 
+      cursor: pointer; 
+      user-select: none;
+    }
+    
+    .logic-header::before { 
+      content: attr(data-step); 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center;
+      width: 22px; 
+      height: 22px; 
+      border-radius: 50%; 
+      border: 1px solid var(--border);
+      background: var(--border-thin); 
+      font-family: var(--font-mono); 
+      font-size: 12px; 
+      z-index: 2;
+    }
+    
+    .logic-header::after { 
+      content: ""; 
+      margin-left: auto; 
+      margin-right: 12px; 
+      align-self: flex-start; 
+      margin-top: 8px;
+      width: 6px; 
+      height: 6px; 
+      border-right: 2px solid currentColor; 
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg); 
+      transition: transform 0.2s; 
+      opacity: 0.6;
+    }
+    
+    .logic-section.is-collapsed .logic-header::after { 
+      transform: rotate(-45deg); 
+    }
+    
+    .logic-section.is-collapsed .logic-content { 
+      display: none; 
+    }
+
+    /* Connecting Lines inside logic rows */
+    .logic-section::after { 
+      content: ""; 
+      position: absolute; 
+      left: 24px; 
+      top: 44px; 
+      bottom: -3px; 
+      width: 2px; 
+      background: var(--border); 
+      opacity: 0.9; 
+      z-index: 1; 
+    }
+    
+    .logic-section::before { 
+      content: ""; 
+      position: absolute; 
+      left: 20px; 
+      bottom: -9px; 
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent; 
+      border-right: 5px solid transparent; 
+      border-top: 6px solid var(--border); 
+      opacity: 0.9; 
+      z-index: 1; 
+    }
+
+    @media (max-width: 768px) { 
+      .logic-section { grid-template-columns: 1fr; } 
+    }
+
+    /* Tab Layout & Controls */
+    .tab-area { 
+      border-top: 1px solid var(--border); 
+      background: var(--mini-bg); 
+      padding: 12px; 
+      display: grid;
+      grid-template-columns: 1fr max-content;
+      gap: 8px 12px;
+      align-items: end;
+    }
+
+    .tab-list { 
+      grid-column: 1; 
+      grid-row: 1; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 8px; 
+    }
+
+    .btn-tab {
+      border: 1px solid var(--border); 
+      background: var(--border-thin); 
+      color: var(--text-muted);
+      padding: 6px 12px; 
+      border-radius: 999px; 
+      font-size: 13px; 
+      font-weight: 700; 
+      cursor: pointer;
+    }
+    
+    .btn-tab[aria-selected="true"] { 
+      background: var(--text); 
+      color: var(--bg-0); 
+      border-color: var(--text); 
+      font-weight: 950; 
+      transform: translateY(-1px); 
+    }
+
+    /* Dynamic Action Slots (Disagree, Agree/Disagree pairs) */
+    .panel-action-slot {
+      grid-column: 2;
+      grid-row: 1;
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-action {
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center;
+      gap: 8px; 
+      padding: 6px 12px; 
+      border-radius: 999px;
+      border: 1px solid var(--border); 
+      background: var(--border-thin); 
+      color: var(--text);
+      font-size: 14px; 
+      cursor: pointer; 
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-action:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+    
+    [data-theme="light"] .btn-action:hover {
+      background: rgba(16, 26, 53, 0.05);
+    }
+
+    /* Non-Terminal Disagree Link Styles (Tinted Red) */
+    .btn-action.btn-derivation-disagree {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.25);
+      color: #fca5a5;
+    }
+    .btn-action.btn-derivation-disagree:hover {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #fecaca;
+    }
+    .btn-action.btn-derivation-disagree:active {
+      background: #ef4444;
+      border-color: #ef4444;
+      color: #450a0a;
+      font-weight: 700;
+    }
+
+    [data-theme="light"] .btn-action.btn-derivation-disagree {
+      background: rgba(220, 38, 38, 0.05);
+      border-color: rgba(220, 38, 38, 0.2);
+      color: #b91c1c;
+    }
+    [data-theme="light"] .btn-action.btn-derivation-disagree:hover {
+      background: rgba(220, 38, 38, 0.1);
+      border-color: rgba(220, 38, 38, 0.3);
+      color: #991b1b;
+    }
+    [data-theme="light"] .btn-action.btn-derivation-disagree:active {
+      background: #dc2626;
+      border-color: #dc2626;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Terminal Action Highlights (Dark Mode) */
+    .btn-action.btn-agree[aria-pressed="true"] {
+      background: #22c55e;
+      border-color: #22c55e;
+      color: #042f14;
+      font-weight: 700;
+    }
+
+    .btn-action.btn-disagree[aria-pressed="true"] {
+      background: #ef4444;
+      border-color: #ef4444;
+      color: #450a0a;
+      font-weight: 700;
+    }
+
+    /* Terminal Action Highlights (Light Mode) */
+    [data-theme="light"] .btn-action.btn-agree[aria-pressed="true"] {
+      background: #16a34a;
+      border-color: #16a34a;
+      color: #ffffff;
+    }
+
+    [data-theme="light"] .btn-action.btn-disagree[aria-pressed="true"] {
+      background: #dc2626;
+      border-color: #dc2626;
+      color: #ffffff;
+    }
+
+    .tab-panel { 
+      grid-column: 1 / 3; 
+      grid-row: 2;
+      border: 1px solid var(--border); 
+      border-radius: var(--radius-md); 
+      background: rgba(0,0,0,0.05); 
+      padding: 10px 12px; 
+      font-size: 13px; 
+    }
+
+    @media (max-width: 650px) {
+      .tab-area { grid-template-columns: 1fr; }
+      .tab-panel { grid-column: 1; grid-row: 2; }
+      .panel-action-slot { 
+        grid-column: 1; 
+        grid-row: 3; 
+        justify-self: flex-start; 
+        margin-top: 4px; 
+      }
+    }
+
+    /* Common List Utilities */
+    .bullets { 
+      list-style: none; 
+      margin: 0; 
+      padding: 0; 
+      display: grid; 
+      gap: 7px; 
+      text-align: left; 
+    }
+    
+    .bullets li { 
+      position: relative; 
+      padding-left: 14px; 
+      line-height: 1.42; 
+    }
+    
+    .bullets li::before { 
+      content: ""; 
+      position: absolute; 
+      left: 0; 
+      top: 0.68em; 
+      width: 4px; 
+      height: 4px; 
+      border-radius: 50%; 
+      background: var(--text-muted); 
+      transform: translateY(-50%); 
+    }
+
+    /* =========================================================
+       7. COMPONENTS: RECURSIVE MINI-NODES
+       ========================================================= */
+    .mini-stack { 
+      display: flex; 
+      flex-direction: column; 
+      align-items: stretch; 
+      gap: 8px; 
+      text-align: left; 
+    }
+    
+    .mini-node { 
+      border: 1px solid var(--border-thin); 
+      border-radius: 12px; 
+      background: var(--mini-bg); 
+      overflow: hidden; 
+      text-align: left; 
+    }
+    
+    .mini-trigger { 
+      width: 100%; 
+      padding: 12px 14px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: flex-start; 
+      background: none; 
+      border: none; 
+      color: var(--text); 
+      font-weight: 700; 
+      font-size: 13.5px; 
+      text-align: left; 
+      cursor: pointer;
+    }
+    
+    .mini-trigger .id { 
+      opacity: 0.5; 
+      margin-right: 6px; 
+      font-weight: 800; 
+    }
+    
+    .mini-trigger::after { 
+      content: ""; 
+      width: 5px; 
+      height: 5px; 
+      border-right: 2px solid currentColor; 
+      border-bottom: 2px solid currentColor; 
+      transform: rotate(45deg); 
+      transition: transform 0.2s; 
+      opacity: 0.6; 
+      margin-left: auto; 
+      margin-right: 6px; 
+    }
+    
+    .mini-node.is-open > .mini-trigger::after { 
+      transform: rotate(-45deg); 
+    }
+    
+    .mini-content-wrap { 
+      display: none; 
+      padding: 0 14px 14px; 
+      border-top: 1px solid var(--border-thin); 
+      background: var(--mini-content-bg);
+      box-shadow: var(--mini-content-shadow);
+      text-align: left; 
+    }
+    
+    .mini-node.is-open > .mini-content-wrap { 
+      display: block; 
+    }
+    
+    .sub-section { 
+      margin-top: 12px; 
+      text-align: left; 
+    }
+    
+    .sub-label { 
+      font-size: 11px; 
+      font-weight: 950; 
+      text-transform: uppercase; 
+      color: var(--text-muted); 
+      margin-bottom: 4px; 
+      letter-spacing: 0.6px; 
+      text-align: left; 
+    }
+    
+    .sub-body { 
+      font-size: 13px; 
+      color: var(--text); 
+      line-height: 1.45; 
+      text-align: left; 
+    }
+
+    .mini-content-wrap .mini-node { 
+      margin-top: 10px; 
+      border-left-width: 4px; 
+      background: rgba(255,255,255,0.01); 
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-wrap">
+    <header class="page-header" id="pageHeader">
+      <div class="header-top">
+        <h1 class="page-title" id="titleText"></h1>
+        <button class="chevron-toggle" id="chevronToggle" type="button" aria-expanded="true" aria-controls="headerCollapsible" aria-label="Collapse Header"></button>
+        <button class="btn-ui header-toggle" id="headerToggle" type="button" aria-expanded="false" aria-controls="headerCollapsible" aria-label="Toggle Menu">☰ Menu</button>
+      </div>
+
+      <div class="header-collapsible" id="headerCollapsible">
+        <div class="subtitle" id="subtitleText"></div>
+        <div class="header-bottom">
+          <nav class="nav-crumbs" aria-label="Breadcrumbs">
+            <a href="#" id="breadcrumbRoot"></a> <span class="sep" aria-hidden="true">›</span> <span class="current" aria-current="page" id="breadcrumbCurrent"></span>
+          </nav>
+          
+          <div class="search-group">
+            <div class="search-input-wrap">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" aria-label="Search map" />
+            </div>
+            <button class="btn-ui" id="themeToggle" type="button" aria-label="Toggle Dark Mode">🌙 Dark</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="map-flow" id="mapRoot" role="main">
+      <div class="map-spine" aria-hidden="true"></div>
+      <!-- Nodes rendered dynamically here -->
+    </main>
+  </div>
+
+  <script>
+    /**
+     * ==========================================
+     * GLOBAL CONFIGURATIONS
+     * ==========================================
+     */
+    const ANIMATION_SPEEDS = {
+      CSS_TRANSITION_MS: 300,
+      SCROLL_DELAY_MS: 310
+    };
+
+    const APP_CONFIG = {
+      title: "Project Overview",
+      subtitle: "Eight top-level conclusions. Click any node to expand its contents (collapsible internals + Zoom: Derivation Map).",
+      breadcrumbRoot: "Home",
+      searchPlaceholder: "Find a claim / term...",
+      nodePrefix: "S" // Change to "" (empty string) to hide the pill badge from the cards
+    };
+
+    /**
+     * ==========================================
+     * DATA STORE (Procedural Configuration)
+     * ==========================================
+     * - `hasDerivation: true/false`: 
+     * - true (default/implied): Renders outer 'Derivation' button and inner 'Disagree? See how...' link.
+     * - false: Hides outer derivation button entirely, and swaps inner link for 'I agree' / 'I disagree' buttons.
+     */
+    const NODE_DATA = [
+      {
+        id: 1, 
+        hasDerivation: true,
+        claim: "Truth-seeking requires willingness to be corrected.",
+        soWhat: "It forbids \"belief by comfort/identity\" as a truth method.",
+        href: "1-pursuit-of-truth.html",
+        search: "correction truth reality arbitrator method",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["I can be wrong about important things.", "Disagreement exists among sincere people.", "A method must constrain fabrication."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["A truth method must keep truth distinguishable from falsehood; otherwise it is not a truth method."] },
+          { type: "row", title: "If Rejected", numbered: false, items: [
+            {
+              title: "Loss of Grounding",
+              detail: "If this premise is rejected, later steps in the chain lose their normative grounding.",
+              children: [
+                { title: "Aesthetic Drift", detail: "The project map shifts from being a logical corrective tool to a mere aesthetic choice without corrective power." },
+                { title: "Tribal Lock", detail: "It becomes impossible to distinguish between a conclusion based on reality and one based on deep tribal bias." }
+              ]
+            },
+            { title: "Indistinguishable Truth", detail: "Rejecting correction mechanism makes verification impossible." }
+          ]},
+          { type: "tab", title: "Unlocks", numbered: false, items: ["Willingness to be corrected allows defining 'reality' as constraint.", "Allows rejecting belief justification by comfort, tribe, or aesthetics."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["'My belief is true because it comforts me' fails.", "'All views are equally valid' fails."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["Not concluded: which worldview is true."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "Commitment can exist without a correction mechanism.",
+              subSections: [
+                { label: "Objection Basis", items: ["Faith is often defined as unwavering commitment regardless of external feedback."] },
+                { label: "What's Missing", items: ["It fails to distinguish between sincere faith in truth and sincere faith in a fabrication."] },
+                { label: "Correction", items: ["A method that cannot separate truth from falsehood fails the definition of truth-seeking."] }
+              ]
+            },
+            {
+              title: "Truth is entirely subjective to the individual.",
+              subSections: [
+                { label: "Objection Basis", items: ["Everyone has their own truth based on their unique lived experience."] },
+                { label: "What's Missing", items: ["Confuses subjective experience with objective claims about reality."] },
+                { label: "Correction", items: ["A truth method applies to verifiable, objective claims, not personal, subjective preferences."] }
+              ]
+            }
+          ]}
+        ]
+      },
+      {
+        id: 2, 
+        hasDerivation: true,
+        claim: "Reality can be inferred from experience under constraints.",
+        soWhat: "It validates careful inference while rejecting \"anything goes\" perception claims.",
+        href: "2-discovering-reality.html",
+        search: "perception reality inference skepticism bias",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["Experience contains stable patterns over time.", "Faculties are imperfect but corrigible.", "Errors can be detected via cross-checks."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["Prefer explanations that fit stable patterns with minimal ad hoc assumptions."] },
+          { type: "row", title: "If Rejected", numbered: false, items: ["Without stable patterns or cross-checks, 'reality' becomes subjective."] },
+          { type: "tab", title: "Unlocks", numbered: false, items: ["Allows constructing 'reality' without assuming omniscient perception.", "Allows proceeding to confidence rules for logic/history."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["Total skepticism and nihilism.", "Solipsism as a practical worldview."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["The exact ontological substance of the external world."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "Inference from experience is circular.",
+              subSections: [
+                { label: "Objection Basis", items: ["We use our faculties to verify our faculties."] },
+                { label: "What's Missing", items: ["Error-detection is a functional feedback loop, not just a logical one."] },
+                { label: "Correction", items: ["We accept circularity when the alternative is total nihilism."] }
+              ]
+            },
+            {
+              title: "Our senses are frequently deceived.",
+              subSections: [
+                { label: "Objection Basis", items: ["Optical illusions and hallucinations prove senses are entirely unreliable."] },
+                { label: "What's Missing", items: ["We only know they are illusions because we possess reliable cross-checking methods."] },
+                { label: "Correction", items: ["Corrigibility implies a baseline of reliability, not perfection."] }
+              ]
+            }
+          ]}
+        ]
+      },
+      {
+        id: 3, 
+        hasDerivation: true,
+        claim: "A method that can justify falsehood cannot verify truth.",
+        soWhat: "It rejects circular self-authentication and \"confidence by ignorance.\"",
+        href: "3-building-confidence.html",
+        search: "confidence method circular proof history logic",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["A claim cannot self-authenticate.", "Humans can fabricate convincing stories."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["A justification method must resist fabrication and preserve consistency."] },
+          { type: "row", title: "If Rejected", numbered: false, items: ["Without anti-fabrication constraints, persuasion replaces knowledge."] },
+          { type: "tab", title: "Unlocks", numbered: false, items: ["Allows a standard for historical reliability.", "Allows coherent definition constraints for God/revelation."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["Faith based purely on unverified emotion.", "Circular religious epistemology (e.g. 'The book is true because the book says so')."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["Which specific religion or historical claim passes the test."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "God can authenticate Himself without external verification.",
+              subSections: [
+                { label: "Objection Basis", items: ["Divine revelation doesn't need flawed human methods to prove it is true."] },
+                { label: "What's Missing", items: ["It assumes the claim of divine revelation is already true before testing it."] },
+                { label: "Correction", items: ["We need a method to verify *which* competing claim of divine revelation is actually from God."] }
+              ]
+            },
+            {
+              title: "Historical proofs are always probabilistic.",
+              subSections: [
+                { label: "Objection Basis", items: ["We can never have 100% absolute certainty about events in history."] },
+                { label: "What's Missing", items: ["Probabilistic certainty is still fundamentally distinct from blind fabrication."] },
+                { label: "Correction", items: ["The method only requires distinguishing reliably transmitted history from clear myth or forgery."] }
+              ]
+            }
+          ]}
+        ]
+      },
+      {
+        id: 4, 
+        hasDerivation: true,
+        claim: "A true religion must be coherent and reason-supported.",
+        soWhat: "It creates testable constraints for what \"true revelation\" can look like.",
+        href: "4-defining-god.html",
+        search: "god coherence mystery contradiction religion reason",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["Contradictions cannot both be true.", "Category errors invalidate theology claims."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["Theology must obey coherence and category constraints."] },
+          { type: "row", title: "If Rejected", numbered: false, items: ["If contradictions are accepted as 'mystery', verification becomes impossible."] },
+          { type: "tab", title: "Unlocks", numbered: false, items: ["A working, objective definition of God for historical and logical testing.", "A strict filter for examining religious claims."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["Religions with inherent logical contradictions.", "Theologies that rely on category errors."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["Whether such a coherent religion actually exists historically.", "The specific rituals of this religion."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "Human logic cannot comprehend the Divine.",
+              subSections: [
+                { label: "Objection Basis", items: ["God is infinitely greater than human reason, so divine contradictions are just mysteries."] },
+                { label: "What's Missing", items: ["If logic is suspended, there is no way to tell a divine mystery from a human falsehood."] },
+                { label: "Correction", items: ["God may transcend reason, but truth cannot logically contradict itself."] }
+              ]
+            },
+            {
+              title: "Religion is about practice, not strict logic.",
+              subSections: [
+                { label: "Objection Basis", items: ["The value of religion is in community and morality, not philosophical coherence."] },
+                { label: "What's Missing", items: ["Practice based on a falsehood is a violation of the first premise (Truth-seeking)."] },
+                { label: "Correction", items: ["Morality and community must be grounded in an actually true theology to be ultimately valid."] }
+              ]
+            }
+          ]}
+        ]
+      },
+      {
+        id: 5, 
+        hasDerivation: true,
+        claim: "Monotheism fits the constraints best; rivals fail or require extra authority.",
+        soWhat: "It pushes the bottleneck to historical reliability of scripture.",
+        href: "5-alignment-with-reality.html",
+        search: "monotheism atheism polytheism trinity authority",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["God concept must match inferred constraints.", "Same test applied across worldviews."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["Apply identical constraints to competing systems."] },
+          { type: "row", title: "If Rejected", numbered: false, items: ["If the test is not applied equally, bias hides the strongest candidate."] },
+          { type: "tab", title: "Unlocks", numbered: false, items: ["Focuses the remaining historical search purely on Monotheistic systems."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["Polytheism (violates ultimate necessity).", "Atheism (fails to ground the inferred constraints).", "Pantheism (category errors of identity)."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["Which specific monotheistic claim is historically valid."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "Polytheism can have a hierarchy of gods.",
+              subSections: [
+                { label: "Objection Basis", items: ["A supreme God could delegate power to lesser deities, maintaining order."] },
+                { label: "What's Missing", items: ["If one God is supreme and necessary, the lesser 'gods' are merely creations, making it effectively monotheism."] },
+                { label: "Correction", items: ["True polytheism asserts multiple independent, necessary beings, which leads to logical contradictions in ultimate authority."] }
+              ]
+            },
+            {
+              title: "Atheism requires fewer assumptions.",
+              subSections: [
+                { label: "Objection Basis", items: ["Occam's razor favors a universe without adding a divine creator."] },
+                { label: "What's Missing", items: ["Atheism fails to account for the necessary grounding of stable, inferred reality and consciousness."] },
+                { label: "Correction", items: ["A single necessary being is the most parsimonious explanation for dependent reality."] }
+              ]
+            }
+          ]}
+        ]
+      },
+      {
+        id: 6, 
+        hasDerivation: true,
+        claim: "The Qur'an's preservation is constrained; the New Testament requires speculation.",
+        soWhat: "It collapses \"NT is more authoritative\" as a required premise.",
+        href: "6-historical-comparison.html",
+        search: "quran new testament preservation speculation chain",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["Fabrication resistance is required for authority.", "Unknown links cannot be filled by trust alone."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["Show where two historical claims diverge under same anti-fabrication constraints."] },
+          { type: "row", title: "If Rejected", numbered: false, items: ["Accepting speculation as authority reintroduces fabrication risk."] },
+          { type: "tab", title: "Unlocks", numbered: false, items: ["Establishes the Qur'an as a historically reliable textual baseline.", "Provides an objective metric for comparing scriptural authority."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["Blind trust in textual transmission.", "Assuming older texts are inherently more reliable without transmission chains."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["The ultimate theological implications of the preserved text."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "The New Testament has more manuscript copies.",
+              subSections: [
+                { label: "Objection Basis", items: ["Thousands of early Greek manuscripts prove the NT is highly reliable."] },
+                { label: "What's Missing", items: ["Quantity of late manuscripts doesn't fix a broken or undocumented initial chain of transmission."] },
+                { label: "Correction", items: ["Reliability requires an unbroken, verifiable chain back to the source, not just a large volume of later copies."] }
+              ]
+            },
+            {
+              title: "Oral transmission is less reliable than written.",
+              subSections: [
+                { label: "Objection Basis", items: ["Human memory is faulty, making the oral preservation of the Qur'an suspect."] },
+                { label: "What's Missing", items: ["Mass, concurrent memorization by thousands of independent sources acts as a systemic error-correction mechanism."] },
+                { label: "Correction", items: ["Constrained, mass oral transmission is mathematically highly resistant to localized fabrication."] }
+              ]
+            }
+          ]}
+        ]
+      },
+      {
+        id: 7, 
+        hasDerivation: true,
+        claim: "Comparative theology favors Islam as correction over Christianity as corruption.",
+        soWhat: "It checks the conclusion using the same constraints, not a new standard.",
+        href: "7-nonfundamental-comparison.html",
+        search: "christianity islam corruption correction coherence",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["Theology must remain coherent without ad hoc escapes."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["Apply coherence/correspondence constraints to theological structures."] },
+          { type: "row", title: "If Rejected", numbered: false, items: ["Without coherence pressure, any theological patch can be defended indefinitely."] },
+          { type: "tab", title: "Unlocks", numbered: false, items: ["Resolves deep theological disputes using strict coherence parameters."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["Theologies that require ad-hoc logical exceptions.", "The concept of theological 'mystery' to excuse contradiction."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["Minor secondary doctrines that don't violate core coherence."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "The Trinity is a complex coherence, not a contradiction.",
+              subSections: [
+                { label: "Objection Basis", items: ["The Trinity defines God as one in essence but three in persons, avoiding strict logical contradiction."] },
+                { label: "What's Missing", items: ["The application of attributes to the persons inevitably leads to category errors regarding necessity and dependence."] },
+                { label: "Correction", items: ["Applying strict identity logic reveals the formulation acts as a contradiction masked by semantic redefinition."] }
+              ]
+            },
+            {
+              title: "Islam's strict monotheism is too distant.",
+              subSections: [
+                { label: "Objection Basis", items: ["A God without incarnation cannot truly understand or relate to human suffering."] },
+                { label: "What's Missing", items: ["Confuses ontological separation with a lack of divine knowledge or compassion."] },
+                { label: "Correction", items: ["An omniscient creator understands its creation intimately without needing to physically become part of it."] }
+              ]
+            }
+          ]}
+        ]
+      },
+      {
+        id: 8, 
+        hasDerivation: false, /* TERMINAL NODE FLAG */
+        claim: "Islam survives the full filter as the best constrained candidate.",
+        soWhat: "It turns 'belief' into a traceable structure, not a slogan.",
+        href: "8-results-and-conclusion.html",
+        search: "results conclusion islam survives filter",
+        sections: [
+          { type: "row", title: "Observations", numbered: true, items: ["Prior constraints hold without contradiction."] },
+          { type: "row", title: "Conclusion", numbered: true, items: ["Select the candidate that satisfies coherence + correspondence + constrained authority best."] },
+          { type: "row", title: "If Rejected", numbered: false, items: ["If output is ignored, the previous constraints were applied in vain."] },
+          { type: "tab", title: "Unlocks", numbered: false, items: ["A rational, highly traceable foundation for Islamic belief.", "A robust framework for evaluating future claims."] },
+          { type: "tab", title: "Eliminates", numbered: false, items: ["Agnosticism regarding the ultimate truth of Islam.", "Treating all religious claims as equally valid or equally flawed."] },
+          { type: "tab", title: "Unknowns", numbered: false, items: ["Personal spiritual journey outcomes.", "Eschatological details beyond textual scope."] },
+          { type: "tab", title: "Objections", numbered: true, items: [
+            {
+              title: "The filter was biased from the start.",
+              subSections: [
+                { label: "Objection Basis", items: ["The logical constraints were specifically chosen to ensure Islam would be the only survivor."] },
+                { label: "What's Missing", items: ["The initial constraints (avoiding contradiction, relying on evidence, anti-fabrication) are universally accepted rules of basic reasoning."] },
+                { label: "Correction", items: ["If basic rationality inherently favors one system, that is evidence of the system's truth, not of a rigged test."] }
+              ]
+            },
+            {
+              title: "Rationality isn't everything in religion.",
+              subSections: [
+                { label: "Objection Basis", items: ["A perfectly rational religion might still lack spiritual depth or transformative power."] },
+                { label: "What's Missing", items: ["This maps the foundation of truth; it does not claim to encapsulate the entire lived spiritual experience."] },
+                { label: "Correction", items: ["Spiritual depth must be built on a foundation of truth; rationality validates the foundation so the spiritual practice is meaningful."] }
+              ]
+            }
+          ]}
+        ]
+      }
+    ];
+
+    /**
+     * ==========================================
+     * PERCEPTUAL COLOR ENGINE
+     * ==========================================
+     * Maps nodes to an exact sequence of highly distinct perceptual colors:
+     * Red -> Orange -> Yellow -> Green -> Cyan -> Blue -> Purple -> Magenta -> Pink
+     * * If there are exactly 8 nodes, they will perfectly hit the first 8 colors.
+     * If there are more nodes than defined anchors, it will smoothly interpolate between them.
+     */
+    function getPerceptualHue(index, totalNodes) {
+      const anchors = [
+        0,   // Red
+        30,  // Orange
+        55,  // Yellow
+        130, // Green
+        180, // Cyan
+        225, // Blue
+        260, // Purple (Adjusted from 275 to firmly avoid looking like Magenta at high brightness)
+        315, // Magenta
+        340  // Pink
+      ];
+      
+      // For exactly 8 or 9 nodes, map 1:1 to guarantee absolute color distinctness
+      if (totalNodes <= anchors.length) {
+        return anchors[index];
+      }
+      
+      // For 10+ nodes, elastically interpolate across the anchor spectrum
+      const progress = index / (totalNodes - 1);
+      const position = progress * (anchors.length - 1);
+      const lower = Math.floor(position);
+      const upper = Math.ceil(position);
+      const fraction = position - lower;
+
+      if (lower >= anchors.length - 1) return anchors[anchors.length - 1];
+      return anchors[lower] + fraction * (anchors[upper] - anchors[lower]);
+    }
+
+    NODE_DATA.forEach((node, index) => {
+      const hue = Math.floor(getPerceptualHue(index, NODE_DATA.length));
+      node.color = {
+        borderDark: `hsl(${hue}, 95%, 68%)`,  // Boosted brightness for extreme pop in dark mode
+        borderLight: `hsl(${hue}, 90%, 34%)`, // Deepened for stark contrast in light mode
+        top: `hsl(${hue}, 85%, 93%)`,         // Increased saturation for clearer background tints
+        bottom: `hsl(${hue}, 90%, 84%)`
+      };
+    });
+
+    /**
+     * ==========================================
+     * APP STATE
+     * ==========================================
+     */
+    const AppState = {
+      theme: localStorage.getItem('theme') || 'dark',
+      activeNodeId: null,
+
+      toggleTheme() {
+        this.theme = this.theme === 'light' ? 'dark' : 'light';
+        localStorage.setItem('theme', this.theme);
+        this.applyTheme();
+      },
+
+      applyTheme() {
+        document.documentElement.setAttribute('data-theme', this.theme);
+        if (AppUI.els.themeToggle) {
+          const isLight = this.theme === 'light';
+          AppUI.els.themeToggle.textContent = isLight ? '☀️ Light' : '🌙 Dark';
+          AppUI.els.themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+        }
+      }
+    };
+
+    /**
+     * ==========================================
+     * TEMPLATE GENERATION ENGINE
+     * ==========================================
+     */
+    const Templates = {
+      /**
+       * Builds the main HTML structure for a single top-level node map row.
+       * @param {Object} node - The node data object.
+       * @returns {string} HTML string.
+       */
+      nodeRow(node) {
+        const badgeHtml = APP_CONFIG.nodePrefix 
+          ? `<div class="node-badge" aria-label="Step ${node.id}"><span class="badge-dot"></span>${APP_CONFIG.nodePrefix}${node.id}</div>` 
+          : '';
+          
+        // Preserves identical CSS Grid widths for terminal nodes by rendering an invisible placeholder
+        const derivationHtml = (node.hasDerivation !== false && node.href)
+          ? `<a class="btn-derivation" href="${node.href}" aria-label="Derivation details for step ${node.id}"><span class="label">Derivation</span><span>→</span></a>`
+          : `<div class="btn-derivation" aria-hidden="true" style="visibility: hidden; pointer-events: none;"><span class="label">Derivation</span><span>→</span></div>`;
+
+        return `
+          <div class="node-marker" aria-hidden="true"><span class="marker-arrow-tip"></span></div>
+          <article class="node-card" data-id="${node.id}" 
+            style="--n-border-dark: ${node.color.borderDark}; --n-border-light: ${node.color.borderLight}; --n-top: ${node.color.top}; --n-bottom: ${node.color.bottom};">
+            <div class="node-header" role="button" aria-expanded="false" aria-controls="exp-${node.id}">
+              <h2 class="node-title"><span class="id">${node.id}.</span> ${node.claim}</h2>
+              <div class="node-controls">
+                ${badgeHtml}
+                <button class="btn-ui trigger-inline" type="button" tabindex="-1">Expand</button>
+              </div>
+            </div>
+            <p class="node-so-what">${node.soWhat}</p>
+          </article>
+          ${derivationHtml}
+          <div class="node-expander" id="exp-${node.id}" role="region" aria-labelledby="node-title-${node.id}"></div>
+        `;
+      },
+
+      /**
+       * Builds the internal expandable layout containing procedural rows and tabs.
+       * @param {Object} node - The node data object.
+       * @returns {string} HTML string.
+       */
+      expander(node) {
+        const rowSections = (node.sections || []).filter(s => s.type === "row");
+        const logicGroupHtml = rowSections.map((s, idx) => this.logicRow(s.title, s.items, idx + 1, s.numbered)).join('');
+
+        const tabSections = (node.sections || []).filter(s => s.type === "tab");
+        let tabAreaHtml = '';
+        
+        let actionHtml = '';
+        if (node.hasDerivation !== false && node.href) {
+          actionHtml = `<a class="btn-action btn-derivation-disagree" href="${node.href}">Disagree? See how this is derived →</a>`;
+        } else if (node.hasDerivation === false) {
+          // Terminal actions setup with default "agree" active state
+          actionHtml = `
+            <button class="btn-action btn-agree" type="button" aria-pressed="true">I agree</button>
+            <button class="btn-action btn-disagree" type="button" aria-pressed="false">I disagree</button>
+          `;
+        }
+        
+        const actionSlotHtml = actionHtml ? `<div class="panel-action-slot">${actionHtml}</div>` : '';
+
+        if (tabSections.length > 0) {
+          const defaultTab = tabSections[0].title;
+          const tabButtonsHtml = tabSections.map(s => `
+            <button class="btn-tab" data-key="${s.title}" aria-selected="${s.title === defaultTab}" aria-controls="panel-${node.id}">
+              ${s.title}
+            </button>
+          `).join('');
+
+          tabAreaHtml = `
+            <div class="tab-area">
+              <div class="tab-list" role="tablist" aria-label="Logic Implications">
+                ${tabButtonsHtml}
+              </div>
+              ${actionSlotHtml}
+              <div class="tab-panel" id="panel-${node.id}" role="tabpanel"></div>
+            </div>
+          `;
+        } else if (actionSlotHtml) {
+          tabAreaHtml = `
+            <div class="tab-area" style="grid-template-columns: 1fr;">
+               ${actionSlotHtml}
+            </div>
+          `;
+        }
+
+        return `
+          <div class="exp-inner">
+            <div class="logic-group">
+              ${logicGroupHtml}
+            </div>
+            ${tabAreaHtml}
+          </div>
+        `;
+      },
+
+      /**
+       * Creates a standardized vertical logic block.
+       * @param {string} label - Section heading title.
+       * @param {Array} items - List of strings or nested data objects.
+       * @param {number} step - Step counter.
+       * @param {boolean} isNumbered - Flags whether to generate numbered sub-nodes.
+       * @returns {string} HTML string.
+       */
+      logicRow(label, items, step, isNumbered) {
+        if (!items || items.length === 0) return '';
+        
+        const isComplex = typeof items[0] === 'object' && items[0] !== null;
+        const content = isComplex 
+          ? `<div class="mini-stack">${items.map((it, idx) => this.recursiveMiniNode(it, isNumbered ? idx + 1 : null)).join('')}</div>`
+          : this.buildList(items);
+        
+        return `
+          <div class="logic-section" data-step="${step}">
+            <div class="logic-header" data-step="${step}" aria-expanded="true" role="button">${label}</div>
+            <div class="logic-content">${content}</div>
+          </div>
+        `;
+      },
+
+      /**
+       * Wrapper for simple ul/li standard arrays.
+       * @param {Array<string>} items - Strings to list.
+       * @returns {string} HTML string.
+       */
+      buildList(items) {
+        return `<ul class="bullets">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+      },
+
+      /**
+       * Procedurally resolves nested objects/objections dynamically generating inner text/lists.
+       * @param {Object} data - Complex item logic payload.
+       * @returns {string} HTML string.
+       */
+      buildMiniNodeContent(data) {
+        const parts = [];
+
+        if (data.detail) {
+          parts.push(`<div style="padding:10px 0; text-align: left;"><div class="sub-body">${data.detail}</div></div>`);
+        }
+
+        if (data.subSections?.length > 0) {
+          parts.push(data.subSections.map(sub => `
+            <div class="sub-section">
+              <div class="sub-label">${sub.label}</div>
+              <div class="sub-body">${this.buildList(sub.items)}</div>
+            </div>
+          `).join(''));
+        }
+
+        if (data.children?.length > 0) {
+          parts.push(`<div class="mini-stack" style="margin-top:12px;">${data.children.map((c, idx) => this.recursiveMiniNode(c, idx + 1)).join('')}</div>`);
+        }
+
+        return parts.join('');
+      },
+
+      /**
+       * Builds an expandable mini card used inside logic rows and tabs.
+       * @param {Object} data - Section or subsection nested logic.
+       * @param {number|null} num - Index identifier for prefixing (e.g., "1.").
+       * @returns {string} HTML string.
+       */
+      recursiveMiniNode(data, num) {
+        const prefix = num ? `<span class="id">${num}.</span> ` : '';
+        const title = data.title || data;
+        const content = this.buildMiniNodeContent(data);
+
+        return `
+          <div class="mini-node">
+            <button class="mini-trigger" type="button" aria-expanded="false">${prefix}${title}</button>
+            <div class="mini-content-wrap">
+              ${content}
+            </div>
+          </div>
+        `;
+      },
+
+      /**
+       * Orchestrates content creation specifically for horizontal panels.
+       * @param {Array} items - List of tab strings or complex data.
+       * @param {boolean} isNumbered - Flags whether to enumerate complex arrays.
+       * @returns {string} HTML string.
+       */
+      tabContent(items, isNumbered) {
+        if (!items || items.length === 0) {
+          return `<ul class="bullets"><li>—</li></ul>`;
+        }
+        
+        const isComplex = typeof items[0] === 'object' && items[0] !== null;
+        if (isComplex) {
+          return `<div class="mini-stack">${items.map((it, idx) => this.recursiveMiniNode(it, isNumbered ? idx + 1 : null)).join('')}</div>`;
+        }
+        return this.buildList(items);
+      }
+    };
+
+    /**
+     * ==========================================
+     * UI CONTROLLER & EVENT HANDLERS
+     * ==========================================
+     */
+    const AppUI = {
+      els: {},
+
+      init() {
+        this.cacheDOM();
+        this.applyConfig();
+        AppState.applyTheme();
+        this.renderMap();
+        this.bindEvents();
+      },
+
+      /** Grabs all primary static layout elements at launch. */
+      cacheDOM() {
+        this.els.docTitle = document.getElementById('docTitle');
+        this.els.pageTitle = document.getElementById('titleText');
+        this.els.pageSubtitle = document.getElementById('subtitleText');
+        this.els.breadcrumbRoot = document.getElementById('breadcrumbRoot');
+        this.els.breadcrumbCurrent = document.getElementById('breadcrumbCurrent');
+        
+        this.els.root = document.getElementById('mapRoot');
+        this.els.searchInput = document.getElementById('searchInput');
+        this.els.themeToggle = document.getElementById('themeToggle');
+        this.els.headerToggle = document.getElementById('headerToggle');
+        this.els.chevronToggle = document.getElementById('chevronToggle');
+        this.els.pageHeader = document.getElementById('pageHeader');
+      },
+
+      /** Injects constants from APP_CONFIG directly into the DOM cache. */
+      applyConfig() {
+        if (this.els.docTitle) this.els.docTitle.textContent = `${APP_CONFIG.title} - Map`;
+        if (this.els.pageTitle) this.els.pageTitle.textContent = APP_CONFIG.title;
+        if (this.els.pageSubtitle) this.els.pageSubtitle.textContent = APP_CONFIG.subtitle;
+        if (this.els.breadcrumbRoot) this.els.breadcrumbRoot.textContent = APP_CONFIG.breadcrumbRoot;
+        if (this.els.breadcrumbCurrent) this.els.breadcrumbCurrent.textContent = APP_CONFIG.title;
+        if (this.els.searchInput) this.els.searchInput.placeholder = APP_CONFIG.searchPlaceholder;
+      },
+
+      /** Transforms the NODE_DATA structure into an integrated UI mapping flow. */
+      renderMap() {
+        const fragment = document.createDocumentFragment();
+
+        NODE_DATA.forEach(node => {
+          const row = document.createElement('div');
+          row.className = 'node-row';
+          row.dataset.id = node.id;
+          row.dataset.search = node.search;
+          row.innerHTML = Templates.nodeRow(node);
+          fragment.appendChild(row);
+        });
+
+        this.els.root.appendChild(fragment);
+      },
+
+      /** Bootstraps the application event listeners for interaction logic. */
+      bindEvents() {
+        this.els.themeToggle?.addEventListener('click', () => AppState.toggleTheme());
+
+        // Header Collapse Toggle (Mobile Menu)
+        this.els.headerToggle?.addEventListener('click', () => {
+          const isExpanded = this.els.pageHeader.classList.toggle('is-expanded');
+          this.els.headerToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Header Collapse Toggle (Desktop Chevron)
+        this.els.chevronToggle?.addEventListener('click', () => {
+          const isCollapsed = this.els.pageHeader.classList.toggle('is-desktop-collapsed');
+          this.els.chevronToggle.setAttribute('aria-expanded', !isCollapsed);
+          this.els.chevronToggle.setAttribute('aria-label', isCollapsed ? 'Expand Header' : 'Collapse Header');
+        });
+
+        // Debounced Search filter
+        let searchTimeout;
+        this.els.searchInput?.addEventListener('input', (e) => {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => this.handleSearch(e.target.value), 150);
+        });
+
+        this.els.root?.addEventListener('click', (e) => this.handleMapClick(e));
+
+        // Global Esc bindings
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && AppState.activeNodeId !== null) {
+            this.toggleExpander(AppState.activeNodeId);
+          }
+        });
+      },
+
+      /**
+       * Hides map rows securely using basic substring validation.
+       * @param {string} rawQuery - Direct keyboard input from the search container.
+       */
+      handleSearch(rawQuery) {
+        const query = rawQuery.toLowerCase().trim();
+        
+        // Auto-close currently open node when iterating through filters
+        if (query.length > 0 && AppState.activeNodeId !== null) {
+           this.toggleExpander(AppState.activeNodeId);
+        }
+
+        const rows = this.els.root.querySelectorAll('.node-row');
+        rows.forEach(row => {
+          const match = row.dataset.search.toLowerCase().includes(query);
+          row.style.display = match ? '' : 'none';
+        });
+      },
+
+      /** Delegates dynamic click logic for primary, logical, and nested interaction points. */
+      handleMapClick(e) {
+        // Main Node Trigger
+        const headerElement = e.target.closest('.node-header');
+        if (headerElement) { 
+          const cardElement = headerElement.closest('.node-card');
+          if (cardElement) {
+            this.toggleExpander(parseInt(cardElement.dataset.id, 10));
+          }
+          return;
+        }
+
+        // Logic Section Accordion Trigger
+        const logicHeaderElement = e.target.closest('.logic-header');
+        if (logicHeaderElement) {
+          const sectionElement = logicHeaderElement.closest('.logic-section');
+          const isCollapsed = sectionElement.classList.toggle('is-collapsed');
+          logicHeaderElement.setAttribute('aria-expanded', !isCollapsed);
+          return;
+        }
+
+        // Mini Node Accordion Trigger
+        const miniTriggerElement = e.target.closest('.mini-trigger');
+        if (miniTriggerElement) {
+          const nodeElement = miniTriggerElement.closest('.mini-node');
+          const isOpen = nodeElement.classList.toggle('is-open');
+          miniTriggerElement.setAttribute('aria-expanded', isOpen);
+        }
+      },
+
+      /**
+       * Acts as a secure routing mechanism ensuring only a single block expands simultaneously.
+       * @param {number} id - Target `dataset.id` extracted from a click event.
+       */
+      toggleExpander(id) {
+        const row = document.querySelector(`.node-row[data-id="${id}"]`);
+        if (!row) return;
+
+        const expander = document.getElementById(`exp-${id}`);
+        const headerBtn = row.querySelector('.node-header');
+        const inlineBtn = row.querySelector('.trigger-inline');
+
+        if (AppState.activeNodeId === id) {
+          this.closeExpander(row, expander, headerBtn, inlineBtn);
+        } else {
+          if (AppState.activeNodeId !== null) {
+            this.toggleExpander(AppState.activeNodeId);
+          }
+          this.openExpander(id, row, expander, headerBtn, inlineBtn);
+        }
+      },
+
+      /** Modifies active UI state rules and completely clears unused memory variables. */
+      closeExpander(row, expander, headerBtn, inlineBtn) {
+        expander.classList.remove('is-open');
+        headerBtn.setAttribute('aria-expanded', 'false');
+        inlineBtn.textContent = "Expand";
+        
+        row.classList.remove('is-active');
+        document.body.classList.remove('is-focused');
+        AppState.activeNodeId = null;
+
+        // Clear dynamic DOM contents securely only after CSS transitions complete
+        setTimeout(() => {
+          if (!expander.classList.contains('is-open')) {
+            expander.innerHTML = '';
+          }
+        }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
+      },
+
+      /** Unpacks pure configuration data securely triggering CSS Grid layout expansion flags. */
+      openExpander(id, row, expander, headerBtn, inlineBtn) {
+        const nodeData = NODE_DATA.find(n => n.id === id);
+        if (!nodeData) return;
+
+        expander.innerHTML = Templates.expander(nodeData);
+        this.bindTabEvents(expander, nodeData);
+        this.bindActionEvents(expander);
+        
+        // Ensures exact CSS framework reflow calculates strictly after HTML has settled.
+        requestAnimationFrame(() => {
+          expander.classList.add('is-open');
+          headerBtn.setAttribute('aria-expanded', 'true');
+          inlineBtn.textContent = "Hide";
+          
+          row.classList.add('is-active');
+          document.body.classList.add('is-focused');
+          AppState.activeNodeId = id;
+          
+          this.scrollToView(row);
+        });
+      },
+
+      /** Wires dynamic tab interactivity independently for each node. */
+      bindTabEvents(expander, nodeData) {
+        const tabBtns = expander.querySelectorAll('.btn-tab');
+        
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.setAttribute('aria-selected', b === btn));
+            this.renderTabContent(nodeData, btn.dataset.key);
+          });
+        });
+
+        if (tabBtns.length > 0) {
+          this.renderTabContent(nodeData, tabBtns[0].dataset.key);
+        }
+      },
+
+      /** Wires terminal action button logic (Agree/Disagree). */
+      bindActionEvents(expander) {
+        const agreeBtn = expander.querySelector('.btn-agree');
+        const disagreeBtn = expander.querySelector('.btn-disagree');
+
+        if (agreeBtn && disagreeBtn) {
+          agreeBtn.addEventListener('click', () => {
+            agreeBtn.setAttribute('aria-pressed', 'true');
+            disagreeBtn.setAttribute('aria-pressed', 'false');
+          });
+          
+          disagreeBtn.addEventListener('click', () => {
+            disagreeBtn.setAttribute('aria-pressed', 'true');
+            agreeBtn.setAttribute('aria-pressed', 'false');
+          });
+        }
+      },
+
+      /** Securely injects matching horizontal arrays onto currently visible layout surfaces. */
+      renderTabContent(nodeData, key) {
+        const panel = document.getElementById(`panel-${nodeData.id}`);
+        if (!panel) return;
+
+        const section = (nodeData.sections || []).find(s => s.type === 'tab' && s.title === key);
+        const items = section?.items || [];
+        const isNumbered = section?.numbered || false;
+        
+        panel.innerHTML = Templates.tabContent(items, isNumbered);
+      },
+
+      /**
+       * Evaluates strict visual thresholds and executes pure scroll corrections to lock headers
+       * exactly to the visual threshold limit on dynamic content rendering instances.
+       */
+      scrollToView(el) {
+        setTimeout(() => {
+          const rect = el.getBoundingClientRect();
+          
+          if (rect.bottom > window.innerHeight) {
+            const headerHeight = this.els.pageHeader ? this.els.pageHeader.offsetHeight : 0;
+            const padding = 24; 
+            const targetTop = window.scrollY + rect.top - headerHeight - padding;
+            
+            window.scrollTo({ 
+              top: targetTop, 
+              behavior: 'smooth' 
+            });
+          }
+        }, ANIMATION_SPEEDS.SCROLL_DELAY_MS);
+      }
+    };
+
+    // System initialization
+    document.addEventListener('DOMContentLoaded', () => AppUI.init());
+  </script>
+</body>
+</html>

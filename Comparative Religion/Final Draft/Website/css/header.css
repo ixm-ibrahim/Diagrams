@@ -1,0 +1,429 @@
+/* =============================================================================
+   header.css — Page Header, Breadcrumbs, Search, Mobile Menu
+   =============================================================================
+   Sticky header with glassmorphic backdrop. Contains title, subtitle,
+   breadcrumb nav, search input with filter dropdown, theme toggle.
+   Desktop: chevron collapses subtitle/search row.
+   Mobile (≤550px): hamburger menu replaces chevron.
+
+   Depends on tokens.css:
+     --radius-lg, --border, --border-thin, --glass, --bg-0,
+     --text, --text-muted, --text-faint, --panel-bg, --radius-md,
+     --shadow-deep
+
+   HTML classes styled here:
+     .page-header, .header-top, .header-toggle, .chevron-toggle,
+     .header-collapsible, .header-bottom, .page-title, .subtitle,
+     .nav-crumbs, .search-group, .search-input-wrap, .search-icon,
+     .search-filter-btn, .search-filter-menu, .filter-option
+   ============================================================================= */
+
+
+/* Sticky header container
+   ----------------------------------------------------------------------------- */
+.page-header {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--glass), rgba(255, 255, 255, 0.02));
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 16px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 12px;
+  z-index: var(--z-header);
+  backdrop-filter: blur(12px);
+  transition: background var(--transition-slow) ease, box-shadow var(--transition-slow) ease;
+}
+
+/* Opaque on hover so content beneath doesn't distract */
+.page-header:hover {
+  background: var(--panel-bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+
+/* Hamburger menu: hidden on desktop, shown on mobile (see ≤550px breakpoint)
+   ----------------------------------------------------------------------------- */
+.header-toggle {
+  display: none;
+}
+
+
+/* Desktop chevron: collapses header's subtitle/search row
+   ----------------------------------------------------------------------------- */
+.chevron-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-medium) ease;
+  margin-left: auto;
+}
+
+.chevron-toggle:hover {
+  color: var(--text);
+}
+
+.chevron-toggle::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(225deg);
+  transition: transform var(--transition-medium) ease;
+  margin-top: 4px;
+}
+
+.page-header.is-desktop-collapsed .chevron-toggle::after {
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+
+.page-header.is-desktop-collapsed .header-collapsible {
+  display: none;
+}
+
+
+/* Collapsible content area (subtitle + bottom bar)
+   ----------------------------------------------------------------------------- */
+.header-collapsible {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border-thin);
+  padding-top: 12px;
+}
+
+
+/* Breadcrumb navigation
+   ----------------------------------------------------------------------------- */
+.nav-crumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.nav-crumbs a {
+  color: var(--text);
+  font-weight: 600;
+  opacity: 0.8;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: opacity var(--transition-base) ease, background var(--transition-base) ease, transform var(--transition-fast) ease;
+  display: inline-block;
+}
+
+.nav-crumbs a:hover {
+  opacity: 1;
+  background: var(--border-thin);
+  transform: translateY(-1px);
+}
+
+.nav-crumbs a:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.nav-crumbs .sep {
+  color: var(--text-faint);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 2px 2px;
+  opacity: 0.6;
+}
+
+.nav-crumbs .sep:hover {
+  opacity: 1;
+  color: var(--text-muted);
+  background: none;
+  transform: translateY(-1px);
+}
+
+.nav-crumbs .current {
+  font-weight: 700;
+}
+
+
+/* Search input & filter dropdown
+   ----------------------------------------------------------------------------- */
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.search-input-wrap {
+  position: relative;
+  max-width: 340px;
+  width: 100%;
+  min-width: 190px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  padding: 7px 36px 7px 34px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.1);
+  color: inherit;
+  outline: none; /* suppressed here; restored via :focus-visible below */
+}
+
+.search-input-wrap input:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 0;
+}
+
+.search-input-wrap input::placeholder {
+  color: var(--text-faint);
+}
+
+.search-filter-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background var(--transition-base) ease, color var(--transition-base) ease;
+}
+
+.search-filter-btn:hover,
+.search-filter-btn[aria-expanded="true"] {
+  background: var(--border-thin);
+  color: var(--text);
+}
+
+.search-filter-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-deep);
+  padding: 12px;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  z-index: var(--z-dropdown);
+  min-width: 200px;
+}
+
+.search-filter-menu.is-open {
+  display: flex;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option input[type="checkbox"] {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+
+
+/* Icon-expand buttons (Export, Theme toggle)
+   ----------------------------------------------------------------------------- *
+   Default: icon-only pill.  On hover the label slides in from the right.
+   Inside the mobile hamburger menu (≤550 px) the label is always visible.        */
+
+.btn-icon-expand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background var(--transition-base) ease, border-color var(--transition-base) ease,
+              gap var(--transition-slow) ease, padding var(--transition-slow) ease;
+}
+
+[data-theme="light"] .btn-icon-expand {
+  background: rgba(16, 26, 53, 0.04);
+}
+
+.btn-icon-expand:hover {
+  background: var(--border-thin);
+  border-color: var(--text-faint);
+  gap: 6px;
+  padding: 7px 12px 7px 8px;
+}
+
+.btn-icon-expand:active {
+  transform: scale(0.97);
+}
+
+/* Icon (SVG or emoji) */
+.btn-icon-expand__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-icon-expand__emoji {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Label: hidden by default, revealed on hover */
+.btn-icon-expand__label {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width var(--transition-slow) ease, opacity var(--transition-medium) ease;
+}
+
+.btn-icon-expand:hover .btn-icon-expand__label {
+  max-width: 80px;   /* generous upper bound — actual width is content-driven */
+  opacity: 1;
+}
+
+
+/* Keyboard focus indicators
+   ----------------------------------------------------------------------------- */
+
+/* Icon-expand buttons (Export, Theme toggle) and header toggles */
+.btn-icon-expand:focus-visible,
+.chevron-toggle:focus-visible,
+.header-toggle:focus-visible,
+.search-filter-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Breadcrumb links — show focus ring and full opacity */
+.nav-crumbs a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+
+/* Mobile breakpoint (≤550px): hamburger replaces chevron
+   ----------------------------------------------------------------------------- */
+@media (max-width: 550px) {
+  .chevron-toggle {
+    display: none;
+  }
+  .page-header {
+    padding: 12px 16px;
+    background: var(--bg-0);
+    backdrop-filter: none;
+  }
+  .header-toggle {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .header-collapsible {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-thin);
+  }
+  .page-header.is-expanded .header-collapsible {
+    display: flex;
+  }
+  .header-bottom {
+    border-top: none;
+    padding-top: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .search-group {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .search-input-wrap {
+    max-width: none;
+    flex: 1;
+  }
+
+  /* In the mobile menu, always show button labels (no hover needed) */
+  .btn-icon-expand {
+    gap: 6px;
+    padding: 7px 12px 7px 8px;
+  }
+  .btn-icon-expand__label {
+    max-width: 80px;
+    opacity: 1;
+  }
+}

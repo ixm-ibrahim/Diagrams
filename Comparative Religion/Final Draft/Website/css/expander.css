@@ -1,0 +1,485 @@
+/* =============================================================================
+   expander.css — Expander Panel, Logic Sections, Tabs, Actions, Bullets
+   =============================================================================
+   The inline detail panel that slides open below a node card.
+   Animates via grid-template-rows (0fr → 1fr).
+
+   Depends on tokens.css:
+     --expander-pad, --radius-lg, --radius-md, --border, --border-thin,
+     --panel-bg, --panel-accent, --shadow, --header-ink, --text, --text-muted,
+     --text-faint, --font-mono, --mini-bg, --mini-content-bg, --mini-content-shadow
+
+   HTML classes styled here:
+     .level-expander, .exp-inner, .logic-group, .logic-section, .logic-header,
+     .logic-content, .tab-area, .tab-list, .btn-tab, .tab-panel,
+     .panel-action-slot, .btn-action, .bullets
+   ============================================================================= */
+
+
+/* Expander container: animates open via grid-template-rows
+   ----------------------------------------------------------------------------- */
+.level-expander {
+  width: 100%;
+  flex: 0 0 100%;
+  padding-left: var(--expander-pad);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-expander) cubic-bezier(0.4, 0, 0.2, 1),
+              opacity var(--transition-expander), transform var(--transition-expander), margin-top var(--transition-expander);
+  opacity: 0;
+  transform: translateY(-6px);
+  margin-top: 0;
+  z-index: var(--z-expander);
+}
+
+.level-expander.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: calc(-8px + var(--parallel-pull, 0px));
+  margin-bottom: 8px;
+  pointer-events: auto;
+  position: relative;
+  z-index: var(--z-expander-open);
+}
+
+.exp-inner {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel-bg), var(--panel-accent));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+/* Agreement tint — subtle color wash from the top edge reflecting the node's
+   propagated agree/disagree state. Uses ::before so it layers above the panel
+   background but below the content. The .row-red / .row-green classes are
+   set on .node-row by applyVoteStates(); the adjacent-sibling selector (+)
+   reaches the expander that follows the row in the DOM.
+
+   The ::before is ALWAYS present on open expanders (opacity 0) so that when
+   an agreement state appears or changes, the tint fades in smoothly rather
+   than popping.                                                               */
+
+/* Content sits above the tint overlay */
+.level-expander.is-open .exp-inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Always-present tint layer — invisible until an agreement class activates it */
+.level-expander.is-open .exp-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--tint-transition-duration) ease;
+}
+
+/* Red tint (disagree) — fade in */
+.node-row.row-red + .level-expander.is-open .exp-inner::before {
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--disagree-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
+}
+
+/* Green tint (agree) — fade in */
+.node-row.row-green + .level-expander.is-open .exp-inner::before {
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--agree-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
+}
+
+/* Light theme uses --dark-rgb variants; opacity & reach override in tokens.css */
+[data-theme="light"] .node-row.row-red + .level-expander.is-open .exp-inner::before {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--disagree-dark-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
+}
+
+[data-theme="light"] .node-row.row-green + .level-expander.is-open .exp-inner::before {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--agree-dark-rgb), calc(var(--expander-tint-opacity) * var(--glow-intensity))) 0%,
+    transparent var(--expander-tint-reach)
+  );
+}
+
+/* Sibling-column spacer: inserted in parallel stack-groups to keep columns
+   aligned when an expander opens in one column.  Animates from 0 to the
+   expander's content height so subsequent nodes push down uniformly. */
+.expander-spacer {
+  flex: 0 0 auto;
+  height: 0;
+  transition: height var(--transition-expander) cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+/* Logic sections (row-type sections inside expander)
+   ----------------------------------------------------------------------------- */
+.logic-section {
+  --logic-pad-left: 14px;
+  --logic-circle: 22px;
+
+  border-top: 1px solid var(--border);
+  padding: 12px var(--logic-pad-left);
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px;
+}
+
+.logic-section:first-child {
+  border-top: none;
+}
+
+.logic-header {
+  color: var(--header-ink);
+  font-weight: 950;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Step number circle */
+.logic-header::before {
+  content: attr(data-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--logic-circle);
+  height: var(--logic-circle);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* Collapse chevron */
+.logic-header::after {
+  content: "";
+  margin-left: auto;
+  margin-right: 12px;
+  align-self: flex-start;
+  margin-top: 8px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform var(--transition-medium), opacity var(--transition-base);
+  opacity: 0.6;
+}
+
+/* Chevron hover feedback */
+.logic-header:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(1px, 1px);
+}
+
+.logic-section.is-collapsed .logic-header::after {
+  transform: rotate(-45deg);
+}
+
+.logic-section.is-collapsed .logic-header:hover::after {
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+/* Animated collapse via grid-template-rows (configurable: --collapse-duration) */
+.logic-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows var(--collapse-duration) ease;
+}
+
+.logic-content-inner {
+  overflow: hidden;
+}
+
+.logic-section.is-collapsed .logic-content {
+  grid-template-rows: 0fr;
+}
+
+/* Vertical connecting line between sections */
+.logic-section::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--logic-pad-left) + (var(--logic-circle) / 2) - 1px);
+  top: 44px;
+  bottom: -3px;
+  width: 2px;
+  background: var(--border);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* Arrow at bottom of connecting line */
+.logic-section::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--logic-pad-left) + (var(--logic-circle) / 2) - 5px);
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--border);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .logic-section {
+    grid-template-columns: 1fr;
+  }
+  .logic-content {
+    padding-left: calc(var(--logic-circle) + 12px);
+  }
+}
+
+
+/* Tab area & action buttons
+   ----------------------------------------------------------------------------- */
+.tab-area {
+  border-top: 1px solid var(--border);
+  background: var(--mini-bg);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 8px 12px;
+  align-items: end;
+}
+
+.tab-list {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-tab {
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition-base) ease, transform var(--transition-fast) ease;
+}
+
+.btn-tab:hover {
+  transform: translateY(-1px);
+}
+
+.btn-tab[aria-selected="true"] {
+  background: var(--text);
+  color: var(--bg-0);
+  border-color: var(--text);
+  font-weight: 950;
+  transform: translateY(-1px);
+}
+
+.panel-action-slot {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background var(--transition-base) ease, border-color var(--transition-base) ease,
+              color var(--transition-base) ease, transform var(--transition-fast) ease;
+}
+
+.btn-action:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .btn-action:hover {
+  background: rgba(16, 26, 53, 0.05);
+}
+
+/* "Disagree? See derivation" button */
+.btn-action.btn-derivation-disagree {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+.btn-action.btn-derivation-disagree:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fecaca;
+}
+.btn-action.btn-derivation-disagree:active {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #450a0a;
+  font-weight: 700;
+}
+[data-theme="light"] .btn-action.btn-derivation-disagree {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: rgba(220, 38, 38, 0.2);
+  color: #b91c1c;
+}
+[data-theme="light"] .btn-action.btn-derivation-disagree:hover {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+  color: #991b1b;
+}
+[data-theme="light"] .btn-action.btn-derivation-disagree:active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Agree/disagree hover states */
+.btn-action.btn-agree:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #16a34a;
+}
+.btn-action.btn-disagree:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #dc2626;
+}
+[data-theme="light"] .btn-action.btn-agree:hover {
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(22, 163, 74, 0.4);
+  color: #15803d;
+}
+[data-theme="light"] .btn-action.btn-disagree:hover {
+  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(220, 38, 38, 0.4);
+  color: #b91c1c;
+}
+
+/* Agree/disagree pressed states */
+.btn-action.btn-agree[aria-pressed="true"] {
+  background: #22c55e; border-color: #22c55e; color: #042f14; font-weight: 700;
+}
+
+/* Disagree arrow: shifts right on hover (same behavior as derive button) */
+.action-arrow {
+  display: inline-block;
+  transition: transform var(--transition-base) ease, opacity var(--transition-base) ease;
+}
+.btn-derivation-disagree:hover .action-arrow {
+  transform: translateX(3px);
+  opacity: 1;
+}
+.btn-action.btn-disagree[aria-pressed="true"] {
+  background: #ef4444; border-color: #ef4444; color: #450a0a; font-weight: 700;
+}
+[data-theme="light"] .btn-action.btn-agree[aria-pressed="true"] {
+  background: #16a34a; border-color: #16a34a; color: #ffffff;
+}
+[data-theme="light"] .btn-action.btn-disagree[aria-pressed="true"] {
+  background: #dc2626; border-color: #dc2626; color: #ffffff;
+}
+
+.tab-panel {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  .tab-area { grid-template-columns: 1fr; }
+  .tab-panel { grid-column: 1; grid-row: 2; }
+  .panel-action-slot {
+    grid-column: 1; grid-row: 3;
+    justify-self: flex-start; margin-top: 4px;
+  }
+}
+
+
+/* Bullet lists
+   ----------------------------------------------------------------------------- */
+.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  text-align: left;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.42;
+}
+
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transform: translateY(-50%);
+}
+
+
+/* Keyboard focus indicators
+   ----------------------------------------------------------------------------- */
+
+/* Logic section header: full-width within the panel — use inset ring so the
+   expander's overflow:hidden doesn't clip an outward outline at the edges.    */
+.logic-header:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--focus-ring);
+  border-radius: 4px;
+}
+
+/* Tab buttons and action buttons inside the expander panel */
+.btn-tab:focus-visible,
+.btn-action:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}

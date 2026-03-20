@@ -1,0 +1,1780 @@
+/* =============================================================================
+   1. DESIGN TOKENS — THEME COLORS
+   =============================================================================
+   All visual colors live here. Light-theme overrides follow immediately below.
+   To add a new theme, duplicate the [data-theme="light"] block.                */
+
+:root {
+  --bg-0: #0b1020;
+  --bg-1: #070a12;
+  --text: #f2f5ff;
+  --text-muted: #a9b6d3;
+  --text-faint: rgba(233, 240, 255, 0.55);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-thin: rgba(255, 255, 255, 0.08);
+  --glass: rgba(255, 255, 255, 0.15);
+  --panel-bg: #0f1730;
+  --panel-accent: #111b36;
+
+  --mini-bg: rgba(255, 255, 255, 0.02);
+  --mini-content-bg: rgba(0, 0, 0, 0.3);
+  --mini-content-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  --shadow-deep: 0 16px 40px rgba(0, 0, 0, 0.42);
+  --spine-color: rgba(233, 240, 255, 0.18);
+  --spine-glow: rgba(110, 140, 255, 0.18);
+  --header-ink: #ffffff;
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+[data-theme="light"] {
+  --bg-0: #f6f7fb;
+  --bg-1: #eef1f8;
+  --text: #101a35;
+  --text-muted: #475577;
+  --text-faint: rgba(16, 26, 53, 0.55);
+  --border: rgba(16, 26, 53, 0.14);
+  --border-thin: rgba(16, 26, 53, 0.10);
+  --glass: rgba(255, 255, 255, 0.90);
+  --panel-bg: #ffffff;
+  --panel-accent: #f4f6fb;
+
+  --mini-bg: rgba(16, 26, 53, 0.02);
+  --mini-content-bg: rgba(16, 26, 53, 0.05);
+  --mini-content-shadow: inset 0 3px 8px rgba(16, 26, 53, 0.04);
+
+  --shadow: 0 12px 30px rgba(16, 26, 53, 0.12);
+  --shadow-deep: 0 18px 46px rgba(16, 26, 53, 0.14);
+  --spine-color: rgba(16, 26, 53, 0.14);
+  --spine-glow: rgba(90, 120, 255, 0.14);
+  --header-ink: #000000;
+}
+
+
+/* =============================================================================
+   2. DESIGN TOKENS — LAYOUT DIMENSIONS
+   =============================================================================
+   Every pixel value that changes across breakpoints is defined here.
+   Components reference these tokens instead of hard-coding numbers.
+
+   MARKER ANATOMY (left-to-right):
+     |<-- marker-col ---------------------------------->|
+     |   [spine]   ●(dot)----(arm)---▶   | card...     |
+     |          dot-offset-left                         |
+     |                arm-left  arm-width  arrow-left   |
+
+   Spine is auto-centered: --spine-left = (marker-col - spine-width) / 2.
+   Changing --marker-col automatically realigns the spine.                      */
+
+:root {
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --node-min-h: 80px;
+  --spine-width: 2px;
+
+  /* Node row grid: [marker-col] [card: 1fr] [derive-col: max-content]
+   * --marker-col controls the leftmost column width.
+   * --node-col-gap is the gap between all three grid columns.                 */
+  --marker-col: 64px;
+  --node-col-gap: 6px;
+
+  /* Spine: auto-centered within the marker column.                            */
+  --spine-left: calc((var(--marker-col) - var(--spine-width)) / 2);
+
+  /* Marker dot (timeline circle):
+   * --marker-dot-size: circle diameter.
+   * --marker-dot-offset-top: vertical offset from row top to circle top
+   *   (aligns the circle with the card header baseline).                      */
+  --marker-dot-size: 16px;
+  --marker-dot-offset-top: 14px;
+
+  /* Marker arm and arrow (Procedurally derived from --marker-col)
+   * --marker-arrow-gap: distance from arrow tip to the column's right edge. */
+  --marker-arrow-width: 10px;
+  --marker-arrow-gap: 6px;
+  --marker-arrow-left: calc(var(--marker-col) - var(--marker-arrow-width) - var(--marker-arrow-gap));
+  
+  --marker-arm-left: calc(var(--marker-col) / 2.3); /* Anchors arm safely behind the dot */
+  --marker-arm-width: calc(var(--marker-arrow-left) - var(--marker-arm-left) + 2px); /* +2px overlap */
+  --marker-arm-display: block;
+
+  /* Derive button (horizontal line from card → derive button):
+   * --derive-btn-width: fixed button width (content centered via flexbox).
+   * --derive-arm-width: length of the connecting line (::before pseudo).
+   * --derive-gap: margin-left between card edge and the arm.
+   *
+   * Derived layout totals used for parallel card equalization:
+   * --derive-total: full button's layout footprint (width + margin).
+   * --parallel-derive-total: condensed button's footprint.
+   * --derive-width-diff: the difference — applied as extra flex-basis on
+   *   the last parallel node so all cards in the row resolve to equal 1fr.    */
+  --derive-btn-width: 130px;
+  --derive-arm-width: 28px;
+  --derive-gap: 20px;
+  --derive-total: calc(var(--derive-btn-width) + var(--derive-gap));
+  --parallel-derive-total: calc(var(--parallel-derive-btn-width) + var(--parallel-derive-gap));
+  --derive-width-diff: calc(var(--derive-total) - var(--parallel-derive-total));
+
+  /* Expander panel and sibling-nav left padding.
+   * Aligns expanded content with the card column.                             */
+  --expander-pad: calc(var(--marker-col) + var(--node-col-gap));
+  --sibling-pad: calc(var(--marker-col) + var(--node-col-gap));
+
+  /* Parallel layout: when nodes sit side-by-side in a DAG row.
+   * Non-last derive buttons are condensed; last keeps the full button.
+   * Non-first markers shift the dot left and shrink the column.
+   *
+   * --parallel-derive-*: condensed button dimensions.
+   * --parallel-marker-col: tighter marker column for non-first parallel nodes.
+   *   Auto-computed to end just past the shifted arrow-tip (10px arrow + 2px).
+   * --marker-diff: width saved by the smaller column, used as flex-basis
+   *   compensation on first-parallel nodes so all cards resolve equally.        */
+  --parallel-derive-btn-width: 28px;
+  --parallel-derive-gap: 4px;
+  --parallel-derive-arm: 12px;
+  --parallel-marker-col: calc(var(--marker-arrow-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + 25px);
+  --marker-diff: calc(var(--marker-col) - var(--parallel-marker-col));
+  --parallel-shift: 13px;
+
+  /* Stacked parallel: indent per nesting depth when parallel nodes collapse
+   * into a vertical indented list. Uses --marker-col for visual consistency. */
+  --stacked-indent: var(--marker-col);
+}
+
+
+/* =============================================================================
+   3. RESPONSIVE BREAKPOINT OVERRIDES
+   =============================================================================
+   Each breakpoint reassigns layout tokens. All component rules automatically
+   adapt because they reference the tokens, not raw pixel values.
+
+   Breakpoint rationale:
+   - 1120px: app max-width boundary — content starts touching viewport edges.
+   - 768px:  card headers crowd controls — derive label removed, grids collapse.
+   - 550px:  header nav + search overflow — switch to hamburger menu.
+   - 500px:  node marker arm can't fit — reduce to minimal dot indicator.      */
+
+@media (max-width: 1120px) {
+  :root {
+    --marker-col: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --derive-btn-width: 54px;
+    --derive-gap: 8px;
+    --derive-arm-width: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --marker-col: 18px;
+    --node-col-gap: 0px;
+    --marker-dot-size: 12px;
+    --marker-dot-offset-top: 16px;
+    --marker-arm-display: none;
+    --derive-btn-width: 44px;
+    /* Arm hidden at this breakpoint — parallel markers use the same column.   */
+    --parallel-marker-col: var(--marker-col);
+    --stacked-indent: 28px;
+  }
+}
+
+
+/* =============================================================================
+   4. BASE STYLES & RESET
+   ============================================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  overflow-y: scroll;
+  /* Layered background: active tints (set by JS) + decorative gradients + base.
+   * --bg-tint-right: expander hue glow (right side).
+   * --bg-tint: page-level hue glow (left side).                               */
+  background:
+    radial-gradient(100vw 100vh at 100% 50%, var(--bg-tint-right, transparent), transparent 70%),
+    radial-gradient(100vw 100vh at 0% 50%, var(--bg-tint, transparent), transparent 70%),
+    radial-gradient(1200px 620px at 14% 0%, rgba(110, 140, 255, 0.12), transparent 60%),
+    radial-gradient(980px 540px at 88% 10%, rgba(255, 110, 190, 0.08), transparent 55%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  min-height: 100vh;
+  transition: background 0.3s ease;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app-wrap {
+  max-width: 1120px;
+  min-width: 350px;
+  margin: 0 auto;
+  padding: 22px 18px 56px;
+}
+
+/* Focus-dimming: when an expander is open, fade all non-active node rows.     */
+body.is-focused .node-row:not(.is-active) {
+  opacity: 0.45;
+  filter: blur(0.6px);
+}
+
+
+/* =============================================================================
+   5. HEADER & NAVIGATION
+   ============================================================================= */
+.page-header {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--glass), rgba(255, 255, 255, 0.02));
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 16px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+/* Hamburger menu: hidden on desktop, shown on mobile (see ≤550px breakpoint). */
+.header-toggle {
+  display: none;
+}
+
+/* Desktop chevron: collapses header's subtitle/search row.                    */
+.chevron-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  margin-left: auto;
+}
+
+.chevron-toggle:hover {
+  color: var(--text);
+}
+
+.chevron-toggle::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(225deg);
+  transition: transform 0.2s ease;
+  margin-top: 4px;
+}
+
+.page-header.is-desktop-collapsed .chevron-toggle::after {
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+
+.page-header.is-desktop-collapsed .header-collapsible {
+  display: none;
+}
+
+.header-collapsible {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--border-thin);
+  padding-top: 12px;
+}
+
+.nav-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.nav-crumbs a {
+  color: var(--text);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.nav-crumbs .sep {
+  color: var(--text-faint);
+  font-size: 14px;
+}
+
+.nav-crumbs .current {
+  font-weight: 700;
+}
+
+.btn-ui {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.1);
+  color: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.btn-ui:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] .btn-ui {
+  background: rgba(16, 26, 53, 0.05);
+}
+
+
+/* =============================================================================
+   6. SEARCH INPUT & FILTER DROPDOWN
+   ============================================================================= */
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.search-input-wrap {
+  position: relative;
+  max-width: 340px;
+  width: 100%;
+  min-width: 190px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  padding: 7px 36px 7px 34px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.1);
+  color: inherit;
+  outline: none;
+}
+
+.search-input-wrap input::placeholder {
+  color: var(--text-faint);
+}
+
+.search-filter-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.search-filter-btn:hover,
+.search-filter-btn[aria-expanded="true"] {
+  background: var(--border-thin);
+  color: var(--text);
+}
+
+.search-filter-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-deep);
+  padding: 12px;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 200;
+  min-width: 200px;
+}
+
+.search-filter-menu.is-open {
+  display: flex;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option input[type="checkbox"] {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+
+/* --- Header mobile breakpoint (≤550px): hamburger replaces chevron ---       */
+@media (max-width: 550px) {
+  .chevron-toggle {
+    display: none;
+  }
+  .page-header {
+    padding: 12px 16px;
+    background: var(--bg-0);
+    backdrop-filter: none;
+  }
+  .header-toggle {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .header-collapsible {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-thin);
+  }
+  .page-header.is-expanded .header-collapsible {
+    display: flex;
+  }
+  .header-bottom {
+    border-top: none;
+    padding-top: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .search-group {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .search-input-wrap {
+    max-width: none;
+    flex: 1;
+  }
+}
+
+
+/* =============================================================================
+   7. MAP STRUCTURE & TIMELINE SPINE
+   ============================================================================= */
+.map-container {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 60vh;
+}
+
+.map-flow {
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  margin-top: 14px;
+  will-change: transform, opacity;
+}
+
+/* Vertical spine: position is auto-derived from --marker-col via --spine-left. */
+.map-spine {
+  position: absolute;
+  left: var(--spine-left);
+  top: 0;
+  bottom: 0;
+  width: var(--spine-width);
+  background: linear-gradient(180deg, transparent, var(--spine-color) 5%, var(--spine-color) 95%, transparent);
+}
+
+.map-spine::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: calc(100% - 80px);
+  background: radial-gradient(closest-side, var(--spine-glow), transparent 80%);
+  filter: blur(2px);
+  opacity: 0.6;
+}
+
+/* =============================================================================
+   8. NODE ROW — GRID STRUCTURE
+   =============================================================================
+   Each node row is a 3-column grid: [marker] [card] [derive-button].
+   Column widths come from layout tokens so breakpoints adjust automatically.  */
+
+.node-row {
+  display: grid;
+  grid-template-columns: var(--marker-col) 1fr max-content;
+  column-gap: var(--node-col-gap);
+  row-gap: 8px;
+  padding: 4px 0 0 0;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  /*container-type: inline-size;
+  container-name: node-col;*/
+}
+
+.level-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  column-gap: 16px;
+  row-gap: 0;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Gap between consecutive level-groups so lateral SVG branches have visible
+   clearance from the card edges above and below.                              */
+.level-group + .level-group {
+  margin-top: 16px;
+}
+
+
+/* =============================================================================
+   9. NODE MARKER — TIMELINE DOT & ARM
+   =============================================================================
+   The marker column contains: a dot (circle), a horizontal arm, and an arrow.
+   The dot is a real DOM element (.marker-dot) so the SVG engine can measure
+   its center position directly via getBoundingClientRect().                    */
+
+.node-marker {
+  width: var(--marker-col);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  grid-row: 1 / span 2;
+}
+
+.marker-dot {
+  width: var(--marker-dot-size);
+  height: var(--marker-dot-size);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: var(--marker-dot-offset-top);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .marker-dot {
+  background: rgba(16, 26, 53, 0.1);
+}
+
+/* Horizontal arm: connects dot to the card. Hidden on mobile.                 */
+.node-marker::after {
+  content: "";
+  position: absolute;
+  left: var(--marker-arm-left);
+  top: calc(var(--marker-dot-offset-top) + var(--marker-dot-size) / 2 - 1px);
+  width: var(--marker-arm-width);
+  height: 2px;
+  background: var(--spine-color);
+  display: var(--marker-arm-display);
+}
+
+/* Arrow tip at end of arm. Also hidden on mobile.                             */
+.marker-arrow-tip {
+  position: absolute;
+  left: var(--marker-arrow-left);
+  top: calc(var(--marker-dot-offset-top) + var(--marker-dot-size) / 2 - 6px);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid var(--spine-color);
+  display: var(--marker-arm-display);
+}
+
+
+/* =============================================================================
+   10. NODE CARD
+   ============================================================================= */
+.node-card {
+  /* Per-node colors are set inline by JS as custom properties:
+   * --n-border-dark/light: card border.  --n-top/bottom: card gradient.
+   * --p-border-dark/light: parent badge dot color.                            */
+  --n-border: var(--n-border-dark);
+  --p-border: var(--p-border-dark);
+
+  grid-row: 1;
+  grid-column: 2;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--n-border);
+  background: linear-gradient(180deg, var(--n-top), var(--n-bottom));
+  color: #081023;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+  min-height: var(--node-min-h);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  container-type: inline-size;
+  container-name: node-col;
+}
+
+[data-theme="light"] .node-card {
+  --n-border: var(--n-border-light);
+  --p-border: var(--p-border-light);
+}
+
+.node-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-deep);
+}
+
+/* Subtle diagonal-line texture overlay.                                       */
+.node-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px 180px at 20% 0%, rgba(255, 255, 255, 0.55), transparent 55%),
+              repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.045) 0 2px, rgba(0, 0, 0, 0) 2px 6px);
+  opacity: 0.22;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+/* Default (so-what visible): controls are pinned top-right. Title truncates
+ * via min-width: 0 rather than wrapping controls to a new line.
+ * When so-what is hidden (container ≤480px), the header loosens to allow wrap. */
+.node-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+
+/* Flex layout: the ID number acts as a hanging-indent column.
+ * Wrapped claim text stays aligned to the right of the number, not under it.
+ * Reverts to inline layout when container is narrow (see ≤480px query).        */
+.node-title {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  font-size: 16.5px;
+  font-weight: 950;
+  line-height: 1.35;
+  min-width: 0;
+  flex: 1;
+}
+
+.node-title .id {
+  opacity: 0.5;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* The claim text fills the remaining title space and wraps independently,
+ * so wrapped lines align to the right of the ID number (hanging indent).      */
+.node-title .claim-text {
+  min-width: 0;
+}
+
+/* Controls stay on one line at default size (flex-wrap: nowrap + flex-shrink: 0
+ * pins the badge + Expand button together in the top-right).
+ * Relaxes to wrap when so-what is hidden (see ≤480px container query).         */
+.node-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.node-so-what {
+  margin: 0;
+  color: rgba(8, 16, 35, 0.64);
+  font-size: 13px;
+  line-height: 1.42;
+  padding: 14px 14px 16px;
+  flex: 1;
+}
+
+/* --- Parent badge pill --- */
+.node-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+button.node-badge {
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+button.node-badge:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.node-badge:active {
+  transform: scale(0.96);
+}
+
+.badge-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--p-border);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+/* --- Container queries for node-row internals ---
+ * Placed AFTER all card component rules so they override correctly.
+ *
+ * ≤480px: so-what line hidden, header loosens to allow control wrapping,
+ *         title reverts from hanging-indent flex to inline block layout.
+ * ≤250px: controls wrap to a full-width row with space-between.               */
+@container node-col (max-width: 300px) {
+  .node-so-what { display: none; }
+  /*.node-card { min-height: auto; }
+  .node-card, .level-expander { z-index: 2; }*/
+  .node-header { flex-wrap: wrap; border-bottom: none; }
+  .node-title { display: block; min-width: 120px; flex: 1; }
+  .node-title .id { margin-right: 4px; }
+  .node-controls { flex-shrink: 1; flex-wrap: wrap; }
+}
+
+@media (max-width: 500px) {
+  .node-card { min-height: auto; z-index: 2; }
+}
+
+@container node-col (max-width: 200px) {
+  .node-controls {
+    width: 100%;
+    margin-top: 4px;
+  }
+}
+
+
+/* =============================================================================
+   11. DERIVATION BUTTON
+   ============================================================================= */
+.btn-derivation {
+  grid-row: 1;
+  grid-column: 3;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 34px;
+  width: var(--derive-btn-width);
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text);
+  position: relative;
+  margin-left: var(--derive-gap);
+  margin-top: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-derivation::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--derive-arm-width));
+  top: 50%;
+  width: var(--derive-arm-width);
+  height: 2px;
+  background: var(--spine-color);
+  transform: translateY(-50%);
+}
+
+.btn-derivation:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-derivation:active {
+  transform: scale(0.95);
+}
+
+[data-theme="light"] .btn-derivation:hover {
+  background: rgba(16, 26, 53, 0.15);
+  border-color: rgba(16, 26, 53, 0.3);
+}
+
+/* Tablet: hide label text (dimensions handled by breakpoint tokens §3).       */
+@media (max-width: 768px) {
+  .btn-derivation .label {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn-derivation {
+    margin-top: 8px;
+    z-index: 1;
+  }
+  .btn-derivation::before {
+    z-index: -1;
+  }
+}
+
+
+/* =============================================================================
+   12. PARALLEL NODE LAYOUT
+   =============================================================================
+   When a DAG level has multiple nodes side-by-side (data-parallel), these
+   rules ensure uniform card widths AND right-edge alignment with normal rows.
+
+   Three layout differences vs. single-node rows:
+     1. Non-last nodes get condensed (icon-only) derive buttons.
+     2. The last node keeps the full derive button for right-edge alignment.
+     3. Non-first markers shift the dot left and shrink the column.
+
+   Card equalization math:
+     Each flex item's card width = (flex total) − (non-card overhead).
+     Items with more overhead get proportionally more flex-basis so the
+     remainder (= card) is equal across all items. Two composable extras:
+       --marker-extra: compensates for the wider first-parallel marker column.
+       --derive-extra: compensates for the wider last-parallel derive button.
+     An element with both attributes (e.g. 2-node row) gets both.             */
+
+.level-group[data-parallel] {
+  column-gap: 0;
+}
+
+/* Base parallel node-row: flex-basis composed from two compensation terms.
+ * Default both to 0; specific attributes override below.                     */
+.level-group[data-parallel] > .node-row {
+  --marker-extra: 0px;
+  --derive-extra: 0px;
+  flex: 1 1 calc(var(--marker-extra) + var(--derive-extra));
+  min-width: 0;
+}
+
+/* First-parallel: wider marker column → needs extra flex-basis.              */
+.level-group[data-parallel] > .node-row[data-first-parallel] {
+  --marker-extra: var(--marker-diff);
+}
+
+/* Last-parallel: full derive button → needs extra flex-basis.                */
+.level-group[data-parallel] > .node-row[data-last-parallel] {
+  --derive-extra: var(--derive-width-diff);
+}
+
+.level-group[data-parallel] > .dummy-node {
+  flex: 1 1 0px;
+}
+
+/* --- Condensed derive buttons for non-last parallel nodes ---
+ * The last node inherits the normal full button style from §11.              */
+.level-group[data-parallel] > .node-row:not([data-last-parallel]) .btn-derivation {
+  width: var(--parallel-derive-btn-width);
+  margin-left: var(--parallel-derive-gap);
+}
+
+.level-group[data-parallel] > .node-row:not([data-last-parallel]) .btn-derivation .label {
+  display: none;
+}
+
+.level-group[data-parallel] > .node-row:not([data-last-parallel]) .btn-derivation::before {
+  width: var(--parallel-derive-arm);
+  left: calc(-1 * var(--parallel-derive-arm));
+}
+
+/* --- Non-first parallel markers: smaller column + shifted internals ---
+ * The dot shifts left (padding-left: 13px). The arm and arrow shift by the
+ * same amount so their visual relationship to the dot is identical to normal
+ * markers. The column shrinks from the right to remove dead space.
+ *
+ * Shift formula (auto-adapts across breakpoints):
+ *   shifted-left = standard-left + (13px + dot-size/2 − marker-col/2)
+ * This moves each element by exactly the dot's displacement from center.     */
+@media (min-width: 501px) {
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) {
+    grid-template-columns: var(--parallel-marker-col) 1fr max-content;
+  }
+
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) .node-marker {
+    width: var(--parallel-marker-col);
+    justify-content: flex-start;
+    padding-left: var(--parallel-shift);
+  }
+
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) .node-marker::after {
+    left: calc(var(--marker-arm-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + var(--parallel-shift));
+  }
+
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) .marker-arrow-tip {
+    left: calc(var(--marker-arrow-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + var(--parallel-shift));
+  }
+}
+
+/* Dummy nodes: invisible flex spacers for long DAG edges.
+ * These are NOT .node-row elements — they have no grid layout or containment
+ * context, which would interfere with flex sizing in parallel groups.          */
+.dummy-node {
+  visibility: hidden;
+  flex: 1 1 0%;
+  min-width: 0;
+  /* Match the vertical space of a real node-row so SVG connectors
+   * route through the correct vertical position.                              */
+  min-height: var(--node-min-h);
+}
+
+.level-group[data-parallel] > .dummy-node {
+  --marker-extra: 0px;
+  --derive-extra: 0px;
+  flex: 1 1 calc(var(--marker-extra) + var(--derive-extra));
+}
+
+.level-group[data-parallel] > .dummy-node[data-first-parallel] {
+  --marker-extra: var(--marker-diff);
+}
+
+.level-group[data-parallel] > .dummy-node[data-last-parallel] {
+  --derive-extra: var(--derive-width-diff);
+}
+
+
+/* =============================================================================
+   12b. STACKED PARALLEL LAYOUT
+   =============================================================================
+   When a parallel level-group is too narrow for side-by-side cards, JS adds
+   data-stacked. Each node reverts to a full-width row indented by its
+   consecutive-parallel depth (--indent-depth, set inline by JS).
+
+   Transition strategy: flex-basis animates from the shared parallel value to
+   100% while margin-left grows from 0 to the indent. Dummies shrink to zero.
+   This produces a smooth fan-out / fan-in effect without changing flex-direction.
+
+   Indent = --stacked-indent × --indent-depth (e.g. 64px × 2 = 128px).            */
+
+/* Animate flex, margin, and opacity on all parallel flex children.            */
+.level-group[data-parallel] > .node-row,
+.level-group[data-parallel] > .dummy-node {
+  transition: flex-basis 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              flex-grow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              min-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.35s ease;
+}
+
+/* --- Stacked node rows: full width minus indent ---                          */
+.level-group[data-stacked] > .node-row {
+  flex: 0 0 calc(100% - var(--stacked-indent) * var(--indent-depth, 1));
+  margin-left: calc(var(--stacked-indent) * var(--indent-depth, 1));
+}
+
+/* Reset first/last flex-basis compensation — not needed when stacked.         */
+.level-group[data-stacked] > .node-row[data-first-parallel],
+.level-group[data-stacked] > .node-row[data-last-parallel] {
+  --marker-extra: 0px;
+  --derive-extra: 0px;
+}
+
+/* --- Restore normal grid columns for non-first parallel markers ---          */
+.level-group[data-stacked] > .node-row:not([data-first-parallel]) {
+  grid-template-columns: var(--marker-col) 1fr max-content;
+}
+
+.level-group[data-stacked] > .node-row:not([data-first-parallel]) .node-marker {
+  width: var(--marker-col);
+  justify-content: center;
+  padding-left: 0;
+}
+
+.level-group[data-stacked] > .node-row:not([data-first-parallel]) .node-marker::after {
+  left: var(--marker-arm-left);
+}
+
+.level-group[data-stacked] > .node-row:not([data-first-parallel]) .marker-arrow-tip {
+  left: var(--marker-arrow-left);
+}
+
+/* --- Restore full derive button for non-last parallel nodes ---              */
+.level-group[data-stacked] > .node-row:not([data-last-parallel]) .btn-derivation {
+  width: var(--derive-btn-width);
+  margin-left: var(--derive-gap);
+}
+
+.level-group[data-stacked] > .node-row:not([data-last-parallel]) .btn-derivation::before {
+  width: var(--derive-arm-width);
+  left: calc(-1 * var(--derive-arm-width));
+}
+
+/* Show derive label only when viewport is wide enough (match normal rule).    */
+@media (min-width: 769px) {
+  .level-group[data-stacked] > .node-row:not([data-last-parallel]) .btn-derivation .label {
+    display: inline;
+  }
+}
+
+/* --- Collapse dummy spacers to zero height ---                               */
+.level-group[data-stacked] > .dummy-node {
+  flex: 0 0 0%;
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Suppress transitions during initial stacking ---
+ * Applied momentarily in Phase 1c so the browser doesn't animate
+ * from parallel → stacked on first render.                                 */
+.no-stack-transition .level-group[data-parallel] > .node-row,
+.no-stack-transition .level-group[data-parallel] > .dummy-node {
+  transition: none !important;
+}
+
+
+/* =============================================================================
+   13. EXPANDER PANEL
+   =============================================================================
+   Each level-group has one shared .level-expander at the end.
+   Animates open via grid-template-rows (0fr → 1fr).                           */
+
+.level-expander {
+  width: 100%;
+  flex: 0 0 100%;
+  padding-left: var(--expander-pad);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s, transform 0.3s, margin-top 0.3s;
+  opacity: 0;
+  transform: translateY(-6px);
+  margin-top: 0;
+  z-index: 10;
+}
+
+.level-expander.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: calc(-8px + var(--parallel-pull, 0px));
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 20;
+}
+
+.exp-inner {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel-bg), var(--panel-accent));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+
+/* =============================================================================
+   14. LOGIC SECTIONS (row-type sections inside expander)
+   ============================================================================= */
+.logic-section {
+  /* Local layout tokens for procedural line routing */
+  --logic-pad-left: 14px;
+  --logic-circle: 22px;
+
+  border-top: 1px solid var(--border);
+  padding: 12px var(--logic-pad-left);
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px;
+}
+
+.logic-section:first-child {
+  border-top: none;
+}
+
+.logic-header {
+  color: var(--header-ink);
+  font-weight: 950;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logic-header::before {
+  content: attr(data-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--logic-circle);
+  height: var(--logic-circle);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.logic-header::after {
+  content: "";
+  margin-left: auto;
+  margin-right: 12px;
+  align-self: flex-start;
+  margin-top: 8px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+  opacity: 0.6;
+}
+
+.logic-section.is-collapsed .logic-header::after {
+  transform: rotate(-45deg);
+}
+
+.logic-section.is-collapsed .logic-content {
+  display: none;
+}
+
+/* Vertical connecting line between sections. auto-centered on the circle. */
+.logic-section::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--logic-pad-left) + (var(--logic-circle) / 2) - 1px);
+  top: 44px;
+  bottom: -3px;
+  width: 2px;
+  background: var(--border);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* Arrow at bottom of connecting line. auto-centered on the line. */
+.logic-section::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--logic-pad-left) + (var(--logic-circle) / 2) - 5px);
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--border);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .logic-section {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Pushes the text safely to the right of the vertical line */
+  .logic-content {
+    padding-left: calc(var(--logic-circle) + 12px);
+  }
+}
+
+
+/* =============================================================================
+   15. TAB AREA & ACTION BUTTONS
+   ============================================================================= */
+.tab-area {
+  border-top: 1px solid var(--border);
+  background: var(--mini-bg);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 8px 12px;
+  align-items: end;
+}
+
+.tab-list {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-tab {
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-tab[aria-selected="true"] {
+  background: var(--text);
+  color: var(--bg-0);
+  border-color: var(--text);
+  font-weight: 950;
+  transform: translateY(-1px);
+}
+
+.panel-action-slot {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--border-thin);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-action:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] .btn-action:hover {
+  background: rgba(16, 26, 53, 0.05);
+}
+
+.btn-action.btn-derivation-disagree {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+
+.btn-action.btn-derivation-disagree:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fecaca;
+}
+
+.btn-action.btn-derivation-disagree:active {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #450a0a;
+  font-weight: 700;
+}
+
+[data-theme="light"] .btn-action.btn-derivation-disagree {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: rgba(220, 38, 38, 0.2);
+  color: #b91c1c;
+}
+
+[data-theme="light"] .btn-action.btn-derivation-disagree:hover {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+  color: #991b1b;
+}
+
+[data-theme="light"] .btn-action.btn-derivation-disagree:active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.btn-action.btn-agree[aria-pressed="true"] {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #042f14;
+  font-weight: 700;
+}
+
+.btn-action.btn-disagree[aria-pressed="true"] {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #450a0a;
+  font-weight: 700;
+}
+
+[data-theme="light"] .btn-action.btn-agree[aria-pressed="true"] {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+[data-theme="light"] .btn-action.btn-disagree[aria-pressed="true"] {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+
+.tab-panel {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  .tab-area {
+    grid-template-columns: 1fr;
+  }
+  .tab-panel {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .panel-action-slot {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: flex-start;
+    margin-top: 4px;
+  }
+}
+
+
+/* =============================================================================
+   16. BULLET LISTS
+   ============================================================================= */
+.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  text-align: left;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.42;
+}
+
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transform: translateY(-50%);
+}
+
+
+/* =============================================================================
+   17. RECURSIVE MINI-NODES
+   ============================================================================= */
+.mini-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  text-align: left;
+}
+
+.mini-node {
+  border: 1px solid var(--border-thin);
+  border-radius: 12px;
+  background: var(--mini-bg);
+  overflow: hidden;
+  text-align: left;
+}
+
+.mini-trigger {
+  width: 100%;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 13.5px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mini-trigger .id {
+  opacity: 0.5;
+  margin-right: 6px;
+  font-weight: 800;
+}
+
+.mini-trigger::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+  opacity: 0.6;
+  margin-left: auto;
+  margin-right: 6px;
+}
+
+.mini-node.is-open > .mini-trigger::after {
+  transform: rotate(-45deg);
+}
+
+.mini-content-wrap {
+  display: none;
+  padding: 0 14px 14px;
+  border-top: 1px solid var(--border-thin);
+  background: var(--mini-content-bg);
+  box-shadow: var(--mini-content-shadow);
+  text-align: left;
+}
+
+.mini-node.is-open > .mini-content-wrap {
+  display: block;
+}
+
+.sub-section {
+  margin-top: 12px;
+  text-align: left;
+}
+
+.sub-label {
+  font-size: 11px;
+  font-weight: 950;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  letter-spacing: 0.6px;
+  text-align: left;
+}
+
+.sub-body {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.45;
+  text-align: left;
+}
+
+.mini-content-wrap .mini-node {
+  margin-top: 10px;
+  border-left-width: 4px;
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: none;
+}
+
+
+/* =============================================================================
+   18. SIBLING NAVIGATION
+   ============================================================================= */
+.sibling-nav-area {
+  padding-left: var(--sibling-pad);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.sibling-nav-area.prev {
+  margin-bottom: 30px;
+}
+
+.sibling-nav-area.next {
+  margin-top: 40px;
+}
+
+.sibling-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.btn-sibling {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, var(--glass), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sibling:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+}
+
+[data-theme="light"] .btn-sibling {
+  background: #ffffff;
+}
+
+[data-theme="light"] .btn-sibling:hover {
+  background: #f4f6fb;
+}
+
+.btn-sibling .sibling-id {
+  font-weight: 900;
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.btn-sibling .sibling-claim {
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.btn-sibling .sibling-arrow {
+  font-size: 18px;
+  font-weight: 900;
+  opacity: 0.5;
+  transition: transform 0.2s ease;
+}
+
+.btn-sibling.next-btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-sibling.next-btn:hover .sibling-arrow {
+  transform: translateY(4px);
+  opacity: 1;
+}
+
+.btn-sibling.prev-btn:hover {
+  transform: translateY(2px);
+}
+
+.btn-sibling.prev-btn:hover .sibling-arrow {
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .sibling-nav-area.prev {
+    margin-bottom: 24px;
+  }
+  .sibling-nav-area.next {
+    margin-top: 30px;
+  }
+}
+
+
+/* =============================================================================
+   19. SEARCH RESULTS GROUPING
+   ============================================================================= */
+.search-result-box {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-0);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-box:first-of-type {
+  margin-top: 32px;
+}
+
+.search-result-box.is-collapsed {
+  flex-direction: column;
+}
+
+.search-result-header {
+  flex: 0 0 220px;
+  padding: 20px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-right: 1px solid var(--border-thin);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  user-select: none;
+  line-height: 1.4;
+}
+
+[data-theme="light"] .search-result-header {
+  background: rgba(16, 26, 53, 0.02);
+}
+
+.search-result-box.is-collapsed .search-result-header {
+  flex: none;
+  border-right: none;
+}
+
+.search-result-header::after {
+  content: "";
+  flex-shrink: 0;
+  margin-top: 4px;
+  margin-left: 12px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+}
+
+.search-result-box.is-collapsed .search-result-header::after {
+  transform: rotate(-45deg);
+}
+
+.search-result-content {
+  flex: 1;
+  min-width: 0;
+  padding-right: 24px;
+}
+
+.search-result-box.is-collapsed .search-result-content {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .search-result-box {
+    flex-direction: column;
+  }
+  .search-result-header {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-thin);
+    align-items: center;
+  }
+}
+
+
+/* =============================================================================
+   20. PAGE TRANSITION ANIMATIONS
+   =============================================================================
+   Duration must match ANIMATION_SPEEDS.CSS_TRANSITION_MS in app.js.           */
+
+.anim-enter-right  { animation: slideInRight  0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-left    { animation: slideOutLeft   0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-enter-left   { animation: slideInLeft    0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-right   { animation: slideOutRight  0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-enter-bottom { animation: slideInBottom  0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-top     { animation: slideOutTop    0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-enter-top    { animation: slideInTop     0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-exit-bottom  { animation: slideOutBottom 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+@keyframes slideInRight   { from { transform: translateX(60px);  opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutLeft   { from { transform: none; opacity: 1; } to { transform: translateX(-60px);  opacity: 0; } }
+@keyframes slideInLeft    { from { transform: translateX(-60px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutRight  { from { transform: none; opacity: 1; } to { transform: translateX(60px);   opacity: 0; } }
+@keyframes slideInBottom  { from { transform: translateY(40px);  opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutTop    { from { transform: none; opacity: 1; } to { transform: translateY(-40px);  opacity: 0; } }
+@keyframes slideInTop     { from { transform: translateY(-40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes slideOutBottom { from { transform: none; opacity: 1; } to { transform: translateY(40px);   opacity: 0; } }
+
+
+/* =============================================================================
+   21. THEME TRANSITION OVERLAY
+   ============================================================================= */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.3s ease, background 0.3s ease, color 0.3s ease,
+              border-color 0.3s ease, box-shadow 0.3s ease !important;
+}

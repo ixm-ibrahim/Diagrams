@@ -1,0 +1,473 @@
+/* =============================================================================
+   map-layout.css — Map Structure, Spine, Node Row Grid, Markers
+   =============================================================================
+   Defines the spatial structure of the map: the scroll container, the vertical
+   flow, the timeline spine, the node-row 3-column grid, the marker column
+   (dot + arm + arrow), level-group flex rows, and dummy spacer nodes.
+
+   Depends on tokens.css:
+     --marker-col, --node-col-gap, --spine-left, --spine-width, --spine-color,
+     --spine-glow, --marker-dot-size, --marker-dot-offset-top, --marker-arm-left,
+     --marker-arm-width, --marker-arm-display, --marker-arrow-left,
+     --marker-arrow-width, --node-min-h, --border, --text-muted
+
+   HTML classes styled here:
+     .map-container, .map-flow, .map-spine,
+     .level-group, .node-row, .dummy-node, .level-expander,
+     .node-marker, .marker-dot, .marker-arrow-tip
+   ============================================================================= */
+
+
+/* Map container: holds all .map-flow views
+   ----------------------------------------------------------------------------- */
+.map-container {
+  position: relative;
+  min-height: 60vh;
+  /* overflow-x is NOT set here — the JS transition code applies overflow:hidden
+     temporarily during page animations. Permanent clipping would cut off
+     derivation buttons and glow effects near the right edge. */
+}
+
+
+/* Map flow: one per "page" of nodes
+   ----------------------------------------------------------------------------- */
+.map-flow {
+  width: 100%;
+  position: relative;
+  padding: var(--flow-pad-v) 0;
+  margin-top: var(--flow-margin-top);
+  will-change: transform, opacity;
+}
+
+
+/* Timeline layer: compositing container for spine + SVG elements.
+   Uses container-level opacity so overlapping spine/SVG elements within
+   the layer render as opaque → no semi-transparent doubling at junctions.
+   ----------------------------------------------------------------------------- */
+.timeline-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: var(--z-timeline);
+  opacity: var(--spine-opacity);
+}
+
+/* Vertical spine: auto-positioned via --spine-left derived from --marker-col.
+   Uses solid (opaque) color — the timeline-layer opacity handles transparency.
+   ----------------------------------------------------------------------------- */
+.map-spine {
+  position: absolute;
+  left: var(--spine-left);
+  top: 0;
+  bottom: 0;
+  width: var(--spine-width);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--spine-color-solid) 5%,
+    var(--spine-color-solid) 95%,
+    transparent
+  );
+}
+
+/* Glow effect behind the spine — lives OUTSIDE the timeline-layer
+   so it isn't affected by the layer's opacity. */
+.map-spine-glow {
+  position: absolute;
+  left: calc(var(--spine-left) + var(--spine-width) / 2);
+  top: 40px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: calc(100% - 80px);
+  background: radial-gradient(closest-side, var(--spine-glow), transparent 80%);
+  filter: blur(2px);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* Level group: flex row containing one topological level of nodes
+   ----------------------------------------------------------------------------- */
+.level-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  column-gap: var(--parallel-col-gap);
+  row-gap: 0;
+  width: 100%;
+  position: relative;
+  z-index: var(--z-level-group);
+  /* overflow: visible (explicit) — node card box-shadow glows must not be
+     clipped by any ancestor in the .map-container > .map-flow > .level-group
+     > .node-row chain. Never set overflow: hidden here. */
+  overflow: visible;
+}
+
+/* Gap between consecutive level-groups so lateral SVG branches have visible
+   clearance from the card edges above and below. */
+.level-group + .level-group {
+  margin-top: var(--level-gap);
+}
+
+/* Parallel groups: zero column-gap (equalization math handles spacing) */
+.level-group[data-parallel] {
+  column-gap: 0;
+}
+
+/* --- Parallel flex-basis equalization ---
+   Each flex item's card width = (flex total) − (non-card overhead).
+   Items with more overhead get proportionally more flex-basis so the
+   remainder (= card) is equal across all items. Two composable extras:
+     --marker-extra: compensates for the wider first-parallel marker column.
+     --derive-extra: compensates for the wider last-parallel derive button.
+   An element with both attributes (e.g. 2-node row) gets both.
+
+   --flex-weight (set inline by JS) controls proportional width distribution.
+   Children inherit their parent node's share of the row, so DAG branches
+   stay visually aligned with their parent above (tree-proportional layout). */
+
+.level-group[data-parallel] > .node-row {
+  --marker-extra: 0px;
+  --derive-extra: 0px;
+  --flex-weight: 1;
+  flex: var(--flex-weight) 1 calc(var(--marker-extra) + var(--derive-extra));
+  min-width: 0;
+}
+
+/* First-parallel: wider marker column → needs extra flex-basis */
+.level-group[data-parallel] > .node-row[data-first-parallel] {
+  --marker-extra: var(--marker-diff);
+}
+
+/* Last-parallel: full derive button → needs extra flex-basis */
+.level-group[data-parallel] > .node-row[data-last-parallel] {
+  --derive-extra: var(--derive-width-diff);
+}
+
+.level-group[data-parallel] > .dummy-node {
+  --marker-extra: 0px;
+  --derive-extra: 0px;
+  --flex-weight: 1;
+  flex: var(--flex-weight) 1 calc(var(--marker-extra) + var(--derive-extra));
+}
+
+.level-group[data-parallel] > .dummy-node[data-first-parallel] {
+  --marker-extra: var(--marker-diff);
+}
+
+.level-group[data-parallel] > .dummy-node[data-last-parallel] {
+  --derive-extra: var(--derive-width-diff);
+}
+
+
+/* --- Condensed derive buttons for non-last parallel nodes ---
+   The last node inherits the normal full button style from derive-button.css. */
+
+.level-group[data-parallel] > .node-row:not([data-last-parallel]) .btn-derivation {
+  width: var(--parallel-derive-btn-width);
+  margin-left: var(--parallel-derive-gap);
+}
+
+.level-group[data-parallel] > .node-row:not([data-last-parallel]) .btn-derivation .label {
+  display: none;
+}
+
+.level-group[data-parallel] > .node-row:not([data-last-parallel]) .btn-derivation::before {
+  width: var(--parallel-derive-arm);
+  left: calc(-1 * var(--parallel-derive-arm));
+}
+
+
+/* --- Non-first parallel markers: smaller column + shifted internals ---
+   The dot shifts left (padding-left: 13px). The arm and arrow shift by the
+   same amount. The column shrinks from the right to remove dead space.
+
+   Shift formula (auto-adapts across breakpoints):
+     shifted-left = standard-left + (13px + dot-size/2 − marker-col/2)       */
+
+@media (min-width: 451px) {
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) {
+    grid-template-columns: var(--parallel-marker-col) 1fr max-content;
+  }
+
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) .node-marker {
+    width: var(--parallel-marker-col);
+    justify-content: flex-start;
+    padding-left: var(--parallel-shift);
+  }
+
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) .node-marker::after {
+    left: calc(var(--marker-arm-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + var(--parallel-shift));
+  }
+
+  .level-group[data-parallel] > .node-row:not([data-first-parallel]) .marker-arrow-tip {
+    left: calc(var(--marker-arrow-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + var(--parallel-shift));
+  }
+}
+
+
+/* Node row: 3-column grid [marker] [card] [derive-button]
+   ----------------------------------------------------------------------------- */
+.node-row {
+  display: grid;
+  grid-template-columns: var(--marker-col) 1fr max-content;
+  column-gap: var(--node-col-gap);
+  row-gap: var(--node-row-gap);
+  padding: var(--node-row-pad-top) 0 0 0;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  /* overflow: visible (explicit) — must not clip the node card's box-shadow
+     glows that extend outside the card's border-box. Never set hidden here. */
+  overflow: visible;
+}
+
+
+/* Marker column: dot, horizontal arm, arrow tip
+   ----------------------------------------------------------------------------- */
+.node-marker {
+  width: var(--marker-col);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  grid-row: 1 / span 2;
+}
+
+.marker-dot {
+  width: var(--marker-dot-size);
+  height: var(--marker-dot-size);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: var(--marker-dot-offset-top);
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .marker-dot {
+  background: rgba(16, 26, 53, 0.1);
+}
+
+/* Horizontal arm: connects dot to the card. Hidden on mobile via token. */
+.node-marker::after {
+  content: "";
+  position: absolute;
+  left: var(--marker-arm-left);
+  top: calc(var(--marker-dot-offset-top) + var(--marker-dot-size) / 2 - 1px);
+  width: var(--marker-arm-width);
+  height: var(--spine-width);
+  background: var(--spine-color);
+  display: var(--marker-arm-display);
+}
+
+/* Arrow tip at end of arm. Also hidden on mobile via token. */
+.marker-arrow-tip {
+  position: absolute;
+  left: var(--marker-arrow-left);
+  top: calc(var(--marker-dot-offset-top) + var(--marker-dot-size) / 2 - 6px);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid var(--spine-color);
+  display: var(--marker-arm-display);
+}
+
+
+/* Stack group: temporary column wrapper injected by updateStackedGroups when a
+   parallel sibling group is too narrow to sit side-by-side.
+   -----------------------------------------------------------------------------
+   Nodes live as direct .level-group children at full width (so all the
+   .level-group[data-parallel] > .node-row CSS keeps working).  When the
+   container narrows past a group's threshold, updateStackedGroups moves the
+   nodes into this wrapper.  On widening it moves them back out.
+
+   --flex-weight is set inline to the combined weight of the wrapped nodes so
+   the group occupies the same horizontal space it would have in row mode.
+   ----------------------------------------------------------------------------- */
+.stack-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  --flex-weight: 1;
+  flex: var(--flex-weight) 1 0%;
+}
+
+/* Children use their natural content height inside the column.
+   flex-basis: auto (via flex: none) is critical: the base .node-row rule
+   sets `flex: 1` which expands to `flex: 1 1 0%`, and a 0% flex-basis in a
+   column with no explicit height means zero free space → zero height → sliver.
+   Width fills the wrapper via the default align-items: stretch on .stack-group.
+   Explicit min-height guarantees the card is never squashed to zero. */
+.stack-group > .node-row {
+  flex: 0 0 auto;
+  min-width: 0;
+  min-height: var(--node-min-h);
+  /* DFS outline indentation: --indent-depth is set inline by updateStackedGroups.
+     --stacked-indent (tokens.css) scales with breakpoint (64px → 28px mobile). */
+  margin-left: calc(var(--stacked-indent) * var(--indent-depth, 0));
+}
+
+/* Stack-group participates in the parallel flex-basis equalization just like
+   a node-row or dummy-node.  --flex-weight (set inline by JS) preserves the
+   proportional width so the group stays aligned with its parent above.
+
+   Nodes inside are NOT direct children of [data-parallel], so the condensed-
+   derive and shifted-marker rules (which use > .node-row) don't apply
+   automatically.  We duplicate those rules below for stack-group children. */
+.level-group[data-parallel] > .stack-group {
+  --marker-extra: 0px;
+  --derive-extra: 0px;
+  flex: var(--flex-weight) 1 calc(var(--marker-extra) + var(--derive-extra));
+  min-width: 0;
+}
+
+/* When a stack-group column is taller than a single node, prevent direct
+   .node-row siblings from stretching to match via align-items: stretch. */
+.level-group[data-has-stacked] > .node-row {
+  align-self: flex-start;
+}
+
+.level-group[data-parallel] > .stack-group[data-first-parallel] {
+  --marker-extra: var(--marker-diff);
+}
+
+.level-group[data-parallel] > .stack-group[data-last-parallel] {
+  --derive-extra: var(--derive-width-diff);
+}
+
+/* --- Condensed derive buttons inside non-last stack-groups ---
+   The last-parallel stack-group keeps full derive buttons (matching the
+   non-stacked data-last-parallel behavior from derive-button.css). */
+.level-group[data-parallel] > .stack-group:not([data-last-parallel]) > .node-row .btn-derivation {
+  width: var(--parallel-derive-btn-width);
+  margin-left: var(--parallel-derive-gap);
+}
+
+.level-group[data-parallel] > .stack-group:not([data-last-parallel]) > .node-row .btn-derivation .label {
+  display: none;
+}
+
+.level-group[data-parallel] > .stack-group:not([data-last-parallel]) > .node-row .btn-derivation::before {
+  width: var(--parallel-derive-arm);
+  left: calc(-1 * var(--parallel-derive-arm));
+}
+
+/* --- Narrow markers inside non-first stack-groups ---
+   First-parallel stack-groups keep the full marker column width to align
+   with single-row nodes above and below.  Only non-first stack-groups
+   use the condensed parallel marker (matching non-first-parallel rules). */
+@media (min-width: 451px) {
+  .level-group[data-parallel] > .stack-group:not([data-first-parallel]) > .node-row {
+    grid-template-columns: var(--parallel-marker-col) 1fr max-content;
+  }
+
+  .level-group[data-parallel] > .stack-group:not([data-first-parallel]) > .node-row .node-marker {
+    width: var(--parallel-marker-col);
+    justify-content: flex-start;
+    padding-left: var(--parallel-shift);
+  }
+
+  .level-group[data-parallel] > .stack-group:not([data-first-parallel]) > .node-row .node-marker::after {
+    left: calc(var(--marker-arm-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + var(--parallel-shift));
+  }
+
+  .level-group[data-parallel] > .stack-group:not([data-first-parallel]) > .node-row .marker-arrow-tip {
+    left: calc(var(--marker-arrow-left) - var(--marker-col) / 2 + var(--marker-dot-size) / 2 + var(--parallel-shift));
+  }
+}
+
+
+/* Absorbed level-groups: when zone extension pulls all real nodes into
+   a parent stack-group, the vacated level-group collapses so it doesn't
+   create dead vertical space.  Dummies inside are irrelevant once the
+   SVG engine skips absorbed groups during position collection. */
+.level-group[data-zone-absorbed] {
+  display: none;
+}
+
+
+/* Dummy node: invisible flex spacer for long DAG edges
+   ----------------------------------------------------------------------------- */
+.dummy-node {
+  visibility: hidden;
+  flex: 1 1 0%;
+  min-width: 0;
+  /* Match the vertical space of a real node-row so SVG connectors
+     route through the correct vertical position. */
+  min-height: var(--node-min-h);
+}
+
+
+/* Level expander: styled in expander.css. The .level-expander element is
+   created by ui-render.js inside each level-group as a shared drawer.       */
+
+
+/* SVG overlay for DAG connector paths (drawn procedurally by svg-engine.js)
+   ----------------------------------------------------------------------------- */
+.dag-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: var(--z-timeline);
+}
+
+.dag-edge {
+  fill: none;
+  stroke: var(--spine-color-solid);
+  stroke-width: var(--spine-width);
+}
+
+
+/* Empty page messages: shown when a node has no child derivations
+   ----------------------------------------------------------------------------- */
+
+/* Terminal variant: node card is rendered above this message, so keep it
+   left-aligned and unobtrusive — it's a footnote, not a hero element. */
+.empty-page-message {
+  padding: 16px 20px 40px;
+  padding-left: var(--expander-pad);
+  text-align: left;
+  color: var(--text-faint);
+  font-size: var(--card-body-size);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Undeveloped variant: no card above, so fill the space and centre the message.
+   Works with both light and dark themes via CSS custom properties. */
+.empty-page-message--undeveloped {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 48px 32px;
+  padding-left: 32px; /* override the expander-pad indent */
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.7;
+  gap: 14px;
+}
+
+.empty-page-message--undeveloped::before {
+  content: '◎';
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  opacity: 0.35;
+  color: var(--text-muted);
+  pointer-events: none;
+}

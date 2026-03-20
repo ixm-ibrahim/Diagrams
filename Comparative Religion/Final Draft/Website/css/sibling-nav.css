@@ -1,0 +1,166 @@
+/* =============================================================================
+   sibling-nav.css — Sibling Navigation
+   =============================================================================
+   Navigation areas at top/bottom of derivation pages. Each area contains
+   one or more .sibling-nav-group elements, each with one label and one or
+   more buttons.
+
+   Depends on tokens.css:
+     --sibling-pad, --radius-md, --glass, --border, --border-thin,
+     --text, --text-muted, --shadow
+
+   HTML classes styled here:
+     .sibling-nav-area, .sibling-nav-group, .sibling-label,
+     .btn-sibling (.prev-btn, .next-btn, .parallel-prev-btn, .parallel-next-btn)
+     .sibling-arrow, .sibling-id, .sibling-claim
+   ============================================================================= */
+
+
+/* Container: stacks groups vertically
+   ----------------------------------------------------------------------------- */
+.sibling-nav-area {
+  padding-left: var(--sibling-pad);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.sibling-nav-area.prev { margin-bottom: 30px; }
+.sibling-nav-area.next { margin-top: 40px; }
+
+
+/* Group: one label + multiple buttons
+   ----------------------------------------------------------------------------- */
+.sibling-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+/* Labels
+   ----------------------------------------------------------------------------- */
+.sibling-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.sibling-nav-parallel .sibling-label,
+.sibling-nav-cross .sibling-label {
+  font-weight: 700;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+
+/* Button base
+   ----------------------------------------------------------------------------- */
+.btn-sibling {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, var(--glass), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--transition-medium) ease, background var(--transition-medium) ease, box-shadow var(--transition-medium) ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sibling:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.btn-sibling:active {
+  transform: scale(0.98) !important;
+}
+
+[data-theme="light"] .btn-sibling { background: #ffffff; }
+[data-theme="light"] .btn-sibling:hover { background: #f4f6fb; }
+
+
+/* Parallel variant: compact with dashed border
+   ----------------------------------------------------------------------------- */
+.sibling-nav-parallel .btn-sibling {
+  padding: 12px 16px;
+  border-style: dashed;
+  opacity: 0.85;
+}
+.sibling-nav-parallel .btn-sibling:hover { opacity: 1; }
+
+
+/* Cross-parent variant: muted
+   ----------------------------------------------------------------------------- */
+.sibling-nav-cross .btn-sibling {
+  padding: 12px 16px;
+  border-color: var(--border-thin);
+  opacity: 0.75;
+}
+.sibling-nav-cross .btn-sibling:hover { opacity: 1; }
+
+
+/* Button internals
+   ----------------------------------------------------------------------------- */
+.btn-sibling .sibling-id {
+  font-weight: 900;
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.btn-sibling .sibling-claim {
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.btn-sibling .sibling-arrow {
+  font-size: 18px;
+  font-weight: 900;
+  opacity: 0.5;
+  transition: transform var(--transition-medium) ease, opacity var(--transition-medium) ease;
+}
+
+
+/* Direction-specific hover: each button type moves in its arrow direction
+   ----------------------------------------------------------------------------- */
+
+/* ↑ Previous: hover lifts UP */
+.btn-sibling.prev-btn:hover { transform: translateY(-2px); }
+.btn-sibling.prev-btn:hover .sibling-arrow {
+  transform: translateY(-4px); opacity: 1;
+}
+
+/* ↓ Next: hover pushes DOWN */
+.btn-sibling.next-btn:hover { transform: translateY(2px); }
+.btn-sibling.next-btn:hover .sibling-arrow {
+  transform: translateY(4px); opacity: 1;
+}
+
+/* ⇠ Parallel before: hover shifts LEFT */
+.btn-sibling.parallel-prev-btn:hover { transform: translateX(-3px); }
+.btn-sibling.parallel-prev-btn:hover .sibling-arrow { opacity: 1; }
+
+/* ⇢ Parallel after: hover shifts RIGHT */
+.btn-sibling.parallel-next-btn:hover { transform: translateX(3px); }
+.btn-sibling.parallel-next-btn:hover .sibling-arrow { opacity: 1; }
+
+
+/* Mobile
+   ----------------------------------------------------------------------------- */
+@media (max-width: 450px) {
+  .sibling-nav-area.prev { margin-bottom: 24px; }
+  .sibling-nav-area.next { margin-top: 30px; }
+  .btn-sibling { padding: 12px 14px; gap: 8px; }
+  .sibling-nav-parallel .btn-sibling,
+  .sibling-nav-cross .btn-sibling { padding: 10px 12px; }
+}

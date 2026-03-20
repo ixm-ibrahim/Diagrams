@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="docTitle">Loading Map...</title>
+
+  <!-- CSS: tokens first (all other sheets depend on them), then base, then components -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/map-layout.css" />
+  <link rel="stylesheet" href="css/node-card.css" />
+  <link rel="stylesheet" href="css/derive-button.css" />
+  <link rel="stylesheet" href="css/sibling-nav.css" />
+  <link rel="stylesheet" href="css/expander.css" />
+  <link rel="stylesheet" href="css/mini-nodes.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/search-results.css" />
+  <link rel="stylesheet" href="css/agreement.css" />
+
+  <!-- JS: ES modules loaded via main.js entry point -->
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="app-wrap" id="appContainer">
+    <header class="page-header" id="pageHeader">
+      <div class="header-top">
+        <h1 class="page-title" id="titleText">Loading...</h1>
+        <button
+          class="chevron-toggle"
+          id="chevronToggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="headerCollapsible"
+          aria-label="Collapse Header"
+        ></button>
+        <button
+          class="btn-ui header-toggle"
+          id="headerToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="headerCollapsible"
+          aria-label="Toggle Menu"
+        >☰ Menu</button>
+      </div>
+
+      <div class="header-collapsible" id="headerCollapsible">
+        <div class="subtitle" id="subtitleText"></div>
+        <div class="header-bottom">
+          <nav class="nav-crumbs" aria-label="Breadcrumbs">
+            <span id="breadcrumbRoot">Home</span>
+            <span class="sep" aria-hidden="true">›</span>
+            <span class="current" aria-current="page" id="breadcrumbCurrent">Loading...</span>
+          </nav>
+
+          <div class="search-group">
+            <div class="search-input-wrap">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" aria-label="Search map" />
+
+              <button
+                id="searchFilterBtn"
+                class="search-filter-btn"
+                type="button"
+                aria-label="Search Options"
+                aria-expanded="false"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+              </button>
+
+              <div id="searchFilterMenu" class="search-filter-menu">
+                <label class="filter-option">
+                  <input type="checkbox" id="toggleNodeContentsSearch" checked>
+                  <span class="filter-text">Search node contents</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" id="toggleGlobalSearch" checked>
+                  <span class="filter-text">Search all pages (Global)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" id="toggleNestedSearch">
+                  <span class="filter-text">Search only current page</span>
+                </label>
+              </div>
+            </div>
+            <button class="btn-icon-expand" id="exportBtn" type="button" aria-label="Export nodes as JSON">
+              <svg class="btn-icon-expand__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span class="btn-icon-expand__label">Export</span>
+            </button>
+            <button class="btn-icon-expand" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+              <span class="btn-icon-expand__icon btn-icon-expand__emoji" id="themeIcon" aria-hidden="true">🌙</span>
+              <span class="btn-icon-expand__label" id="themeLabel">Dark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="vote-summary" id="voteSummary" hidden>
+        <button class="vote-summary__toggle" id="voteSummaryToggle" type="button"
+                aria-expanded="false" aria-controls="voteSummaryBody">
+          <span class="vote-summary__title">Your Positions:</span>
+          <span class="vote-summary__count" id="voteSummaryCount">0</span>
+          <span class="vote-summary__chevron" aria-hidden="true"></span>
+        </button>
+        <div class="vote-summary__body" id="voteSummaryBody">
+          <ul class="vote-summary__list" id="voteSummaryList"></ul>
+          <div class="vote-summary__actions">
+            <button class="vote-summary__reset" id="voteSummaryReset" type="button">Reset All</button>
+          </div>
+          <div class="vote-summary__confirm" id="voteSummaryConfirm" hidden>
+            <span>Clear all positions?</span>
+            <button class="vote-summary__confirm-yes" id="voteSummaryConfirmYes" type="button">Yes, reset</button>
+            <button class="vote-summary__confirm-no" id="voteSummaryConfirmNo" type="button">Cancel</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="map-container" id="mapContainer" role="main"></main>
+  </div>
+</body>
+</html>
