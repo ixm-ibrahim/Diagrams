@@ -10,6 +10,7 @@
 
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
+import { md } from './templates.js';
 
 /* ---------------------------------------------------------------------------
  * Module-level cache for node lookups
@@ -332,7 +333,7 @@ function renderGroup(group, prefix) {
     btn.innerHTML = `
       <span class="sibling-arrow">${item.arrow}</span>
       <span class="sibling-id">${prefix}${item.node.id}.</span>
-      <span class="sibling-claim">${item.node.claim}</span>
+      <span class="sibling-claim">${md(item.node.claim)}</span>
     `;
     wrapper.appendChild(btn);
   });

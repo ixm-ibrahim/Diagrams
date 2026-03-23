@@ -26,6 +26,102 @@ function escapeAttr(str) {
     .replace(/>/g, '&gt;');
 }
 
+/**
+ * Lightweight inline-markdown renderer for node text content.
+ * Supports:
+ *   [text](url)                    → <a href="url" target="_blank">
+ *   raw URLs (https://…)           → auto-linked <a>
+ *   ++underline++                  → <u>
+ *   **bold**  or  __bold__        → <strong>
+ *   *italic*  or  _italic_        → <em>
+ *   "quoted text"                  → <em class="quoted">
+ *   `code`                         → <code>
+ *
+ * Processing order matters: links first (so URLs inside [] aren't mangled),
+ * then bold (**) before italic (*) to avoid conflicts.
+ * Quoted-text rule uses smart quotes (U+201C/U+201D) and straight double quotes.
+ */
+
+/** Build nested <ul> from indented "- " lines. 2 spaces = 1 depth level. */
+function buildNestedBullets(lines) {
+  let html = '';
+  let openLevels = 0;  // how many <ul> tags are currently open
+
+  for (const line of lines) {
+    const match = line.match(/^( *)- (.+)/);
+    if (!match) continue;
+    const depth = Math.floor(match[1].length / 2) + 1; // 0 spaces = level 1, 2 spaces = level 2, etc.
+    const text = match[2];
+
+    while (openLevels < depth) { html += '<ul class="bullets">'; openLevels++; }
+    while (openLevels > depth) { html += '</li></ul>'; openLevels--; }
+
+    // Close previous <li> at same level (except for the very first item)
+    if (html.endsWith('</ul>')) {
+      // just closed a sub-list, close the parent <li> too
+      html += '</li>';
+    } else if (html.endsWith('</li>')) {
+      // nothing to do, previous item already closed
+    } else if (html.length > 0 && !html.endsWith('<ul class="bullets">')) {
+      html += '</li>';
+    }
+
+    html += `<li>${text}`;
+  }
+
+  // Close all remaining open tags
+  while (openLevels > 0) { html += '</li></ul>'; openLevels--; }
+
+  return html;
+}
+
+export function md(str) {
+  if (!str || typeof str !== 'string') return str || '';
+
+  // Placeholder map: stash links so later rules don't mangle URLs.
+  const placeholders = [];
+  const stash = (html) => {
+    const key = `\x00PH${placeholders.length}\x00`;
+    placeholders.push(html);
+    return key;
+  };
+
+  let result = str
+    // 1. Markdown links: [text](url)
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (_, text, url) =>
+      stash(`<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`))
+    // 2. Auto-link raw URLs (not already inside a markdown link)
+    .replace(/(?<!\]\()https?:\/\/[^\s<>"'`,;)}\]]+/g, (url) =>
+      stash(`<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`))
+    // Underline: ++text++
+    .replace(/\+\+(.+?)\+\+/g, '<u>$1</u>')
+    // Bold: **text** or __text__
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/__(.+?)__/g, '<strong>$1</strong>')
+    // Italic: *text* or _text_  (but not inside words for underscores)
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/(?<!\w)_(.+?)_(?!\w)/g, '<em>$1</em>')
+    // Quoted text (straight or smart double quotes): italicize with class
+    .replace(/\u201C(.+?)\u201D/g, '<em class="quoted">\u201C$1\u201D</em>')
+    .replace(/"(.+?)"/g, '<em class="quoted">"$1"</em>')
+    // Inline code
+    .replace(/`(.+?)`/g, '<code>$1</code>');
+
+  // Last: multi-line bullet lists within a single string.
+  // Supports nested bullets via indentation (2 spaces per level).
+  // Done last so HTML attributes from above aren't caught by earlier regexes.
+  result = result.replace(/(?:^|\n)((?:[ ]*- .+(?:\n|$))+)/g, (_, block) => {
+    return buildNestedBullets(block.trim().split('\n'));
+  });
+
+  // Restore stashed links.
+  for (let i = 0; i < placeholders.length; i++) {
+    result = result.replace(`\x00PH${i}\x00`, placeholders[i]);
+  }
+
+  return result;
+}
+
 /* ---------------------------------------------------------------------------
  * Node row (card + marker + derive button)
  * --------------------------------------------------------------------------- */
@@ -63,14 +159,15 @@ export function nodeRow(node) {
              --n-top: ${node.color.top}; --n-bottom: ${node.color.bottom};
              --p-border-dark: ${pillColorDark}; --p-border-light: ${pillColorLight};">
       <div class="node-header" role="button" tabindex="0" aria-expanded="false">
-        <h2 class="node-title"><span class="id">${node.id}.</span><span class="claim-text">${node.claim}</span></h2>
+        <h2 class="node-title"><span class="id">${node.id}.</span><span class="claim-text">${md(node.claim)}</span></h2>
         <div class="node-controls">
           ${badgeHtml}
           <button class="btn-ui trigger-inline" type="button" tabindex="-1">Expand</button>
         </div>
       </div>
-      <p class="node-so-what">${node.soWhat}</p>
-      <div class="node-vote-buttons" data-node-id="${node.id}">
+      <div class="node-body">
+        <div class="node-so-what">${md(node.soWhat)}</div>
+        <div class="node-vote-buttons" data-node-id="${node.id}">
         <button class="btn-vote btn-vote-agree" type="button" aria-pressed="false"
           aria-label="I agree with ${node.id}" data-vote="agree" data-node-id="${node.id}">
           <svg class="btn-vote__icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
@@ -85,6 +182,7 @@ export function nodeRow(node) {
           </svg>
           <span class="btn-vote__label">I disagree</span>
         </button>
+        </div>
       </div>
     </article>
     ${derivationHtml}
@@ -162,7 +260,7 @@ function logicRow(label, items, step, isNumbered) {
 }
 
 function buildList(items) {
-  return `<ul class="bullets">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+  return `<ul class="bullets">${items.map(i => `<li>${md(i)}</li>`).join('')}</ul>`;
 }
 
 /* ---------------------------------------------------------------------------
@@ -175,7 +273,7 @@ function recursiveMiniNode(data, num) {
   const content = buildMiniNodeContent(data);
   return `
     <div class="mini-node">
-      <button class="mini-trigger" type="button" aria-expanded="false">${prefix}${title}</button>
+      <button class="mini-trigger" type="button" aria-expanded="false">${prefix}<span class="mini-title-text">${md(title)}</span></button>
       <div class="mini-content-wrap"><div class="mini-content-inner">${content}</div></div>
     </div>
   `;
@@ -184,12 +282,12 @@ function recursiveMiniNode(data, num) {
 function buildMiniNodeContent(data) {
   const parts = [];
   if (data.detail) {
-    parts.push(`<div style="padding:10px 0; text-align: left;"><div class="sub-body">${data.detail}</div></div>`);
+    parts.push(`<div style="padding:10px 0; text-align: left;"><div class="sub-body">${md(data.detail)}</div></div>`);
   }
   if (data.subSections?.length) {
     parts.push(data.subSections.map(sub => `
       <div class="sub-section">
-        <div class="sub-label">${sub.label}</div>
+        <div class="sub-label">${md(sub.label)}</div>
         <div class="sub-body">${buildList(sub.items)}</div>
       </div>
     `).join(''));

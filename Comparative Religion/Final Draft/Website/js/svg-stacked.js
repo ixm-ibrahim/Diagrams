@@ -7,7 +7,7 @@
  * Consumers:    svg-engine.js
  */
 
-import { MIN_SPINE_HEIGHT, MIN_ROW_GAP } from './constants.js';
+import { MIN_SPINE_HEIGHT, FORK_BRANCH_GAP } from './constants.js';
 import {
   STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS, SPINE_FADE_PX,
   getTransitionMetrics, getBranchRadius
@@ -104,7 +104,9 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
   const spineBlocks = buildSpineBlocks(displayOrder, depthMap);
   const transitions = buildTransitions(displayOrder, depthMap);
 
-  // Pre-compute terminal return mergeY so spine bottoms can be capped
+  // Pre-compute terminal return mergeY so spine bottoms can be capped.
+  // Center the merge point in the gap between the last off-spine node and the
+  // next trunk node below.  Fall back to FORK_BRANCH_GAP for true terminal cases.
   const termLastId = displayOrder[displayOrder.length - 1];
   const termLastPos = positions.get(termLastId);
   let terminalMergeY = null;
@@ -119,8 +121,9 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
         }
       }
     }
-    const actualGap = nextTrunkCardTop !== null ? nextTrunkCardTop - termRowBottom : MIN_ROW_GAP;
-    terminalMergeY = termRowBottom + actualGap / 2;
+    terminalMergeY = nextTrunkCardTop !== null
+      ? Math.round(termRowBottom + (nextTrunkCardTop - termRowBottom) / 2)
+      : Math.round(termRowBottom + FORK_BRANCH_GAP);
   }
 
   // Generate indent spine HTML elements (Rule 4 — depth continue)
@@ -202,16 +205,20 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
 
       const rowBottomOfLast = lastPos.rowBottom || lastPos.visualBottom;
       const returnTargetX = mainTrunkX !== null ? mainTrunkX : zoneTrunkX;
-      let nextTrunkCardTop = null;
+
+      // Center merge point in the gap between last off-spine node and next
+      // trunk node.  Fall back to FORK_BRANCH_GAP for true terminal cases.
+      let nextTrunkCardTop2 = null;
       for (const [, pos] of positions) {
         if (Math.abs(pos.x - returnTargetX) < STRAIGHT_THRESHOLD && pos.cardTop > rowBottomOfLast) {
-          if (nextTrunkCardTop === null || pos.cardTop < nextTrunkCardTop) {
-            nextTrunkCardTop = pos.cardTop;
+          if (nextTrunkCardTop2 === null || pos.cardTop < nextTrunkCardTop2) {
+            nextTrunkCardTop2 = pos.cardTop;
           }
         }
       }
-      const actualGap = nextTrunkCardTop !== null ? nextTrunkCardTop - rowBottomOfLast : MIN_ROW_GAP;
-      const mergeY = rowBottomOfLast + actualGap / 2;
+      const mergeY = nextTrunkCardTop2 !== null
+        ? Math.round(rowBottomOfLast + (nextTrunkCardTop2 - rowBottomOfLast) / 2)
+        : Math.round(rowBottomOfLast + FORK_BRANCH_GAP);
 
       if (deepestX !== null && Math.abs(deepestX - returnTargetX) >= STRAIGHT_THRESHOLD) {
         const dirX = returnTargetX > deepestX ? 1 : -1;
@@ -221,8 +228,11 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
           Math.max(0, Math.abs(mergeY - lastPos.y) - 2)
         );
 
+        // Start from the last node's visualBottom so the path connects
+        // seamlessly with the indent spine above (no gap).
         allPathData.push(
-          `M ${deepestX} ${mergeY - radius} ` +
+          `M ${deepestX} ${rowBottomOfLast} ` +
+          `L ${deepestX} ${mergeY - radius} ` +
           `Q ${deepestX} ${mergeY} ${deepestX + radius * dirX} ${mergeY} ` +
           `L ${returnTargetX - radius * dirX} ${mergeY} ` +
           `Q ${returnTargetX} ${mergeY} ${returnTargetX} ${mergeY + radius} `

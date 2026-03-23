@@ -13,6 +13,7 @@
 import { TINT_SATURATION, TINT_LIGHTNESS, TINT_ALPHA } from './constants.js';
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
+import { md } from './templates.js';
 
 /** Cached header DOM elements. Populated once by init(). */
 const els = {};
@@ -44,9 +45,9 @@ export function updateHeaderContext() {
     if (els.docTitle)
       els.docTitle.textContent = `${DataStore.config.title} - Map`;
     if (els.pageTitle)
-      els.pageTitle.textContent = DataStore.config.title;
+      els.pageTitle.innerHTML = md(DataStore.config.title);
     if (els.pageSubtitle)
-      els.pageSubtitle.textContent = DataStore.config.subtitle;
+      els.pageSubtitle.innerHTML = md(DataStore.config.subtitle);
     if (els.breadcrumbRoot)
       els.breadcrumbRoot.innerHTML =
         `<a href="#" class="crumb-link" data-target="null">${DataStore.config.breadcrumbRoot}</a>`;
@@ -65,9 +66,9 @@ export function updateHeaderContext() {
     if (els.docTitle)
       els.docTitle.textContent = `${prefix}${parentNode.id} - Map`;
     if (els.pageTitle)
-      els.pageTitle.textContent = `${prefix}${parentNode.id}. ${parentNode.claim}`;
+      els.pageTitle.innerHTML = `${prefix}${parentNode.id}. ${md(parentNode.claim)}`;
     if (els.pageSubtitle)
-      els.pageSubtitle.textContent = parentNode.soWhat;
+      els.pageSubtitle.innerHTML = md(parentNode.soWhat);
 
     renderBreadcrumbs(parentNode.id);
   }

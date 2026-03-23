@@ -9,11 +9,11 @@
  * Consumers:    ui-render.js, main.js
  */
 
-import { NOMINAL_SPINE_WIDTH } from './constants.js';
+import { NOMINAL_SPINE_WIDTH, SVG_OVERLAP, FORK_BRANCH_GAP, CSS_TRANSITION_MS } from './constants.js';
 import { AppState } from './state.js';
 import { DataStore } from './data-store.js';
 import {
-  STRAIGHT_THRESHOLD, SPINE_FADE_PX,
+  STRAIGHT_THRESHOLD, SPINE_FADE_PX, MAX_CORNER_RADIUS,
   collectMarkerPositions, buildVisualRows
 } from './svg-geometry.js';
 import { drawEdgePath, drawTerminalReturns, buildColumnSpines } from './svg-paths.js';
@@ -22,6 +22,7 @@ import { drawPartialStacking } from './svg-partial.js';
 
 let observer = null;
 let redrawTimer = null;
+let animationFrameId = null;
 
 /* ---------------------------------------------------------------------------
  * Resize handling
@@ -49,6 +50,37 @@ export function scheduleRedraw() {
   }, 0);
 }
 
+/**
+ * Start a requestAnimationFrame loop that redraws SVG every frame for the
+ * duration of an expander transition. This ensures return branches and other
+ * SVG paths animate smoothly instead of snapping after the transition ends.
+ */
+function startAnimationRedraw() {
+  if (animationFrameId) cancelAnimationFrame(animationFrameId);
+  const start = performance.now();
+  const duration = CSS_TRANSITION_MS + 50; // slight overshoot to catch final frame
+
+  function tick() {
+    if (performance.now() - start > duration) {
+      animationFrameId = null;
+      scheduleRedraw(); // one final clean redraw
+      return;
+    }
+    // Force immediate redraw (bypass debounce)
+    if (redrawTimer) { clearTimeout(redrawTimer); redrawTimer = null; }
+    const viewEl = document.querySelector('.map-flow');
+    if (viewEl) {
+      const visibleNodes = DataStore.nodes.filter(
+        n => n.parentId === AppState.currentParentId
+      );
+      try { draw(viewEl, visibleNodes); }
+      catch (err) { /* swallow during animation */ }
+    }
+    animationFrameId = requestAnimationFrame(tick);
+  }
+  animationFrameId = requestAnimationFrame(tick);
+}
+
 /** Initializes ResizeObserver on the map container. Call once at bootstrap. */
 export function initResizeObserver() {
   if (observer) return;
@@ -58,7 +90,19 @@ export function initResizeObserver() {
   observer = new ResizeObserver(() => scheduleRedraw());
   observer.observe(container);
   window.addEventListener('resize', () => scheduleRedraw());
-  document.addEventListener('expander-settled', () => scheduleRedraw());
+
+  // Theme changes alter --spine-color-solid which is baked into the SVG
+  // fork-fade gradient stop-color attributes. A redraw picks up the new color.
+  new MutationObserver(() => scheduleRedraw()).observe(
+    document.documentElement,
+    { attributes: true, attributeFilter: ['data-theme'] }
+  );
+
+  document.addEventListener('expander-settled', () => {
+    if (animationFrameId) { cancelAnimationFrame(animationFrameId); animationFrameId = null; }
+    scheduleRedraw();
+  });
+  document.addEventListener('expander-animating', () => startAnimationRedraw());
 }
 
 /* ---------------------------------------------------------------------------
@@ -101,10 +145,31 @@ export function draw(viewEl, visibleNodes) {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('class', 'dag-svg');
 
-  // Determine trunk X (depth-0 / main spine position)
+  const mapSpineEl = viewEl.querySelector('.map-spine');
+
+  // Determine trunk X (main spine position).
+  // Use the first depth-0 node's marker X — all depth-0 nodes share the
+  // same grid column so any one gives a stable value that doesn't shift
+  // when expanders open or visual rows change.
+  // Fallback: when ALL nodes are off-spine (e.g. a page whose only row is
+  // parallel and has been stacked), compute the spine center from the CSS
+  // --marker-col variable which always reflects the depth-0 column width.
   let trunkX = null;
   for (const [, pos] of positions) {
     if (pos.depth === 0) { trunkX = pos.x; break; }
+  }
+  if (trunkX === null) {
+    // All nodes are off-spine (e.g. all-parallel page in stacked mode).
+    // The trunk position is the center of the marker column: marker-col / 2.
+    // Read --marker-col from the first node-row's computed style (it's set on :root
+    // but inherited). This avoids depending on the spine element's prior style.left.
+    const firstRow = viewEl.querySelector('.node-row');
+    if (firstRow) {
+      const markerCol = parseFloat(getComputedStyle(firstRow).getPropertyValue('--marker-col'));
+      if (markerCol > 0) {
+        trunkX = Math.round(markerCol / 2);
+      }
+    }
   }
   if (trunkX === null) {
     const firstPos = positions.values().next().value;
@@ -113,6 +178,7 @@ export function draw(viewEl, visibleNodes) {
 
   const indentSpines = [];
   const allPathData = [];
+  const forkPathData = [];   // first-row fork branches (rendered with spine-fade gradient)
   const stackGroups = viewEl.querySelectorAll('.stack-group');
 
   // --- Layout mode detection ---
@@ -149,14 +215,74 @@ export function draw(viewEl, visibleNodes) {
         processStackedZone(unifiedOrder, unifiedDepthMap, positions, trunkX,
                            indentSpines, allPathData);
       }
+      // First-row branch: if the zone starts with nodes at depth > 0
+      // (first-row parallel nodes with no predecessor), draw a branch
+      // from the trunk to the first off-spine node.
+      if (unifiedOrder.length > 0) {
+        const firstId = unifiedOrder[0];
+        const firstDepth = unifiedDepthMap.get(firstId) || 0;
+        if (firstDepth > 0) {
+          const firstPos = positions.get(firstId);
+          if (firstPos && Math.abs(firstPos.x - trunkX) >= STRAIGHT_THRESHOLD) {
+            const bendY = Math.round(firstPos.cardTop - FORK_BRANCH_GAP);
+            const dirX = firstPos.x > trunkX ? 1 : -1;
+            const dx = Math.abs(firstPos.x - trunkX);
+            const vSpace = Math.max(0, firstPos.y - bendY);
+            const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - 2));
+            forkPathData.push(
+              // No vertical segment on the trunk — the spine div already
+              // provides that visual.  Starting at the curve avoids
+              // doubled alpha where the fork overlaps the fading spine.
+              `M ${trunkX} ${bendY - r} ` +
+              `Q ${trunkX} ${bendY} ${trunkX + r * dirX} ${bendY} ` +
+              `L ${firstPos.x - r * dirX} ${bendY} ` +
+              `Q ${firstPos.x} ${bendY} ${firstPos.x} ${bendY + r} ` +
+              `L ${firstPos.x} ${firstPos.y + SVG_OVERLAP} `
+            );
+          }
+        }
+      }
     } else {
       drawPartialStacking(stackGroups, viewEl, visibleNodes, positions, trunkX,
-                          indentSpines, allPathData, visualRows, nodeToRowIdx);
+                          indentSpines, allPathData, forkPathData, visualRows, nodeToRowIdx);
     }
   } else {
     // Pure parallel edge drawing
     const visibleIdSet = new Set(visibleNodes.map(n => n.id));
     const emptySet = new Set();
+
+    // First-row branches: off-spine nodes with no visible predecessors need
+    // an explicit branch from the trunk since no parent edge reaches them.
+    const firstRowOffSpine = visibleNodes.filter(node => {
+      if (node.prevIds && node.prevIds.some(pid => visibleIdSet.has(pid))) return false;
+      const pos = positions.get(node.id);
+      return pos && Math.abs(pos.x - trunkX) >= STRAIGHT_THRESHOLD;
+    });
+    if (firstRowOffSpine.length > 0) {
+      // Bend point sits midway between the top of the view and the first
+      // row's card top, mirroring getTransitionMetrics joinY placement.
+      const minCardTop = Math.min(
+        ...firstRowOffSpine.map(n => positions.get(n.id).cardTop)
+      );
+      const bendY = Math.round(minCardTop - FORK_BRANCH_GAP);
+
+      for (const node of firstRowOffSpine) {
+        const pos = positions.get(node.id);
+        const dirX = pos.x > trunkX ? 1 : -1;
+        const dx = Math.abs(pos.x - trunkX);
+        const vSpace = Math.max(0, pos.y - bendY);
+        const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - 2));
+
+        forkPathData.push(
+          `M ${trunkX} ${bendY - r} ` +
+          `Q ${trunkX} ${bendY} ${trunkX + r * dirX} ${bendY} ` +
+          `L ${pos.x - r * dirX} ${bendY} ` +
+          `Q ${pos.x} ${bendY} ${pos.x} ${bendY + r} ` +
+          `L ${pos.x} ${pos.y + SVG_OVERLAP} `
+        );
+      }
+    }
+
     visibleNodes.forEach(node => {
       (node.nextIds || []).forEach(nextId => {
         if (!positions.has(nextId)) return;
@@ -196,8 +322,70 @@ export function draw(viewEl, visibleNodes) {
     svg.appendChild(path);
   }
 
+  // Fork branch paths: rendered with a gradient stroke that mirrors the
+  // spine's fade-in so the branch blends seamlessly out of the spine rather
+  // than appearing as a fully-opaque line against a half-transparent spine.
+  const combinedForkPath = forkPathData.filter(p => p && !p.includes('NaN')).join('').trim();
+  if (combinedForkPath) {
+    const spineColor = getComputedStyle(document.documentElement)
+      .getPropertyValue('--spine-color-solid').trim();
+    const spineHeight = viewEl.offsetHeight || 1;
+    // Match the CSS gradient: min(5%, 40px)
+    const fadeEnd = Math.min(0.05 * spineHeight, 40);
+
+    const NS = 'http://www.w3.org/2000/svg';
+    const defs = document.createElementNS(NS, 'defs');
+
+    const grad = document.createElementNS(NS, 'linearGradient');
+    grad.setAttribute('id', 'fork-fade');
+    grad.setAttribute('gradientUnits', 'userSpaceOnUse');
+    grad.setAttribute('x1', '0');
+    grad.setAttribute('y1', '0');
+    grad.setAttribute('x2', '0');
+    grad.setAttribute('y2', String(fadeEnd));
+
+    const s1 = document.createElementNS(NS, 'stop');
+    s1.setAttribute('offset', '0');
+    s1.setAttribute('stop-color', spineColor);
+    s1.setAttribute('stop-opacity', '0');
+
+    const s2 = document.createElementNS(NS, 'stop');
+    s2.setAttribute('offset', '1');
+    s2.setAttribute('stop-color', spineColor);
+    s2.setAttribute('stop-opacity', '1');
+
+    grad.appendChild(s1);
+    grad.appendChild(s2);
+    defs.appendChild(grad);
+
+    // Mask: hide the fork path in the narrow vertical strip where the spine
+    // div sits so the two semi-transparent layers don't compound alpha.
+    const mask = document.createElementNS(NS, 'mask');
+    mask.setAttribute('id', 'fork-spine-mask');
+    const maskBg = document.createElementNS(NS, 'rect');
+    maskBg.setAttribute('width', '100%');
+    maskBg.setAttribute('height', '100%');
+    maskBg.setAttribute('fill', 'white');
+    mask.appendChild(maskBg);
+    const maskHide = document.createElementNS(NS, 'rect');
+    maskHide.setAttribute('x', String(trunkX - halfW));
+    maskHide.setAttribute('y', '0');
+    maskHide.setAttribute('width', String(perfectWidth));
+    maskHide.setAttribute('height', '100%');
+    maskHide.setAttribute('fill', 'black');
+    mask.appendChild(maskHide);
+    defs.appendChild(mask);
+
+    svg.appendChild(defs);
+
+    const forkPath = document.createElementNS(NS, 'path');
+    forkPath.setAttribute('class', 'dag-edge dag-edge-fork');
+    forkPath.setAttribute('d', combinedForkPath);
+    forkPath.setAttribute('mask', 'url(#fork-spine-mask)');
+    svg.appendChild(forkPath);
+  }
+
   // Snap .map-spine left position to device pixel grid.
-  const mapSpineEl = viewEl.querySelector('.map-spine');
   if (mapSpineEl && trunkX !== null) {
     mapSpineEl.style.left = `${Math.round((trunkX - halfW) * devicePixelRatio) / devicePixelRatio}px`;
   }

@@ -7,7 +7,7 @@
  * Consumers:    svg-engine.js, svg-stacked.js, svg-partial.js
  */
 
-import { SVG_OVERLAP, MIN_ROW_GAP } from './constants.js';
+import { SVG_OVERLAP, FORK_BRANCH_GAP } from './constants.js';
 import {
   STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS,
   getTransitionMetrics, getBranchRadius
@@ -137,21 +137,6 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
     }
   }
 
-  const firstTerminalRowIdx = Math.min(
-    ...terminalOffSpine.map(n => nodeToRowIdx.get(n.id)).filter(i => i !== undefined)
-  );
-  let standardGap = MIN_ROW_GAP;
-  if (firstTerminalRowIdx > 0 && visualRows[firstTerminalRowIdx]) {
-    const sampleIds = visualRows[firstTerminalRowIdx].nodeIds;
-    if (sampleIds.length > 0) {
-      const samplePos = positions.get(sampleIds[0]);
-      if (samplePos) {
-        const rawGap = samplePos.cardTop - visualRows[firstTerminalRowIdx - 1].bottom;
-        standardGap = Math.max(rawGap, MIN_ROW_GAP);
-      }
-    }
-  }
-
   let maxRowBottom = 0;
   for (const node of visibleNodes) {
     if (!node.nextIds?.some(nid => visibleIdSet.has(nid))) {
@@ -159,7 +144,21 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
       if (pos) maxRowBottom = Math.max(maxRowBottom, pos.rowBottom);
     }
   }
-  const mergeY = maxRowBottom + standardGap / 2;
+
+  // Find the next trunk node below the returning nodes so the merge point
+  // is centered in the gap. Fall back to FORK_BRANCH_GAP when no trunk
+  // node exists below (true page-terminal case).
+  let nextTrunkCardTop = null;
+  for (const [, pos] of positions) {
+    if (Math.abs(pos.x - trunkX) < STRAIGHT_THRESHOLD && pos.cardTop > maxRowBottom) {
+      if (nextTrunkCardTop === null || pos.cardTop < nextTrunkCardTop) {
+        nextTrunkCardTop = pos.cardTop;
+      }
+    }
+  }
+  const mergeY = nextTrunkCardTop !== null
+    ? Math.round(maxRowBottom + (nextTrunkCardTop - maxRowBottom) / 2)
+    : Math.round(maxRowBottom + FORK_BRANCH_GAP);
 
   for (const [, pos] of byX) {
     const dirX = trunkX > pos.x ? 1 : -1;

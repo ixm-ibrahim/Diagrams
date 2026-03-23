@@ -451,6 +451,8 @@
   position: relative;
   padding-left: 14px;
   line-height: 1.42;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .bullets li::before {
@@ -461,7 +463,8 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--text-muted);
+  background: currentColor;
+  opacity: 0.5;
   transform: translateY(-50%);
 }
 

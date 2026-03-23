@@ -33,6 +33,29 @@ button {
 }
 
 
+/* Inline markdown styles
+   ----------------------------------------------------------------------------- */
+em.quoted {
+  font-style: italic;
+}
+
+code {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  background: rgba(128, 128, 128, 0.15);
+}
+
+/* Inline markdown bullets (from md() function) — indent when nested inside content */
+.node-so-what .bullets,
+.sub-body .bullets .bullets,
+.logic-content .bullets .bullets {
+  margin-top: 6px;
+  margin-left: 1em;
+}
+
+
 /* Register tint properties as <color> so CSS can interpolate them during
    transitions. Without @property the browser treats them as opaque strings
    and snaps rather than fading.                                               */

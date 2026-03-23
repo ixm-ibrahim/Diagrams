@@ -64,11 +64,13 @@
   top: 0;
   bottom: 0;
   width: var(--spine-width);
+  /* Cap fade at 40px so first-row fork branches always start in the solid
+     section. On short spines (< 800px) the 5% rule still applies. */
   background: linear-gradient(
     180deg,
     transparent,
-    var(--spine-color-solid) 5%,
-    var(--spine-color-solid) 95%,
+    var(--spine-color-solid) min(5%, 40px),
+    var(--spine-color-solid) max(95%, calc(100% - 40px)),
     transparent
   );
 }
@@ -106,6 +108,19 @@
      clipped by any ancestor in the .map-container > .map-flow > .level-group
      > .node-row chain. Never set overflow: hidden here. */
   overflow: visible;
+}
+
+/* First-row parallel: extra space above for the spine-to-column fork branch.
+   Without this, the branch starts in the spine's fade-in zone and looks
+   disconnected.  Uses --fork-branch-gap from tokens.css. */
+.level-group[data-fork-origin] {
+  margin-top: var(--fork-branch-gap);
+}
+
+/* Last-row parallel: extra space below for the return branch that merges
+   back into the main trunk.  Symmetric with the fork-origin margin above. */
+.level-group[data-fork-terminal] {
+  margin-bottom: var(--fork-branch-gap);
 }
 
 /* Gap between consecutive level-groups so lateral SVG branches have visible
@@ -426,6 +441,12 @@
   fill: none;
   stroke: var(--spine-color-solid);
   stroke-width: var(--spine-width);
+}
+
+/* Fork branches use an SVG gradient that mirrors the spine's fade-in
+   so the branch blends seamlessly out of the half-transparent spine. */
+.dag-edge.dag-edge-fork {
+  stroke: url(#fork-fade);
 }
 
 

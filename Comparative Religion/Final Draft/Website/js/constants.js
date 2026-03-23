@@ -118,11 +118,11 @@ export const NOMINAL_SPINE_WIDTH = 2;
 /** Branch path overlap value (px) for smoother corner transitions. */
 export const SVG_OVERLAP = 2;
 
-/** Default gap between rows (px) when computing terminal return targets. */
-export const DEFAULT_ROW_GAP = 20;
-
-/** Minimum gap between rows (px). */
-export const MIN_ROW_GAP = 20;
+/** Gap (px) between the first/last-row parallel nodes and their fork/return
+ *  branches.  Controls both the CSS margin on the level-group and the SVG
+ *  bend-point offset.  Changing this single value keeps top and bottom
+ *  branch spacing symmetrical. */
+export const FORK_BRANCH_GAP = 15;
 
 /** Minimum spine block height (px) before spine rendering is skipped. */
 export const MIN_SPINE_HEIGHT = 8;
@@ -176,9 +176,12 @@ export const SNIPPET_TRUNCATE_AT = 57;
 /** Maximum filename length (chars) for exported files. */
 export const FILENAME_MAX_LENGTH = 30;
 
-/** Card width (px) at which vote buttons expand to show labels.
- *  Must match the @container node-col breakpoint in node-card.css (400px). */
-export const VOTE_EXPAND_THRESHOLD = 400;
+/** True when the device is a phone/tablet (touch-primary + mobile UA).
+ *  Evaluated once at load time — no need for reactivity since the device
+ *  class doesn't change mid-session. */
+export const IS_MOBILE =
+  matchMedia('(pointer: coarse)').matches &&
+  /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 /* ---------------------------------------------------------------------------
  * Search

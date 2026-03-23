@@ -165,6 +165,19 @@ export function buildView() {
     const totalFlexChildren = flexItems.length;
     if (totalFlexChildren > 1) {
       levelGroup.dataset.parallel = '';
+
+      // First-row parallel: mark the level-group so CSS can add top margin
+      // for the spine-to-column branch that needs room above the cards.
+      if (rowIdx === 0) {
+        levelGroup.dataset.forkOrigin = '';
+      }
+
+      // Last-row parallel: mark the level-group so CSS can add bottom margin
+      // for the return branch that needs room below the cards.
+      if (rowIdx === groupedRows.length - 1) {
+        levelGroup.dataset.forkTerminal = '';
+      }
+
       flexItems[0].dataset.firstParallel = 'true';
       flexItems[flexItems.length - 1].dataset.lastParallel = 'true';
 

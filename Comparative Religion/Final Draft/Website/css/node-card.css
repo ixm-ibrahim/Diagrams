@@ -134,6 +134,16 @@
 }
 
 
+/* Node body: so-what text + vote buttons side by side
+   ----------------------------------------------------------------------------- */
+.node-body {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  padding: 8px;
+  gap: 8px;
+}
+
 /* So-what summary paragraph
    ----------------------------------------------------------------------------- */
 .node-so-what {
@@ -141,8 +151,47 @@
   color: rgba(8, 16, 35, 0.64);
   font-size: var(--card-body-size);
   line-height: 1.42;
-  padding: var(--card-body-pad);
   flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+
+/* Inline links inside card text and expander content
+   ----------------------------------------------------------------------------- */
+.node-card a,
+.level-expander a {
+  color: #5ba8ff;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast) ease;
+}
+
+.node-card a:hover,
+.level-expander a:hover {
+  color: #8ac4ff;
+}
+
+.node-card a:visited,
+.level-expander a:visited {
+  color: #b07aff;
+}
+
+[data-theme="light"] .node-card a,
+[data-theme="light"] .level-expander a {
+  color: #1a6ed8;
+}
+
+[data-theme="light"] .node-card a:hover,
+[data-theme="light"] .level-expander a:hover {
+  color: #0f4ea0;
+}
+
+[data-theme="light"] .node-card a:visited,
+[data-theme="light"] .level-expander a:visited {
+  color: #6d28d9;
 }
 
 
@@ -226,9 +275,18 @@ button.node-badge:active {
   .node-so-what {
     font-size: 0;
     line-height: 0;
-    padding: 0;
-    height: 0;
+    flex: 0 0 0px;
+    min-height: 0;
+    max-height: 0;
+    min-width: 0;
+    width: 0;
     overflow: hidden;
+  }
+  .node-body {
+    justify-content: flex-end;
+  }
+  .node-vote-buttons {
+    align-self: center;
   }
   .node-header { flex-wrap: wrap; }
   .node-title { display: block; min-width: 120px; flex: 1; }

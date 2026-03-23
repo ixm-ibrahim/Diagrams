@@ -20,7 +20,7 @@
 
 import { DataStore, loadMapData } from './data-store.js';
 import { AppState } from './state.js';
-import { VOTE_EXPAND_THRESHOLD } from './constants.js';
+import { IS_MOBILE } from './constants.js';
 import * as UIHeader from './ui-header.js';
 import * as UIRender from './ui-render.js';
 import * as UIEvents from './ui-events.js';
@@ -79,30 +79,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       }).observe(mapContainer);
     }
 
-    // 9. Toggle .vote-expanded on node cards when they cross the width
-    //    threshold. Uses ResizeObserver + class toggle (not @container query)
-    //    so CSS transitions fire in both expand and collapse directions.
+    // 9. Vote-button expansion: mobile → always expanded; desktop → collapsed
+    //    (expand on hover handled by CSS).
     if (mapContainer) {
-      const voteObserver = new ResizeObserver(entries => {
-        for (const entry of entries) {
-          const card = entry.target;
-          const narrow = entry.contentBoxSize?.[0]?.inlineSize < VOTE_EXPAND_THRESHOLD
-                      ?? entry.contentRect.width < VOTE_EXPAND_THRESHOLD;
-          card.classList.toggle('vote-expanded', narrow);
-        }
-      });
-      // Observe all current cards and any new ones added after navigation.
-      const observeCards = () => {
-        mapContainer.querySelectorAll('.node-card').forEach(card => {
-          if (!card.dataset.voteObserved) {
-            card.dataset.voteObserved = '1';
-            voteObserver.observe(card);
-          }
-        });
-      };
-      observeCards();
-      // Re-observe after page transitions (new cards enter the DOM).
-      new MutationObserver(observeCards).observe(mapContainer, { childList: true, subtree: true });
+      if (IS_MOBILE) {
+        // On mobile, mark every card as expanded and keep watching for new ones.
+        const expandCards = () => {
+          mapContainer.querySelectorAll('.node-card:not(.vote-expanded)').forEach(card => {
+            card.classList.add('vote-expanded');
+          });
+        };
+        expandCards();
+        new MutationObserver(expandCards).observe(mapContainer, { childList: true, subtree: true });
+      }
+      // Desktop: no observer needed — buttons stay icon-only and expand on
+      // hover via CSS :hover rules in agreement.css.
     }
 
     // Dev convenience

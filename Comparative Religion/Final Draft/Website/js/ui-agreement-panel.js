@@ -10,6 +10,7 @@
 
 import { SNIPPET_MAX_LENGTH, SNIPPET_TRUNCATE_AT } from './constants.js';
 import { DataStore } from './data-store.js';
+import { md } from './templates.js';
 
 /** Cached summary panel DOM refs. Populated by initSummaryPanel(). */
 const sp = {};
@@ -172,7 +173,7 @@ export function renderSummaryPanel(votes) {
                 data-target="${parentId}" role="button" tabindex="0">
       <span class="vote-summary__item-icon ${iconClass}"></span>
       <span class="vote-summary__item-id">${nodeId}.</span>
-      <span class="vote-summary__item-text">${snippet}</span>
+      <span class="vote-summary__item-text">${md(snippet)}</span>
     </li>`;
   }).join('');
 

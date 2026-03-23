@@ -75,8 +75,18 @@ export function computeFlexWeights(groupedRows) {
     const row = groupedRows[rowIdx];
     const rowWeights = new Array(row.length).fill(0);
 
-    if (rowIdx === 0 || row.length <= 1) {
+    if (row.length <= 1) {
       rowWeights.fill(1);
+      weights.push(rowWeights);
+      continue;
+    }
+
+    // Row 0 has no parent row to inherit from.  Distribute weight equally
+    // so the total sums to 1, matching the convention of every other row.
+    // Without this, N parallel nodes at weight 1 each give combinedWeight = N,
+    // which deflates the stacking threshold by a factor of N.
+    if (rowIdx === 0) {
+      rowWeights.fill(1 / row.length);
       weights.push(rowWeights);
       continue;
     }

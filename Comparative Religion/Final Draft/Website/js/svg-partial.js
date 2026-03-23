@@ -8,16 +8,18 @@
  * Consumers:    svg-engine.js
  */
 
-import { STRAIGHT_THRESHOLD } from './svg-geometry.js';
+import { SVG_OVERLAP, FORK_BRANCH_GAP } from './constants.js';
+import { STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS } from './svg-geometry.js';
 import { drawEdgePath, drawTerminalReturns, buildColumnSpines } from './svg-paths.js';
 import { processStackedZone } from './svg-stacked.js';
+import { DataStore } from './data-store.js';
 
 /**
  * Draws edges and spines for partially-stacked layouts where some
  * level-groups contain stack-groups alongside parallel nodes.
  */
 export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions,
-                                    trunkX, indentSpines, allPathData,
+                                    trunkX, indentSpines, allPathData, forkPathData,
                                     visualRows, nodeToRowIdx) {
   const stackedNodeIds = new Set();
   const groupHasTerminalReturn = new Map();
@@ -167,6 +169,33 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
       drawnEdgeKeys.add(edgeKey);
       allPathData.push(drawEdgePath(effectiveSource, effectiveTarget, positions, { trunkX }));
     });
+  });
+
+  // First-row branches: stack groups whose entry node has no visible
+  // predecessor need an explicit branch from the main trunk.
+  stackGroups.forEach(sg => {
+    const firstRow = sg.querySelector(':scope > .node-row');
+    if (!firstRow) return;
+    const firstId = firstRow.dataset.id;
+    if (!firstId || !positions.has(firstId)) return;
+    const node = DataStore.map.get(firstId);
+    if (!node) return;
+    if ((node.prevIds || []).some(pid => visibleIdSet.has(pid))) return;
+    const pos = positions.get(firstId);
+    if (Math.abs(pos.x - trunkX) < STRAIGHT_THRESHOLD) return;
+
+    const bendY = Math.round(pos.cardTop - FORK_BRANCH_GAP);
+    const dirX = pos.x > trunkX ? 1 : -1;
+    const dx = Math.abs(pos.x - trunkX);
+    const vSpace = Math.max(0, pos.y - bendY);
+    const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - 2));
+    forkPathData.push(
+      `M ${trunkX} ${bendY - r} ` +
+      `Q ${trunkX} ${bendY} ${trunkX + r * dirX} ${bendY} ` +
+      `L ${pos.x - r * dirX} ${bendY} ` +
+      `Q ${pos.x} ${bendY} ${pos.x} ${bendY + r} ` +
+      `L ${pos.x} ${pos.y + SVG_OVERLAP} `
+    );
   });
 
   drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunkX,

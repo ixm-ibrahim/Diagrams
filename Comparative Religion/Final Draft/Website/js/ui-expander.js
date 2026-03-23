@@ -133,6 +133,8 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
     document.querySelectorAll('.expander-spacer').forEach(s => {
       s.style.height = '0px';
     });
+    // Start continuous SVG redraw so return branches animate smoothly
+    document.dispatchEvent(new Event('expander-animating'));
   }
 
   row.classList.remove('is-active');
@@ -322,6 +324,9 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     expander.classList.add('is-open');
     headerBtn.setAttribute('aria-expanded', 'true');
     if (inlineBtn) inlineBtn.textContent = 'Hide';
+
+    // Start continuous SVG redraw so return branches animate smoothly
+    document.dispatchEvent(new Event('expander-animating'));
 
     // Animate spacers to match expander height
     if (spacerHeight > 0) {

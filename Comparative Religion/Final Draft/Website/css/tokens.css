@@ -91,6 +91,7 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 
+
   /* Transition Durations — used across animations and transitions.
    * These durations scale consistently across the application.             */
   --transition-fast: 0.1s;
@@ -167,6 +168,7 @@
   /* Search highlight colors for light theme — slightly adjusted for contrast */
   --highlight-color: rgba(255, 196, 0, 0.25);
   --highlight-color-strong: rgba(255, 196, 0, 0.35);
+
 }
 
 
@@ -190,6 +192,10 @@
   --radius-md: 12px;
   --node-min-h: 80px;
   --spine-width: 2px;
+
+  /* Gap between first/last-row parallel nodes and their fork/return branches.
+     Must match FORK_BRANCH_GAP in constants.js. */
+  --fork-branch-gap: 15px;
 
   /* App shell — page cap is a fixed pixel value computed from the monitor's
    * screen resolution × --app-width-ratio (set by JS at init via screen.width).
@@ -230,9 +236,6 @@
   --card-header-gap: 10px;
   --card-header-pad-v: 10px;
   --card-header-pad-h: 14px;
-
-  /* Card so-what paragraph padding */
-  --card-body-pad: 14px 14px 16px;
 
   /* Card typography */
   --card-title-size: 16.5px;

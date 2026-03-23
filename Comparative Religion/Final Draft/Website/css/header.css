@@ -117,6 +117,33 @@
   color: var(--text-muted);
   font-size: 13px;
   line-height: 1.45;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Inline links in page title / subtitle */
+.page-title a,
+.subtitle a {
+  color: #5ba8ff;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast) ease;
+}
+
+.page-title a:hover,
+.subtitle a:hover {
+  color: #8ac4ff;
+}
+
+[data-theme="light"] .page-title a,
+[data-theme="light"] .subtitle a {
+  color: #1a6ed8;
+}
+
+[data-theme="light"] .page-title a:hover,
+[data-theme="light"] .subtitle a:hover {
+  color: #0f4ea0;
 }
 
 .header-bottom {

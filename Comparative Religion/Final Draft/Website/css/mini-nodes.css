@@ -60,6 +60,12 @@
   font-weight: 800;
 }
 
+/* Wrap title text so flex doesn't collapse whitespace around inline links */
+.mini-title-text {
+  flex: 1;
+  min-width: 0;
+}
+
 /* Collapse chevron */
 .mini-trigger::after {
   content: "";
@@ -138,6 +144,8 @@
   color: var(--text);
   line-height: 1.45;
   text-align: left;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 

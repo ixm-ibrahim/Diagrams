@@ -92,6 +92,9 @@ function bindHeaderToggles() {
 /** Delegated click handler on #mapContainer for all interactive elements. */
 function bindMapClicks() {
   els.container?.addEventListener('click', (e) => {
+    // Links inside card text: let them navigate normally.
+    if (e.target.closest('a[href]')) return;
+
     // Vote buttons: compact icon buttons on non-terminal cards (.btn-vote)
     // and full-sized buttons in terminal node expanders (.btn-action[data-vote])
     const voteBtn = e.target.closest('.btn-vote, .btn-action[data-vote]');
