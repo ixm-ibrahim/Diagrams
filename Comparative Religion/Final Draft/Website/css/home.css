@@ -17,9 +17,7 @@
 /* Home view container: gentle max-width for readability
    ----------------------------------------------------------------------------- */
 .home-page {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 20px 16px 48px;
+  padding: 20px 0 48px;
 }
 
 
@@ -27,42 +25,97 @@
    ----------------------------------------------------------------------------- */
 .home-nav {
   display: flex;
-  justify-content: flex-end;
-  padding: 8px 0 16px;
+  padding: var(--spacing-sm) 0 var(--spacing-lg);
+}
+
+/* Bottom button: gap above instead of below */
+.home-nav:last-child {
+  padding: var(--spacing-lg) 0 var(--spacing-sm);
 }
 
 .home-enter-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 24px;
+  gap: var(--home-btn-gap);
+  position: relative;
+  width: 100%;
+  padding: var(--spacing-md) var(--home-btn-pad-x);
   font-size: 14px;
   font-weight: 700;
   color: var(--text);
   background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 999px;
   cursor: pointer;
   letter-spacing: 0.3px;
+  animation: home-btn-pulse 3s ease-in-out infinite;
   transition: background var(--transition-medium) ease,
               border-color var(--transition-medium) ease,
               transform var(--transition-fast) ease,
               box-shadow var(--transition-medium) ease;
 }
 
+@keyframes home-btn-pulse {
+  0%, 100% {
+    box-shadow: 0 0 16px 4px rgba(180, 200, 255, 0.22),
+                0 0 6px 2px rgba(180, 200, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 28px 8px rgba(180, 200, 255, 0.38),
+                0 0 12px 4px rgba(180, 200, 255, 0.25);
+  }
+}
+
+@keyframes home-btn-pulse-hover {
+  0%, 100% {
+    box-shadow: 0 0 30px 8px rgba(180, 200, 255, 0.4),
+                0 0 12px 4px rgba(180, 200, 255, 0.28);
+  }
+  50% {
+    box-shadow: 0 0 42px 12px rgba(180, 200, 255, 0.55),
+                0 0 18px 6px rgba(180, 200, 255, 0.38);
+  }
+}
+
+@keyframes home-btn-pulse-light {
+  0%, 100% {
+    box-shadow: 0 0 16px 4px rgba(20, 50, 120, 0.14),
+                0 0 6px 2px rgba(20, 50, 120, 0.09);
+  }
+  50% {
+    box-shadow: 0 0 28px 8px rgba(20, 50, 120, 0.26),
+                0 0 12px 4px rgba(20, 50, 120, 0.18);
+  }
+}
+
+@keyframes home-btn-pulse-hover-light {
+  0%, 100% {
+    box-shadow: 0 0 30px 8px rgba(20, 50, 120, 0.24),
+                0 0 12px 4px rgba(20, 50, 120, 0.16);
+  }
+  50% {
+    box-shadow: 0 0 42px 12px rgba(20, 50, 120, 0.38),
+                0 0 18px 6px rgba(20, 50, 120, 0.26);
+  }
+}
+
 [data-theme="light"] .home-enter-btn {
   background: linear-gradient(135deg, rgba(16,26,53,0.04), rgba(16,26,53,0.01));
+  border-color: rgba(16, 26, 53, 0.2);
+  animation: home-btn-pulse-light 3s ease-in-out infinite;
 }
 
 .home-enter-btn:hover {
-  border-color: var(--text-muted);
-  background: rgba(255,255,255,0.1);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-color: rgba(180, 200, 255, 0.6);
+  background: rgba(255,255,255,0.14);
   transform: translateY(-1px);
+  animation: home-btn-pulse-hover 2.5s ease-in-out infinite;
 }
 
 [data-theme="light"] .home-enter-btn:hover {
-  background: rgba(16,26,53,0.06);
+  background: rgba(16,26,53,0.08);
+  border-color: rgba(20, 50, 120, 0.45);
+  animation: home-btn-pulse-hover-light 2.5s ease-in-out infinite;
 }
 
 .home-enter-btn:active {
@@ -74,14 +127,26 @@
   outline-offset: 3px;
 }
 
+.home-enter-btn__label {
+  position: relative;
+  z-index: 1;
+  /* Fix the label width so it never shifts when the arrow moves */
+  flex: 0 0 auto;
+}
+
 .home-enter-btn__arrow {
   font-size: 18px;
   font-weight: 900;
-  transition: transform var(--transition-medium) ease;
+  -webkit-text-stroke: 1px currentColor;
+  display: inline-block;
+  /* Push arrow to the right edge via margin, then pull it back next to label */
+  margin-left: auto;
+  transform: translateX(var(--arrow-rest-offset, 0px));
+  transition: transform var(--transition-expander) cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .home-enter-btn:hover .home-enter-btn__arrow {
-  transform: translateX(3px);
+  transform: translateX(0);
 }
 
 
@@ -90,7 +155,8 @@
 .home-body {
   font-size: 14px;
   line-height: 1.7;
-  color: var(--text-muted);
+  color: var(--text);
+  padding: 0 var(--home-btn-pad-x);
 }
 
 .home-body p {
@@ -124,7 +190,8 @@
   }
 
   .home-enter-btn {
-    padding: 8px 20px;
+    --home-btn-pad-x: 18px;
+    padding: 10px var(--home-btn-pad-x);
     font-size: 13px;
   }
 }

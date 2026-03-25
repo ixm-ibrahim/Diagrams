@@ -197,11 +197,17 @@ export const MAX_RESULTS = 100;
 /** Delay (ms) to let layout settle before drawing/redrawing SVG connectors. */
 export const SVG_SETTLE_DELAY_MS = 50;
 
+/** Extra duration (ms) appended to CSS_TRANSITION_MS for SVG animation loops.
+ *  Ensures the RAF loop catches the final animation frame before stopping. */
+export const SVG_ANIMATION_OVERSHOOT_MS = 50;
+
 /** Delay (ms) after navigation before scrolling to a specific node. */
 export const SCROLL_TO_NODE_DELAY_MS = 600;
 
 /**
  * Net margin offset (px) added to expander spacer height to account for
- * the expander's negative top margin (-8) plus bottom margin (+24).
+ * the expander's negative top margin (--expander-open-margin-top: -8px)
+ * plus bottom margin (--expander-open-margin-bottom: 8px) plus visual padding.
+ * MUST equal abs(--expander-open-margin-top) + --expander-open-margin-bottom.
  */
 export const EXPANDER_SPACER_MARGIN_PX = 16;

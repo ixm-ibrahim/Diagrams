@@ -268,7 +268,7 @@ button.node-badge:active {
 /* Container queries: responsive card internals
    ----------------------------------------------------------------------------- */
 
-/* ≤300px: collapse so-what text (keep the element so the header border-bottom
+/* ≤400px: collapse so-what text (keep the element so the header border-bottom
    dividing line stays visible), loosen header wrap, switch title to inline.
    Vote buttons slide up into the space the paragraph vacated.                */
 @container node-col (max-width: 400px) {
@@ -298,7 +298,7 @@ button.node-badge:active {
   .node-card { min-height: auto; z-index: 2; }
 }
 
-/* ≤200px: controls wrap to full-width row */
+/* ≤325px: controls wrap to full-width row */
 @container node-col (max-width: 325px) {
   .node-controls {
     width: 100%;

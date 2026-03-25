@@ -14,6 +14,7 @@ import { TINT_SATURATION, TINT_LIGHTNESS, TINT_ALPHA } from './constants.js';
 import { DataStore } from './data-store.js';
 import { AppState, HOME_PAGE_ID } from './state.js';
 import { md } from './templates.js';
+import { getPerceptualHue } from './color-engine.js';
 
 /** Cached header DOM elements. Populated once by init(). */
 const els = {};
@@ -34,6 +35,7 @@ export function init() {
   els.pageIntroText    = document.getElementById('pageIntroText');
   els.mapToggle        = document.getElementById('mapToggle');
   els.mapCollapseWrap  = document.getElementById('mapCollapseWrap');
+  els.exportBtn        = document.getElementById('exportBtn');
 
   // Intro toggle: expand/collapse page introduction + collapse/expand nodes
   if (els.introToggle) {
@@ -156,13 +158,25 @@ export function renderIntro(text) {
   // Close trailing section
   if (currentSection) blocks.push(currentSection);
 
+  // Assign hues to top-level sections using the perceptual color engine
+  const sections = blocks.filter(b => b.type === 'section');
+  const totalSections = sections.length;
+  let sectionIdx = 0;
+
   // Render
   return blocks.map(block => {
     if (block.type === 'section') {
-      const bodyHtml = renderLines(block.lines);
+      const hue = getPerceptualHue(sectionIdx, totalSections);
+      // Next section's hue (wrap around to first for the last section)
+      const nextHue = sectionIdx < totalSections - 1
+        ? getPerceptualHue(sectionIdx + 1, totalSections)
+        : (hue + 30);  // slight offset for last section's children
+      sectionIdx++;
+
+      const bodyHtml = renderLines(block.lines, hue, nextHue);
       const collapsed = block.expanded ? '' : ' is-collapsed';
       const ariaExp = block.expanded ? 'true' : 'false';
-      return `<div class="intro-section${collapsed}">` +
+      return `<div class="intro-section${collapsed}" style="--section-hue: ${hue};">` +
         `<div class="intro-section__header" role="button" tabindex="0" aria-expanded="${ariaExp}">${md(block.title)}</div>` +
         `<div class="intro-section__body"><div class="intro-section__inner">${bodyHtml}</div></div>` +
         `</div>`;
@@ -183,10 +197,31 @@ export function renderIntro(text) {
  *   - bullet      → grouped into <ul>
  *   other         → <p>
  */
-function renderLines(lines) {
+function renderLines(lines, parentHue, nextHue) {
+  // First pass: collect nested sections so we can assign interpolated hues
+  const nestedSections = [];
+  for (const line of lines) {
+    const subMatch = line.match(/^###>\s*(!?)\s*(.+)/);
+    if (subMatch) nestedSections.push(subMatch);
+  }
+  const nestedCount = nestedSections.length;
+
+  // Interpolate hues equally spaced between parentHue and nextHue
+  function getNestedHue(idx) {
+    if (nestedCount === 0) return parentHue;
+    const t = (idx + 1) / (nestedCount + 1);
+    // Interpolate through hue space (short arc)
+    let diff = nextHue - parentHue;
+    if (diff > 180) diff -= 360;
+    if (diff < -180) diff += 360;
+    return ((parentHue + t * diff) % 360 + 360) % 360;
+  }
+
+  let nestedIdx = 0;
   const parts = [];
   let bulletBuffer = [];
   let subSection = null; // accumulates lines for a nested collapsible
+  let subSectionHue = 0;
 
   const flushBullets = () => {
     if (bulletBuffer.length) {
@@ -202,7 +237,7 @@ function renderLines(lines) {
       const collapsed = subSection.expanded ? '' : ' is-collapsed';
       const ariaExp = subSection.expanded ? 'true' : 'false';
       parts.push(
-        `<div class="intro-section intro-section--nested${collapsed}">` +
+        `<div class="intro-section intro-section--nested${collapsed}" style="--section-hue: ${Math.round(subSectionHue)};">` +
         `<div class="intro-section__header" role="button" tabindex="0" aria-expanded="${ariaExp}">${md(subSection.title)}</div>` +
         `<div class="intro-section__body"><div class="intro-section__inner">${bodyHtml}</div></div>` +
         `</div>`
@@ -217,6 +252,8 @@ function renderLines(lines) {
     if (subMatch) {
       flushSub();
       flushBullets();
+      subSectionHue = getNestedHue(nestedIdx);
+      nestedIdx++;
       subSection = {
         title: subMatch[2],
         expanded: subMatch[1] === '!',
@@ -310,6 +347,7 @@ export function updateHeaderContext() {
   // (hidden on home page since "Home" alone is sufficient)
   if (els.breadcrumbSep) els.breadcrumbSep.style.display = isHome ? 'none' : '';
   if (els.breadcrumbCurrent) els.breadcrumbCurrent.style.display = isHome ? 'none' : '';
+  if (els.exportBtn) els.exportBtn.style.display = isHome ? 'none' : '';
 
   if (isHome) {
     // Home landing page

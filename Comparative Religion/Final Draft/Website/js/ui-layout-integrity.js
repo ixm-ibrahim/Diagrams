@@ -5,9 +5,11 @@
  *      with correct breakout margins when inside a stack-group.
  *   2. Every visible level-group has exactly one .level-expander element.
  *
- * Dependencies: (none)
+ * Dependencies: ui-expander.js (isExpanderAnimating)
  * Consumers:    ui-layout.js
  */
+
+import { isExpanderAnimating } from './ui-expander.js';
 
 /**
  * Enforces expander positioning invariants after stacking transitions.
@@ -51,35 +53,39 @@ export function ensureExpanderIntegrity(viewEl) {
       // --- Accommodation spacers for sibling stack-groups ---
       // Remove stale spacers and recreate so nodes in sibling columns
       // shift down to make room for the breakout expander.
-      document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
-      const expInner = openExp.querySelector('.exp-inner');
-      const spacerHeight = expInner ? expInner.scrollHeight + 16 : 0;
-      if (spacerHeight > 0) {
-        // Use index-based placement: the active node's position in its
-        // stack determines the insertion point in every sibling stack.
-        // This is robust against per-node height differences that make
-        // bounding-rect comparisons flaky across resize breakpoints.
-        const stackRows = Array.from(
-          stackGroup.querySelectorAll(':scope > .node-row')
-        );
-        const activeIdx = stackRows.indexOf(activeRow);
-
-        lg.querySelectorAll(':scope > .stack-group').forEach(sg => {
-          if (sg === stackGroup) return;
-          const siblingRows = Array.from(
-            sg.querySelectorAll(':scope > .node-row')
+      // Skip while an expander animation is running — the spacers are
+      // mid-transition and destroying them would cause a visual jump.
+      if (!isExpanderAnimating()) {
+        document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
+        const expInner = openExp.querySelector('.exp-inner');
+        const spacerHeight = expInner ? expInner.scrollHeight + 16 : 0;
+        if (spacerHeight > 0) {
+          // Use index-based placement: the active node's position in its
+          // stack determines the insertion point in every sibling stack.
+          // This is robust against per-node height differences that make
+          // bounding-rect comparisons flaky across resize breakpoints.
+          const stackRows = Array.from(
+            stackGroup.querySelectorAll(':scope > .node-row')
           );
-          if (siblingRows.length === 0) return;
+          const activeIdx = stackRows.indexOf(activeRow);
 
-          const spacer = document.createElement('div');
-          spacer.className = 'expander-spacer';
-          spacer.style.height = spacerHeight + 'px';
+          lg.querySelectorAll(':scope > .stack-group').forEach(sg => {
+            if (sg === stackGroup) return;
+            const siblingRows = Array.from(
+              sg.querySelectorAll(':scope > .node-row')
+            );
+            if (siblingRows.length === 0) return;
 
-          // Insert after the node at the same index, or after the last
-          // node if the sibling stack has fewer nodes.
-          const targetIdx = Math.min(activeIdx, siblingRows.length - 1);
-          siblingRows[targetIdx].after(spacer);
-        });
+            const spacer = document.createElement('div');
+            spacer.className = 'expander-spacer';
+            spacer.style.height = spacerHeight + 'px';
+
+            // Insert after the node at the same index, or after the last
+            // node if the sibling stack has fewer nodes.
+            const targetIdx = Math.min(activeIdx, siblingRows.length - 1);
+            siblingRows[targetIdx].after(spacer);
+          });
+        }
       }
     } else {
       const lg = activeRow.closest('.level-group');
@@ -107,39 +113,35 @@ export function ensureExpanderIntegrity(viewEl) {
         openExp.style.marginRight = '';
 
         // --- Accommodation spacers for sibling stack-groups ---
-        // Push stack-group content below the expander down so
-        // the absolute-positioned expander doesn't overlap nodes.
-        // The first node in each stack-group is on the same visual "row"
-        // as the parallel active node — the spacer goes right after it.
-        // Its height = expander height + any height difference between the
-        // active row and that first stack node (the active row may be taller).
-        document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
-        const expInner = openExp.querySelector('.exp-inner');
-        const expHeight = expInner ? expInner.scrollHeight + 16 : 0;
-        if (expHeight > 0) {
-          const rowBottom = rowRect.bottom;
-          lg.querySelectorAll(':scope > .stack-group').forEach(sg => {
-            const sgNodes = Array.from(
-              sg.querySelectorAll(':scope > .node-row')
-            );
-            if (sgNodes.length < 2) return; // need 2+ nodes for a spacer to matter
-            const firstNode = sgNodes[0];
-            const firstNodeBottom = firstNode.getBoundingClientRect().bottom;
-            const heightDiff = Math.max(0, rowBottom - firstNodeBottom);
-            const spacer = document.createElement('div');
-            spacer.className = 'expander-spacer';
-            spacer.style.height = (expHeight + heightDiff) + 'px';
-            firstNode.after(spacer);
-          });
-        }
+        // Skip while an expander animation is running.
+        if (!isExpanderAnimating()) {
+          document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
+          const expInner = openExp.querySelector('.exp-inner');
+          const expHeight = expInner ? expInner.scrollHeight + 16 : 0;
+          if (expHeight > 0) {
+            const rowBottom = rowRect.bottom;
+            lg.querySelectorAll(':scope > .stack-group').forEach(sg => {
+              const sgNodes = Array.from(
+                sg.querySelectorAll(':scope > .node-row')
+              );
+              if (sgNodes.length < 2) return;
+              const firstNode = sgNodes[0];
+              const firstNodeBottom = firstNode.getBoundingClientRect().bottom;
+              const heightDiff = Math.max(0, rowBottom - firstNodeBottom);
+              const spacer = document.createElement('div');
+              spacer.className = 'expander-spacer';
+              spacer.style.height = (expHeight + heightDiff) + 'px';
+              firstNode.after(spacer);
+            });
+          }
 
-        // Ensure level-group is tall enough so content below shifts down.
-        // Recalculate after spacers are added (they grow the stack-group).
-        lg.style.paddingBottom = '';
-        const naturalHeight = lg.offsetHeight;
-        const neededHeight = topOffset + expHeight;
-        if (neededHeight > naturalHeight) {
-          lg.style.paddingBottom = (neededHeight - naturalHeight) + 'px';
+          // Ensure level-group is tall enough so content below shifts down.
+          lg.style.paddingBottom = '';
+          const naturalHeight = lg.offsetHeight;
+          const neededHeight = topOffset + expHeight;
+          if (neededHeight > naturalHeight) {
+            lg.style.paddingBottom = (neededHeight - naturalHeight) + 'px';
+          }
         }
       } else {
         // Pure parallel mode: update the negative-margin pull-up so the
@@ -158,7 +160,9 @@ export function ensureExpanderIntegrity(viewEl) {
         openExp.style.top = '';
         openExp.style.left = '';
         lg.style.paddingBottom = '';
-        document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
+        if (!isExpanderAnimating()) {
+          document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
+        }
 
         // Recalculate pull-up for current node-card heights.
         // Always check when there are multiple siblings — the expander may

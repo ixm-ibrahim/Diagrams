@@ -9,7 +9,7 @@
  */
 
 import { DataStore } from './data-store.js';
-import { AppState } from './state.js';
+import { AppState, HOME_PAGE_ID } from './state.js';
 import { md } from './templates.js';
 
 /* ---------------------------------------------------------------------------
@@ -300,7 +300,18 @@ export function renderSiblingNavigation(view) {
   const { top, bottom } = computeSiblingNav();
   const prefix = DataStore.config.nodePrefix;
 
-  if (top.length > 0) {
+  // On the root (Project Overview) page, add a "Home" button at the top
+  // so the user can navigate back to the home landing page.
+  const isRoot = AppState.currentParentId === null;
+  const hasHome = Boolean(DataStore.config.homePage);
+
+  if (isRoot && hasHome) {
+    const area = document.createElement('div');
+    area.className = 'sibling-nav-area prev';
+    const homeGroup = renderHomeGroup();
+    area.appendChild(homeGroup);
+    view.prepend(area);
+  } else if (top.length > 0) {
     const area = document.createElement('div');
     area.className = 'sibling-nav-area prev';
     top.forEach(group => area.appendChild(renderGroup(group, prefix)));
@@ -313,6 +324,25 @@ export function renderSiblingNavigation(view) {
     bottom.forEach(group => area.appendChild(renderGroup(group, prefix)));
     view.appendChild(area);
   }
+}
+
+/** Renders a single "Home" navigation button for the root page. */
+function renderHomeGroup() {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'sibling-nav-group sibling-nav-home';
+
+  const btn = document.createElement('button');
+  btn.className = 'btn-sibling home-btn trigger-derive';
+  btn.type = 'button';
+  btn.dataset.target = HOME_PAGE_ID;
+  btn.dataset.direction = 'surface';
+  btn.innerHTML = `
+    <span class="sibling-arrow">←</span>
+    <span class="sibling-claim">${DataStore.config.breadcrumbRoot || 'Home'}</span>
+  `;
+  wrapper.appendChild(btn);
+
+  return wrapper;
 }
 
 function renderGroup(group, prefix) {

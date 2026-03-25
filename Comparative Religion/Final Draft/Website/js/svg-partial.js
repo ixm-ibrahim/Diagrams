@@ -8,7 +8,7 @@
  * Consumers:    svg-engine.js
  */
 
-import { SVG_OVERLAP, FORK_BRANCH_GAP } from './constants.js';
+import { SVG_OVERLAP, FORK_BRANCH_GAP, RADIUS_ADJUST } from './constants.js';
 import { STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS } from './svg-geometry.js';
 import { drawEdgePath, drawTerminalReturns, buildColumnSpines } from './svg-paths.js';
 import { processStackedZone } from './svg-stacked.js';
@@ -188,7 +188,7 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
     const dirX = pos.x > trunkX ? 1 : -1;
     const dx = Math.abs(pos.x - trunkX);
     const vSpace = Math.max(0, pos.y - bendY);
-    const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - 2));
+    const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - RADIUS_ADJUST));
     forkPathData.push(
       `M ${trunkX} ${bendY - r} ` +
       `Q ${trunkX} ${bendY} ${trunkX + r * dirX} ${bendY} ` +

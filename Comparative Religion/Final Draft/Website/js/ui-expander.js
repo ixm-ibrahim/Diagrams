@@ -17,6 +17,16 @@ import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
 import { applyVoteStates } from './ui-agreement.js';
 import { bindTabEvents, scrollToView } from './ui-expander-content.js';
 
+/* --- Expander animation guard ---
+ * True while an expander open/close animation is in progress.
+ * Checked by ensureExpanderIntegrity() to avoid destroying animated
+ * spacers mid-transition (the ResizeObserver fires during the animation
+ * and would otherwise recreate them with instant heights).             */
+let _expanderAnimating = false;
+
+/** @returns {boolean} Whether an expander animation is currently running. */
+export function isExpanderAnimating() { return _expanderAnimating; }
+
 /**
  * Toggles the expander for the given node ID.
  * If already open, closes it. If another is open, closes that first.
@@ -95,6 +105,7 @@ export function forceCloseExpander() {
     e.innerHTML = '';
   });
   spacers.forEach(s => s.remove());
+  _expanderAnimating = false;
 
   AppState.activeNodeId = null;
   AppState.updateTints({ expander: 'transparent' });
@@ -130,6 +141,7 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
 
   // Animate sibling spacers closed in sync with the expander
   if (animated) {
+    _expanderAnimating = true;
     document.querySelectorAll('.expander-spacer').forEach(s => {
       s.style.height = '0px';
     });
@@ -192,6 +204,7 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
       // Force SVG redraw after the expander DOM has settled — the
       // ResizeObserver may not fire a final event once the CSS animation
       // reaches 0fr, leaving the SVG connectors at stale positions.
+      _expanderAnimating = false;
       document.dispatchEvent(new Event('expander-settled'));
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
   } else {
@@ -326,6 +339,7 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     if (inlineBtn) inlineBtn.textContent = 'Hide';
 
     // Start continuous SVG redraw so return branches animate smoothly
+    _expanderAnimating = true;
     document.dispatchEvent(new Event('expander-animating'));
 
     // Animate spacers to match expander height
@@ -360,7 +374,6 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
           const targetHeight = expHeight + heightDiff;
           const spacer = document.createElement('div');
           spacer.className = 'expander-spacer';
-          // Start at 0 — animate to target height
           firstNode.after(spacer);
           requestAnimationFrame(() => {
             spacer.style.height = targetHeight + 'px';
@@ -388,6 +401,7 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     // account for the expander's full height (the ResizeObserver may
     // fire mid-animation with intermediate positions).
     setTimeout(() => {
+      _expanderAnimating = false;
       document.dispatchEvent(new Event('expander-settled'));
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
 

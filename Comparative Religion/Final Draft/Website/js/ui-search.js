@@ -22,8 +22,9 @@
 import { SEARCH_DEBOUNCE_MS, MAX_RESULTS } from './constants.js';
 import { DataStore } from './data-store.js';
 import { AppState } from './state.js';
-import { nodeRow } from './templates.js';
+import { nodeRow, md } from './templates.js';
 import { forceCloseExpander } from './ui-expander.js';
+import { applyVoteStates } from './ui-agreement.js';
 
 /** Debounce timer ID. */
 let searchTimeout = null;
@@ -77,6 +78,10 @@ function handleSearch(rawQuery) {
   // _searchFull (base + section contents).
   const matches = [];
   const searchNodeContents = AppState.searchConfig.nodeContents;
+  const wholeWord = AppState.searchConfig.wholeWord;
+  const wholeWordRegex = wholeWord
+    ? new RegExp(`\\b${escapeRegex(query)}\\b`, 'i')
+    : null;
 
   for (let i = 0; i < searchPool.length; i++) {
     const node = searchPool[i];
@@ -99,7 +104,11 @@ function handleSearch(rawQuery) {
       text = node._searchFull;
     }
 
-    if (text.includes(query)) {
+    const isMatch = wholeWord
+      ? wholeWordRegex.test(text)
+      : text.includes(query);
+
+    if (isMatch) {
       matches.push(node);
       if (matches.length >= MAX_RESULTS) break;
     }
@@ -139,7 +148,7 @@ function handleSearch(rawQuery) {
     const parentNode = parentId ? DataStore.map.get(parentId) : null;
     const pageTitle = parentNode
       ? `${parentNode.id} — ${parentNode.claim}`
-      : (DataStore.config.breadcrumbRoot || 'Root');
+      : (DataStore.config.title || 'Project Overview');
 
     const groupEl = document.createElement('div');
     groupEl.className = 'search-result-box';
@@ -149,7 +158,7 @@ function handleSearch(rawQuery) {
     header.className = 'search-result-header';
     header.setAttribute('role', 'button');
     header.setAttribute('aria-expanded', 'true');
-    header.innerHTML = `<span class="search-result-title"><b>${escapeHTML(pageTitle)}</b></span>`;
+    header.innerHTML = `<span class="search-result-title"><b>${md(pageTitle)}</b></span>`;
     highlightMatches(header, query);
     groupEl.appendChild(header);
 
@@ -188,6 +197,9 @@ function handleSearch(rawQuery) {
   }
 
   container.appendChild(wrap);
+
+  // Restore persisted vote states (explicit + propagated) on the search results
+  applyVoteStates(wrap);
 }
 
 /**
@@ -223,6 +235,11 @@ export function rerunActiveSearch() {
  * Internal helpers
  * --------------------------------------------------------------------------- */
 
+/** Escape special regex characters in a string for safe use in `new RegExp`. */
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 /** Minimal HTML escape to prevent XSS in dynamically generated content. */
 function escapeHTML(str) {
   return str
@@ -252,15 +269,36 @@ export function getActiveSearchQuery() {
  * @param {string}      query  — lowercase search string
  */
 export function highlightMatches(el, query) {
+  const wholeWord = AppState.searchConfig.wholeWord;
+  const regex = wholeWord
+    ? new RegExp(`\\b${escapeRegex(query)}\\b`, 'i')
+    : null;
+
   const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
   const nodesToSplit = [];
 
   // Phase 1: collect matches (can't mutate DOM while walking)
   while (walker.nextNode()) {
     const textNode = walker.currentNode;
-    const idx = textNode.nodeValue.toLowerCase().indexOf(query);
-    if (idx !== -1) {
-      nodesToSplit.push({ node: textNode, index: idx, length: query.length });
+
+    // Skip UI chrome (derivation/vote/action buttons, section headers, tabs)
+    // but NOT content-bearing buttons like .mini-trigger
+    if (textNode.parentElement?.closest(
+      '.btn-derivation, .btn-vote, .btn-action, .btn-tab, .btn-ui, .node-badge, .logic-header'
+    )) continue;
+
+    const text = textNode.nodeValue.toLowerCase();
+
+    if (wholeWord) {
+      const match = regex.exec(textNode.nodeValue);
+      if (match) {
+        nodesToSplit.push({ node: textNode, index: match.index, length: query.length });
+      }
+    } else {
+      const idx = text.indexOf(query);
+      if (idx !== -1) {
+        nodesToSplit.push({ node: textNode, index: idx, length: query.length });
+      }
     }
   }
 

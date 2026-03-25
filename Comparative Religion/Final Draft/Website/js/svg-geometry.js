@@ -13,7 +13,8 @@ import {
   STRAIGHT_THRESHOLD,
   MAX_CORNER_RADIUS,
   SPINE_HALF_W,
-  ROW_BUCKET_PX
+  ROW_BUCKET_PX,
+  RADIUS_ADJUST
 } from './constants.js';
 
 // Re-export so existing consumers that import from svg-geometry.js keep working
@@ -210,10 +211,10 @@ export function getTransitionMetrics(startId, endId, positions) {
   // Radius is constrained by three factors to ensure the curve always fits:
   //   1. MAX_CORNER_RADIUS — aesthetic cap so curves don't become too round
   //   2. dx / 2 — can't exceed half the horizontal distance (curves would overlap)
-  //   3. gap / 2 - 1 — can't exceed half the vertical gap (curves would clip into cards)
+  //   3. gap / 2 - RADIUS_ADJUST/2 — can't exceed half the vertical gap (curves would clip into cards)
   const radius = dx < STRAIGHT_THRESHOLD
     ? 0
-    : Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, gap / 2 - 1));
+    : Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, gap / 2 - RADIUS_ADJUST / 2));
 
   return { joinY: branchBendY, radius, gapTop: effectiveGapTop, gapBottom, gap };
 }
@@ -253,7 +254,7 @@ export function getBranchRadius(startId, endId, positions) {
   return Math.min(
     MAX_CORNER_RADIUS,
     dx / 2,
-    Math.max(0, startVertical - 2),
-    Math.max(0, endVertical - 2)
+    Math.max(0, startVertical - RADIUS_ADJUST),
+    Math.max(0, endVertical - RADIUS_ADJUST)
   );
 }

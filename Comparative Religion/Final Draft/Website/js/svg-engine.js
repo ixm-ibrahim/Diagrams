@@ -9,7 +9,7 @@
  * Consumers:    ui-render.js, main.js
  */
 
-import { NOMINAL_SPINE_WIDTH, SVG_OVERLAP, FORK_BRANCH_GAP, CSS_TRANSITION_MS } from './constants.js';
+import { NOMINAL_SPINE_WIDTH, SVG_OVERLAP, FORK_BRANCH_GAP, CSS_TRANSITION_MS, RADIUS_ADJUST, SVG_ANIMATION_OVERSHOOT_MS } from './constants.js';
 import { AppState } from './state.js';
 import { DataStore } from './data-store.js';
 import {
@@ -23,6 +23,12 @@ import { drawPartialStacking } from './svg-partial.js';
 let observer = null;
 let redrawTimer = null;
 let animationFrameId = null;
+
+/** Cached references for the animation RAF loop. Set by startAnimationRedraw(),
+ *  cleared when the loop ends. Avoids redundant DOM queries and array filters
+ *  on every frame (~60× per expander transition). */
+let cachedViewEl = null;
+let cachedVisibleNodes = null;
 
 /* ---------------------------------------------------------------------------
  * Resize handling
@@ -54,28 +60,38 @@ export function scheduleRedraw() {
  * Start a requestAnimationFrame loop that redraws SVG every frame for the
  * duration of an expander transition. This ensures return branches and other
  * SVG paths animate smoothly instead of snapping after the transition ends.
+ *
+ * Performance: caches viewEl and visibleNodes for the entire loop duration
+ * since neither changes during an expander animation. This avoids a
+ * querySelector + Array.filter on every frame (~60× per transition).
  */
 function startAnimationRedraw() {
   if (animationFrameId) cancelAnimationFrame(animationFrameId);
+
+  // Cache references once at animation start — the node set and view element
+  // don't change during an expander open/close.
+  cachedViewEl = document.querySelector('.map-flow');
+  cachedVisibleNodes = cachedViewEl
+    ? DataStore.nodes.filter(n => n.parentId === AppState.currentParentId)
+    : null;
+
+  if (!cachedViewEl || !cachedVisibleNodes) return;
+
   const start = performance.now();
-  const duration = CSS_TRANSITION_MS + 50; // slight overshoot to catch final frame
+  const duration = CSS_TRANSITION_MS + SVG_ANIMATION_OVERSHOOT_MS;
 
   function tick() {
     if (performance.now() - start > duration) {
       animationFrameId = null;
+      cachedViewEl = null;
+      cachedVisibleNodes = null;
       scheduleRedraw(); // one final clean redraw
       return;
     }
     // Force immediate redraw (bypass debounce)
     if (redrawTimer) { clearTimeout(redrawTimer); redrawTimer = null; }
-    const viewEl = document.querySelector('.map-flow');
-    if (viewEl) {
-      const visibleNodes = DataStore.nodes.filter(
-        n => n.parentId === AppState.currentParentId
-      );
-      try { draw(viewEl, visibleNodes); }
-      catch (err) { /* swallow during animation */ }
-    }
+    try { draw(cachedViewEl, cachedVisibleNodes); }
+    catch (err) { /* swallow during animation */ }
     animationFrameId = requestAnimationFrame(tick);
   }
   animationFrameId = requestAnimationFrame(tick);
@@ -100,6 +116,8 @@ export function initResizeObserver() {
 
   document.addEventListener('expander-settled', () => {
     if (animationFrameId) { cancelAnimationFrame(animationFrameId); animationFrameId = null; }
+    cachedViewEl = null;
+    cachedVisibleNodes = null;
     scheduleRedraw();
   });
   document.addEventListener('expander-animating', () => startAnimationRedraw());
@@ -124,10 +142,11 @@ export function draw(viewEl, visibleNodes) {
   const timelineLayer = viewEl.querySelector('.timeline-layer');
   const renderTarget = timelineLayer || viewEl;
 
-  // Remove previous SVG and indent spines before redrawing. Old elements must
-  // be cleaned up first because each draw() rebuilds them from scratch based on
-  // current marker positions — stale elements would overlap or misalign.
-  const oldSvg = renderTarget.querySelector('.dag-svg');
+  // During animation RAF loops, reuse the existing SVG element and clear its
+  // children instead of removing/re-creating it. This avoids the DOM overhead
+  // of element creation + insertion ~60× per transition.  Outside animations,
+  // the same path runs but the cost is negligible for a single call.
+  let oldSvg = renderTarget.querySelector('.dag-svg');
   const oldIndentSpines = renderTarget.querySelectorAll('.stacked-indent-spine');
 
   if (!visibleNodes || visibleNodes.length === 0) {
@@ -142,8 +161,18 @@ export function draw(viewEl, visibleNodes) {
 
   const { visualRows, nodeToRowIdx } = buildVisualRows(viewEl, positions);
 
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('class', 'dag-svg');
+  // Reuse existing SVG element during animation loops; create fresh otherwise.
+  let svg;
+  const isAnimating = animationFrameId !== null;
+  if (isAnimating && oldSvg) {
+    svg = oldSvg;
+    // Clear children without removing the element from the DOM tree
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    oldSvg = null; // prevent removal below
+  } else {
+    svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'dag-svg');
+  }
 
   const mapSpineEl = viewEl.querySelector('.map-spine');
 
@@ -228,7 +257,7 @@ export function draw(viewEl, visibleNodes) {
             const dirX = firstPos.x > trunkX ? 1 : -1;
             const dx = Math.abs(firstPos.x - trunkX);
             const vSpace = Math.max(0, firstPos.y - bendY);
-            const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - 2));
+            const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - RADIUS_ADJUST));
             forkPathData.push(
               // No vertical segment on the trunk — the spine div already
               // provides that visual.  Starting at the curve avoids
@@ -271,7 +300,7 @@ export function draw(viewEl, visibleNodes) {
         const dirX = pos.x > trunkX ? 1 : -1;
         const dx = Math.abs(pos.x - trunkX);
         const vSpace = Math.max(0, pos.y - bendY);
-        const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - 2));
+        const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - RADIUS_ADJUST));
 
         forkPathData.push(
           `M ${trunkX} ${bendY - r} ` +
@@ -330,8 +359,10 @@ export function draw(viewEl, visibleNodes) {
     const spineColor = getComputedStyle(document.documentElement)
       .getPropertyValue('--spine-color-solid').trim();
     const spineHeight = viewEl.offsetHeight || 1;
-    // Match the CSS gradient: min(5%, 40px)
-    const fadeEnd = Math.min(0.05 * spineHeight, 40);
+    // Match the CSS gradient: min(5%, --spine-fade-cap)
+    const spineFadeCap = parseFloat(getComputedStyle(document.documentElement)
+      .getPropertyValue('--spine-fade-cap')) || SPINE_FADE_PX;
+    const fadeEnd = Math.min(0.05 * spineHeight, spineFadeCap);
 
     const NS = 'http://www.w3.org/2000/svg';
     const defs = document.createElementNS(NS, 'defs');
@@ -417,10 +448,11 @@ export function draw(viewEl, visibleNodes) {
     newIndentSpines.push(spine);
   }
 
-  // Swap old elements for new
+  // Swap old elements for new. When reusing the SVG (animation loop),
+  // oldSvg was set to null above so we skip the redundant remove+append.
   if (oldSvg) oldSvg.remove();
   oldIndentSpines.forEach(el => el.remove());
-  renderTarget.appendChild(svg);
+  if (!svg.parentNode) renderTarget.appendChild(svg);
   newIndentSpines.forEach(s => renderTarget.appendChild(s));
 }
 

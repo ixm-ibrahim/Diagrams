@@ -237,7 +237,12 @@ export function expander(node) {
     tabAreaHtml = `<div class="tab-area" style="grid-template-columns: 1fr;">${actionSlotHtml}</div>`;
   }
 
-  return `<div class="exp-inner"><div class="logic-group">${logicGroupHtml}</div>${tabAreaHtml}</div>`;
+  const hasContent = logicGroupHtml !== '' || tabSections.length > 0;
+  const placeholderHtml = hasContent
+    ? ''
+    : '<p class="expander-empty">This section has yet to be populated.</p>';
+
+  return `<div class="exp-inner">${placeholderHtml}<div class="logic-group">${logicGroupHtml}</div>${tabAreaHtml}</div>`;
 }
 
 /* ---------------------------------------------------------------------------
@@ -282,7 +287,7 @@ function recursiveMiniNode(data, num) {
 function buildMiniNodeContent(data) {
   const parts = [];
   if (data.detail) {
-    parts.push(`<div style="padding:10px 0; text-align: left;"><div class="sub-body">${md(data.detail)}</div></div>`);
+    parts.push(`<div class="mini-detail-wrap"><div class="sub-body">${md(data.detail)}</div></div>`);
   }
   if (data.subSections?.length) {
     parts.push(data.subSections.map(sub => `
@@ -293,7 +298,7 @@ function buildMiniNodeContent(data) {
     `).join(''));
   }
   if (data.children?.length) {
-    parts.push(`<div class="mini-stack" style="margin-top:12px;">
+    parts.push(`<div class="mini-stack mini-stack--nested">
       ${data.children.map((c, idx) => recursiveMiniNode(c, idx + 1)).join('')}
     </div>`);
   }

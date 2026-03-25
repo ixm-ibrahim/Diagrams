@@ -171,10 +171,17 @@
   border-bottom: 1.5px solid currentColor;
   transform: rotate(-45deg);
   transition: transform var(--transition-medium) ease;
+  animation: chevron-pulse 2.4s ease-in-out infinite;
 }
 
 .intro-toggle[aria-expanded="true"] .intro-toggle__chevron {
   transform: rotate(45deg);
+  animation: none;
+}
+
+@keyframes chevron-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1; }
 }
 
 
@@ -235,6 +242,31 @@ h4.intro-heading {
   border-top: 1px solid var(--border-thin);
   margin-top: 6px;
   padding-top: 2px;
+  --section-hue: 0;
+}
+
+/* Subtle hue tinting for home page sections */
+.home-body .intro-section {
+  border-left: 2px solid hsla(var(--section-hue), 80%, 65%, 0.35);
+  padding-left: 12px;
+  border-radius: 2px;
+  background: hsla(var(--section-hue), 60%, 70%, 0.04);
+}
+
+[data-theme="light"] .home-body .intro-section {
+  border-left-color: hsla(var(--section-hue), 70%, 42%, 0.35);
+  background: hsla(var(--section-hue), 50%, 50%, 0.04);
+}
+
+.home-body .intro-section--nested {
+  border-left-width: 2px;
+  border-left-color: hsla(var(--section-hue), 80%, 65%, 0.25);
+  background: hsla(var(--section-hue), 60%, 70%, 0.03);
+}
+
+[data-theme="light"] .home-body .intro-section--nested {
+  border-left-color: hsla(var(--section-hue), 70%, 42%, 0.25);
+  background: hsla(var(--section-hue), 50%, 50%, 0.03);
 }
 
 .intro-section:first-child {
@@ -253,12 +285,26 @@ h4.intro-heading {
   font-weight: 700;
   color: var(--text);
   user-select: none;
-  transition: color var(--transition-medium) ease;
+  transition: color var(--transition-medium) ease,
+              transform var(--transition-medium) ease;
+}
+
+.home-body .intro-section__header {
+  color: hsla(var(--section-hue), 18%, 91%, 1);
+}
+
+[data-theme="light"] .home-body .intro-section__header {
+  color: hsla(var(--section-hue), 15%, 20%, 1);
 }
 
 .intro-section__header:hover {
   color: var(--text);
   opacity: 0.85;
+  transform: translateX(3px);
+}
+
+.home-body .intro-section__header:hover {
+  transform: translateX(4px);
 }
 
 .intro-section__header:focus-visible {
@@ -351,7 +397,7 @@ h4.intro-heading {
 /* Map toggle: small bar between header and nodes
    ----------------------------------------------------------------------------- */
 .map-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   background: none;
@@ -363,7 +409,7 @@ h4.intro-heading {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  width: 100%;
+  width: fit-content;
   transition: color var(--transition-medium) ease;
 }
 

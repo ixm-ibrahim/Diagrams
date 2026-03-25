@@ -32,7 +32,8 @@ export const AppState = {
   searchConfig: {
     nodeContents: true,
     global: true,
-    nested: false
+    nested: false,
+    wholeWord: false
   },
 
   /**

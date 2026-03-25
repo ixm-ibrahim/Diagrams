@@ -359,6 +359,45 @@ export function renderMapWithTransition(direction) {
   if (!isHome) renderSiblingNavigation(newView);
   container.appendChild(newView);
 
+  // Set arrow slide offset for home-page enter buttons after layout settles
+  if (isHome) {
+    const setArrowOffsets = (enableTransition) => {
+      newView.querySelectorAll('.home-enter-btn').forEach(btn => {
+        const label = btn.querySelector('.home-enter-btn__label');
+        const arrow = btn.querySelector('.home-enter-btn__arrow');
+        if (!label || !arrow) return;
+        // Distance from arrow's natural flex position to right-aligned position
+        const styles = getComputedStyle(btn);
+        const btnPad = parseFloat(styles.paddingRight) || 24;
+        const gap = parseFloat(styles.gap) || 10;
+        const arrowRight = btn.clientWidth - btnPad - arrow.offsetWidth;
+        const arrowLeft = label.offsetLeft + label.offsetWidth + gap;
+        const offset = -(arrowRight - arrowLeft);
+        arrow.style.setProperty('--arrow-rest-offset', `${offset}px`);
+        // Re-enable transition after the initial offset is applied
+        if (enableTransition) {
+          requestAnimationFrame(() => { arrow.style.removeProperty('transition'); });
+        }
+      });
+    };
+    // Suppress transition on first paint so arrows don't slide in from the right
+    newView.querySelectorAll('.home-enter-btn__arrow').forEach(arrow => {
+      arrow.style.transition = 'none';
+    });
+    requestAnimationFrame(() => setArrowOffsets(true));
+    // Recalculate on resize since button width changes
+    const onResize = () => requestAnimationFrame(setArrowOffsets);
+    window.addEventListener('resize', onResize);
+    // Clean up when this view is removed
+    const observer = new MutationObserver(() => {
+      if (!newView.isConnected) {
+        window.removeEventListener('resize', onResize);
+        observer.disconnect();
+      }
+    });
+    observer.observe(container, { childList: true });
+  }
+
   // Restore persisted vote button states on the freshly rendered nodes
   if (!isHome) applyVoteStates(newView);
 

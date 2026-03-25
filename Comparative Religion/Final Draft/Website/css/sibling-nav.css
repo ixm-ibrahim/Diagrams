@@ -109,6 +109,15 @@
 .sibling-nav-cross .btn-sibling:hover { opacity: 1; }
 
 
+/* Home variant: used on the root page to navigate back to the home landing
+   ----------------------------------------------------------------------------- */
+.sibling-nav-home .btn-sibling {
+  padding: 12px 16px;
+  opacity: 0.85;
+}
+.sibling-nav-home .btn-sibling:hover { opacity: 1; }
+
+
 /* Button internals
    ----------------------------------------------------------------------------- */
 .btn-sibling .sibling-id {
@@ -127,6 +136,7 @@
   font-size: 18px;
   font-weight: 900;
   opacity: 0.5;
+  -webkit-text-stroke: 1px currentColor;
   transition: transform var(--transition-medium) ease, opacity var(--transition-medium) ease;
 }
 
@@ -138,6 +148,12 @@
 .btn-sibling.prev-btn:hover { transform: translateY(-2px); }
 .btn-sibling.prev-btn:hover .sibling-arrow {
   transform: translateY(-4px); opacity: 1;
+}
+
+/* ⬅ Home: hover shifts LEFT */
+.btn-sibling.home-btn:hover { transform: translateX(-3px); }
+.btn-sibling.home-btn:hover .sibling-arrow {
+  transform: translateX(-4px); opacity: 1;
 }
 
 /* ↓ Next: hover pushes DOWN */

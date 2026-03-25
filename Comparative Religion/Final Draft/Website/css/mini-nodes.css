@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 8px;
+  gap: var(--spacing-sm);
   text-align: left;
 }
 
@@ -30,7 +30,7 @@
    ----------------------------------------------------------------------------- */
 .mini-node {
   border: 1px solid var(--border-thin);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   background: var(--mini-bg);
   overflow: hidden;
   text-align: left;
@@ -52,6 +52,11 @@
   font-size: 13.5px;
   text-align: left;
   cursor: pointer;
+  transition: transform var(--transition-medium) ease;
+}
+
+.mini-trigger:hover {
+  transform: translateX(3px);
 }
 
 .mini-trigger .id {
@@ -74,7 +79,7 @@
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
-  transition: transform 0.2s, opacity 0.15s;
+  transition: transform var(--transition-medium), opacity var(--transition-base);
   opacity: 0.6;
   margin-left: auto;
   margin-right: 6px;
@@ -125,7 +130,7 @@
 /* Sub-sections within mini-node content
    ----------------------------------------------------------------------------- */
 .sub-section {
-  margin-top: 12px;
+  margin-top: var(--spacing-md);
   text-align: left;
 }
 
@@ -149,10 +154,21 @@
 }
 
 
+/* Detail wrapper: top/bottom padding for mini-node detail text */
+.mini-detail-wrap {
+  padding: var(--card-header-gap) 0;
+  text-align: left;
+}
+
+/* Nested children mini-stack: extra top margin when embedded inside a mini-node */
+.mini-stack--nested {
+  margin-top: var(--spacing-md);
+}
+
 /* Nested mini-nodes: slightly tighter styling
    ----------------------------------------------------------------------------- */
 .mini-content-wrap .mini-node {
-  margin-top: 10px;
+  margin-top: var(--card-header-gap);
   border-left-width: 4px;
   background: rgba(255, 255, 255, 0.01);
   box-shadow: none;

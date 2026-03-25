@@ -27,7 +27,7 @@
   transition: grid-template-rows var(--transition-expander) cubic-bezier(0.4, 0, 0.2, 1),
               opacity var(--transition-expander), transform var(--transition-expander), margin-top var(--transition-expander);
   opacity: 0;
-  transform: translateY(-6px);
+  transform: translateY(var(--expander-entry-offset));
   margin-top: 0;
   z-index: var(--z-expander);
 }
@@ -36,8 +36,8 @@
   grid-template-rows: 1fr;
   opacity: 1;
   transform: translateY(0);
-  margin-top: calc(-8px + var(--parallel-pull, 0px));
-  margin-bottom: 8px;
+  margin-top: calc(var(--expander-open-margin-top) + var(--parallel-pull, 0px));
+  margin-bottom: var(--expander-open-margin-bottom);
   pointer-events: auto;
   position: relative;
   z-index: var(--z-expander-open);
@@ -129,6 +129,16 @@
 }
 
 
+/* Empty-state placeholder shown when a node has no expansion content yet     */
+.expander-empty {
+  padding: 16px 14px;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+}
+
+
 /* Logic sections (row-type sections inside expander)
    ----------------------------------------------------------------------------- */
 .logic-section {
@@ -156,6 +166,11 @@
   gap: 10px;
   cursor: pointer;
   user-select: none;
+  transition: transform var(--transition-medium) ease;
+}
+
+.logic-header:hover {
+  transform: translateX(3px);
 }
 
 /* Step number circle */

@@ -7,7 +7,7 @@
  * Consumers:    svg-engine.js, svg-stacked.js, svg-partial.js
  */
 
-import { SVG_OVERLAP, FORK_BRANCH_GAP } from './constants.js';
+import { SVG_OVERLAP, FORK_BRANCH_GAP, RADIUS_ADJUST, MIN_SPINE_HEIGHT } from './constants.js';
 import {
   STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS,
   getTransitionMetrics, getBranchRadius
@@ -86,8 +86,8 @@ export function drawEdgePath(startId, endId, positions, options = {}) {
   const radius = Math.min(
     MAX_CORNER_RADIUS,
     Math.abs(end.x - start.x) / 2,
-    startAtSpine ? MAX_CORNER_RADIUS : Math.max(0, startVertical - 2),
-    endAtSpine ? MAX_CORNER_RADIUS : Math.max(0, endVertical - 2)
+    startAtSpine ? MAX_CORNER_RADIUS : Math.max(0, startVertical - RADIUS_ADJUST),
+    endAtSpine ? MAX_CORNER_RADIUS : Math.max(0, endVertical - RADIUS_ADJUST)
   );
 
   let d = '';
@@ -165,7 +165,7 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
     const radius = Math.min(
       MAX_CORNER_RADIUS,
       Math.abs(trunkX - pos.x) / 2,
-      Math.max(0, Math.abs(mergeY - pos.y) - 2)
+      Math.max(0, Math.abs(mergeY - pos.y) - RADIUS_ADJUST)
     );
 
     allPathData.push(
@@ -270,7 +270,7 @@ export function buildColumnSpines(visibleNodes, positions, trunkX, excludeIds = 
     if (maxBottom <= col.maxBottom) continue;
 
     const height = maxBottom - col.minY;
-    if (height > 8) {
+    if (height > MIN_SPINE_HEIGHT) {
       spines.push({
         x: Math.round(col.x),
         top: col.minY,

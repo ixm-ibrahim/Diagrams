@@ -64,13 +64,13 @@
   top: 0;
   bottom: 0;
   width: var(--spine-width);
-  /* Cap fade at 40px so first-row fork branches always start in the solid
-     section. On short spines (< 800px) the 5% rule still applies. */
+  /* Cap fade at --spine-fade-cap so first-row fork branches always start in
+     the solid section. On short spines (< 800px) the 5% rule still applies. */
   background: linear-gradient(
     180deg,
     transparent,
-    var(--spine-color-solid) min(5%, 40px),
-    var(--spine-color-solid) max(95%, calc(100% - 40px)),
+    var(--spine-color-solid) min(5%, var(--spine-fade-cap)),
+    var(--spine-color-solid) max(95%, calc(100% - var(--spine-fade-cap))),
     transparent
   );
 }
@@ -80,10 +80,10 @@
 .map-spine-glow {
   position: absolute;
   left: calc(var(--spine-left) + var(--spine-width) / 2);
-  top: 40px;
+  top: var(--spine-fade-cap);
   transform: translateX(-50%);
   width: 8px;
-  height: calc(100% - 80px);
+  height: calc(100% - var(--spine-fade-cap) * 2);
   background: radial-gradient(closest-side, var(--spine-glow), transparent 80%);
   filter: blur(2px);
   opacity: 0.6;

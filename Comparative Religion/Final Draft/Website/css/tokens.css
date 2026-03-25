@@ -117,6 +117,10 @@
   --spacing-lg: 16px;
   --spacing-xl: 20px;
 
+  /* Home Page Button — padding and gap for the full-width enter buttons.  */
+  --home-btn-pad-x: 24px;
+  --home-btn-gap: 10px;
+
   /* Search Highlight Colors — for highlighting search results.            */
   --highlight-color: rgba(255, 196, 0, 0.35);
   --highlight-color-strong: rgba(255, 196, 0, 0.45);
@@ -223,6 +227,11 @@
   --level-gap: 8px;
   --parallel-col-gap: 16px;
 
+  /* Spine fade cap: maximum extent (px) of the spine's top/bottom gradient
+   * fade. Ensures fork branches always start in the solid spine section.
+   * Used in .map-spine background and .map-spine-glow positioning.            */
+  --spine-fade-cap: 40px;
+
   /* Map flow container: top/bottom padding and gap below header.              */
   --flow-pad-v: 10px;
   --flow-margin-top: 14px;
@@ -290,6 +299,15 @@
   --parallel-derive-total: calc(var(--parallel-derive-btn-width) + var(--parallel-derive-gap));
   --derive-width-diff: calc(var(--derive-total) - var(--parallel-derive-total));
 
+  /* Expander visual offsets — control the expander panel's position relative
+   * to the node card above. The entry offset is the initial translateY when
+   * closed (slides up slightly for a "tucked" effect). The open margin is
+   * the negative top margin when expanded.  Net margin (open-margin-top +
+   * open-margin-bottom) is EXPANDER_SPACER_MARGIN_PX in constants.js.         */
+  --expander-entry-offset: -6px;
+  --expander-open-margin-top: -8px;
+  --expander-open-margin-bottom: 8px;
+
   /* Expander panel and sibling-nav left padding.
    * Aligns expanded content with the card column.                             */
   --expander-pad: calc(var(--marker-col) + var(--node-col-gap));
@@ -338,13 +356,13 @@
               Files: tokens.css, map-layout.css, node-card.css, derive-button.css
 
    CONTAINER QUERY BREAKPOINTS (used in @container queries):
-     300px  — card internals. So-what hidden, header loosens.
+     400px  — card internals. So-what hidden, header loosens.
               Files: node-card.css
-     200px  — card internals. Controls wrap to full-width row.
+     325px  — card internals. Controls wrap to full-width row.
               Files: node-card.css
 
    JS THRESHOLD (in constants.js):
-     290px  — STACK_THRESHOLD. Per-child width below which parallel runs stack.
+     350px  — STACK_THRESHOLD. Per-child width below which parallel runs stack.
               File: constants.js                                               */
 
 @media (max-width: 1120px) {

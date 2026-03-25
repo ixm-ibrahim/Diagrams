@@ -11,7 +11,7 @@ import { AppState, HOME_PAGE_ID } from './state.js';
 import { DataStore } from './data-store.js';
 import { NavigationController } from './navigation.js';
 import { SCROLL_TO_NODE_DELAY_MS, SCROLL_PADDING_PX } from './constants.js';
-import { toggleExpander } from './ui-expander.js';
+import { toggleExpander, forceCloseExpander } from './ui-expander.js';
 import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
 import { exportNodes } from './ui-export.js';
 import { setVote, applyVoteStates } from './ui-agreement.js';
@@ -35,6 +35,7 @@ export function init() {
   els.toggleNodeContentsSearch   = document.getElementById('toggleNodeContentsSearch');
   els.toggleGlobalSearch = document.getElementById('toggleGlobalSearch');
   els.toggleNestedSearch = document.getElementById('toggleNestedSearch');
+  els.toggleWholeWord    = document.getElementById('toggleWholeWord');
   els.exportBtn          = document.getElementById('exportBtn');
 
   bindThemeToggle();
@@ -131,7 +132,8 @@ function bindMapClicks() {
         ? null
         : deriveBtn.dataset.target;
       // Guard: if target node doesn't exist in the data, log and bail
-      if (targetId != null && !DataStore.map.has(targetId)) {
+      // (HOME_PAGE_ID is a virtual target, not in the node map)
+      if (targetId != null && targetId !== HOME_PAGE_ID && !DataStore.map.has(targetId)) {
         console.warn(`[derive] Target node "${targetId}" not found in DataStore. Ignoring click.`);
         return;
       }
@@ -146,6 +148,10 @@ function bindMapClicks() {
       const box = searchHeader.closest('.search-result-box');
       const collapsed = box.classList.toggle('is-collapsed');
       searchHeader.setAttribute('aria-expanded', !collapsed);
+      // If collapsing a box that contains the active (expanded) node, close it
+      if (collapsed && AppState.activeNodeId && box.querySelector(`.node-row[data-id="${AppState.activeNodeId}"]`)) {
+        forceCloseExpander();
+      }
       return;
     }
 
@@ -246,6 +252,7 @@ function bindSearchCheckboxes() {
     AppState.searchConfig.nodeContents = els.toggleNodeContentsSearch?.checked  ?? true;
     AppState.searchConfig.global = els.toggleGlobalSearch?.checked ?? true;
     AppState.searchConfig.nested = els.toggleNestedSearch?.checked ?? false;
+    AppState.searchConfig.wholeWord = els.toggleWholeWord?.checked ?? false;
     rerunActiveSearch();
   };
 
@@ -267,6 +274,9 @@ function bindSearchCheckboxes() {
     }
     syncConfig();
   });
+
+  // "Whole words only" — independent, just sync state
+  els.toggleWholeWord?.addEventListener('change', syncConfig);
 }
 
 function bindExportButton() {

@@ -7,7 +7,7 @@
  * Consumers:    svg-engine.js
  */
 
-import { MIN_SPINE_HEIGHT, FORK_BRANCH_GAP } from './constants.js';
+import { MIN_SPINE_HEIGHT, FORK_BRANCH_GAP, RADIUS_ADJUST } from './constants.js';
 import {
   STRAIGHT_THRESHOLD, MAX_CORNER_RADIUS, SPINE_FADE_PX,
   getTransitionMetrics, getBranchRadius
@@ -170,7 +170,7 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
         const dx = Math.abs(zoneTrunkX - firstPos.x);
         const termR = Math.min(
           MAX_CORNER_RADIUS, dx / 2,
-          Math.max(0, Math.abs(terminalMergeY - lastPos.y) - 2)
+          Math.max(0, Math.abs(terminalMergeY - lastPos.y) - RADIUS_ADJUST)
         );
         bottom = Math.min(bottom, terminalMergeY - termR);
       }
@@ -225,7 +225,7 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
         const radius = Math.min(
           MAX_CORNER_RADIUS,
           Math.abs(returnTargetX - deepestX) / 2,
-          Math.max(0, Math.abs(mergeY - lastPos.y) - 2)
+          Math.max(0, Math.abs(mergeY - lastPos.y) - RADIUS_ADJUST)
         );
 
         // Start from the last node's visualBottom so the path connects
