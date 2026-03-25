@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/sibling-nav.css" />
   <link rel="stylesheet" href="css/expander.css" />
   <link rel="stylesheet" href="css/mini-nodes.css" />
+  <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/search-results.css" />
   <link rel="stylesheet" href="css/agreement.css" />
@@ -47,7 +48,15 @@
       </div>
 
       <div class="header-collapsible" id="headerCollapsible">
-        <div class="subtitle" id="subtitleText"></div>
+        <div class="subtitle-row" id="subtitleRow">
+          <button class="intro-toggle" id="introToggle" type="button" aria-expanded="false" aria-label="Show page introduction" hidden>
+            <span class="intro-toggle__chevron"></span>
+          </button>
+          <div class="subtitle" id="subtitleText"></div>
+        </div>
+        <div class="page-intro-wrap" id="pageIntroWrap">
+          <div class="page-intro" id="pageIntroText"></div>
+        </div>
         <div class="header-bottom">
           <nav class="nav-crumbs" aria-label="Breadcrumbs">
             <span id="breadcrumbRoot">Home</span>
@@ -129,7 +138,13 @@
       </section>
     </header>
 
-    <main class="map-container" id="mapContainer" role="main"></main>
+    <button class="map-toggle" id="mapToggle" type="button" aria-expanded="true" aria-label="Toggle node map" hidden>
+      <span class="map-toggle__chevron"></span>
+      <span class="map-toggle__label">Nodes</span>
+    </button>
+    <div class="map-collapse-wrap" id="mapCollapseWrap">
+      <main class="map-container" id="mapContainer" role="main"></main>
+    </div>
   </div>
 </body>
 </html>

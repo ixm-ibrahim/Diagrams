@@ -26,7 +26,7 @@
 import { computeLevels } from './graph-engine.js';
 import { nodeRow } from './templates.js';
 import { DataStore } from './data-store.js';
-import { AppState } from './state.js';
+import { AppState, HOME_PAGE_ID } from './state.js';
 import { ANIMATION_SPEEDS, SVG_SETTLE_DELAY_MS } from './constants.js';
 import { renderSiblingNavigation } from './sibling-nav.js';
 import { draw as drawSVG } from './svg-engine.js';
@@ -34,6 +34,7 @@ import { updateStackedGroups } from './ui-layout.js';
 import { applyVoteStates } from './ui-agreement.js';
 import { computeFlexWeights, buildOrderedRuns } from './ui-render-weights.js';
 import { buildStackGroups, applyCascadeStacking } from './ui-render-stacking.js';
+import { renderIntro } from './ui-header.js';
 
 /** Cached container element. Set by init(). */
 let container = null;
@@ -43,6 +44,70 @@ let container = null;
  */
 export function init() {
   container = document.getElementById('mapContainer');
+}
+
+/**
+ * Builds the home landing page view.
+ * Renders config.homePage markdown content with collapsible sections
+ * and a prominent "Enter Map" button at top and bottom.
+ */
+function buildHomeView() {
+  const view = document.createElement('div');
+  view.className = 'map-flow home-page';
+
+  const content = DataStore.config.homePage || '';
+  const enterLabel = DataStore.config.title || 'Explore the Map';
+
+  // Top nav button
+  const topNav = document.createElement('div');
+  topNav.className = 'home-nav';
+  topNav.innerHTML = `<button class="home-enter-btn" data-target="root" type="button">
+    <span class="home-enter-btn__label">${enterLabel}</span>
+    <span class="home-enter-btn__arrow">→</span>
+  </button>`;
+  view.appendChild(topNav);
+
+  // Main content area
+  const body = document.createElement('div');
+  body.className = 'home-body page-intro';
+  body.innerHTML = renderIntro(content);
+  view.appendChild(body);
+
+  // Bottom nav button
+  const bottomNav = topNav.cloneNode(true);
+  view.appendChild(bottomNav);
+
+  // Delegate collapsible section toggling and enter-map clicks
+  view.addEventListener('click', (e) => {
+    // Collapsible sections
+    const header = e.target.closest('.intro-section__header');
+    if (header) {
+      const section = header.parentElement;
+      const collapsed = section.classList.toggle('is-collapsed');
+      header.setAttribute('aria-expanded', String(!collapsed));
+      return;
+    }
+    // Enter map button — dispatch a navigation event handled by ui-events.js
+    const btn = e.target.closest('.home-enter-btn');
+    if (btn) {
+      document.dispatchEvent(new CustomEvent('navigate-to', { detail: { target: null } }));
+    }
+  });
+
+  // Keyboard support for collapsible sections
+  view.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      const header = e.target.closest('.intro-section__header');
+      if (header) {
+        e.preventDefault();
+        const section = header.parentElement;
+        const collapsed = section.classList.toggle('is-collapsed');
+        header.setAttribute('aria-expanded', String(!collapsed));
+      }
+    }
+  });
+
+  return view;
 }
 
 /**
@@ -289,21 +354,25 @@ export function renderMapWithTransition(direction) {
   }
 
   // Phase 1: Build new view
-  const newView = buildView();
-  renderSiblingNavigation(newView);
+  const isHome = AppState.currentParentId === HOME_PAGE_ID;
+  const newView = isHome ? buildHomeView() : buildView();
+  if (!isHome) renderSiblingNavigation(newView);
   container.appendChild(newView);
 
   // Restore persisted vote button states on the freshly rendered nodes
-  applyVoteStates(newView);
+  if (!isHome) applyVoteStates(newView);
 
   // Phase 2: Draw SVG connectors (needs layout to settle)
-  const visibleNodes = DataStore.nodes.filter(
-    n => n.parentId === AppState.currentParentId
-  );
-  setTimeout(() => {
-    try { drawSVG(newView, visibleNodes); }
-    catch (err) { console.error('[UI] Phase 2 drawSVG threw:', err); }
-  }, SVG_SETTLE_DELAY_MS);
+  const visibleNodes = isHome
+    ? []
+    : DataStore.nodes.filter(n => n.parentId === AppState.currentParentId);
+
+  if (!isHome) {
+    setTimeout(() => {
+      try { drawSVG(newView, visibleNodes); }
+      catch (err) { console.error('[UI] Phase 2 drawSVG threw:', err); }
+    }, SVG_SETTLE_DELAY_MS);
+  }
 
   // Phase 3: Animate old out, new in
   oldViews.forEach(oldView => {
@@ -330,7 +399,7 @@ export function renderMapWithTransition(direction) {
     // Forced catch-up: replay any resize events that were skipped while
     // isTransitioning was true. Ensures stacked layout is never stale after
     // a resize that happened mid-animation.
-    if (container) {
+    if (container && !isHome) {
       updateStackedGroups(newView, container.offsetWidth);
     }
 
@@ -344,9 +413,11 @@ export function renderMapWithTransition(direction) {
 
     // Final SVG redraw after layout is fully settled. Runs after the forced
     // stacking update above so connectors are drawn on the final geometry.
-    setTimeout(() => {
-      try { drawSVG(newView, visibleNodes); }
-      catch (err) { console.error('[UI] Phase 4 drawSVG threw:', err); }
-    }, SVG_SETTLE_DELAY_MS);
+    if (!isHome) {
+      setTimeout(() => {
+        try { drawSVG(newView, visibleNodes); }
+        catch (err) { console.error('[UI] Phase 4 drawSVG threw:', err); }
+      }, SVG_SETTLE_DELAY_MS);
+    }
   }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
 }

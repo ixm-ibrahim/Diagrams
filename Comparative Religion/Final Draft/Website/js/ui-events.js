@@ -7,7 +7,7 @@
  * Consumers:    main.js (calls init once during bootstrap)
  */
 
-import { AppState } from './state.js';
+import { AppState, HOME_PAGE_ID } from './state.js';
 import { DataStore } from './data-store.js';
 import { NavigationController } from './navigation.js';
 import { SCROLL_TO_NODE_DELAY_MS, SCROLL_PADDING_PX } from './constants.js';
@@ -274,13 +274,21 @@ function bindExportButton() {
 }
 
 function bindBreadcrumbClicks() {
+  // Custom navigate-to events dispatched from home page buttons
+  document.addEventListener('navigate-to', (e) => {
+    NavigationController.navigate(e.detail.target);
+  });
+
   document.addEventListener('click', (e) => {
     const crumb = e.target.closest('.crumb-link');
     if (crumb) {
       e.preventDefault();
-      NavigationController.navigate(
-        crumb.dataset.target === 'null' ? null : crumb.dataset.target
-      );
+      const target = crumb.dataset.target;
+      if (target === HOME_PAGE_ID) {
+        NavigationController.navigate(HOME_PAGE_ID);
+      } else {
+        NavigationController.navigate(target === 'null' ? null : target);
+      }
       return;
     }
 

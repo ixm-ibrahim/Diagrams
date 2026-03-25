@@ -1,0 +1,130 @@
+/* =============================================================================
+   home.css — Home Landing Page
+   =============================================================================
+   Full-page markdown content view with collapsible sections and a prominent
+   "Enter Map" button. Reuses .page-intro and .intro-section styles from
+   header.css for consistency.
+
+   Depends on tokens.css:
+     --text, --text-muted, --text-faint, --border, --border-thin,
+     --panel-bg, --glass, --radius-lg, --radius-md, --transition-medium
+
+   HTML classes styled here:
+     .home-page, .home-nav, .home-enter-btn, .home-body
+   ============================================================================= */
+
+
+/* Home view container: gentle max-width for readability
+   ----------------------------------------------------------------------------- */
+.home-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+}
+
+
+/* Enter-map navigation button
+   ----------------------------------------------------------------------------- */
+.home-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 0 16px;
+}
+
+.home-enter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background var(--transition-medium) ease,
+              border-color var(--transition-medium) ease,
+              transform var(--transition-fast) ease,
+              box-shadow var(--transition-medium) ease;
+}
+
+[data-theme="light"] .home-enter-btn {
+  background: linear-gradient(135deg, rgba(16,26,53,0.04), rgba(16,26,53,0.01));
+}
+
+.home-enter-btn:hover {
+  border-color: var(--text-muted);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .home-enter-btn:hover {
+  background: rgba(16,26,53,0.06);
+}
+
+.home-enter-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.home-enter-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.home-enter-btn__arrow {
+  font-size: 18px;
+  font-weight: 900;
+  transition: transform var(--transition-medium) ease;
+}
+
+.home-enter-btn:hover .home-enter-btn__arrow {
+  transform: translateX(3px);
+}
+
+
+/* Home body: inherits .page-intro styles but tweaked for full-page reading
+   ----------------------------------------------------------------------------- */
+.home-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.home-body p {
+  margin: 0 0 12px;
+}
+
+.home-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Intro sections inside home body: slightly larger headings */
+.home-body .intro-section__header {
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+/* Slightly more spacing between sections on home page */
+.home-body .intro-section {
+  margin-top: 4px;
+}
+
+.home-body .intro-section:first-child {
+  margin-top: 0;
+}
+
+
+/* Responsive: tighter padding on mobile */
+@media (max-width: 550px) {
+  .home-page {
+    padding: 12px 12px 32px;
+  }
+
+  .home-enter-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}

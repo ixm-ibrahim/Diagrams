@@ -12,7 +12,7 @@
  * =============================================================================
  */
 
-import { AppState } from './state.js';
+import { AppState, HOME_PAGE_ID } from './state.js';
 import { DataStore } from './data-store.js';
 import { updateHeaderContext } from './ui-header.js';
 import { renderMapWithTransition } from './ui-render.js';
@@ -55,14 +55,27 @@ function getNodeIndexCache() {
 export const NavigationController = {
   init() {
     window.addEventListener('popstate', (e) => {
-      this.loadState(e.state?.nodeId ?? null, 'restore');
+      const nodeId = e.state?.nodeId;
+      this.loadState(nodeId === HOME_PAGE_ID ? HOME_PAGE_ID : nodeId ?? null, 'restore');
     });
 
     let initialNode = new URLSearchParams(window.location.search).get('node');
+    let explicitRoot = false;
 
-    if (initialNode !== null && !DataStore.map.has(initialNode)) {
+    if (initialNode === 'root') {
+      // Explicit root (Project Overview) — normalize to null
+      initialNode = null;
+      explicitRoot = true;
+    } else if (initialNode === HOME_PAGE_ID) {
+      // Home page URL param (shouldn't normally appear but handle it)
+    } else if (initialNode !== null && !DataStore.map.has(initialNode)) {
       console.warn(`Node "${initialNode}" not found. Defaulting to root.`);
       initialNode = null;
+    }
+
+    // Default to home page if no node specified and config has a homePage
+    if (initialNode === null && !explicitRoot && DataStore.config.homePage) {
+      initialNode = HOME_PAGE_ID;
     }
 
     this.loadState(initialNode, 'replace');
@@ -84,6 +97,9 @@ export const NavigationController = {
    */
   getDirection(fromId, toId) {
     if (fromId === toId) return 'none';
+    // Home page transitions
+    if (fromId === HOME_PAGE_ID) return 'depth';
+    if (toId === HOME_PAGE_ID) return 'surface';
     if (!fromId && toId) return 'depth';
     if (fromId && !toId) return 'surface';
 
@@ -125,8 +141,13 @@ export const NavigationController = {
     document.body.classList.remove('is-focused');
 
     const url = new URL(window.location);
-    if (nodeId) url.searchParams.set('node', nodeId);
-    else url.searchParams.delete('node');
+    if (nodeId === HOME_PAGE_ID) url.searchParams.delete('node');
+    else if (nodeId) url.searchParams.set('node', nodeId);
+    else {
+      // Project overview root: use ?node=root to distinguish from home page
+      if (DataStore.config.homePage) url.searchParams.set('node', 'root');
+      else url.searchParams.delete('node');
+    }
 
     if (historyAction === 'push') {
       window.history.pushState({ nodeId }, '', url);

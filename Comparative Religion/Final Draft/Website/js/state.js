@@ -17,6 +17,9 @@
 
 import { THEME_TRANSITION_MS, TINT_SATURATION, TINT_LIGHTNESS, TINT_ALPHA } from './constants.js';
 
+/** Sentinel value for the home landing page (distinct from null = project overview root). */
+export const HOME_PAGE_ID = '__home__';
+
 export const AppState = {
   theme: localStorage.getItem('theme') || 'dark',
   activeNodeId: null,

@@ -451,7 +451,7 @@
   color: #fecaca;
   box-shadow: 0 0 14px 4px rgba(var(--disagree-rgb), 0.35);
   animation: none;
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-2px) scaleY(1.04);
 }
 
 .row-core > .btn-derivation::before {
@@ -551,7 +551,7 @@
   color: #bbf7d0;
   box-shadow: 0 0 14px 4px rgba(var(--agree-rgb), 0.35);
   animation: none;
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-2px) scaleY(1.04);
 }
 
 .row-core-agree > .btn-derivation::before {

@@ -121,6 +121,301 @@
   word-break: break-word;
 }
 
+
+/* Subtitle row: chevron + subtitle text side by side
+   ----------------------------------------------------------------------------- */
+.subtitle-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+
+/* Intro toggle: small chevron to the left of the subtitle
+   ----------------------------------------------------------------------------- */
+.intro-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 20px;
+  margin-top: -1px;
+  transition: color var(--transition-medium) ease;
+}
+
+.intro-toggle[hidden],
+.map-toggle[hidden] {
+  display: none;
+}
+
+.intro-toggle:hover {
+  color: var(--text);
+}
+
+.intro-toggle:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.intro-toggle__chevron {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform var(--transition-medium) ease;
+}
+
+.intro-toggle[aria-expanded="true"] .intro-toggle__chevron {
+  transform: rotate(45deg);
+}
+
+
+/* Collapsible page introduction
+   ----------------------------------------------------------------------------- */
+.page-intro-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-expander) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-intro-wrap.is-open {
+  grid-template-rows: 1fr;
+}
+
+.page-intro {
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.page-intro p {
+  margin: 0 0 8px;
+}
+
+.page-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.page-intro .intro-heading {
+  color: var(--text);
+  margin: 12px 0 4px;
+  line-height: 1.3;
+}
+
+.page-intro .intro-heading:first-child {
+  margin-top: 0;
+}
+
+h3.intro-heading {
+  font-size: 14px;
+}
+
+h4.intro-heading {
+  font-size: 13px;
+}
+
+/* Padding inside the intro for breathing room when visible */
+.page-intro-wrap.is-open .page-intro {
+  padding-top: 8px;
+}
+
+
+/* Collapsible intro sections (##> syntax)
+   ----------------------------------------------------------------------------- */
+.intro-section {
+  border-top: 1px solid var(--border-thin);
+  margin-top: 6px;
+  padding-top: 2px;
+}
+
+.intro-section:first-child {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.intro-section__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  user-select: none;
+  transition: color var(--transition-medium) ease;
+}
+
+.intro-section__header:hover {
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.intro-section__header:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Chevron before the header text */
+.intro-section__header::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform var(--transition-medium) ease;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.intro-section.is-collapsed .intro-section__header::before {
+  transform: rotate(-45deg);
+}
+
+/* Animated body via grid-template-rows */
+.intro-section__body {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows var(--transition-expander) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.intro-section.is-collapsed .intro-section__body {
+  grid-template-rows: 0fr;
+}
+
+.intro-section__inner {
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+
+.intro-section.is-collapsed .intro-section__inner {
+  padding-bottom: 0;
+}
+
+/* Nested collapsible sections (###> syntax) — slightly indented */
+.intro-section--nested {
+  margin-left: 12px;
+  border-top-color: rgba(255,255,255,0.04);
+}
+
+[data-theme="light"] .intro-section--nested {
+  border-top-color: rgba(0,0,0,0.06);
+}
+
+.intro-section--nested .intro-section__header {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 0;
+}
+
+.intro-section--nested .intro-section__header::before {
+  width: 6px;
+  height: 6px;
+}
+
+/* Links inside page intro */
+.page-intro a {
+  color: #5ba8ff;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast) ease;
+}
+
+.page-intro a:hover {
+  color: #8ac4ff;
+}
+
+[data-theme="light"] .page-intro a {
+  color: #1a6ed8;
+}
+
+[data-theme="light"] .page-intro a:hover {
+  color: #0f4ea0;
+}
+
+
+/* Map toggle: small bar between header and nodes
+   ----------------------------------------------------------------------------- */
+.map-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+  transition: color var(--transition-medium) ease;
+}
+
+.map-toggle:hover {
+  color: var(--text-muted);
+}
+
+.map-toggle:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.map-toggle__chevron {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform var(--transition-medium) ease;
+}
+
+.map-toggle.is-collapsed .map-toggle__chevron {
+  transform: rotate(-45deg);
+}
+
+/* Map collapse: grid-template-rows animation on a wrapper div.
+   The map-container itself keeps its own display/layout untouched;
+   the wrapper's 0fr → 1fr transition handles the reveal. */
+.map-collapse-wrap {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.map-collapse-wrap.is-map-collapsed {
+  grid-template-rows: 0fr;
+}
+
+.map-collapse-wrap.is-map-collapsed > .map-container {
+  overflow: hidden;
+  min-height: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.map-collapse-wrap:not(.is-map-collapsed) > .map-container {
+  transition: opacity 0.2s ease 0.1s;
+}
+
+
 /* Inline links in page title / subtitle */
 .page-title a,
 .subtitle a {
