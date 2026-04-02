@@ -38,14 +38,31 @@ export function buildStackGroups(
   let lastWasDummy = false;
   const runs = buildOrderedRunsForStacking(rowNodes);
 
+  // Compute total row weight so stacking thresholds reflect the group's
+  // actual fraction of the container.  When a parallel sibling (e.g. a
+  // terminal node) has no children in this row, its weight doesn't flow
+  // forward, so the row's total weight falls below 1.0.  Without
+  // normalization the threshold is inflated, causing premature stacking
+  // that visually misplaces children under the wrong parent.
+  const rowWeightsForStack = weights[rowIdx];
+  const totalRowWeight = rowWeightsForStack
+    ? rowWeightsForStack.reduce((sum, w) => sum + w, 0) : 0;
+
   runs.forEach(run => {
     if (run.isDummyItem) { lastWasDummy = true; return; }
     const nodeIds = run.nodes.map(({ node }) => node.id);
     const colIndices = run.nodes.map(({ colIdx }) => colIdx);
-    const rowWeightsForStack = weights[rowIdx];
     const combinedWeight = rowWeightsForStack
       ? colIndices.reduce((sum, ci) => sum + (rowWeightsForStack[ci] ?? 1), 0)
       : run.nodes.length;
+
+    // Effective fraction: the share of container width this group actually
+    // receives in the flex layout.  Normalise against the row's total
+    // weight so that a group which is the *only* content in a row is
+    // treated as occupying 100%, not its absolute weight.
+    const effectiveFraction = totalRowWeight > 0
+      ? combinedWeight / totalRowWeight
+      : combinedWeight;
 
     // Merge adjacent single-node runs into a combined stack group.
     // Two adjacent single-node runs from different parents would each
@@ -55,20 +72,24 @@ export function buildStackGroups(
     if (!lastWasDummy && prev && prev._singleRun && run.nodes.length === 1) {
       prev.nodeIds.push(...nodeIds);
       prev.combinedWeight += combinedWeight;
+      // Recompute effective fraction for the merged group
+      const mergedFraction = totalRowWeight > 0
+        ? prev.combinedWeight / totalRowWeight
+        : prev.combinedWeight;
       // Use the maximum individual threshold — the narrowest node
       // determines when the merged group must stack.
       prev.stackAt = Math.max(
         prev.stackAt,
-        Math.round(STACK_THRESHOLD * run.nodes.length / combinedWeight)
+        Math.round(STACK_THRESHOLD * run.nodes.length / mergedFraction)
       );
       // stays _singleRun = true so further adjacent singles also merge
     } else {
       // Stack when each child's allocated width drops below STACK_THRESHOLD.
-      // Per-child width = containerWidth × combinedWeight / nodeCount,
-      // so stackAt = STACK_THRESHOLD × nodeCount / combinedWeight.
+      // Per-child width = containerWidth × effectiveFraction / nodeCount,
+      // so stackAt = STACK_THRESHOLD × nodeCount / effectiveFraction.
       stackGroupsData.push({
         nodeIds,
-        stackAt: Math.round(STACK_THRESHOLD * run.nodes.length / combinedWeight),
+        stackAt: Math.round(STACK_THRESHOLD * run.nodes.length / effectiveFraction),
         combinedWeight,
         _singleRun: run.nodes.length === 1
       });
@@ -150,7 +171,11 @@ export function buildStackGroups(
         }
       }
       if (zrWeight === 0) zrWeight = ids.length;
-      const zrStackAt = Math.round(STACK_THRESHOLD * ids.length / zrWeight);
+      // Normalise against the zone row's total weight (same reasoning as
+      // the trigger row — parent weight may not fully flow forward).
+      const zrTotalWeight = (weights[r] || []).reduce((sum, w) => sum + w, 0) || 1;
+      const zrEffective = zrTotalWeight > 0 ? zrWeight / zrTotalWeight : zrWeight;
+      const zrStackAt = Math.round(STACK_THRESHOLD * ids.length / zrEffective);
       zoneRows.push({ rowIdx: r, nodeIds: ids, stackAt: zrStackAt });
       ids.forEach(id => zoneSet.add(id));
     }
@@ -198,6 +223,41 @@ export function buildStackGroups(
     if (allZoneIds.length > 1) {
       group.zoneOrder = computeZoneOrder(allZoneIds);
     }
+  });
+
+  // Potential companions: for each zone row in each group, identify nodes
+  // that are NOT being absorbed by this group but whose parent sits in the
+  // trigger row and is NOT part of this group's nodeIds.  At runtime, if
+  // the parent is still a direct flex child (its own group didn't stack),
+  // wrapStackGroup wraps parent + child into a mini-column so they stay
+  // vertically adjacent instead of landing in a far-away level-group.
+  const triggerRowRealIds = new Set(
+    rowNodes.filter(n => !n.isDummy).map(n => n.id)
+  );
+
+  stackGroupsData.forEach(group => {
+    if (!group.zoneRows) return;
+
+    group.zoneRows.forEach(zr => {
+      const zoneRowAllNodes = groupedRows[zr.rowIdx].filter(n => !n.isDummy);
+      const notAbsorbed = zoneRowAllNodes.filter(n => !zr.nodeIds.includes(n.id));
+      if (notAbsorbed.length === 0) return;
+
+      const companions = [];
+      notAbsorbed.forEach(orphan => {
+        (orphan.prevIds || []).forEach(pid => {
+          if (!triggerRowRealIds.has(pid)) return;
+          // Parent must NOT be in this group's trigger nodes
+          if (group.nodeIds.includes(pid)) return;
+          companions.push({ childId: orphan.id, parentId: pid });
+        });
+      });
+
+      if (companions.length > 0) {
+        zr.potentialCompanions = companions;
+        console.log(`[COMPANION-DEBUG] buildStackGroups: zoneRow=${zr.rowIdx} potentialCompanions:`, JSON.stringify(companions));
+      }
+    });
   });
 
   return stackGroupsData;

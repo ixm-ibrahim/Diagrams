@@ -171,6 +171,30 @@
 .btn-sibling.parallel-next-btn:hover .sibling-arrow { opacity: 1; }
 
 
+/* Terminal target: dimmed button with small tag
+   ----------------------------------------------------------------------------- */
+.btn-sibling.sibling-terminal {
+  opacity: 0.55;
+}
+.btn-sibling.sibling-terminal:hover {
+  opacity: 0.8;
+}
+
+.sibling-terminal-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  opacity: 0.7;
+  padding: 2px 6px;
+  border: 1px solid var(--border-thin);
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
 /* Mobile
    ----------------------------------------------------------------------------- */
 @media (max-width: 450px) {

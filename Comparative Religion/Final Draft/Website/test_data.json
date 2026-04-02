@@ -1,0 +1,2895 @@
+{
+  "config": {
+    "title": "Project Overview",
+    "subtitle": "Eight top-level conclusions. Click ++any node++ to expand its contents (collapsible internals + Zoom: Derivation Map).",
+    "breadcrumbRoot": "Home",
+    "searchPlaceholder": "Find a claim / term...",
+    "nodePrefix": "S",
+    "pageIntro": "## How to Read This Map\n\nThis project is structured as a **directed acyclic graph** (DAG) of claims. Each node represents a single proposition, and the arrows between them represent logical dependency \u2014 \"this follows from that.\"\n\n### Navigation\n\nClick any node to expand its internal breakdown. Use the *Zoom: Derivation Map* button to drill into a node's sub-page, where its children are laid out in the same DAG format. Breadcrumbs at the top let you navigate back.\n\n### Agreement Tracking\n\nThe thumbs-up / thumbs-down buttons on each node let you mark whether you ++agree++ or ++disagree++ with that particular step. This is tracked locally in your browser \u2014 no data is sent anywhere.\n\n### Key Principles\n\n- Each conclusion is derived from prior steps, never assumed\n- If a step is rejected, the reasoning must be traced to *where* it breaks\n- The goal is `logical transparency`, not persuasion",
+    "homeTitle": "The Sieve of Truth",
+    "homeSubtitle": "An interactive map for distinguishing truth from falsehood \u2014 using the same standards we apply everywhere else.",
+    "homePage": "##>! Introduction\nHow can we distinguish between truth and falsehood \u2014 by the **same standards** we use to distinguish truth anywhere else?\n\nThis site is an interactive map of that question. It presents a structured argument that starts from the ground up \u2014 from what we directly observe and experience \u2014 and reasons forward, step by step, using the same logic that governs every reliable field of inquiry. Each step narrows the space of possible answers by removing methods that can be used equally well to justify both truth and falsehood.\n\nThe argument is not a linear essay. It is a *hierarchy of connected claims*, where each claim depends on the ones beneath it, and each can be opened, examined, and challenged independently. The structure is the point \u2014 it makes the reasoning ++transparent++ so that anyone, regardless of background, can follow it, verify it, or identify exactly where and why they disagree.\n\n##> The Point\nDiscussions about God, religion, and truth tend to go in circles. People talk past each other, argue from different assumptions, and walk away exactly where they started. This usually happens because the actual **point of disagreement** is buried \u2014 hidden behind vague language, emotional reactions, or layers of complexity that neither side has the patience or the tools to untangle.\n\nThis map exists to fix that.\n\nThe goal is to make discussions *productive* by making them ++accountable++. Every claim here is traceable \u2014 it depends on specific prior claims, which depend on specific observations, all the way down to things you can verify from your own experience. When you disagree, you are not just disagreeing with a conclusion. You are disagreeing with a **specific step**, and that step has a visible cost: what your rejection commits you to, and whether you are willing to pay it.\n\nThis changes the nature of a conversation. Instead of \"I believe X\" against \"I believe Y,\" it becomes: \"I reject this specific filter \u2014 here is why \u2014 and I accept the consequences of that rejection.\" That is a discussion worth having. It can actually go somewhere, because both sides can see the structure of the disagreement and address it directly rather than talking past each other.\n\nThe map also removes the excuse of complexity. Topics like `epistemology`, `metaphysics`, and `comparative theology` are often treated as inaccessible to normal people \u2014 the kind of thing you need a degree to have an opinion about. But the reasoning here starts from everyday observations and builds in plain language. If you can follow a chain of \"if this, then that,\" you can follow this argument. The hierarchy does the organizational work so you don't have to hold the whole thing in your head at once.\n\nUltimately, the intended use is simple: engage with the argument honestly, locate your position, and take responsibility for it.\n\n##> How the Argument Is Organized\nThe map works in **layers**. The top level shows the main claims \u2014 the broadest conclusions of each section. These are connected by arrows that show how one conclusion feeds into the next, forming the chain of reasoning from foundational observations all the way to the final result.\n\nEach claim can be expanded by clicking its header. This reveals the internal reasoning behind that claim:\n- Observations drawn from ++everyday experience++\n- Inferences built on those observations\n- Conclusions organized into **tabs** that break the logic down piece by piece\n\nThis is where the actual evidence and argumentation lives.\n\n### Derivation Pages\nMany claims also have a *Derivation* button. Clicking it opens a dedicated page showing the sub-claims that build up to that conclusion. Each of those sub-claims can itself be expanded or derived further. The argument goes as deep as it needs to \u2014 some claims resolve in a few observations, others unfold across multiple levels.\n\n### The Hierarchy\nThe hierarchy mirrors the argument's own logic: fundamental, widely shared observations sit at the bottom, and progressively higher-level conclusions sit above them. A reader who only wants the overview can read the top-level claims and still follow the logical skeleton. A reader who wants to verify can trace any conclusion back to its foundations.\n\n##> Navigating the Map\n### Breadcrumbs\n**Breadcrumbs** at the top of the page show where you are in the hierarchy. Each breadcrumb is a link \u2014 click any one to jump back to that level. The browser's back and forward buttons also work normally.\n\n### Lateral Navigation\nOn derivation pages, **navigation links** appear above and below the content showing sibling claims \u2014 previous steps, next steps, and parallel steps in the reasoning \u2014 so you can move through the argument *laterally* without having to go back up to the parent page.\n\n##> Features\nThis map is more than a static document. It includes several interactive tools designed to make the reasoning process ++engaging++ and **transparent**.\n\n###> Search\nThe search bar in the header lets you find claims anywhere in the map. Results appear grouped by their parent page, with matching text ++highlighted in gold++. Each group can be collapsed or expanded, and clicking a result takes you to that claim's location.\n\nA filter dropdown beside the search bar controls how search works:\n- **Search node contents** \u2014 includes the full internal reasoning of each claim, not just headlines. On by default.\n- **Search all pages** \u2014 searches the entire map. On by default.\n- **Search only current page** \u2014 restricts results to the page you are viewing.\n\nResults are capped at `100` for performance. If you hit the cap, a notice suggests refining your query.\n\n###> Agreement Tracking\nEvery claim has *agree/disagree* buttons. When you disagree with a claim, that claim and everything that depends on it turns ++red++ \u2014 meaning: if this claim is wrong, everything built on it is also in question. Everything before the disagreed claim turns ++green++, indicating you accept the reasoning up to that point.\n\nYou can then agree with a claim further downstream to narrow the red zone. This **pinpoints the root of your disagreement** to the space between the two marked claims \u2014 making it precise rather than vague.\n\nThis propagation works across pages. If a sub-claim deep in a derivation is marked red, its parent claim turns red too, and the effect cascades upward through the hierarchy.\n\nA *Your Positions* panel appears below the header whenever you have active votes. It lists every claim you have explicitly agreed or disagreed with, each as a link that navigates to that claim. A **Reset All** button clears everything (with a confirmation prompt). Your votes are saved in your browser and persist across sessions.\n\n###> Export\nThe export button in the header downloads the current view as a `JSON` file \u2014 either the claims on the current page (in visual layout order) or the current search results. The file uses the same format as the site's source data.\n\n###> Accessibility and Design\nA **dark/light theme toggle** in the header switches color schemes. Your preference persists across sessions.\n\nThe layout is *responsive* \u2014 parallel claims stack vertically on narrow screens, and the header collapses into a menu on mobile.\n\nThe interface is ++keyboard accessible++:\n- `Tab` to navigate between elements\n- `Enter` or `Space` to activate buttons and expand sections\n- `Escape` to close an expanded claim\n\n##> Credits and Source\nThis project was built as an exercise in structured reasoning and interactive argumentation. The source data is a single `JSON` file that defines all claims, their relationships, and their internal logic.\n\nFor questions, feedback, or to report issues, see the project [repository on GitHub](https://github.com/example/sieve-of-truth)."
+  },
+  "nodes": [
+    {
+      "id": "1",
+      "parentId": null,
+      "nextIds": [
+        "2"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "\"Truth-seeking requires a prior motivation to pursue objective reality over emotional comfort.\"",
+      "soWhat": "It **prevents** inquiry from becoming a blind rationalization of ++pre-selected++ answers.",
+      "pageIntro": "This page explores why **motivation** must come before method. Without an honest desire to know what is actually true \u2014 regardless of where the evidence leads \u2014 every subsequent step in the reasoning process risks becoming a sophisticated form of self-deception.\n\nThe nodes below build the case incrementally: first establishing the observation that we *do* possess an innate drive toward understanding, then showing how that drive gets buried under comfort and habit, and finally demonstrating that a conscious recommitment to truth-seeking is the necessary first step.\n\nKey question to keep in mind: *\"Am I willing to follow the argument wherever it leads, even if the conclusion is uncomfortable?\"*",
+      "search": "motivation purpose truth rationalization comfort bias",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "We possess a natural urge to understand life\u2019s purpose and chase real answers.",
+            "The pursuit of truth often gets buried beneath inherited assumptions and emotional comfort.",
+            "Comfort is not evidence, and familiarity is not proof."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "We must prioritize truth-seeking and logical consistency above all , favoring truth over comfort.",
+            "Without motivation for knowing our purpose, the process of finding true beliefs cannot begin."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "Rationalizing Confusion",
+              "detail": "Without motivation for following the truth, one aligns their beliefs with their feelings, preventing false beliefs from being identified.",
+              "children": [
+                {
+                  "title": "Inverted Inquiry",
+                  "detail": "Adopting a belief before establishing a genuine motivation for truth transforms honest inquiry into an exercise of justifying a pre-selected answer."
+                },
+                {
+                  "title": "Defending Falsehood",
+                  "detail": "This turns the search for truth into rationalization, making one vulnerable to defending a falsehood without ever recognizing it as such."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "Allows the process of identifying true beliefs to initiate.",
+            "Enables the identification of false beliefs by removing the filter of emotional alignment."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "The practice of abandoning reasoning when it becomes uncomfortable.",
+            "Treating comfort or familiarity as acceptable substitutes for evidence and proof."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "What reality actually is or how it works (this requires discovering observations in subsequent steps)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "Beliefs can be safely based on strong feelings, comfort, or intuition alone.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "In questions of belief, objective standards are often abandoned in favor of comfort, speculation, identity, or habit."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Aligning beliefs purely with feelings rationalizes confusion and prevents false beliefs from being identified .",
+                    "Comfort is not evidence."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "We must prioritize truth-seeking and logical consistency above all , exposing weaknesses rather than appeasing feelings."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "parentId": null,
+      "nextIds": [
+        "3"
+      ],
+      "prevIds": [
+        "1"
+      ],
+      "hasDerivation": true,
+      "claim": "Reality can be *inferred* from **experience** under `constraints`.",
+      "soWhat": "It validates careful inference while rejecting \"anything goes\" perception claims.",
+      "search": "perception reality inference skepticism bias",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Experience contains stable patterns over time.",
+            "Faculties are imperfect but corrigible.",
+            "Errors can be detected via cross-checks."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "Prefer explanations that fit stable patterns with minimal ad hoc assumptions."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            "Without stable patterns or cross-checks, 'reality' becomes subjective."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "Allows constructing 'reality' without assuming omniscient perception.",
+            "Allows proceeding to confidence rules for logic/history."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Total skepticism and nihilism.",
+            "Solipsism as a practical worldview."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "The exact ontological substance of the external world."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "Inference from experience is circular.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "We use our faculties to verify our faculties."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Error-detection is a functional feedback loop, not just a logical one."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "We accept circularity when the alternative is total nihilism."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Our senses are frequently deceived.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Optical illusions and hallucinations prove senses are entirely unreliable."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "We only know they are illusions because we possess reliable cross-checking methods."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "Corrigibility implies a baseline of reliability, not perfection."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pageIntro": "## From Experience to Reality\n\nThis section establishes how we move from raw experience \u2014 the *\"things happen in my awareness\"* of Step 1 \u2014 to justified claims about an external reality.\n\n### The Core Problem\n\nWe cannot step outside our experience to verify reality directly. So how do we get from **subjective experience** to **objective claims**? The answer: by identifying `constraints` that experience itself imposes.\n\n### What You'll Find Below\n\nEach sub-node builds one piece of the inference framework:\n- What counts as a valid inference vs. a mere assumption\n- Why *coherence* across independent observations matters\n- How to reject ++relativism++ without claiming infallibility"
+    },
+    {
+      "id": "3",
+      "parentId": null,
+      "nextIds": [
+        "4"
+      ],
+      "prevIds": [
+        "2"
+      ],
+      "hasDerivation": true,
+      "claim": "A method that can justify falsehood cannot verify truth.",
+      "soWhat": "It rejects _circular_ self-authentication and \"confidence by ignorance.\"",
+      "search": "confidence method circular proof history logic",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "A claim cannot self-authenticate.",
+            "Humans can fabricate convincing stories."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "A justification method must resist fabrication and preserve consistency."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            "Without anti-fabrication constraints, persuasion replaces knowledge."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "Allows a standard for historical reliability.",
+            "Allows coherent definition constraints for God/revelation."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Faith based purely on unverified emotion.",
+            "Circular religious epistemology (e.g. 'The book is true because the book says so')."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "Which specific religion or historical claim passes the test."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "God can authenticate Himself without external verification.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Divine revelation doesn't need flawed human methods to prove it is true."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "It assumes the claim of divine revelation is already true before testing it."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "We need a method to verify *which* competing claim of divine revelation is actually from God."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Historical proofs are always probabilistic.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "We can never have 100% absolute certainty about events in history."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Probabilistic certainty is still fundamentally distinct from blind fabrication."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The method only requires distinguishing reliably transmitted history from clear myth or forgery."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pageIntro": "## The Self-Defeat Filter\n\nThis is the negative test: before asking *which* method finds truth, we first eliminate methods that **cannot possibly** work \u2014 those that would validate falsehood as readily as truth.\n\n### Why This Matters\n\nIf a method can justify *any* conclusion, including contradictory ones, it justifies *none*. This step applies to:\n- Circular reasoning (\"X is true because X says so\")\n- Pure authority claims without external verification\n- \"Faith\" defined as belief *despite* counter-evidence\n\nThe surviving methods are the ones we carry into Step 4."
+    },
+    {
+      "id": "4",
+      "parentId": null,
+      "nextIds": [
+        "5"
+      ],
+      "prevIds": [
+        "3"
+      ],
+      "hasDerivation": true,
+      "claim": "A true religion must be coherent and reason-supported.",
+      "soWhat": "It creates testable constraints for what \"true revelation\" can look like:\n- It must be internally consistent\n- It must align with observable reality\n- It must not rely on category errors",
+      "search": "god coherence mystery contradiction religion reason",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Contradictions cannot both be true.",
+            "Category errors invalidate theology claims."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "Theology must obey coherence and category constraints."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            "If contradictions are accepted as 'mystery', verification becomes impossible."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "A working, objective definition of God for historical and logical testing.",
+            "A strict filter for examining religious claims."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Religions with inherent logical contradictions.",
+            "Theologies that rely on category errors."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "Whether such a coherent religion actually exists historically.",
+            "The specific rituals of this religion."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "Human logic cannot comprehend the Divine.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "God is infinitely greater than human reason, so divine contradictions are just mysteries."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "If logic is suspended, there is no way to tell a divine mystery from a human falsehood."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "God may transcend reason, but truth cannot logically contradict itself."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Religion is about practice, not strict logic.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "The value of religion is in community and morality, not philosophical coherence."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Practice based on a falsehood is a violation of the first premise (Truth-seeking)."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "Morality and community must be grounded in an actually true theology to be ultimately valid."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pageIntro": "## Constraints on True Religion\n\nHaving established *how* to evaluate claims (Steps 1-3), this section asks: **what would a true religion have to look like?**\n\n### The Approach\n\nRather than starting with any particular religion and asking \"is this true?\", we derive the properties a true religion *must* have \u2014 then check which candidates fit.\n\n### Key Constraints Derived Here\n\n- Internal coherence: no self-contradictions\n- Consistency with established reasoning from Steps 1-3\n- A ++verifiable++ chain of transmission\n- Claims that are *testable*, not merely asserted"
+    },
+    {
+      "id": "5",
+      "parentId": null,
+      "nextIds": [
+        "6"
+      ],
+      "prevIds": [
+        "4"
+      ],
+      "hasDerivation": true,
+      "claim": "Monotheism fits the constraints best; rivals fail or require extra authority.",
+      "soWhat": "It pushes the bottleneck to historical reliability of scripture:\n- Atheism: fails \u2014 requires \"speculation is proof\"\n  - Makes truth indistinguishable from falsehood\n- Polytheism: fails \u2014 contradicts the singular nature of reality's laws\n- Trinitarianism: conditional \u2014 requires extra textual authority\n- Monotheism: passes \u2014 aligns without extra inferences",
+      "search": "monotheism atheism polytheism trinity authority",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "God concept must match inferred constraints.",
+            "Same test applied across worldviews."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "Apply identical constraints to competing systems."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            "If the test is not applied equally, bias hides the strongest candidate."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "Focuses the remaining historical search purely on Monotheistic systems."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Polytheism (violates ultimate necessity).",
+            "Atheism (fails to ground the inferred constraints).",
+            "Pantheism (category errors of identity)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "Which specific monotheistic claim is historically valid."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "Polytheism can have a hierarchy of gods.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "A supreme God could delegate power to lesser deities, maintaining order."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "If one God is supreme and necessary, the lesser 'gods' are merely creations, making it effectively monotheism."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "True polytheism asserts multiple independent, necessary beings, which leads to logical contradictions in ultimate authority."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Atheism requires fewer assumptions.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Occam's razor favors a universe without adding a divine creator."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Atheism fails to account for the necessary grounding of stable, inferred reality and consciousness."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "A single necessary being is the most parsimonious explanation for dependent reality."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pageIntro": "## The Elimination Round\n\nWith the constraints from Step 4 in hand, this section evaluates the major worldview families: **atheism**, **polytheism**, **pantheism**, and the **monotheisms**.\n\n### How the Filter Works\n\nEach worldview is tested against the constraints. The question is not \"can a smart person believe this?\" but rather: *does it satisfy the requirements we derived independently?*\n\nThe result: monotheism survives the filter. The remaining question becomes which *specific* monotheistic tradition holds up under scrutiny \u2014 which is addressed in Steps 6-8."
+    },
+    {
+      "id": "6",
+      "parentId": null,
+      "nextIds": [
+        "7"
+      ],
+      "prevIds": [
+        "5"
+      ],
+      "hasDerivation": true,
+      "claim": "The Qur'an's [preservation](https://en.wikipedia.org/wiki/Quran) is constrained; the [New Testament](https://en.wikipedia.org/wiki/New_Testament) requires speculation.",
+      "soWhat": "It collapses \"NT is more authoritative\" as a required premise \u2014 see https://en.wikipedia.org/wiki/Biblical_authority for context.",
+      "search": "quran new testament preservation speculation chain",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Fabrication resistance is required for [authority](https://en.wikipedia.org/wiki/Religious_authority).",
+            "Unknown links cannot be filled by trust alone \u2014 compare https://en.wikipedia.org/wiki/Chain_of_custody"
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "Show where two [historical claims](https://en.wikipedia.org/wiki/Historicity) diverge under same anti-fabrication constraints."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            "Accepting [speculation](https://en.wikipedia.org/wiki/Conjecture) as authority reintroduces fabrication risk."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "Establishes the Qur'an as a historically reliable [textual baseline](https://en.wikipedia.org/wiki/Textual_criticism).",
+            "Provides an objective metric for comparing [scriptural authority](https://en.wikipedia.org/wiki/Scripture)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Blind trust in [textual transmission](https://en.wikipedia.org/wiki/Textual_criticism).",
+            "Assuming older texts are inherently more reliable without [transmission chains](https://en.wikipedia.org/wiki/Isnad)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "The ultimate [theological](https://en.wikipedia.org/wiki/Theology) implications of the preserved text."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "The [New Testament](https://en.wikipedia.org/wiki/New_Testament) has more manuscript copies.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Thousands of early [Greek manuscripts](https://en.wikipedia.org/wiki/List_of_Greek_New_Testament_manuscripts) prove the NT is highly reliable."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Quantity of late manuscripts doesn't fix a broken or undocumented initial [chain of transmission](https://en.wikipedia.org/wiki/Isnad)."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "Reliability requires an unbroken, verifiable chain back to the source \u2014 see https://en.wikipedia.org/wiki/Hadith_terminology"
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "[Oral transmission](https://en.wikipedia.org/wiki/Oral_tradition) is less reliable than written.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Human memory is faulty, making the oral preservation of the [Qur'an](https://en.wikipedia.org/wiki/Quran) suspect."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Mass, concurrent [memorization](https://en.wikipedia.org/wiki/Hifz) by thousands of independent sources acts as a systemic error-correction mechanism."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "Constrained, mass oral transmission is mathematically highly resistant to localized [fabrication](https://en.wikipedia.org/wiki/Hadith_fabrication)."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pageIntro": "## Scripture Under the Microscope\n\nThis is where the argument gets ++historical++. Steps 1-5 were largely *a priori* \u2014 logical constraints derived from first principles. Here, we examine **actual evidence**.\n\n### The Central Question\n\nBoth Islam and Christianity claim scriptural authority. But do their scriptures meet the `preservation` and `transmission` constraints from Step 4?\n\n### What the Sub-Nodes Examine\n\n- The Qur'an's oral and written transmission chain\n- The New Testament's manuscript tradition and textual variants\n- Whether \"more manuscripts\" equals \"more reliable\"\n- The role of [textual criticism](https://en.wikipedia.org/wiki/Textual_criticism) in evaluating both traditions"
+    },
+    {
+      "id": "7",
+      "parentId": null,
+      "nextIds": [
+        "8"
+      ],
+      "prevIds": [
+        "6"
+      ],
+      "hasDerivation": true,
+      "claim": "Comparative theology favors Islam as correction over Christianity as corruption.",
+      "soWhat": "It checks the conclusion using the same constraints, not a new standard.",
+      "search": "christianity islam corruption correction coherence",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Theology must remain coherent without ad hoc escapes."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "Apply coherence/correspondence constraints to theological structures."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            "Without coherence pressure, any theological patch can be defended indefinitely."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "Resolves deep theological disputes using strict coherence parameters."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Theologies that require ad-hoc logical exceptions.",
+            "The concept of theological 'mystery' to excuse contradiction."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "Minor secondary doctrines that don't violate core coherence."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "The Trinity is a complex coherence, not a contradiction.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "The Trinity defines God as one in essence but three in persons, avoiding strict logical contradiction."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The application of attributes to the persons inevitably leads to category errors regarding necessity and dependence."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "Applying strict identity logic reveals the formulation acts as a contradiction masked by semantic redefinition."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Islam's strict monotheism is too distant.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "A God without incarnation cannot truly understand or relate to human suffering."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Confuses ontological separation with a lack of divine knowledge or compassion."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "An omniscient creator understands its creation intimately without needing to physically become part of it."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pageIntro": "## Correction vs. Corruption\n\nThis section performs the **comparative analysis**: given that both Islam and Christianity claim to be continuations of Abrahamic monotheism, which narrative is more internally consistent?\n\n### Two Competing Stories\n\nChristianity claims that God's original message was *fulfilled* and *transformed* through Christ. Islam claims the original message was *preserved* in principle but *corrupted* in transmission, and the Qur'an restores it.\n\nThese are testable claims \u2014 and the sub-nodes below trace the logic of each.\n\n### The Standard\n\nCritically, this section applies the **same constraints** derived in Steps 1-4. No new standards are introduced."
+    },
+    {
+      "id": "8",
+      "parentId": null,
+      "nextIds": [],
+      "prevIds": [
+        "7"
+      ],
+      "hasDerivation": false,
+      "claim": "Islam survives the full filter as the best constrained candidate.",
+      "soWhat": "It turns 'belief' into a traceable structure, not a slogan.",
+      "search": "results conclusion islam survives filter",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Prior constraints hold without contradiction."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            "Select the candidate that satisfies coherence + correspondence + constrained authority best."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            "If output is ignored, the previous constraints were applied in vain."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            "A rational, highly traceable foundation for Islamic belief.",
+            "A robust framework for evaluating future claims."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Agnosticism regarding the ultimate truth of Islam.",
+            "Treating all religious claims as equally valid or equally flawed."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "Personal spiritual journey outcomes.",
+            "Eschatological details beyond textual scope."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "The filter was biased from the start.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "The logical constraints were specifically chosen to ensure Islam would be the only survivor."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The initial constraints (avoiding contradiction, relying on evidence, anti-fabrication) are universally accepted rules of basic reasoning."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "If basic rationality inherently favors one system, that is evidence of the system's truth, not of a rigged test."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Rationality isn't everything in religion.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "A perfectly rational religion might still lack spiritual depth or transformative power."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "This maps the foundation of truth; it does not claim to encapsulate the entire lived spiritual experience."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "Spiritual depth must be built on a foundation of truth; rationality validates the foundation so the spiritual practice is meaningful."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pageIntro": "## The Final Verdict\n\nThis is the synthesis. Every prior step feeds into this conclusion \u2014 and if any prior step fails, **this one falls with it**.\n\n### What \"Best Constrained Candidate\" Means\n\nThis is *not* a claim of mathematical proof. It is a claim that, given the constraints derived in Steps 1-5 and the evidence examined in Steps 6-7, Islam survives the full filter while alternatives do not.\n\n### How to Challenge This\n\nThe structure is designed to be attacked at any node. Disagree with Step 3? The argument breaks there. Think the textual analysis in Step 6 is wrong? Flag it. The agreement buttons exist precisely for this purpose.\n\nThe goal is `traceable belief` \u2014 not blind conviction."
+    },
+    {
+      "id": "1.1",
+      "parentId": "1",
+      "nextIds": [
+        "1.3"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Phenomenological Grounding: \"distinct things occur in my awareness.\"",
+      "soWhat": "Establishes the bedrock observation \u2014 that something is happening and it's not uniform.",
+      "pageIntro": "This is the **absolute starting point** of the entire argument \u2014 the one claim that cannot be doubted without simultaneously proving itself true.\n\nBefore we can talk about reality, knowledge, or truth, we need something that is *undeniably given*. That something is: **distinct things occur in my awareness**. Not \"the external world exists\" (that's a later conclusion), not \"my senses are reliable\" (also later), but simply: *something is happening, and it is not all the same*.\n\nThe three steps below formalize this in a way that makes the claim precise enough to build on.",
+      "search": "phenomenology awareness phenomena distinct qualities associations"
+    },
+    {
+      "id": "1.2",
+      "parentId": "1",
+      "nextIds": [
+        "1.3"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Epistemological Grounding: physical, emotional, mental, willful, and temporal phenomena occur.",
+      "soWhat": "Categorizes the types of phenomena into irreducible kinds, building the vocabulary for everything that follows.",
+      "search": "epistemology physical emotional mental willful temporal phenomena types information"
+    },
+    {
+      "id": "1.3",
+      "parentId": "1",
+      "nextIds": [
+        "1.4"
+      ],
+      "prevIds": [
+        "1.1",
+        "1.2"
+      ],
+      "hasDerivation": true,
+      "claim": "Ontological Grounding: \"reality\" is what occurs independently of will.",
+      "soWhat": "Separates what is real from what is wished \u2014 defining reality as what resists will.",
+      "search": "ontology reality will independence limits objects"
+    },
+    {
+      "id": "1.4",
+      "parentId": "1",
+      "nextIds": [
+        "1.5"
+      ],
+      "prevIds": [
+        "1.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Logical Grounding: \"truth\" is when a claim corresponds with reality, and \"falsehood\" is when it doesn't.",
+      "soWhat": "Defines the full logical apparatus \u2014 claims, questions, knowledge, inference, and the meaning of truth and falsehood.",
+      "search": "logic truth falsehood claim correspondence knowledge question inference deduction"
+    },
+    {
+      "id": "1.5",
+      "parentId": "1",
+      "nextIds": [
+        "1.6"
+      ],
+      "prevIds": [
+        "1.4"
+      ],
+      "hasDerivation": false,
+      "claim": "Reasoning is the way of checking whether a claim is true or not.",
+      "soWhat": "Establishes reasoning as the process that operates on truth and falsehood \u2014 dependent on them, not the other way around.",
+      "search": "reasoning process checking claims verification"
+    },
+    {
+      "id": "1.6",
+      "parentId": "1",
+      "nextIds": [
+        "1.7"
+      ],
+      "prevIds": [
+        "1.5"
+      ],
+      "hasDerivation": false,
+      "claim": "Wanting something to be true doesn't make it true.",
+      "soWhat": "Severs the link between desire and reality \u2014 will cannot override correspondence.",
+      "search": "want bias will truth independence desire"
+    },
+    {
+      "id": "1.7",
+      "parentId": "1",
+      "nextIds": [
+        "1.8"
+      ],
+      "prevIds": [
+        "1.6"
+      ],
+      "hasDerivation": false,
+      "claim": "Any method of reasoning that can equally justify falsehood can't distinguish it from truth.",
+      "soWhat": "The meta-constraint on reasoning \u2014 if a method works equally well for false claims, it's useless for finding truth.",
+      "search": "method reasoning falsehood filter anti-fabrication"
+    },
+    {
+      "id": "1.8",
+      "parentId": "1",
+      "nextIds": [],
+      "prevIds": [
+        "1.7"
+      ],
+      "hasDerivation": false,
+      "claim": "\"I want to know what is actually true \u2014 not what I wish were true.\"",
+      "soWhat": "The personal commitment that makes the entire pursuit meaningful \u2014 submitting to reality's verdict rather than preference.",
+      "search": "commitment contract seeker truth honesty motivation"
+    },
+    {
+      "id": "2.1",
+      "parentId": "2",
+      "nextIds": [
+        "2.2",
+        "2.3",
+        "2.4"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Root of the DAG testing ground.",
+      "soWhat": "This node splits into three parallel parallel derivations."
+    },
+    {
+      "id": "2.2",
+      "parentId": "2",
+      "nextIds": [
+        "2.5"
+      ],
+      "prevIds": [
+        "2.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Parallel Branch A.",
+      "soWhat": "Merges into Node 2.5."
+    },
+    {
+      "id": "2.3",
+      "parentId": "2",
+      "nextIds": [
+        "2.5"
+      ],
+      "prevIds": [
+        "2.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Parallel Branch B.",
+      "soWhat": "Merges into Node 2.5."
+    },
+    {
+      "id": "2.4",
+      "parentId": "2",
+      "nextIds": [
+        "2.5"
+      ],
+      "prevIds": [
+        "2.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Parallel Branch C.",
+      "soWhat": "Merges into Node 2.5."
+    },
+    {
+      "id": "2.5",
+      "parentId": "2",
+      "nextIds": [
+        "2.6",
+        "2.7"
+      ],
+      "prevIds": [
+        "2.2",
+        "2.3",
+        "2.4"
+      ],
+      "hasDerivation": true,
+      "claim": "Convergence Point 1.",
+      "soWhat": "Catches the three branches, then immediately splits into two."
+    },
+    {
+      "id": "2.6",
+      "parentId": "2",
+      "nextIds": [
+        "2.9"
+      ],
+      "prevIds": [
+        "2.5"
+      ],
+      "hasDerivation": true,
+      "claim": "Upper Path of Split 2.",
+      "soWhat": "This node will need to visually span two rows to wait for Node 2.8 before merging."
+    },
+    {
+      "id": "2.7",
+      "parentId": "2",
+      "nextIds": [
+        "2.8"
+      ],
+      "prevIds": [
+        "2.5"
+      ],
+      "hasDerivation": true,
+      "claim": "Lower Path of Split 2.",
+      "soWhat": "Proceeds to a subsequent step before merging."
+    },
+    {
+      "id": "2.8",
+      "parentId": "2",
+      "nextIds": [
+        "2.9"
+      ],
+      "prevIds": [
+        "2.7"
+      ],
+      "hasDerivation": true,
+      "claim": "Intermediate Step.",
+      "soWhat": "Delays the merge so Node 2.6 and 2.8 can align horizontally."
+    },
+    {
+      "id": "2.9",
+      "parentId": "2",
+      "nextIds": [
+        "2.10"
+      ],
+      "prevIds": [
+        "2.6",
+        "2.8"
+      ],
+      "hasDerivation": true,
+      "claim": "Convergence Point 2.",
+      "soWhat": "Brings the staggered branches back together."
+    },
+    {
+      "id": "2.10",
+      "parentId": "2",
+      "nextIds": [],
+      "prevIds": [
+        "2.9"
+      ],
+      "hasDerivation": false,
+      "claim": "Final Node.",
+      "soWhat": "Returns to the standard linear flow to close out the branch."
+    },
+    {
+      "id": "3.1",
+      "parentId": "3",
+      "nextIds": [
+        "3.2",
+        "3.3"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Establish Test Planning and Control.",
+      "soWhat": "Defines the objectives and scope of the testing phase."
+    },
+    {
+      "id": "3.2",
+      "parentId": "3",
+      "nextIds": [
+        "3.4",
+        "3.5",
+        "3.6"
+      ],
+      "prevIds": [
+        "3.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Perform Test Analysis.",
+      "soWhat": "Identifies what needs to be tested based on the requirements."
+    },
+    {
+      "id": "3.3",
+      "parentId": "3",
+      "nextIds": [
+        "3.4",
+        "3.5",
+        "3.6"
+      ],
+      "prevIds": [
+        "3.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Develop Test Design.",
+      "soWhat": "Transforms test conditions into concrete test cases."
+    },
+    {
+      "id": "3.4",
+      "parentId": "3",
+      "nextIds": [
+        "3.7",
+        "3.8"
+      ],
+      "prevIds": [
+        "3.2",
+        "3.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Execute Unit Testing.",
+      "soWhat": "Validates individual software components in isolation."
+    },
+    {
+      "id": "3.5",
+      "parentId": "3",
+      "nextIds": [
+        "3.7",
+        "3.8"
+      ],
+      "prevIds": [
+        "3.2",
+        "3.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Execute Integration Testing.",
+      "soWhat": "Verifies the interfaces between interacting components."
+    },
+    {
+      "id": "3.6",
+      "parentId": "3",
+      "nextIds": [
+        "3.7",
+        "3.8"
+      ],
+      "prevIds": [
+        "3.2",
+        "3.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Execute System Testing.",
+      "soWhat": "Evaluates the entire system's compliance with specified requirements."
+    },
+    {
+      "id": "3.7",
+      "parentId": "3",
+      "nextIds": [
+        "3.9"
+      ],
+      "prevIds": [
+        "3.4",
+        "3.5",
+        "3.6"
+      ],
+      "hasDerivation": true,
+      "claim": "Evaluate Exit Criteria.",
+      "soWhat": "Checks if the testing logs match the planned coverage objectives."
+    },
+    {
+      "id": "3.8",
+      "parentId": "3",
+      "nextIds": [
+        "3.9"
+      ],
+      "prevIds": [
+        "3.4",
+        "3.5",
+        "3.6"
+      ],
+      "hasDerivation": true,
+      "claim": "Compile Incident Reports.",
+      "soWhat": "Documents discrepancies between expected and actual outcomes."
+    },
+    {
+      "id": "3.9",
+      "parentId": "3",
+      "nextIds": [
+        "3.10",
+        "3.11"
+      ],
+      "prevIds": [
+        "3.7",
+        "3.8"
+      ],
+      "hasDerivation": true,
+      "claim": "Conduct Test Closure Activities.",
+      "soWhat": "Consolidates data from completed test activities to finalize the cycle."
+    },
+    {
+      "id": "3.10",
+      "parentId": "3",
+      "nextIds": [],
+      "prevIds": [
+        "3.9"
+      ],
+      "hasDerivation": true,
+      "claim": "Final QA Sign-off.",
+      "soWhat": "Releases the software component to the next stage of deployment."
+    },
+    {
+      "id": "3.11",
+      "parentId": "3",
+      "nextIds": [],
+      "prevIds": [
+        "3.9"
+      ],
+      "hasDerivation": false,
+      "claim": "Archive Testware and Handover.",
+      "soWhat": "Ensures test environments, scripts, and logs are preserved for future maintenance."
+    },
+    {
+      "id": "4.1",
+      "parentId": "4",
+      "nextIds": [
+        "4.2",
+        "4.3",
+        "4.4"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Establish empirical baselines for inquiry.",
+      "soWhat": "Grounds the evaluation process in observable reality rather than assumption."
+    },
+    {
+      "id": "4.2",
+      "parentId": "4",
+      "nextIds": [
+        "4.5"
+      ],
+      "prevIds": [
+        "4.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Apply logical filters.",
+      "soWhat": "Subjects the empirical data to strict laws of identity and non-contradiction."
+    },
+    {
+      "id": "4.3",
+      "parentId": "4",
+      "nextIds": [
+        "4.7"
+      ],
+      "prevIds": [
+        "4.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Identify stable patterns of transmission.",
+      "soWhat": "Acts as the unbroken middle lane, carrying direct historical continuity forward."
+    },
+    {
+      "id": "4.4",
+      "parentId": "4",
+      "nextIds": [
+        "4.6"
+      ],
+      "prevIds": [
+        "4.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Test for internal coherence.",
+      "soWhat": "Checks if the belief system's theology agrees with its own foundational texts."
+    },
+    {
+      "id": "4.5",
+      "parentId": "4",
+      "nextIds": [
+        "4.7"
+      ],
+      "prevIds": [
+        "4.2"
+      ],
+      "hasDerivation": true,
+      "claim": "Filter out inherent contradictions.",
+      "soWhat": "Removes frameworks that require logical exceptions to function."
+    },
+    {
+      "id": "4.6",
+      "parentId": "4",
+      "nextIds": [
+        "4.7"
+      ],
+      "prevIds": [
+        "4.4"
+      ],
+      "hasDerivation": true,
+      "claim": "Eliminate category errors.",
+      "soWhat": "Discards systems that confuse the necessary with the dependent."
+    },
+    {
+      "id": "4.7",
+      "parentId": "4",
+      "nextIds": [],
+      "prevIds": [
+        "4.5",
+        "4.3",
+        "4.6"
+      ],
+      "hasDerivation": false,
+      "claim": "Synthesize validated beliefs.",
+      "soWhat": "Merges the filtered logic, stable patterns, and coherent categories into a final conclusion."
+    },
+    {
+      "id": "5.1",
+      "parentId": "5",
+      "nextIds": [
+        "5.2",
+        "5.3"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Receive incoming web request.",
+      "soWhat": "The entry point for all client traffic at the edge network."
+    },
+    {
+      "id": "5.2",
+      "parentId": "5",
+      "nextIds": [
+        "5.11"
+      ],
+      "prevIds": [
+        "5.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Serve from Edge Cache.",
+      "soWhat": "Bypasses backend processing entirely for previously cached responses."
+    },
+    {
+      "id": "5.3",
+      "parentId": "5",
+      "nextIds": [
+        "5.4",
+        "5.5"
+      ],
+      "prevIds": [
+        "5.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Route to Application Load Balancer.",
+      "soWhat": "Directs un-cached traffic deeper into the infrastructure."
+    },
+    {
+      "id": "5.4",
+      "parentId": "5",
+      "nextIds": [
+        "5.11"
+      ],
+      "prevIds": [
+        "5.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Serve from CDN Storage.",
+      "soWhat": "Handles static assets (images, CSS) without hitting the application code."
+    },
+    {
+      "id": "5.5",
+      "parentId": "5",
+      "nextIds": [
+        "5.6",
+        "5.7"
+      ],
+      "prevIds": [
+        "5.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Pass to Application Server.",
+      "soWhat": "Initializes dynamic processing for the user's specific request."
+    },
+    {
+      "id": "5.6",
+      "parentId": "5",
+      "nextIds": [
+        "5.11"
+      ],
+      "prevIds": [
+        "5.5"
+      ],
+      "hasDerivation": true,
+      "claim": "Reject with 401 Unauthorized.",
+      "soWhat": "Short-circuits the request if authentication tokens are missing or invalid."
+    },
+    {
+      "id": "5.7",
+      "parentId": "5",
+      "nextIds": [
+        "5.8",
+        "5.9"
+      ],
+      "prevIds": [
+        "5.5"
+      ],
+      "hasDerivation": true,
+      "claim": "Process Business Logic.",
+      "soWhat": "Executes the core application code for authenticated users."
+    },
+    {
+      "id": "5.8",
+      "parentId": "5",
+      "nextIds": [
+        "5.11"
+      ],
+      "prevIds": [
+        "5.7"
+      ],
+      "hasDerivation": true,
+      "claim": "Fetch from Read Replica.",
+      "soWhat": "Retrieves data from a read-only database node to distribute load."
+    },
+    {
+      "id": "5.9",
+      "parentId": "5",
+      "nextIds": [
+        "5.10"
+      ],
+      "prevIds": [
+        "5.7"
+      ],
+      "hasDerivation": true,
+      "claim": "Execute Write Transaction.",
+      "soWhat": "Prepares a database mutation for state-changing requests."
+    },
+    {
+      "id": "5.10",
+      "parentId": "5",
+      "nextIds": [
+        "5.11"
+      ],
+      "prevIds": [
+        "5.9"
+      ],
+      "hasDerivation": true,
+      "claim": "Commit to Primary Database.",
+      "soWhat": "Safely stores the new data with strict ACID guarantees."
+    },
+    {
+      "id": "5.11",
+      "parentId": "5",
+      "nextIds": [],
+      "prevIds": [
+        "5.2",
+        "5.4",
+        "5.6",
+        "5.8",
+        "5.10"
+      ],
+      "hasDerivation": false,
+      "claim": "Return HTTP Response to Client.",
+      "soWhat": "The final stage where all execution paths consolidate and exit."
+    },
+    {
+      "id": "6.1",
+      "parentId": "6",
+      "nextIds": [
+        "6.2",
+        "6.3"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Initialize Fragment Data.",
+      "soWhat": "Establishes the base UV coordinates and normal vectors for the pixel."
+    },
+    {
+      "id": "6.2",
+      "parentId": "6",
+      "nextIds": [
+        "6.4",
+        "6.5"
+      ],
+      "prevIds": [
+        "6.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Procedural Color Generation.",
+      "soWhat": "Calculates the intrinsic pigment and texture of the surface material."
+    },
+    {
+      "id": "6.3",
+      "parentId": "6",
+      "nextIds": [
+        "6.6",
+        "6.7"
+      ],
+      "prevIds": [
+        "6.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Illumination Mathematics.",
+      "soWhat": "Determines how external light sources interact with the surface geometry."
+    },
+    {
+      "id": "6.4",
+      "parentId": "6",
+      "nextIds": [
+        "6.8"
+      ],
+      "prevIds": [
+        "6.2"
+      ],
+      "hasDerivation": true,
+      "claim": "Apply Domain Warping.",
+      "soWhat": "Distorts the UV coordinate space to create organic, swirling patterns."
+    },
+    {
+      "id": "6.5",
+      "parentId": "6",
+      "nextIds": [
+        "6.8"
+      ],
+      "prevIds": [
+        "6.2"
+      ],
+      "hasDerivation": true,
+      "claim": "Evaluate fBm Noise.",
+      "soWhat": "Layers multiple octaves of high-frequency noise for granular detail."
+    },
+    {
+      "id": "6.6",
+      "parentId": "6",
+      "nextIds": [
+        "6.8"
+      ],
+      "prevIds": [
+        "6.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Calculate Diffuse Reflection.",
+      "soWhat": "Computes the Lambertian scattering based on the incident light angle."
+    },
+    {
+      "id": "6.7",
+      "parentId": "6",
+      "nextIds": [
+        "6.8"
+      ],
+      "prevIds": [
+        "6.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Calculate Specular Highlights.",
+      "soWhat": "Adds shiny, view-dependent reflections using the Blinn-Phong model."
+    },
+    {
+      "id": "6.8",
+      "parentId": "6",
+      "nextIds": [],
+      "prevIds": [
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.7"
+      ],
+      "hasDerivation": false,
+      "claim": "Composite Final Fragment.",
+      "soWhat": "Multiplies the color channels with the illumination data for the final output."
+    },
+    {
+      "id": "7.1",
+      "parentId": "7",
+      "nextIds": [
+        "7.2",
+        "7.10"
+      ],
+      "prevIds": [],
+      "hasDerivation": true,
+      "claim": "Initialize Deployment Action.",
+      "soWhat": "Kicks off the async build pipeline for the web environment."
+    },
+    {
+      "id": "7.2",
+      "parentId": "7",
+      "nextIds": [
+        "7.3",
+        "7.9"
+      ],
+      "prevIds": [
+        "7.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Provision Build Environment.",
+      "soWhat": "Sets up the container and installs required dependencies."
+    },
+    {
+      "id": "7.3",
+      "parentId": "7",
+      "nextIds": [
+        "7.4",
+        "7.8"
+      ],
+      "prevIds": [
+        "7.2"
+      ],
+      "hasDerivation": true,
+      "claim": "Build Particle System.",
+      "soWhat": "Compiles the core application logic and real-time visual effects."
+    },
+    {
+      "id": "7.4",
+      "parentId": "7",
+      "nextIds": [
+        "7.5",
+        "7.7"
+      ],
+      "prevIds": [
+        "7.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Execute Asset Pipeline.",
+      "soWhat": "Processes raw static files into optimized web-ready formats."
+    },
+    {
+      "id": "7.5",
+      "parentId": "7",
+      "nextIds": [
+        "7.6"
+      ],
+      "prevIds": [
+        "7.4"
+      ],
+      "hasDerivation": true,
+      "claim": "Process Textures.",
+      "soWhat": "Reads high-resolution image files used for the web graphics."
+    },
+    {
+      "id": "7.6",
+      "parentId": "7",
+      "nextIds": [
+        "7.11"
+      ],
+      "prevIds": [
+        "7.5"
+      ],
+      "hasDerivation": true,
+      "claim": "Generate WebP Variants.",
+      "soWhat": "Compresses the textures into modern, highly optimized formats."
+    },
+    {
+      "id": "7.7",
+      "parentId": "7",
+      "nextIds": [
+        "7.11"
+      ],
+      "prevIds": [
+        "7.4"
+      ],
+      "hasDerivation": true,
+      "claim": "Minify JavaScript.",
+      "soWhat": "Strips out whitespace and obfuscates the client-side code to reduce payload size."
+    },
+    {
+      "id": "7.8",
+      "parentId": "7",
+      "nextIds": [
+        "7.11"
+      ],
+      "prevIds": [
+        "7.3"
+      ],
+      "hasDerivation": true,
+      "claim": "Generate Source Maps.",
+      "soWhat": "Creates mappings to allow debugging of the minified code in production."
+    },
+    {
+      "id": "7.9",
+      "parentId": "7",
+      "nextIds": [
+        "7.11"
+      ],
+      "prevIds": [
+        "7.2"
+      ],
+      "hasDerivation": true,
+      "claim": "Cache Node Modules.",
+      "soWhat": "Saves the dependency tree to speed up future pipeline executions."
+    },
+    {
+      "id": "7.10",
+      "parentId": "7",
+      "nextIds": [
+        "7.11"
+      ],
+      "prevIds": [
+        "7.1"
+      ],
+      "hasDerivation": true,
+      "claim": "Dispatch Webhook Notification.",
+      "soWhat": "Fires an alert to monitoring channels that a build has started."
+    },
+    {
+      "id": "7.11",
+      "parentId": "7",
+      "nextIds": [],
+      "prevIds": [
+        "7.6",
+        "7.7",
+        "7.8",
+        "7.9",
+        "7.10"
+      ],
+      "hasDerivation": false,
+      "claim": "Finalize Live Release.",
+      "soWhat": "Gathers all async artifacts, publishes them to the CDN, and completes the deployment."
+    },
+    {
+      "id": "1.1.3",
+      "parentId": "1.1",
+      "nextIds": [],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "Execute step three of the linear sequence.",
+      "soWhat": "Ensures the midpoint processing is completed."
+    },
+    {
+      "id": "1.1.1",
+      "parentId": "1.1",
+      "nextIds": [],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 1] Initialize the linear test sequence.",
+      "soWhat": "Starts the straightforward 1-to-5 procedural flow."
+    },
+    {
+      "id": "1.1.2",
+      "parentId": "1.1",
+      "nextIds": [],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "Execute step two of the linear sequence.",
+      "soWhat": "Passes the initial data down the chain."
+    },
+    {
+      "id": "1.2.11",
+      "parentId": "1.2",
+      "nextIds": [],
+      "prevIds": [
+        "1.2.9"
+      ],
+      "hasDerivation": false,
+      "claim": "Archive Testware and Handover.",
+      "soWhat": "Ensures test environments, scripts, and logs are preserved for future maintenance."
+    },
+    {
+      "id": "1.2.2",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.4",
+        "1.2.5",
+        "1.2.6"
+      ],
+      "prevIds": [
+        "1.2.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Perform Test Analysis.",
+      "soWhat": "Identifies what needs to be tested based on the requirements."
+    },
+    {
+      "id": "1.2.7",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.9"
+      ],
+      "prevIds": [
+        "1.2.4",
+        "1.2.5",
+        "1.2.6"
+      ],
+      "hasDerivation": false,
+      "claim": "Evaluate Exit Criteria.",
+      "soWhat": "Checks if the testing logs match the planned coverage objectives."
+    },
+    {
+      "id": "1.2.1",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.2",
+        "1.2.3"
+      ],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 3] Establish Test Planning and Control.",
+      "soWhat": "Defines the objectives and scope of the testing phase."
+    },
+    {
+      "id": "1.2.9",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.10",
+        "1.2.11"
+      ],
+      "prevIds": [
+        "1.2.7",
+        "1.2.8"
+      ],
+      "hasDerivation": false,
+      "claim": "Conduct Test Closure Activities.",
+      "soWhat": "Consolidates data from completed test activities to finalize the cycle."
+    },
+    {
+      "id": "1.2.4",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.7",
+        "1.2.8"
+      ],
+      "prevIds": [
+        "1.2.2",
+        "1.2.3"
+      ],
+      "hasDerivation": false,
+      "claim": "Execute Unit Testing.",
+      "soWhat": "Validates individual software components in isolation."
+    },
+    {
+      "id": "1.2.8",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.9"
+      ],
+      "prevIds": [
+        "1.2.4",
+        "1.2.5",
+        "1.2.6"
+      ],
+      "hasDerivation": false,
+      "claim": "Compile Incident Reports.",
+      "soWhat": "Documents discrepancies between expected and actual outcomes."
+    },
+    {
+      "id": "1.2.3",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.4",
+        "1.2.5",
+        "1.2.6"
+      ],
+      "prevIds": [
+        "1.2.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Develop Test Design.",
+      "soWhat": "Transforms test conditions into concrete test cases."
+    },
+    {
+      "id": "1.2.10",
+      "parentId": "1.2",
+      "nextIds": [],
+      "prevIds": [
+        "1.2.9"
+      ],
+      "hasDerivation": false,
+      "claim": "Final QA Sign-off.",
+      "soWhat": "Releases the software component to the next stage of deployment."
+    },
+    {
+      "id": "1.2.5",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.7",
+        "1.2.8"
+      ],
+      "prevIds": [
+        "1.2.2",
+        "1.2.3"
+      ],
+      "hasDerivation": false,
+      "claim": "Execute Integration Testing.",
+      "soWhat": "Verifies the interfaces between interacting components."
+    },
+    {
+      "id": "1.2.6",
+      "parentId": "1.2",
+      "nextIds": [
+        "1.2.7",
+        "1.2.8"
+      ],
+      "prevIds": [
+        "1.2.2",
+        "1.2.3"
+      ],
+      "hasDerivation": false,
+      "claim": "Execute System Testing.",
+      "soWhat": "Evaluates the entire system's compliance with specified requirements."
+    },
+    {
+      "id": "1.3.5",
+      "parentId": "1.3",
+      "nextIds": [
+        "1.3.7"
+      ],
+      "prevIds": [
+        "1.3.2"
+      ],
+      "hasDerivation": false,
+      "claim": "Filter out inherent contradictions.",
+      "soWhat": "Removes frameworks that require logical exceptions to function."
+    },
+    {
+      "id": "1.3.2",
+      "parentId": "1.3",
+      "nextIds": [
+        "1.3.5"
+      ],
+      "prevIds": [
+        "1.3.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Apply logical filters.",
+      "soWhat": "Subjects the empirical data to strict laws of identity and non-contradiction."
+    },
+    {
+      "id": "1.3.7",
+      "parentId": "1.3",
+      "nextIds": [],
+      "prevIds": [
+        "1.3.5",
+        "1.3.3",
+        "1.3.6"
+      ],
+      "hasDerivation": false,
+      "claim": "Synthesize validated beliefs.",
+      "soWhat": "Merges the filtered logic, stable patterns, and coherent categories into a final conclusion."
+    },
+    {
+      "id": "1.3.1",
+      "parentId": "1.3",
+      "nextIds": [
+        "1.3.2",
+        "1.3.3",
+        "1.3.4"
+      ],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 4] Establish empirical baselines for inquiry.",
+      "soWhat": "Grounds the evaluation process in observable reality rather than assumption."
+    },
+    {
+      "id": "1.3.4",
+      "parentId": "1.3",
+      "nextIds": [
+        "1.3.6"
+      ],
+      "prevIds": [
+        "1.3.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Test for internal coherence.",
+      "soWhat": "Checks if the belief system's theology agrees with its own foundational texts."
+    },
+    {
+      "id": "1.3.6",
+      "parentId": "1.3",
+      "nextIds": [
+        "1.3.7"
+      ],
+      "prevIds": [
+        "1.3.4"
+      ],
+      "hasDerivation": false,
+      "claim": "Eliminate category errors.",
+      "soWhat": "Discards systems that confuse the necessary with the dependent."
+    },
+    {
+      "id": "1.3.3",
+      "parentId": "1.3",
+      "nextIds": [
+        "1.3.7"
+      ],
+      "prevIds": [
+        "1.3.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Identify stable patterns of transmission.",
+      "soWhat": "Acts as the unbroken middle lane, carrying direct historical continuity forward."
+    },
+    {
+      "id": "1.4.8",
+      "parentId": "1.4",
+      "nextIds": [],
+      "prevIds": [
+        "1.4.4",
+        "1.4.5",
+        "1.4.6",
+        "1.4.7"
+      ],
+      "hasDerivation": false,
+      "claim": "Composite Final Fragment.",
+      "soWhat": "Multiplies the color channels with the illumination data for the final output."
+    },
+    {
+      "id": "1.4.4",
+      "parentId": "1.4",
+      "nextIds": [
+        "1.4.8"
+      ],
+      "prevIds": [
+        "1.4.2"
+      ],
+      "hasDerivation": false,
+      "claim": "Apply Domain Warping.",
+      "soWhat": "Distorts the UV coordinate space to create organic, swirling patterns."
+    },
+    {
+      "id": "1.4.1",
+      "parentId": "1.4",
+      "nextIds": [
+        "1.4.2",
+        "1.4.3"
+      ],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 6] Initialize Fragment Data.",
+      "soWhat": "Establishes the base UV coordinates and normal vectors for the pixel."
+    },
+    {
+      "id": "1.4.6",
+      "parentId": "1.4",
+      "nextIds": [
+        "1.4.8"
+      ],
+      "prevIds": [
+        "1.4.3"
+      ],
+      "hasDerivation": false,
+      "claim": "Calculate Diffuse Reflection.",
+      "soWhat": "Computes the Lambertian scattering based on the incident light angle."
+    },
+    {
+      "id": "1.4.2",
+      "parentId": "1.4",
+      "nextIds": [
+        "1.4.4",
+        "1.4.5"
+      ],
+      "prevIds": [
+        "1.4.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Procedural Color Generation.",
+      "soWhat": "Calculates the intrinsic pigment and texture of the surface material."
+    },
+    {
+      "id": "1.4.7",
+      "parentId": "1.4",
+      "nextIds": [
+        "1.4.8"
+      ],
+      "prevIds": [
+        "1.4.3"
+      ],
+      "hasDerivation": false,
+      "claim": "Calculate Specular Highlights.",
+      "soWhat": "Adds shiny, view-dependent reflections using the Blinn-Phong model."
+    },
+    {
+      "id": "1.4.3",
+      "parentId": "1.4",
+      "nextIds": [
+        "1.4.6",
+        "1.4.7"
+      ],
+      "prevIds": [
+        "1.4.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Illumination Mathematics.",
+      "soWhat": "Determines how external light sources interact with the surface geometry."
+    },
+    {
+      "id": "1.4.5",
+      "parentId": "1.4",
+      "nextIds": [
+        "1.4.8"
+      ],
+      "prevIds": [
+        "1.4.2"
+      ],
+      "hasDerivation": false,
+      "claim": "Evaluate fBm Noise.",
+      "soWhat": "Layers multiple octaves of high-frequency noise for granular detail."
+    },
+    {
+      "id": "1.5.10",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.11"
+      ],
+      "prevIds": [
+        "1.5.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Dispatch Webhook Notification.",
+      "soWhat": "Fires an alert to monitoring channels that a build has started."
+    },
+    {
+      "id": "1.5.3",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.4",
+        "1.5.8"
+      ],
+      "prevIds": [
+        "1.5.2"
+      ],
+      "hasDerivation": false,
+      "claim": "Build Particle System.",
+      "soWhat": "Compiles the core application logic and real-time visual effects."
+    },
+    {
+      "id": "1.5.7",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.11"
+      ],
+      "prevIds": [
+        "1.5.4"
+      ],
+      "hasDerivation": false,
+      "claim": "Minify JavaScript.",
+      "soWhat": "Strips out whitespace and obfuscates the client-side code to reduce payload size."
+    },
+    {
+      "id": "1.5.1",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.2",
+        "1.5.10"
+      ],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[Copied from Node 7] Initialize Deployment Action.",
+      "soWhat": "Kicks off the async build pipeline for the web environment."
+    },
+    {
+      "id": "1.5.9",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.11"
+      ],
+      "prevIds": [
+        "1.5.2"
+      ],
+      "hasDerivation": false,
+      "claim": "Cache Node Modules.",
+      "soWhat": "Saves the dependency tree to speed up future pipeline executions."
+    },
+    {
+      "id": "1.5.5",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.6"
+      ],
+      "prevIds": [
+        "1.5.4"
+      ],
+      "hasDerivation": false,
+      "claim": "Process Textures.",
+      "soWhat": "Reads high-resolution image files used for the web graphics."
+    },
+    {
+      "id": "1.5.11",
+      "parentId": "1.5",
+      "nextIds": [],
+      "prevIds": [
+        "1.5.6",
+        "1.5.7",
+        "1.5.8",
+        "1.5.9",
+        "1.5.10"
+      ],
+      "hasDerivation": false,
+      "claim": "Finalize Live Release.",
+      "soWhat": "Gathers all async artifacts, publishes them to the CDN, and completes the deployment."
+    },
+    {
+      "id": "1.5.2",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.3",
+        "1.5.9"
+      ],
+      "prevIds": [
+        "1.5.1"
+      ],
+      "hasDerivation": false,
+      "claim": "Provision Build Environment.",
+      "soWhat": "Sets up the container and installs required dependencies."
+    },
+    {
+      "id": "1.5.8",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.11"
+      ],
+      "prevIds": [
+        "1.5.3"
+      ],
+      "hasDerivation": false,
+      "claim": "Generate Source Maps.",
+      "soWhat": "Creates mappings to allow debugging of the minified code in production."
+    },
+    {
+      "id": "1.5.4",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.5",
+        "1.5.7"
+      ],
+      "prevIds": [
+        "1.5.3"
+      ],
+      "hasDerivation": false,
+      "claim": "Execute Asset Pipeline.",
+      "soWhat": "Processes raw static files into optimized web-ready formats."
+    },
+    {
+      "id": "1.5.6",
+      "parentId": "1.5",
+      "nextIds": [
+        "1.5.11"
+      ],
+      "prevIds": [
+        "1.5.5"
+      ],
+      "hasDerivation": false,
+      "claim": "Generate WebP Variants.",
+      "soWhat": "Compresses the textures into modern, highly optimized formats."
+    },
+    {
+      "id": "2.3.8",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.9"
+      ],
+      "prevIds": [
+        "2.3.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 8",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.2.1",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.2",
+        "2.2.5"
+      ],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 1",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.1.9",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.12"
+      ],
+      "prevIds": [
+        "2.1.3",
+        "2.1.4",
+        "2.1.6",
+        "2.1.7",
+        "2.1.8"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 9",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.3.5",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.6",
+        "2.3.8",
+        "2.3.10"
+      ],
+      "prevIds": [
+        "2.3.1"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 5",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.1.3",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.9",
+        "2.1.10",
+        "2.1.11"
+      ],
+      "prevIds": [
+        "2.1.2"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 3",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.2.8",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.12"
+      ],
+      "prevIds": [
+        "2.2.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 8",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.1.11",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.12"
+      ],
+      "prevIds": [
+        "2.1.3",
+        "2.1.4",
+        "2.1.6",
+        "2.1.7",
+        "2.1.8"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 11",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.3.11",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.12"
+      ],
+      "prevIds": [
+        "2.3.10"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 11",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.3.13",
+      "parentId": "2.3",
+      "nextIds": [],
+      "prevIds": [
+        "2.3.3",
+        "2.3.4",
+        "2.3.9",
+        "2.3.12"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 13",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.2.4",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.12"
+      ],
+      "prevIds": [
+        "2.2.2"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 4",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.2.9",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.10"
+      ],
+      "prevIds": [
+        "2.2.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 9",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.1.5",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.6",
+        "2.1.7",
+        "2.1.8"
+      ],
+      "prevIds": [
+        "2.1.1"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 5",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.3.6",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.7"
+      ],
+      "prevIds": [
+        "2.3.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 6",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.2.2",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.3",
+        "2.2.4"
+      ],
+      "prevIds": [
+        "2.2.1"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 2",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.3.2",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.3",
+        "2.3.4"
+      ],
+      "prevIds": [
+        "2.3.1"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 2",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.3.1",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.2",
+        "2.3.5"
+      ],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 1",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.1.4",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.9",
+        "2.1.10",
+        "2.1.11"
+      ],
+      "prevIds": [
+        "2.1.2"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 4",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.2.11",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.12"
+      ],
+      "prevIds": [
+        "2.2.10"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 11",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.1.2",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.3",
+        "2.1.4"
+      ],
+      "prevIds": [
+        "2.1.1"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 2",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.3.3",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.13"
+      ],
+      "prevIds": [
+        "2.3.2"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 3",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.1.1",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.2",
+        "2.1.5"
+      ],
+      "prevIds": [],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 1",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.2.6",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.7"
+      ],
+      "prevIds": [
+        "2.2.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 6",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.3.7",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.9"
+      ],
+      "prevIds": [
+        "2.3.6"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 7",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.3.9",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.13"
+      ],
+      "prevIds": [
+        "2.3.7",
+        "2.3.8"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 9",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.2.3",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.12"
+      ],
+      "prevIds": [
+        "2.2.2"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 3",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.1.8",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.9",
+        "2.1.10",
+        "2.1.11"
+      ],
+      "prevIds": [
+        "2.1.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 8",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.3.10",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.11"
+      ],
+      "prevIds": [
+        "2.3.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 10",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.1.10",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.12"
+      ],
+      "prevIds": [
+        "2.1.3",
+        "2.1.4",
+        "2.1.6",
+        "2.1.7",
+        "2.1.8"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 10",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.2.12",
+      "parentId": "2.2",
+      "nextIds": [],
+      "prevIds": [
+        "2.2.3",
+        "2.2.4",
+        "2.2.7",
+        "2.2.8",
+        "2.2.11"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 12",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.2.7",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.12"
+      ],
+      "prevIds": [
+        "2.2.6"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 7",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.1.7",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.9",
+        "2.1.10",
+        "2.1.11"
+      ],
+      "prevIds": [
+        "2.1.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 7",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.3.12",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.13"
+      ],
+      "prevIds": [
+        "2.3.11"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 12",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.1.12",
+      "parentId": "2.1",
+      "nextIds": [],
+      "prevIds": [
+        "2.1.9",
+        "2.1.10",
+        "2.1.11"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 12",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.2.5",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.6",
+        "2.2.8",
+        "2.2.9"
+      ],
+      "prevIds": [
+        "2.2.1"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 5",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    },
+    {
+      "id": "2.1.6",
+      "parentId": "2.1",
+      "nextIds": [
+        "2.1.9",
+        "2.1.10",
+        "2.1.11"
+      ],
+      "prevIds": [
+        "2.1.5"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.1] Node 6",
+      "soWhat": "Placeholder for 2.1 DAG structure."
+    },
+    {
+      "id": "2.3.4",
+      "parentId": "2.3",
+      "nextIds": [
+        "2.3.13"
+      ],
+      "prevIds": [
+        "2.3.2"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.3] Node 4",
+      "soWhat": "Placeholder for 2.3 DAG structure."
+    },
+    {
+      "id": "2.2.10",
+      "parentId": "2.2",
+      "nextIds": [
+        "2.2.11"
+      ],
+      "prevIds": [
+        "2.2.9"
+      ],
+      "hasDerivation": false,
+      "claim": "[2.2] Node 10",
+      "soWhat": "Placeholder for 2.2 DAG structure."
+    }
+  ]
+}

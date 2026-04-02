@@ -173,48 +173,66 @@ export function computeSiblingNav() {
   const crossPrev = [];
   const crossNext = [];
 
+  // Walk up the ancestor chain until we find a node whose prevIds (filtered
+  // by its siblings) are non-empty.  The single-level lookup missed pages
+  // deep in a terminal chain (e.g. 1.2.5.7 → parent 1.2.5 nextIds:[] →
+  // grandparent 1.2 nextIds:[...] was never reached).
   if (prevNodes.length === 0 && parentNode.parentId !== null) {
-    const parent = DataStore.map.get(parentNode.parentId);
-    const grandSiblings = DataStore.nodes.filter(
-      n => n.parentId === parent?.parentId
-    );
-    const grandSiblingIds = new Set(grandSiblings.map(n => n.id));
+    let ancestor = DataStore.map.get(parentNode.parentId);
+    while (ancestor && ancestor.parentId !== undefined && ancestor.parentId !== null) {
+      const ancestorSiblings = DataStore.nodes.filter(
+        n => n.parentId === ancestor.parentId
+      );
+      const ancestorSiblingIds = new Set(ancestorSiblings.map(n => n.id));
 
-    (parent?.prevIds || []).filter(parentId => grandSiblingIds.has(parentId)).forEach(prevPid => {
-      const children = childrenOf(prevPid);
-      if (children.length > 0) {
-        const exits = getExitNodes(prevPid);
-        const target = exits.length > 0
-          ? exits.sort((a, b) => nodeIndex(b.id) - nodeIndex(a.id))[0]
-          : children[children.length - 1];
-        crossPrev.push(target);
-      } else {
-        const n = DataStore.map.get(prevPid);
-        if (n) crossPrev.push(n);
+      const prevAncestorIds = (ancestor.prevIds || []).filter(pid => ancestorSiblingIds.has(pid));
+      if (prevAncestorIds.length > 0) {
+        prevAncestorIds.forEach(prevPid => {
+          const children = childrenOf(prevPid);
+          if (children.length > 0) {
+            const exits = getExitNodes(prevPid);
+            const target = exits.length > 0
+              ? exits.sort((a, b) => nodeIndex(b.id) - nodeIndex(a.id))[0]
+              : children[children.length - 1];
+            crossPrev.push(target);
+          } else {
+            const n = DataStore.map.get(prevPid);
+            if (n) crossPrev.push(n);
+          }
+        });
+        break;
       }
-    });
+      ancestor = DataStore.map.get(ancestor.parentId);
+    }
   }
 
   if (nextNodes.length === 0 && parentNode.parentId !== null) {
-    const parent = DataStore.map.get(parentNode.parentId);
-    const grandSiblings = DataStore.nodes.filter(
-      n => n.parentId === parent?.parentId
-    );
-    const grandSiblingIds = new Set(grandSiblings.map(n => n.id));
+    let ancestor = DataStore.map.get(parentNode.parentId);
+    while (ancestor && ancestor.parentId !== undefined && ancestor.parentId !== null) {
+      const ancestorSiblings = DataStore.nodes.filter(
+        n => n.parentId === ancestor.parentId
+      );
+      const ancestorSiblingIds = new Set(ancestorSiblings.map(n => n.id));
 
-    (parent?.nextIds || []).filter(nextId => grandSiblingIds.has(nextId)).forEach(nextPid => {
-      const children = childrenOf(nextPid);
-      if (children.length > 0) {
-        const entries = getEntryNodes(nextPid);
-        const target = entries.length > 0
-          ? entries.sort((a, b) => nodeIndex(a.id) - nodeIndex(b.id))[0]
-          : children[0];
-        crossNext.push(target);
-      } else {
-        const n = DataStore.map.get(nextPid);
-        if (n) crossNext.push(n);
+      const nextAncestorIds = (ancestor.nextIds || []).filter(nid => ancestorSiblingIds.has(nid));
+      if (nextAncestorIds.length > 0) {
+        nextAncestorIds.forEach(nextPid => {
+          const children = childrenOf(nextPid);
+          if (children.length > 0) {
+            const entries = getEntryNodes(nextPid);
+            const target = entries.length > 0
+              ? entries.sort((a, b) => nodeIndex(a.id) - nodeIndex(b.id))[0]
+              : children[0];
+            crossNext.push(target);
+          } else {
+            const n = DataStore.map.get(nextPid);
+            if (n) crossNext.push(n);
+          }
+        });
+        break;
       }
-    });
+      ancestor = DataStore.map.get(ancestor.parentId);
+    }
   }
 
   // --- Assemble grouped top/bottom ---
@@ -323,6 +341,14 @@ export function renderSiblingNavigation(view) {
     area.className = 'sibling-nav-area next';
     bottom.forEach(group => area.appendChild(renderGroup(group, prefix)));
     view.appendChild(area);
+  } else {
+    // When no bottom nav exists, add an invisible spacer so the spine's
+    // CSS fade zone (bottom 40px) extends past the last level-group.
+    // Without this, terminal return branches land in the faded section.
+    const spacer = document.createElement('div');
+    spacer.className = 'sibling-nav-area next';
+    spacer.setAttribute('aria-hidden', 'true');
+    view.appendChild(spacer);
   }
 }
 
@@ -356,7 +382,9 @@ function renderGroup(group, prefix) {
 
   group.items.forEach(item => {
     const btn = document.createElement('button');
-    btn.className = `btn-sibling ${group.btnClass} trigger-derive`;
+    const terminal = item.node.hasDerivation === false
+      && childrenOf(item.node.id).length === 0;
+    btn.className = `btn-sibling ${group.btnClass} trigger-derive${terminal ? ' sibling-terminal' : ''}`;
     btn.type = 'button';
     btn.dataset.target = item.node.id;
     if (item.direction) btn.dataset.direction = item.direction;
@@ -364,6 +392,7 @@ function renderGroup(group, prefix) {
       <span class="sibling-arrow">${item.arrow}</span>
       <span class="sibling-id">${prefix}${item.node.id}.</span>
       <span class="sibling-claim">${md(item.node.claim)}</span>
+      ${terminal ? '<span class="sibling-terminal-tag">terminal</span>' : ''}
     `;
     wrapper.appendChild(btn);
   });

@@ -127,7 +127,7 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
   }
 
   // Generate indent spine HTML elements (Rule 4 — depth continue)
-  spineBlocks.forEach(block => {
+  spineBlocks.forEach((block, blockIdx) => {
     const firstPos = positions.get(block.startId);
     const lastPos = positions.get(block.endId);
     if (!firstPos || !lastPos) return;
@@ -177,7 +177,8 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
     }
 
     const height = bottom - top;
-    if (height > 0 && Math.abs(firstPos.x - zoneTrunkX) >= STRAIGHT_THRESHOLD) {
+    const isOffTrunk = Math.abs(firstPos.x - zoneTrunkX) >= STRAIGHT_THRESHOLD;
+    if (height > 0 && isOffTrunk) {
       indentSpines.push({ x: Math.round(firstPos.x), top, height, depth: block.depth, fade });
     }
   });
@@ -190,54 +191,66 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
   // Terminal return curves (Rules 5 & 6): end of display order off-trunk
   const lastId = displayOrder[displayOrder.length - 1];
   const lastPos = positions.get(lastId);
+  console.log(`[STACKED-DEBUG] Terminal return check: lastId=${lastId}, lastPos.x=${lastPos?.x}, zoneTrunkX=${zoneTrunkX}, mainTrunkX=${mainTrunkX}, offZoneTrunk=${lastPos ? Math.abs(lastPos.x - zoneTrunkX) >= STRAIGHT_THRESHOLD : 'n/a'}`);
   if (lastPos && Math.abs(lastPos.x - zoneTrunkX) >= STRAIGHT_THRESHOLD) {
     const lastDepth = depthMap.get(lastId) || 0;
+    console.log(`[STACKED-DEBUG]   lastDepth=${lastDepth}`);
     if (lastDepth > 0) {
-      let deepestDepth = 0;
-      let deepestX = null;
-      for (let i = displayOrder.length - 1; i >= 0; i--) {
-        const id = displayOrder[i];
-        const d = depthMap.get(id) || 0;
-        if (d === 0) break;
-        const pos = positions.get(id);
-        if (pos && d > deepestDepth) { deepestDepth = d; deepestX = pos.x; }
-      }
-
+      // Use the last node's own X for the return path start.
+      // Transitions (branch-return curves) already handle getting from
+      // deeper indent levels back to the last node's depth — the terminal
+      // return only needs to go from the last node to the trunk.
+      const returnFromX = lastPos.x;
       const rowBottomOfLast = lastPos.rowBottom || lastPos.visualBottom;
       const returnTargetX = mainTrunkX !== null ? mainTrunkX : zoneTrunkX;
 
-      // Center merge point in the gap between last off-spine node and next
-      // trunk node.  Fall back to FORK_BRANCH_GAP for true terminal cases.
+      // Find the lowest card bottom in the horizontal path between the
+      // last node and returnTargetX to ensure the merge line clears ALL
+      // cards in range.
+      const minHX = Math.min(returnFromX, returnTargetX);
+      const maxHX = Math.max(returnFromX, returnTargetX);
+      let clearBelow = rowBottomOfLast;
+      for (const [, pos] of positions) {
+        if (pos.x >= minHX && pos.x <= maxHX && pos.rowBottom > rowBottomOfLast) {
+          if (pos.rowBottom > clearBelow) clearBelow = pos.rowBottom;
+        }
+      }
+
+      // Find next card top below the clearance line (from any node) to
+      // center the merge point in the gap.
       let nextTrunkCardTop2 = null;
       for (const [, pos] of positions) {
-        if (Math.abs(pos.x - returnTargetX) < STRAIGHT_THRESHOLD && pos.cardTop > rowBottomOfLast) {
+        if (pos.cardTop > clearBelow) {
           if (nextTrunkCardTop2 === null || pos.cardTop < nextTrunkCardTop2) {
             nextTrunkCardTop2 = pos.cardTop;
           }
         }
       }
       const mergeY = nextTrunkCardTop2 !== null
-        ? Math.round(rowBottomOfLast + (nextTrunkCardTop2 - rowBottomOfLast) / 2)
-        : Math.round(rowBottomOfLast + FORK_BRANCH_GAP);
+        ? Math.round(clearBelow + (nextTrunkCardTop2 - clearBelow) / 2)
+        : Math.round(clearBelow + FORK_BRANCH_GAP);
 
-      if (deepestX !== null && Math.abs(deepestX - returnTargetX) >= STRAIGHT_THRESHOLD) {
-        const dirX = returnTargetX > deepestX ? 1 : -1;
+      console.log(`[STACKED-DEBUG]   returnFromX=${returnFromX}, returnTargetX=${returnTargetX}, mergeY=${mergeY}, willDraw=${Math.abs(returnFromX - returnTargetX) >= STRAIGHT_THRESHOLD}`);
+      if (Math.abs(returnFromX - returnTargetX) >= STRAIGHT_THRESHOLD) {
+        const dirX = returnTargetX > returnFromX ? 1 : -1;
         const radius = Math.min(
           MAX_CORNER_RADIUS,
-          Math.abs(returnTargetX - deepestX) / 2,
+          Math.abs(returnTargetX - returnFromX) / 2,
           Math.max(0, Math.abs(mergeY - lastPos.y) - RADIUS_ADJUST)
         );
 
         // Start from the last node's visualBottom so the path connects
         // seamlessly with the indent spine above (no gap).
         allPathData.push(
-          `M ${deepestX} ${rowBottomOfLast} ` +
-          `L ${deepestX} ${mergeY - radius} ` +
-          `Q ${deepestX} ${mergeY} ${deepestX + radius * dirX} ${mergeY} ` +
+          `M ${returnFromX} ${rowBottomOfLast} ` +
+          `L ${returnFromX} ${mergeY - radius} ` +
+          `Q ${returnFromX} ${mergeY} ${returnFromX + radius * dirX} ${mergeY} ` +
           `L ${returnTargetX - radius * dirX} ${mergeY} ` +
           `Q ${returnTargetX} ${mergeY} ${returnTargetX} ${mergeY + radius} `
         );
       }
     }
+  } else {
+    console.log(`[STACKED-DEBUG]   Terminal return SKIPPED: lastPos on zone trunk or missing`);
   }
 }

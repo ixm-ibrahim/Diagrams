@@ -81,7 +81,8 @@ export function updateStackedGroups(viewEl, containerWidth) {
       );
       if (!firstNode) return;
 
-      const isStacked = firstNode.parentElement.classList.contains('stack-group');
+      const isStacked = firstNode.parentElement.classList.contains('stack-group') &&
+                        !firstNode.parentElement.hasAttribute('data-companion-wrap');
 
       // Stack when the group's own per-child width drops below STACK_THRESHOLD.
       // Symmetric: same threshold for stacking and un-stacking — no hysteresis.

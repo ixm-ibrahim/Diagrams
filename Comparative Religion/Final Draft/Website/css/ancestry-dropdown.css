@@ -1,0 +1,184 @@
+/* =============================================================================
+   ancestry-dropdown.css — Ancestry Dropdown Menu
+   =============================================================================
+   Dropdown that opens from the parent badge pill, listing all ancestors
+   of the current node. Smart direction (up/down) based on viewport space.
+
+   Depends on tokens.css:
+     --panel-bg, --border, --border-thin, --radius-md, --shadow-deep,
+     --text, --text-muted, --text-faint, --glass, --focus-ring
+
+   HTML classes styled here:
+     .ancestry-dropdown-wrap, .ancestry-dropdown, .ancestry-item,
+     .ancestry-id, .ancestry-claim, .ancestry-terminal
+   ============================================================================= */
+
+
+/* Wrapper: fixed to viewport so it escapes any ancestor overflow: hidden
+   ----------------------------------------------------------------------------- */
+.ancestry-dropdown-wrap {
+  position: fixed;
+  z-index: var(--z-dropdown, 100);
+  pointer-events: auto;
+  --ancestry-bg-dark: transparent;
+  --ancestry-bg-light: transparent;
+  --ancestry-border-dark: transparent;
+  --ancestry-border-light: transparent;
+  --ancestry-tint-strength: 35%;
+  --ancestry-tint-strength-light: 28%;
+}
+
+
+/* Dropdown panel
+   ----------------------------------------------------------------------------- */
+.ancestry-dropdown {
+  min-width: 240px;
+  max-width: 380px;
+  max-height: 320px;
+  overflow-y: auto;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ancestry-bg-dark) var(--ancestry-tint-strength), #0f1730) 0%,
+      #0f1730 60%
+    );
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--ancestry-border-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-deep);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  /* Entry animation */
+  opacity: 0;
+  transform: translateY(6px) scale(0.97);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+[data-theme="light"] .ancestry-dropdown {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--ancestry-bg-light) var(--ancestry-tint-strength-light), #ffffff) 0%,
+      #ffffff 60%
+    );
+  border-top-color: var(--ancestry-border-light);
+}
+
+.ancestry-dropdown-wrap.ancestry-up .ancestry-dropdown {
+  transform: translateY(-6px) scale(0.97);
+}
+
+.ancestry-dropdown.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+/* Individual ancestry item (button)
+   ----------------------------------------------------------------------------- */
+.ancestry-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.35;
+  transition: background var(--transition-base) ease,
+              transform var(--transition-fast) ease;
+  width: 100%;
+}
+
+.ancestry-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(2px);
+}
+
+.ancestry-item:active {
+  transform: scale(0.98);
+}
+
+[data-theme="light"] .ancestry-item:hover {
+  background: rgba(16, 26, 53, 0.06);
+}
+
+
+/* Item internals
+   ----------------------------------------------------------------------------- */
+.ancestry-id {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 12px;
+  opacity: 0.55;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.ancestry-claim {
+  font-weight: 500;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ancestry-terminal {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  opacity: 0.7;
+  padding: 2px 6px;
+  border: 1px solid var(--border-thin);
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* Scrollbar styling
+   ----------------------------------------------------------------------------- */
+.ancestry-dropdown::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ancestry-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ancestry-dropdown::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+
+/* Keyboard focus
+   ----------------------------------------------------------------------------- */
+.ancestry-item:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+
+
+/* Mobile
+   ----------------------------------------------------------------------------- */
+@media (max-width: 450px) {
+  .ancestry-dropdown {
+    min-width: 200px;
+    max-width: 280px;
+    max-height: 260px;
+  }
+  .ancestry-item {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+}

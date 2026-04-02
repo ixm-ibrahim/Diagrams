@@ -135,8 +135,9 @@ export function nodeRow(node) {
     ? 'null' : (parentNode?.parentId || '');
 
   const badgeHtml = parentNode
-    ? `<button class="node-badge trigger-derive" type="button" data-target="${badgeTarget}"
-         aria-label="Go to parent step ${parentNode.id}"
+    ? `<button class="node-badge ancestry-trigger" type="button"
+         data-node-id="${node.id}"
+         aria-label="View ancestry of step ${node.id}"
          title="${parentNode.id}. ${escapeAttr(parentNode.claim)}">
          <span class="badge-dot"></span>${parentNode.id}</button>`
     : '';

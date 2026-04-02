@@ -126,6 +126,7 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
     return pos && Math.abs(pos.x - trunkX) >= STRAIGHT_THRESHOLD;
   });
 
+  console.log(`[TERM-RET-DEBUG] terminalOffSpine: [${terminalOffSpine.map(n => n.id)}], excludeIds: [${[...excludeIds]}], trunkX=${trunkX}`);
   if (terminalOffSpine.length === 0) return;
 
   const byX = new Map();
@@ -137,28 +138,48 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
     }
   }
 
+  // Compute maxRowBottom only from the off-spine terminal nodes, not ALL
+  // terminal nodes.  Including on-trunk terminals (like a successor node
+  // that sits on the spine below the fork) inflates maxRowBottom, pushing
+  // the merge point past nodes that should appear AFTER the return.
   let maxRowBottom = 0;
-  for (const node of visibleNodes) {
-    if (!node.nextIds?.some(nid => visibleIdSet.has(nid))) {
-      const pos = positions.get(node.id);
-      if (pos) maxRowBottom = Math.max(maxRowBottom, pos.rowBottom);
+  for (const node of terminalOffSpine) {
+    const pos = positions.get(node.id);
+    if (pos) maxRowBottom = Math.max(maxRowBottom, pos.rowBottom);
+  }
+
+  // Compute the full horizontal range the return lines will span (from
+  // all off-spine columns to trunkX). Any card in this range whose bottom
+  // extends below maxRowBottom must be cleared.
+  let minHX = trunkX, maxHX = trunkX;
+  for (const [, pos] of byX) {
+    if (pos.x < minHX) minHX = pos.x;
+    if (pos.x > maxHX) maxHX = pos.x;
+  }
+  let clearBelow = maxRowBottom;
+  for (const [, pos] of positions) {
+    if (pos.x >= minHX && pos.x <= maxHX && pos.rowBottom > maxRowBottom) {
+      if (pos.rowBottom > clearBelow) clearBelow = pos.rowBottom;
     }
   }
 
-  // Find the next trunk node below the returning nodes so the merge point
-  // is centered in the gap. Fall back to FORK_BRANCH_GAP when no trunk
-  // node exists below (true page-terminal case).
+  // Find the next card top below the clearance line (from any node) so
+  // the merge point is centered in the gap. Fall back to FORK_BRANCH_GAP
+  // when no card exists below (true page-terminal case).
   let nextTrunkCardTop = null;
   for (const [, pos] of positions) {
-    if (Math.abs(pos.x - trunkX) < STRAIGHT_THRESHOLD && pos.cardTop > maxRowBottom) {
+    if (pos.cardTop > clearBelow) {
       if (nextTrunkCardTop === null || pos.cardTop < nextTrunkCardTop) {
         nextTrunkCardTop = pos.cardTop;
       }
     }
   }
   const mergeY = nextTrunkCardTop !== null
-    ? Math.round(maxRowBottom + (nextTrunkCardTop - maxRowBottom) / 2)
-    : Math.round(maxRowBottom + FORK_BRANCH_GAP);
+    ? Math.round(clearBelow + (nextTrunkCardTop - clearBelow) / 2)
+    : Math.round(clearBelow + FORK_BRANCH_GAP);
+
+  console.log(`[TERM-RET-DEBUG] byX columns: ${[...byX.entries()].map(([xk, p]) => `x=${xk} y=${Math.round(p.y)}`).join(', ')}`);
+  console.log(`[TERM-RET-DEBUG] maxRowBottom=${Math.round(maxRowBottom)}, nextTrunkCardTop=${nextTrunkCardTop !== null ? Math.round(nextTrunkCardTop) : 'null'}, mergeY=${mergeY}`);
 
   for (const [, pos] of byX) {
     const dirX = trunkX > pos.x ? 1 : -1;

@@ -15,6 +15,7 @@ import { toggleExpander, forceCloseExpander } from './ui-expander.js';
 import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
 import { exportNodes } from './ui-export.js';
 import { setVote, applyVoteStates } from './ui-agreement.js';
+import { openAncestryDropdown, closeAncestryDropdown } from './ancestry-dropdown.js';
 
 /** Cached DOM elements. Populated by init(). */
 const els = {};
@@ -122,6 +123,17 @@ function bindMapClicks() {
       // now sync every visible button on the page at once
       applyVoteStates(els.container);
 
+      return;
+    }
+
+    // Ancestry dropdown on parent badge pills
+    const ancestryBtn = e.target.closest('.ancestry-trigger');
+    if (ancestryBtn) {
+      e.stopPropagation();
+      const nodeId = ancestryBtn.dataset.nodeId;
+      openAncestryDropdown(ancestryBtn, nodeId, (targetId) => {
+        NavigationController.navigate(targetId);
+      });
       return;
     }
 

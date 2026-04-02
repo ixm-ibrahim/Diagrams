@@ -228,7 +228,7 @@ export function computeZoneOrder(allZoneIds) {
         if (childCount > parentCount) {
           depth = maxParentDepth + 1;                   // expansion
         } else if (childCount < parentCount) {
-          depth = Math.max(1, maxParentDepth - 1);      // convergence
+          depth = Math.max(0, maxParentDepth - 1);      // convergence
         } else {
           depth = maxParentDepth;                        // same breadth
         }

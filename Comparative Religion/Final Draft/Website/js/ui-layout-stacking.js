@@ -10,6 +10,48 @@
  * Consumers:    ui-layout.js
  */
 
+/* ── Zone-absorption placeholder helpers ──────────────────────────────────
+ * When a node-row is absorbed from a level-group into a stack-group, we
+ * leave behind an invisible dummy-node placeholder that preserves the
+ * absorbed node's flex space. Without this, the remaining flex items
+ * redistribute across the full row width, shifting them away from their
+ * correct horizontal position under their parent node.
+ *
+ * The placeholder carries:
+ *   data-zone-placeholder="<nodeId>"  — links it to the real node
+ *   data-col-idx   — same column index for position ordering
+ *   --flex-weight   — same weight the real node had
+ *
+ * Placeholders are removed when the real node is released back.
+ * -------------------------------------------------------------------------- */
+
+/** Insert an invisible flex placeholder where `node` currently sits. */
+function insertZonePlaceholder(node) {
+  const parent = node.parentElement;
+  if (!parent) return;
+  const placeholder = document.createElement('div');
+  placeholder.className = 'dummy-node';
+  placeholder.dataset.zonePlaceholder = node.dataset.id;
+  if (node.dataset.colIdx) placeholder.dataset.colIdx = node.dataset.colIdx;
+  const fw = node.style.getPropertyValue('--flex-weight');
+  if (fw) placeholder.style.setProperty('--flex-weight', fw);
+  // Transfer parallel edge attributes so the placeholder gets the same
+  // --marker-extra / --derive-extra flex-basis adjustments as the real node.
+  if (node.hasAttribute('data-first-parallel')) {
+    placeholder.dataset.firstParallel = 'true';
+  }
+  if (node.hasAttribute('data-last-parallel')) {
+    placeholder.dataset.lastParallel = 'true';
+  }
+  parent.insertBefore(placeholder, node);
+}
+
+/** Remove the placeholder for `nodeId` from `levelGroup` (if present). */
+function removeZonePlaceholder(levelGroup, nodeId) {
+  const ph = levelGroup.querySelector(`.dummy-node[data-zone-placeholder="${nodeId}"]`);
+  if (ph) ph.remove();
+}
+
 /**
  * Wrap a parallel group into a stack-group column, absorbing zone rows if
  * they fall below their thresholds. Applies DFS ordering and handles expander
@@ -26,6 +68,45 @@ export function wrapStackGroup(
   zoneRows,
   zoneOrder
 ) {
+  // Pre-step: dissolve any companion wrappers that contain our trigger nodes.
+  // This happens when a prior group's wrapStackGroup created a companion for
+  // one of our nodes, but at this narrower width we need to stack it ourselves.
+  nodeIds.forEach(id => {
+    const cw = levelGroup.querySelector(
+      `:scope > .stack-group[data-companion-wrap="${id}"]`
+    );
+    if (!cw) return;
+    console.log(`[COMPANION-DEBUG] Dissolving companion wrapper for parent=${id} before stacking`);
+    // Move companion children back to their home level-groups
+    [...cw.querySelectorAll(':scope > .node-row[data-zone-origin-row]')].forEach(childEl => {
+      const childRowIdx = parseInt(childEl.dataset.zoneOriginRow);
+      const zoneLG = viewEl.querySelector(
+        `.level-group[data-row-idx="${childRowIdx}"]`
+      );
+      if (zoneLG) {
+        removeZonePlaceholder(zoneLG, childEl.dataset.id);
+        delete childEl.dataset.zoneOriginRow;
+        const nodeCol = parseInt(childEl.dataset.colIdx) || 0;
+        let insertBefore = null;
+        for (const c of zoneLG.children) {
+          const cc = parseInt(c.dataset.colIdx);
+          if (!isNaN(cc) && cc > nodeCol) { insertBefore = c; break; }
+        }
+        if (!insertBefore) insertBefore = zoneLG.querySelector(':scope > .level-expander');
+        if (insertBefore && insertBefore.parentElement === zoneLG) {
+          zoneLG.insertBefore(childEl, insertBefore);
+        } else {
+          zoneLG.appendChild(childEl);
+        }
+        delete zoneLG.dataset.zoneAbsorbed;
+      }
+    });
+    // Move parent back as direct child
+    const parentEl = cw.querySelector(':scope > .node-row');
+    if (parentEl) levelGroup.insertBefore(parentEl, cw);
+    cw.remove();
+  });
+
   // Collect all nodes (must all be direct level-group children right now)
   const nodes = nodeIds.map(id =>
     levelGroup.querySelector(`:scope > .node-row[data-id="${id}"]`)
@@ -51,6 +132,7 @@ export function wrapStackGroup(
   nodes.forEach(n => wrapper.appendChild(n));
 
   // --- Zone extension: absorb descendant rows ---
+  console.log(`[WRAP-DEBUG] wrapStackGroup trigger nodeIds=[${nodeIds}], zoneRows=`, JSON.stringify(zoneRows?.map(zr => ({rowIdx:zr.rowIdx, nodeIds:zr.nodeIds})) || null));
   if (zoneRows) {
     zoneRows.forEach(({ rowIdx: zoneRowIdx, nodeIds: zoneNodeIds, stackAt: zoneStackAt }) => {
       // Only absorb zone rows whose own stacking threshold is crossed
@@ -78,9 +160,14 @@ export function wrapStackGroup(
 
         node.dataset.zoneOriginRow = String(zoneRowIdx);
 
-        // Extract from another stack-group if needed
+        // Extract from another stack-group if needed.
+        // When a node was already absorbed by a different group, its original
+        // placeholder in the home level-group is still valid — skip inserting
+        // a duplicate (which would create stale flex-space in the wrong LG).
         const parentSG = node.parentElement;
+        let wasInStackGroup = false;
         if (parentSG.classList.contains('stack-group')) {
+          wasInStackGroup = true;
           const sourceLG = parentSG.closest('.level-group');
           if (sourceLG) sourceLG.insertBefore(node, parentSG);
           if (!parentSG.querySelector('.node-row')) {
@@ -88,9 +175,14 @@ export function wrapStackGroup(
             if (orphanedExp && sourceLG) sourceLG.appendChild(orphanedExp);
             parentSG.remove();
           }
-          if (sourceLG && !sourceLG.querySelector(':scope > .node-row')) {
-            sourceLG.dataset.zoneAbsorbed = '';
-          }
+        }
+
+        // Insert invisible placeholder to preserve flex space for remaining
+        // siblings in the home level-group before moving node to wrapper.
+        // Skip if node was extracted from another stack-group — its original
+        // home-LG placeholder from the first absorption is still in place.
+        if (!wasInStackGroup) {
+          insertZonePlaceholder(node);
         }
 
         wrapper.appendChild(node);
@@ -134,6 +226,69 @@ export function wrapStackGroup(
       expander.style.marginLeft = `-${breakoutLeft}px`;
       expander.style.marginRight = `-${breakoutRight}px`;
     }
+  }
+
+  // --- Runtime companion wrapping ---
+  // After zone absorption, check potentialCompanions from each zoneRow.
+  // If a companion's parent is still a direct flex child of levelGroup
+  // (i.e. its own group didn't stack at this width), wrap parent + children
+  // into a mini-column so they stay vertically adjacent.
+  if (zoneRows) {
+    zoneRows.forEach(({ rowIdx: zoneRowIdx, potentialCompanions }) => {
+      if (!potentialCompanions) return;
+
+      // Group companions by parentId
+      const byParent = new Map();
+      potentialCompanions.forEach(({ childId, parentId }) => {
+        if (!byParent.has(parentId)) byParent.set(parentId, []);
+        byParent.get(parentId).push(childId);
+      });
+
+      byParent.forEach((childIds, parentId) => {
+        // Runtime check: parent must still be a direct child of levelGroup
+        const parentEl = levelGroup.querySelector(
+          `:scope > .node-row[data-id="${parentId}"]`
+        );
+        if (!parentEl) return; // Parent is inside a stack-group → skip
+
+        console.log(`[COMPANION-DEBUG] Wrapping parent=${parentId} with children=[${childIds}] from zoneRow=${zoneRowIdx}`);
+
+        const miniWrapper = document.createElement('div');
+        miniWrapper.className = 'stack-group';
+        miniWrapper.dataset.companionWrap = parentId;
+        miniWrapper.style.setProperty(
+          '--flex-weight',
+          parentEl.style.getPropertyValue('--flex-weight') || '1'
+        );
+        if (parentEl.hasAttribute('data-first-parallel')) {
+          miniWrapper.dataset.firstParallel = 'true';
+        }
+        if (parentEl.hasAttribute('data-last-parallel')) {
+          miniWrapper.dataset.lastParallel = 'true';
+        }
+
+        levelGroup.insertBefore(miniWrapper, parentEl);
+        miniWrapper.appendChild(parentEl);
+
+        childIds.forEach(childId => {
+          const childEl = viewEl.querySelector(`.node-row[data-id="${childId}"]`);
+          if (!childEl || childEl.parentElement === miniWrapper) return;
+
+          // Insert placeholder in child's home level-group
+          insertZonePlaceholder(childEl);
+          childEl.dataset.zoneOriginRow = String(zoneRowIdx);
+          miniWrapper.appendChild(childEl);
+        });
+
+        // Check if the zone row's level-group is now empty of visible nodes
+        const zoneLG = viewEl.querySelector(
+          `.level-group[data-row-idx="${zoneRowIdx}"]`
+        );
+        if (zoneLG && !zoneLG.querySelector(':scope > .node-row')) {
+          zoneLG.dataset.zoneAbsorbed = '';
+        }
+      });
+    });
   }
 
   return true;
@@ -196,6 +351,9 @@ export function handlePartialZone(
             attachedExp = wrapper.querySelector('.level-expander.is-open');
           }
         }
+
+        // Remove placeholder that was holding flex space
+        removeZonePlaceholder(zoneLG, id);
 
         delete node.dataset.zoneOriginRow;
         node.style.removeProperty('--indent-depth');
@@ -260,9 +418,12 @@ export function handlePartialZone(
 
         node.dataset.zoneOriginRow = String(zoneRowIdx);
 
-        // Extract from another stack-group if needed
+        // Extract from another stack-group if needed (see wrapStackGroup
+        // for detailed comments on the wasInStackGroup logic).
         const parentSG = node.parentElement;
+        let wasInStackGroup = false;
         if (parentSG.classList.contains('stack-group')) {
+          wasInStackGroup = true;
           const sourceLG = parentSG.closest('.level-group');
           if (sourceLG) sourceLG.insertBefore(node, parentSG);
           if (!parentSG.querySelector('.node-row')) {
@@ -270,9 +431,13 @@ export function handlePartialZone(
             if (orphanedExp && sourceLG) sourceLG.appendChild(orphanedExp);
             parentSG.remove();
           }
-          if (sourceLG && !sourceLG.querySelector(':scope > .node-row')) {
-            sourceLG.dataset.zoneAbsorbed = '';
-          }
+        }
+
+        // Insert invisible placeholder to preserve flex space.
+        // Skip if extracted from another stack-group — original placeholder
+        // in the home LG is still valid.
+        if (!wasInStackGroup) {
+          insertZonePlaceholder(node);
         }
 
         wrapper.appendChild(node);
@@ -319,6 +484,48 @@ export function unwrapStackGroup(
 
   const wrapper = firstNode.parentElement;
 
+  // --- Undo companion wraps before zone un-absorb ---
+  // Query the DOM for any companion wrappers created at runtime.
+  levelGroup.querySelectorAll(':scope > .stack-group[data-companion-wrap]').forEach(cw => {
+    console.log(`[COMPANION-DEBUG] Unwrapping companion for parent=${cw.dataset.companionWrap}`);
+
+    // Move children (nodes with zoneOriginRow) back to their home level-groups
+    [...cw.querySelectorAll(':scope > .node-row[data-zone-origin-row]')].forEach(childEl => {
+      const childRowIdx = parseInt(childEl.dataset.zoneOriginRow);
+      const zoneLG = viewEl.querySelector(
+        `.level-group[data-row-idx="${childRowIdx}"]`
+      );
+      if (!zoneLG) return;
+
+      const childId = childEl.dataset.id;
+      removeZonePlaceholder(zoneLG, childId);
+      delete childEl.dataset.zoneOriginRow;
+
+      // Restore to original column position
+      const nodeCol = parseInt(childEl.dataset.colIdx) || 0;
+      let insertBefore = null;
+      for (const c of zoneLG.children) {
+        const cc = parseInt(c.dataset.colIdx);
+        if (!isNaN(cc) && cc > nodeCol) { insertBefore = c; break; }
+      }
+      if (!insertBefore) insertBefore = zoneLG.querySelector(':scope > .level-expander');
+      if (insertBefore && insertBefore.parentElement === zoneLG) {
+        zoneLG.insertBefore(childEl, insertBefore);
+      } else {
+        zoneLG.appendChild(childEl);
+      }
+
+      delete zoneLG.dataset.zoneAbsorbed;
+    });
+
+    // Move parent back as direct level-group child
+    const parentEl = cw.querySelector(':scope > .node-row');
+    if (parentEl) {
+      levelGroup.insertBefore(parentEl, cw);
+    }
+    cw.remove();
+  });
+
   // --- Zone un-absorb: move zone nodes back before unwrapping ---
   if (zoneRows) {
     // Process in reverse so earlier rows are restored first
@@ -327,6 +534,9 @@ export function unwrapStackGroup(
         `.level-group[data-row-idx="${zoneRowIdx}"]`
       );
       if (!zoneLG) return;
+
+      console.log(`[UNWRAP-DEBUG] Zone un-absorb: zoneRow=${zoneRowIdx} nodeIds=[${zoneNodeIds}]`);
+      console.log(`[UNWRAP-DEBUG]   zoneLG children before:`, [...zoneLG.children].map(c => c.dataset.id || c.dataset.zonePlaceholder || c.className).join(', '));
 
       zoneNodeIds.forEach(id => {
         const node = wrapper.querySelector(`:scope > .node-row[data-id="${id}"]`);
@@ -344,6 +554,9 @@ export function unwrapStackGroup(
           }
         }
 
+        // Remove placeholder that was holding flex space
+        removeZonePlaceholder(zoneLG, id);
+
         delete node.dataset.zoneOriginRow;
         node.style.removeProperty('--indent-depth');
 
@@ -360,6 +573,7 @@ export function unwrapStackGroup(
         if (!insertBefore) {
           insertBefore = zoneLG.querySelector(':scope > .level-expander');
         }
+        console.log(`[UNWRAP-DEBUG]   Restoring node=${id} colIdx=${nodeCol} insertBefore=${insertBefore?.dataset?.id || insertBefore?.className || 'append'}`);
         if (insertBefore && insertBefore.parentElement === zoneLG) {
           zoneLG.insertBefore(node, insertBefore);
         } else {
@@ -397,11 +611,16 @@ export function unwrapStackGroup(
   );
   if (nodes.some(n => !n)) return false;
 
+  console.log(`[UNWRAP-DEBUG] Unwrap trigger nodes=[${nodeIds}] from wrapper`);
+  console.log(`[UNWRAP-DEBUG]   levelGroup children before unwrap:`, [...levelGroup.children].map(c => c.dataset.id || c.dataset.companionWrap || c.className).join(', '));
+
   // Restore each node as a direct level-group child, in original order
   nodes.forEach(n => {
     n.style.removeProperty('--indent-depth');
     levelGroup.insertBefore(n, wrapper);
   });
+
+  console.log(`[UNWRAP-DEBUG]   levelGroup children after unwrap:`, [...levelGroup.children].map(c => c.dataset.id || c.className).join(', '));
 
   // Rescue any expander that was moved into the stack-group while open
   const strandedExp = wrapper.querySelector('.level-expander');

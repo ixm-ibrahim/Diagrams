@@ -93,6 +93,52 @@
 }
 
 
+/* Gentle glow pulse: draws attention to derivation buttons
+   ----------------------------------------------------------------------------- */
+@keyframes derive-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.15);
+  }
+}
+
+@keyframes derive-arrow-nudge {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(3px); }
+}
+
+[data-theme="light"] .btn-derivation {
+  animation: derive-glow-light 3s ease-in-out infinite;
+}
+
+@keyframes derive-glow-light {
+  0%, 100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(16, 26, 53, 0.1);
+  }
+}
+
+.btn-derivation {
+  animation: derive-glow 3s ease-in-out infinite;
+}
+
+.btn-derivation span:last-child {
+  animation: derive-arrow-nudge 3s ease-in-out infinite;
+}
+
+/* Pause pulse on hover — the button's own hover state takes over */
+.btn-derivation:hover {
+  animation: none;
+}
+.btn-derivation:hover span:last-child {
+  animation: none;
+}
+
+
 /* Keyboard focus indicator
    ----------------------------------------------------------------------------- */
 .btn-derivation:focus-visible {

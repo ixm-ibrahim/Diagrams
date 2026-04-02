@@ -66,12 +66,33 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
     const hasTerminalReturn = zoneLastPos &&
       Math.abs(zoneLastPos.x - sgTrunkX) >= STRAIGHT_THRESHOLD;
 
+    console.log(`[PARTIAL-DEBUG] stack group: displayOrder=[${displayOrder}], sgTrunkX=${sgTrunkX}, trunkX=${trunkX}`);
+    console.log(`[PARTIAL-DEBUG]   depthMap:`, Object.fromEntries(depthMap));
+    console.log(`[PARTIAL-DEBUG]   hasTerminalReturn=${hasTerminalReturn}, zoneLastPos.x=${zoneLastPos?.x}`);
+
+    // Pre-compute whether this zone needs a zone-to-main-trunk return.
+    // Needed before the spine is created so the spine knows not to fade.
+    const zoneOffMainTrunk = Math.abs(sgTrunkX - trunkX) >= STRAIGHT_THRESHOLD;
+    let willDrawZoneReturn = false;
+    if (!hasTerminalReturn && zoneOffMainTrunk) {
+      const zoneIdSet = new Set(displayOrder);
+      willDrawZoneReturn = true;
+      for (const id of displayOrder) {
+        const node = DataStore.map.get(id);
+        if (node && (node.nextIds || []).some(nid => !zoneIdSet.has(nid) && positions.has(nid))) {
+          willDrawZoneReturn = false;
+          break;
+        }
+      }
+    }
+    console.log(`[PARTIAL-DEBUG]   zoneOffMainTrunk=${zoneOffMainTrunk}, willDrawZoneReturn=${willDrawZoneReturn}`);
+
     processStackedZone(displayOrder, depthMap, positions, sgTrunkX,
                        indentSpines, allPathData,
                        hasTerminalReturn ? trunkX : null);
 
     // Zone trunk spine when offset from main trunk
-    if (Math.abs(sgTrunkX - trunkX) >= STRAIGHT_THRESHOLD) {
+    if (zoneOffMainTrunk) {
       const firstPos = positions.get(displayOrder[0]);
       const lastPos = positions.get(displayOrder[displayOrder.length - 1]);
       if (firstPos && lastPos) {
@@ -100,14 +121,72 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
           }
         }
         const lastDepth = depthMap.get(displayOrder[displayOrder.length - 1]) || 0;
+        // Don't fade the spine if a return curve will connect at its bottom.
+        const fade = willDrawZoneReturn ? false : lastDepth > 0;
         indentSpines.push({
           x: Math.round(sgTrunkX), top: firstPos.y,
-          height: spineBottom - firstPos.y, depth: 0, fade: lastDepth > 0
+          height: spineBottom - firstPos.y, depth: 0, fade
         });
       }
     }
 
     if (hasTerminalReturn) groupHasTerminalReturn.set(sg, true);
+
+    // Zone-to-main-trunk return: when the zone's internal return was
+    // skipped (all zone nodes at the same indent depth → zone trunk IS
+    // their X) but the zone trunk itself is off the main trunk, draw a
+    // return curve from the zone trunk back to the main trunk.
+    if (willDrawZoneReturn && zoneLastPos) {
+      const rowBottom = zoneLastPos.rowBottom || zoneLastPos.visualBottom;
+
+      // Horizontal range the return curve will cross
+      const minHX = Math.min(sgTrunkX, trunkX);
+      const maxHX = Math.max(sgTrunkX, trunkX);
+
+      // Find the lowest card bottom in the horizontal path that extends
+      // below the zone's last row.  This ensures the horizontal leg of the
+      // return curve clears ALL cards between sgTrunkX and trunkX — not
+      // just those aligned with the main trunk.
+      let clearBelow = rowBottom;
+      for (const [, pos] of positions) {
+        if (pos.x >= minHX && pos.x <= maxHX && pos.rowBottom > rowBottom) {
+          if (pos.rowBottom > clearBelow) clearBelow = pos.rowBottom;
+        }
+      }
+
+      // Find the next card top below the clearance line (from any node,
+      // not just trunk-aligned) to center the merge point in the gap.
+      let nextCardTopBelow = null;
+      for (const [, pos] of positions) {
+        if (pos.cardTop > clearBelow) {
+          if (nextCardTopBelow === null || pos.cardTop < nextCardTopBelow) {
+            nextCardTopBelow = pos.cardTop;
+          }
+        }
+      }
+
+      const mergeY = nextCardTopBelow !== null
+        ? Math.round(clearBelow + (nextCardTopBelow - clearBelow) / 2)
+        : Math.round(clearBelow + FORK_BRANCH_GAP);
+
+      const dirX = trunkX > sgTrunkX ? -1 : 1;
+      const radius = Math.min(
+        MAX_CORNER_RADIUS,
+        Math.abs(trunkX - sgTrunkX) / 2,
+        Math.max(0, Math.abs(mergeY - rowBottom) - RADIUS_ADJUST)
+      );
+
+      console.log(`[PARTIAL-DEBUG]   zone-to-main return: from x=${sgTrunkX} to x=${trunkX}, mergeY=${mergeY}, clearBelow=${Math.round(clearBelow)}, nextCardTopBelow=${nextCardTopBelow !== null ? Math.round(nextCardTopBelow) : 'null'}`);
+
+      allPathData.push(
+        `M ${sgTrunkX} ${rowBottom} ` +
+        `L ${sgTrunkX} ${mergeY - radius} ` +
+        `Q ${sgTrunkX} ${mergeY} ${sgTrunkX - radius * dirX} ${mergeY} ` +
+        `L ${trunkX + radius * dirX} ${mergeY} ` +
+        `Q ${trunkX} ${mergeY} ${trunkX} ${mergeY + radius} `
+      );
+      groupHasTerminalReturn.set(sg, true);
+    }
   });
 
   // Build stacked↔non-stacked edge routing maps
@@ -183,6 +262,31 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
     if ((node.prevIds || []).some(pid => visibleIdSet.has(pid))) return;
     const pos = positions.get(firstId);
     if (Math.abs(pos.x - trunkX) < STRAIGHT_THRESHOLD) return;
+
+    const bendY = Math.round(pos.cardTop - FORK_BRANCH_GAP);
+    const dirX = pos.x > trunkX ? 1 : -1;
+    const dx = Math.abs(pos.x - trunkX);
+    const vSpace = Math.max(0, pos.y - bendY);
+    const r = Math.min(MAX_CORNER_RADIUS, dx / 2, Math.max(0, vSpace - RADIUS_ADJUST));
+    forkPathData.push(
+      `M ${trunkX} ${bendY - r} ` +
+      `Q ${trunkX} ${bendY} ${trunkX + r * dirX} ${bendY} ` +
+      `L ${pos.x - r * dirX} ${bendY} ` +
+      `Q ${pos.x} ${bendY} ${pos.x} ${bendY + r} ` +
+      `L ${pos.x} ${pos.y + SVG_OVERLAP} `
+    );
+  });
+
+  // First-row branches for non-stacked off-spine nodes with no visible
+  // predecessors.  In pure parallel mode, svg-engine.js handles this;
+  // in partially-stacked mode, the pure-parallel code path doesn't run,
+  // so we must replicate the logic here for any non-stacked parallel
+  // node that sits off-trunk and has no predecessor edge reaching it.
+  visibleNodes.forEach(node => {
+    if (stackedNodeIds.has(node.id)) return;
+    if ((node.prevIds || []).some(pid => visibleIdSet.has(pid))) return;
+    const pos = positions.get(node.id);
+    if (!pos || Math.abs(pos.x - trunkX) < STRAIGHT_THRESHOLD) return;
 
     const bendY = Math.round(pos.cardTop - FORK_BRANCH_GAP);
     const dirX = pos.x > trunkX ? 1 : -1;

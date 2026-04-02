@@ -74,6 +74,21 @@ export function computeLevels(visibleNodes) {
     }
   });
 
+  // Continuation dummies: terminal nodes that end before the last level
+  // leave a gap in subsequent rows, allowing flex layout to redistribute
+  // their space to unrelated nodes.  Injecting invisible spacers holds
+  // the terminal node's visual lane so its siblings' children stay
+  // correctly positioned beneath their parent.
+  visibleNodes.forEach(node => {
+    const nodeLvl = levels.get(node.id);
+    if (nodeLvl >= maxLevel) return;
+    const hasVisibleNext = (node.nextIds || []).some(nid => nodeMap.has(nid));
+    if (hasVisibleNext) return;
+    for (let i = nodeLvl + 1; i <= maxLevel; i++) {
+      rows[i].push({ isDummy: true, sourceId: node.id, targetId: null });
+    }
+  });
+
   // Barycenter sorting: minimize visual edge crossings by positioning each
   // node near the average column index of its parents in the row above.
   // Nodes whose parents cluster on the left sort leftward, and vice versa.
