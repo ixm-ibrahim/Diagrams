@@ -16,6 +16,7 @@ import { debouncedSearch, rerunActiveSearch } from './ui-search.js';
 import { exportNodes } from './ui-export.js';
 import { setVote, applyVoteStates } from './ui-agreement.js';
 import { openAncestryDropdown, closeAncestryDropdown } from './ancestry-dropdown.js';
+import { openNodeRefTooltip, closeNodeRefTooltip } from './node-ref-tooltip.js';
 
 /** Cached DOM elements. Populated by init(). */
 const els = {};
@@ -42,6 +43,7 @@ export function init() {
   bindThemeToggle();
   bindHeaderToggles();
   bindMapClicks();
+  bindNodeRefHover();
   bindBreadcrumbClicks();
   bindEscapeKey();
   bindKeyboardActivation();
@@ -94,6 +96,31 @@ function bindHeaderToggles() {
 /** Delegated click handler on #mapContainer for all interactive elements. */
 function bindMapClicks() {
   els.container?.addEventListener('click', (e) => {
+    // Node-ref links: intercept and navigate internally.
+    const nodeRef = e.target.closest('a.node-ref');
+    if (nodeRef) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeNodeRefTooltip();
+      const nodeId = nodeRef.dataset.node;
+      if (nodeId) {
+        const node = DataStore.map.get(nodeId);
+        if (node) {
+          const isTerminal = node.hasDerivation === false;
+          const hasChildren = DataStore.nodes.some(n => n.parentId === node.id);
+          const targetPageId = (!isTerminal && hasChildren) ? node.id : node.parentId;
+
+          // If the target node is on the current page, expand it in-place
+          if (targetPageId === AppState.currentParentId) {
+            toggleExpander(nodeId);
+          } else {
+            NavigationController.navigate(targetPageId);
+          }
+        }
+      }
+      return;
+    }
+
     // Links inside card text: let them navigate normally.
     if (e.target.closest('a[href]')) return;
 
@@ -158,6 +185,7 @@ function bindMapClicks() {
     const searchHeader = e.target.closest('.search-result-header');
     if (searchHeader) {
       const box = searchHeader.closest('.search-result-box');
+      if (box.classList.contains('no-collapse')) return;
       const collapsed = box.classList.toggle('is-collapsed');
       searchHeader.setAttribute('aria-expanded', !collapsed);
       // If collapsing a box that contains the active (expanded) node, close it
@@ -193,6 +221,17 @@ function bindMapClicks() {
       const isOpen = miniNode.classList.toggle('is-open');
       miniTrigger.setAttribute('aria-expanded', isOpen);
     }
+  });
+}
+
+/** Hover handler for .node-ref links to show ancestry tooltip. */
+function bindNodeRefHover() {
+  els.container?.addEventListener('mouseover', (e) => {
+    const nodeRef = e.target.closest('a.node-ref');
+    if (!nodeRef) return;
+    openNodeRefTooltip(nodeRef, (targetId) => {
+      NavigationController.navigate(targetId);
+    });
   });
 }
 

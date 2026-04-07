@@ -90,6 +90,14 @@
   transform: rotate(-45deg);
 }
 
+/* Single-result: no collapse affordance */
+.search-result-box.no-collapse .search-result-header {
+  cursor: default;
+}
+.search-result-box.no-collapse .search-result-header::after {
+  display: none;
+}
+
 /* Header title text */
 .search-result-title {
   flex: 1;

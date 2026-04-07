@@ -1,5 +1,10 @@
 # Sieve of Truth — Project Reference
 
+This is the single source of truth for any AI session working on this
+project. Read it fully before doing any work. Everything you need is here.
+
+---
+
 ## 1. What This Project Is
 
 An interactive website that presents the **Sieve of Truth** — a hierarchical,
@@ -69,12 +74,47 @@ of the next:
    every filter, what was eliminated at each stage, and the cost of
    disagreeing at each point.
 
-The old project (text files, attached separately) contains the original content.
-The new project restructures and deepens it into the website's hierarchical format.
+---
+
+## 2. Reference Files
+
+Three folders are attached. Here is what each contains and how to use it.
+
+### Website folder (primary)
+The website source code and data files.
+- `data.json` — The current website data. Node 1's full tree (168 nodes) is
+  wired with correct DAG links. Sections are being filled in DFS bottom-up.
+- `test_data.json` — Additional examples of how nodes can be constructed.
+- `README.md` — Explains the website's features and hierarchy for end users.
+- `PROJECT_REFERENCE.md` — This file.
+
+### Comparative Religion Diagram folder (old content)
+The original project text files. Use for content reference — what each sieve
+layer covers, how arguments were framed, what points and conclusions were
+made. Files are numbered by layer:
+- `0` = Rules, intro, background, and methodology
+- `1` = Pursuit of Truth (maps to Node 1)
+- `2` = Discovering Reality (maps to Node 2)
+- `3` and `3.2` = Building Confidence (maps to Node 3)
+- `4` and `4.1` = Defining God (maps to Node 4)
+- `5` = Alignment with Reality (maps to Node 5)
+- `6` and `6.1` = Historical Comparison (maps to Node 6)
+- `7` and `7.1` = Non-Fundamental Comparison (maps to Node 7)
+- `8` = Results and Conclusion (maps to Node 8)
+- `9` = Appendices (incomplete)
+
+### Phenomenology Diagram folder (old construction reference)
+An earlier, separate attempt to build a phenomenological DAG from scratch.
+Useful for understanding how primitives were derived, how terms were ordered,
+and what objections were anticipated. Key files:
+- `1. Thesis & Core Concepts.txt` — The volition-based bridge to ontology
+- `2. DAG Methodology.txt` — Formal node construction rules
+- `3. DAG Definitions.txt` — The full primitive vocabulary (PH1–RP5)
+- `4*.txt` — Objections and refutations by category
 
 ---
 
-## 2. The Data Format
+## 3. The Data Format
 
 Each node in `data.json` follows this structure:
 
@@ -106,25 +146,72 @@ Each node in `data.json` follows this structure:
 - `tab` sections (Unlocks, Eliminates, Unknowns, Objections) — shown as
   switchable tabs
 
-**Items** can be plain strings or objects with `title`, `detail`, and optional
-`children` (for nested "If Rejected" entries) or `subSections` (for Objections
-with `label` + `items` arrays).
+### Item formats
 
-**Objection format:**
+Items support three formats depending on the needed complexity:
+
+**Plain strings** — simple bullet points:
 ```json
-{
-  "title": "The objection stated in its strongest form",
-  "subSections": [
-    { "label": "Objection Basis", "items": ["Why someone would hold this..."] },
-    { "label": "What's Missing", "items": ["What the objection overlooks..."] },
-    { "label": "Correction", "items": ["The resolution..."] }
-  ]
-}
+"items": ["Red", "Hot", "Pressure", "Hungry"]
 ```
 
+**Nested bullets** — a main point with indented sub-points beneath it.
+Uses `text` for the main bullet and `items` for the nested bullets.
+Use this for Conclusion items that need supporting explanation, or
+anywhere a point has sub-points that aren't complex enough to warrant
+expandable sections:
+```json
+"items": [
+  {
+    "text": "Something is happening.",
+    "items": [
+      "\"Phenomenon\" is the label for anything that occurs.",
+      "This is the starting point — nothing more basic is available."
+    ]
+  }
+]
+```
+
+**Expandable sections** — collapsible sub-arguments with title, detail, and
+optional children or subSections. Use this for If Rejected (which often has
+cascading consequences) and Objections (which need structured refutation):
+```json
+"items": [
+  {
+    "title": "The objection stated in its strongest form",
+    "subSections": [
+      { "label": "Objection Basis", "items": ["Why someone holds this..."] },
+      { "label": "What's Missing", "items": ["What the objection overlooks..."] },
+      { "label": "Correction", "items": ["The resolution..."] }
+    ]
+  }
+]
+```
+
+```json
+"items": [
+  {
+    "title": "The rejection is self-defeating",
+    "detail": "Explanation of why...",
+    "children": [
+      {
+        "title": "Cascading consequence",
+        "detail": "Further explanation..."
+      }
+    ]
+  }
+]
+```
+
+### Other fields
+
 **`hasDerivation`**: `true` means this node has child nodes on a sub-page.
-`false` means it's a terminal node (all reasoning is contained in its own
-sections).
+`false` means it's a terminal node (all reasoning is in its own sections).
+
+**`shortTitle`**: Optional condensed label for the node, used in
+breadcrumbs (e.g., "Phenomenological Grounding" for node 1.1). Add this
+field when fleshing out a node. If absent, the breadcrumb falls back to
+just the node ID.
 
 **Navigation**: `nextIds`/`prevIds` connect siblings at the same level.
 `parentId` points up.
@@ -132,9 +219,203 @@ sections).
 **Inline markdown**: The website renders `**bold**`, `*italic*`,
 `` `code` ``, and `"quoted text"` (auto-italicized) in all text fields.
 
+**Node ID references**: Node IDs in parentheses — like `(1.1.3)` or
+`(1.1.3 — qualities)` — are automatically rendered as clickable links.
+Hovering shows the referenced node's full claim and ancestry chain; clicking
+navigates to that node's page. Use this freely in Unlocks, Unknowns, and
+anywhere a cross-reference helps the reader.
+
 ---
 
-## 3. Development Methodology
+## 4. How to Write Node Sections
+
+This section governs how the *content* of each section is written. The
+structural rules (Section 6) govern how claims and the tree are built; this
+section governs what goes *inside* a node once its claim and position are
+set.
+
+### General principles
+
+**The reader is a conscious person.** The content assumes the reader already
+experiences everything being described. You are pointing at what they already
+have, helping them recognize and label it — not writing from some impossible
+pre-experiential or pre-conceptual stance.
+
+**Low cognitive load is the priority.** Readability means effortless
+processing, not fewest words. Natural flowing sentences where each one does
+one job. Not choppy fragments that force the reader to mentally reconstruct
+what's being said, and not dense paragraphs that bury the point.
+
+**Precision without jargon.** Precise and accurate enough for a philosophy
+PhD, readable enough for a middle schooler. Plain language, no loss of rigor.
+Err conversational over academic. "Without distinctions, there is nothing
+to identify" — not "a single uniform occurrence admits no distinctions."
+
+**Grounding over vocabulary.** The purpose of foundational nodes is to
+establish objective, undeniable observations — not to produce a word list.
+Vocabulary is a byproduct of grounding, not the goal. soWhat, If Rejected,
+and Conclusion sub-bullets should frame the node's purpose as "establishing
+grounded observations" or "providing a starting point," not "building
+vocabulary" or "producing terms." The Unlocks section is the one place
+where vocabulary focus IS appropriate — that's its job.
+
+**No artificial verbosity.** Each item should represent a genuine atomic
+point. If it can be said in one sentence, don't use two. But if it needs
+two to be clear, use two.
+
+**No formulaic phrasing.** Don't force patterns like "The position that..."
+before every Eliminates item, or a fixed number of bullets per section.
+The JSON is flexible — let each node's content take the shape it needs for
+maximum clarity and minimum cognitive load.
+
+### Observations
+
+Observations are **raw material the reader recognizes from their own
+experience.** They are the things you point at and the reader goes "yes, I
+see that."
+
+**What belongs:** Specific, immediate examples and occurrences. Things you
+can verify right now from your own experience or recall.
+
+**What does NOT belong:**
+- The conclusion itself (that's what the Conclusion section is for)
+- Meta-commentary about the observations ("you don't need to know why...")
+- Arguments or anticipations of objections ("this isn't a claim about...")
+- Vocabulary labeling ("we call this a...")
+- Scoping or framing ("all that matters here is...")
+
+**Use specific examples, not abstract categories.** "Red" — not "a color."
+"Ouch" — not "a feeling." "The sensation of your arm's position right now"
+— not "proprioception." The specific example IS the observation. Abstract
+categories are identifications that come later.
+
+**Each observation gets its own bullet** when they are distinct phenomena or
+instances. Don't pack multiple observations into one sentence.
+
+**Observations must use only grounded terms.** Each word in an observation
+must be either (a) defined in a prior node, (b) the term being defined by
+this node, or (c) common English that carries no technical weight in this
+context. If a word is doing philosophical work (like "there" meaning
+"present in awareness"), it must be grounded — either defined as a synonym
+in this node's vocabulary or replaced with a word that is already defined.
+This is the same term-grounding rule that applies to claims (Section 6,
+convention 10), extended to observations because observations ARE the raw
+material — they cannot rely on terms the reader has not yet been given.
+
+### Conclusion
+
+The Conclusion section synthesizes the observations into a statement.
+
+**The conclusion text (`text` field) must be near-verbatim to the node's
+claim.** The claim says "Qualities occur"; the conclusion text says
+"Qualities occur" — not a synthesis, not an expansion, not a rephrasing
+that adds new ideas. Slight rewording for readability is fine ("Something
+is happening" for "Phenomena occur"), but the conclusion text should not
+introduce logic, synthesis, or framing that goes beyond the claim.
+
+**Supporting and explanatory points go in nested sub-bullets beneath the
+concluding statement.** Use the `text`/`items` format. This includes:
+- Vocabulary definitions (A "quality" is a singular distinct phenomenon.)
+- Why this matters / what it establishes
+- Clarifying scope or precision
+
+**Definitions are direct, not meta.** Write `A "quality" is a singular
+distinct phenomenon` — not `"Quality" is the label for a distinct
+phenomenon`. Every node in the tree labels what occurs; that framing is
+not specific to any node and adds nothing. Just state what the thing IS.
+
+**Scoping statements do not belong in Conclusion.** Statements like "this
+does not yet say X" or "the specific character of X is not yet identified"
+belong in Unknowns (what the node doesn't address) or Objections (if
+someone might conflate the node's scope with something broader). The
+Conclusion section is for what the node *does* establish.
+
+**Multiple concluding statements are possible.** When a node establishes
+more than one thing, each gets its own top-level bullet with its own nested
+explanations. The same nesting principle applies to each.
+
+### If Rejected
+
+Shows the specific cost of rejecting this node's conclusion. Not vague
+"things go wrong" — concrete consequences.
+
+**Use the expandable format** (`title`/`detail`/`children`) when rejections
+cascade. But not every If Rejected needs this structure — if the cost is
+a single clear consequence, a single expandable item without children is
+fine. Let the content take the shape it needs.
+
+**Every rejection should show what specifically becomes indistinguishable
+from what.** The cost is always a loss of distinction.
+
+**Prefer forward-looking consequences over backward-echoing.** The most
+useful If Rejected content shows what *cannot be built later* — which
+downstream vocabulary, distinctions, or conclusions become impossible. An
+If Rejected that merely says "this collapses back to the previous node"
+is just restating the previous node's work, not showing a new cost. The
+old project (Comparative Religion Diagram files) used If Rejected sections
+this way — showing implications for the whole pipeline, not just the
+immediate predecessor.
+
+### Unlocks
+
+What accepting this node makes possible. Two categories:
+- **Vocabulary** — new terms introduced by this node that later nodes use
+- **Next steps** — what questions or observations this node enables
+
+**The vocabulary bullet should list ALL common words the node grounds** —
+not just the main defined term. Use a nested bullet (`text`/`items`
+format) with the main term first, synonyms, and then an "Also grounded"
+sub-bullet for the smaller connector words that become usable once the
+observation is made. Reference the Phenomenology Diagram's term sets
+(PH1–RP5 in `3. DAG Definitions.txt`) for guidance on which words each
+node introduces. Example: 1.1.2 ("Distinct phenomena occur") grounds not
+just "distinct" but also "what," "one," "a," "the," "that," "each,"
+"from," "than," "which," "uniform," etc.
+
+### Eliminates
+
+Positions or claims that are ruled out by accepting this node. Each item
+should be a specific position someone might hold, stated clearly enough
+that the reader can evaluate whether they hold it.
+
+### Unknowns
+
+What this node does NOT address. Explicitly scoping what remains open
+prevents the reader from assuming the node claims more than it does. Each
+item should name a specific question that is deferred to a later node
+(cite the node if known).
+
+### Objections
+
+Every objection is presented **in its strongest form** before being
+addressed. Use the expandable format with three subSections:
+
+- **Objection Basis** — Why someone would hold this objection. Present it
+  charitably. The reader who holds this view should feel accurately
+  represented.
+- **What's Missing** — What the objection overlooks, conflates, or assumes.
+  Be specific about the error.
+- **Correction** — The resolution. Not "the objection is wrong" but the
+  precise fix that addresses the concern while preserving the node's claim.
+
+**Objections must include real positions people actually hold.** Don't
+limit objections to hypothetical philosophical exercises or artificially
+constructed challenges. Draw from positions held by real people and
+traditions — eliminativism, monism, substance dualism, empiricism, etc.
+The reader who holds one of these views should encounter it here and see
+it addressed. But conversely, don't fabricate objections nobody holds
+just for structural completeness.
+
+**If Rejected consequences are themselves objectable.** When If Rejected
+argues "rejecting X leads to consequence Y," someone may accept rejecting
+X but dispute that Y follows. If a real position exists where someone
+rejects the claim and denies the consequence (e.g., "I reject your
+definition but presence/absence don't collapse because I have a separate
+mechanism"), that dispute is a genuine objection that should be addressed.
+
+---
+
+## 5. Development Methodology
 
 ### Phase 1: Structuring (Top-Down)
 For each node, identify its child claims. Recurse until we reach terminal
@@ -147,6 +428,38 @@ Starting from the deepest terminal node, fully write all sections. Move to
 next sibling. When all siblings are done, ascend to parent (parent becomes
 synthesis/summary of children). Continue DFS.
 
+#### Parent Synthesis
+When all children of a node have been fleshed out, the parent node's
+sections are written next (before moving on to the next branch). Each
+parent section **generalizes** the corresponding sections across all its
+children at a higher level of abstraction:
+
+- **Observations:** The parent's observations capture the broader
+  phenomenon that the children's observations are specific instances of.
+  They do not repeat the children's observations — they point at the
+  general pattern the reader can now recognize.
+
+- **Conclusion:** Near-verbatim to the parent's claim (same rule as
+  children). Sub-bullets define any new terms at the parent's level of
+  generality.
+
+- **If Rejected:** Encompasses all children's If Rejected consequences.
+  Framed at the parent's level — e.g., "without X, none of Y₁–Yₙ can be
+  built" rather than listing each child's consequence.
+
+- **Unlocks / Eliminates:** Union of what the children collectively unlock
+  or eliminate, stated at the parent's level of generality.
+
+- **Unknowns:** Generalized unknowns that the children's unknowns are
+  specific instances of.
+
+- **Objections:** This is the key synthesis task. The parent's objections
+  generalize the children's objections such that each child's objections
+  are specific manifestations of the parent's. Do not simply list all
+  children's objections — find the higher-level concern that encompasses
+  them. The children's objections should read as concrete cases of the
+  parent's generalized objections.
+
 ### Continuous: Iterative Refinement
 Claims are provisional until the full tree beneath them is done. Fleshing
 out may reveal structural issues upstream. Cross-branch dependencies may
@@ -156,7 +469,7 @@ locked once its deepest descendants are done.
 
 ---
 
-## 4. Conventions and Rules
+## 6. Structural Rules and Conventions
 
 The tree is built by the same reasoning process it defines (1.5.9): observe
 → identify → induce → deduce → verify. The conventions below are organized
@@ -279,13 +592,13 @@ These ensure that each node is verifiable, accessible, and honestly presented.
 
 ---
 
-## 5. Derivation Principles
+## 7. Derivation Principles
 
 These are reusable reasoning patterns that govern how nodes are derived,
 ordered, and understood. They were discovered through iterative work and
 should be applied automatically when creating or reviewing nodes.
 
-### 5.1 Ordering Principles
+### 7.1 Ordering Principles
 
 **Break circularity by finding the more primitive concept.** When two
 concepts appear mutually dependent, one is always more primitive —
@@ -338,7 +651,7 @@ the general term from them — not the other way around. Example: "necessary"
 and "sufficient" are observed first, then "condition" is abstracted as the
 general pattern encompassing both.
 
-### 5.2 Grounding Principles
+### 7.2 Grounding Principles
 
 **Avoid capacity/possibility language before those concepts are defined.**
 Words like "can," "able," "capable," "possible," and the suffix "-able"
@@ -393,7 +706,7 @@ until its prerequisites are built. Example: inference is observed as a new
 statement resulting from others — without needing to explain the internal
 mechanism of how recognition of premises leads to the conclusion appearing.
 
-### 5.3 Language Principles
+### 7.3 Language Principles
 
 **Prefer neutral terms over assertive ones when willful connotations are
 ungrounded.** If a term carries connotations of agency, assertion, or
@@ -427,7 +740,18 @@ note the deferral — don't rephrase the claim to hide the gap. Example:
 "method" (class of processes) carries a real distinction from "process"
 (a specific sequence) — it was defined rather than rephrased away.
 
-### 5.4 Audit Principles
+**Term-grounding rules apply to claims, not section content.** The
+restrictions on ungrounded vocabulary (capacity language before 1.4.4.1,
+causal language before non-willful causation, logical connectives before
+1.4.4.6) apply to **node claims** — the headers that build the formal
+vocabulary chain. Section content (Observations, Conclusion body, If
+Rejected detail, Objections, Unlocks, etc.) is explanatory prose written
+for a reader who already speaks English. It uses whatever words communicate
+clearly, even if those words get formally defined later in the tree.
+Example: "indistinguishable" in an If Rejected detail is fine — it's
+explaining the cost in natural language, not making a formal claim.
+
+### 7.4 Audit Principles
 
 **Run dependency audits regularly.** After any restructuring, check every
 term in every affected node. For each term ask: is it (a) previously defined,
@@ -471,10 +795,204 @@ belongs in 1.4.5 (Argumentation), not in 1.6 where it is first used.
 
 ---
 
-## 6. Specific Clarifications
+## 8. AI Thinking Procedure
+
+**Re-read this section before every response where nodes are created or
+modified.** It exists because the AI consistently forgets to apply specific
+principles after a few messages — especially auditing, redundancy checking,
+observe-before-abstracting, and the section-writing rules from Section 4.
+
+### Before Proposing Any Node
+
+Run these checks in order. Each one is a gate — if it fails, stop and fix
+before proceeding.
+
+**1. Does this node say anything new?**
+Substitute all defined terms with their formal definitions. Does the
+resulting statement express something not already captured by an existing
+node? If it follows trivially from combining existing definitions applied
+to already-defined terms, it does not earn a node (convention 14) unless it
+both aids recognition (convention 18) AND is a genuinely new application
+that downstream nodes depend on. If redundant, absorb or remove.
+
+**2. Is every term grounded?**
+For each term in the claim: is it (a) defined in a prior node, (b) being
+defined right now, or (c) common English needing no definition? Flag any
+term that fails. **If a term fails, stop and fix it — do not construct a
+defense for keeping it.** Rationalizing an ungrounded term is confirmation
+bias, not rigor. The correct response to identifying a problem is proposing
+a fix, not arguing the problem away. Pay special attention to:
+- Causal/agentive language: "make," "determine," "produce," "generate"
+- Capacity/possibility language: "can," "able," "capable," "-able" suffix
+  (only grounded after 1.4.4.1)
+- Logical connectives: "if" (only grounded after 1.4.4.6)
+
+**3. Does the claim use terms by their definitions, not connotations?**
+Substitute each defined term's formal definition into the claim. Does it
+still read correctly? If the formal definition doesn't fit but the common
+English connotation does, the usage is ungrounded.
+
+**4. If defining a new term — where does it structurally belong?**
+Trace the definition's dependencies. Place it where it fits structurally
+(logical structures in 1.4, processes in 1.5, etc.), not where it is first
+needed. Types are children of their parent concept. Classes of X go after
+X is defined.
+
+**5. If stating a general rule — are the observed cases grounded first?**
+The tree derives rules from observations, not the other way around. Before
+stating any general principle, identify the specific observable cases that
+exhibit the pattern. These cases must appear as prior siblings or children.
+Do not state the rule and then justify it — observe, then induce.
+
+### Before Writing Section Content
+
+**6. Review the Section Writing Guide (Section 4).** Specifically:
+- Are Observations raw material only? No conclusions, arguments,
+  meta-commentary, or vocabulary labeling?
+- Do Observations use only grounded terms? (Prior definitions, the term
+  being defined, or genuinely neutral common English.)
+- Is the Conclusion text near-verbatim to the node's claim? (No added
+  synthesis, logic, or framing beyond the claim itself.)
+- Are definitions direct ("A quality IS...") not meta ("Quality is the
+  label for...")?
+- Does If Rejected show forward-looking costs (what can't be built later),
+  not just backward-echoing (this collapses to the previous node)?
+- Are Objections steelmanned with the three-part structure?
+- Does any section justify the current node by citing a future node?
+  (This is circular — remove it.)
+
+### After Proposing a Node or Set of Nodes
+
+**7. Dependency audit.**
+For every term in every proposed claim, confirm it passes check #2.
+Cross-check: does any proposed node use a term defined by a later sibling?
+If so, reorder.
+
+**8. Synonym collision check.**
+Does any term in the proposal already exist in the vocabulary with a
+different meaning? If so, rename. One term = one meaning.
+
+**9. Final child test.**
+Does the last substantive child naturally arrive at the parent's meaning
+(convention 13)? If not, either a child is missing or the parent header
+needs adjusting.
+
+**10. Convention 14 sweep.**
+Is every node a genuine atomic step? Remove any node that exists only for
+structural completeness. But also: are there any skipped steps — cases
+where the logical gap between two siblings requires an intermediate node?
+
+**11. If Rejected consequence audit.**
+For each If Rejected consequence, ask: does a real position exist where
+someone rejects the claim but disputes that this consequence follows? If
+so, that dispute must appear as an Objection. The If Rejected shows the
+logical cost; the Objection engages with someone who denies the cost.
+
+**12. Real-world objection audit.**
+Are there real philosophical positions, religious traditions, or commonly
+held views that directly challenge this node's claim and are NOT yet
+represented in the Objections? If so, add them. If not, don't force any.
+
+### Common Mistakes to Watch For
+
+These are specific failure patterns observed in previous sessions. Treat
+them as red flags.
+
+- **Jumping to the abstraction.** Proposing a general rule without first
+  grounding it in observed cases. Fix: identify the observations first,
+  then induce.
+
+- **Sidestepping definitions.** Rephrasing a claim to avoid defining a
+  needed term. Fix: if the term carries a genuine distinction and its
+  prerequisites are met, define it. Don't hide the gap.
+
+- **Placing definitions where first used.** A definition belongs where it
+  fits structurally, not where it's first needed. Fix: trace dependencies
+  and place accordingly.
+
+- **Including redundant recall nodes.** Restating an existing definition
+  in slightly different language. Fix: check if the node says anything new
+  (check #1). If not, the existing definition already does the job.
+
+- **Proposing before auditing.** Presenting a full structure and then
+  auditing only when prompted. Fix: audit every proposal before presenting
+  it. The checks above are not optional.
+
+- **Putting conclusions in Observations.** The Observations section is raw
+  material only. If an item synthesizes, labels, scopes, or argues, it
+  belongs elsewhere. Fix: move it to Conclusion, Unlocks, or Objections.
+
+- **Writing content from a detached stance.** Saying "there is redness"
+  instead of "red." The reader already experiences these things — point at
+  them directly. Fix: use specific immediate examples, not philosophical
+  descriptions of examples.
+
+- **Choppy fragment style.** Trying to minimize word count by cutting
+  sentences into fragments that increase cognitive load. Fix: use natural
+  flowing sentences. Each sentence does one job.
+
+- **Synthetic conclusion text.** Writing a conclusion that synthesizes or
+  paraphrases the claim instead of using near-verbatim claim text. Fix:
+  the conclusion's main text must match the node's claim header almost
+  exactly. All elaboration goes in sub-bullets.
+
+- **Meta "label for" definitions.** Writing "X is the label for Y"
+  instead of "X is Y." The labeling framing applies equally to every
+  definition in the tree — it says nothing specific. Fix: define the
+  thing directly. "A quality IS a singular distinct phenomenon."
+
+- **Backward-echoing If Rejected.** Writing an If Rejected that just
+  restates the parent node's loss (e.g., "distinct phenomena have no
+  specific character" which echoes 1.1.2). Fix: show forward-looking
+  consequences — what downstream nodes can't be built.
+
+- **Circular future-node citation.** Justifying the current node by
+  citing a node that hasn't been established yet (e.g., using 1.2.1.1
+  in a 1.1.3 objection). Fix: every justification must be self-contained
+  or reference only prior/current nodes.
+
+- **Ungrounded observation terms.** Using terms in Observations that
+  haven't been defined and aren't genuinely neutral common English (e.g.,
+  "there" doing philosophical work meaning "present"). Fix: observations
+  must use only prior-defined terms, the term being defined, or truly
+  neutral English.
+
+- **Treating subtypes as separate categories.** Saying "an association
+  is not a quality" when in fact associations are a specific kind of
+  quality. Fix: check the type hierarchy. If B is defined as a specific
+  case of A, B is still an A.
+
+- **Defending identified problems instead of fixing them.** Noticing that
+  a term is ungrounded or a claim has an issue, then constructing an
+  argument for why it's acceptable rather than flagging and fixing it.
+  This is confirmation bias support — the opposite of the project's
+  purpose. Fix: when a check fails, the response is always "fix it,"
+  never "defend it." Challenge the content, not the audit.
+
+- **Vocabulary-framing in non-Unlocks sections.** Writing soWhat, If
+  Rejected, or Conclusion sub-bullets that frame the node's purpose as
+  "building vocabulary" or "producing terms." Fix: frame the purpose as
+  establishing grounded observations. "Without this, there is no grounded
+  starting point" — not "without this, there is no starting vocabulary."
+  Vocabulary focus belongs only in Unlocks.
+
+- **Sanitized or artificial objections.** Writing objections that are
+  purely hypothetical philosophical exercises while missing positions that
+  real people actually hold (eliminativism, monism, dualism, etc.). Fix:
+  check whether real traditions or commonly held views challenge the claim.
+  If so, represent them. But don't fabricate objections nobody holds.
+
+- **Undisputed If Rejected consequences.** Writing If Rejected
+  consequences without checking whether anyone disputes the consequence
+  chain itself. Fix: for each consequence, ask "does someone accept
+  rejecting X but deny Y follows?" If so, that's a missing Objection.
+
+---
+
+## 9. Specific Clarifications
 
 These are particular questions that were resolved during development. Each
-one instantiates a general principle from Section 5 — the principle is noted
+one instantiates a general principle from Section 7 — the principle is noted
 so that similar questions in the future can be resolved the same way.
 Deferrals are tentative and open for discussion as the tree develops.
 
@@ -489,24 +1007,24 @@ Deferrals are tentative and open for discussion as the tree develops.
 - **Sensation = intensity without wanting.** Intensity is a cross-cutting
   attribute (dim/strong) of all phenomena. Sensation is the experience of
   intensity. Not a type of phenomenon — it's the qualitative feel of any
-  phenomenon's intensity. *Principle: types are children, not siblings (5.1).
+  phenomenon's intensity. *Principle: types are children, not siblings (7.1).
   Sensation is not a sibling type alongside willful/temporal/etc. — it cuts
   across all of them.*
 
 - **Correlation is strict.** A single observed break means no direct
   correlation. Will is a *factor*, not the determining cause. *Principle:
-  prefer weaker claims grounded in observation (5.1).*
+  prefer weaker claims grounded in observation (7.1).*
 
 - **Knowledge is defined without truth.** Knowledge = when an answer occurs.
   It can be right or wrong. *Principle: break circularity by finding the more
-  primitive concept (5.1). Knowledge is identifiable from experience without
+  primitive concept (7.1). Knowledge is identifiable from experience without
   truth; truth requires knowledge to already be defined.*
 
 - **Will is a specific type of want.** Will (1.2.5.1.8) = a wanted want.
   Desire (1.2.5.1.7) = an unwanted want. "I"
   (1.3.7.1) is identified through will (deliberate, endorsed wanting), not
   through desire (involuntary craving). *Principle: types are children, not
-  siblings (5.1). Will and desire are types of want, distinguished by
+  siblings (7.1). Will and desire are types of want, distinguished by
   whether the want is itself wanted.*
 
 - **"I want to know what is true" (Node 1.7) is compatible with "a method
@@ -515,30 +1033,30 @@ Deferrals are tentative and open for discussion as the tree develops.
   whose results are independent from truth. Wanting to know the truth is
   wanting knowledge (1.2.6.3), indifferent to which answer — not wanting a
   specific description to match reality. *Principle: check that terms used
-  match their definitions, not common connotations (5.4).*
+  match their definitions, not common connotations (7.4).*
 
 - **Truth corresponds with rationality, not comprehensibility.** All four
   combinations of rational/irrational × comprehensible/incomprehensible
   exist. This distinction is critical downstream (mysteries vs.
-  contradictions in Node 4). *Principle: two levels of visualization (5.2) —
+  contradictions in Node 4). *Principle: two levels of visualization (7.2) —
   testing definitions together vs. testing the object itself are independent
   acts.*
 
 - **"Condition" grounds "if."** The word "if" introduces a condition.
   Therefore "if" cannot be used in node claims before "condition" is defined
   (1.4.4.6). *Principle: avoid capacity/possibility language before those
-  concepts are defined (5.2) — extended to all logical connectives.*
+  concepts are defined (7.2) — extended to all logical connectives.*
 
 - **Necessary is experientially prior to sufficient.** The experience of
   "removing breaks it" (necessity) is recognized before "having guarantees
   it" (sufficiency). Both are observed before "condition" is abstracted as
   the general term. *Principle: observe the specific before naming the
-  general (5.1).*
+  general (7.1).*
 
 - **Possible/impossible are epistemic, not metaphysical.** A statement is
   "possible" when it doesn't contradict what is currently known. It can
   become "impossible" after new learning. *Principle: prefer weaker claims
-  grounded in observation (5.1).*
+  grounded in observation (7.1).*
 
 - **The 1.4/1.5 boundary.** 1.4 = structural vocabulary (what logical things
   ARE — states and structures). 1.5 = process (what you DO with them — acts
@@ -555,7 +1073,7 @@ Deferrals are tentative and open for discussion as the tree develops.
   willful act of constructing or recognizing arguments is correctly captured
   by 1.5's process terms (inference, deduction, reasoning). *Principle:
   check that terms used match their definitions, not common connotations
-  (5.4). Also: states before processes (convention 5) — the structure exists
+  (7.4). Also: states before processes (convention 5) — the structure exists
   independently; the willful act operates on it.*
 
 - **Three-layer distinction: implication / inference / mechanism.**
@@ -563,14 +1081,14 @@ Deferrals are tentative and open for discussion as the tree develops.
   statements. Inference (1.5.1) is the observable event of arriving at a new
   statement. Mechanism is how inference happens internally. Each layer is
   observable without the one above it. *Principle: distinguish observing an
-  occurrence from knowing its mechanism (5.2).*
+  occurrence from knowing its mechanism (7.2).*
 
 - **Logical "why" vs. causal "why."** The logical "why" asks for the
   premises that imply a statement's truth — this is justification, fully
   groundable in 1.4 vocabulary. The causal "why" asks what produced an
   event — this requires non-willful causation, projection, and the
   model/representation chain. *Principle: states before processes (convention
-  5), and distinguish occurrence from mechanism (5.2). The logical "why"
+  5), and distinguish occurrence from mechanism (7.2). The logical "why"
   points at static structure; the causal "why" points at mechanism.*
 
 - **Old 1.6 ("Wanting something to be true doesn't make it true") absorbed
@@ -582,13 +1100,13 @@ Deferrals are tentative and open for discussion as the tree develops.
   — was redistributed: the first two became observed cases in 1.6
   (grounding the meta-constraint on reasoning), and the third moved to 1.7
   (the commitment). *Principles: check if a proposed node says anything new
-  (5.4); avoid causal/agentive language (5.2).*
+  (7.4); avoid causal/agentive language (7.2).*
 
 - **Justification belongs in 1.4.5, not 1.6.** A justification is a valid
   argument whose conclusion is a belief — a logical structure, not a
   process. The 1.4/1.5 boundary test: it names a static structure
   (a specific type of argument), not an act or method. *Principle: check
-  where a definition structurally belongs (5.4); states before processes
+  where a definition structurally belongs (7.4); states before processes
   (convention 5).*
 
 - **Method belongs in 1.5, between process and reasoning.** A method is a
@@ -596,8 +1114,37 @@ Deferrals are tentative and open for discussion as the tree develops.
   "Reasoning" is more precisely a method (a class of processes sharing the
   observe→identify→induce→deduce→verify pattern) than a single process.
   Each instance of reasoning is a specific process; reasoning itself is the
-  method. *Principle: never sidestep a definition for convenience (5.3);
-  check where a definition structurally belongs (5.4).*
+  method. *Principle: never sidestep a definition for convenience (7.3);
+  check where a definition structurally belongs (7.4).*
+
+- **Term-grounding rules apply to claims only, not section content.** The
+  restrictions on capacity language ("-able"), causal language ("make,"
+  "produce"), and logical connectives ("if") apply to node claims — the
+  headers that build the formal vocabulary chain. Section content
+  (Observations, Conclusion body, If Rejected detail, Objections, etc.)
+  is explanatory prose for a reader who already speaks English. It uses
+  whatever words communicate clearly, even if those words get formally
+  defined later. Example: "indistinguishable" in an If Rejected detail
+  is fine. *Principle: the tree models the order of identification, not
+  the order of language use (convention 9).*
+
+- **All phenomena are qualities.** "Quality" (1.1.3) is the first
+  vocabulary term — it labels any singular distinct phenomenon. Everything
+  that follows (associations, awareness, features, patterns, etc.) is a
+  more specific kind of quality, not a separate category. *Principle:
+  types are children, not siblings (7.1).*
+
+- **Associations are a kind of quality.** An association (1.1.4) is the
+  quality of connection — the phenomenon of multiple things occurring
+  together. It is not a non-quality or a separate ontological category.
+  *Principle: types are children, not siblings (7.1). Associations are
+  specific qualities, not alternatives to them.*
+
+- **Awareness is a quality.** Awareness (1.1.5) is the quality of
+  occurrence — "red occurs" and "awareness of red" describe the same
+  thing. Awareness is not a separate layer on top of occurrence; it IS
+  occurrence named from the inside. *Principle: distinguish labeling
+  from adding. Giving a name to something doesn't add a new thing.*
 
 ### Open / Tentative Deferrals
 
@@ -652,10 +1199,18 @@ develops.
 
 ---
 
-## 7. Current State of Node 1
+## 10. Current State of Node 1
 
 Node 1's claim: **"Some things are true and some are false — and I want to
 be able to tell which is which."**
+
+Phase 1 (structuring) is complete for all of Node 1. 168 nodes are in
+data.json with claims and DAG connections finalized. (1.7 is a terminal
+synthesis node with no children.)
+
+Phase 2 (fleshing out sections) is in progress. Working DFS from deepest
+terminal nodes upward. **Nodes 1.1.1 through 1.1.5 are complete.** Next:
+1.1 (parent synthesis of 1.1.1–1.1.5), then 1.2.1.1.
 
 Node 1 has 7 children:
 
@@ -969,30 +1524,24 @@ Indentation convention:
     1.6.5. Truth and falsehood lack distinction in a method of reasoning that is independent from truth.
 ```
 
-#### 1.7 (children TBD)
+#### 1.7
 
 ```
 1.7. "I want to know what is actually true — not what I want to be true."
-    (children TBD — synthesis of all prior nodes)
 ```
 
 ---
 
-## 8. Planned Content for Upcoming Nodes
+## 11. Planned Content for Upcoming Nodes
 
-### 1.6 — A method of reasoning that justifies falsehood can't distinguish it from truth
+### 1.6 — Phase 2 notes
 
-**Structured.** Absorbs the old 1.6 ("wanting something to be true doesn't
-make it true") and old 1.7 into a single node. The old 1.6's content was
-already established by 1.3.1; its substantive observations (hope about
-falsehood, assumption about falsehood) became grounding cases for the
-meta-constraint. The "wanting to know vs. wanting a specific answer"
-distinction moved to 1.7.
-
-Children: 1.6.1 (hope about something false), 1.6.2 (assumption about
-something false), 1.6.3 (outcome of reasoning can be false), 1.6.4 (method
-that justifies falsehood is independent from truth), 1.6.5 (truth and
-falsehood lack distinction through such a method). All terminal.
+**Phase 1 complete.** Children are in data.json. Absorbs the old 1.6
+("wanting something to be true doesn't make it true") and old 1.7 into a
+single node. The old 1.6's content was already established by 1.3.1; its
+substantive observations (hope about falsehood, assumption about falsehood)
+became grounding cases for the meta-constraint. The "wanting to know vs.
+wanting a specific answer" distinction moved to 1.7.
 
 **Objections to consider (Phase 2):**
 - "All reasoning starts from assumptions — isn't every system ultimately
@@ -1020,9 +1569,9 @@ falsehood lack distinction through such a method). All terminal.
   affecting body, which affects reality. The description's truth still
   depends on whether it matches reality, not on the wanting itself.)
 
-### 1.7 — "I want to know what is actually true — not what I want to be true."
+### 1.7 — Phase 2 notes
 
-Synthesis of all prior nodes. Synonymous with Node 1's claim. Combines:
+Terminal synthesis node (no children). Synonymous with Node 1's claim. Combines:
 truth and falsehood exist (1.4), reasoning is how we check (1.5), methods
 that justify falsehood can't distinguish truth (1.6). The result is a
 personal commitment — stated in first person — to follow reasoning wherever
@@ -1046,7 +1595,7 @@ distinction (moved from old 1.6).
 
 ### Node 2 — Discovering Reality
 
-This is where the deferred concepts from Section 6 likely land:
+This is where the deferred concepts from Section 9 likely land:
 representation, analogy, model, projection, non-willful causation, reason,
 why, explanation, understanding, accuracy. Also the verification →
 unobserved existence insight (synthesizing 1.3 + 1.5). The scope →
@@ -1067,132 +1616,6 @@ resolution → context → meaning chain may begin here or in Node 3.
 
 ### Nodes 3–8
 
-Content exists in the old project files (attached separately). Each node
-will be restructured into the tree format following the same Phase 1 → Phase
-2 methodology used for Node 1. The old files are numbered and roughly correspond
-by sieve layer:
-
-- `0` = Rules, intro, background, and methodology
-- `1` = Pursuit of Truth (maps to Node 1)
-- `2` = Discovering Reality (maps to Node 2)
-- `3` and `3.2` = Building Confidence (maps to Node 3)
-- `4` and `4.1` = Defining God (maps to Node 4)
-- `5` = Alignment with Reality (maps to Node 5)
-- `6` and `6.1` = Historical Comparison (maps to Node 6)
-- `7` and `7.1` = Non-Fundamental Comparison (maps to Node 7)
-- `8` = Results and Conclusion (maps to Node 8)
-- `9` = Appendices (incomplete)
-
----
-
-## 9. What to Work On Next
-
-In order of priority:
-
-1. **Structure children for 1.7:**
-   - 1.7 (Personal contract): Synthesis of all prior. Synonymous with
-     Node 1's claim. Includes the wanting-to-know vs.
-     wanting-a-specific-answer distinction.
-
-2. **Begin Phase 2 for Node 1** — DFS fleshing out from deepest terminal
-   nodes upward.
-
-3. **Update data.json** — Remove filler content, insert real tree.
-
-4. **Continue to Nodes 2–8** following the sieve layer order.
-
----
-
-## 10. AI Thinking Procedure
-
-These are the steps the AI must follow when proposing, reviewing, or
-restructuring nodes. The procedure exists because the AI consistently
-forgets to apply specific principles after a few messages — especially
-auditing, redundancy checking, and observe-before-abstracting. This section
-is designed to be re-read at the start of every response where nodes are
-being created or modified.
-
-### Before Proposing Any Node
-
-Run these checks in order. Each one is a gate — if it fails, stop and fix
-before proceeding.
-
-**1. Does this node say anything new?**
-Substitute all defined terms with their formal definitions. Does the
-resulting statement express something not already captured by an existing
-node? If it follows trivially from combining existing definitions applied
-to already-defined terms, it does not earn a node (convention 14) unless it
-both aids recognition (convention 18) AND is a genuinely new application
-that downstream nodes depend on. If redundant, absorb or remove.
-
-**2. Is every term grounded?**
-For each term in the claim: is it (a) defined in a prior node, (b) being
-defined right now, or (c) common English needing no definition? Flag any
-term that fails. Pay special attention to:
-- Causal/agentive language: "make," "determine," "produce," "generate"
-- Capacity/possibility language: "can," "able," "capable," "-able" suffix
-  (only grounded after 1.4.4.1)
-- Logical connectives: "if" (only grounded after 1.4.4.6)
-
-**3. Does the claim use terms by their definitions, not connotations?**
-Substitute each defined term's formal definition into the claim. Does it
-still read correctly? If the formal definition doesn't fit but the common
-English connotation does, the usage is ungrounded.
-
-**4. If defining a new term — where does it structurally belong?**
-Trace the definition's dependencies. Place it where it fits structurally
-(logical structures in 1.4, processes in 1.5, etc.), not where it is first
-needed. Types are children of their parent concept. Classes of X go after
-X is defined.
-
-**5. If stating a general rule — are the observed cases grounded first?**
-The tree derives rules from observations, not the other way around. Before
-stating any general principle, identify the specific observable cases that
-exhibit the pattern. These cases must appear as prior siblings or children.
-Do not state the rule and then justify it — observe, then induce.
-
-### After Proposing a Node or Set of Nodes
-
-**6. Dependency audit.**
-For every term in every proposed claim, confirm it passes check #2.
-Cross-check: does any proposed node use a term defined by a later sibling?
-If so, reorder.
-
-**7. Synonym collision check.**
-Does any term in the proposal already exist in the vocabulary with a
-different meaning? If so, rename. One term = one meaning.
-
-**8. Final child test.**
-Does the last substantive child naturally arrive at the parent's meaning
-(convention 13)? If not, either a child is missing or the parent header
-needs adjusting.
-
-**9. Convention 14 sweep.**
-Is every node a genuine atomic step? Remove any node that exists only for
-structural completeness. But also: are there any skipped steps — cases
-where the logical gap between two siblings requires an intermediate node?
-
-### Common Mistakes to Watch For
-
-These are specific failure patterns observed in previous sessions. Treat
-them as red flags.
-
-- **Jumping to the abstraction.** Proposing a general rule without first
-  grounding it in observed cases. Fix: identify the observations first,
-  then induce.
-
-- **Sidestepping definitions.** Rephrasing a claim to avoid defining a
-  needed term. Fix: if the term carries a genuine distinction and its
-  prerequisites are met, define it. Don't hide the gap.
-
-- **Placing definitions where first used.** A definition belongs where it
-  fits structurally, not where it's first needed. Fix: trace dependencies
-  and place accordingly.
-
-- **Including redundant recall nodes.** Restating an existing definition
-  in slightly different language. Fix: check if the node says anything new
-  (check #1). If not, the existing definition already does the job.
-
-- **Proposing before auditing.** Presenting a full structure and then
-  auditing only when prompted. Fix: audit every proposal before presenting
-  it. The checks above are not optional.
+Content exists in the old project files (Comparative Religion Diagram
+folder). Each node will be restructured into the tree format following the
+same Phase 1 → Phase 2 methodology used for Node 1.

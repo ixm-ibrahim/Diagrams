@@ -11,7 +11,7 @@
  * =============================================================================
  */
 
-import { DataStore } from './data-store.js';
+import { DataStore, buildNodeHref } from './data-store.js';
 
 /* ---------------------------------------------------------------------------
  * Helpers
@@ -93,6 +93,13 @@ export function md(str) {
     // 2. Auto-link raw URLs (not already inside a markdown link)
     .replace(/(?<!\]\()https?:\/\/[^\s<>"'`,;)}\]]+/g, (url) =>
       stash(`<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`))
+    // 3. Node ID references: (1.2.3) or (1.2.3 — description)
+    //    Only matched when the ID exists in DataStore.
+    .replace(/\((\d+(?:\.\d+)+)(?:\s*[—–-]\s*([^)]*))?\)/g, (full, id, label) => {
+      if (!DataStore.map.has(id)) return full;          // not a node → leave as-is
+      const display = label ? label.trim() : id;
+      return stash(`(<a class="node-ref" data-node="${id}" href="${buildNodeHref(id)}">${display}</a>)`);
+    })
     // Underline: ++text++
     .replace(/\+\+(.+?)\+\+/g, '<u>$1</u>')
     // Bold: **text** or __text__
@@ -252,10 +259,70 @@ export function expander(node) {
 
 function logicRow(label, items, step, isNumbered) {
   if (!items?.length) return '';
-  const isComplex = typeof items[0] === 'object' && items[0] !== null;
-  const content = isComplex
-    ? `<div class="mini-stack">${items.map((it, idx) => recursiveMiniNode(it, isNumbered ? idx + 1 : null)).join('')}</div>`
-    : buildList(items);
+
+  // Classify items: "expandable" objects have `title` (mini-nodes),
+  // "nested" objects have `text` (simple nested bullets),
+  // strings are plain bullets.
+  const isExpandable = it => typeof it === 'object' && it !== null && it.title !== undefined;
+  const isNested     = it => typeof it === 'object' && it !== null && it.text !== undefined;
+  const isSimple     = it => typeof it === 'string';
+
+  const allExpandable = items.every(isExpandable);
+  const allBullets    = items.every(it => isSimple(it) || isNested(it));
+
+  let content;
+  if (allExpandable) {
+    content = `<div class="mini-stack">${items.map((it, idx) => recursiveMiniNode(it, isNumbered ? idx + 1 : null)).join('')}</div>`;
+  } else if (allBullets) {
+    content = buildList(items);
+  } else {
+    // Mixed array: group consecutive expandable objects into mini-stacks,
+    // consecutive strings/nested into bullet lists.
+    let miniIdx = 0;
+    const parts = [];
+    let stringBuf = [];
+
+    const flushStrings = () => {
+      if (stringBuf.length) {
+        parts.push(buildList(stringBuf));
+        stringBuf = [];
+      }
+    };
+
+    items.forEach(it => {
+      if (isExpandable(it)) {
+        flushStrings();
+        // Wrap each object group; single objects still get mini-stack for consistency
+        parts.push(recursiveMiniNode(it, isNumbered ? ++miniIdx : null));
+      } else {
+        parts.push(null); // placeholder
+        stringBuf.push(it);
+      }
+    });
+    flushStrings();
+
+    // Rebuild: replace null placeholders, wrap adjacent mini-nodes in a mini-stack
+    const finalParts = [];
+    let miniNodeBuf = [];
+    const flushMini = () => {
+      if (miniNodeBuf.length) {
+        finalParts.push(`<div class="mini-stack">${miniNodeBuf.join('')}</div>`);
+        miniNodeBuf = [];
+      }
+    };
+    for (const p of parts) {
+      if (p === null) continue;
+      // Detect if this part is a mini-node (starts with <div class="mini-node">)
+      if (p.trimStart().startsWith('<div class="mini-node">')) {
+        miniNodeBuf.push(p);
+      } else {
+        flushMini();
+        finalParts.push(p);
+      }
+    }
+    flushMini();
+    content = finalParts.join('');
+  }
 
   return `
     <div class="logic-section">
@@ -266,7 +333,15 @@ function logicRow(label, items, step, isNumbered) {
 }
 
 function buildList(items) {
-  return `<ul class="bullets">${items.map(i => `<li>${md(i)}</li>`).join('')}</ul>`;
+  return `<ul class="bullets">${items.map(i => {
+    if (typeof i === 'object' && i !== null && i.text !== undefined) {
+      const subList = i.items?.length
+        ? `<ul class="bullets">${i.items.map(s => `<li>${md(s)}</li>`).join('')}</ul>`
+        : '';
+      return `<li>${md(i.text)}${subList}</li>`;
+    }
+    return `<li>${md(i)}</li>`;
+  }).join('')}</ul>`;
 }
 
 /* ---------------------------------------------------------------------------
@@ -312,8 +387,8 @@ function buildMiniNodeContent(data) {
 
 export function tabContent(items, isNumbered) {
   if (!items?.length) return `<ul class="bullets"><li>—</li></ul>`;
-  const isComplex = typeof items[0] === 'object' && items[0] !== null;
-  if (isComplex) {
+  const hasExpandable = items.some(it => typeof it === 'object' && it !== null && it.title !== undefined);
+  if (hasExpandable) {
     return `<div class="mini-stack">${items.map((it, idx) => recursiveMiniNode(it, isNumbered ? idx + 1 : null)).join('')}</div>`;
   }
   return buildList(items);

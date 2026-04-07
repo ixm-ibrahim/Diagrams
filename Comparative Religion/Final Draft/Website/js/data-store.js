@@ -80,6 +80,46 @@ export async function loadMapData(mapName = 'data') {
 }
 
 /**
+ * Resolves a node ID to the page (parent) that contains it.
+ * Non-terminal nodes with children are their own page; terminal/childless
+ * nodes live on their parent's page.
+ * @param {string} nodeId
+ * @returns {string|null} the page-level node ID, or null for root
+ */
+export function resolveNodePageId(nodeId) {
+  const node = DataStore.map.get(nodeId);
+  if (!node) return null;
+  const hasChildren = DataStore.nodes.some(n => n.parentId === node.id);
+  const isTerminal = node.hasDerivation === false;
+  return (!isTerminal && hasChildren) ? node.id : node.parentId;
+}
+
+/**
+ * Builds a proper href URL for navigating to a given node.
+ * Works correctly when opened in a new tab.
+ * @param {string} nodeId — the node to link to
+ * @returns {string} a relative URL like "?node=1.1.1" or "?node=root"
+ */
+export function buildNodeHref(nodeId) {
+  const pageId = resolveNodePageId(nodeId);
+  if (pageId === null || pageId === undefined) return '?node=root';
+  return `?node=${pageId}`;
+}
+
+/**
+ * Builds a proper href URL for a breadcrumb/nav target.
+ * @param {string} target — a node ID, 'null' (for root), or HOME_PAGE_ID
+ * @param {string} homePageId — the HOME_PAGE_ID constant
+ * @returns {string}
+ */
+export function buildTargetHref(target, homePageId) {
+  if (target === homePageId || target === 'null' || target === null) {
+    return '?';
+  }
+  return `?node=${target}`;
+}
+
+/**
  * Compares two nodes by their IDs in numeric segment order.
  * "1.3.2" vs "1.3.10" → splits to [1,3,2] vs [1,3,10] → 2 < 10.
  * Nodes at different depths sort parents before children: "1" < "1.1".

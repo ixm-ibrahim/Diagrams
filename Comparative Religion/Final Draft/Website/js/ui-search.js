@@ -144,6 +144,8 @@ function handleSearch(rawQuery) {
   const wrap = document.createElement('div');
   wrap.className = 'search-results-wrap';
 
+  const singleGroup = grouped.size === 1;
+
   grouped.forEach((nodes, parentId) => {
     const parentNode = parentId ? DataStore.map.get(parentId) : null;
     const pageTitle = parentNode
@@ -151,7 +153,7 @@ function handleSearch(rawQuery) {
       : (DataStore.config.title || 'Project Overview');
 
     const groupEl = document.createElement('div');
-    groupEl.className = 'search-result-box';
+    groupEl.className = 'search-result-box' + (singleGroup ? ' no-collapse' : '');
 
     // Header (clickable to collapse — handled by bindMapClicks in ui-events.js)
     const header = document.createElement('div');
@@ -321,7 +323,8 @@ function getNestedText(items) {
   if (!items) return '';
   return items.map(item => {
     if (typeof item === 'string') return item;
-    let text = `${item.title || ''} ${item.detail || ''}`;
+    let text = `${item.title || ''} ${item.text || ''} ${item.detail || ''}`;
+    if (item.items) text += ' ' + getNestedText(item.items);
     if (item.subSections) {
       text += ' ' + item.subSections.map(sub =>
         `${sub.label || ''} ${getNestedText(sub.items)}`

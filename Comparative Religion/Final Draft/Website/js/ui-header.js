@@ -11,7 +11,7 @@
  */
 
 import { TINT_SATURATION, TINT_LIGHTNESS, TINT_ALPHA } from './constants.js';
-import { DataStore } from './data-store.js';
+import { DataStore, buildTargetHref } from './data-store.js';
 import { AppState, HOME_PAGE_ID } from './state.js';
 import { md } from './templates.js';
 import { getPerceptualHue } from './color-engine.js';
@@ -363,7 +363,7 @@ export function updateHeaderContext() {
       els.pageSubtitle.innerHTML = md(homeSubtitle);
     if (els.breadcrumbRoot)
       els.breadcrumbRoot.innerHTML =
-        `<a href="#" class="crumb-link" data-target="${HOME_PAGE_ID}">${DataStore.config.breadcrumbRoot}</a>`;
+        `<a href="${buildTargetHref(HOME_PAGE_ID, HOME_PAGE_ID)}" class="crumb-link" data-target="${HOME_PAGE_ID}">${DataStore.config.breadcrumbRoot}</a>`;
 
   } else if (!AppState.currentParentId) {
     // Root level (Project Overview) — check config for pageIntro
@@ -377,8 +377,8 @@ export function updateHeaderContext() {
       els.pageSubtitle.innerHTML = md(DataStore.config.subtitle);
     if (els.breadcrumbRoot)
       els.breadcrumbRoot.innerHTML = DataStore.config.homePage
-        ? `<a href="#" class="crumb-link" data-target="${HOME_PAGE_ID}">${DataStore.config.breadcrumbRoot}</a>`
-        : `<a href="#" class="crumb-link" data-target="null">${DataStore.config.breadcrumbRoot}</a>`;
+        ? `<a href="${buildTargetHref(HOME_PAGE_ID, HOME_PAGE_ID)}" class="crumb-link" data-target="${HOME_PAGE_ID}">${DataStore.config.breadcrumbRoot}</a>`
+        : `<a href="${buildTargetHref('null', HOME_PAGE_ID)}" class="crumb-link" data-target="null">${DataStore.config.breadcrumbRoot}</a>`;
     if (els.breadcrumbCurrent)
       els.breadcrumbCurrent.textContent = DataStore.config.title;
 
@@ -447,6 +447,10 @@ function renderBreadcrumbs(activeNodeId) {
   }
 
   const prefix = DataStore.config.nodePrefix;
+  const crumbLabel = (node) => {
+    const base = `${prefix}${node.id}`;
+    return node.shortTitle ? `${base}. ${node.shortTitle}` : base;
+  };
 
   // Build crumbs as an array of { label, target } so we can link separators
   const homeTarget = DataStore.config.homePage ? HOME_PAGE_ID : 'null';
@@ -456,19 +460,19 @@ function renderBreadcrumbs(activeNodeId) {
   ];
   for (let i = 0; i < lineage.length - 1; i++) {
     const node = lineage[i];
-    crumbs.push({ label: `${prefix}${node.id}`, target: node.id });
+    crumbs.push({ label: crumbLabel(node), target: node.id });
   }
 
   // Render: each separator links to the NEXT crumb's target
   let html = '';
   crumbs.forEach((crumb, i) => {
     if (i > 0) {
-      html += ` <a href="#" class="crumb-link sep" data-target="${crumbs[i].target}" aria-label="Navigate to ${crumbs[i].label}">›</a> `;
+      html += ` <a href="${buildTargetHref(crumbs[i].target, HOME_PAGE_ID)}" class="crumb-link sep" data-target="${crumbs[i].target}" aria-label="Navigate to ${crumbs[i].label}">›</a> `;
     }
-    html += `<a href="#" class="crumb-link" data-target="${crumb.target}">${crumb.label}</a>`;
+    html += `<a href="${buildTargetHref(crumb.target, HOME_PAGE_ID)}" class="crumb-link" data-target="${crumb.target}">${crumb.label}</a>`;
   });
 
   els.breadcrumbRoot.innerHTML = html;
-  els.breadcrumbCurrent.textContent =
-    `${prefix}${lineage[lineage.length - 1].id}`;
+  const lastNode = lineage[lineage.length - 1];
+  els.breadcrumbCurrent.textContent = crumbLabel(lastNode);
 }

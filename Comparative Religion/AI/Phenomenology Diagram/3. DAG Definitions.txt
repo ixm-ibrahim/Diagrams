@@ -3,10 +3,10 @@
 **1. Phenomenological Primitives**
 | ID | Node | Inherits From | Terms Introduced | Question Addressed | Intuitive Example |
 |---|---|---|---|---|
-| PH1 | Phenomena occur. | --- | {is, not, occur, happen, feeling, appear, what, thing, nothing, phenomenon, primitive, raw, any} | Starting point: this either happens, or it does not. "Thing" here means any phenomenological occurrence, and "phenomenon" is our label for anything that occurs. | Red, loud, hungry, happy, pain, want, 2, unicorn, etc. |
-| PH2 | Distinct phenomena occur. | PH1 | {distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which, multiplicity} | In what way do phenomena occur? Distinctly, not as an undifferentiated mass. | Red is different than hungry, which is different than loud |
+| PH1 | Phenomena occur. | --- | {occur, happen, thing, phenomenon, primitive, raw} | Starting point: this either happens, or it does not. "Thing" here means any phenomenological occurrence, and "phenomenon" is our label for anything that occurs. | Red, loud, hungry, happy, pain, want, 2, unicorn, etc. |
+| PH2 | Distinct phenomena occur. | PH1 | {what, is, not, distinct, different, separate, other, uniform, one, the, a, that, each, from, than, which, multiplicity} | In what way do phenomena occur? Distinctly, not as an undifferentiated mass. | Red is different than hungry, which is different than loud |
 | PH3 | Qualities occur. | PH2 | {quality, qualia, variety, flavor, kind, type, content, of, have, when, with, seem, as} | How do phenomena distinctly occur? We label the distinctions between phenomena as "qualities". | Red is a quality, hungry is a quality | 
-| PH4 | Associations occur. | PH3 | {association, relation, synthesis, connection, like, with, similar, group, together, and, or} | How do qualities occur? With the primitive feeling that some phenomena are alike or belong together. We label these felt connections "associations". | Red is like blue, hungry is like thirsty, happiness is like sadness, pleasure is like pain |
+| PH4 | Associations occur. | PH3 | {association, relation, synthesis, connection, like, with, similar, group, any, together, and, or} | How do qualities occur? With the primitive feeling that some phenomena are alike or belong together. We label these felt connections "associations". | Red is like blue, hungry is like thirsty, happiness is like sadness, pleasure is like pain |
 | PH5 | Awareness is the occurrence of a quality or association. | PH4 | {given, presence, absence} | How do phenomena distinctly occur? The distinction of their occurrence is a quality. | the "there-ness" of red, loud, hungry, pain, want, 2, unicorn, etc. |
 
 ### Level 2 ###

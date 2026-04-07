@@ -1,0 +1,186 @@
+/* =============================================================================
+   node-ref-tooltip.css — Hover Tooltip for Node ID References
+   =============================================================================
+   Tooltip that opens when hovering over an inline node reference link (.node-ref).
+   Shows the referenced node's claim and its full ancestry chain.
+   Visually consistent with the ancestry dropdown on parent badge pills.
+
+   Depends on tokens.css:
+     --panel-bg, --border, --border-thin, --radius-md, --shadow-deep,
+     --text, --text-muted, --text-faint, --focus-ring, --accent
+
+   HTML classes styled here:
+     .node-ref (the inline link), .node-ref-tooltip-wrap, .node-ref-tooltip,
+     .node-ref-item, .node-ref-id, .node-ref-claim, .is-target
+   ============================================================================= */
+
+
+/* Inline link styling
+   ----------------------------------------------------------------------------- */
+.node-ref {
+  color: var(--accent, #5ebbf7);
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.node-ref:hover {
+  color: var(--text);
+}
+
+[data-theme="light"] .node-ref {
+  color: var(--accent, #2563eb);
+}
+
+[data-theme="light"] .node-ref:hover {
+  color: var(--text);
+}
+
+
+/* Wrapper: fixed to viewport
+   ----------------------------------------------------------------------------- */
+.node-ref-tooltip-wrap {
+  position: fixed;
+  z-index: var(--z-dropdown, 100);
+  pointer-events: auto;
+  transform: translateX(-50%);  /* center on left position */
+}
+
+
+/* Tooltip panel
+   ----------------------------------------------------------------------------- */
+.node-ref-tooltip {
+  min-width: 260px;
+  max-width: 420px;
+  max-height: 340px;
+  overflow-y: auto;
+  background: var(--panel-bg, #0f1730);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-deep);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  /* Entry animation */
+  opacity: 0;
+  transform: translateY(6px) scale(0.97);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+[data-theme="light"] .node-ref-tooltip {
+  background: #ffffff;
+}
+
+.node-ref-tooltip-wrap.tooltip-up .node-ref-tooltip {
+  transform: translateY(-6px) scale(0.97);
+}
+
+.node-ref-tooltip.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+/* Individual item (button)
+   ----------------------------------------------------------------------------- */
+.node-ref-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-muted);
+  text-align: left;
+  cursor: pointer;
+  font-size: 12.5px;
+  line-height: 1.35;
+  transition: background var(--transition-base, 0.15s) ease,
+              transform var(--transition-fast, 0.1s) ease;
+  width: 100%;
+}
+
+.node-ref-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(2px);
+}
+
+.node-ref-item:active {
+  transform: scale(0.98);
+}
+
+[data-theme="light"] .node-ref-item:hover {
+  background: rgba(16, 26, 53, 0.06);
+}
+
+/* The referenced node itself: highlight it */
+.node-ref-item.is-target {
+  color: var(--text);
+  font-weight: 500;
+}
+
+
+/* Item internals
+   ----------------------------------------------------------------------------- */
+.node-ref-id {
+  font-family: var(--font-mono, monospace);
+  font-weight: 800;
+  font-size: 11px;
+  opacity: 0.5;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.node-ref-item.is-target .node-ref-id {
+  opacity: 0.75;
+}
+
+.node-ref-claim {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* Scrollbar
+   ----------------------------------------------------------------------------- */
+.node-ref-tooltip::-webkit-scrollbar {
+  width: 4px;
+}
+
+.node-ref-tooltip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.node-ref-tooltip::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+
+/* Keyboard focus
+   ----------------------------------------------------------------------------- */
+.node-ref-item:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+
+
+/* Mobile
+   ----------------------------------------------------------------------------- */
+@media (max-width: 450px) {
+  .node-ref-tooltip {
+    min-width: 220px;
+    max-width: 300px;
+    max-height: 280px;
+  }
+  .node-ref-item {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}

@@ -4,7 +4,7 @@
     "subtitle": "Eight top-level conclusions. Click any node to expand its contents.",
     "breadcrumbRoot": "Home",
     "searchPlaceholder": "Find a claim / term...",
-    "nodePrefix": "S",
+    "nodePrefix": "",
     "homeTitle": "The Sieve of Truth",
     "homeSubtitle": "An interactive map for distinguishing truth from falsehood — using the same standards we apply everywhere else."
   },
@@ -18,6 +18,7 @@
       "prevIds": [],
       "hasDerivation": true,
       "claim": "\"Some things are true and some are false — and I want to be able to tell which is which.\"",
+      "shortTitle": "Truth & Falsehood",
       "soWhat": "",
       "search": "",
       "sections": []
@@ -133,10 +134,176 @@
       ],
       "prevIds": [],
       "hasDerivation": true,
-      "claim": "Phenomenological Grounding: \"distinct things occur in my awareness.\"",
-      "soWhat": "",
-      "search": "",
-      "sections": []
+      "claim": "Phenomenological Grounding: distinct things occur in awareness.",
+      "shortTitle": "Phenomenological Grounding",
+      "soWhat": "Without this, there is no grounded starting point — no phenomena, no distinctions, no qualities, no connections, and no awareness. Nothing to reason about, nothing to reason with.",
+      "search": "phenomenological grounding primitives phenomenon distinct quality association awareness experience starting point vocabulary",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Something is happening.",
+            "What is happening is not all the same — there are differences within it.",
+            "Each difference is something specific: red, hot, hungry, loud.",
+            "Some of these specific things feel connected — red is like blue, sweet goes with strawberry.",
+            "All of this is occurring — and that occurring is itself something, not nothing."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            {
+              "text": "Distinct things occur in awareness.",
+              "items": [
+                "Things happen (1.1.1), they are not all the same (1.1.2), each one is something specific — a quality (1.1.3), they occur with felt connections to each other — associations (1.1.4), and their occurring IS awareness (1.1.5).",
+                "This is the phenomenological floor — the most basic description of experience, from which everything that follows is built. Every observation, identification, and conclusion later in the tree traces back to these primitives."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "No grounded starting point exists",
+              "detail": "Every concept in the tree — information, identity, truth, reality, reasoning — is built from the observations established here: that phenomena occur, that they are distinct, that they have specific character (qualities), that they connect (associations), and that their occurring IS awareness. Without these, there is nothing to point at when grounding a claim and nothing to build later observations from.",
+              "children": [
+                {
+                  "title": "The entire project has no foundation",
+                  "detail": "The sieve depends on reasoning, which depends on knowledge, which depends on information, which depends on qualities and associations. Rejecting the phenomenological grounding removes the floor beneath every subsequent step — not just the next one, but all of them."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            {
+              "text": "The primitive vocabulary from which all later terms are built.",
+              "items": [
+                "\"Phenomenon\" — anything that occurs (1.1.1).",
+                "\"Distinct\" — not the same as something else (1.1.2).",
+                "\"Quality\" — a singular distinct phenomenon (1.1.3).",
+                "\"Association\" — a quality that occurs with multiple phenomena (1.1.4).",
+                "\"Awareness\" — the quality of occurrence (1.1.5).",
+                "Plus the connector vocabulary grounded along the way: what, one, a, the, that, each, from, than, which, of, have, as, like, with, together, and, or, similar, any, group, given, presence, absence."
+              ]
+            },
+            "The next step: identifying what these phenomena carry — information — and the structures it forms (1.2 — Epistemological Grounding)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Nothing whatsoever is happening — since holding that position is itself something happening.",
+            "Experience is a single undifferentiated occurrence with no internal distinctions.",
+            "Distinct phenomena have no specific character — distinctions exist but carry no content.",
+            "Qualities occur in total isolation with no felt connections between them.",
+            "Awareness is a separate entity behind experience — a \"watcher\" that observes from the outside."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "What structures or patterns qualities form — requires the epistemological vocabulary (1.2).",
+            "Who or what is aware — the question of a self or subject is addressed later (1.3.7).",
+            "Whether the qualities experienced correspond to anything beyond experience — requires ontological vocabulary (1.3).",
+            "Why anything occurs at all — mechanism questions are deferred to Node 2."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "This is so basic it says nothing — everyone already knows things happen in their experience.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "The entire section is a laborious way of saying \"I experience stuff.\" Every conscious person already knows this. Building five nodes to arrive at something this obvious seems like wasted effort."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The section's purpose is not to inform but to ground. Every technical term used later in the tree — information, identity, truth, reality, reasoning — needs to trace back to something undeniable. Without this grounding, any later term could be challenged as undefined or circular.",
+                    "The progression is also not as trivial as it appears: it separates occurrence from distinction from specificity from connection from presence — five observations that are often conflated but are genuinely different. Each one adds vocabulary the others don't."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The section is basic by design — it establishes the floor. Its value is not in surprising the reader but in giving every downstream claim an explicit, unchallengeable starting point. The alternative is starting from undefined terms and hoping no one asks what they mean."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "All of this could be an illusion — how do you know any of it is real?",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Dreams feel real while you're in them. Brains can hallucinate. Simulations could be indistinguishable from reality. If experience itself could be fabricated, then grounding everything in experience is grounding everything in something potentially false."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "This section does not claim that what occurs is real, accurate, or external. It claims only that occurrence is happening, that it contains distinctions, and that those distinctions have specific character. A dream contains all of these. A hallucination contains all of these. A simulation contains all of these.",
+                    "The question of whether experience corresponds to something beyond itself is real and important — but it belongs to the ontological grounding (1.3), which builds the vocabulary for independence, objecthood, and reality. This section stays beneath that question deliberately."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The illusion objection targets a claim this section does not make. Even a perfect illusion is an occurrence with distinct qualities and associations — which is all this section establishes. The question \"is it real?\" comes later (1.3), and it depends on these primitives being in place to even ask."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "These five steps could be collapsed into fewer — the distinctions between them are artificial.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Why separate \"phenomena occur\" from \"distinct phenomena occur\" from \"qualities occur\"? These seem like slightly different ways of saying the same thing. The granularity seems forced rather than natural."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "Each step adds vocabulary the previous one doesn't. \"Phenomena occur\" gives occurrence but not multiplicity. \"Distinct phenomena occur\" gives multiplicity but not specificity. \"Qualities occur\" gives specificity but not connection. \"Associations occur\" gives connection but not the character of occurrence itself. \"Awareness\" identifies that character.",
+                    "Collapsing any two of these leaves a gap in the vocabulary chain. Later nodes that depend on the missing term (e.g., \"feature\" depends on \"quality,\" \"pattern\" depends on \"association\") would have no grounded definition to build from."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The granularity is not about the reader's experience being fragmented into five separate moments — it all occurs at once. The five steps are the order in which each aspect is *identified and named*, so that later nodes have explicit terms to reference. The cost of collapsing is hidden dependencies; the cost of separating is mild redundancy. The tree chooses explicitness over brevity."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1.2",
@@ -235,9 +402,199 @@
       "prevIds": [],
       "hasDerivation": false,
       "claim": "Phenomena occur.",
-      "soWhat": "",
-      "search": "",
-      "sections": []
+      "shortTitle": "Phenomena Occur",
+      "soWhat": "Without this, there is nothing to reason about, nothing to observe, and no starting point for any inquiry.",
+      "search": "phenomena occur happen experience primitive starting point self-evident awareness thing",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Red",
+            "Hot",
+            "Pressure",
+            "Hungry",
+            "Ouch",
+            "Strawberry",
+            "The feeling of knowing your arm's position right now (even without seeing it)",
+            "\"2 + 2 = 4\"",
+            "\"Cruelty is wrong\"",
+            "\"The earth is flat\"",
+            "The number two",
+            "A flying pig"
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            {
+              "text": "Something is happening.",
+              "items": [
+                "\"Phenomenon\" is the label for anything that occurs. \"Thing\" means the same at this level.",
+                "This is the starting point for everything that follows — nothing more basic is available to build from."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "The rejection is self-defeating",
+              "detail": "To reject the claim that phenomena occur, something must occur: the rejection itself. Doubting, denying, questioning, or even ignoring — each of these is itself a phenomenon. The act of rejecting is an instance of the very thing being rejected.",
+              "children": [
+                {
+                  "title": "No alternative is available",
+                  "detail": "There is no position from which this claim is rejected without that position itself being an occurrence. The rejection does not produce an alternative — it collapses into the claim it rejects."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+{
+              "text": "The vocabulary of \"phenomenon\" and \"occur\" — the most primitive terms in the tree, from which all later terms are built.",
+              "items": [
+                "\"Phenomenon\" — anything that occurs. Synonyms: thing, happening, occurrence.",
+                "\"Occur\" — to happen, to be present. Synonyms: happen, appear, is."
+              ]
+            },
+            "The next observation: whether what occurs is uniform or varied — whether there are distinctions within it (1.1.2)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "\"Nothing whatsoever is happening\" — since holding that position is itself *something* happening.",
+            "A more basic starting point — occurrence is the floor. There is nothing beneath it to appeal to."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "What is occurring — no specific content has been identified yet.",
+            "Whether what occurs is uniform or varied — this is addressed in the next node (1.1.2).",
+            "Who or what is experiencing the occurrence — no experiencer has been identified at this stage.",
+            "Why anything occurs at all — no mechanism or cause is available this early."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "This is trivially true and therefore says nothing meaningful.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "The claim \"phenomena occur\" is so basic that it seems to carry no informational weight. Saying \"things happen\" doesn't tell you anything you didn't already know."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The objection conflates being *basic* with being *empty*. A starting point does not need to be informative in the way later conclusions are — it needs to be undeniable and sufficient to build from.",
+                    "Every term defined later in the tree (identity, truth, reality, reasoning) traces back to this node. Its role is foundational, not informational."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The claim is not a tautology — it is a recognition. A tautology is true by definition of its terms alone. This claim registers an observation: that something is happening. Its value is not in what it tells you, but in what it establishes — a floor beneath which no further justification is needed or available."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "How do you know this isn't a dream, simulation, or illusion?",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Scenarios like Descartes' evil demon, the brain-in-a-vat, or simulation theory suggest that everything experienced might be fabricated. The claim that \"phenomena occur\" might be based on unreliable experience."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "This node is not making a claim about what *exists* or what is *real*. It is only noting that something is happening — even in a dream, a simulation, or an illusion, *something is still occurring*.",
+                    "A dream is itself a phenomenon. A simulated experience is itself a phenomenon. The deception scenarios do not eliminate occurrence — they *are* occurrences."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "This node does not claim that what occurs is real, accurate, or external. It only claims that occurrence is happening. The question of *what kind* of occurrence it is (real, dreamed, simulated) is a later question that depends on vocabulary not yet built. The observation stands regardless of which scenario is true."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "This assumes an observer — who is experiencing the phenomena?",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "\"Phenomena occur\" seems to implicitly require someone for them to occur *to*. The claim might be smuggling in an ungrounded assumption about a self or experiencer."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The claim does not say phenomena occur *to someone*. It says phenomena occur — full stop. The label \"phenomenon\" applies to anything that happens, without requiring an account of who or what registers it.",
+                    "\"I,\" \"self,\" and \"observer\" are identified much later in the tree (1.3.7). They are not assumed here."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The observation is pre-personal. It registers occurrence without attributing it to any subject. The question of *who* experiences is legitimate — but it depends on distinctions (identity, will, body) that have not been introduced yet."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Consciousness is an illusion — nothing is actually happening.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Some philosophers and neuroscientists (eliminative materialists, illusionists) argue that phenomenal consciousness does not exist — that there is no \"what it's like\" to experience. What we call experience is a construction of the brain, and the brain is wrong about its own inner states. Nothing is genuinely \"happening\" in the way this node claims."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The objection proves itself wrong in the act of stating itself. To hold that \"nothing is happening\" is to hold something — which is itself something happening. The illusion of experience is itself an experience. A brain being \"wrong about its inner states\" still involves inner states occurring.",
+                    "The eliminativist position targets a richer notion of consciousness — one involving unified subjects, qualia with specific metaphysical status, or irreducible phenomenal properties. This node does not claim any of that. It claims only that something is happening. The bar is as low as it can possibly be."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The claim \"phenomena occur\" is beneath the level at which eliminativism operates. Eliminativists deny that folk-psychological concepts (beliefs, qualia, consciousness-as-a-thing) accurately describe what exists. They do not — and cannot — deny that *something* is happening, because their own theorizing is itself something happening. The denial of occurrence is self-consuming."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1.1.2",
@@ -250,9 +607,166 @@
       ],
       "hasDerivation": false,
       "claim": "Distinct phenomena occur.",
-      "soWhat": "",
-      "search": "",
-      "sections": []
+      "shortTitle": "Distinct Phenomena",
+      "soWhat": "Without this, everything would be a single undifferentiated occurrence — no features, no comparisons, no identifications, and nothing to reason about.",
+      "search": "distinct different separate plural multiple not same variety differentiation multiplicity phenomenon",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Red is not hot.",
+            "Pressure is different than hunger.",
+            "Ouch is not strawberry.",
+            "The number two is not the feeling of your arm's position.",
+            "\"2 + 2 = 4\" is not a flying pig."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            {
+              "text": "Distinct phenomena occur.",
+              "items": [
+                "\"Distinct\" is the label for phenomena that are not the same as each other."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "All experience collapses into a single undifferentiated occurrence",
+              "detail": "If phenomena are not distinct, then red would be indistinguishable from hungry - which would then be the same as ouch - which would also be the same as a flying pig. There is no \"this\" versus \"that\" — only a single, featureless happening.",
+              "children": [
+                {
+                  "title": "Nothing further follows",
+                  "detail": "Every later step in the tree — identifying features, comparing information, distinguishing truth from falsehood — depends on there being more than one thing to work with. Without distinctions, there is nothing to identify, nothing to compare, and nothing to reason about."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+{
+              "text": "The vocabulary of \"distinct\" — not the same as each other.",
+              "items": [
+                "\"Distinct\" — not the same as something else. Synonyms: different, separate, other.",
+                "\"Multiplicity\" — the occurrence of more than one distinct phenomenon.",
+                "Also grounded: \"what\" (pointing at a specific phenomenon), \"one\" / \"a\" / \"the\" / \"that\" / \"each\" (singling out), \"from\" / \"than\" / \"which\" (comparing), \"uniform\" (what distinctness rules out)."
+              ]
+            },
+            "The next observation: what specifically makes phenomena distinct from each other (1.1.3 — qualities)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Experience is a single undifferentiated phenomenon with no internal distinctions.",
+            "Differences between phenomena are imposed or constructed rather than observed — at this level, the distinction is directly given, not inferred."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "What makes phenomena distinct from each other — the specific *character* of their differences is not yet identified (addressed in 1.1.3).",
+            "How many distinct phenomena there are — no count or enumeration is established.",
+            "Whether the distinctions are fundamental or superficial — that question requires vocabulary not yet built (1.2.5.7)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "Distinction requires a criterion — you haven't said what makes them different.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Claiming that phenomena are distinct requires identifying \"what\" makes them different. Without specifying what property differs, the claim is empty."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The objection conflates *observing* a difference with *explaining* a difference. You notice that red is not the same as hungry before you have any vocabulary for why. The observation of \"not the same\" is immediate — it does not wait for an account of what the difference consists in.",
+					"In other words, you don't need a theory of color and gastrointestinal physiology to recognize that red and hungry are not the same."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "This node registers the observation of difference, not its explanation. The specific character of what differs (qualities) is the next node (1.1.3). Requiring the explanation before the observation inverts the observe → identify pipeline."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "This is already implied by (1.1.1) — if multiple phenomena were listed, distinctness was assumed.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "The observations in (1.1.1) (red, hot, pressure, hungry...) were already presented as separate items. Saying \"distinct phenomena occur\" just restates what was already shown."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "(1.1.1) established that *something* occurs — and used diverse examples to show the range of what counts as a phenomenon. But it did not explicitly observe that these examples are *not the same as each other*. That is a separate observation: not just \"things happen,\" but \"different things happen.\""
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "(1.1.1) notes that something is happening. (1.1.2) notes that what is happening is not all the same. These are different observations — the first one alone doesn't rule out a single uniform occurrence, but the second one does. Making the step explicit prevents a hidden assumption."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "All distinctions are ultimately unreal — reality is one undifferentiated whole.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Major philosophical and religious traditions — Advaita Vedanta, Parmenides, some Buddhist schools — hold that multiplicity is illusory. What appears as distinct phenomena is ultimately one undivided reality (Brahman, the One, emptiness). The observation of distinctness is a product of ignorance, not a genuine feature of what exists."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "This node is not making a claim about what *ultimately exists*. It is noting what is directly given: red is not the same as hungry. Whether this distinction is \"ultimately real\" or \"illusory\" is a question about the metaphysical status of experience — which requires ontological vocabulary (1.3) not yet built.",
+                    "Even within the monist framework, the illusion of distinction is itself experienced as distinction. The Advaita tradition acknowledges this — *maya* (illusion) is experienced as real even if it is not ultimately real. The observation that red is not hungry stands within experience regardless of what is ultimately the case."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The objection targets a claim about ultimate reality. This node targets what is directly given in experience. These are different levels. The monist can consistently hold that distinctions are not ultimately real while acknowledging that, within experience, red is not hungry. This node operates at the experiential level — the question of whether experience reflects ultimate reality is deferred to (1.3)."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1.1.3",
@@ -265,9 +779,163 @@
       ],
       "hasDerivation": false,
       "claim": "Qualities occur.",
-      "soWhat": "",
-      "search": "",
-      "sections": []
+      "shortTitle": "Qualities",
+      "soWhat": "Without this, distinct phenomena would have no specific character — nothing to single out, identify, or refer to.",
+      "search": "quality qualia character content specific label name red hot hungry sweet distinct phenomenon",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Red.",
+            "Blue.",
+            "Hot.",
+            "Cold.",
+            "Sweet.",
+            "Hungry.",
+            "Ouch.",
+            "Loud."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            {
+              "text": "Qualities occur.",
+              "items": [
+                "A \"quality\" is a singular distinct phenomenon (1.1.2). Red is a quality. Hot is a quality. Hungry is a quality."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "Nothing specific to identify or refer to",
+              "detail": "Without qualities, there is nothing specific to single out, compare, or refer to. Features (1.2.1.3), patterns (1.2.1.6), and classes (1.2.1.9) all depend on having specific qualities to work with. The entire epistemological grounding (1.2) has no raw material."
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            {
+              "text": "The vocabulary of \"quality\" — a singular distinct phenomenon.",
+              "items": [
+                "\"Quality\" — a singular distinct phenomenon. Synonyms: character, content.",
+                "Also grounded: \"of\" (the quality OF a phenomenon), \"have\" (a phenomenon HAS a quality), \"as\" (occurring AS a quality), \"seem\" (how something SEEMS — its quality as presented)."
+              ]
+            },
+            "The next observation: whether there are felt connections between qualities (1.1.4 — associations)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Distinct phenomena are nameless and interchangeable — with nothing specific about any of them.",
+            "Distinction is purely negative — just \"not-X\" — with no positive content."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "Whether qualities occur in isolation or in connection with each other — addressed in the next node (1.1.4 — associations).",
+            "What structures or patterns qualities form — requires vocabulary not yet built (1.2.1).",
+            "Whether qualities are fundamental or superficial — addressed later (1.2.5.7)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "\"Quality\" is just another word for \"phenomenon\" — no new concept is introduced.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "In (1.1.1), \"red\" was already listed as a phenomenon. Calling it a \"quality\" in (1.1.3) is just relabeling the same thing."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "\"Phenomenon\" is anything that occurs — the broadest term. \"Quality\" narrows this to a singular distinct phenomenon. The step from \"something that occurs\" to \"this specific thing\" incorporates distinction (1.1.2) into the label.",
+                    "Without \"quality\" as a distinct term, there is no vocabulary for the specific character of a phenomenon — only the broad \"phenomenon\" and the relational \"distinct.\" The narrowing from \"something that occurs\" to \"this specific thing\" is real vocabulary work that later nodes depend on."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "\"Quality\" narrows \"phenomenon\" by incorporating distinction. A phenomenon is anything that occurs. A quality is a singular distinct phenomenon. The overlap is intentional, but the narrowing does real downstream work."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Qualities are subjective — they depend on the observer, not on reality.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Redness depends on how a perceiver's visual system processes light. Different people or species experience the same stimulus differently. Qualities are not features of the world — they are features of the observer's experience."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "This node is not making a claim about the external world or about observers. It is noting that qualities occur. Whether they are \"subjective\" or \"objective\" requires vocabulary (observer, object, perception, independence) that has not been built yet.",
+                    "The observation that red occurs stands regardless of what produces it or who experiences it."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The question of whether qualities are observer-dependent or world-dependent is legitimate — but it requires concepts from later nodes (observation in (1.3.4.3), independence in (1.2.5.7.4)). This node registers only that qualities occur. Their source and status are deferred, not denied."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "These are just examples, not a new observation — (1.1.1) already listed specific phenomena.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "(1.1.1) already presented red, hot, hungry, etc. as phenomena. (1.1.3) presents the same items and calls them \"qualities.\" The observations are identical — only the label changed."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "(1.1.1) pointed at these as things that occur. (1.1.2) pointed at their distinctness. (1.1.3) points at them as singular distinct things — each one something specific. The same items are being attended to from a different angle each time.",
+                    "The progression is: occurrence → distinction → specificity. Each step registers something the previous one left implicit."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The observations overlap deliberately — they are the same phenomena noticed in three different ways. What is new each time is not the item but what is observed about it. In 1.1.3, the observation is that each distinct phenomenon is something specific — a quality."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1.1.4",
@@ -280,9 +948,167 @@
       ],
       "hasDerivation": false,
       "claim": "Associations occur.",
-      "soWhat": "",
-      "search": "",
-      "sections": []
+      "shortTitle": "Associations",
+      "soWhat": "Without associations, qualities would occur in isolation — no felt connections, no groupings, no basis for identifying patterns or comparing anything.",
+      "search": "association connection link relation together like similar grouping belonging synthesis and or with",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Red is like blue.",
+            "Hungry is like thirsty.",
+            "Pleasure is like pain.",
+            "Two is like three.",
+            "Redness and sweetness — together in a strawberry.",
+            "Hotness and the ache of a burn — together."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            {
+              "text": "Associations occur.",
+              "items": [
+                "An \"association\" is a quality that occurs with multiple phenomena — the felt sense that they are alike, belong together, or go with each other. The likeness between red and blue is an association."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "Qualities occur in total isolation",
+              "detail": "If there are no associations, then red has no connection to blue, hunger has no connection to thirst, and hot has no connection to ouch. Each quality occurs as a standalone, disconnected occurrence with no felt links to anything else.",
+              "children": [
+                {
+                  "title": "Patterns, features, and identification become impossible",
+                  "detail": "Every later step in the tree depends on connecting phenomena — identifying features (what belongs with what), recognizing patterns (what recurs), comparing information (what is similar or different). Without associations, there is nothing to connect, and the entire pipeline from observation to knowledge has no raw material to work with."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            {
+              "text": "The vocabulary of \"association\" — a quality that occurs with multiple phenomena.",
+              "items": [
+                "\"Association\" — a quality that occurs with multiple phenomena. Synonyms: connection, link, relation.",
+                "Also grounded: \"like\" (one phenomenon IS LIKE another), \"with\" (a quality occurs WITH another), \"together\" (phenomena go TOGETHER), \"and\" (this AND that — connecting), \"or\" (this OR that — alternatives within a group), \"similar\" (alike), \"any\" (any one of a group), \"group\" (phenomena connected by association)."
+              ]
+            },
+            "The next step: identifying awareness as the quality of occurrence (1.1.5) — completing the phenomenological grounding."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Qualities occur in total isolation with no felt connections between them.",
+            "Felt connections between phenomena do not occur — every quality occurs in isolation with no \"likeness\" or \"togetherness.\""
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "What specific structures associations form — requires vocabulary built later (1.2.1 — features and patterns).",
+            "Whether associations reflect real connections or are merely felt — requires the ontological vocabulary (1.3).",
+            "The formal types of associations (similarity, belonging, sequence, etc.) — identified in the types of phenomena (1.2.5)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "This doesn't add anything new — associations are just more qualities (1.1.3).",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "If associations are themselves qualities, then (1.1.3) already covers them. The likeness between red and blue is a quality just as redness is. A separate node for associations is redundant."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "While associations ARE qualities, they are a specific kind — a quality that occurs with multiple phenomena rather than a single one. Redness occurs with red. The likeness between red and blue occurs with both. These are observably different.",
+                    "Without naming this difference, later nodes that depend on connections between phenomena — patterns, comparisons, identification — would have no vocabulary for the connecting quality as distinct from the qualities being connected."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The node adds a genuine distinction within the category of quality: the difference between a quality that characterizes a single phenomenon (redness) and a quality that connects phenomena (the likeness between red and blue). Naming this specific kind prevents a hidden assumption when later nodes depend on connections being available."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "These \"connections\" are learned, not given — you learn to associate red with strawberry through experience.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "The association between red and strawberry comes from repeated exposure — seeing strawberries that are red. Associations are not primitive occurrences but products of learning and memory."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The objection conflates specific associations (red-strawberry) with the occurrence of association as such. This node is not claiming that any particular association is innate or unlearned. It is noting that felt connections between phenomena occur.",
+                    "Whether specific associations are learned or given is a separate question that requires temporal vocabulary (memory, learning) not yet built (1.2.5.3, 1.2.6.5)."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "This node observes that associations occur — not that specific associations are innate. The mechanism by which particular associations form (learning, memory, pattern recognition) is a later question. The observation that felt connections between phenomena occur at all stands regardless of how any specific connection came about."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "\"Like\" already requires comparing, which hasn't been defined — this node smuggles in comparison.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Saying \"red is like blue\" involves comparing them. Comparison is defined later (1.2.2). If association requires comparison, then 1.1.4 depends on a concept that doesn't exist yet, violating the dependency order."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The observation that red is like blue is pre-theoretical. You don't perform an operation to produce the likeness — the connection is directly given. Comparison (1.2.2) is the formal act of observing sameness or variation between information. But the raw felt connection — \"these go together\" — is prior to any formal act.",
+                    "The association is the raw material that comparison later operates on."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The association is not the result of comparing — it is what makes comparing possible. You compare because you already notice likenesses and differences. The felt connection is the primitive; the formal comparison is the later identification of what that connection involves. Convention 4 (observation before abstraction) applies: the specific observation (felt likeness) comes before the general identification (comparison)."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1.1.5",
@@ -293,9 +1119,191 @@
       ],
       "hasDerivation": false,
       "claim": "Awareness is the occurrence of a quality or association.",
-      "soWhat": "",
-      "search": "",
-      "sections": []
+      "shortTitle": "Awareness",
+      "soWhat": "Without this, occurrence would add nothing to a quality — there would be no difference between a quality occurring and not occurring, and no ground for presence or absence.",
+      "search": "awareness experience consciousness given presence absence there-ness occurring phenomenal",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Red occurring.",
+            "Hot occurring.",
+            "Hungry occurring.",
+            "Ouch occurring.",
+            "The likeness between red and blue occurring.",
+            "The togetherness of sweet and strawberry occurring."
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            {
+              "text": "Awareness is the occurrence of a quality or association.",
+              "items": [
+                "\"Awareness\" is the quality of occurrence — the \"there-ness\" of a quality or association. \"Red occurs\" and \"awareness of red\" say the same thing."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "Occurrence adds nothing",
+              "detail": "If awareness is not the quality of occurrence, then occurrence has no character of its own. \"Red occurring\" and \"red not occurring\" would have no felt difference — the \"there-ness\" that distinguishes presence from absence would vanish.",
+              "children": [
+                {
+                  "title": "Presence and absence become indistinguishable",
+                  "detail": "Everything that follows depends on the difference between a quality being present and being absent. If occurrence has no quality, this difference has no ground — and the observation that things happen (1.1.1) loses its content."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            {
+              "text": "The vocabulary of \"awareness\" — the quality of occurrence.",
+              "items": [
+                "\"Awareness\" — the quality of occurrence of a quality or association. Synonyms: experience, consciousness (at this level).",
+                "Also grounded: \"given\" (what is present in awareness), \"presence\" (the occurring of a quality or association), \"absence\" (the non-occurring of a quality or association)."
+              ]
+            },
+            "Completes the phenomenological grounding (1.1). The parent claim — \"distinct things occur in my awareness\" — is now fully built: phenomena (1.1.1) are distinct (1.1.2), are qualities (1.1.3) with associations (1.1.4), and their occurrence IS awareness."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Occurrence has no quality of its own — there is no \"there-ness\" to distinguish presence from absence.",
+            "Awareness is a separate entity behind occurrence — a \"watcher\" that observes qualities from the outside."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "Who or what is aware — the question of a self or subject is addressed later (1.3.7).",
+            "Whether awareness is continuous or intermittent — requires temporal vocabulary (1.2.5.3).",
+            "What awareness is \"made of\" or how it arises — mechanism questions are deferred (Node 2)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "Awareness can't just BE occurrence — there's something it's \"like\" to experience redness, beyond it just happening.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "There's a difference between a thermostat registering temperature and a person experiencing heat. The \"what it's like\" quality of experience — the \"hard problem of consciousness\" — suggests awareness is something more than mere occurrence."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The objection assumes a distinction between \"mere occurrence\" and \"experienced occurrence.\" But at this level, every occurrence already IS experiential — redness doesn't \"merely happen\" like a thermostat reading. It occurs with its full phenomenal character (its quality).",
+                    "The concern about the \"hard problem\" arises only when trying to explain awareness from the outside (from physics or neuroscience). From the inside — which is where this node starts — there is no gap to bridge."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "This node is not claiming that awareness is \"nothing special.\" It is claiming that awareness is not a separate entity. The \"what it's like\" IS the quality of occurrence. The hard problem is about explaining awareness from a third-person perspective. This node describes it from the first-person perspective, where no explanation is needed — only recognition."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "This conflates passive awareness with active attention — I can be aware of something without attending to it.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Background noise occurs without attention. There's a difference between awareness (the broad field of experience) and attention (the focused spotlight within it). This node ignores the distinction."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The distinction between awareness and attention is real and important — but it is a distinction within awareness, not a challenge to what awareness IS. Background noise is still a quality occurring (just without active direction toward it).",
+                    "Attention involves wanting (1.2.5.1), which is built later. This node defines the broader category; the narrower distinctions come after."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "Awareness as defined here encompasses both attended and unattended occurrences. The quality or association occurs — that is awareness. Whether it is also attended to (wanted, focused on) is an additional feature involving will (1.2.5.1). The definition is broad by design: it captures the full field, not just the spotlight."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "If awareness is just occurrence, then everything that occurs is aware — including rocks and thermostats.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "If awareness equals occurrence, then any physical process (a rock heating up, a thermostat registering) would count as \"aware.\" This leads to panpsychism — the view that everything is conscious — which seems absurd."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "This node defines awareness as the occurrence of a quality or association. Qualities and associations are phenomenological primitives — features of experience as directly given.",
+                    "Whether a rock \"has\" qualities in this sense is a question about projection and analogy that requires vocabulary far beyond what's been built — objects (1.3.4), logical structures (1.4), and mechanism (Node 2). Rocks are not yet in the picture."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The panpsychism worry assumes that \"occurrence\" means any physical process. But at this level, \"occurrence\" means what has been described since (1.1.1) — redness, hotness, the likeness between phenomena. Extending this to rocks would require objects (1.3.4), analogy, and projection — vocabulary from (1.3), (1.4), and Node 2 that is not yet built."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Awareness could be a separate entity and presence would still be distinguishable from absence.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "Many traditions — substance dualism, various religious frameworks — hold that awareness is a separate thing (a soul, mind, or subject) that encounters qualities from outside. If so, presence and absence don't collapse when you reject the definition — the separate entity is what distinguishes them. You don't need awareness to BE occurrence for the distinction to hold."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "If awareness is separate from occurrence, then occurrence itself contributes nothing — it has no character of its own. The separate entity must do all the work: it must distinguish \"red present\" from \"red absent\" using something other than occurrence. But what does it encounter? If occurrence has no character, there is nothing *there* for the separate entity to engage with — no difference between a quality occurring and not occurring until the entity acts.",
+                    "This doesn't solve the problem — it relocates it. Now the separate entity needs its own account of how it detects presence versus absence, and that account will either reintroduce occurrence-as-a-quality (arriving back at this node's definition) or leave the mechanism unexplained."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The separate-entity model assumes that \"occurring\" is an empty placeholder that needs an external witness to gain content. But the observation is the opposite: occurring already HAS content — the \"there-ness\" of red is not added by a watcher, it is what red's occurring consists in. Positing a separate entity to do what occurrence already does is an extra assumption with no observational ground at this level."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1.2.1",
@@ -411,9 +1419,143 @@
       "prevIds": [],
       "hasDerivation": false,
       "claim": "Information is a quality or association.",
-      "soWhat": "",
-      "search": "",
-      "sections": []
+      "shortTitle": "Information",
+      "soWhat": "Without this, there is no collective term for what awareness contains, and downstream terms — features, patterns, comparison, knowledge — have no material to operate on.",
+      "search": "information content data quality association epistemology",
+      "sections": [
+        {
+          "type": "row",
+          "title": "Observations",
+          "numbered": true,
+          "items": [
+            "Red",
+            "Hot",
+            "Hungry",
+            "The likeness between red and blue",
+            "The togetherness of sweet and strawberry",
+            "The difference between loud and quiet"
+          ]
+        },
+        {
+          "type": "row",
+          "title": "Conclusion",
+          "numbered": true,
+          "items": [
+            {
+              "text": "Information is a quality or association.",
+              "items": [
+                "\"Information\" is whatever awareness contains — its content. Every quality and every association is a piece of information.",
+                "This is the collective term: rather than saying \"quality or association\" throughout, downstream nodes refer to \"information.\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "title": "If Rejected",
+          "numbered": false,
+          "items": [
+            {
+              "title": "Features, identity, and patterns have no material",
+              "detail": "Features (1.2.1.3) are distinct pieces of information. Identity (1.2.1.4) is a set of features. Patterns (1.2.1.6) are similar qualities across features. Each of these operates on information. If information is not grounded in what actually occurs — qualities and associations — then these concepts either float free from awareness or have nothing to work with.",
+              "children": [
+                {
+                  "title": "Comparison and knowledge become groundless",
+                  "detail": "Comparison (1.2.2) requires information to compare. Knowledge (1.2.6) requires information to know. Without information grounded in phenomenal content, the entire epistemological branch (1.2) loses its foundation in the phenomenological grounding (1.1)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unlocks",
+          "numbered": false,
+          "items": [
+            {
+              "text": "The vocabulary of \"information\" — the collective term for what awareness contains.",
+              "items": [
+                "\"Information\" — a quality or association. Synonyms: content, data (at this level)."
+              ]
+            },
+            "The next observations: that information belongs with a phenomenon (1.2.1.2), and that distinct pieces of information are features (1.2.1.3)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Eliminates",
+          "numbered": false,
+          "items": [
+            "Information is something separate from what occurs in awareness — a hidden layer behind qualities and associations.",
+            "Information requires processing, encoding, or interpretation before it counts as information."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Unknowns",
+          "numbered": false,
+          "items": [
+            "How information relates to specific phenomena — addressed in the next node (1.2.1.2).",
+            "Whether information has internal structure (distinct pieces, shared qualities) — addressed when features (1.2.1.3) and patterns (1.2.1.6) are introduced.",
+            "How information is communicated or transmitted — requires vocabulary far downstream (Node 2+)."
+          ]
+        },
+        {
+          "type": "tab",
+          "title": "Objections",
+          "numbered": true,
+          "items": [
+            {
+              "title": "This is just renaming — \"information\" adds nothing over \"quality or association.\"",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "If information is defined as exactly \"a quality or association,\" the term is redundant. Why introduce a new word when the existing terms already cover it?"
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "The collective term does real work downstream. Features are \"distinct pieces of information,\" identity is \"a set of features,\" patterns are \"similar qualities across features,\" comparison operates on \"information.\" Without a single referent, each downstream definition must spell out \"quality or association\" in full — increasing cognitive load without benefit.",
+                    "Naming a reusable concept earns its own node (convention 12). \"Information\" is referenced by nearly every node in the epistemological branch."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The term is not redundant — it is a necessary abstraction. Its value is not in adding new content but in providing a single referent that the rest of the tree builds on. The same pattern occurs throughout: \"phenomenon\" collects \"anything that occurs,\" and \"information\" collects \"any quality or association.\""
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Information requires a mind or interpreter — raw qualities aren't \"information\" until someone processes them.",
+              "subSections": [
+                {
+                  "label": "Objection Basis",
+                  "items": [
+                    "In everyday and scientific usage, \"information\" often implies a recipient who decodes or interprets it. A signal isn't information until it's received and understood. Calling raw phenomenal qualities \"information\" skips the interpretive step."
+                  ]
+                },
+                {
+                  "label": "What's Missing",
+                  "items": [
+                    "This objection imports a communication-theory definition (sender, channel, receiver, interpretation) that depends on vocabulary far downstream: objects (1.3.4), causation (Node 2), and interpretation (Node 2+). At this level, \"information\" is simpler — it is what awareness already contains.",
+                    "The question of whether information requires processing is itself an epistemological question that presupposes the term \"information.\" The definition here is prior to that question."
+                  ]
+                },
+                {
+                  "label": "Correction",
+                  "items": [
+                    "The definition is pre-theoretic. Information is not \"data that has been processed\" — it is the content of awareness itself. The communication-theory sense is a specialized application built later. The primitive sense — what awareness contains, before any theory about encoding or decoding — is what this node establishes."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1.2.1.2",
