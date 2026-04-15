@@ -53,6 +53,9 @@
   --disagree-rgb: 239, 68, 68;
   --disagree-dark-rgb: 220, 38, 38;
 
+  /* Hover dimming — opacity for non-hovered rows when one row is hovered */
+  --hover-dim-opacity: 0.55;
+
   /* Focus dimming — opacity / blur for non-active rows when expander open */
   --dim-opacity: 0.45;
   --dim-active-opacity: 0.85;

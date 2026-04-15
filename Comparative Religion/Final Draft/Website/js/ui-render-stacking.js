@@ -255,7 +255,6 @@ export function buildStackGroups(
 
       if (companions.length > 0) {
         zr.potentialCompanions = companions;
-        console.log(`[COMPANION-DEBUG] buildStackGroups: zoneRow=${zr.rowIdx} potentialCompanions:`, JSON.stringify(companions));
       }
     });
   });

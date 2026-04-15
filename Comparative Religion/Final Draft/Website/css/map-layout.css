@@ -242,6 +242,15 @@
   overflow: visible;
 }
 
+/* Active node row: elevated z-index so the scroll-driven translateY
+   (applied by ui-expander.js) paints the row above the expander panel.
+   The transform itself creates a stacking context, so the z-index on the
+   row is compared against the expander's z-index within the level-group. */
+.node-row.is-active {
+  z-index: calc(var(--z-expander-open) + 1);
+}
+
+
 
 /* Marker column: dot, horizontal arm, arrow tip
    ----------------------------------------------------------------------------- */

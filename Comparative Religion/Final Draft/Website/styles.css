@@ -1452,6 +1452,45 @@ button.node-badge:active {
   transform: translateY(-50%);
 }
 
+/* Nested bullets — sub-items within a parent bullet */
+.bullets .bullets {
+  margin-top: 6px;
+  margin-bottom: 2px;
+  gap: 5px;
+}
+
+.bullets .bullets li {
+  opacity: 0.85;
+  font-size: 0.95em;
+}
+
+/* Numbered (ordered) lists — used for Objection Commitments */
+.numbered {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  text-align: left;
+  counter-reset: commitment;
+}
+
+.numbered li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.42;
+  counter-increment: commitment;
+}
+
+.numbered li::before {
+  content: counter(commitment) ".";
+  position: absolute;
+  left: 0;
+  font-size: 0.85em;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
 
 /* =============================================================================
    17. RECURSIVE MINI-NODES

@@ -35,6 +35,18 @@ let cachedVisibleNodes = null;
  * --------------------------------------------------------------------------- */
 
 /**
+ * Immediately cancels any in-flight animation RAF loop and clears
+ * cached references.  Call before DOM mutations that could shift
+ * element positions (e.g. expander cleanup) to prevent the RAF
+ * loop from drawing one more frame with stale/shifted geometry.
+ */
+export function stopAnimationRedraw() {
+  if (animationFrameId) { cancelAnimationFrame(animationFrameId); animationFrameId = null; }
+  cachedViewEl = null;
+  cachedVisibleNodes = null;
+}
+
+/**
  * Debounces SVG redraws to the next frame. Multiple rapid calls (e.g. from
  * resize events or expander animations) are batched into a single draw().
  * No-ops while a page or stacking transition is in progress.
@@ -210,51 +222,6 @@ export function draw(viewEl, visibleNodes) {
   const forkPathData = [];   // first-row fork branches (rendered with spine-fade gradient)
   const stackGroups = viewEl.querySelectorAll('.stack-group');
 
-  // ──── DEBUG: layout context ────
-  console.group(`%c[SVG-DEBUG] draw() — parentId: ${AppState.currentParentId}`, 'color: #00bcd4; font-weight: bold');
-  console.log(`trunkX=${trunkX}, visibleNodes=${visibleNodes.length}, stackGroups=${stackGroups.length}`);
-  for (const [id, pos] of positions) {
-    console.log(`  ${id}  x=${pos.x}  depth=${pos.depth}  cardTop=${pos.cardTop !== undefined ? Math.round(pos.cardTop) : 'n/a'}  cardBottom=${pos.cardBottom !== undefined ? Math.round(pos.cardBottom) : 'n/a'}  rowBottom=${pos.rowBottom !== undefined ? Math.round(pos.rowBottom) : 'n/a'}`);
-  }
-  // ──── DEBUG: level-group flex state after zone absorption ────
-  const allLGs = viewEl.querySelectorAll('.level-group');
-  const cRect = containerRect;
-  allLGs.forEach(lg => {
-    const rowIdx = lg.dataset.rowIdx;
-    const isAbsorbed = lg.hasAttribute('data-zone-absorbed');
-    const isParallel = lg.hasAttribute('data-parallel');
-    const items = [];
-    for (const child of lg.children) {
-      const r = child.getBoundingClientRect();
-      const relL = Math.round(r.left - cRect.left);
-      const w = Math.round(r.width);
-      if (child.classList.contains('node-row')) {
-        const fw = child.style.getPropertyValue('--flex-weight') || '(def)';
-        const fp = child.hasAttribute('data-first-parallel') ? ' 1st' : '';
-        const lp = child.hasAttribute('data-last-parallel') ? ' last' : '';
-        items.push(`node:${child.dataset.id}(fw=${fw}${fp}${lp} x=${relL} w=${w})`);
-      } else if (child.classList.contains('dummy-node')) {
-        const fw = child.style.getPropertyValue('--flex-weight') || '(def)';
-        const ph = child.dataset.zonePlaceholder || '';
-        const fp = child.hasAttribute('data-first-parallel') ? ' 1st' : '';
-        const lp = child.hasAttribute('data-last-parallel') ? ' last' : '';
-        items.push(`dummy:${ph ? 'ph(' + ph + ')' : 'col' + child.dataset.colIdx}(fw=${fw}${fp}${lp} x=${relL} w=${w})`);
-      } else if (child.classList.contains('stack-group')) {
-        const fw = child.style.getPropertyValue('--flex-weight') || '(def)';
-        const sgNodes = child.querySelectorAll(':scope > .node-row');
-        const fp = child.hasAttribute('data-first-parallel') ? ' 1st' : '';
-        const lp = child.hasAttribute('data-last-parallel') ? ' last' : '';
-        items.push(`SG(fw=${fw}${fp}${lp} x=${relL} w=${w},[${Array.from(sgNodes).map(n => n.dataset.id).join(',')}])`);
-      } else if (child.classList.contains('level-expander')) {
-        // skip
-      }
-    }
-    if (items.length > 0) {
-      console.log(`  LG[row=${rowIdx}] absorbed=${isAbsorbed} parallel=${isParallel} children=[${items.join(', ')}]`);
-    }
-  });
-  // ──── END DEBUG ────
-
   // --- Layout mode detection ---
   // Three mutually exclusive layout modes determine how edges are drawn:
   //   1. Fully stacked: every level-group has ≤1 direct node-row (all parallel
@@ -276,7 +243,6 @@ export function draw(viewEl, visibleNodes) {
     }
 
     if (isFullyStacked) {
-      console.log('%c[SVG-DEBUG] Layout mode: FULLY STACKED', 'color: #ff9800');
       const allNodeRows = viewEl.querySelectorAll('.node-row');
       const unifiedOrder = [];
       const unifiedDepthMap = new Map();
@@ -318,12 +284,10 @@ export function draw(viewEl, visibleNodes) {
         }
       }
     } else {
-      console.log('%c[SVG-DEBUG] Layout mode: PARTIALLY STACKED', 'color: #ff9800');
       drawPartialStacking(stackGroups, viewEl, visibleNodes, positions, trunkX,
                           indentSpines, allPathData, forkPathData, visualRows, nodeToRowIdx);
     }
   } else {
-    console.log('%c[SVG-DEBUG] Layout mode: PURE PARALLEL', 'color: #ff9800');
     // Pure parallel edge drawing
     const visibleIdSet = new Set(visibleNodes.map(n => n.id));
     const emptySet = new Set();
@@ -391,12 +355,6 @@ export function draw(viewEl, visibleNodes) {
   // so curve control points stay clean and anti-alias consistently across DPRs.
   // Filter out any path segments containing NaN (from stale/missing positions during
   // layout transitions) to avoid invalid SVG d-attribute errors in the console.
-  // ──── DEBUG: output summary ────
-  console.log(`[SVG-DEBUG] allPathData (${allPathData.length}):`, allPathData.filter(p => p).map((p, i) => `[${i}] ${p.substring(0, 80)}...`));
-  console.log(`[SVG-DEBUG] forkPathData (${forkPathData.length}):`, forkPathData.filter(p => p).length);
-  console.log(`[SVG-DEBUG] indentSpines (${indentSpines.length}):`, indentSpines.map(s => `x=${s.x} top=${Math.round(s.top)} h=${Math.round(s.height)} d=${s.depth} fade=${s.fade}`));
-  console.groupEnd();
-  // ──── END DEBUG ────
 
   const combinedPath = allPathData.filter(p => p && !p.includes('NaN')).join('').trim();
   if (combinedPath) {

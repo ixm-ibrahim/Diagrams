@@ -397,8 +397,12 @@ export function updateHeaderContext() {
     });
 
     const prefix = DataStore.config.nodePrefix;
-    if (els.docTitle)
-      els.docTitle.textContent = `${prefix}${parentNode.id} - Map`;
+    if (els.docTitle) {
+      const short = parentNode.shortTitle
+        ? `${prefix}${parentNode.id}. ${parentNode.shortTitle}`
+        : `${prefix}${parentNode.id}`;
+      els.docTitle.textContent = `${short} - Map`;
+    }
     if (els.pageTitle)
       els.pageTitle.innerHTML = `${prefix}${parentNode.id}. ${md(parentNode.claim)}`;
     if (els.pageSubtitle)

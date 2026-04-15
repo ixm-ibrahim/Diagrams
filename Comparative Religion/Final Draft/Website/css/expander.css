@@ -52,6 +52,21 @@
   position: relative;
 }
 
+/* Stuck-scroll fade: when the active row is pinned via JS translateY, the
+   expander content scrolls behind it and is visible through the transparent
+   gaps in the row (marker column, derive column).  This mask dissolves that
+   content within the overlap zone so it fades out depth-wise rather than
+   hard-clipping.  --mask-clip is set per-frame by ui-expander.js to the
+   pixel overlap.  Content below the overlap is always fully opaque.         */
+.exp-inner.has-stuck-fade {
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent max(0px, calc(var(--mask-clip, 0px) - 64px)),
+    black var(--mask-clip, 0px));
+  mask-image: linear-gradient(to bottom,
+    transparent max(0px, calc(var(--mask-clip, 0px) - 64px)),
+    black var(--mask-clip, 0px));
+}
+
 /* Agreement tint — subtle color wash from the top edge reflecting the node's
    propagated agree/disagree state. Uses ::before so it layers above the panel
    background but below the content. The .row-red / .row-green classes are
@@ -481,6 +496,47 @@
   background: currentColor;
   opacity: 0.5;
   transform: translateY(-50%);
+}
+
+/* Nested bullets — sub-items within a parent bullet */
+.bullets .bullets {
+  margin-top: 6px;
+  margin-bottom: 2px;
+  gap: 5px;
+}
+
+.bullets .bullets li {
+  opacity: 0.85;
+  font-size: 0.95em;
+}
+
+/* Numbered (ordered) lists — used for Objection Commitments */
+.numbered {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  text-align: left;
+  counter-reset: commitment;
+}
+
+.numbered li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.42;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  counter-increment: commitment;
+}
+
+.numbered li::before {
+  content: counter(commitment) ".";
+  position: absolute;
+  left: 0;
+  font-size: 0.85em;
+  font-weight: 700;
+  opacity: 0.6;
 }
 
 

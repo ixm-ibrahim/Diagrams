@@ -126,7 +126,6 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
     return pos && Math.abs(pos.x - trunkX) >= STRAIGHT_THRESHOLD;
   });
 
-  console.log(`[TERM-RET-DEBUG] terminalOffSpine: [${terminalOffSpine.map(n => n.id)}], excludeIds: [${[...excludeIds]}], trunkX=${trunkX}`);
   if (terminalOffSpine.length === 0) return;
 
   const byX = new Map();
@@ -177,9 +176,6 @@ export function drawTerminalReturns(visibleNodes, visibleIdSet, positions, trunk
   const mergeY = nextTrunkCardTop !== null
     ? Math.round(clearBelow + (nextTrunkCardTop - clearBelow) / 2)
     : Math.round(clearBelow + FORK_BRANCH_GAP);
-
-  console.log(`[TERM-RET-DEBUG] byX columns: ${[...byX.entries()].map(([xk, p]) => `x=${xk} y=${Math.round(p.y)}`).join(', ')}`);
-  console.log(`[TERM-RET-DEBUG] maxRowBottom=${Math.round(maxRowBottom)}, nextTrunkCardTop=${nextTrunkCardTop !== null ? Math.round(nextTrunkCardTop) : 'null'}, mergeY=${mergeY}`);
 
   for (const [, pos] of byX) {
     const dirX = trunkX > pos.x ? 1 : -1;

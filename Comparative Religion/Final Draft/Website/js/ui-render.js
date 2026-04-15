@@ -165,6 +165,7 @@ export function buildView() {
       const row = document.createElement('div');
       row.className = 'node-row';
       row.dataset.id = parentNode.id;
+      row.style.setProperty('--n-border', parentNode.color.borderDark);
       row.innerHTML = nodeRow(parentNode);
       levelGroup.appendChild(row);
 
@@ -220,6 +221,7 @@ export function buildView() {
       row.className = 'node-row';
       row.dataset.id = node.id;
       row.dataset.colIdx = String(colIdx);
+      row.style.setProperty('--n-border', node.color.borderDark);
       row.innerHTML = nodeRow(node);
       levelGroup.appendChild(row);
       realNodeEls.push(row);

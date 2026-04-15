@@ -67,8 +67,28 @@
   border-top-color: var(--ancestry-border-light);
 }
 
+/* When spawning upward, move tint & colored border to the bottom (closest to pill) */
 .ancestry-dropdown-wrap.ancestry-up .ancestry-dropdown {
+  background:
+    linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--ancestry-bg-dark) var(--ancestry-tint-strength), #0f1730) 0%,
+      #0f1730 60%
+    );
+  border-top: 1px solid var(--border);
+  border-bottom: 2px solid var(--ancestry-border-dark);
   transform: translateY(-6px) scale(0.97);
+}
+
+[data-theme="light"] .ancestry-dropdown-wrap.ancestry-up .ancestry-dropdown {
+  background:
+    linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--ancestry-bg-light) var(--ancestry-tint-strength-light), #ffffff) 0%,
+      #ffffff 60%
+    );
+  border-top-color: var(--border);
+  border-bottom-color: var(--ancestry-border-light);
 }
 
 .ancestry-dropdown.is-open {

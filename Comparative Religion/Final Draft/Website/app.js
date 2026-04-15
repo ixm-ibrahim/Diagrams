@@ -785,8 +785,18 @@ const Templates = {
     `;
   },
 
-  buildList(items) {
-    return `<ul class="bullets">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+  buildList(items, listType) {
+    const tag = listType === 'ordered' ? 'ol' : 'ul';
+    const cls = listType === 'ordered' ? 'numbered' : 'bullets';
+    return `<${tag} class="${cls}">${items.map(i => {
+      if (typeof i === 'object' && i !== null && i.text !== undefined) {
+        const subList = i.items?.length
+          ? `<ul class="bullets">${i.items.map(s => `<li>${s}</li>`).join('')}</ul>`
+          : '';
+        return `<li>${i.text}${subList}</li>`;
+      }
+      return `<li>${i}</li>`;
+    }).join('')}</${tag}>`;
   },
 
   buildMiniNodeContent(data) {
@@ -798,7 +808,7 @@ const Templates = {
       parts.push(data.subSections.map(sub => `
         <div class="sub-section">
           <div class="sub-label">${sub.label}</div>
-          <div class="sub-body">${this.buildList(sub.items)}</div>
+          <div class="sub-body">${this.buildList(sub.items, sub.listType)}</div>
         </div>
       `).join(''));
     }

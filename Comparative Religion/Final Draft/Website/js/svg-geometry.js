@@ -57,6 +57,20 @@ export function collectMarkerPositions(viewEl, containerRect) {
 
     const rawX = dotRect.left - containerRect.left + dotRect.width / 2;
 
+    // The card may have a CSS hover transform (e.g. translateY(-2px)) that
+    // shifts its bounding rect away from its layout position.  SVG connectors
+    // must use the resting (non-hovered) position so branches don't shift
+    // depending on whether the mouse happens to be over the card during redraw.
+    let cardYShift = 0;
+    const ct = getComputedStyle(card).transform;
+    if (ct && ct !== 'none') {
+      const m = ct.match(/matrix3d\((.+)\)/) || ct.match(/matrix\((.+)\)/);
+      if (m) {
+        const v = m[1].split(',').map(Number);
+        cardYShift = v.length === 16 ? (v[13] || 0) : (v[5] || 0);
+      }
+    }
+
     positions.set(id, {
       // Integer CSS pixels for SVG path generation — keeps curve control points
       // at clean coordinates so anti-aliasing stays consistent across DPRs.
@@ -64,9 +78,9 @@ export function collectMarkerPositions(viewEl, containerRect) {
       x: Math.round(rawX),
       y: dotRect.top - containerRect.top + dotRect.height / 2,
       depth,
-      cardTop: cardRect.top - containerRect.top,
-      cardBottom: cardRect.bottom - containerRect.top,
-      visualBottom: cardRect.bottom - containerRect.top
+      cardTop: cardRect.top - containerRect.top - cardYShift,
+      cardBottom: cardRect.bottom - containerRect.top - cardYShift,
+      visualBottom: cardRect.bottom - containerRect.top - cardYShift
     });
   });
 

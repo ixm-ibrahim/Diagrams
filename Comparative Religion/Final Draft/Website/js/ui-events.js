@@ -205,21 +205,90 @@ function bindMapClicks() {
       return;
     }
 
-    // Logic section header: toggle collapse
+    // Logic section header: toggle collapse (accordion among siblings)
     const logicHeader = e.target.closest('.logic-header');
     if (logicHeader) {
       const section = logicHeader.closest('.logic-section');
-      const collapsed = section.classList.toggle('is-collapsed');
-      logicHeader.setAttribute('aria-expanded', !collapsed);
+      const willOpen = section.classList.contains('is-collapsed');
+
+      // Measure BEFORE toggling so we know how much collapsing siblings
+      // will shrink, letting us scroll concurrently with the animation.
+      let collapseShift = 0;
+      const headerTopBefore = logicHeader.getBoundingClientRect().top;
+
+      if (willOpen) {
+        // Close sibling logic-sections at the same nesting level
+        const parent = section.parentElement;
+        if (parent) {
+          parent.querySelectorAll(':scope > .logic-section:not(.is-collapsed)').forEach(sib => {
+            if (sib === section) return;
+            const inner = sib.querySelector('.logic-content-inner');
+            if (inner) collapseShift += inner.scrollHeight;
+            sib.classList.add('is-collapsed');
+            sib.querySelector('.logic-header')?.setAttribute('aria-expanded', 'false');
+          });
+        }
+      }
+
+      section.classList.toggle('is-collapsed');
+      logicHeader.setAttribute('aria-expanded', String(willOpen));
+
+      // Scroll concurrently with the collapse/open CSS transition.
+      // The header will shift up by collapseShift as the sibling collapses,
+      // so we anticipate that in the scroll target.
+      if (willOpen) {
+        const activeRow = document.querySelector('.node-row.is-active');
+        if (activeRow) {
+          const rowBottom = activeRow.getBoundingClientRect().bottom;
+          const anticipatedTop = headerTopBefore - collapseShift;
+          if (anticipatedTop < rowBottom + 4) {
+            window.scrollBy({ top: anticipatedTop - rowBottom - 8, behavior: 'smooth' });
+          }
+        }
+      }
       return;
     }
 
-    // Mini-node trigger: toggle open/close
+    // Mini-node trigger: toggle open/close (accordion among siblings)
     const miniTrigger = e.target.closest('.mini-trigger');
     if (miniTrigger) {
       const miniNode = miniTrigger.closest('.mini-node');
-      const isOpen = miniNode.classList.toggle('is-open');
-      miniTrigger.setAttribute('aria-expanded', isOpen);
+      const willOpen = !miniNode.classList.contains('is-open');
+
+      // Measure BEFORE toggling so we know how much collapsing siblings
+      // will shrink, letting us scroll concurrently with the animation.
+      let collapseShift = 0;
+      const triggerTopBefore = miniTrigger.getBoundingClientRect().top;
+
+      if (willOpen) {
+        // Close sibling mini-nodes at the same nesting level
+        const parent = miniNode.parentElement;
+        if (parent) {
+          parent.querySelectorAll(':scope > .mini-node.is-open').forEach(sib => {
+            if (sib === miniNode) return;
+            const wrap = sib.querySelector('.mini-content-wrap');
+            const inner = wrap?.firstElementChild;
+            if (inner) collapseShift += inner.scrollHeight;
+            sib.classList.remove('is-open');
+            sib.querySelector('.mini-trigger')?.setAttribute('aria-expanded', 'false');
+          });
+        }
+      }
+
+      miniNode.classList.toggle('is-open');
+      miniTrigger.setAttribute('aria-expanded', String(willOpen));
+
+      // Scroll concurrently with the collapse/open CSS transition.
+      if (willOpen) {
+        const activeRow = document.querySelector('.node-row.is-active');
+        if (activeRow) {
+          const rowBottom = activeRow.getBoundingClientRect().bottom;
+          const anticipatedTop = triggerTopBefore - collapseShift;
+          if (anticipatedTop < rowBottom + 4) {
+            window.scrollBy({ top: anticipatedTop - rowBottom - 8, behavior: 'smooth' });
+          }
+        }
+      }
     }
   });
 }

@@ -66,10 +66,6 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
     const hasTerminalReturn = zoneLastPos &&
       Math.abs(zoneLastPos.x - sgTrunkX) >= STRAIGHT_THRESHOLD;
 
-    console.log(`[PARTIAL-DEBUG] stack group: displayOrder=[${displayOrder}], sgTrunkX=${sgTrunkX}, trunkX=${trunkX}`);
-    console.log(`[PARTIAL-DEBUG]   depthMap:`, Object.fromEntries(depthMap));
-    console.log(`[PARTIAL-DEBUG]   hasTerminalReturn=${hasTerminalReturn}, zoneLastPos.x=${zoneLastPos?.x}`);
-
     // Pre-compute whether this zone needs a zone-to-main-trunk return.
     // Needed before the spine is created so the spine knows not to fade.
     const zoneOffMainTrunk = Math.abs(sgTrunkX - trunkX) >= STRAIGHT_THRESHOLD;
@@ -85,7 +81,6 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
         }
       }
     }
-    console.log(`[PARTIAL-DEBUG]   zoneOffMainTrunk=${zoneOffMainTrunk}, willDrawZoneReturn=${willDrawZoneReturn}`);
 
     processStackedZone(displayOrder, depthMap, positions, sgTrunkX,
                        indentSpines, allPathData,
@@ -175,8 +170,6 @@ export function drawPartialStacking(stackGroups, viewEl, visibleNodes, positions
         Math.abs(trunkX - sgTrunkX) / 2,
         Math.max(0, Math.abs(mergeY - rowBottom) - RADIUS_ADJUST)
       );
-
-      console.log(`[PARTIAL-DEBUG]   zone-to-main return: from x=${sgTrunkX} to x=${trunkX}, mergeY=${mergeY}, clearBelow=${Math.round(clearBelow)}, nextCardTopBelow=${nextCardTopBelow !== null ? Math.round(nextCardTopBelow) : 'null'}`);
 
       allPathData.push(
         `M ${sgTrunkX} ${rowBottom} ` +

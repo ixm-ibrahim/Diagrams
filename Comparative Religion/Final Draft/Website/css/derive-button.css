@@ -100,13 +100,13 @@
     box-shadow: 0 0 0 0 transparent;
   }
   50% {
-    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 16px 4px rgba(255, 255, 255, 0.3);
   }
 }
 
 @keyframes derive-arrow-nudge {
   0%, 100% { transform: translateX(0); }
-  50%      { transform: translateX(3px); }
+  50%      { transform: translateX(4.5px); }
 }
 
 [data-theme="light"] .btn-derivation {
@@ -118,7 +118,7 @@
     box-shadow: 0 0 0 0 transparent;
   }
   50% {
-    box-shadow: 0 0 8px 2px rgba(16, 26, 53, 0.1);
+    box-shadow: 0 0 16px 4px rgba(16, 26, 53, 0.2);
   }
 }
 

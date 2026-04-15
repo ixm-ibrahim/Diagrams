@@ -191,10 +191,8 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
   // Terminal return curves (Rules 5 & 6): end of display order off-trunk
   const lastId = displayOrder[displayOrder.length - 1];
   const lastPos = positions.get(lastId);
-  console.log(`[STACKED-DEBUG] Terminal return check: lastId=${lastId}, lastPos.x=${lastPos?.x}, zoneTrunkX=${zoneTrunkX}, mainTrunkX=${mainTrunkX}, offZoneTrunk=${lastPos ? Math.abs(lastPos.x - zoneTrunkX) >= STRAIGHT_THRESHOLD : 'n/a'}`);
   if (lastPos && Math.abs(lastPos.x - zoneTrunkX) >= STRAIGHT_THRESHOLD) {
     const lastDepth = depthMap.get(lastId) || 0;
-    console.log(`[STACKED-DEBUG]   lastDepth=${lastDepth}`);
     if (lastDepth > 0) {
       // Use the last node's own X for the return path start.
       // Transitions (branch-return curves) already handle getting from
@@ -230,7 +228,6 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
         ? Math.round(clearBelow + (nextTrunkCardTop2 - clearBelow) / 2)
         : Math.round(clearBelow + FORK_BRANCH_GAP);
 
-      console.log(`[STACKED-DEBUG]   returnFromX=${returnFromX}, returnTargetX=${returnTargetX}, mergeY=${mergeY}, willDraw=${Math.abs(returnFromX - returnTargetX) >= STRAIGHT_THRESHOLD}`);
       if (Math.abs(returnFromX - returnTargetX) >= STRAIGHT_THRESHOLD) {
         const dirX = returnTargetX > returnFromX ? 1 : -1;
         const radius = Math.min(
@@ -250,7 +247,5 @@ export function processStackedZone(displayOrder, depthMap, positions, zoneTrunkX
         );
       }
     }
-  } else {
-    console.log(`[STACKED-DEBUG]   Terminal return SKIPPED: lastPos on zone trunk or missing`);
   }
 }

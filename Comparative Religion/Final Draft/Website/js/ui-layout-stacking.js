@@ -76,7 +76,6 @@ export function wrapStackGroup(
       `:scope > .stack-group[data-companion-wrap="${id}"]`
     );
     if (!cw) return;
-    console.log(`[COMPANION-DEBUG] Dissolving companion wrapper for parent=${id} before stacking`);
     // Move companion children back to their home level-groups
     [...cw.querySelectorAll(':scope > .node-row[data-zone-origin-row]')].forEach(childEl => {
       const childRowIdx = parseInt(childEl.dataset.zoneOriginRow);
@@ -132,7 +131,6 @@ export function wrapStackGroup(
   nodes.forEach(n => wrapper.appendChild(n));
 
   // --- Zone extension: absorb descendant rows ---
-  console.log(`[WRAP-DEBUG] wrapStackGroup trigger nodeIds=[${nodeIds}], zoneRows=`, JSON.stringify(zoneRows?.map(zr => ({rowIdx:zr.rowIdx, nodeIds:zr.nodeIds})) || null));
   if (zoneRows) {
     zoneRows.forEach(({ rowIdx: zoneRowIdx, nodeIds: zoneNodeIds, stackAt: zoneStackAt }) => {
       // Only absorb zone rows whose own stacking threshold is crossed
@@ -250,8 +248,6 @@ export function wrapStackGroup(
           `:scope > .node-row[data-id="${parentId}"]`
         );
         if (!parentEl) return; // Parent is inside a stack-group → skip
-
-        console.log(`[COMPANION-DEBUG] Wrapping parent=${parentId} with children=[${childIds}] from zoneRow=${zoneRowIdx}`);
 
         const miniWrapper = document.createElement('div');
         miniWrapper.className = 'stack-group';
@@ -487,8 +483,6 @@ export function unwrapStackGroup(
   // --- Undo companion wraps before zone un-absorb ---
   // Query the DOM for any companion wrappers created at runtime.
   levelGroup.querySelectorAll(':scope > .stack-group[data-companion-wrap]').forEach(cw => {
-    console.log(`[COMPANION-DEBUG] Unwrapping companion for parent=${cw.dataset.companionWrap}`);
-
     // Move children (nodes with zoneOriginRow) back to their home level-groups
     [...cw.querySelectorAll(':scope > .node-row[data-zone-origin-row]')].forEach(childEl => {
       const childRowIdx = parseInt(childEl.dataset.zoneOriginRow);
@@ -535,9 +529,6 @@ export function unwrapStackGroup(
       );
       if (!zoneLG) return;
 
-      console.log(`[UNWRAP-DEBUG] Zone un-absorb: zoneRow=${zoneRowIdx} nodeIds=[${zoneNodeIds}]`);
-      console.log(`[UNWRAP-DEBUG]   zoneLG children before:`, [...zoneLG.children].map(c => c.dataset.id || c.dataset.zonePlaceholder || c.className).join(', '));
-
       zoneNodeIds.forEach(id => {
         const node = wrapper.querySelector(`:scope > .node-row[data-id="${id}"]`);
         if (!node) return;
@@ -573,7 +564,6 @@ export function unwrapStackGroup(
         if (!insertBefore) {
           insertBefore = zoneLG.querySelector(':scope > .level-expander');
         }
-        console.log(`[UNWRAP-DEBUG]   Restoring node=${id} colIdx=${nodeCol} insertBefore=${insertBefore?.dataset?.id || insertBefore?.className || 'append'}`);
         if (insertBefore && insertBefore.parentElement === zoneLG) {
           zoneLG.insertBefore(node, insertBefore);
         } else {
@@ -611,16 +601,11 @@ export function unwrapStackGroup(
   );
   if (nodes.some(n => !n)) return false;
 
-  console.log(`[UNWRAP-DEBUG] Unwrap trigger nodes=[${nodeIds}] from wrapper`);
-  console.log(`[UNWRAP-DEBUG]   levelGroup children before unwrap:`, [...levelGroup.children].map(c => c.dataset.id || c.dataset.companionWrap || c.className).join(', '));
-
   // Restore each node as a direct level-group child, in original order
   nodes.forEach(n => {
     n.style.removeProperty('--indent-depth');
     levelGroup.insertBefore(n, wrapper);
   });
-
-  console.log(`[UNWRAP-DEBUG]   levelGroup children after unwrap:`, [...levelGroup.children].map(c => c.dataset.id || c.className).join(', '));
 
   // Rescue any expander that was moved into the stack-group while open
   const strandedExp = wrapper.querySelector('.level-expander');

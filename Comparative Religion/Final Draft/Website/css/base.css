@@ -109,6 +109,35 @@ body {
 }
 
 
+/* Hover dimming: when any node-row is hovered, dim the others slightly
+   ----------------------------------------------------------------------------- */
+.map-flow .node-row {
+  transition: opacity 0.35s ease;
+}
+
+.map-flow:has(.node-card:hover) .node-row:not(:has(.node-card:hover)):not(.is-active) {
+  opacity: var(--hover-dim-opacity, 0.55);
+}
+
+/* Hover pulse glow: wraps the node-card in a glow that pulses smoothly.
+   Uses a wrapper approach — the ::before on .node-row is positioned to
+   exactly overlay the .node-card using the same grid placement, then
+   box-shadow on the overlay creates the glow effect with opacity animated. */
+.map-flow .node-card:hover {
+  animation: node-hover-pulse 1.875s cubic-bezier(0.37, 0, 0.63, 1) alternate infinite;
+}
+
+@keyframes node-hover-pulse {
+  from { filter: drop-shadow(0 0 0 transparent); }
+  to   { filter: drop-shadow(0 0 8px var(--n-border)); }
+}
+
+/* Don't double-dim when an expander is focused */
+body.is-focused .map-flow:has(.node-card:hover) .node-row:not(:has(.node-card:hover)):not(.is-active) {
+  opacity: var(--dim-opacity);
+}
+
+
 /* Focus dimming: when an expander is open, fade all non-active node rows
    ----------------------------------------------------------------------------- */
 body.is-focused .node-row:not(.is-active) {

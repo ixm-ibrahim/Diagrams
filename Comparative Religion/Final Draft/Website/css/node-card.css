@@ -27,6 +27,7 @@
   --n-border: var(--n-border-dark);
   --p-border: var(--p-border-dark);
 
+
   grid-row: 1;
   grid-column: 2;
   border-radius: var(--radius-lg);
@@ -155,6 +156,9 @@
   min-width: 0;
   overflow-wrap: break-word;
   word-break: break-word;
+  /* Smooth reveal/hide for narrow-card hover/expand */
+  transition: opacity 0.2s ease;
+  opacity: 1;
 }
 
 
@@ -273,14 +277,20 @@ button.node-badge:active {
    Vote buttons slide up into the space the paragraph vacated.                */
 @container node-col (max-width: 400px) {
   .node-so-what {
-    font-size: 0;
-    line-height: 0;
-    flex: 0 0 0px;
-    min-height: 0;
-    max-height: 0;
-    min-width: 0;
-    width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
+    max-height: 1.42em;       /* one line at line-height 1.42 */
+    flex: 1 1 0%;
+    min-height: 0;
+    min-width: 0;
+    width: 0;                 /* force shrink into flex container */
+    padding-right: 8px;       /* breathing room before vote buttons */
+    opacity: 0.55;
+    /* Collapse transition: fast opacity fade hides the instant
+       white-space:nowrap snap, then max-height shrinks smoothly. */
+    transition: max-height 0.2s ease,
+                opacity 0.12s ease;
   }
   .node-body {
     justify-content: flex-end;
@@ -292,6 +302,27 @@ button.node-badge:active {
   .node-title { display: block; min-width: 120px; flex: 1; }
   .node-title .id { margin-right: 4px; }
   .node-controls { flex-shrink: 1; flex-wrap: wrap; }
+
+  /* Reveal so-what when the node's expander is open */
+  .node-card:has(.node-header[aria-expanded="true"]) .node-so-what {
+    white-space: normal;
+    text-overflow: clip;
+    overflow: hidden;         /* hidden (not visible) for a clean clip during transition */
+    max-height: 200px;
+    flex: 1;
+    min-height: auto;
+    min-width: 0;
+    width: auto;
+    padding-right: 0;
+    opacity: 1;
+    /* Expand transition: max-height reveals multi-line text progressively,
+       opacity fades in with a slight delay so the height leads. */
+    transition: max-height 0.3s ease,
+                opacity 0.2s ease 0.05s;
+  }
+  .node-card:has(.node-header[aria-expanded="true"]) .node-body {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 450px) {

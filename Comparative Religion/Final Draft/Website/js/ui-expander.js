@@ -16,6 +16,7 @@ import { ANIMATION_SPEEDS, CSS_TRANSITION_MS, FOCUS_DIM_DELAY_RATIO, EXPANDER_SP
 import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
 import { applyVoteStates } from './ui-agreement.js';
 import { bindTabEvents, scrollToView } from './ui-expander-content.js';
+import { stopAnimationRedraw } from './svg-engine.js';
 
 /* --- Expander animation guard ---
  * True while an expander open/close animation is in progress.
@@ -27,6 +28,97 @@ let _expanderAnimating = false;
 /** @returns {boolean} Whether an expander animation is currently running. */
 export function isExpanderAnimating() { return _expanderAnimating; }
 
+/* --- Sticky card via scroll-driven transform ---
+ * CSS position:sticky fails inside flex-wrap:wrap containers in many
+ * browsers.  Instead we listen to scroll events and apply a translateY
+ * on the active row to pin it below the page header.  The row's
+ * original layout position is preserved; only the visual position shifts.
+ * The z-index on .node-row.is-active (set in CSS) ensures it paints
+ * above the expander.                                                    */
+let _stickyCleanup = null;
+
+function setupStickyScroll(row, expander, stickyTop) {
+  if (_stickyCleanup) _stickyCleanup();
+
+  const expInner = expander.querySelector('.exp-inner');
+  let currentTranslateY = 0;
+  let ticking = false;
+  let hasFade = false;
+
+  const update = () => {
+    ticking = false;
+    if (!row.classList.contains('is-active')) return;
+
+    const rowRect = row.getBoundingClientRect();
+    // Subtract our current transform to get the row's *natural* viewport top
+    const naturalTop = rowRect.top - currentTranslateY;
+    const rowHeight = rowRect.height;
+
+    // Boundary: the expander's bottom, not the full level-group.
+    // The row should unstick once the expansion content has scrolled
+    // past the viewport — not when the entire container scrolls out.
+    const expanderBottom = expander.getBoundingClientRect().bottom;
+
+    if (naturalTop < stickyTop) {
+      // Pin the row at stickyTop, but don't let it overshoot the
+      // expander bottom.  The max clamp naturally scrolls the row
+      // away with the expander instead of hard-snapping it back.
+      const target = stickyTop - naturalTop;
+      const max = Math.max(0, expanderBottom - rowHeight - naturalTop - 20);
+      currentTranslateY = Math.max(0, Math.min(target, max));
+      row.style.transform = `translateY(${currentTranslateY}px)`;
+
+      // Fade mask: make expander content dissolve as it scrolls under the row.
+      // Calculate how many pixels of .exp-inner are behind the pinned row.
+      if (expInner) {
+        const eiTop = expInner.getBoundingClientRect().top;
+        const rowBottom = rowRect.top + rowHeight;  // visual bottom of pinned row
+        const overlap = rowBottom - eiTop;
+        if (overlap > 0) {
+          expInner.style.setProperty('--mask-clip', `${overlap}px`);
+          if (!hasFade) { expInner.classList.add('has-stuck-fade'); hasFade = true; }
+        } else if (hasFade) {
+          expInner.classList.remove('has-stuck-fade');
+          hasFade = false;
+        }
+      }
+    } else {
+      if (currentTranslateY !== 0) {
+        currentTranslateY = 0;
+        row.style.transform = '';
+      }
+      if (hasFade && expInner) {
+        expInner.classList.remove('has-stuck-fade');
+        hasFade = false;
+      }
+    }
+  };
+
+  const onScroll = () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // Run once immediately so the row pins if the page is already scrolled
+  onScroll();
+
+  _stickyCleanup = () => {
+    window.removeEventListener('scroll', onScroll);
+    currentTranslateY = 0;
+    row.style.removeProperty('transform');
+    if (expInner) {
+      expInner.classList.remove('has-stuck-fade');
+      expInner.style.removeProperty('--mask-clip');
+    }
+    hasFade = false;
+    _stickyCleanup = null;
+  };
+}
+
+function cleanupStickyScroll() {
+  if (_stickyCleanup) _stickyCleanup();
+}
+
 /**
  * Toggles the expander for the given node ID.
  * If already open, closes it. If another is open, closes that first.
@@ -34,26 +126,21 @@ export function isExpanderAnimating() { return _expanderAnimating; }
  * @param {string} id — node ID
  */
 export function toggleExpander(id) {
-  // When search results duplicate a node-row from the hidden map-flow,
-  // querySelectorAll may return both.  Prefer the visible one (offsetParent
-  // is null for elements inside display:none ancestors).
   const allRows = document.querySelectorAll(`.node-row[data-id="${id}"]`);
   const row = Array.from(allRows).find(r => r.offsetParent !== null) || allRows[0];
   if (!row) return;
 
   const levelGroup = row.closest('.level-group');
-  // Search for the expander in the level-group first, then fall back to
-  // the parent container (stack-group) — layout transitions can displace it.
+  const stackGroup = row.closest('.stack-group');
   const expander = levelGroup.querySelector('.level-expander')
     || row.parentElement?.querySelector(':scope > .level-expander');
   const headerBtn = row.querySelector('.node-header');
   const inlineBtn = row.querySelector('.trigger-inline');
 
   if (AppState.activeNodeId === id) {
-    // Explicit close: animate the reverse
     closeExpander(row, expander, headerBtn, inlineBtn, true);
   } else {
-    // Close any previously open expander instantly (no reverse animation)
+    // Accordion switch: close previous, then open new.
     if (AppState.activeNodeId !== null) {
       const activeRows = document.querySelectorAll(
         `.node-row[data-id="${AppState.activeNodeId}"]`
@@ -62,9 +149,6 @@ export function toggleExpander(id) {
         || activeRows[0];
       if (activeRow) {
         const g = activeRow.closest('.level-group');
-        // The expander might be in the level-group, in an adjacent
-        // stack-group wrapper, or displaced by a zone absorption.
-        // Search broadly to avoid null reference errors.
         const prevExp = g.querySelector('.level-expander')
           || activeRow.parentElement?.querySelector(':scope > .level-expander')
           || document.querySelector('.level-expander.is-open');
@@ -73,11 +157,34 @@ export function toggleExpander(id) {
           prevExp,
           activeRow.querySelector('.node-header'),
           activeRow.querySelector('.trigger-inline'),
-          false
+          false,
+          true
         );
       }
     }
-    openExpander(id, row, expander, headerBtn, inlineBtn);
+
+    // Snap scroll before opening — ALWAYS instant-snap in accordion mode.
+    // A smooth scroll races with the expanding content (the expander grows
+    // during the animation, inflating page height, which causes the browser's
+    // smooth-scroll to overshoot).  An instant snap positions the row at
+    // stickyTop immediately, so setupStickyScroll needs zero translateY and
+    // the expander opens cleanly below the card instead of behind it.
+    const pageHeader = document.getElementById('pageHeader');
+    const stickyTop = pageHeader
+      ? pageHeader.getBoundingClientRect().height + 12 + 8
+      : 120;
+    const rowRect = row.getBoundingClientRect();
+    if (Math.abs(rowRect.top - stickyTop) > 2) {
+      window.scrollTo({
+        top: window.scrollY + rowRect.top - stickyTop + 4,
+        behavior: 'instant'
+      });
+    }
+
+    // Re-query the expander (cleanup may have replaced it)
+    const freshExp = levelGroup.querySelector('.level-expander')
+      || row.parentElement?.querySelector(':scope > .level-expander');
+    openExpander(id, row, freshExp || expander, headerBtn, inlineBtn, { accordion: true });
   }
 }
 
@@ -92,14 +199,17 @@ export function toggleExpander(id) {
  */
 export function forceCloseExpander() {
   if (AppState.activeNodeId === null) return;
-
+  cleanupStickyScroll();
   // Best-effort DOM cleanup — the elements may already be removed
-  // Consolidate three separate querySelectorAll calls into one pass
   const activeRows = document.querySelectorAll('.node-row.is-active');
   const openExpanders = document.querySelectorAll('.level-expander.is-open');
   const spacers = document.querySelectorAll('.expander-spacer');
 
-  activeRows.forEach(r => r.classList.remove('is-active'));
+  activeRows.forEach(r => {
+    r.classList.remove('is-active');
+    r.style.removeProperty('--sticky-top');
+    r.style.transform = '';
+  });
   openExpanders.forEach(e => {
     e.classList.remove('is-open');
     e.innerHTML = '';
@@ -115,13 +225,14 @@ export function forceCloseExpander() {
 /**
  * @param {boolean} animated — true for reverse animation, false for instant snap
  */
-function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
+function closeExpander(row, expander, headerBtn, inlineBtn, animated, keepFocused = false) {
+  cleanupStickyScroll();
   // Guard: expander may have been displaced by a layout transition
   if (!expander) {
     row.classList.remove('is-active');
     AppState.activeNodeId = null;
     AppState.updateTints({ expander: 'transparent' });
-    document.body.classList.remove('is-focused');
+    if (!keepFocused) document.body.classList.remove('is-focused');
     document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
     const levelGroup = row.closest('.level-group');
     if (levelGroup) levelGroup.style.paddingBottom = '';
@@ -150,62 +261,64 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
   }
 
   row.classList.remove('is-active');
+  row.style.removeProperty('--sticky-top');
   AppState.activeNodeId = null;
   AppState.updateTints({ expander: 'transparent' });
 
   // Defer focus dimming removal slightly so the close animation is visible
   // against the dimmed background (otherwise everything brightens instantly
   // and the shrinking panel is invisible against bright cards).
-  if (animated) {
-    setTimeout(() => {
-      // Only remove focus if no other expander has opened in the meantime
-      if (AppState.activeNodeId === null) {
-        document.body.classList.remove('is-focused');
-      }
-    }, CSS_TRANSITION_MS * FOCUS_DIM_DELAY_RATIO);
-  } else {
-    document.body.classList.remove('is-focused');
+  // When keepFocused is true (accordion switch), skip removal entirely —
+  // the incoming expander will maintain the is-focused state.
+  if (!keepFocused) {
+    if (animated) {
+      setTimeout(() => {
+        // Only remove focus if no other expander has opened in the meantime
+        if (AppState.activeNodeId === null) {
+          document.body.classList.remove('is-focused');
+        }
+      }, CSS_TRANSITION_MS * FOCUS_DIM_DELAY_RATIO);
+    } else {
+      document.body.classList.remove('is-focused');
+    }
   }
 
   const cleanup = () => {
     const levelGroup = row.closest('.level-group');
-    // Always move expander back to the end of the level-group.
-    // This handles stacked mode where parentNode is a stack-group,
-    // and pure parallel mode where it was relocated to map-flow.
     if (levelGroup) {
       levelGroup.style.paddingBottom = '';
-      levelGroup.appendChild(expander);
+      const fresh = document.createElement('div');
+      fresh.className = 'level-expander';
+      if (expander.parentNode === levelGroup) {
+        expander.replaceWith(fresh);
+      } else {
+        expander.remove();
+        levelGroup.appendChild(fresh);
+      }
     }
-    delete expander.dataset.parallelPull;
-    expander.style.removeProperty('--parallel-pull');
-    expander.style.marginLeft = '';
-    expander.style.marginRight = '';
-    expander.style.flex = '';
-    expander.style.width = '';
-    expander.style.position = '';
-    expander.style.top = '';
-    expander.style.left = '';
-    expander.style.zIndex = '';
-    if (!expander.classList.contains('is-open')) expander.innerHTML = '';
-    expander.style.transition = '';
-    // Remove sibling spacers
     document.querySelectorAll('.expander-spacer').forEach(s => s.remove());
   };
 
   if (animated) {
     // DOM moves after animation is complete — moving mid-animation kills it
     setTimeout(() => {
-      // Check BEFORE cleanup() clears expander.innerHTML whether focus
+      // Stop the SVG animation RAF loop BEFORE touching the DOM so it
+      // can't draw another frame with positions shifted by cleanup().
+      stopAnimationRedraw();
+      // Check BEFORE cleanup() replaces the expander whether focus
       // was inside the panel so we can return it to the node header.
       const shouldReturnFocus = expander.contains(document.activeElement);
       cleanup();
       // Return focus to the node header if it was in the closing panel
       if (shouldReturnFocus && headerBtn) headerBtn.focus();
-      // Force SVG redraw after the expander DOM has settled — the
-      // ResizeObserver may not fire a final event once the CSS animation
-      // reaches 0fr, leaving the SVG connectors at stale positions.
       _expanderAnimating = false;
-      document.dispatchEvent(new Event('expander-settled'));
+      // Wait one frame after cleanup's DOM mutations so the browser
+      // fully commits layout before the final SVG redraw measures
+      // element positions.  Without this, getBoundingClientRect()
+      // can return stale values intermittently.
+      requestAnimationFrame(() => {
+        document.dispatchEvent(new Event('expander-settled'));
+      });
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
   } else {
     // Instant close: run cleanup synchronously so a subsequent openExpander
@@ -218,7 +331,7 @@ function closeExpander(row, expander, headerBtn, inlineBtn, animated) {
  * Open
  * --------------------------------------------------------------------------- */
 
-function openExpander(id, row, expander, headerBtn, inlineBtn) {
+function openExpander(id, row, expander, headerBtn, inlineBtn, { accordion = false } = {}) {
   const nodeData = DataStore.map.get(id);
   if (!nodeData) return;
 
@@ -226,15 +339,7 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
   const stackGroup = row.closest('.stack-group');
 
   if (stackGroup) {
-    // Stacked mode: move the expander right after the clicked row inside
-    // the stack-group so it appears inline (tree-view style).
     row.after(expander);
-    // Break out of the narrow stack-group column to full level-group width
-    // using negative margins on BOTH sides.  This avoids setting an explicit
-    // pixel width (which inflates the stack-group's intrinsic cross-size and
-    // corrupts the parallel flex layout).  With width: auto and align-items:
-    // stretch (the default), the element stretches to:
-    //   containerWidth + |marginLeft| + |marginRight| = levelGroup width.
     const lgRect = levelGroup.getBoundingClientRect();
     const sgRect = stackGroup.getBoundingClientRect();
     const breakoutLeft = sgRect.left - lgRect.left;
@@ -333,16 +438,36 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
 
   // requestAnimationFrame defers to after the browser completes layout, ensuring
   // the expander's initial 0fr state is rendered before triggering the 1fr animation.
+  // Compute sticky offset: card sticks just below the page header.
+  // The header is position:sticky at top:12px, so once stuck its bottom
+  // is stable in the viewport. We measure it now and set as a CSS var.
+  const pageHeader = document.getElementById('pageHeader');
+  if (pageHeader) {
+    const headerRect = pageHeader.getBoundingClientRect();
+    const stickyTop = headerRect.height + 12 + 8; // header top offset (12px) + gap (8px)
+    row.style.setProperty('--sticky-top', `${stickyTop}px`);
+  }
+
   requestAnimationFrame(() => {
+    // Suppress browser scroll anchoring during the expand animation.
+    // As the expander grows (grid-template-rows 0fr → 1fr), elements below
+    // it shift down in the flow.  The browser's default overflow-anchor
+    // behaviour tries to keep those elements at the same viewport position
+    // by auto-scrolling the page downward — which forces setupStickyScroll
+    // to apply a large translateY on the active row, making the card
+    // visually overlap/cover the expander content.
+    // Disabling anchoring for the duration of the animation prevents this.
+    const htmlEl = document.documentElement;
+    const prevAnchor = htmlEl.style.overflowAnchor;
+    htmlEl.style.overflowAnchor = 'none';
+
     expander.classList.add('is-open');
     headerBtn.setAttribute('aria-expanded', 'true');
     if (inlineBtn) inlineBtn.textContent = 'Hide';
 
-    // Start continuous SVG redraw so return branches animate smoothly
     _expanderAnimating = true;
     document.dispatchEvent(new Event('expander-animating'));
 
-    // Animate spacers to match expander height
     if (spacerHeight > 0) {
       document.querySelectorAll('.expander-spacer').forEach(s => {
         s.style.height = spacerHeight + 'px';
@@ -402,10 +527,42 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
     // fire mid-animation with intermediate positions).
     setTimeout(() => {
       _expanderAnimating = false;
+      // Restore scroll anchoring now that the layout has settled
+      htmlEl.style.overflowAnchor = prevAnchor;
+      // Trigger a scroll update so the stuck-fade mask applies
+      // retroactively if the user scrolled during the animation
+      // (the fade logic was suppressed while _expanderAnimating was true).
+      window.dispatchEvent(new Event('scroll'));
       document.dispatchEvent(new Event('expander-settled'));
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
 
-    scrollToView(row);
+    // In accordion mode, use instant scroll and also do a second correction
+    // after a brief delay — the first instant scroll may have been clamped
+    // when the page was at max scroll (before the expander started growing).
+    if (accordion) {
+      // Immediate instant scroll (may be clamped)
+      scrollToView(row, { instant: true });
+      // Second correction after the expander has grown enough to un-clamp
+      setTimeout(() => {
+        if (AppState.activeNodeId !== id) return;
+        const rr = row.getBoundingClientRect();
+        const st = parseFloat(row.style.getPropertyValue('--sticky-top')) || 120;
+        if (Math.abs(rr.top - st) > 2) {
+          window.scrollTo({
+            top: window.scrollY + rr.top - st + 4,
+            behavior: 'instant'
+          });
+        }
+      }, 50);
+    } else {
+      scrollToView(row);
+    }
+
+    // Activate scroll-driven sticky immediately so it responds from the
+    // first scroll.  The max-clamp inside the handler naturally adapts
+    // as the expander animates to its full height.
+    const stickyTopVal = parseFloat(row.style.getPropertyValue('--sticky-top')) || 120;
+    setupStickyScroll(row, expander, stickyTopVal);
 
     // Keyboard focus: move focus to the first interactive element in the
     // expander after the animation has settled.  preventScroll suppresses
@@ -415,5 +572,6 @@ function openExpander(id, row, expander, headerBtn, inlineBtn) {
       const focusTarget = expander.querySelector('.btn-tab, .btn-action');
       if (focusTarget) focusTarget.focus({ preventScroll: true });
     }, ANIMATION_SPEEDS.CSS_TRANSITION_MS);
+
   });
 }

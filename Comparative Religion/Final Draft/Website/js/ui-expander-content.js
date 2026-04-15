@@ -1,12 +1,11 @@
 /* === ui-expander-content.js — Tab Rendering & Scroll Helpers ===
  * Dependencies: templates.js (tabContent),
- *               constants.js (ANIMATION_SPEEDS),
  *               ui-search.js (getActiveSearchQuery, highlightMatches)
  * Consumers: ui-expander.js (calls bindTabEvents, scrollToView)
  * ============================================================= */
 
 import { tabContent } from './templates.js';
-import { ANIMATION_SPEEDS, EXPANDER_SCROLL_OFFSET } from './constants.js';
+
 import { getActiveSearchQuery, highlightMatches } from './ui-search.js';
 
 /**
@@ -48,20 +47,35 @@ function renderTabPanel(nodeData, key) {
 }
 
 /**
- * Scrolls the row into view if it's below the viewport bottom.
+ * Scrolls the row into view so the card sits just below the sticky header
+ * and the expander content is fully visible (not hidden under the card).
  * Uses a delayed scroll to avoid mid-animation jerking.
  *
  * @param {HTMLElement} el — the element to scroll into view
  */
-export function scrollToView(el) {
-  setTimeout(() => {
+export function scrollToView(el, { instant = false } = {}) {
+  // Use a single RAF so we read geometry after the DOM changes from
+  // open/close have been applied, but scroll starts immediately —
+  // overlapping with the expander's open animation for a fluid feel.
+  //
+  // In accordion mode (instant=true), use instant scroll to avoid a
+  // race between smooth-scroll and the expanding content that causes
+  // the row's sticky translateY to overshoot, placing the expander
+  // visually behind the card.
+  requestAnimationFrame(() => {
     const rect = el.getBoundingClientRect();
-    if (rect.bottom > window.innerHeight) {
-      const headerHeight = document.getElementById('pageHeader')?.offsetHeight ?? 0;
+    const headerHeight = document.getElementById('pageHeader')?.offsetHeight ?? 0;
+    const stickyTop = headerHeight + 12 + 8; // header sticky offset (12px) + gap (8px)
+
+    // Scroll so the row top sits just below the header.
+    const targetScrollY = window.scrollY + rect.top - stickyTop + 4;
+
+    // Scroll if the row isn't already properly positioned
+    if (Math.abs(rect.top - stickyTop) > 2 || rect.bottom > window.innerHeight) {
       window.scrollTo({
-        top: window.scrollY + rect.top - headerHeight - EXPANDER_SCROLL_OFFSET,
-        behavior: 'smooth'
+        top: targetScrollY,
+        behavior: instant ? 'instant' : 'smooth'
       });
     }
-  }, ANIMATION_SPEEDS.SCROLL_DELAY_MS);
+  });
 }

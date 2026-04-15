@@ -93,12 +93,43 @@ export function md(str) {
     // 2. Auto-link raw URLs (not already inside a markdown link)
     .replace(/(?<!\]\()https?:\/\/[^\s<>"'`,;)}\]]+/g, (url) =>
       stash(`<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`))
-    // 3. Node ID references: (1.2.3) or (1.2.3 — description)
-    //    Only matched when the ID exists in DataStore.
-    .replace(/\((\d+(?:\.\d+)+)(?:\s*[—–-]\s*([^)]*))?\)/g, (full, id, label) => {
-      if (!DataStore.map.has(id)) return full;          // not a node → leave as-is
-      const display = label ? label.trim() : id;
-      return stash(`(<a class="node-ref" data-node="${id}" href="${buildNodeHref(id)}">${display}</a>)`);
+    // 3. Node ID references inside parentheses.
+    //    Handles single: (1.2.3), labelled: (1.2.3 — description),
+    //    comma-separated lists: (1.2.1.7, 1.2.1.8),
+    //    and mixed text with IDs: (label, 1.2.3), (from 1.2.3), etc.
+    //    Only IDs that exist in DataStore are linked; others left as-is.
+    .replace(/\(([^)]*\d+(?:\.\d+)+[^)]*)\)/g, (full, inner) => {
+      // Check if this is a comma-separated list of node IDs only
+      const listMatch = inner.match(/^(\d+(?:\.\d+)+)(?:\s*,\s*(\d+(?:\.\d+)+))+$/);
+      if (listMatch) {
+        const ids = inner.split(/\s*,\s*/);
+        const linked = ids.map(id => {
+          id = id.trim();
+          if (!DataStore.map.has(id)) return id;
+          return `<a class="node-ref" data-node="${id}" href="${buildNodeHref(id)}">${id}</a>`;
+        });
+        return stash(`(${linked.join(', ')})`);
+      }
+      // Single ID, optionally with label: (1.2.3) or (1.2.3 — description)
+      const singleMatch = inner.match(/^(\d+(?:\.\d+)+)(?:\s*[—–-]\s*(.*))?$/);
+      if (singleMatch) {
+        const id = singleMatch[1];
+        const label = singleMatch[2];
+        if (!DataStore.map.has(id)) return full;
+        const display = label ? label.trim() : id;
+        return stash(`(<a class="node-ref" data-node="${id}" href="${buildNodeHref(id)}">${display}</a>)`);
+      }
+      // Fallback: link any valid node IDs found anywhere inside the parens,
+      // preserving surrounding text. Handles (label, 1.2.3), (from 1.2.3),
+      // (a pattern, 1.2.1.6, or an association, 1.1.4), etc.
+      let anyLinked = false;
+      const linkedInner = inner.replace(/\d+(?:\.\d+)+/g, idCandidate => {
+        if (!DataStore.map.has(idCandidate)) return idCandidate;
+        anyLinked = true;
+        return `<a class="node-ref" data-node="${idCandidate}" href="${buildNodeHref(idCandidate)}">${idCandidate}</a>`;
+      });
+      if (anyLinked) return stash(`(${linkedInner})`);
+      return full;
     })
     // Underline: ++text++
     .replace(/\+\+(.+?)\+\+/g, '<u>$1</u>')
@@ -332,8 +363,10 @@ function logicRow(label, items, step, isNumbered) {
   `;
 }
 
-function buildList(items) {
-  return `<ul class="bullets">${items.map(i => {
+function buildList(items, listType) {
+  const tag = listType === 'ordered' ? 'ol' : 'ul';
+  const cls = listType === 'ordered' ? 'numbered' : 'bullets';
+  return `<${tag} class="${cls}">${items.map(i => {
     if (typeof i === 'object' && i !== null && i.text !== undefined) {
       const subList = i.items?.length
         ? `<ul class="bullets">${i.items.map(s => `<li>${md(s)}</li>`).join('')}</ul>`
@@ -341,7 +374,7 @@ function buildList(items) {
       return `<li>${md(i.text)}${subList}</li>`;
     }
     return `<li>${md(i)}</li>`;
-  }).join('')}</ul>`;
+  }).join('')}</${tag}>`;
 }
 
 /* ---------------------------------------------------------------------------
@@ -369,7 +402,7 @@ function buildMiniNodeContent(data) {
     parts.push(data.subSections.map(sub => `
       <div class="sub-section">
         <div class="sub-label">${md(sub.label)}</div>
-        <div class="sub-body">${buildList(sub.items)}</div>
+        <div class="sub-body">${buildList(sub.items, sub.listType)}</div>
       </div>
     `).join(''));
   }
