@@ -1,0 +1,338 @@
+================================================================================
+OBSERVED ASYMMETRIES IN HOW MEN AND WOMEN ARE TREATED
+LAYER 3 — structural claims drawn across Layer 2 inferences
+
+
+WRITING GOAL
+
+Demystification. Use plain, common language and keep cognitive load low,
+while staying precise enough that a specialist would agree it's
+accurate. Be hard on the topic, soft on the reader: anticipate where
+someone might feel defensive, but don't soften what's actually true.
+Where something is uncertain, contested, or where an expert would
+object, surface that directly in plain terms — don't hide it behind
+jargon, hedging, emotional appeals, or common misreadings the reader
+might bring in.
+
+Drifts to avoid:
+  (1) academic drift — reaching for Latinate words, nominalizations, or
+      jargon when a common word works.
+  (2) bland drift — hedging or both-sidesing until no real claim is
+      made.
+  (3) false accessibility — oversimplifying in a way a specialist would
+      object to.
+  (4) emotional cushioning that buries the actual point.
+If accessibility and precision seem to conflict in a sentence, flag
+that sentence rather than silently picking one.
+
+Self-check before releasing a version: a smart non-expert should
+understand it on first read; a specialist should read it and not
+wince; no sentence should hedge without saying anything. If any of
+those fail, rewrite.
+
+
+WHAT LAYER 3 IS
+
+Layer 1 is observations — individual facts that can each be checked
+against the world. Layer 2 is inferences drawn across those
+observations: rules or patterns the observations together support.
+
+Layer 3 treats the Layer 2 inferences themselves as the new
+"observations" and asks what claims they jointly support when you
+stand back one more level. A Layer 3 entry is a structural claim
+about how the Layer 2 inferences hang together. It is not a direct
+observation and not an inference over specific cases; it is a rule
+about the rules.
+
+Each Layer 3 entry lists the Layer 2 inferences it draws from using
+their I-numbers. If those inferences fall or are revised, the Layer 3
+entry falls or is revised with them.
+
+Layer 3 entries use the prefix M- (for meta-inference) to keep them
+distinct from Layer 1 (two-letter domain codes) and Layer 2 (I-).
+
+Clusters of Layer 3 entries that appear to share a deeper rule are
+Layer 4 material, not a reason to merge Layer 3 entries. Entries are
+only merged when they are genuinely identical.
+
+Throughout Layer 3: entries describe defaults in mainstream discourse
+and institutional behavior. They are claims about patterns and
+defaults, not about anyone's intent, consciousness, or coordination.
+
+
+FOUR FILTER CRITERIA
+
+Each entry must pass all four to stay in the main list:
+
+  (1) Both-sidedness. The structural claim holds when tested against
+      both directions of the asymmetry, not only one.
+
+  (2) Smallest interpretive move. The smallest step the Layer 2
+      inferences together support, not a leap past them to bigger
+      causal, historical, or psychological claims.
+
+  (3) Specialist-wince test. A specialist in the relevant domain
+      might disagree with the framing but would not say the claim is
+      factually wrong or technically sloppy.
+
+  (4) Falsifiability. A concrete class of evidence — including
+      changes to the underlying Layer 2 inferences — would force
+      revision or retraction.
+
+Entries that fail an audit move to the central staging file with the
+readmission condition that would let them back in. A Layer 3
+candidate may also fail because it is actually a Layer 4 claim (a
+pattern across Layer 3 entries); such candidates are held for
+Layer 4, also in the staging file.
+================================================================================
+
+
+================================================================================
+LAYER 3: STRUCTURAL CLAIMS
+================================================================================
+
+
+M1. Speech asymmetry runs harder and more one-directionally than
+    outcome asymmetry does.
+
+    The Layer 2 inferences sort into two kinds. One kind is about
+    speech — what can be said about whom, which terms are available,
+    which phrases cost the speaker something. The other kind is about
+    outcomes — who dies at work, who keeps the children, who goes to
+    prison longer, who drops out of school, who kills themselves. On
+    the speech side, the asymmetry runs strongly in one direction: it
+    is cheaper and more socially acceptable to speak critically of
+    men as a class, and mainstream language supplies more usable
+    words for doing so. On the outcome side, the asymmetries are
+    mixed: several large domains run against men, others run against
+    women (the female-disadvantaging side is referenced in I11's
+    internal scope rather than given its own dedicated L2 entries
+    here), and the direction depends on the domain.
+
+    Draws from: I4, I5, I7, I8, I11, I12, I13, I16, I17, I21, I22,
+    I23, I25, I27, I28, I30.
+
+
+M2. The Layer 2 inferences cluster into two partially non-overlapping
+    sets of patterns, and which set a reader encounters depends on
+    which discourse they're reading in.
+
+    One set describes speech conditions, representation at the top of
+    workplaces, sexual-harm asymmetries, and credibility defaults
+    favoring women's reports. The other set describes outcomes at the
+    bottom (mortality, homelessness, incarceration), family-law
+    outcomes, educational underperformance, and speech conditions
+    constraining what can be said about men or by men. Each set is
+    factually supported by the L1 observations its L2 entries cite;
+    neither set is the whole picture. Discourse that treats one set
+    as the whole picture is working from half the evidence.
+
+    Draws from: I5, I9, I11, I13, I16, I17, I20, I21, I22, I23, I25,
+    I27, I28, I30, I34.
+
+
+M3. When the facts are unclear, institutions default to reading harm
+    as running from man to woman.
+
+    In settings where an institution has to decide without the facts
+    being clear — a mutual-violence call, a distressed accusation, an
+    act that could be read as aggression or as venting — the default
+    reading places the man as the person responsible and the woman as
+    the person harmed.
+
+    Draws from: I6, I7, I14, I15, I31.
+
+
+M4. The agent-vs-recipient positioning of men and women is not
+    confined to discourse-addressing; the same positioning runs
+    across several distinct institutional behaviors.
+
+    I35 establishes that mainstream discourse addresses men as agents
+    of conduct to be corrected and women as recipients of concern or
+    services. Four other L2 inferences, each drawn from its own L1
+    evidence, show the same positioning operating in other registers:
+
+      - Responsibility attribution (I6, I31): in the same interaction,
+        male choices are treated as his to own; female choices are
+        softened into pressure, harm, or circumstance.
+      - Act classification (I14): the same physical or verbal act is
+        downgraded when done by a woman against a man and upgraded
+        when done by a man against a woman.
+      - Institutional intake under ambiguity (I15): crisis
+        infrastructure and primary-aggressor defaults treat the male
+        partner as default agent of harm.
+
+    Each of those L2s arrived at its own aggregation from its own L1
+    cases. What is new at L3 is that the same positioning — man as
+    agent, woman as recipient — runs across all five. It is not only
+    a feature of who the messaging is addressed to; it is a feature
+    of how acts are scored, how responsibility is assigned, and how
+    institutions act when facts are ambiguous.
+
+    Draws from: I6, I14, I15, I31, I35.
+
+
+M5. Outcome gaps where men do worse are read as men's own doing;
+    outcome gaps where women do worse are read as the system's doing.
+
+    Across suicide, homelessness, early death, incarceration, school
+    underperformance, workplace fatalities, combat exposure, and
+    contested custody, the default reading is that the gap reflects
+    choices men make, industries men select, or the kind of man he
+    is. Across matching or smaller gaps where women do worse, the
+    default reading is that the gap reflects a system — bias,
+    pattern, structure. The same category of evidence gets a
+    different default reading depending on which direction the gap
+    runs.
+
+    Draws from: I11, I20, I21, I22, I23, I25, I26, I27.
+
+
+M6. Rules that look neutral are applied by direction.
+
+    Several interpretive moves look even-handed on their face: judge
+    the content not the speaker; individual counter-cases don't rebut
+    group-level claims; past behavior bears on present judgment;
+    attribute conduct to agency rather than circumstance where agency
+    is visible. Each move has a local justification wherever it is
+    used. What is visible at L3 is that the direction in which each
+    move is applied correlates with the direction of the claim it
+    operates on.
+
+    When a claim runs against men, the class-level side of the rules
+    applies: the pattern counts, individual exceptions don't rebut
+    it, past behavior is admissible, agency is named. When a claim
+    runs against women, the individual side of the same rules
+    applies: the counter-case admits, the class-level claim becomes
+    an illegitimate generalization, past behavior doesn't carry,
+    circumstance takes over from agency. The rules are not worded
+    differently by sex; the direction of application is.
+
+    Draws from: I1, I4, I9, I13, I31, I32, I34.
+
+
+M7. Short words exist for one side's patterns and not the other's,
+    and the missing words raise the cost of naming the missing
+    patterns.
+
+    Female-disadvantaging patterns and male-misbehavior patterns have
+    compact, mainstream-usable names: pay gap, glass ceiling,
+    mansplaining, toxic masculinity, rape culture, male fragility,
+    weaponized incompetence. Male-disadvantaging patterns and
+    female-misbehavior patterns mostly don't, or have names with a
+    fraction of the reach: sentencing gap, custody gap, workplace-
+    death gap, conscription gap, toxic femininity, female relational
+    aggression. A pattern without a compact name takes a clause to
+    refer to and does not circulate in casual conversation at the
+    same frequency as one with a compact name.
+
+    Draws from: I8, I12, I16, I17, I28, I30.
+
+
+M8. Victim and oppressor designations hold even in sub-domains where
+    the running facts don't support them.
+
+    Once a group is designated the victim class on a given axis, the
+    designation persists in sub-domains where the current harm has
+    reversed. Women retain the victim designation in higher education
+    in countries where women now take the clear majority of degrees;
+    in sentencing, where men serve longer time for comparable
+    offenses; in combat deaths, which are overwhelmingly male. Once a
+    group is designated oppressor, current disadvantages in specific
+    domains don't lift the label. The designation is held
+    independently of the running outcome data in those sub-domains.
+
+    Draws from: I10, I11, I26, I28, I29, I34.
+
+
+M9. The switch between "men and women are equal" and "men and women
+    are not similarly situated" tracks which rule preserves the
+    current female-favorable outcome in a given domain.
+
+    I32 establishes that both claims are in active use and the switch
+    between them is not flagged. The three other L2s cited here show
+    the switch operating as a pattern rather than as occasional slip:
+
+      - Custody (I27): contested-case outcomes favoring mothers are
+        preserved under a case-level standard that treats mothers and
+        fathers as not similarly situated by default.
+      - Alimony direction (I33): transfer runs from men to women at a
+        rate larger than earning structure alone would produce;
+        preserved by a case-level framing that doesn't apply the
+        "equal" rule symmetrically.
+      - Draft registration (I26): registration remains male-only,
+        preserved under "not similarly situated" reasoning, alongside
+        formal equality doctrine.
+
+    What is new at L3 is that the choice between the two rules is not
+    random or case-specific; in the domains cited, the rule reached
+    for is the one that preserves the female-favorable outcome in
+    that domain.
+
+    Draws from: I26, I27, I32, I33.
+
+
+M10. Whether a gender claim can be raised without cost depends on its
+     direction, not on how well-evidenced it is.
+
+     A well-documented claim of female disadvantage enters mainstream
+     discussion at lower cost than a well-documented claim of male
+     disadvantage. The first is less often met with motive-
+     questioning, tone policing, or a demand for a ready policy fix
+     before the observation itself is engaged. The variable doing the
+     sorting is the direction of the claim, not the strength of the
+     evidence behind it.
+
+     Draws from: I1, I2, I3, I5, I7.
+
+
+M11. The move toward sex equality has been active in one direction
+     and absent in the other.
+
+     I36 establishes that several large sex-asymmetric outcomes have
+     not moved toward convergence over the past several decades. I37
+     establishes that several male-disadvantaging outcomes have
+     worsened in absolute terms over the same period in which female-
+     disadvantaging outcomes were targeted for correction. I38
+     establishes that formal doctrinal moves toward equal treatment
+     have not produced parallel practical movement on the male-
+     disadvantaging side of the domains those doctrines reach.
+
+     What is new at L3 is that these three hold together as one
+     trajectory, not three coincident ones: where a doctrinal shift
+     would reduce a female-disadvantaging gap, the practical
+     trajectory has been sustained and substantial; where the same
+     shift would reduce a male-disadvantaging gap, the practical
+     trajectory is flat or running in the male-disadvantaging
+     direction. Over the observation window the cited L2s cover,
+     there is no evidence of the male-disadvantaging side moving
+     toward the equal-treatment endpoint.
+
+     Draws from: I36, I37, I38.
+
+
+M12. The evidentiary split between the two subsets of Layer 2
+     inferences is also a readership split. Where each subset gets
+     read tracks the venue's ideology, not a random or mixed
+     sampling across readers.
+
+     M2 established that the Layer 2 inferences cluster into two
+     partially non-overlapping sets and that each set is factually
+     supported by its own Layer 1 evidence. I39 establishes,
+     independently, that those same two sets map onto the
+     ideological split in mainstream media and its adjacent
+     institutions: the female-disadvantage set is where left-coded
+     publications, academia, and major funders put their attention;
+     the male-disadvantage set is where right-coded publications and
+     men's-issues venues put theirs, without comparable institutional
+     reinforcement.
+
+     What's new at L3 is the join: the evidentiary split is the same
+     as the readership split. A typical reader inside one ecosystem
+     is not missing the other set by chance; the venues sort the
+     evidence, and each venue reliably delivers roughly one side. It
+     follows that "half the evidence" is not a metaphor — two actual
+     halves of the catalogue get distributed to two different
+     populations of readers.
+
+     Draws from: I39.

@@ -30,6 +30,10 @@
 .sibling-nav-area.prev { margin-bottom: 30px; }
 .sibling-nav-area.next { margin-top: 40px; }
 
+/* Subdued by default so nav buttons don't compete with the page header / node cards */
+.sibling-nav-area { opacity: 0.55; transition: opacity 0.2s ease; }
+.sibling-nav-area:hover { opacity: 0.85; }
+
 
 /* Group: one label + multiple buttons
    ----------------------------------------------------------------------------- */

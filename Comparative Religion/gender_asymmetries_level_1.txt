@@ -1,0 +1,1330 @@
+================================================================================
+OBSERVED ASYMMETRIES IN HOW MEN AND WOMEN ARE TREATED
+LAYER 1 — raw observations
+
+
+WRITING GOAL
+
+Demystification. Use plain, common language and keep cognitive load low,
+while staying precise enough that a specialist would agree it's
+accurate. Be hard on the topic, soft on the reader: anticipate where
+someone might feel defensive, but don't soften what's actually true.
+Where something is uncertain, contested, or where an expert would
+object, surface that directly in plain terms — don't hide it behind
+jargon, hedging, emotional appeals, or common misreadings the reader
+might bring in.
+
+Drifts to avoid:
+  (1) academic drift — reaching for Latinate words, nominalizations, or
+      jargon when a common word works.
+  (2) bland drift — hedging or both-sidesing until no real claim is
+      made.
+  (3) false accessibility — oversimplifying in a way a specialist would
+      object to.
+  (4) emotional cushioning that buries the actual point.
+If accessibility and precision seem to conflict in a sentence, flag
+that sentence rather than silently picking one.
+
+Self-check before releasing a version: a smart non-expert should
+understand it on first read; a specialist should read it and not
+wince; no sentence should hedge without saying anything. If any of
+those fail, rewrite.
+
+
+STRUCTURE
+
+Sections are ordered from less gender-specific first (general discourse
+patterns, meta-level observations about what can and can't be said)
+toward more gender-specific later (concrete stats and policy in
+specific domains of life).
+
+IDs are preserved across versions as stable anchors for later layers.
+New sections use new two-letter prefixes (DP, VO, EN). Existing
+observations keep their prior IDs even where sections have been
+reordered.
+================================================================================
+
+
+================================================================================
+LAYER 1: CONCRETE OBSERVATIONS, BY DOMAIN
+================================================================================
+
+
+--------------------------------------------------------------------------------
+DISCOURSE DYNAMICS (DD)
+How argument, evidence, and disagreement behave on loaded topics. Not
+gender-specific on its face, but shapes what happens when gender
+asymmetries are discussed.
+--------------------------------------------------------------------------------
+
+DD1. When a topic is emotionally charged, speaking about it in a calm,
+     analytical way is often read as coldness, dismissal, or hostility.
+     The tone itself becomes the basis for the judgment — "you sound
+     too detached about this" — separate from whether what the speaker
+     said was accurate.
+
+DD2. The intensity of a feeling is commonly treated as evidence that
+     the underlying position is correct. "You can see how much this
+     hurts them" functions as an argument, rather than as a reason to
+     then ask whether the claim producing the hurt is in fact true.
+
+DD3. Pointing out that an argument is badly structured (e.g., "this
+     mixes two separate issues" or "this premise doesn't support that
+     conclusion") is commonly read as disagreeing with the argument's
+     conclusion — as if the only reason to critique an argument is to
+     reject what it's defending.
+
+DD4. A single factual error inside a contrarian argument is commonly
+     used to discredit the entire position. An equivalent factual error
+     made from the mainstream side is typically corrected and moved
+     past without the speaker's overall position being treated as
+     discredited.
+
+DD5. When someone raises an uncomfortable observation, a common first
+     response is to question the speaker's motives ("why are you
+     bringing this up," "who's paying you to say this," "what are you
+     really after") rather than to evaluate the observation itself.
+     Someone raising an observation that fits the dominant view is not
+     usually asked about their motives first.
+
+DD6. Taboos in this area are mainly enforced through social punishment
+     — mockery, being labeled, lost friends, professional cost,
+     exclusion from social circles — rather than by someone producing
+     a counter-argument against the claim.
+
+DD7. Speech on these topics is increasingly described as itself a form
+     of harm or violence. Saying the thing is treated as doing
+     something to someone, rather than as a claim to be agreed with or
+     contested.
+
+DD8. If a listener feels uncomfortable hearing an idea, that discomfort
+     is increasingly treated as evidence the idea itself is harmful,
+     rather than as a signal that the listener is encountering
+     something that challenges a belief or assumption they hold.
+
+DD9. "Psychological safety" — originally meaning freedom from being
+     personally attacked or humiliated — has come to also mean freedom
+     from being exposed to views one disagrees with.
+
+DD10. When women express distress in political debates or public
+      forums (tears, visible upset, emotional appeals), it is typically
+      received as meaningful testimony that adds weight to their
+      position. When men express the same distress in the same
+      settings, it is typically received as instability, overreaction,
+      or evidence they shouldn't be in the conversation. The asymmetry
+      is visible in contemporaneous media framing of equivalent
+      displays across sex.
+
+DD11. When a current claim of male disadvantage is raised, a common
+      response is to introduce historical male advantage ("men had
+      power for centuries") as if it rebuts the current statistic. The
+      current claim and the historical fact concern different time
+      periods and different measurements. The mirror move — responding
+      to a current female-disadvantage claim by introducing historical
+      female-advantage domains (exemption from conscription, maternal-
+      preference custody, dower rights) — is not a standard rhetorical
+      move and is typically flagged as deflection when attempted.
+
+
+--------------------------------------------------------------------------------
+DEFENSIVE PATTERNS (DP)
+Moves a person tends to make when an uncomfortable claim lands, instead
+of engaging the claim on its merits. Not specific to gender, but very
+active on gender topics. These moves are not always invalid — sometimes
+the pushback is correct — but each one is also available as a way to
+avoid engaging, so the move shows up whether or not the original claim
+was right.
+--------------------------------------------------------------------------------
+
+DP1. When someone offers an analogy ("A is like B in this one respect"),
+     a common response is to list differences between A and B that are
+     true but don't bear on the respect being claimed. Example: "routine
+     infant circumcision is, in the relevant sense, like female genital
+     cutting — both involve cutting a child's genitals without the
+     child's consent." Common response: "no — FGM causes much more
+     harm, has no medical rationale, and is done to suppress women's
+     sexuality." All three differences are real; none of them address
+     the specific point the analogy was making (non-consensual cutting
+     of a child's genitals). The real differences are used to block
+     engagement with the narrow point.
+
+DP2. When a specific asymmetry is raised (e.g., "men are 92% of
+     workplace fatalities"), a common move is to introduce a different
+     asymmetry that favors the other side ("but women earn less"). The
+     second may be true, but it doesn't address the first, and the
+     effect of introducing it is to prevent the first from being
+     examined at all. Commonly called "whataboutism" when done by the
+     other side.
+
+DP3. When a group-level statistic is raised, a common move is to
+     produce an individual case that doesn't fit and treat that case
+     as if it refutes the statistic. "Men are 70% of homicide victims"
+     met with "my aunt was killed by her husband." The individual case
+     is real; the statistic is still real; and the conversation moves
+     on as if the statistic has been answered.
+
+DP4. Tying a claim to a disliked group is treated as itself a reason
+     to dismiss the claim. "That sounds like something a men's rights
+     activist would say" or "that's an incel talking point" functions
+     as a full refutation in many settings without the claim itself
+     being engaged.
+
+DP5. When a claim is made about a group someone identifies with, a
+     common move is to reframe the claim as a personal attack. "You're
+     describing a pattern in which some men behave badly" becomes "so
+     you're saying I'm the bad guy?" The conversation shifts from the
+     pattern to the hurt, and the pattern stops being discussed.
+
+DP6. Attacking the source of evidence is routinely treated as if it
+     rebuts the evidence. "That study was funded by X" or "that
+     researcher has said problematic things elsewhere" is offered as a
+     reason not to engage with what the study actually found.
+
+DP7. A common response to an uncomfortable observation is to demand a
+     ready policy solution before the observation can be acknowledged.
+     "What do you propose we do about it?" shifts the question from
+     "is this true?" to "is there a fix?" If the speaker doesn't have
+     a fix at hand, the observation is often treated as thereby
+     discredited.
+
+DP8. In group conversation, the question of whether a claim is true is
+     sometimes displaced by concern for the emotional impact of
+     raising it. "This is upsetting people in the room" takes priority
+     over "is what you said accurate?" — so the truth status of the
+     claim is never reached.
+
+DP9. Individual counter-cases to group-level statistics receive
+     asymmetric treatment. "Not all men" offered in response to a
+     statistic about male behavior is typically treated as deflection.
+     The structurally identical move in the other direction — "my
+     wife out-earns me" in response to the pay-gap figure, "I've known
+     women who abused their husbands" in response to domestic-
+     violence-against-women statistics — is rarely produced in
+     mainstream discourse, and when produced is typically treated as
+     deflection before the statistic is discussed. The same rhetorical
+     move lands differently by direction.
+
+
+--------------------------------------------------------------------------------
+WHAT CAN BE SAID ABOUT BIOLOGICAL DIFFERENCE (BD)
+Less about the biology itself than about what speech is permitted
+around it.
+--------------------------------------------------------------------------------
+
+BD1. Research consistently finds differences, on average, between men
+     and women in things like occupational interests, risk-taking
+     behavior, and some cognitive patterns. ("On average" means
+     on-the-whole across a population, not for every individual.)
+
+BD2. People who publicly discuss biological differences as a possible
+     contributor to outcomes (e.g., why more men work in engineering
+     and more women work in nursing) have repeatedly lost jobs,
+     speaking invitations, or professional standing. People who
+     publicly discuss discrimination as the explanation for the same
+     outcomes do not face equivalent professional risk.
+
+BD3. When men and women end up doing different things on average
+     (fields of study, occupations, life choices), the default
+     institutional explanation is discrimination. Explaining any part
+     of the pattern through different average preferences is treated
+     as politically suspect and requires heavier justification.
+
+BD4. In countries with more formal gender equality (e.g., the Nordic
+     countries), men and women actually choose more different
+     occupations and show larger differences in stated preferences,
+     not smaller. This finding — called the "gender equality paradox"
+     — receives limited mainstream coverage.
+
+BD5. Medical research and clinical practice continue to rely on
+     biological sex as a category for estimating disease risk,
+     calculating medication dosages, and setting reference ranges for
+     physiological measurements (e.g., hematocrit, hormone levels).
+
+BD6. Sports governing bodies (the IOC, World Athletics, World Rugby,
+     and others) have issued and revised policies on trans-athlete
+     eligibility that weigh physiological effects of biological sex
+     against inclusion principles. Different bodies have reached
+     different conclusions, and the policies continue to change.
+
+BD7. Public policy disputes about sex-segregated spaces (prisons,
+     domestic violence shelters, sports categories, hospital wards)
+     involve explicit disagreement about whether the operative
+     category is biological sex or self-declared gender identity.
+
+BD8. The same institutions sometimes use biological sex as the
+     operative medical category — e.g., calling screening programs
+     "prostate cancer screening" or "cervical cancer screening" — while
+     in adjacent reproductive-health communications replacing the
+     sex-based term with "people who menstruate" or "people who can
+     become pregnant." The operativeness of sex is affirmed and denied
+     in overlapping communications from the same source.
+
+BD9. Multiple independent research programs (Schmitt and colleagues on
+     personality, Lippa on interests, Falk and Hermle on preferences,
+     Stoet and Geary on STEM choices) have found that sex differences
+     in personality traits, stated partner preferences, and
+     occupational preferences measure as larger — not smaller — in
+     more egalitarian societies.
+
+
+--------------------------------------------------------------------------------
+RECEPTION OF OBSERVATIONS LIKE THESE (PR)
+How young men raising the points in this framework — or adjacent points
+— tend to be received, and what happens next.
+--------------------------------------------------------------------------------
+
+PR1. Young men who voice observations like the ones in this document
+     in mainstream settings (classroom, workplace, online among mixed
+     audiences) commonly receive responses that pathologize them —
+     "that's incel talk," "you sound radicalized," "you have issues
+     with women." Young women voicing grievances framed as female
+     grievances in the same settings typically receive support and
+     engagement with the grievance itself.
+
+PR2. Public figures who bring up observations like these — even
+     alongside content that is low-quality, conspiratorial, or
+     harmful — have built very large male audiences. The co-presence
+     of bad content does not prevent the audience from forming around
+     the naming itself.
+
+PR3. When a figure draws a large male audience, the mainstream
+     response tends to focus on condemning the figure rather than on
+     asking why the audience formed. Parallel phenomena drawing large
+     female audiences are more often engaged on the level of what
+     drew the audience (what unmet need the content is speaking to).
+
+PR4. When male-specific struggles are raised in progressive spaces
+     (e.g., boys falling behind in school, the male suicide rate,
+     male homelessness), the conversation is frequently redirected to
+     female-specific struggles ("but women still face…"). The reverse
+     redirection — someone raising a female-specific struggle and
+     having the conversation redirected to a male-specific one — is
+     rare.
+
+PR5. Young men commonly report that when they openly express
+     difficulty (struggling at school, feeling isolated, failing to
+     find a partner), the response they receive is suspicion or
+     lecturing rather than support. Young women report that
+     equivalent expressions of difficulty are met with support and
+     concern.
+
+
+--------------------------------------------------------------------------------
+READERSHIP AND COVERAGE (RC)
+Where gender-asymmetry topics get covered, by whom, and for which
+readers. How the two evidentiary sets this framework catalogues are
+distributed across reading locations.
+--------------------------------------------------------------------------------
+
+RC1. Mainstream left-coded general-audience publications (New York
+     Times, Washington Post, The Atlantic, Guardian, NPR) mostly
+     cover gender-asymmetry topics from the set that documents
+     female disadvantage and male-misbehavior patterns — pay gap,
+     MeToo, reproductive rights, leadership representation,
+     harassment. Coverage of the other set — sentencing gap, custody
+     outcomes, male-only draft registration, workplace-death sex
+     ratio, male suicide rate, male educational underperformance —
+     is rare in the same venues. When it does appear, it is more
+     often framed as a problem because of its effect on women
+     ("men falling behind" treated as a problem for women looking
+     for marriageable partners) than as a problem about men
+     standing on its own.
+
+RC2. Right-coded publications (Wall Street Journal op-ed, New York
+     Post, The Free Press, Quillette, National Review) and
+     explicitly men's-issues venues (fathers-rights organizations,
+     large parts of online men's discourse, books like Warren
+     Farrell's "The Boy Crisis" or Richard Reeves's "Of Boys and
+     Men") mostly cover gender-asymmetry topics from the set that
+     documents male disadvantage. Coverage of the female-
+     disadvantage set is thin in these venues and is more often
+     contested than reported.
+
+RC3. Academic gender studies programs focus their curricula on the
+     female-disadvantage set. Courses engaging the male-disadvantage
+     set are rare inside gender studies departments, though related
+     material does appear elsewhere in the university — criminology
+     (sentencing, incarceration), family law (custody, alimony),
+     labor economics (workplace deaths, occupational segregation),
+     and education research (boys falling behind in school). The
+     topics exist in academia; they just tend not to be housed in
+     the department with "gender" in its title.
+
+RC4. Philanthropic and institutional funding tagged "gender" in the
+     US — major private foundations (Ford, Gates, MacArthur,
+     Rockefeller), federal programs (EEOC, Title IX enforcement,
+     Women's Bureau, the White House Gender Policy Council), and
+     corporate DEI spending — flows overwhelmingly to programs
+     addressing the female-disadvantage set. Funding tagged for the
+     male-disadvantage set (men's mental health, boys' school
+     underperformance, custody equality, fatherless-household
+     interventions) is a small fraction — orders of magnitude
+     smaller at the foundation level.
+
+RC5. Institutionally embedded, well-funded feminist advocacy
+     organizations (NOW, Planned Parenthood, UN Women, Time's Up,
+     the Women's Law Project) address the female-disadvantage set.
+     Men's-issues advocacy (National Coalition For Men, men's-health
+     nonprofits, fathers-rights coalitions) is smaller, less well
+     funded, and carries lower cultural standing — even within its
+     own subject-matter expertise.
+
+
+--------------------------------------------------------------------------------
+VICTIM AND OPPRESSOR LABELS (VO)
+How the words "victim" and "oppressor" (and their softer stand-ins) get
+attached to people, and how the attachment is used socially and
+politically.
+--------------------------------------------------------------------------------
+
+VO1. "Victim" is applied asymmetrically for comparable harms. A man
+     hit by a female partner is less likely to be described as "a
+     victim of domestic abuse" in casual conversation or mainstream
+     media than a woman hit by a male partner in equivalent
+     circumstances. Same physical event, different likelihood of the
+     victim label.
+
+VO2. "Oppressor" and its softer forms ("privileged," "part of the
+     problem," "the dominant class") are commonly assigned by group
+     membership, not by individual conduct. A man who has personally
+     harmed no one is still describable as part of the oppressor
+     class on the basis of being a man. A woman who has personally
+     behaved cruelly to multiple people is not routinely described as
+     an oppressor on the basis of her conduct — the oppressor label
+     is almost never applied to her as an individual.
+
+VO3. Standing to speak on a topic is often indexed to victim status
+     on that topic. A woman's view on sexism is treated as carrying
+     greater evidential weight than a man's — she is seen as the
+     person with direct experience. The same logic is not applied in
+     the domains where men do worse (custody outcomes, conscription,
+     workplace deaths, suicide rate): a man's view on those domains
+     is not treated as carrying extra evidential weight, because men
+     are not widely seen as a victim class there.
+
+VO4. Claiming victim status publicly is a socially and politically
+     valuable position. It attracts sympathy, grants evidential weight
+     in disputes, unlocks institutional resources and protections,
+     and gives the speaker rhetorical high ground. Having oppressor
+     status applied to you is the inverse: loss of standing to speak,
+     reversed burden of proof, pressure to apologize. The incentive
+     gradient pushes speakers to frame situations in victim terms when
+     they plausibly can, and to deflect oppressor framing when it's
+     applied to them.
+
+VO5. Claims of harm made by members of a designated victim group are
+     received with a default of credibility ("believe women"). Claims
+     of harm made by members of a designated oppressor group are
+     received with a default of skepticism or reframing ("why is he
+     bringing this up," "what's he really after," "this is a cover
+     for resenting women").
+
+VO6. Once a group holds the "victim" designation on a given axis, the
+     designation tends to persist in sub-domains where the relevant
+     harm has reversed or resolved. Women retain the victim
+     designation in discussions of higher education in countries
+     where women now earn a clear majority of degrees; the
+     designation does not update to track the current outcome.
+
+VO7. When a member of a designated oppressor group is harmed by a
+     member of a designated victim group, the harm is more often
+     described in individual or situational terms (a one-off, a
+     dispute, a bad actor). When the direction reverses — a member of
+     the victim group harmed by a member of the oppressor group — the
+     harm is more often described in class terms (a pattern, a hate
+     crime, evidence of structural violence). The same physical event
+     yields different framings depending on who did it to whom.
+
+VO8. "Victim-blaming" — asking what the person on the receiving end
+     did to contribute to their own harm — is a named rhetorical
+     offense when applied to members of designated victim groups. The
+     same move applied to a male victim (suggesting a man hit by his
+     female partner "must have provoked her") is not commonly called
+     victim-blaming, and the term is rarely used for it.
+
+VO9. In US jurisdictions with "primary aggressor" policies for
+     domestic-violence calls — police training that instructs officers
+     to identify the main aggressor in a mutual-violence incident
+     instead of arresting both parties — male partners are identified
+     as primary aggressor at substantially higher rates than
+     incident-level facts (who hit first, who was injured more) would
+     predict by themselves. This is contested in the research
+     literature: some argue the disparity reflects real differences
+     in severity and intent, others argue it reflects policies being
+     applied asymmetrically by sex. Both readings are defended by
+     domestic-violence researchers.
+
+VO10. Political movements routinely claim victim status for their
+      constituency as a rhetorical move — not a description of a
+      specific harm done to specific people by specific others, but a
+      class-level positioning that places the movement on the morally
+      unassailable side of a dispute and, by implication, places its
+      opposition in the oppressor role. The class-level frame
+      substitutes for identifying specific conduct. When done by the
+      other side, the same move is commonly flagged as exaggeration
+      or grievance politics; when done by one's own side, it is
+      commonly treated as simply describing reality.
+
+VO11. "Oppressor" is applied to living people on the basis of actions
+      taken by earlier members of their group, without requiring any
+      specific conduct from the living person being designated. The
+      mirror-image move — designating a living person "a victim" on
+      the basis of harms done to earlier members of their group —
+      also happens, but the inherited oppressor status is harder to
+      escape: disclaiming, demonstrated conduct, and individual life
+      history typically do not lift the label.
+
+VO12. Inherited collective responsibility is applied asymmetrically
+      by sex. Living men are routinely assigned partial responsibility
+      in current-day discussions for actions of earlier members of
+      their group (historical disenfranchisement of women, historical
+      patriarchal law, wars started by male rulers). Living women are
+      not similarly assigned responsibility for actions of earlier
+      members of their group (historical support for restrictive
+      gender roles, participation in witch-hunt accusations, lobbying
+      for maternal-preference custody doctrines). The inherited-
+      responsibility move runs in one direction.
+
+
+--------------------------------------------------------------------------------
+LANGUAGE AND RHETORIC (LR)
+Which phrases about men and women are mainstream-acceptable, and which
+parallel phrases are not.
+--------------------------------------------------------------------------------
+
+LR1. Expressing frustration with men as a group is socially acceptable
+     in mainstream settings: "ugh, men," "men are exhausting," "men
+     are the worst" pass without sanction. The equivalent statements
+     about women — "ugh, women," "women are the worst" — are not
+     acceptable and are typically flagged as misogyny.
+
+LR2. "Men are trash" and "kill all men" circulate as acceptable
+     humor in mainstream online and cultural spaces. Structurally
+     identical phrases — "women are trash," "kill all women" — do not
+     circulate as humor and are treated as threats or hate speech.
+
+LR3. "Mansplaining" (a man condescendingly explaining something to a
+     woman), "manspreading" (sitting with legs open), "male
+     fragility," and "toxic masculinity" are mainstream words with
+     wide circulation. No parallel shorthand naming a typical female
+     behavior (e.g., for a woman interrupting a man she assumes knows
+     less, or for a common pattern of female social aggression) has
+     comparable currency in everyday speech.
+
+LR4. "Believe women" is offered as a principle applied to
+     accusations made by women. There is no parallel principle
+     "believe men" applied to accusations made by men.
+
+LR5. "Men need to do better" works as mainstream collective framing.
+     "Women need to do better," used the same way about women as a
+     group, does not.
+
+LR6. When an individual man describes suffering, a common response
+     is to point out that men as a group still benefit structurally
+     ("but you have privilege"). When an individual woman describes
+     suffering, she is not typically answered by pointing out domains
+     where women as a group benefit (e.g., longer life expectancy,
+     lower homelessness rates, preferential custody outcomes).
+
+LR7. "Patriarchy" — meaning a system in which men hold dominant power
+     — is used as a current-tense description of society even in
+     specific domains where men are now underrepresented or
+     underperforming (higher education, early-career earnings in
+     certain cities, school achievement). There is no parallel
+     structural term ("matriarchy" or similar) applied to those
+     domains.
+
+LR8. Calling a claim "what women think" is commonly contested as an
+     illegitimate generalization about women. Calling a claim "what
+     men think" is rarely contested on the same grounds.
+
+LR9. Women writing, speaking, or making content about the inner lives
+     of men — what men want, what men fear, why men are the way they
+     are — is a mainstream, uncontested genre. Men writing, speaking,
+     or making content about the inner lives of women is commonly
+     contested as presumptuous, as "mansplaining women to women," or
+     as an illegitimate claim to speak for a group he isn't in. The
+     same cross-sex authorial move is licensed in one direction and
+     challenged in the other.
+
+LR10. Male-default generic terms (chairman, mankind, generic "he/him")
+      have been flagged as exclusionary in institutional style guides
+      and widely replaced (chairperson, humanity, they/them, singular
+      they). Female-coded generic terms at comparable frequency have
+      not been flagged or replaced. In current writing, generic
+      "she/her" is commonly treated as progressive; generic "he/him"
+      in the same contexts is treated as sexist.
+
+
+--------------------------------------------------------------------------------
+ATTRIBUTION AND CHARACTER FRAMING (AC)
+How the same behavior is described differently depending on who's doing
+it — which determines the moral frame before any analysis begins.
+--------------------------------------------------------------------------------
+
+AC1. When a woman behaves difficultly — snapping, being controlling,
+     losing her temper, being cruel — it's commonly explained by what's
+     happening to her: stress, hormones, being overwhelmed, past
+     trauma, being provoked. When a man behaves the same way, it's
+     commonly explained by who he is: a controlling personality,
+     toxic traits, a character defect.
+
+AC2. In therapy talk and self-help writing, female anger tends to be
+     presented as a signal of unmet needs that deserves exploration
+     ("what is your anger trying to tell you"). Male anger tends to be
+     presented as a pathology requiring management ("anger issues,"
+     "anger management").
+
+AC3. When a woman visibly breaks down — cries, shouts, lashes out —
+     the surrounding discourse commonly describes it as "having a
+     bad moment," "a hard day," "being at the end of her rope." When
+     a man visibly breaks down in the same way, it is commonly
+     described as "showing who he really is" or "a red flag."
+
+AC4. The everyday vocabulary for women's ongoing difficulty is wide
+     and sympathetic: burnout, overwhelm, mental load, depletion,
+     postpartum, perimenopause, hormonal cycle. The everyday
+     vocabulary for men's ongoing difficulty is narrower and more
+     often carries a negative tone: midlife crisis, anger issues,
+     emotional unavailability, avoidance, toxic.
+
+AC5. Women behaving difficultly are commonly described as "going
+     through something." Men behaving difficultly are less often
+     granted that framing and are more often described as "being
+     difficult" — the "something happening to her" vs. "something
+     true about him" distinction.
+
+AC6. Female hostility toward an intimate partner is commonly framed
+     in advice columns and media as something the other partner
+     should try to understand, accommodate, or work through. Male
+     hostility toward an intimate partner is commonly framed as
+     something the other partner should exit or report.
+
+
+--------------------------------------------------------------------------------
+EMOTIONAL NEEDS (EN)
+How each sex's emotional needs are named, treated, and used — both in
+private relationships and in public claims.
+--------------------------------------------------------------------------------
+
+EN1. "Unmet emotional needs" in relationship discourse is almost
+     exclusively applied to women. When a woman reports her emotional
+     needs aren't being met, the framing treats the unmet need as a
+     real condition that should be addressed. When a man reports the
+     same — his emotional needs aren't being met by his partner —
+     the framing more often treats him as needy, entitled, or as
+     someone who should work on himself.
+
+EN2. The assumption that men have simpler or fewer emotional needs
+     ("men just want sex and food") circulates widely in pop
+     psychology and mainstream advice. It both underestimates what
+     men actually report wanting — connection, being seen, being
+     respected, physical affection — and makes the vocabulary of
+     "unmet needs" less available to them when those needs go unmet.
+
+EN3. The vocabulary for naming emotional needs is not equally usable
+     across sex. A woman saying "I need more emotional intimacy" or
+     "I need to feel seen" is typically taken at face value. A man
+     using the same phrasing is often read as weak, needy, or
+     effeminate. A man naming the same underlying need in a more
+     traditionally-masculine register ("I need to feel respected,"
+     "I need physical affection from my partner") is often read as
+     making demands. The register he can use to be heard without
+     penalty is narrower.
+
+EN4. Need-claims function politically as well as personally. "I need
+     to feel safe" — said by a woman, or by a member of a designated
+     victim group — has become a load-bearing basis for policy
+     changes, speaker cancellations, and institutional concessions;
+     the speaker's felt-safety is treated as sufficient justification
+     for action. The same need-claim from men (or from designated
+     non-victim groups) does not carry the same load-bearing weight
+     and is more often treated as unreasonable or as a demand for
+     special treatment.
+
+EN5. Men's emotional struggles are commonly narrated about them in
+     the third person by outside observers (media, therapy discourse,
+     relationship columns) before men themselves speak to the
+     struggles, and the third-person narration often carries a
+     critical tone (emotionally stunted, avoidant, fragile, checked
+     out, toxic). Women's emotional struggles are more often narrated
+     in the first person by women in mainstream media using
+     vocabulary women supply themselves, and that first-person
+     narration is more often received sympathetically.
+
+EN6. In children, girls' emotional needs are more likely to be
+     treated as requiring adult attention and response (naming the
+     feeling, talking it through, validating it). Boys' emotional
+     needs are more likely to be treated as requiring self-regulation,
+     toughening up, or a redirect to activity. The pattern is
+     observable in parenting advice, teacher response patterns, and
+     popular depictions of child-rearing.
+
+EN7. "Emotional unavailability" — the charge that a partner is closed
+     off, not offering emotional presence — is a mainstream complaint
+     leveled at men. The equivalent complaint about women — that a
+     woman is unavailable for the emotional content her male partner
+     wants (presence, attention, sexual desire, affirmation) — has no
+     widely-used name, and is more often framed as him having an
+     unreasonable demand than as her being emotionally absent.
+
+
+--------------------------------------------------------------------------------
+AGENT/PATIENT POSITIONING (AP)
+Who mainstream discourse addresses as the agent whose behavior is the
+target of the message, and who it addresses as the recipient of
+concern, protection, or services. Observable at the level of campaign
+materials, training scripts, curricula, news framing, and everyday
+advice genres.
+--------------------------------------------------------------------------------
+
+AP1. Public-health campaigns on sexual violence and intimate-partner
+     harm address men and women in different subject positions on the
+     same topic. Men are addressed as the agent whose behavior the
+     campaign targets ("It's On Us," "HeForShe," "ask for consent,"
+     "call in your bros"). Women are addressed as the recipient of
+     protection and services ("know your rights," "call this hotline,"
+     "here's how to report"). The topic is shared; the subject
+     position differs by sex.
+
+AP2. Workplace sexual-harassment training, despite policy language
+     written to be sex-neutral, typically frames scenarios and
+     behavioral asks with men as the default potential harasser (how
+     to examine your conduct, what not to do) and women as the
+     default potential victim (how to report, what your rights are).
+     The training's subject position tracks sex.
+
+AP3. Sex education addresses boys about their conduct (consent,
+     boundaries, respect, managing urges) and girls about their
+     safety and self-advocacy (recognizing coercion, saying no,
+     reporting). Where the formal curriculum is the same across
+     sexes, the emphasis, examples, and role-play casting differ.
+
+AP4. Mainstream advice content addressed to women about relationships
+     and inner life speaks to them about what is happening to them —
+     what you're feeling, what you need, what your partner is doing,
+     what to expect. The same genre addressed to men speaks to them
+     about what is wrong with them — what to change, what to work on,
+     what to stop doing, what you're getting wrong. Genre is the
+     same; the addressed position — someone to whom something is
+     happening versus someone doing something wrong — splits by sex.
+
+AP5. In media coverage of a class of harm (assault, street
+     harassment, intimate-partner violence), the prevention frame
+     defaults to addressing men (what men should stop) and the
+     response frame defaults to addressing women (how to handle it
+     when it happens). Prevention-addresses-men and response-
+     addresses-women is observable across major campaigns, news
+     features, and advisory content.
+
+
+--------------------------------------------------------------------------------
+TOLERANCE AND ACCOMMODATION (TA)
+What behaviors each partner is expected to put up with, de-escalate
+around, or leave over.
+--------------------------------------------------------------------------------
+
+TA1. In relationships, men are routinely expected to tolerate a
+     female partner's emotional ups and downs — stay calm, de-escalate,
+     work around them. When a woman is expected to do the same for a
+     male partner's emotional ups and downs, it is commonly framed as
+     her enabling him, staying too long, or failing to leave.
+
+TA2. Advice aimed at men tells them to be patient, regulate their
+     emotions, and do emotional labor on behalf of their partner.
+     Advice aimed at women tells them to set boundaries, advocate for
+     themselves, and leave relationships that don't meet their needs.
+
+TA3. "Walking on eggshells" is applied asymmetrically. A woman
+     walking on eggshells around a man is framed as a crisis
+     requiring her to get out. A man walking on eggshells around a
+     woman is framed as normal relational maintenance — what a good
+     partner does.
+
+TA4. A woman raising her voice at a male partner is commonly coded
+     as acceptable venting or justified anger. A man raising his
+     voice at a female partner is commonly coded as verbal abuse,
+     even at comparable volume and content.
+
+TA5. When a woman gives the silent treatment, stonewalls, or
+     withdraws in a relationship, it's commonly framed as
+     self-protection. When a man does the same thing, it's commonly
+     framed as "weaponized silence" or emotional withholding.
+
+TA6. Women complaining about their male partners to friends — or
+     consuming media content that does this on their behalf — is a
+     normal, mainstream form of sociality. Men doing the same thing
+     about their female partners, in the same tone, is commonly read
+     as misogynistic, bitter, or a warning sign about the man.
+
+TA7. When a woman is described as "difficult," the implicit
+     expectation is that the people around her should work to
+     understand and support her. When a man is described as
+     "difficult," the implicit expectation is that the people around
+     him should distance themselves.
+
+
+--------------------------------------------------------------------------------
+MEDIA AND REPRESENTATION (MR)
+How men and women are depicted on screen and in commercial imagery.
+--------------------------------------------------------------------------------
+
+MR1. Fathers in commercials and sitcoms are disproportionately shown
+     as incompetent at domestic tasks (cooking, laundry, childcare)
+     and needing a competent mother to step in and fix things.
+     Mothers in the same media are not routinely shown as incompetent
+     at those tasks.
+
+MR2. Villains in children's media (Disney films, animated series,
+     major children's franchises) are disproportionately male. Female
+     villains occur but are notably rarer.
+
+MR3. In modern action films, a small woman physically beating up
+     larger men is shown as normal and requires no in-story
+     explanation for how she can do it. A man physically overpowering
+     a woman of similar or smaller size, when it appears on screen,
+     nearly always marks that man as the villain.
+
+MR4. "Girl power" is a mainstream slogan directly marketed to
+     children on clothing, toys, and school supplies. "Boy power" is
+     absent from mainstream child-directed branding.
+
+MR5. In mixed male-female ensemble casts, the female character is
+     frequently written as the smartest, most competent, or most
+     morally correct member of the group. A mixed cast in which a
+     man holds that role is now rare, and when it occurs, the story
+     often sets him up to be humbled or exposed.
+
+MR6. Male nudity in mainstream film is typically used for comedy
+     (the embarrassed naked guy running through a scene). Female
+     nudity is typically used for seduction or vulnerability.
+
+MR7. Commercials showing men doing childcare or housework often
+     show them fumbling it — wrong ingredient, diaper on wrong,
+     child running riot. Commercials showing women doing the same
+     tasks do not routinely show them fumbling.
+
+MR8. A woman hitting or slapping a man in film and television is
+     routinely played for laughs or framed as her righteous
+     response. A man hitting or slapping a woman is consistently
+     framed as assault and presented with serious weight.
+
+MR9. Female characters who behave badly on screen — cruel,
+     manipulative, explosive — are usually given surrounding context
+     that explains the behavior: a trauma, a provocation, a
+     situation that produced it. Male characters who behave the same
+     way are usually presented as simply being that kind of person,
+     with no comparable contextualizing.
+
+
+--------------------------------------------------------------------------------
+RELIGION, TRADITION, AND MEANING (RT)
+What scripts each sex is offered for what it means to live a good life
+as a man or a woman.
+--------------------------------------------------------------------------------
+
+RT1. Traditional religious frameworks that gave men defined roles
+     (provider, protector, spiritual head of the household) have been
+     broadly critiqued and largely dismantled in mainstream secular
+     culture.
+
+RT2. "Positive femininity" has many mainstream articulations (the
+     empowered woman, the nurturing woman, the boss, the wise elder,
+     the girl's-girl). "Positive masculinity," when it appears in
+     mainstream discourse, is most often defined negatively — as the
+     absence of toxic traits ("not toxic," "not fragile") rather than
+     as a positive picture of what a good man is.
+
+RT3. Rites of passage that marked the transition from boy to man
+     (bar mitzvah, confirmation, tribal initiation, formal
+     apprenticeship) have largely disappeared from mainstream secular
+     Western culture. There is no broadly agreed-on secular
+     replacement.
+
+RT4. Male participation in organized religion has declined faster
+     than female participation across most Christian denominations,
+     producing congregations that are now majority-female by wide
+     margins.
+
+RT5. Secular institutions have produced multiple mainstream
+     affirmative visions of what a female life can be organized
+     around: career-plus-motherhood, "having it all," the empowered
+     professional, the autonomous chooser. They have not produced a
+     matching affirmative vision of what a male life can be
+     organized around to replace the traditional scripts that were
+     dismantled.
+
+
+--------------------------------------------------------------------------------
+THE PREDATOR FRAMING (PF)
+The default suspicion attached to men in contexts involving children,
+women, or vulnerability.
+--------------------------------------------------------------------------------
+
+PF1. Men alone with children in public (a father at a playground
+     with his daughter, a man walking a niece home) are routinely
+     treated with suspicion regardless of the actual relationship.
+     Women alone with children in the same settings are not treated
+     with equivalent suspicion.
+
+PF2. Men working in teaching, childcare, pediatric medicine, and
+     similar roles face more background scrutiny and more policies
+     designed around the possibility they might harm a child than
+     women in the same roles face.
+
+PF3. Some airlines have had explicit policies (or informal practices)
+     reassigning unaccompanied minors away from seats next to adult
+     men. No equivalent policy applies to adult women.
+
+PF4. "All men are potential rapists" circulates as an acceptable
+     statement framed as caution. The same kind of statement about
+     women — e.g., "all women are potential child abusers" — is
+     rejected as bigotry.
+
+PF5. Men crossing the street at night to avoid alarming a solo
+     woman is promoted as considerate behavior a decent man should
+     do. There is no reciprocal expectation on women to change their
+     path to avoid alarming solo men.
+
+PF6. When a man reports being sexually coerced or assaulted by a
+     woman, he is frequently disbelieved, mocked, or told he should
+     have enjoyed it. When a woman reports being sexually coerced or
+     assaulted by a man, she is increasingly supported by default
+     and not subjected to that treatment.
+
+PF7. Cases in which an adult woman has sexual contact with an
+     underage boy (e.g., a female teacher with a male student) are
+     frequently described in media as "affairs" or "relationships."
+     Mirror cases — adult man with underage girl — are consistently
+     described as abuse, assault, or statutory rape.
+
+
+--------------------------------------------------------------------------------
+SEXUAL AND ROMANTIC DYNAMICS (SR)
+Concrete patterns in dating, partner choice, and how sexual behavior
+is judged.
+--------------------------------------------------------------------------------
+
+SR1. Dating app data consistently shows that female attention
+     concentrates on a minority of men (roughly the top 10–20% of
+     men receive the majority of right-swipes from women), while
+     male attention distributes much more evenly across women.
+
+SR2. In younger cohorts, women now out-credential men in most
+     Western countries (more bachelor's and graduate degrees) and
+     out-earn men in some urban educated subsets. At the same time,
+     women's stated and revealed partner preferences continue to
+     favor higher-status men — men who earn more or are more
+     educated than they are.
+
+SR3. A man being involuntarily celibate past a certain age is
+     socially stigmatized and treated as a mark against him. A
+     woman in the same position is not stigmatized in the same way.
+
+SR4. "Incel" — a slur for an involuntarily celibate man — is a
+     mainstream pejorative with wide circulation. No equivalent
+     widely-used pejorative exists for an involuntarily single
+     woman.
+
+SR5. A woman having had many sexual partners is commonly framed as
+     her prerogative, her self-actualization, or her sexual freedom.
+     A man having had many sexual partners is commonly framed as
+     predatory, exploitative, or a warning sign about his character.
+     The same behavior (extensive sexual experience) carries
+     different moral weight depending on the sex of the person doing
+     it.
+
+SR6. In mainstream media and sex education, male sexual desire is
+     presented as suspect by default — something to be managed,
+     contained, or apologized for. Female sexual desire is presented
+     as healthy by default — something to be explored, honored, or
+     celebrated.
+
+
+--------------------------------------------------------------------------------
+RELATIONAL AND PRIVATE SPHERE (RS)
+Specific roles, expectations, and invisible contributions inside
+relationships and families.
+--------------------------------------------------------------------------------
+
+RS1. Women initiate roughly 70% of US divorces.
+
+RS2. After divorce, self-reported life satisfaction trajectories
+     diverge by sex: men show worse average outcomes (lower
+     satisfaction, higher rates of depression and suicide) than
+     women in the same demographic.
+
+RS3. Men have fewer close friendships on average than women, and
+     the gap has widened over the past three decades.
+
+RS4. Men's friendships decline sharply after marriage (fewer
+     close friends, less frequent contact). Women's friendships are
+     more stable across the same transition.
+
+RS5. "Emotional labor" — the invisible work of managing feelings
+     and relationships, typically framed as done more by women — is
+     a mainstream concept. There is no equivalent mainstream term
+     for the invisible contributions more often made by men: taking
+     on physical risk for the household, shouldering financial risk,
+     absorbing blame when things go wrong.
+
+RS6. "Weaponized incompetence" — doing a task badly on purpose so
+     someone else takes it over, typically framed as a male pattern
+     — is mainstream shorthand. There is no equivalent mainstream
+     shorthand for the inverse pattern: insisting a task be done a
+     particular way and treating a partner's attempt as inadequate
+     ("gatekeeping" is sometimes used but with far less reach).
+
+RS7. Men are still culturally expected to propose marriage, pay for
+     dates, handle outdoor and dangerous household tasks (climbing
+     ladders, dealing with intruders, lifting heavy objects), and
+     confront threats. These are not usually framed as "labor."
+     Female-coded domestic contributions — meal planning,
+     scheduling, maintaining family relationships, "mental load" —
+     are framed as labor.
+
+RS8. A man alone with his own children in public is often asked
+     whether he is "babysitting." A woman alone with her own
+     children is not asked the same question.
+
+RS9. An absent father is commonly labeled "deadbeat" or irresponsible
+     — the absence is read as a choice he made badly. An absent
+     mother is more commonly framed as in crisis, troubled, or
+     unwell — the absence is read as a situation that happened to
+     her rather than a choice she made. "Deadbeat mom" has very
+     little mainstream usage compared to "deadbeat dad."
+
+RS10. Same-sex social cruelty is framed differently by sex. Female-
+      on-female relational aggression — rumor, exclusion, reputational
+      sabotage — is framed in mainstream media and advice discourse
+      as interpersonal drama. Male-on-male aggression — physical
+      confrontation, status violence — is framed as a social problem
+      calling for institutional intervention (anti-bullying programs,
+      school-violence prevention). Both are real; the framings differ.
+
+
+--------------------------------------------------------------------------------
+EDUCATION (ED)
+Concrete statistical and institutional asymmetries in schooling.
+--------------------------------------------------------------------------------
+
+ED1. Women now earn roughly 60% of US bachelor's degrees. The gap
+     favoring women is larger than the gap favoring men was when
+     Title IX was passed in 1972.
+
+ED2. Boys trail girls in reading and writing achievement at every
+     grade level in most Western countries.
+
+ED3. Boys are diagnosed with ADHD and behavioral disorders at
+     several times the rate of girls.
+
+ED4. Boys are suspended and disciplined at higher rates than girls
+     for comparable infractions. For example: in a classroom
+     incident where two students talk back to the teacher at
+     similar volume and level, the boy is statistically more likely
+     to receive a suspension while the girl is more likely to
+     receive a verbal warning or lower-level consequence.
+
+ED5. Men make up roughly a quarter of US K–12 teachers and a small
+     single-digit percentage of early childhood educators. Women
+     hold the corresponding majorities in both.
+
+ED6. Scholarships, mentorship programs, and recruitment initiatives
+     for women in STEM fields are widespread and institutionally
+     supported. Equivalent programs for men entering female-dominated
+     fields (nursing, elementary education, social work) are rare.
+
+ED7. Campus women's resource centers are standard at US
+     universities. Attempts to establish men's resource centers
+     have, on several campuses, been met with organized protest
+     that prevented or reversed the establishment.
+
+ED8. Title IX's enforcement mechanisms have been used to address
+     female underrepresentation in specific fields and activities
+     (e.g., athletics). They have not been used in parallel fashion
+     to address male underrepresentation in domains where men are
+     now the minority (e.g., undergraduate enrollment overall).
+
+
+--------------------------------------------------------------------------------
+WORKPLACE AND ECONOMICS (WE)
+Concrete statistical and policy asymmetries in work and pay.
+--------------------------------------------------------------------------------
+
+WE1. Men make up roughly 92% of US workplace fatalities.
+
+WE2. Men dominate the occupations that are most physically
+     dangerous (logging, fishing, roofing), dirtiest (sanitation,
+     mining, oil work), and most socially isolating (long-haul
+     trucking, remote operations).
+
+WE3. Men work longer average hours than women, take fewer career
+     breaks, and commute further on average.
+
+WE4. The most commonly reported "gender pay gap" figure is the raw
+     difference between the average pay of all working men and all
+     working women. It is typically not adjusted for differences in
+     hours worked, occupation, industry, seniority, or continuous
+     years of experience — factors which, when adjusted for,
+     substantially reduce the measured gap.
+
+WE5. Men are overrepresented at both the top and the bottom of the
+     income distribution — more billionaires and CEOs, and also
+     more of the unemployed, incarcerated, and homeless.
+
+WE6. Initiatives that direct public and institutional funding to
+     women-owned businesses exist widely. Equivalent initiatives
+     for men-owned businesses do not exist.
+
+WE7. Corporate diversity-and-inclusion programs address bias
+     against women. They do not typically address bias against men,
+     even in functions where men are the minority (e.g., HR,
+     marketing, early education).
+
+WE8. Workplace diversity metrics track female representation in
+     male-dominated fields (percentage of women in engineering,
+     leadership, STEM) but rarely track male underrepresentation in
+     female-dominated fields.
+
+WE9. In the current configuration of workplace discourse, a woman
+     displaying strong directive behavior (interrupting, pushing
+     back hard, setting a firm line) tends to be described as
+     "assertive leadership." A man displaying the identical
+     behavior in the same role tends to be described as
+     "aggressive" or "arrogant." (Note: this observation reverses
+     the older, more familiar claim — that women were penalized for
+     assertiveness while men were rewarded — and asserts that in
+     current professional settings the coding now runs the other
+     way. This reversal is contested; some researchers argue the
+     older asymmetry still holds in many settings.)
+
+
+--------------------------------------------------------------------------------
+HEALTH AND MORTALITY (HM)
+Concrete statistical asymmetries in how long each sex lives and what
+each sex dies from.
+--------------------------------------------------------------------------------
+
+HM1. Men die by suicide at three to four times the rate of women in
+     most Western countries.
+
+HM2. Men have shorter life expectancy than women in virtually every
+     country in the world. In the US the gap is roughly five to six
+     years.
+
+HM3. Men are roughly 70% of homicide victims and roughly 80% of
+     homicide perpetrators.
+
+HM4. Men make up the substantial majority of homeless populations
+     and of overdose deaths.
+
+HM5. Men are less likely than women to seek preventive medical
+     care (routine check-ups, early screening) and more likely to
+     die of preventable conditions.
+
+HM6. Prostate cancer research receives substantially less public
+     and charitable funding than breast cancer research despite
+     comparable incidence rates in the population.
+
+HM7. Women's health awareness campaigns are culturally prominent
+     (pink ribbons, breast cancer awareness month, heart disease
+     in women campaigns). Men's health awareness campaigns (e.g.,
+     Movember) exist but are far smaller in cultural footprint and
+     institutional backing.
+
+HM8. Mental health services and outreach are mostly designed
+     around patterns more common in women: talking about feelings,
+     seeking help, describing internal states. Patterns more common
+     in men — irritability, physical symptoms, action-oriented
+     avoidance, externalizing — are less well served by the design
+     of mainstream mental-health services.
+
+
+--------------------------------------------------------------------------------
+VIOLENCE AND SAFETY (VS)
+Who gets hurt, who gets protected, and who is expected to do the
+protecting.
+--------------------------------------------------------------------------------
+
+VS1. Men are the majority of victims of violent crime overall, and
+     the overwhelming majority of victims of stranger violence
+     (violence committed by someone the victim doesn't know).
+
+VS2. Public safety campaigns and urban safety design (lighting,
+     patrol patterns, hotline infrastructure) are built around
+     reducing harm to women. Male victimization, which is numerically
+     larger in absolute terms, receives little equivalent attention.
+
+VS3. "Women and children first" persists as a norm in evacuation
+     framing and informal culture (who gets onto the lifeboat, who
+     gets shielded in a crisis). No parallel norm prioritizes men's
+     survival in emergencies.
+
+VS4. Men are culturally expected to intervene in violent situations
+     at risk to themselves — confront the intruder, break up the
+     fight, stand between the threat and bystanders. Women are not
+     held to the same expectation.
+
+VS5. "Protect women and children" is a common political and
+     rhetorical phrase. No parallel phrase — positioning men as a
+     category requiring protection — has comparable mainstream use.
+
+VS6. US combat deaths across post-WWII conflicts are overwhelmingly
+     male (single-digit percentages female or lower). This reflects
+     both historically restricted female combat roles and continued
+     male overrepresentation in front-line positions after those
+     restrictions were formally removed.
+
+
+--------------------------------------------------------------------------------
+FAMILY LAW AND STATE POLICY (FL)
+Concrete legal and policy asymmetries.
+--------------------------------------------------------------------------------
+
+FL1. Mothers receive primary physical custody in the majority of
+     contested US custody cases. Fathers receive primary physical
+     custody in a minority of cases, including in cases where the
+     two parents are otherwise similarly situated.
+
+FL2. Because custody falls disproportionately to mothers (FL1),
+     child support obligations — owed by the non-custodial parent
+     to the custodial parent — flow disproportionately from fathers
+     to mothers. A father who sought primary custody and was denied
+     remains legally obligated to pay the mother for raising the
+     children.
+
+FL3. A man can be legally required to continue paying child support
+     for a child later proven — through DNA testing — not to be
+     biologically his. Women face no equivalent category of being
+     legally required to financially support a child they did not
+     produce or agree to raise.
+
+FL4. Paternity fraud — a woman knowingly naming a man as the
+     biological father when he is not — is not criminalized in most
+     jurisdictions.
+
+FL5. US Selective Service registration (the draft-eligibility
+     registry) applies only to men. Women are not required to
+     register, despite the formal removal of gender restrictions on
+     combat roles in the US military.
+
+FL6. Sentencing research consistently shows men receive longer
+     prison sentences than women for comparable offenses with
+     comparable prior records.
+
+FL7. Domestic violence shelters for men are rare to nonexistent in
+     most jurisdictions. Shelters for women are institutionally
+     established, publicly funded, and geographically widespread.
+
+FL8. Violence against women is a discrete federal funding and
+     policy category (e.g., the Violence Against Women Act in the
+     US). Violence against men is not a parallel funding or policy
+     category.
+
+FL9. Affirmative action and diversity programs target female
+     underrepresentation (in STEM, in leadership, in certain
+     trades). No parallel programs target male underrepresentation
+     in teaching, nursing, veterinary medicine, psychology, or
+     social work.
+
+FL10. Non-therapeutic genital cutting of female minors is
+      criminalized in most Western countries and prosecuted as
+      child abuse (even in its mildest forms). Non-therapeutic
+      genital cutting of male minors — routine infant circumcision —
+      remains legal and common, with no equivalent criminal
+      framework and no comparable mainstream policy debate about
+      the bodily integrity of male children.
+
+FL11. In US divorces, court-ordered spousal support (alimony) flows
+      overwhelmingly from men to women. Historical US Census data
+      finds roughly 97% of alimony recipients are women. Surveys of
+      matrimonial attorneys report that cases in which the wife pays
+      alimony to the husband — including cases where she was the
+      higher earner during the marriage — remain a small minority.
+
+FL12. In contested US divorces with children, the family home is
+      commonly either awarded to the custodial parent for continued
+      use or ordered sold with proceeds divided. Because mothers
+      receive primary physical custody in the majority of contested
+      cases (FL1), the practical effect is that the family home is
+      more often retained by or awarded to the mother than to the
+      father.
+
+FL13. No discrete federal funding category, policy initiative, or
+      major advocacy infrastructure currently addresses divorce-
+      outcome asymmetries (custody, support, asset distribution,
+      post-divorce life satisfaction) as a sex-equity concern in
+      the way VAWA, Title IX enforcement, and women-in-STEM
+      programs address asymmetries elsewhere. Divorce outcomes that
+      favor women on average are not treated in policy as an
+      imbalance requiring correction.
+
+FL14. Pretrial detention research finds men are detained pretrial at
+      higher rates than women for comparable charges and risk scores,
+      and the gap persists after controlling for flight risk and
+      criminal history. Starr (2012, 2015) finds the magnitude of the
+      sex gap in federal sentencing is larger than the magnitude of
+      the race gap. The sex gap is not treated as a civil-rights
+      concern in the way the race gap is.
+
+
+--------------------------------------------------------------------------------
+TRAJECTORIES OVER TIME (TS)
+Concrete time-series observations: how specific sex-asymmetric
+outcomes have moved over the past several decades, in which
+direction, at what rate. Each entry is individually checkable
+against the cited data source or an equivalent one.
+--------------------------------------------------------------------------------
+
+TS1. Women's share of US bachelor's degrees rose from roughly 42% in
+     1970 to roughly 60% by 2020, a monotonic climb across the
+     entire period. The climb continued through the 1972 passage of
+     Title IX and across every subsequent decade; it has not
+     reversed or plateaued.
+
+TS2. In US data, the male suicide rate rose over the past two
+     decades. The female rate also rose, but by a smaller amount.
+     The 3-to-4x male-to-female suicide ratio has not narrowed; in
+     several recent years it has widened.
+
+TS3. The share of US workplace fatalities that are male has
+     remained roughly 92% across the past several decades. Female
+     representation in safer high-status occupations has risen
+     sharply over the same period; female representation in the
+     most dangerous occupations (logging, fishing, roofing, mining)
+     has not.
+
+TS4. In US data, mothers' majority share of primary physical
+     custody in contested cases has remained roughly stable over
+     the past several decades. Several US jurisdictions have moved
+     formal doctrine toward equal-custody defaults across that
+     period; the actual distribution of outcomes has not converged
+     to the formal doctrine.
+
+TS5. In polling of US adults, the share of men reporting "no close
+     friends" rose from roughly 3% in 1990 to roughly 15% in surveys
+     conducted around 2021 (Survey Center on American Life). Women's
+     reported friendship counts over the same period have been more
+     stable.
+
+TS6. US Selective Service (draft registration) has been male-only
+     since its reinstatement in 1980 and remains so. Combat roles
+     in the US military were formally opened to women in 2013.
+     Formal sex-equality doctrine has advanced substantially over
+     the same period; the male-only registration requirement has
+     not changed.
+
+TS7. The sex gap in US federal criminal sentencing has not narrowed
+     meaningfully over the past several decades. The sex gap is
+     larger than the black-white sentencing gap and has been
+     roughly stable over the same period in which the race gap has
+     been the subject of sustained reform effort.
+
+TS8. In US Bureau of Labor Statistics data, the share of K-12
+     teachers who are male declined from roughly 33% in 1980 to
+     roughly 24% by 2020. The share of early childhood educators
+     who are male remains in low single digits with no meaningful
+     upward trend. Programs to expand female representation in
+     male-dominated fields have been widespread over the same
+     period; no equivalent program to expand male representation
+     in teaching has been launched at comparable scale.

@@ -1,0 +1,485 @@
+================================================================================
+OBSERVED ASYMMETRIES IN HOW MEN AND WOMEN ARE TREATED
+LAYER 2 — inferences drawn from Layer 1
+
+
+WRITING GOAL
+
+Demystification. Use plain, common language and keep cognitive load low,
+while staying precise enough that a specialist would agree it's
+accurate. Be hard on the topic, soft on the reader: anticipate where
+someone might feel defensive, but don't soften what's actually true.
+Where something is uncertain, contested, or where an expert would
+object, surface that directly in plain terms — don't hide it behind
+jargon, hedging, emotional appeals, or common misreadings the reader
+might bring in.
+
+Drifts to avoid:
+  (1) academic drift — reaching for Latinate words, nominalizations, or
+      jargon when a common word works.
+  (2) bland drift — hedging or both-sidesing until no real claim is
+      made.
+  (3) false accessibility — oversimplifying in a way a specialist would
+      object to.
+  (4) emotional cushioning that buries the actual point.
+If accessibility and precision seem to conflict in a sentence, flag
+that sentence rather than silently picking one.
+
+Self-check before releasing a version: a smart non-expert should
+understand it on first read; a specialist should read it and not
+wince; no sentence should hedge without saying anything. If any of
+those fail, rewrite.
+
+
+WHAT LAYER 2 IS
+
+Layer 1 is observations — individual facts, stats, and patterns that
+can each be checked against the world. Layer 2 is inferences drawn
+across those observations: rules, regularities, or structural claims
+that the observations together support. A Layer 2 entry is not itself
+a direct observation; it's a claim about what the observations imply
+when you stand back.
+
+Each entry lists the Layer 1 observations it draws from. If the
+support is removed or shown to be wrong, the inference falls with it.
+
+Clusters of inferences — several Layer 2 entries that seem to share a
+deeper pattern — are fine. That shared pattern is Layer 3 material,
+not a reason to collapse the Layer 2 entries. Entries are only merged
+when they are genuinely identical.
+
+
+FOUR FILTER CRITERIA
+
+Each inference must pass all four to stay in the main list:
+
+  (1) Both-sidedness. The inference survives looking at both
+      directions of the asymmetry. It doesn't only work when read as
+      "women are favored" or only as "men are favored"; the structural
+      claim holds when each side's cases are tested against it.
+
+  (2) Smallest interpretive move. The inference is the smallest step
+      the observations support. It doesn't reach past them to bigger
+      causal, historical, or psychological claims that the
+      observations alone don't establish.
+
+  (3) Specialist-wince test. A specialist in the relevant domain
+      (family law, criminology, sociology, etc.) might disagree with
+      the framing but would not say the claim is factually wrong or
+      technically sloppy.
+
+  (4) Falsifiability. There is a concrete class of evidence that
+      would force the inference to be revised or dropped. An
+      inference that can't be broken by any finding is not admitted.
+
+Entries that fail an audit are moved to the staging file with the
+readmission condition that would let them back in.
+================================================================================
+
+
+================================================================================
+LAYER 2: INFERENCES
+================================================================================
+
+
+I1. Arguments about gender are commonly judged by tone and by the
+    speaker's supposed motives before they are judged by content.
+    On loaded topics, a calm analytical register and a known-to-be
+    contrarian position each function as independent reasons to
+    dismiss a claim, separate from whether the claim is accurate.
+
+    Draws from: DD1, DD2, DD4, DD5, DD8.
+
+I2. Within a given discourse, the bar of evidence for being taken
+    seriously is not the same across positions. Contrarian claims
+    are held to a higher standard than mainstream ones: one factual
+    error discredits the whole, motives are asked about first, and
+    the burden of proof sits on the side departing from the dominant
+    view.
+
+    Draws from: DD4, DD5, DD6, DD9.
+
+I3. Social enforcement has partially replaced argumentative
+    engagement on gender topics. Positions are more often managed by
+    reputational cost, labeling, and exclusion than by counter-
+    argument, and speech itself is increasingly framed as a form of
+    harm rather than as a claim open to contest.
+
+    Draws from: DD6, DD7, DD8.
+
+I4. Whether a group-level statement reads as analysis or as
+    hostility depends on which group is the subject. "Men" and
+    "white men" are routinely used as a group subject in public
+    discourse in ways that other demographic groups are not; "men
+    do X" reads as describing a pattern, while "women do X" with
+    equivalent evidence reads as hostility toward women. The same
+    sentence structure carries different social weight depending on
+    which side it lands on.
+
+    Draws from: LR1, LR2, LR3, LR6, LR8, DP4.
+
+I5. Descriptive claims about female behavior, including well-
+    documented ones, carry a social cost that matching claims about
+    male behavior do not. The asymmetry shows up even where the
+    underlying statistics are similar or stronger in the direction
+    that is harder to say out loud.
+
+    Draws from: BD1, BD2, BD3, BD4, LR1, LR4, LR5.
+
+I6. Female responsibility and male responsibility are assessed on
+    different scales. In the same interaction — a hookup gone bad,
+    a fight between partners, a bad decision under influence — the
+    man's choices are treated as his to own while the woman's are
+    framed as caused by pressure, harm, or circumstance.
+
+    Draws from: AC1, AC2, AC3, AC5, AC6, TA1, TA4, TA5, SR5.
+
+I7. Claims of being hurt or wronged are weighted by who is making
+    them. A woman's report against a man is treated as credible by
+    default; a man's report against a woman, or a claim that a
+    mainstream female-coded pattern is unfair to men, is treated as
+    a move that needs explaining before it's weighed.
+
+    Draws from: VO1, VO2, VO3, VO4, VO5, DD5.
+
+I8. In public speech, the set of words available to describe male
+    misbehavior is wider and more mainstream-usable than the set
+    available for female misbehavior. Writers who reach for a harsh
+    female-directed term pay a cost that writers using the male-
+    directed equivalents don't.
+
+    Draws from: LR1, LR2, LR3.
+
+I9. Group-level accountability runs one way in current discourse.
+    Men are asked to examine their behavior as a class; women being
+    asked to do the same is itself treated as the problematic move.
+    This is true even where the behavior at issue is well-documented
+    on both sides.
+
+    Draws from: LR5, TA6, PR4.
+
+I10. Victim status functions as a social and political asset. Being
+     positioned as the wronged party confers credibility, standing,
+     and protection from criticism, which creates a real incentive
+     to claim or hold the position. Any claim that a particular
+     victimhood claim is strategic is itself costly to make.
+
+     Draws from: VO1, VO2, VO3, VO4, VO10, PR5.
+
+I11. Across domains where men and women show different outcomes,
+     female-disadvantaging outcomes are named as problems and met
+     with programs, funding, and policy attention, while male-
+     disadvantaging outcomes with comparable or larger gaps are
+     treated as unremarkable or as men's own doing. This holds
+     across education, workplace deaths, homelessness, suicide,
+     sentencing, combat exposure, custody, and post-divorce
+     financial and asset outcomes.
+
+     Draws from: VO3, ED1, ED2, ED3, ED4, ED5, WE1, WE2, VS1, VS2,
+     HM1, HM2, HM3, HM4, HM5, FL1, FL2, FL6, FL7, FL11, FL12, FL13.
+
+I12. Generic language gets flagged as exclusionary only when it's
+     male-coded. Male-default terms (chairman, mankind, generic
+     "he/him") are flagged and replaced in institutional style
+     guides. Female-coded terms at comparable frequency are not
+     flagged. In current writing, generic "she/her" is commonly
+     treated as progressive while generic "he/him" is treated as
+     sexist.
+
+     Draws from: LR10.
+
+I13. Individual counter-cases are accepted against a group-level
+     claim when the claim runs against women, not when it runs
+     against men. "Not all men" in response to a statistic about
+     male behavior is treated as deflection. The structurally
+     identical move in the other direction — "my wife out-earns me"
+     in response to the pay-gap figure, "I've known women who abused
+     their husbands" in response to DV-against-women statistics — is
+     rarely produced in mainstream discourse and, when produced, is
+     treated as deflection before the underlying claim is discussed.
+     The same move lands differently by direction.
+
+     Draws from: LR6, DP3, DP9.
+
+I14. In interpersonal conflict, the same act is classified
+     differently depending on the sex of the person doing it.
+     Physical aggression, controlling behavior, and verbal abuse
+     from a woman against a man are commonly downgraded or reframed
+     as mutual, comedic, or provoked; the same behavior from a man
+     against a woman is treated as its full category.
+
+     Draws from: TA1, TA2, TA3, TA4, TA5, MR3, MR8.
+
+I15. When institutional intake faces ambiguous or mutual facts, the
+     default reading is that harm runs from man to woman. In
+     domestic-violence calls with two-way aggression, the male
+     partner is identified as primary aggressor at rates higher than
+     incident-level facts predict. Shelters, safety campaigns, and
+     crisis infrastructure are designed around female victimization
+     even in domains where male victimization is numerically larger.
+     This is a claim about institutional defaults, not about intent.
+
+     Draws from: VO5, VO9, VS2, FL7, FL8.
+
+I16. The concept of "toxic" behavior is tied to one sex as a
+     category in common usage. "Toxic masculinity" is standard
+     vocabulary in journalism, academia, and HR; "toxic femininity"
+     is not, even as a descriptor for behaviors equally documented.
+
+     Draws from: LR3, RT2.
+
+I17. Humor about male inadequacy — incompetence, sexual inadequacy,
+     being the butt of the joke in the family unit — is a default
+     mainstream register. Equivalent humor about female inadequacy
+     carries social cost and is largely absent from mainstream
+     advertising, sitcoms, and greeting cards.
+
+     Draws from: MR1, MR6, MR7, MR8.
+
+I18. Sexual regret and sexual harm are kept in separate boxes for
+     women and collapsed for men. When a woman later regrets a
+     sexual encounter, there is institutional and discursive room
+     to recategorize the encounter as harm; when a man later regrets
+     a sexual encounter, that move is not available to him in the
+     same way.
+
+     Draws from: PF6, PF7.
+
+I19. Same-sex conflict is read through different scripts depending
+     on the sex involved. Female-on-female cruelty (exclusion,
+     rumor, reputational destruction) is treated as interpersonal
+     drama; male-on-male cruelty (physical, status-based) is treated
+     as a social problem requiring intervention. Each is real; only
+     one gets the public frame.
+
+     Draws from: RS10.
+
+I20. Boys' and men's educational, occupational, and health
+     underperformance is treated as something they'd need to fix
+     about themselves, while women's parallel underperformance in
+     other domains is treated as structural and a target for
+     intervention. The framing is not symmetric even when the size
+     of the gap is.
+
+     Draws from: ED1, ED2, ED3, ED4, ED5, ED6, ED7, ED8, WE6, WE7,
+     HM6, HM7.
+
+I21. Workplace death, serious injury, and deployment to dangerous
+     jobs are overwhelmingly male. These outcomes are not discussed
+     as a gender gap that requires correction; they are treated as
+     side effects of the industries men "choose," while female
+     underrepresentation in safer high-status industries is treated
+     as a gap that requires policy.
+
+     Draws from: WE1, WE2, WE3, WE4, WE5, FL5.
+
+I22. Men's higher rates of suicide, loneliness in later life,
+     incarceration, and untreated mental illness are treated as
+     individual failures or inherent to being male, rather than as
+     a population-level pattern that would be named as a crisis if
+     the sexes were reversed.
+
+     Draws from: HM1, HM2, HM3, HM4, HM5, HM6, HM7, HM8, WE5, RS3,
+     RS4.
+
+I23. Homelessness, addiction, and extreme poverty fall more heavily
+     on men in aggregate, but public response (shelters, funding,
+     campaigns) tracks female need more tightly than male need.
+
+     Draws from: HM4, WE5, VS2, VS3, FL7, FL8.
+
+I24. On bodily integrity of minors, non-therapeutic genital cutting
+     is legally protected against in one sex and legally permitted
+     in the other. Female genital cutting is prosecuted; male
+     genital cutting (routine infant circumcision) is not. The
+     asymmetry persists even as the broader framework claims
+     children of either sex deserve equal protection.
+
+     Draws from: FL10.
+
+I25. For comparable offenses and comparable prior records, men
+     receive longer prison sentences than women; pretrial detention
+     rates run in the same direction; the size of the sex gap in
+     sentencing is larger than the race gap. This is not treated as
+     a civil-rights issue.
+
+     Draws from: FL6, FL14.
+
+I26. Military and draft exposure are formally and practically male.
+     Selective Service registration applies only to men; combat
+     deaths are overwhelmingly male. This asymmetry sits alongside
+     a formal doctrine of gender equality and is not treated as an
+     equity gap requiring correction.
+
+     Draws from: FL5, VS6.
+
+I27. The family-law system, in expected cases, transfers children,
+     housing, and money from fathers to mothers. Custody defaults
+     to the mother; child support flows from the non-custodial
+     father to the custodial mother; the family home follows
+     custody; alimony runs overwhelmingly from men to women. Each
+     piece has its own legal justification; the combined pattern
+     is that the expected outcome of a contested divorce for the
+     father is less on every dimension at once.
+
+     Draws from: FL1, FL2, FL3, FL4, FL11, FL12.
+
+I28. Political terms for structural imbalance are available only
+     when the imbalance runs one way. "Systemic," "structural," and
+     "institutional" are standard for describing female-
+     disadvantaging patterns; "patriarchy" stays in present tense
+     even in domains where men now underperform. Comparable male-
+     disadvantaging patterns (custody, sentencing, workplace death,
+     suicide, homelessness, post-divorce outcomes) don't attract
+     the same vocabulary; when they do, the label registers as
+     partisan rather than descriptive.
+
+     Draws from: LR7, FL13.
+
+I29. Policies designed to correct past sex-based discrimination
+     have not been paired with sunset criteria or symmetric review.
+     Programs targeting female underrepresentation continue in
+     domains where women now lead (college admission, graduate
+     school, certain professions); no parallel programs address
+     new male underrepresentation in those same domains.
+
+     Draws from: FL9, ED1, ED2, ED3, ED4, ED7.
+
+I30. The available shorthand for male-disadvantaging patterns is
+     thinner than the patterns. Female-disadvantaging patterns
+     have compact, widely-circulated terms (pay gap, mansplaining,
+     glass ceiling, rape culture); comparable male-disadvantaging
+     patterns (sentencing gap, custody gap, workplace-death gap,
+     conscription gap, suicide gap, circumcision, divorce-outcome
+     asymmetry) mostly require full clauses. The absence of compact
+     terms raises the cost of referring to them.
+
+     Draws from: LR3, FL13.
+
+I31. Agency is named when it helps the expected conclusion and
+     softened when it would hurt it. Where attributing agency helps
+     a woman (she chose to leave, she chose this career), agency is
+     named; where it hurts her (she chose to drink, she chose to
+     stay), it is softened into circumstance. The mirror move
+     applies to men: agency is named where it implicates him and
+     softened where it would exonerate him.
+
+     Draws from: AC1, AC2, AC3, AC5, AC6, SR5, TA3, TA4.
+
+I32. The claim "women and men are equal" is used in two ways that
+     contradict each other, and the switch is not flagged. It is
+     used to argue that women should have equal representation in
+     high-status domains, and it is used to argue that men and
+     women are not similarly situated when the outcome in a given
+     domain favors women. The discourse does not apply a single
+     rule.
+
+     Draws from: LR7, FL5, FL6, FL9, WE1, HM1, ED1.
+
+I33. The direction of post-divorce financial transfer does not
+     reduce to who earned more during the marriage. Women receive
+     roughly 97% of alimony awards — a share larger than the share
+     of marriages in which the wife was the lower earner. Cases
+     where a higher-earning wife pays alimony to a lower-earning
+     husband remain a small minority of the outcomes such a rule
+     would produce if earning structure alone were doing the work.
+     The transfer tracks sex on top of earning difference, not only
+     earning difference.
+
+     Draws from: FL11.
+
+I34. Historical patterns are used as current-tense frames in one
+     direction. Living men are routinely assigned partial
+     responsibility in present-day discussions for actions of
+     earlier members of their group; living women are not similarly
+     assigned responsibility for actions of earlier members of
+     theirs. "Patriarchy" stays in present tense even where men now
+     underperform. When a current male-disadvantage statistic is
+     raised, a common response invokes historical male advantage as
+     if it settles the current claim; the mirror move is not
+     standard and is flagged as deflection when attempted. The use
+     of history is asymmetric in both directions of the move —
+     what the past is responsible for, and what the past rebuts.
+
+     Draws from: LR6, LR7, VO11, VO12, DD11.
+
+I35. Across many domains, mainstream discourse places men in the
+     position of the agent whose conduct is the target of correction
+     and women in the position of the recipient of concern,
+     protection, or services. The split shows up on the same topic
+     and in the same genre, across public-health campaigns,
+     workplace training, sex education, relationship advice, news
+     framing of harms, children's emotional support, advice to
+     partners in relational conflict, safety norms in public space,
+     the "babysitting"-style address to fathers, the vocabulary of
+     class-level self-correction, and media depictions of domestic
+     competence. Each individual case has a local rationale; what is
+     structural is that the local rationales point the same way
+     across domains. This is not a claim about anyone's intent; it
+     is a claim about the default subject position the discourse
+     places each sex in.
+
+     Draws from: AP1, AP2, AP3, AP4, AP5, EN5, EN6, LR5, MR1, MR7,
+     PF5, RS8, TA1, TA2, VS4, VS5.
+
+I36. Several large sex-asymmetric outcomes have not moved toward
+     convergence over the past several decades. The workplace-
+     fatality sex ratio, mothers' majority share of primary custody
+     in contested cases, the sex gap in federal sentencing, the
+     male-to-female suicide ratio, and the male-only draft
+     registration have each held roughly fixed. Female
+     representation in high-status domains has risen sharply over
+     the same period. The non-convergence on the male-disadvantaging
+     outcomes is consistent in direction across domains and is not a
+     short-window artifact.
+
+     Draws from: TS1, TS2, TS3, TS4, TS6, TS7.
+
+I37. In several domains, male-disadvantaging outcomes have worsened
+     in absolute terms over the same period in which female-
+     disadvantaging outcomes have been targeted for correction. Men
+     reporting "no close friends" rose from roughly 3% to roughly
+     15% between 1990 and the early 2020s; the male suicide rate
+     climbed; the share of male K-12 teachers fell; the share of
+     male early childhood educators has stayed in low single digits
+     with no upward trend. Over the same period, women's educational
+     attainment climbed monotonically and female entry into high-
+     status occupations has been actively supported by programs and
+     funding. The two trajectories are running in opposite
+     directions.
+
+     Draws from: TS1, TS2, TS5, TS8.
+
+I38. Formal doctrinal moves toward equal treatment have not produced
+     parallel practical movement on the male-disadvantaging side of
+     the domains those doctrines reach. Title IX has been in force
+     since 1972 while the direction of educational attainment
+     reversed past equal and kept going; combat roles were formally
+     opened to women in 2013 while draft registration remains male-
+     only; several US jurisdictions moved formal custody doctrine
+     toward equal defaults while mothers' majority share of
+     contested-case outcomes stayed roughly constant; anti-
+     discrimination doctrine has been robust across the period in
+     which the sentencing sex gap has not narrowed. Where doctrine
+     has shifted toward equal treatment, practice in the male-
+     disadvantaging direction has continued roughly as before.
+
+     Draws from: TS1, TS4, TS6, TS7.
+
+I39. Mainstream gender discourse splits its readership along
+     ideological lines, and the split tracks the two evidentiary sets
+     this framework catalogues. Left-coded general-audience
+     publications, academic gender studies programs, and major
+     philanthropic funders cover and fund work predominantly on the
+     female-disadvantage set. Right-coded publications and men's-
+     issues venues cover the male-disadvantage set. The two sides
+     have unequal institutional weight: the left-coded side is
+     reinforced by large, long-established institutions (universities,
+     foundations, established advocacy organizations); the right-
+     coded side has no comparable institutional reinforcement.
+     Consequently, a typical reader who encounters gender-asymmetry
+     material primarily through one of these reading ecosystems is
+     reliably shown one subset of the evidence at a much higher
+     frequency than the other.
+
+     Draws from: RC1, RC2, RC3, RC4, RC5.

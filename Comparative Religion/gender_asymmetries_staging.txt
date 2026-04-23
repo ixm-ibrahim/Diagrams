@@ -1,0 +1,90 @@
+================================================================================
+OBSERVED ASYMMETRIES IN HOW MEN AND WOMEN ARE TREATED
+STAGING — items held outside the main Layer 2, Layer 3, and Layer 4
+lists (v8)
+================================================================================
+
+
+WHAT THIS FILE IS
+
+This file holds every staged entry across layers, in one place. Two
+kinds of entries live in each layer's section:
+
+(1) FAILED AUDIT, HELD FOR READMISSION. Items that failed at least one
+    of the four filter criteria at their layer but could re-enter if a
+    specific lower-layer entry or wording change is introduced. Each
+    entry carries its readmission condition.
+
+(2) PROMOTED TO NEXT-LAYER CANDIDACY. Items that passed the factual
+    tests but are operating at the wrong level — they are patterns
+    across entries at the current layer, not inferences drawn from
+    the layer below. Held here until the next layer's file exists.
+
+Items in this file do not carry main-list IDs. The main Layer 2,
+Layer 3, and Layer 4 files use contiguous IDs with no gaps. Staging
+IDs are separate:
+  - Layer 2 failed-audit: S-*
+  - Layer 2 promoted to Layer 3: L3-*
+  - Layer 3 failed-audit: M-S-*
+  - Layer 3 promoted to Layer 4: L4-*
+  - Layer 4 failed-audit: H-S-*
+  - Layer 4 promoted to Layer 5: L5-*
+================================================================================
+
+
+================================================================================
+SECTION 1: LAYER 2 STAGING
+================================================================================
+
+1A. FAILED AUDIT, HELD FOR READMISSION
+
+(currently empty)
+
+
+1B. PROMOTED TO LAYER 3 CANDIDACY
+
+(currently empty)
+
+
+================================================================================
+SECTION 2: LAYER 3 STAGING
+================================================================================
+
+2A. FAILED AUDIT, HELD FOR READMISSION
+
+(currently empty)
+
+
+2B. PROMOTED TO LAYER 4 CANDIDACY
+
+(currently empty — L4-A has been promoted into the main Layer 4 file
+as H1)
+
+
+================================================================================
+SECTION 3: LAYER 4 STAGING
+================================================================================
+
+3A. FAILED AUDIT, HELD FOR READMISSION
+
+(currently empty)
+
+
+3B. PROMOTED TO LAYER 5 CANDIDACY
+
+
+L5-A. Candidate: the asymmetry runs in parallel at every register
+      the discourse uses at once. The same shape shows up in what
+      counts as progress (H1), the layer at which it is held in
+      place — defaults rather than rules on paper (H2), the role men
+      and women get cast in (H3), the vocabulary available to name
+      patterns and the cost of using it (H4), whether claims get
+      judged at the class or the individual level (H5), the
+      reception of descriptions of the asymmetry itself (H6), and
+      the distribution of the evidence across reading venues (H7).
+
+      Why held: this is a pattern across the Layer 4 entries, not a
+      structural claim drawn from Layer 3. H1 through H7 are the
+      evidence for it, not the claim itself. If all the Layer 4
+      entries hold, this is a Layer 5 claim. Held here until a
+      Layer 5 file exists.

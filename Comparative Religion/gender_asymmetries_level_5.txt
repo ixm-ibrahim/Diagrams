@@ -1,0 +1,179 @@
+================================================================================
+OBSERVED ASYMMETRIES IN HOW MEN AND WOMEN ARE TREATED
+LAYER 5 — patterns across the Layer 4 higher-order patterns
+
+
+WRITING GOAL
+
+Demystification. Use plain, common language and keep cognitive load low,
+while staying precise enough that a specialist would agree it's
+accurate. Be hard on the topic, soft on the reader: anticipate where
+someone might feel defensive, but don't soften what's actually true.
+Where something is uncertain, contested, or where an expert would
+object, surface that directly in plain terms — don't hide it behind
+jargon, hedging, emotional appeals, or common misreadings the reader
+might bring in.
+
+Drifts to avoid:
+  (1) academic drift — reaching for Latinate words, nominalizations, or
+      jargon when a common word works.
+  (2) bland drift — hedging or both-sidesing until no real claim is
+      made.
+  (3) false accessibility — oversimplifying in a way a specialist would
+      object to.
+  (4) emotional cushioning that buries the actual point.
+If accessibility and precision seem to conflict in a sentence, flag
+that sentence rather than silently picking one.
+
+Self-check before releasing a version: a smart non-expert should
+understand it on first read; a specialist should read it and not
+wince; no sentence should hedge without saying anything. If any of
+those fail, rewrite.
+
+
+WHAT LAYER 5 IS
+
+Layer 4 treats the Layer 3 structural claims themselves as observations
+and asks what patterns run across them. Layer 5 takes the next step:
+it treats the Layer 4 higher-order patterns as the new observations
+and asks what holds across them.
+
+A Layer 5 entry is a pattern across Layer 4 entries — a rule about how
+the Layer 4 rules hang together. It is not an inference over Layer 3,
+not a structural claim about Layer 2, and not a causal or historical
+claim that reaches past what the Layer 4 entries together support. It
+sits one step further back than Layer 4 and asks: given H1–H7 as a
+set, what holds across them?
+
+Layer 5 is thinner than Layer 4. Each step back compresses. Where
+Layer 3 has twelve entries and Layer 4 has seven, Layer 5 settles
+into two. If a candidate reads as genuinely L5-shaped, it earns its
+place on the basis of what the H-entries jointly support, not on a
+desire to fill the layer out.
+
+Each Layer 5 entry lists the Layer 4 entries it draws from using their
+H-numbers. If those higher-order patterns fall or are revised, the
+Layer 5 entry falls or is revised with them.
+
+Layer 5 entries use the prefix G- (for governing pattern) to keep them
+distinct from Layer 1 (two-letter domain codes), Layer 2 (I-), Layer 3
+(M-), and Layer 4 (H-).
+
+Clusters of Layer 5 entries that appear to share a deeper rule are
+Layer 6 material, not a reason to merge Layer 5 entries. Entries are
+only merged when they are genuinely identical.
+
+Throughout Layer 5: entries describe patterns visible across the
+Layer 4 higher-order patterns. They are claims about patterns, not
+about anyone's intent, consciousness, or coordination.
+
+
+FOUR FILTER CRITERIA
+
+Each entry must pass all four to stay in the main list:
+
+  (1) Both-sidedness. The pattern holds when tested against both
+      directions of the asymmetry, not only one.
+
+  (2) Smallest interpretive move. The smallest step the Layer 4
+      entries together support, not a leap past them to bigger
+      causal, historical, or psychological claims.
+
+  (3) Specialist-wince test. A specialist in the relevant domain
+      might disagree with the framing but would not say the claim is
+      factually wrong or technically sloppy.
+
+  (4) Falsifiability. A concrete class of evidence — including
+      changes to the underlying Layer 4 entries — would force
+      revision or retraction.
+
+Entries that fail an audit move to the central staging file with the
+readmission condition that would let them back in. A Layer 5
+candidate may also fail because it is actually a Layer 6 claim — a
+pattern across Layer 5 entries, or a causal/dynamics claim L4 does
+not support. Such candidates are held for Layer 6, also in the
+staging file.
+================================================================================
+
+
+================================================================================
+LAYER 5: PATTERNS ACROSS HIGHER-ORDER PATTERNS
+================================================================================
+
+
+G1. The asymmetry doesn't run through one channel; it runs through
+    every channel the discourse uses at once.
+
+    Look at the H-entries as a set. The asymmetry shows up in what
+    counts as progress and which direction the equipment is pointed
+    in (H1); in where the asymmetry lives — underneath the rules
+    rather than in them (H2); in who gets cast as the agent and who
+    as the one something is happening to (H3); in what short words
+    exist for which side's patterns and what it costs to say them
+    out loud (H4); in whether a claim gets judged at the class level
+    or the individual level (H5); in which publications and
+    institutions cover which half of the evidence (H6); and in how
+    the framework itself gets received when it's raised (H7).
+
+    Each of these is a different register. They run to the same
+    direction at the same time. The claim is not "the asymmetry
+    exists in one place and there are side effects elsewhere"; it is
+    "whatever part of the discourse you look at, the asymmetry is
+    the same shape there too."
+
+    Shape note. H1–H6 describe the asymmetry as it shows up in the
+    world — in rules, tools, casting, vocabulary, framing, and
+    reading venues. H7 describes how claims of the kind H1–H6 make
+    get received when someone raises them. In H7 the framework is
+    pointing at itself. Both kinds fit G1 as registers where the
+    asymmetry runs, but the two kinds are different shapes, and that
+    difference is flagged here rather than hidden. If H7 were
+    removed, G1 would still hold as a claim about H1–H6; adding H7
+    strengthens the pattern rather than being its sole support.
+
+    Narrow claim. G1 says the direction is shared across registers.
+    It does not say the registers cause each other, that removing
+    one would collapse the rest, or that the shared direction
+    implies intent or coordination. Those would be bigger claims.
+    G1 is the smallest step the H-entries together support.
+
+    Draws from: H1, H2, H3, H4, H5, H6, H7.
+
+
+G2. Each register is sex-neutral in its rules and sex-asymmetric in
+    its operation.
+
+    H2 says it directly for the first register: the formal rules are
+    mostly symmetric; the defaults underneath them aren't. The same
+    shape runs through the other H-entries. H1's toolkit — how
+    outcome gaps get read, how neutral-looking rules get applied,
+    which patterns get short names — is sex-neutral in its
+    definition; the direction it points in is the asymmetry. H3's
+    agent and recipient roles are not assigned by a rule that names
+    sex; the default assignment does. H5's class-or-individual
+    framing sits on a rule that isn't worded by sex; which side of
+    the rule gets picked up tracks the direction of the claim.
+
+    This is not an incidental pattern. Each H-entry describes a
+    mechanism with a local, sex-neutral justification that runs in
+    one direction when you stack the cases. A reader can agree with
+    every rule line by line and still see the outcomes sort the
+    same way.
+
+    The fit varies. H1, H2, H3, and H5 fit this shape directly —
+    there is a clean split between the rule and the operation, and
+    the asymmetry lives in the split. H4 (vocabulary supply), H6
+    (readership coverage), and H7 (reception) fit more loosely: no
+    rule codes for sex in any of them, but the mechanism producing
+    the asymmetry isn't itself a single rule that gets applied one
+    way or the other. The shape is clearest in H1, H2, H3, H5 and
+    operates as a looser fit in H4, H6, H7. Flagged rather than
+    overclaimed.
+
+    One consequence. Arguments conducted at the level of formal
+    neutrality — "but the rule treats everyone the same" — can be
+    factually right and still miss the claim. The rule is one thing;
+    how the rule is picked up, applied, and aggregated is another.
+
+    Draws from: H1, H2, H3, H4, H5, H6, H7.
+================================================================================

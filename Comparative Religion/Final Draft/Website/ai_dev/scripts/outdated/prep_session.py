@@ -26,14 +26,18 @@ import subprocess
 import tempfile
 from collections import Counter
 
+from _common import load_data_json, utf8_subprocess_kwargs
+
 
 # ─────────────────────────────────────────────────────────────────────
 # Core data helpers
 # ─────────────────────────────────────────────────────────────────────
 
 def load_data(data_file: str) -> dict:
-    with open(data_file, "r", encoding="utf-8") as f:
-        return json.load(f)
+    # Validated: corrupt/missing/malformed data.json aborts with a
+    # single clear line (see `_common.load_data_json`). Every caller
+    # in the pipeline ultimately goes through here.
+    return load_data_json(data_file)
 
 
 def get_node(nodes, nid):
@@ -75,6 +79,17 @@ def get_siblings(nodes, nid):
     if not node or not node.get("parentId"):
         return []
     return [n for n in nodes if n.get("parentId") == node["parentId"] and n["id"] != nid]
+
+
+def id_sort_key(node_id: str) -> tuple:
+    """Convert '1.2.5.4' into a tuple for proper numeric sorting."""
+    parts = []
+    for p in node_id.split("."):
+        try:
+            parts.append((0, int(p), ""))
+        except ValueError:
+            parts.append((1, 0, p))
+    return tuple(parts)
 
 
 def has_sections(node):
@@ -138,25 +153,108 @@ def extract_keywords(nodes, target_id):
 
 
 def extract_keywords_from_vocabulary(nodes, target_id):
-    """Extract vocabulary terms from ancestor/sibling Unlocks."""
+    """Extract vocabulary terms from all grounding nodes' Unlocks."""
     keywords = set()
-    for ancestor in get_ancestors(nodes, target_id):
-        unlocks_text = extract_unlocks_text(ancestor)
+    for node in find_grounding_nodes(nodes, target_id):
+        unlocks_text = extract_unlocks_text(node)
         if unlocks_text:
             for q in re.findall(r'"([^"]+)"', unlocks_text):
                 for word in q.lower().split():
                     if word not in STOP_WORDS and len(word) > 2:
                         keywords.add(word)
-
-    for sib in get_siblings(nodes, target_id):
-        if has_sections(sib):
-            unlocks_text = extract_unlocks_text(sib)
-            if unlocks_text:
-                for q in re.findall(r'"([^"]+)"', unlocks_text):
-                    for word in q.lower().split():
-                        if word not in STOP_WORDS and len(word) > 2:
-                            keywords.add(word)
     return keywords
+
+
+def naive_stem(word):
+    """Minimal suffix stripping so 'sensations' matches 'sensation', etc."""
+    w = word.lower()
+    for suffix in ("ations", "ation", "ings", "ing", "ions", "ion",
+                    "ness", "ment", "ents", "ence", "ence", "ous",
+                    "ies", "es", "ed", "ly", "s"):
+        if len(w) > len(suffix) + 2 and w.endswith(suffix):
+            return w[:-len(suffix)]
+    return w
+
+
+def stemmed_set(words):
+    """Return a set containing both the original words and their stems."""
+    result = set()
+    for w in words:
+        result.add(w)
+        result.add(naive_stem(w))
+    return result
+
+
+def find_grounding_nodes(nodes, target_id):
+    """Find prior completed nodes whose Unlocks define terms used in the
+    target branch's claims.
+
+    Grounding rule: any completed node that comes before the target in
+    tree order (by id_sort_key) can ground terms — EXCEPT siblings on
+    the same page (same parent) as the target, which are handled
+    separately as 'completed siblings'.
+
+    Returns only nodes whose Unlocks actually define terms that appear
+    in the target branch's claims.
+    """
+    # 1. Collect all words from target branch claims
+    target = get_node(nodes, target_id)
+    if not target:
+        return []
+
+    claim_words = set()
+    all_claims = [target["claim"]]
+    for d in get_descendants(nodes, target_id):
+        all_claims.append(d["claim"])
+    if target.get("soWhat"):
+        all_claims.append(target["soWhat"])
+
+    for claim in all_claims:
+        cleaned = claim.lower()
+        cleaned = re.sub(r'[^\w\s-]', ' ', cleaned)
+        for t in cleaned.split():
+            t = t.strip("-")
+            if t and t not in STOP_WORDS and len(t) > 2:
+                claim_words.add(t)
+
+    # Build stemmed version for fuzzy matching (sensations ↔ sensation)
+    claim_stems = stemmed_set(claim_words)
+
+    # 2. Find the target's parent (to exclude same-page siblings)
+    target_parent_id = target.get("parentId")
+    target_key = id_sort_key(target_id)
+
+    # 3. Scan all prior completed nodes for Unlocks that define needed terms
+    grounding = []
+    for node in nodes:
+        # Must come before target in tree order
+        if id_sort_key(node["id"]) >= target_key:
+            continue
+        # Must be completed
+        if not has_sections(node):
+            continue
+        # Skip same-parent siblings (they're shown separately)
+        if node.get("parentId") == target_parent_id and target_parent_id is not None:
+            continue
+
+        unlocks_text = extract_unlocks_text(node)
+        if not unlocks_text:
+            continue
+
+        # Extract quoted terms from Unlocks and check for overlap (with stemming)
+        unlocks_words = set()
+        for q in re.findall(r'"([^"]+)"', unlocks_text):
+            for word in q.lower().split():
+                if word not in STOP_WORDS and len(word) > 2:
+                    unlocks_words.add(word)
+        unlocks_stems = stemmed_set(unlocks_words)
+
+        if unlocks_stems & claim_stems:
+            grounding.append(node)
+
+    # Sort by tree order
+    grounding.sort(key=lambda n: id_sort_key(n["id"]))
+    return grounding
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -533,8 +631,8 @@ Output in markdown format."""
             cmd,
             input=full_prompt,
             capture_output=True,
-            text=True,
             timeout=180,  # 3 minute timeout
+            **utf8_subprocess_kwargs(),
         )
 
         if result.returncode == 0 and result.stdout.strip():
@@ -554,38 +652,130 @@ Output in markdown format."""
         return None
 
 
-def generate_context(data_file, target_id, old_project_dir=None, phenom_dir=None, use_ai=False):
+def parse_targets(target_str, nodes):
+    """Parse target string into a list of node IDs.
+    Supports:
+      - Single ID: '1.2.5.4'
+      - Range: '1.2.5.4-1.2.5.7' (siblings from .4 to .7 inclusive)
+      - Comma-separated: '1.2.5.4,1.2.5.7'
+    """
+    target_ids = []
+
+    for part in target_str.split(","):
+        part = part.strip()
+        if "-" in part and not part.startswith("-"):
+            # Range: e.g. '1.2.5.4-1.2.5.7'
+            start, end = part.split("-", 1)
+            start, end = start.strip(), end.strip()
+
+            # Check if end is just a number (shorthand: 1.2.5.4-7 means 1.2.5.4-1.2.5.7)
+            if "." not in end:
+                prefix = start.rsplit(".", 1)[0]
+                end = f"{prefix}.{end}"
+
+            start_node = get_node(nodes, start)
+            end_node = get_node(nodes, end)
+            if not start_node:
+                print(f"WARNING: Node {start} not found, skipping")
+                continue
+            if not end_node:
+                print(f"WARNING: Node {end} not found, skipping")
+                continue
+
+            # Find all siblings in range
+            start_key = id_sort_key(start)
+            end_key = id_sort_key(end)
+            for n in nodes:
+                nk = id_sort_key(n["id"])
+                if start_key <= nk <= end_key:
+                    # Must be at same depth or deeper than the range endpoints
+                    if n["id"].count(".") >= start.count("."):
+                        # Check it's actually in the range (same parent prefix)
+                        start_prefix = start.rsplit(".", 1)[0]
+                        n_prefix = n["id"].rsplit(".", 1)[0] if "." in n["id"] else ""
+                        n_depth = n["id"].count(".")
+                        start_depth = start.count(".")
+
+                        if n_depth == start_depth and n_prefix == start_prefix:
+                            target_ids.append(n["id"])
+        else:
+            target_ids.append(part)
+
+    # Deduplicate while preserving order
+    seen = set()
+    result = []
+    for tid in target_ids:
+        if tid not in seen:
+            seen.add(tid)
+            result.append(tid)
+
+    return sorted(result, key=lambda x: id_sort_key(x))
+
+
+def generate_context(data_file, target_input, old_project_dir=None, phenom_dir=None, use_ai=False):
     data = load_data(data_file)
     nodes = data["nodes"]
-    target = get_node(nodes, target_id)
 
-    if not target:
-        return f"ERROR: Node {target_id} not found in data.json"
+    # Parse targets (single ID, range, or comma-separated)
+    target_ids = parse_targets(target_input, nodes)
+    if not target_ids:
+        return f"ERROR: No valid nodes found for '{target_input}'"
 
-    branch_keywords = extract_keywords(nodes, target_id)
-    vocab_keywords = extract_keywords_from_vocabulary(nodes, target_id)
+    # Validate all targets exist
+    for tid in target_ids:
+        if not get_node(nodes, tid):
+            return f"ERROR: Node {tid} not found in data.json"
 
-    lines = [f"# Context for Session: {target_id}\n"]
-    lines.append(f"**Target:** {target_id} — {target['claim']}")
+    # Use first target as primary for ancestor/sibling context
+    primary_id = target_ids[0]
+    primary = get_node(nodes, primary_id)
+
+    # Combine keywords from all targets
+    branch_keywords = set()
+    vocab_keywords = set()
+    for tid in target_ids:
+        branch_keywords |= extract_keywords(nodes, tid)
+        vocab_keywords |= extract_keywords_from_vocabulary(nodes, tid)
+
+    # Header
+    if len(target_ids) == 1:
+        label = f"{primary_id}"
+        target_desc = f"{primary_id} — {primary['claim']}"
+    else:
+        label = f"{target_ids[0]}–{target_ids[-1]}"
+        target_desc = ", ".join(f"{tid}" for tid in target_ids)
+
+    lines = [f"# Context for Session: {label}\n"]
+    lines.append(f"**Targets:** {target_desc}")
     lines.append(f"**Keywords extracted:** {', '.join(sorted(branch_keywords)[:20])}\n")
 
     # ── 1. Branch structure ──
     lines.append("---\n## Branch Structure\n")
-    lines.append(f"- {target_id}: {target['claim']}")
-    descendants = get_descendants(nodes, target_id)
-    for d in descendants:
-        depth = d["id"].count(".") - target_id.count(".")
-        indent = "  " * depth
-        status = "DONE" if has_sections(d) else "TODO"
-        lines.append(f"  {indent}- [{status}] {d['id']}: {d['claim']}")
+    all_descendants = []
+    for tid in target_ids:
+        t = get_node(nodes, tid)
+        lines.append(f"- {tid}: {t['claim']}")
+        descendants = get_descendants(nodes, tid)
+        all_descendants.extend(descendants)
+        for d in descendants:
+            depth = d["id"].count(".") - tid.count(".")
+            indent = "  " * depth
+            status = "DONE" if has_sections(d) else "TODO"
+            lines.append(f"  {indent}- [{status}] {d['id']}: {d['claim']}")
+        lines.append("")
 
     # ── 1b. Batch plan with scaffolds ──
-    batches = plan_batches(nodes, target_id)
+    # Combine batches from all targets
+    all_batches = []
+    for tid in target_ids:
+        all_batches.extend(plan_batches(nodes, tid))
+    batches = all_batches
     if batches:
         lines.append("\n---\n## Batch Plan\n")
         lines.append("Work through these batches in order. For each batch, draft all")
         lines.append("nodes, audit each against the checklist, then present the entire")
-        lines.append("batch as a single JSON array in one code block.\n")
+        lines.append("batch in one code block as comma-separated JSON objects (no")
+        lines.append("wrapping array). Each node's outermost braces at indent level 0.\n")
         lines.append("**CRITICAL:** The scaffolds below contain the exact `id`, `parentId`,")
         lines.append("`nextIds`, `prevIds`, `hasDerivation`, and `claim` from data.json.")
         lines.append("Do NOT modify these fields. You fill in `soWhat` and `sections` only.\n")
@@ -617,23 +807,98 @@ def generate_context(data_file, target_id, old_project_dir=None, phenom_dir=None
                 scaffolds.append(scaffold)
 
             lines.append("```json")
-            lines.append(json.dumps(scaffolds, indent=2, ensure_ascii=False))
+            # Output as comma-separated objects, no wrapping array
+            for si, scaffold in enumerate(scaffolds):
+                lines.append(json.dumps(scaffold, indent=2, ensure_ascii=False))
+                if si < len(scaffolds) - 1:
+                    lines.append(",")
             lines.append("```\n")
 
         lines.append(f"Total: {len(batches)} batches, "
                       f"{sum(len(ids) for _, ids in batches)} nodes.\n")
         lines.append("Start with Batch 1 in your first response.\n")
 
-    # ── 2. Ancestor chain with vocabulary ──
-    lines.append("\n---\n## Ancestor Chain (available vocabulary)\n")
-    lines.append("Their Unlocks define the vocabulary available for this branch.\n")
-    for a in get_ancestors(nodes, target_id):
+    # ── 2. Grounding nodes (vocabulary available for this branch) ──
+    # Ancestors are always shown, plus any prior non-sibling nodes whose
+    # Unlocks define terms used in the target branch's claims.
+    ancestor_ids = {a["id"] for a in get_ancestors(nodes, primary_id)}
+
+    # Collect grounding nodes across all targets (deduplicated)
+    all_grounding = {}
+    for tid in target_ids:
+        for gn in find_grounding_nodes(nodes, tid):
+            if gn["id"] not in all_grounding:
+                all_grounding[gn["id"]] = gn
+    grounding_nodes = sorted(all_grounding.values(), key=lambda n: id_sort_key(n["id"]))
+
+    # Always show ancestors first
+    lines.append("\n---\n## Ancestor Chain (structural context)\n")
+    for a in get_ancestors(nodes, primary_id):
         lines.append(format_node_summary(a, include_unlocks=True))
+        lines.append("")
+
+    # Then show non-ancestor grounding nodes that define needed terms
+    non_ancestor_grounding = [g for g in grounding_nodes if g["id"] not in ancestor_ids]
+    if non_ancestor_grounding:
+        lines.append("\n---\n## Grounding Nodes (define terms used in this branch)\n")
+        lines.append("These prior nodes' Unlocks define vocabulary that appears in")
+        lines.append("the target branch's claims.\n")
+        for g in non_ancestor_grounding:
+            lines.append(format_node_summary(g, include_unlocks=True))
+            lines.append("")
+
+    # ── 2b. Term → source node lookup ──
+    # Build an inverted index: for each term used in target claims,
+    # show which node(s) ground it.
+    term_to_sources = {}
+
+    # Collect all target claim words once (with stems)
+    target_claim_words = set()
+    for tid in target_ids:
+        t = get_node(nodes, tid)
+        if t:
+            for cl in [t["claim"]] + [d["claim"] for d in get_descendants(nodes, tid)]:
+                cleaned = re.sub(r'[^\w\s-]', ' ', cl.lower())
+                for w in cleaned.split():
+                    w = w.strip("-")
+                    if w and w not in STOP_WORDS and len(w) > 2:
+                        target_claim_words.add(w)
+    target_claim_stems = stemmed_set(target_claim_words)
+
+    # Include ancestors and non-ancestor grounding nodes
+    all_vocab_nodes = list(get_ancestors(nodes, primary_id)) + non_ancestor_grounding
+    for vn in all_vocab_nodes:
+        unlocks_text = extract_unlocks_text(vn)
+        if not unlocks_text:
+            continue
+        for phrase in re.findall(r'"([^"]+)"', unlocks_text):
+            phrase_lower = phrase.lower()
+            phrase_words = {w.strip("-") for w in re.sub(r'[^\w\s-]', ' ', phrase_lower).split()
+                           if w.strip("-") not in STOP_WORDS and len(w.strip("-")) > 2}
+
+            if stemmed_set(phrase_words) & target_claim_stems:
+                if phrase_lower not in term_to_sources:
+                    term_to_sources[phrase_lower] = []
+                term_to_sources[phrase_lower].append(vn["id"])
+
+    if term_to_sources:
+        lines.append("\n---\n## Term → Source Node Lookup\n")
+        lines.append("When citing a grounded term, use the source node ID.\n")
+        for term in sorted(term_to_sources.keys()):
+            source_ids = sorted(set(term_to_sources[term]), key=lambda x: id_sort_key(x))
+            lines.append(f"- \"{term}\" → {', '.join(source_ids)}")
         lines.append("")
 
     # ── 3. Completed siblings ──
     lines.append("\n---\n## Completed Siblings\n")
-    completed_siblings = [s for s in get_siblings(nodes, target_id) if has_sections(s)]
+    # Collect completed siblings across all targets (deduplicated)
+    completed_siblings = []
+    seen_sibs = set()
+    for tid in target_ids:
+        for s in get_siblings(nodes, tid):
+            if has_sections(s) and s["id"] not in seen_sibs and s["id"] not in target_ids:
+                seen_sibs.add(s["id"])
+                completed_siblings.append(s)
     if completed_siblings:
         for s in completed_siblings:
             lines.append(format_node_summary(s, include_unlocks=True))
@@ -644,12 +909,13 @@ def generate_context(data_file, target_id, old_project_dir=None, phenom_dir=None
     # ── 4. Style reference ──
     lines.append("\n---\n## Style Reference (recently completed nodes)\n")
     lines.append("Use as quality and tone reference.\n")
-    parent_id = target.get("parentId")
+    parent_id = primary.get("parentId")
+    target_id_set = set(target_ids)
     if parent_id:
         all_sibs = get_children(nodes, parent_id)
         completed_branches = []
         for sib in all_sibs:
-            if sib["id"] != target_id and has_sections(sib):
+            if sib["id"] not in target_id_set and has_sections(sib):
                 sib_desc = get_descendants(nodes, sib["id"])
                 if sib_desc and all(has_sections(d) for d in sib_desc):
                     completed_branches.append(sib)
@@ -674,7 +940,7 @@ def generate_context(data_file, target_id, old_project_dir=None, phenom_dir=None
     if parent_id:
         all_sibs = get_children(nodes, parent_id)
         for sib in all_sibs:
-            if sib["id"] != target_id and has_sections(sib):
+            if sib["id"] not in target_id_set and has_sections(sib):
                 sib_desc = get_descendants(nodes, sib["id"])
                 terminal_done = [d for d in sib_desc
                                  if has_sections(d) and not d.get("hasDerivation", False)]
@@ -705,7 +971,7 @@ def generate_context(data_file, target_id, old_project_dir=None, phenom_dir=None
         lines.append("Automatically extracted by keyword relevance.")
         lines.append("Do NOT copy blindly — evaluate independently.\n")
 
-        old_files = find_old_project_files(old_project_dir, target_id)
+        old_files = find_old_project_files(old_project_dir, primary_id)
         total_passages = 0
         if old_files:
             for of_path in old_files:
@@ -762,16 +1028,19 @@ def generate_context(data_file, target_id, old_project_dir=None, phenom_dir=None
     # ── 7. AI-powered extraction ──
     if use_ai and (old_project_dir or phenom_dir):
         # Build a compact structural summary for Claude's context
-        structural_summary_parts = [f"Branch: {target_id} — {target['claim']}"]
-        for d in descendants:
-            structural_summary_parts.append(f"  Child: {d['id']} — {d['claim']}")
+        structural_summary_parts = []
+        for tid in target_ids:
+            t = get_node(nodes, tid)
+            structural_summary_parts.append(f"Branch: {tid} — {t['claim']}")
+            for d in get_descendants(nodes, tid):
+                structural_summary_parts.append(f"  Child: {d['id']} — {d['claim']}")
         structural_summary_parts.append("\nCompleted sibling branches:")
         for s in completed_siblings:
             structural_summary_parts.append(f"  {s['id']}: {s['claim']}")
         structural_summary = "\n".join(structural_summary_parts)
 
         ai_result = run_claude_extraction(
-            target_id, target["claim"], branch_keywords,
+            label, primary["claim"], branch_keywords,
             structural_summary, old_project_dir, phenom_dir
         )
         if ai_result:
@@ -841,9 +1110,9 @@ def generate_current_state(nodes, target_id):
     return "\n".join(lines)
 
 
-def bundle_reference_files(script_dir, context_content, target_id, nodes):
+def bundle_reference_files(reference_dir, context_content, target_id, nodes):
     """Bundle all reference files + generated context into a single
-    upload-ready file. Reads the reference files from the ai_dev folder
+    upload-ready file. Reads the reference files from ai_dev/reference/
     and concatenates them in the correct reading order."""
 
     # Auto-generate current state instead of reading a static file
@@ -868,7 +1137,7 @@ def bundle_reference_files(script_dir, context_content, target_id, nodes):
 
     # Bundle static reference files
     for filename, label in ref_files:
-        filepath = os.path.join(script_dir, filename)
+        filepath = os.path.join(reference_dir, filename)
         if os.path.exists(filepath):
             with open(filepath, "r", encoding="utf-8") as f:
                 content = f.read().strip()
@@ -915,14 +1184,24 @@ def main():
     parser.add_argument("--ai", action="store_true",
                         help="Use Claude CLI for intelligent context extraction")
     parser.add_argument("--no-bundle", action="store_true",
-                        help="Only generate CONTEXT_FOR_SESSION.md (don't bundle reference files)")
+                        help="Emit only the lean branch-specific context "
+                             "(no reference-doc bundling). The output filename "
+                             "stays PREP_CONTEXT.md; only the content differs.")
     parser.add_argument("--output", default=None,
-                        help="Output file (default: SESSION_READY.md or CONTEXT_FOR_SESSION.md with --no-bundle)")
+                        help="Output file path "
+                             "(default: ai_dev/outputs/PREP_CONTEXT.md in both "
+                             "bundle and --no-bundle modes).")
     args = parser.parse_args()
 
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    website_dir = os.path.dirname(script_dir)  # parent = Website root
+    script_dir = os.path.dirname(os.path.abspath(__file__))   # ai_dev/scripts
+    ai_dev_dir = os.path.dirname(script_dir)                  # ai_dev
+    reference_dir = os.path.join(ai_dev_dir, "reference")
+    outputs_dir = os.path.join(ai_dev_dir, "outputs")
+    website_dir = os.path.dirname(ai_dev_dir)                 # Website root
     data_file = args.data or os.path.join(website_dir, "data.json")
+
+    # Make sure the outputs dir exists (first-run safety).
+    os.makedirs(outputs_dir, exist_ok=True)
 
     if not os.path.exists(data_file):
         print(f"ERROR: {data_file} not found")
@@ -952,6 +1231,16 @@ def main():
     else:
         print("AI extraction: disabled (use --ai to enable)")
 
+    # Parse targets early so we can build a display label for bundling
+    data = load_data(data_file)
+    parsed_ids = parse_targets(args.target, data["nodes"])
+    if len(parsed_ids) == 1:
+        target_label = parsed_ids[0]
+    elif parsed_ids:
+        target_label = f"{parsed_ids[0]}–{parsed_ids[-1]}"
+    else:
+        target_label = args.target
+
     context = generate_context(data_file, args.target, old_dir, phen_dir, use_ai=args.ai)
 
     # Print context breakdown by section
@@ -960,29 +1249,27 @@ def main():
     for sec in sections:
         # Find the first ## heading
         heading_match = re.search(r'^## (.+)', sec, re.MULTILINE)
-        label = heading_match.group(1) if heading_match else "(header)"
+        sec_label = heading_match.group(1) if heading_match else "(header)"
         chars = len(sec)
-        print(f"  {label}: {chars:,} chars (~{chars // 4:,} tokens)")
+        print(f"  {sec_label}: {chars:,} chars (~{chars // 4:,} tokens)")
 
-    # Also write standalone CONTEXT_FOR_SESSION.md (always, for reference)
-    context_file = os.path.join(script_dir, "CONTEXT_FOR_SESSION.md")
-    with open(context_file, "w", encoding="utf-8") as f:
-        f.write(context)
+    # PREP_CONTEXT.md is the single output file. Default mode writes
+    # the full bundle (reference docs + project state + branch-specific
+    # context). --no-bundle writes just the lean branch-specific context.
+    output_file = args.output or os.path.join(outputs_dir, "PREP_CONTEXT.md")
 
     if args.no_bundle:
-        output_file = args.output or context_file
-        if args.output and args.output != context_file:
-            with open(output_file, "w", encoding="utf-8") as f:
-                f.write(context)
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(context)
         size = len(context)
         print(f"\nWritten to: {output_file}")
         print(f"Size: {size:,} chars (~{size // 4:,} tokens)")
+        print(f"\n(--no-bundle: branch-specific context only — no reference "
+              f"docs bundled.)")
     else:
         # Bundle everything into one upload-ready file
         print("\nBundling reference files...")
-        data = load_data(data_file)
-        bundle = bundle_reference_files(script_dir, context, args.target, data["nodes"])
-        output_file = args.output or os.path.join(script_dir, "SESSION_READY.md")
+        bundle = bundle_reference_files(reference_dir, context, target_label, data["nodes"])
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(bundle)
         size = len(bundle)

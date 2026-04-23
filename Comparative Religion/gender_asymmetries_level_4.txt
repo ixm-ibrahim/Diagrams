@@ -1,0 +1,293 @@
+================================================================================
+OBSERVED ASYMMETRIES IN HOW MEN AND WOMEN ARE TREATED
+LAYER 4 — patterns across the Layer 3 structural claims
+
+
+WRITING GOAL
+
+Demystification. Use plain, common language and keep cognitive load low,
+while staying precise enough that a specialist would agree it's
+accurate. Be hard on the topic, soft on the reader: anticipate where
+someone might feel defensive, but don't soften what's actually true.
+Where something is uncertain, contested, or where an expert would
+object, surface that directly in plain terms — don't hide it behind
+jargon, hedging, emotional appeals, or common misreadings the reader
+might bring in.
+
+Drifts to avoid:
+  (1) academic drift — reaching for Latinate words, nominalizations, or
+      jargon when a common word works.
+  (2) bland drift — hedging or both-sidesing until no real claim is
+      made.
+  (3) false accessibility — oversimplifying in a way a specialist would
+      object to.
+  (4) emotional cushioning that buries the actual point.
+If accessibility and precision seem to conflict in a sentence, flag
+that sentence rather than silently picking one.
+
+Self-check before releasing a version: a smart non-expert should
+understand it on first read; a specialist should read it and not
+wince; no sentence should hedge without saying anything. If any of
+those fail, rewrite.
+
+
+WHAT LAYER 4 IS
+
+Layer 3 treats the Layer 2 inferences themselves as observations and
+asks what larger structural claims they jointly support. Layer 4
+takes the next step: it treats the Layer 3 structural claims as the
+new observations and asks what patterns run across them.
+
+A Layer 4 entry is a pattern across Layer 3 entries — a rule about
+how the Layer 3 rules hang together. It is not a new observation,
+not an inference over specific cases, and not a structural claim
+about Layer 2. It sits one further step back and asks: given the
+Layer 3 entries as a set, what holds across them?
+
+Two shapes of L4 entry are admitted. The primary shape (H1–H6) names
+a shared feature of the L3 set itself — direction, location,
+casting, coupling, one-move switching, distribution. A secondary
+shape (H7) names what happens when multiple L3 entries are applied
+to a particular target and produce convergent predictions about it.
+Both are legitimately higher-order than any single L3 entry; the
+shapes differ, and that difference is flagged where it appears
+rather than glossed.
+
+Each Layer 4 entry lists the Layer 3 entries it draws from using
+their M-numbers. If those structural claims fall or are revised, the
+Layer 4 entry falls or is revised with them.
+
+Layer 4 entries use the prefix H- (for higher-order pattern) to keep
+them distinct from Layer 1 (two-letter domain codes), Layer 2 (I-),
+and Layer 3 (M-).
+
+Clusters of Layer 4 entries that appear to share a deeper rule are
+Layer 5 material, not a reason to merge Layer 4 entries. Entries are
+only merged when they are genuinely identical.
+
+Throughout Layer 4: entries describe patterns visible across the
+Layer 3 structural claims. They are claims about patterns, not about
+anyone's intent, consciousness, or coordination.
+
+
+FOUR FILTER CRITERIA
+
+Each entry must pass all four to stay in the main list:
+
+  (1) Both-sidedness. The pattern holds when tested against both
+      directions of the asymmetry, not only one.
+
+  (2) Smallest interpretive move. The smallest step the Layer 3
+      entries together support, not a leap past them to bigger
+      causal, historical, or psychological claims.
+
+  (3) Specialist-wince test. A specialist in the relevant domain
+      might disagree with the framing but would not say the claim is
+      factually wrong or technically sloppy.
+
+  (4) Falsifiability. A concrete class of evidence — including
+      changes to the underlying Layer 3 entries — would force
+      revision or retraction.
+
+Entries that fail an audit move to the central staging file with the
+readmission condition that would let them back in. A Layer 4
+candidate may also fail because it is actually a Layer 5 claim (a
+pattern across Layer 4 entries); such candidates are held for
+Layer 5, also in the staging file.
+================================================================================
+
+
+================================================================================
+LAYER 4: PATTERNS ACROSS STRUCTURAL CLAIMS
+================================================================================
+
+
+H1. Progress on gender equality runs in one direction.
+
+    Look across the Layer 3 entries and a single direction emerges:
+    the tools for seeing and closing gaps get used on the female-
+    disadvantage side and not on the male-disadvantage side. How
+    outcome gaps get read (M5), which way neutral-looking rules get
+    applied (M6), which patterns have compact names (M7), who keeps
+    victim or oppressor status across sub-domains (M8), which of two
+    available rules gets picked in contested domains (M9), which
+    claims enter discourse cheaply (M10), and which direction the
+    practical trajectory has moved over several decades (M11) — all
+    sort the same way.
+
+    A gap closing in the female-disadvantage direction counts as
+    progress, gets funded, and is sustained. A gap closing in the
+    male-disadvantage direction does not get the same treatment — the
+    reading mechanisms (M5), the rule-application direction (M6), the
+    vocabulary (M7), the persistent victim/oppressor labels (M8), the
+    rule selection (M9), and the speech cost (M10) all work against
+    it — and over the same period several such gaps (male
+    educational attainment, close-friendship counts, male suicide
+    rate, share of male K–12 teachers) have held flat or widened.
+
+    The narrow claim here is about the direction the equipment gets
+    pointed in, not about anyone's intentions. The tools exist, they
+    are applied, and they are applied on one side.
+
+    Draws from: M5, M6, M7, M8, M9, M10, M11.
+
+
+H2. The asymmetry lives mostly in the defaults, not in the rules on
+    paper.
+
+    Read the formal rules — antidiscrimination law, editorial style
+    guides, equal-treatment doctrine, HR policy language — and most
+    of them are symmetric. (A handful aren't: selective service
+    registration is male-only; some programs are sex-targeted by
+    design.) The larger share of the asymmetry runs not through the
+    written rules but through the layer underneath them — and that
+    layer has three registers that have to be kept distinct:
+
+      - Interpretive defaults: which way institutions read ambiguous
+        facts (M3), and which side of a neutral-looking rule gets
+        picked up in application (M6).
+      - Role-assignment defaults: how agent-vs-recipient positions
+        get assigned in interactions and institutional intake (M4),
+        and which of two available rules ("equal" vs. "not similarly
+        situated") gets selected in a given domain (M9).
+      - Trajectory defaults: where practice has actually gone while
+        the rules were in force (M11).
+
+    Each register is a different kind of "default," but they hang
+    together in one direction.
+
+    One consequence: arguments conducted at the level of formal rules
+    miss the thing. A reader can agree with every line of the written
+    rules and still see outcomes running consistently to one side.
+    The rules mostly pass the sex-neutral test; the defaults
+    underneath them don't.
+
+    Draws from: M3, M4, M6, M9, M11.
+
+
+H3. Men get cast as the one doing something; women as the one
+    something is happening to.
+
+    The same shape shows up in three distinct places. In ambiguous
+    intake situations — a mutual-violence call, a distressed report —
+    the default casts the man as agent of harm and the woman as the
+    one harmed (M3). Across several distinct institutional behaviors
+    — responsibility attribution, how the same act gets classified,
+    primary-aggressor defaults, who the prevention message is
+    addressed to — the same positioning holds (M4). And when outcome
+    gaps run against men, they are read as things men are doing to
+    themselves; when outcome gaps run against women, they are read as
+    things being done to them (M5).
+
+    This is not a claim about who actually did what in any particular
+    case. It covers two registers at once — how ambiguous cases get
+    read (a framing claim, via M3 and M4's discourse evidence) and
+    how institutions actually act on them (a behavior claim, via M3's
+    intake and primary-aggressor data). Both registers move the same
+    direction.
+
+    Draws from: M3, M4, M5.
+
+
+H4. The missing names and the cost of saying something are two sides
+    of one asymmetry, not two independent ones.
+
+    M7 says compact, mainstream-usable names exist for one side's
+    patterns and not the other's. M10 says a claim of male
+    disadvantage costs more to raise than an equally well-evidenced
+    claim of female disadvantage. M1 says the speech asymmetry runs
+    harder and more one-directionally than the outcome asymmetry
+    does.
+
+    These three are tied together, not three independent facts. The
+    vocabulary gap and the speech-cost gap are coupled: a pattern
+    without a short name takes a clause to refer to, doesn't
+    circulate casually, and forces the speaker to construct the
+    category each time — which raises the cost of raising it.
+
+    The vocabulary gap is part of what produces the cost gap, not a
+    separate asymmetry alongside it. (The reverse direction — cost
+    produces vocabulary — is also plausible: patterns that are
+    expensive to name don't get short names coined for them. Either
+    way, they are not two independent facts about speech.)
+
+    Draws from: M1, M7, M10.
+
+
+H5. Whether men and women get judged as a class or as individuals
+    flips depending on which one the claim is about.
+
+    Several distinct moves, each looking even-handed on its face,
+    together produce a class/individual switch. When a claim runs
+    against men, the class-level machinery engages: the pattern is
+    named, individual counter-cases don't rebut it, past behavior is
+    admissible, agency is attributed (M6). When a claim runs against
+    women, the individual-level machinery engages on the same topic:
+    the counter-case lands, the class-level claim becomes an
+    illegitimate generalization, circumstance softens agency.
+
+    This switch is narrower than H1 or H2. H1 covers the direction
+    the whole toolkit gets pointed in; H2 covers where the asymmetry
+    sits (defaults vs. rules). H5 is about one specific move inside
+    that toolkit: the same topic can be framed at class level (a
+    pattern about men / about women) or at individual level (this
+    man / this woman), and the choice between the two framings
+    tracks the direction of the claim. The rules are not worded
+    differently by sex; which side of the rule — class or individual
+    — gets picked up is.
+
+    Draws from: M6.
+
+
+H6. Both halves of the evidence are real, and each half is mostly
+    read in a different kind of venue.
+
+    M2 says the Layer 2 inferences cluster into two partially non-
+    overlapping sets, each factually supported by its own Layer 1
+    evidence. M12 says those same two sets map onto a readership
+    split: the female-disadvantage set is covered overwhelmingly in
+    left-coded mainstream publications and reinforced by the large
+    institutions adjacent to them (academia, major foundations,
+    established advocacy organizations); the male-disadvantage set
+    is covered overwhelmingly in right-coded publications and
+    adjacent men's-issues venues, which have no comparable large
+    institutional reinforcement.
+
+    What's new at L4: this explains why the asymmetry stays
+    invisible to each side without needing to say either side is
+    wrong about what it cites. A reader inside the left-coded
+    ecosystem is reliably shown one half of the catalogue. A reader
+    inside the right-coded ecosystem is reliably shown the other
+    half. The disagreement between "gender asymmetries mostly run
+    against women" and "gender asymmetries mostly run against men"
+    is not two people looking at the same evidence and reaching
+    different conclusions. It is two people looking at two different
+    halves of the evidence, in venues sorted by ideology.
+
+    Draws from: M2, M12.
+
+
+H7. Multiple Layer 3 entries converge on predicting this
+    framework's reception — the framework sits inside the pattern it
+    describes.
+
+    Four distinct L3 entries each predict something about how a
+    document like this gets received. M10 predicts the cost
+    differential overall: claims of male disadvantage enter
+    mainstream discussion at higher cost than claims of female
+    disadvantage, independent of evidence quality. M6 predicts that
+    neutral-looking evaluation rules (engage the content before
+    questioning motives; count counter-cases symmetrically) get
+    applied by direction, which would show up here as motive-
+    questioning being reached for faster than for an equivalent
+    female-disadvantage analysis. M7 predicts extra cost from
+    constructed vocabulary: short names don't exist in mainstream
+    usage for several of the patterns this framework describes, so
+    the framework has to build the category each time, and that
+    construction itself raises the speaker's cost. M1 predicts that
+    the speech-side asymmetry runs harder than the outcome-side
+    asymmetry, so a document describing both should take more flak
+    on the speech side than on the outcome side.
+
+    Draws from: M1, M6, M7, M10.
+================================================================================

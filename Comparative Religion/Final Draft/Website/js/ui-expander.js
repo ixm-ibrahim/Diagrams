@@ -139,6 +139,9 @@ export function toggleExpander(id) {
 
   if (AppState.activeNodeId === id) {
     closeExpander(row, expander, headerBtn, inlineBtn, true);
+    // Scroll the row to just below the header so it doesn't end up
+    // behind or above it after the expander collapses.
+    scrollToView(row);
   } else {
     // Accordion switch: close previous, then open new.
     if (AppState.activeNodeId !== null) {
