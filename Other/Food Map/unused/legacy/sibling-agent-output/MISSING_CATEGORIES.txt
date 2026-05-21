@@ -1,0 +1,32 @@
+# Missing food categories
+# Categories referenced in MISSING_INGREDIENTS.txt that do not exist in the project.
+# Current dataset has 40 categories under 11 food groups.
+#
+category,food_group,major_group(s)
+Alcoholic beverages,Condiments & sauces,plant
+Bread & baked goods,Grains,plant
+Coffee & tea,Herbs & spices,plant
+Jams & preserves,Sweets,plant
+Juices,Fruits,plant
+Margarine & shortening,Fats & oils,animal|plant
+Pickled vegetables,Condiments & sauces,plant
+Prepared mixes,Sweets,dairy|plant
+Prepared soups & broths,Condiments & sauces,animal|plant
+Processed cheese,Dairy,dairy
+Salt & seasonings,Herbs & spices,plant
+Soft drinks,Sweets,dairy|plant
+
+# ---
+# Reference: existing categories already in the project
+# ---
+# Condiments & sauces: Condiments & sauces
+# Dairy: Aged cheese, Cream & butter, Fermented dairy, Fresh cheese, Frozen dairy, Milk, Plant milks, Yogurt
+# Fats & oils: Cream & butter, Oils
+# Fruits: Berries, Dried fruits, Fruits
+# Grains: Baking ingredients, Flours, Refined grains, Whole grains
+# Herbs & spices: Dried spices, Fresh herbs, Spice blends
+# Nuts & seeds: Nut butters, Nuts, Seeds
+# Protein (animal): Canned & cured fish, Eggs, Freshwater fish, Oily fish, Organ meats, Poultry, Processed meat, Red meat, Shellfish, White fish
+# Protein (plant): Flours, Legumes
+# Sweets: Extracts & essences, Sweets
+# Vegetables: Cruciferous vegetables, Leafy greens, Non-starchy vegetables, Starchy vegetables

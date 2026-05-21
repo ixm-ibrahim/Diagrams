@@ -1,0 +1,1292 @@
+{
+  "summary": {
+    "corpus_patterns": 2409,
+    "curated_meals": 333,
+    "categories": 64,
+    "total_weight": 731835
+  },
+  "top_patterns": [
+    {
+      "frequency": 7751,
+      "ingredient_categories": [
+        "Sugar & sweeteners",
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 5998,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Cream & butter",
+        "Eggs",
+        "Extracts & essences",
+        "Flours",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 4948,
+      "ingredient_categories": [
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 4607,
+      "ingredient_categories": [
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 4208,
+      "ingredient_categories": [
+        "Ground spices",
+        "Other non-starchy",
+        "Salt & seasonings",
+        "Sauces",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 4122,
+      "ingredient_categories": [
+        "Alcoholic beverages",
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 3835,
+      "ingredient_categories": [
+        "Berries",
+        "Sugar & sweeteners",
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 3450,
+      "ingredient_categories": [
+        "Cream & butter",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 3240,
+      "ingredient_categories": [
+        "Berries",
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 3121,
+      "ingredient_categories": [
+        "Alcoholic beverages",
+        "Sugar & sweeteners",
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 2992,
+      "ingredient_categories": [
+        "Ground spices",
+        "Sugar & sweeteners",
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 2931,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Eggs",
+        "Flours",
+        "Milk",
+        "Oils",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2886,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Cream & butter",
+        "Eggs",
+        "Extracts & essences",
+        "Flours",
+        "Milk",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2545,
+      "ingredient_categories": [
+        "Cream & butter",
+        "Milk",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2543,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Cream & butter",
+        "Eggs",
+        "Flours",
+        "Milk",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2459,
+      "ingredient_categories": [
+        "Milk",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2393,
+      "ingredient_categories": [
+        "Cream & butter",
+        "Extracts & essences",
+        "Milk",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2300,
+      "ingredient_categories": [
+        "Cream & butter",
+        "Eggs",
+        "Extracts & essences",
+        "Flours",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2261,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Cream & butter",
+        "Eggs",
+        "Extracts & essences",
+        "Flours",
+        "Nuts",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2227,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Flours",
+        "Oils",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2143,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Eggs",
+        "Flours",
+        "Oils",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2070,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Eggs",
+        "Extracts & essences",
+        "Flours",
+        "Oils",
+        "Salt & seasonings",
+        "Sugar & sweeteners"
+      ]
+    },
+    {
+      "frequency": 2048,
+      "ingredient_categories": [
+        "Other non-starchy"
+      ]
+    },
+    {
+      "frequency": 2028,
+      "ingredient_categories": [
+        "Nuts",
+        "Sugar & sweeteners",
+        "Temperate fruits"
+      ]
+    },
+    {
+      "frequency": 2002,
+      "ingredient_categories": [
+        "Baking ingredients",
+        "Cream & butter",
+        "Eggs",
+        "Extracts & essences",
+        "Flours",
+        "Sugar & sweeteners"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "category": "Sugar & sweeteners",
+      "corpus_patterns": 1311,
+      "corpus_weighted": 440125,
+      "curated_meals": 30,
+      "small_patterns": 185,
+      "large_patterns": 1126
+    },
+    {
+      "category": "Salt & seasonings",
+      "corpus_patterns": 1005,
+      "corpus_weighted": 302093,
+      "curated_meals": 2,
+      "small_patterns": 59,
+      "large_patterns": 946
+    },
+    {
+      "category": "Other non-starchy",
+      "corpus_patterns": 906,
+      "corpus_weighted": 230933,
+      "curated_meals": 68,
+      "small_patterns": 148,
+      "large_patterns": 758
+    },
+    {
+      "category": "Cream & butter",
+      "corpus_patterns": 754,
+      "corpus_weighted": 230812,
+      "curated_meals": 45,
+      "small_patterns": 88,
+      "large_patterns": 666
+    },
+    {
+      "category": "Eggs",
+      "corpus_patterns": 687,
+      "corpus_weighted": 211252,
+      "curated_meals": 54,
+      "small_patterns": 37,
+      "large_patterns": 650
+    },
+    {
+      "category": "Flours",
+      "corpus_patterns": 639,
+      "corpus_weighted": 208674,
+      "curated_meals": 0,
+      "small_patterns": 30,
+      "large_patterns": 609
+    },
+    {
+      "category": "Temperate fruits",
+      "corpus_patterns": 637,
+      "corpus_weighted": 207881,
+      "curated_meals": 12,
+      "small_patterns": 128,
+      "large_patterns": 509
+    },
+    {
+      "category": "Ground spices",
+      "corpus_patterns": 731,
+      "corpus_weighted": 190343,
+      "curated_meals": 34,
+      "small_patterns": 52,
+      "large_patterns": 679
+    },
+    {
+      "category": "Baking ingredients",
+      "corpus_patterns": 465,
+      "corpus_weighted": 154547,
+      "curated_meals": 0,
+      "small_patterns": 14,
+      "large_patterns": 451
+    },
+    {
+      "category": "Oils",
+      "corpus_patterns": 532,
+      "corpus_weighted": 149835,
+      "curated_meals": 34,
+      "small_patterns": 35,
+      "large_patterns": 497
+    },
+    {
+      "category": "Extracts & essences",
+      "corpus_patterns": 444,
+      "corpus_weighted": 148080,
+      "curated_meals": 3,
+      "small_patterns": 18,
+      "large_patterns": 426
+    },
+    {
+      "category": "Sauces",
+      "corpus_patterns": 499,
+      "corpus_weighted": 130304,
+      "curated_meals": 76,
+      "small_patterns": 90,
+      "large_patterns": 409
+    },
+    {
+      "category": "Milk",
+      "corpus_patterns": 406,
+      "corpus_weighted": 124852,
+      "curated_meals": 19,
+      "small_patterns": 49,
+      "large_patterns": 357
+    },
+    {
+      "category": "Nuts",
+      "corpus_patterns": 286,
+      "corpus_weighted": 82496,
+      "curated_meals": 28,
+      "small_patterns": 32,
+      "large_patterns": 254
+    },
+    {
+      "category": "Fresh herbs",
+      "corpus_patterns": 277,
+      "corpus_weighted": 68954,
+      "curated_meals": 23,
+      "small_patterns": 26,
+      "large_patterns": 251
+    },
+    {
+      "category": "Starchy vegetables",
+      "corpus_patterns": 253,
+      "corpus_weighted": 57225,
+      "curated_meals": 30,
+      "small_patterns": 31,
+      "large_patterns": 222
+    },
+    {
+      "category": "Red meat",
+      "corpus_patterns": 234,
+      "corpus_weighted": 55406,
+      "curated_meals": 93,
+      "small_patterns": 32,
+      "large_patterns": 202
+    },
+    {
+      "category": "Margarine & shortening",
+      "corpus_patterns": 188,
+      "corpus_weighted": 45284,
+      "curated_meals": 0,
+      "small_patterns": 22,
+      "large_patterns": 166
+    },
+    {
+      "category": "Fresh cheese",
+      "corpus_patterns": 195,
+      "corpus_weighted": 44308,
+      "curated_meals": 12,
+      "small_patterns": 47,
+      "large_patterns": 148
+    },
+    {
+      "category": "Berries",
+      "corpus_patterns": 127,
+      "corpus_weighted": 41496,
+      "curated_meals": 9,
+      "small_patterns": 39,
+      "large_patterns": 88
+    },
+    {
+      "category": "Poultry",
+      "corpus_patterns": 178,
+      "corpus_weighted": 35384,
+      "curated_meals": 45,
+      "small_patterns": 35,
+      "large_patterns": 143
+    },
+    {
+      "category": "Bread & rolls",
+      "corpus_patterns": 154,
+      "corpus_weighted": 35164,
+      "curated_meals": 83,
+      "small_patterns": 37,
+      "large_patterns": 117
+    },
+    {
+      "category": "Prepared mixes",
+      "corpus_patterns": 113,
+      "corpus_weighted": 32322,
+      "curated_meals": 0,
+      "small_patterns": 40,
+      "large_patterns": 73
+    },
+    {
+      "category": "Aged cheese",
+      "corpus_patterns": 153,
+      "corpus_weighted": 28781,
+      "curated_meals": 47,
+      "small_patterns": 27,
+      "large_patterns": 126
+    },
+    {
+      "category": "Leafy greens",
+      "corpus_patterns": 121,
+      "corpus_weighted": 26109,
+      "curated_meals": 37,
+      "small_patterns": 14,
+      "large_patterns": 107
+    },
+    {
+      "category": "Whole grains",
+      "corpus_patterns": 119,
+      "corpus_weighted": 25575,
+      "curated_meals": 23,
+      "small_patterns": 17,
+      "large_patterns": 102
+    },
+    {
+      "category": "Alcoholic beverages",
+      "corpus_patterns": 69,
+      "corpus_weighted": 25233,
+      "curated_meals": 4,
+      "small_patterns": 31,
+      "large_patterns": 38
+    },
+    {
+      "category": "Refined grains",
+      "corpus_patterns": 125,
+      "corpus_weighted": 20968,
+      "curated_meals": 79,
+      "small_patterns": 22,
+      "large_patterns": 103
+    },
+    {
+      "category": "Processed meat",
+      "corpus_patterns": 100,
+      "corpus_weighted": 20676,
+      "curated_meals": 32,
+      "small_patterns": 33,
+      "large_patterns": 67
+    },
+    {
+      "category": "Nut butters",
+      "corpus_patterns": 54,
+      "corpus_weighted": 16346,
+      "curated_meals": 5,
+      "small_patterns": 13,
+      "large_patterns": 41
+    },
+    {
+      "category": "Legumes",
+      "corpus_patterns": 69,
+      "corpus_weighted": 14048,
+      "curated_meals": 36,
+      "small_patterns": 16,
+      "large_patterns": 53
+    },
+    {
+      "category": "Fermented dairy",
+      "corpus_patterns": 57,
+      "corpus_weighted": 12372,
+      "curated_meals": 0,
+      "small_patterns": 2,
+      "large_patterns": 55
+    },
+    {
+      "category": "Dried fruits",
+      "corpus_patterns": 67,
+      "corpus_weighted": 11252,
+      "curated_meals": 5,
+      "small_patterns": 5,
+      "large_patterns": 62
+    },
+    {
+      "category": "Coffee & tea",
+      "corpus_patterns": 23,
+      "corpus_weighted": 5328,
+      "curated_meals": 12,
+      "small_patterns": 9,
+      "large_patterns": 14
+    },
+    {
+      "category": "Processed cheese",
+      "corpus_patterns": 26,
+      "corpus_weighted": 4140,
+      "curated_meals": 1,
+      "small_patterns": 10,
+      "large_patterns": 16
+    },
+    {
+      "category": "Juices",
+      "corpus_patterns": 16,
+      "corpus_weighted": 4134,
+      "curated_meals": 0,
+      "small_patterns": 9,
+      "large_patterns": 7
+    },
+    {
+      "category": "Cruciferous vegetables",
+      "corpus_patterns": 19,
+      "corpus_weighted": 3887,
+      "curated_meals": 0,
+      "small_patterns": 3,
+      "large_patterns": 16
+    },
+    {
+      "category": "Shellfish",
+      "corpus_patterns": 19,
+      "corpus_weighted": 3463,
+      "curated_meals": 18,
+      "small_patterns": 6,
+      "large_patterns": 13
+    },
+    {
+      "category": "Yogurt",
+      "corpus_patterns": 14,
+      "corpus_weighted": 2678,
+      "curated_meals": 14,
+      "small_patterns": 9,
+      "large_patterns": 5
+    },
+    {
+      "category": "Soft drinks",
+      "corpus_patterns": 10,
+      "corpus_weighted": 2399,
+      "curated_meals": 0,
+      "small_patterns": 6,
+      "large_patterns": 4
+    },
+    {
+      "category": "Organ meats",
+      "corpus_patterns": 8,
+      "corpus_weighted": 1599,
+      "curated_meals": 1,
+      "small_patterns": 5,
+      "large_patterns": 3
+    },
+    {
+      "category": "Spice blends",
+      "corpus_patterns": 9,
+      "corpus_weighted": 1507,
+      "curated_meals": 5,
+      "small_patterns": 2,
+      "large_patterns": 7
+    },
+    {
+      "category": "Seeds",
+      "corpus_patterns": 10,
+      "corpus_weighted": 1381,
+      "curated_meals": 5,
+      "small_patterns": 0,
+      "large_patterns": 10
+    },
+    {
+      "category": "Pickled vegetables",
+      "corpus_patterns": 5,
+      "corpus_weighted": 892,
+      "curated_meals": 25,
+      "small_patterns": 0,
+      "large_patterns": 5
+    },
+    {
+      "category": "Prepared soups & broths",
+      "corpus_patterns": 3,
+      "corpus_weighted": 705,
+      "curated_meals": 17,
+      "small_patterns": 1,
+      "large_patterns": 2
+    },
+    {
+      "category": "Plant milks",
+      "corpus_patterns": 3,
+      "corpus_weighted": 382,
+      "curated_meals": 0,
+      "small_patterns": 3,
+      "large_patterns": 0
+    },
+    {
+      "category": "Oily fish",
+      "corpus_patterns": 2,
+      "corpus_weighted": 326,
+      "curated_meals": 6,
+      "small_patterns": 0,
+      "large_patterns": 2
+    },
+    {
+      "category": "White fish",
+      "corpus_patterns": 1,
+      "corpus_weighted": 151,
+      "curated_meals": 10,
+      "small_patterns": 0,
+      "large_patterns": 1
+    },
+    {
+      "category": "Baked snacks & pastries",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 25,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Candy & desserts",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 6,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Canned & cured fish",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 7,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Citrus",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 17,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Dressings & dips",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 8,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Dried herbs",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 0,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Freshwater fish",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 1,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Frozen dairy",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 3,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Jams & preserves",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 4,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Meat alternatives",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 0,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Mushrooms",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 7,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Pastes & ferments",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 24,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Peppers & nightshades",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 61,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Soy products",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 9,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Tropical fruits",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 6,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Whole spices",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 28,
+      "small_patterns": 0,
+      "large_patterns": 0
+    }
+  ],
+  "merge_candidates": [
+    {
+      "a": "Organ meats",
+      "b": "Shellfish",
+      "weight": 351,
+      "p_a": 0.0021849187316813215,
+      "p_b": 0.004731940942972118,
+      "p_ab": 0.00047961630695443646,
+      "lift": 46.38946211870435,
+      "support_a": 1599,
+      "support_b": 3463
+    },
+    {
+      "a": "Legumes",
+      "b": "Pickled vegetables",
+      "weight": 546,
+      "p_a": 0.01919558370397699,
+      "p_b": 0.0012188539766477416,
+      "p_ab": 0.0007460698108180123,
+      "lift": 31.887940099032658,
+      "support_a": 14048,
+      "support_b": 892
+    },
+    {
+      "a": "Cruciferous vegetables",
+      "b": "Seeds",
+      "weight": 224,
+      "p_a": 0.0053113065103472775,
+      "p_b": 0.0018870373786440933,
+      "p_ab": 0.00030607992238687685,
+      "lift": 30.53887081970072,
+      "support_a": 3887,
+      "support_b": 1381
+    },
+    {
+      "a": "Leafy greens",
+      "b": "Prepared soups & broths",
+      "weight": 400,
+      "p_a": 0.03567607452499539,
+      "p_b": 0.0009633318985836971,
+      "p_ab": 0.0005465712899765658,
+      "lift": 15.903540231908295,
+      "support_a": 26109,
+      "support_b": 705
+    },
+    {
+      "a": "Alcoholic beverages",
+      "b": "Soft drinks",
+      "weight": 1137,
+      "p_a": 0.03447908339994671,
+      "p_b": 0.003278061311634453,
+      "p_ab": 0.001553628891758388,
+      "lift": 13.745941927116721,
+      "support_a": 25233,
+      "support_b": 2399
+    },
+    {
+      "a": "Cruciferous vegetables",
+      "b": "Processed cheese",
+      "weight": 298,
+      "p_a": 0.0053113065103472775,
+      "p_b": 0.0056570128512574555,
+      "p_ab": 0.00040719561103254147,
+      "lift": 13.55234840773593,
+      "support_a": 3887,
+      "support_b": 4140
+    },
+    {
+      "a": "Processed meat",
+      "b": "Seeds",
+      "weight": 465,
+      "p_a": 0.028252269978888685,
+      "p_b": 0.0018870373786440933,
+      "p_ab": 0.0006353891245977577,
+      "lift": 11.91806985441673,
+      "support_a": 20676,
+      "support_b": 1381
+    },
+    {
+      "a": "Coffee & tea",
+      "b": "Juices",
+      "weight": 352,
+      "p_a": 0.007280329582487856,
+      "p_b": 0.005648814281907807,
+      "p_ab": 0.00048098273517937785,
+      "lift": 11.695563488016317,
+      "support_a": 5328,
+      "support_b": 4134
+    },
+    {
+      "a": "Cruciferous vegetables",
+      "b": "Whole grains",
+      "weight": 1540,
+      "p_a": 0.0053113065103472775,
+      "p_b": 0.034946401852876674,
+      "p_ab": 0.002104299466409778,
+      "lift": 11.337145323120078,
+      "support_a": 3887,
+      "support_b": 25575
+    },
+    {
+      "a": "Fresh herbs",
+      "b": "Oily fish",
+      "weight": 326,
+      "p_a": 0.0942206918226103,
+      "p_b": 0.00044545560133090107,
+      "p_ab": 0.00044545560133090107,
+      "lift": 10.613379934449053,
+      "support_a": 68954,
+      "support_b": 326
+    },
+    {
+      "a": "Fresh herbs",
+      "b": "White fish",
+      "weight": 151,
+      "p_a": 0.0942206918226103,
+      "p_b": 0.00020633066196615356,
+      "p_ab": 0.00020633066196615356,
+      "lift": 10.613379934449053,
+      "support_a": 68954,
+      "support_b": 151
+    },
+    {
+      "a": "Dried fruits",
+      "b": "Seeds",
+      "weight": 224,
+      "p_a": 0.015375050387040795,
+      "p_b": 0.0018870373786440933,
+      "p_ab": 0.00030607992238687685,
+      "lift": 10.549643696780722,
+      "support_a": 11252,
+      "support_b": 1381
+    },
+    {
+      "a": "Cruciferous vegetables",
+      "b": "Processed meat",
+      "weight": 1126,
+      "p_a": 0.0053113065103472775,
+      "p_b": 0.028252269978888685,
+      "p_ab": 0.0015385981812840327,
+      "lift": 10.253461431702114,
+      "support_a": 3887,
+      "support_b": 20676
+    },
+    {
+      "a": "Cruciferous vegetables",
+      "b": "Dried fruits",
+      "weight": 555,
+      "p_a": 0.0053113065103472775,
+      "p_b": 0.015375050387040795,
+      "p_ab": 0.000758367664842485,
+      "lift": 9.286710233305236,
+      "support_a": 3887,
+      "support_b": 11252
+    },
+    {
+      "a": "Leafy greens",
+      "b": "Seeds",
+      "weight": 429,
+      "p_a": 0.03567607452499539,
+      "p_b": 0.0018870373786440933,
+      "p_ab": 0.0005861977084998667,
+      "lift": 8.707361016364054,
+      "support_a": 26109,
+      "support_b": 1381
+    },
+    {
+      "a": "Aged cheese",
+      "b": "Refined grains",
+      "weight": 6831,
+      "p_a": 0.03932717074203885,
+      "p_b": 0.028651267020571577,
+      "p_ab": 0.009334071204574801,
+      "lift": 8.283894774853916,
+      "support_a": 28781,
+      "support_b": 20968
+    }
+  ],
+  "tied_pairs": [
+    {
+      "a": "Bread & rolls",
+      "b": "Seeds",
+      "weight": 490,
+      "p_a": 0.0480490821018399,
+      "p_b": 0.0018870373786440933,
+      "p_ab": 0.000669549830221293,
+      "lift": 7.384435574497682,
+      "support_a": 35164,
+      "support_b": 1381
+    },
+    {
+      "a": "Nut butters",
+      "b": "Whole grains",
+      "weight": 4129,
+      "p_a": 0.02233563576489236,
+      "p_b": 0.034946401852876674,
+      "p_ab": 0.0056419821407831,
+      "lift": 7.2282126650479555,
+      "support_a": 16346,
+      "support_b": 25575
+    },
+    {
+      "a": "Fresh cheese",
+      "b": "Shellfish",
+      "weight": 1411,
+      "p_a": 0.06054370179070419,
+      "p_b": 0.004731940942972118,
+      "p_ab": 0.0019280302253923357,
+      "lift": 6.729852579993493,
+      "support_a": 44308,
+      "support_b": 3463
+    },
+    {
+      "a": "Berries",
+      "b": "Yogurt",
+      "weight": 963,
+      "p_a": 0.056701305622168935,
+      "p_b": 0.0036592947863931078,
+      "p_ab": 0.001315870380618582,
+      "lift": 6.341947685681717,
+      "support_a": 41496,
+      "support_b": 2678
+    },
+    {
+      "a": "Processed cheese",
+      "b": "Processed meat",
+      "weight": 726,
+      "p_a": 0.0056570128512574555,
+      "p_b": 0.028252269978888685,
+      "p_ab": 0.0009920268913074669,
+      "lift": 6.207016957278761,
+      "support_a": 4140,
+      "support_b": 20676
+    },
+    {
+      "a": "Alcoholic beverages",
+      "b": "Juices",
+      "weight": 844,
+      "p_a": 0.03447908339994671,
+      "p_b": 0.005648814281907807,
+      "p_ab": 0.0011532654218505537,
+      "lift": 5.92128905768053,
+      "support_a": 25233,
+      "support_b": 4134
+    },
+    {
+      "a": "Aged cheese",
+      "b": "Processed meat",
+      "weight": 4758,
+      "p_a": 0.03932717074203885,
+      "p_b": 0.028252269978888685,
+      "p_ab": 0.0065014654942712495,
+      "lift": 5.85147306808679,
+      "support_a": 28781,
+      "support_b": 20676
+    },
+    {
+      "a": "Leafy greens",
+      "b": "Processed meat",
+      "weight": 4297,
+      "p_a": 0.03567607452499539,
+      "p_b": 0.028252269978888685,
+      "p_ab": 0.005871542082573258,
+      "lift": 5.825346564306381,
+      "support_a": 26109,
+      "support_b": 20676
+    },
+    {
+      "a": "Pickled vegetables",
+      "b": "Sauces",
+      "weight": 892,
+      "p_a": 0.0012188539766477416,
+      "p_b": 0.17805106342276605,
+      "p_ab": 0.0012188539766477416,
+      "lift": 5.6163663433202355,
+      "support_a": 892,
+      "support_b": 130304
+    },
+    {
+      "a": "Pickled vegetables",
+      "b": "Starchy vegetables",
+      "weight": 381,
+      "p_a": 0.0012188539766477416,
+      "p_b": 0.07819385517227244,
+      "p_ab": 0.0005206091537026788,
+      "lift": 5.462450264180219,
+      "support_a": 892,
+      "support_b": 57225
+    },
+    {
+      "a": "Fresh cheese",
+      "b": "Oily fish",
+      "weight": 103,
+      "p_a": 0.06054370179070419,
+      "p_b": 0.00044545560133090107,
+      "p_ab": 0.0001407421071689657,
+      "lift": 5.218559666827468,
+      "support_a": 44308,
+      "support_b": 326
+    }
+  ],
+  "split_candidates": [],
+  "low_coverage": [
+    {
+      "category": "Plant milks",
+      "corpus_patterns": 3,
+      "corpus_weighted": 382,
+      "curated_meals": 0,
+      "small_patterns": 3,
+      "large_patterns": 0
+    },
+    {
+      "category": "Dried herbs",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 0,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Freshwater fish",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 1,
+      "small_patterns": 0,
+      "large_patterns": 0
+    },
+    {
+      "category": "Meat alternatives",
+      "corpus_patterns": 0,
+      "corpus_weighted": 0,
+      "curated_meals": 0,
+      "small_patterns": 0,
+      "large_patterns": 0
+    }
+  ],
+  "in_curated_not_corpus": [
+    "Baked snacks & pastries",
+    "Candy & desserts",
+    "Canned & cured fish",
+    "Citrus",
+    "Dressings & dips",
+    "Freshwater fish",
+    "Frozen dairy",
+    "Jams & preserves",
+    "Mushrooms",
+    "Pastes & ferments",
+    "Peppers & nightshades",
+    "Soy products",
+    "Tropical fruits",
+    "Whole spices"
+  ],
+  "in_corpus_not_curated": [
+    "Baking ingredients",
+    "Cruciferous vegetables",
+    "Fermented dairy",
+    "Flours",
+    "Juices",
+    "Margarine & shortening",
+    "Plant milks",
+    "Prepared mixes",
+    "Soft drinks"
+  ],
+  "rename_review": [
+    {
+      "a": "Aged cheese",
+      "b": "Fresh cheese",
+      "shared": [
+        "cheese"
+      ]
+    },
+    {
+      "a": "Aged cheese",
+      "b": "Processed cheese",
+      "shared": [
+        "cheese"
+      ]
+    },
+    {
+      "a": "Canned & cured fish",
+      "b": "Freshwater fish",
+      "shared": [
+        "fish"
+      ]
+    },
+    {
+      "a": "Canned & cured fish",
+      "b": "Oily fish",
+      "shared": [
+        "fish"
+      ]
+    },
+    {
+      "a": "Canned & cured fish",
+      "b": "White fish",
+      "shared": [
+        "fish"
+      ]
+    },
+    {
+      "a": "Cruciferous vegetables",
+      "b": "Pickled vegetables",
+      "shared": [
+        "vegetables"
+      ]
+    },
+    {
+      "a": "Cruciferous vegetables",
+      "b": "Starchy vegetables",
+      "shared": [
+        "vegetables"
+      ]
+    },
+    {
+      "a": "Dried fruits",
+      "b": "Temperate fruits",
+      "shared": [
+        "fruits"
+      ]
+    },
+    {
+      "a": "Dried fruits",
+      "b": "Tropical fruits",
+      "shared": [
+        "fruits"
+      ]
+    },
+    {
+      "a": "Dried herbs",
+      "b": "Fresh herbs",
+      "shared": [
+        "herbs"
+      ]
+    },
+    {
+      "a": "Fermented dairy",
+      "b": "Frozen dairy",
+      "shared": [
+        "dairy"
+      ]
+    },
+    {
+      "a": "Fresh cheese",
+      "b": "Processed cheese",
+      "shared": [
+        "cheese"
+      ]
+    },
+    {
+      "a": "Freshwater fish",
+      "b": "Oily fish",
+      "shared": [
+        "fish"
+      ]
+    },
+    {
+      "a": "Freshwater fish",
+      "b": "White fish",
+      "shared": [
+        "fish"
+      ]
+    },
+    {
+      "a": "Ground spices",
+      "b": "Whole spices",
+      "shared": [
+        "spices"
+      ]
+    },
+    {
+      "a": "Meat alternatives",
+      "b": "Processed meat",
+      "shared": [
+        "meat"
+      ]
+    },
+    {
+      "a": "Meat alternatives",
+      "b": "Red meat",
+      "shared": [
+        "meat"
+      ]
+    },
+    {
+      "a": "Oily fish",
+      "b": "White fish",
+      "shared": [
+        "fish"
+      ]
+    },
+    {
+      "a": "Pickled vegetables",
+      "b": "Starchy vegetables",
+      "shared": [
+        "vegetables"
+      ]
+    },
+    {
+      "a": "Prepared mixes",
+      "b": "Prepared soups & broths",
+      "shared": [
+        "prepared"
+      ]
+    },
+    {
+      "a": "Processed cheese",
+      "b": "Processed meat",
+      "shared": [
+        "processed"
+      ]
+    },
+    {
+      "a": "Processed meat",
+      "b": "Red meat",
+      "shared": [
+        "meat"
+      ]
+    },
+    {
+      "a": "Refined grains",
+      "b": "Whole grains",
+      "shared": [
+        "grains"
+      ]
+    },
+    {
+      "a": "Temperate fruits",
+      "b": "Tropical fruits",
+      "shared": [
+        "fruits"
+      ]
+    },
+    {
+      "a": "Whole grains",
+      "b": "Whole spices",
+      "shared": [
+        "whole"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Map — data inspection</title>
+  <link rel="stylesheet" href="src/styles/tokens.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: var(--font-family);
+      font-size: var(--font-size-sm);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.5;
+    }
+    h1 { font-size: var(--font-size-xl); margin: 0 0 8px; }
+    h2 { font-size: var(--font-size-lg); margin: 24px 0 8px; }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .card {
+      padding: 12px 16px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+    }
+    .card .label { color: var(--color-text-muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .card .value { font-size: 22px; font-weight: 500; }
+    .ok    { color: var(--color-score-good); }
+    .fail  { color: var(--color-score-bad); }
+    .muted { color: var(--color-text-muted); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+      background: var(--color-surface-2);
+      padding: 8px 10px;
+      text-align: left;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--color-border);
+      font-weight: 500;
+    }
+    thead th:hover { background: var(--color-border); }
+    thead th .arrow { display: inline-block; width: 10px; color: var(--color-text-muted); }
+    tbody td { padding: 6px 10px; border-bottom: 1px solid var(--color-border); white-space: nowrap; }
+    tbody tr:hover { background: var(--color-surface-2); }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 6px;
+      border: 1px solid var(--color-border);
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-size: 11px;
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+    }
+    .corner-list { list-style: none; padding: 0; margin: 0; }
+    .corner-list li {
+      padding: 4px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px dashed var(--color-border);
+    }
+    .corner-list li:last-child { border-bottom: 0; }
+    .corner-list .name { font-weight: 500; }
+    .corner-list .dist { font-variant-numeric: tabular-nums; color: var(--color-text-muted); }
+    .errors {
+      background: rgba(232, 93, 74, 0.08);
+      border: 1px solid var(--color-score-bad);
+      color: var(--color-text);
+      padding: 12px 16px;
+      border-radius: 8px;
+      max-height: 280px;
+      overflow: auto;
+    }
+    .errors pre { margin: 0; font-family: var(--font-mono); font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Food Map — data inspection</h1>
+  <p class="muted">
+    Loads <code>src/data/ingredients.json</code>, validates it against the schema,
+    runs normalization, and renders every entry plus a few summary diagnostics.
+    Click any column header to sort.
+  </p>
+
+  <div id="root">Loading…</div>
+
+  <script type="module">
+    import { validateDataset, NUTRIENT_FIELDS } from './src/data/schema.js';
+    import { normalizeDataset } from './src/core/normalize.js';
+
+    const root = document.getElementById('root');
+
+    function el(tag, attrs = {}, children = []) {
+      const e = document.createElement(tag);
+      for (const [k, v] of Object.entries(attrs)) {
+        if (k === 'class') e.className = v;
+        else if (k === 'html') e.innerHTML = v;
+        else if (k.startsWith('on')) e.addEventListener(k.slice(2), v);
+        else e.setAttribute(k, v);
+      }
+      for (const c of [].concat(children)) {
+        if (c == null) continue;
+        e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+      }
+      return e;
+    }
+
+    function swatch(gw) {
+      // gw = [animal, plant, dairy] → blend the three theme accent colors.
+      const cs = getComputedStyle(document.documentElement);
+      const parse = (v) => v.trim();
+      // For the inspection page we use simple RGB channels so the dot reads
+      // the same way the 3D scene will read in Phase 4.
+      const r = Math.round(gw[0] * 230);
+      const g = Math.round(gw[1] * 190);
+      const b = Math.round(gw[2] * 230);
+      return el('span', { class: 'swatch', style: `background: rgb(${r}, ${g}, ${b})` });
+    }
+
+    function fmt(n, d = 1) {
+      if (typeof n !== 'number' || !Number.isFinite(n)) return '';
+      if (Number.isInteger(n)) return String(n);
+      return n.toFixed(d);
+    }
+
+    function render(ingredients, validation, normalized) {
+      root.innerHTML = '';
+
+      // Summary cards
+      const ranges = normalized.ranges;
+      const summary = el('div', { class: 'summary' }, [
+        el('div', { class: 'card' }, [
+          el('div', { class: 'label' }, 'Entries'),
+          el('div', { class: 'value' }, String(ingredients.length)),
+        ]),
+        el('div', { class: 'card' }, [
+          el('div', { class: 'label' }, 'Validation'),
+          el('div', { class: `value ${validation.ok ? 'ok' : 'fail'}` },
+            validation.ok ? 'pass' : `${validation.errors.length} error(s)`),
+        ]),
+        el('div', { class: 'card' }, [
+          el('div', { class: 'label' }, 'Calorie range (kcal/100g)'),
+          el('div', { class: 'value' }, `${fmt(ranges.calories.min)} – ${fmt(ranges.calories.max)}`),
+        ]),
+        el('div', { class: 'card' }, [
+          el('div', { class: 'label' }, 'Carbs range (g/100g)'),
+          el('div', { class: 'value' }, `${fmt(ranges.carbs.min)} – ${fmt(ranges.carbs.max)}`),
+        ]),
+        el('div', { class: 'card' }, [
+          el('div', { class: 'label' }, 'Protein range (g/100g)'),
+          el('div', { class: 'value' }, `${fmt(ranges.protein.min)} – ${fmt(ranges.protein.max)}`),
+        ]),
+      ]);
+      root.appendChild(summary);
+
+      // Validation errors (if any)
+      if (!validation.ok) {
+        const lines = validation.errors.map(e =>
+          `[${e.index}] ${e.id ?? '<no-id>'}  ${e.field}: ${e.message}`).join('\n');
+        root.appendChild(el('h2', {}, 'Validation errors'));
+        root.appendChild(el('div', { class: 'errors' }, [el('pre', {}, lines)]));
+      }
+
+      // Best corner is fixed at (1,1,1); Worst at origin. Foods near Best are
+      // the ones whose nutrient values best match the configured directions.
+      const positions = new Map(normalized.positions.map(p => [p.id, p]));
+      const withDist = ingredients.map(f => {
+        const p = positions.get(f.id);
+        const dx = 1 - p.x, dy = 1 - p.y, dz = 1 - p.z;
+        const d = Math.sqrt(dx * dx + dy * dy + dz * dz);
+        return { ingredient: f, p, d };
+      });
+      const bestTen  = [...withDist].sort((a, b) => a.d - b.d).slice(0, 10);
+      const worstTen = [...withDist].sort((a, b) => b.d - a.d).slice(0, 10);
+
+      const cornersGrid = el('div', { class: 'summary' }, [
+        el('div', { class: 'card' }, [
+          el('div', { class: 'label' }, 'Closest to BEST corner (1,1,1)'),
+          el('ul', { class: 'corner-list' },
+            bestTen.map(({ ingredient, d }) =>
+              el('li', {}, [
+                el('span', { class: 'name' }, [swatch(ingredient.group_weights), ingredient.name]),
+                el('span', { class: 'dist' }, `d=${d.toFixed(3)}`),
+              ]))),
+        ]),
+        el('div', { class: 'card' }, [
+          el('div', { class: 'label' }, 'Farthest from BEST (worst corner, origin)'),
+          el('ul', { class: 'corner-list' },
+            worstTen.map(({ ingredient, d }) =>
+              el('li', {}, [
+                el('span', { class: 'name' }, [swatch(ingredient.group_weights), ingredient.name]),
+                el('span', { class: 'dist' }, `d=${d.toFixed(3)}`),
+              ]))),
+        ]),
+      ]);
+      root.appendChild(el('h2', {}, 'Corner picks'));
+      root.appendChild(cornersGrid);
+
+      // Table
+      root.appendChild(el('h2', {}, 'All ingredients'));
+
+      const columns = [
+        { key: 'group', label: 'Group', type: 'group' },
+        { key: 'name', label: 'Name' },
+        { key: 'category', label: 'Category' },
+        { key: 'subcategory', label: 'Subcategory' },
+        ...NUTRIENT_FIELDS.map(k => ({ key: k, label: k, num: true })),
+        { key: 'x', label: 'cal axis', num: true, computed: true, fmt: 3 },
+        { key: 'y', label: 'carbs axis', num: true, computed: true, fmt: 3 },
+        { key: 'z', label: 'protein axis', num: true, computed: true, fmt: 3 },
+      ];
+
+      // Augment ingredients with computed axis positions
+      const rows = ingredients.map(f => {
+        const p = positions.get(f.id);
+        const groupLabel = f.group_weights[0] >= 0.5 ? 'Animal'
+                         : f.group_weights[1] >= 0.5 ? 'Plant'
+                         : f.group_weights[2] >= 0.5 ? 'Dairy'
+                         : 'Blend';
+        return { ...f, x: p.x, y: p.y, z: p.z, group: groupLabel };
+      });
+
+      let sortKey = 'name';
+      let sortDir = 1;
+
+      const renderTable = () => {
+        rows.sort((a, b) => {
+          const av = a[sortKey];
+          const bv = b[sortKey];
+          if (typeof av === 'number' && typeof bv === 'number') return sortDir * (av - bv);
+          return sortDir * String(av).localeCompare(String(bv));
+        });
+
+        const thead = el('thead', {}, [
+          el('tr', {}, columns.map(c =>
+            el('th', { class: c.num ? 'num' : '', onclick: () => {
+              if (sortKey === c.key) sortDir = -sortDir; else { sortKey = c.key; sortDir = 1; }
+              tbl.replaceChildren(renderTable());
+            }}, [
+              c.label,
+              ' ',
+              el('span', { class: 'arrow' },
+                sortKey === c.key ? (sortDir > 0 ? '▲' : '▼') : ''),
+            ]))),
+        ]);
+
+        const tbody = el('tbody', {}, rows.map(r =>
+          el('tr', {}, columns.map(c => {
+            if (c.type === 'group') {
+              return el('td', {}, [
+                swatch(r.group_weights),
+                el('span', { class: 'pill' }, r.group),
+              ]);
+            }
+            const v = r[c.key];
+            if (c.num) {
+              const d = c.fmt ?? (Number.isInteger(v) ? 0 : 1);
+              return el('td', { class: 'num' }, fmt(v, d));
+            }
+            return el('td', {}, String(v ?? ''));
+          }))));
+
+        const fragment = document.createDocumentFragment();
+        fragment.appendChild(thead);
+        fragment.appendChild(tbody);
+        return fragment;
+      };
+
+      const tbl = el('table', {});
+      tbl.appendChild(renderTable());
+      root.appendChild(tbl);
+    }
+
+    try {
+      const res = await fetch('src/data/ingredients.json');
+      if (!res.ok) throw new Error(`fetch failed: ${res.status}`);
+      const ingredients = await res.json();
+
+      const validation = validateDataset(ingredients);
+      const normalized = normalizeDataset(ingredients);
+
+      render(ingredients, validation, normalized);
+
+      // Also dump to console for ad-hoc poking
+      window.__foods = ingredients;
+      window.__validation = validation;
+      window.__normalized = normalized;
+      console.log(`[ingredient-map] loaded ${ingredients.length} ingredients. validation.ok=${validation.ok}.`,
+        'window.__foods / __validation / __normalized are available.');
+    } catch (err) {
+      root.innerHTML = '';
+      root.appendChild(el('div', { class: 'errors' }, [
+        el('h2', {}, 'Failed to load'),
+        el('pre', {}, String(err && err.stack || err)),
+      ]));
+      console.error(err);
+    }
+  </script>
+</body>
+</html>

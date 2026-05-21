@@ -1,0 +1,2867 @@
+[
+  {
+    "name": "Sliced apples",
+    "kind": "hand-strip",
+    "n_matches": 2,
+    "before": [
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Fresh fruit plate",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Poached pears",
+    "kind": "corpus-rebuild",
+    "n_matches": 30,
+    "before": [
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Citrus",
+      "Temperate fruits",
+      "Whole spices",
+      "Alcoholic beverages",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Mixed fruit salad",
+    "kind": "corpus-rebuild",
+    "n_matches": 23,
+    "before": [
+      "Berries",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Tropical fruits",
+      "Citrus",
+      "Temperate fruits",
+      "Candy & desserts",
+      "Berries"
+    ]
+  },
+  {
+    "name": "Compound butter",
+    "kind": "hand-strip",
+    "n_matches": 7,
+    "before": [
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Brown butter sauce",
+    "kind": "hand-strip",
+    "n_matches": 6,
+    "before": [
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Pound cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 1580,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Flours",
+      "Extracts & essences",
+      "Cream & butter",
+      "Margarine & shortening",
+      "Milk",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Citrus"
+    ]
+  },
+  {
+    "name": "Shortbread cookies",
+    "kind": "corpus-rebuild",
+    "n_matches": 116,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Extracts & essences"
+    ]
+  },
+  {
+    "name": "Pastry dough",
+    "kind": "corpus-rebuild",
+    "n_matches": 25,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Salt & seasonings",
+      "Cream & butter",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Pie crust",
+    "kind": "corpus-rebuild",
+    "n_matches": 1055,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Salt & seasonings",
+      "Margarine & shortening",
+      "Eggs",
+      "Dressings & dips"
+    ]
+  },
+  {
+    "name": "Roasted vegetables",
+    "kind": "corpus-rebuild",
+    "n_matches": 86,
+    "before": [
+      "Ground spices",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Other vegetables",
+      "Oils",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Sautéed vegetables",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Ground spices",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Ground spices",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces"
+    ]
+  },
+  {
+    "name": "Steamed vegetable medley",
+    "kind": "hand-strip",
+    "n_matches": 4,
+    "before": [
+      "Ground spices",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Ground spices",
+      "Other vegetables",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Sangria",
+    "kind": "corpus-rebuild",
+    "n_matches": 208,
+    "before": [
+      "Alcoholic beverages",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Citrus",
+      "Alcoholic beverages",
+      "Sugar & sweeteners",
+      "Soft drinks",
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Fruit cocktail",
+    "kind": "hand-strip",
+    "n_matches": 14,
+    "before": [
+      "Alcoholic beverages",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Cream sauce",
+    "kind": "hand-strip",
+    "n_matches": 18,
+    "before": [
+      "Cream & butter",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Cream & butter",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Glass of milk",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Milk"
+    ]
+  },
+  {
+    "name": "Warm milk",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Milk"
+    ]
+  },
+  {
+    "name": "Trail mix with apples",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Nuts",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Nuts",
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Potato pancakes",
+    "kind": "corpus-rebuild",
+    "n_matches": 461,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Flours",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Eggs",
+      "Salt & seasonings",
+      "Flours",
+      "Other vegetables",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Mixed berries",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Berries",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Berries"
+    ]
+  },
+  {
+    "name": "Strawberry bowl",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Berries",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Berries"
+    ]
+  },
+  {
+    "name": "Peanut butter cookies (buttery)",
+    "kind": "corpus-rebuild",
+    "n_matches": 1984,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Nut butters",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Eggs",
+      "Nut butters",
+      "Flours",
+      "Baking ingredients",
+      "Extracts & essences",
+      "Salt & seasonings",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Nut cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 87,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Nuts",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Eggs",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Extracts & essences",
+      "Baking ingredients",
+      "Nuts",
+      "Milk",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Fruit smoothie",
+    "kind": "corpus-rebuild",
+    "n_matches": 75,
+    "before": [
+      "Milk",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Tropical fruits",
+      "Berries",
+      "Milk",
+      "Citrus",
+      "Sugar & sweeteners",
+      "Yogurt",
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Yorkshire pudding",
+    "kind": "corpus-rebuild",
+    "n_matches": 145,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Flours",
+      "Milk",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Flours",
+      "Milk",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Apple pancakes (with milk)",
+    "kind": "corpus-rebuild",
+    "n_matches": 73,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Flours",
+      "Milk",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Temperate fruits",
+      "Eggs",
+      "Milk",
+      "Sugar & sweeteners",
+      "Flours",
+      "Salt & seasonings",
+      "Ground spices",
+      "Baking ingredients",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Beef stir-fry",
+    "kind": "corpus-rebuild",
+    "n_matches": 40,
+    "before": [
+      "Other vegetables",
+      "Red meat"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Sauces",
+      "Peppers & nightshades",
+      "Refined grains",
+      "Oils",
+      "Cruciferous vegetables"
+    ]
+  },
+  {
+    "name": "Buttered bread",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Bread & rolls",
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Bread & rolls",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Garlic bread",
+    "kind": "corpus-rebuild",
+    "n_matches": 188,
+    "before": [
+      "Bread & rolls",
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Other vegetables",
+      "Bread & rolls",
+      "Cream & butter",
+      "Fresh herbs",
+      "Aged cheese"
+    ]
+  },
+  {
+    "name": "Pancakes (buttery, with milk)",
+    "kind": "corpus-rebuild",
+    "n_matches": 603,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Milk",
+      "Flours",
+      "Sugar & sweeteners",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Waffles (buttery)",
+    "kind": "corpus-rebuild",
+    "n_matches": 317,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Flours",
+      "Milk",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 278,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Flours",
+      "Baking ingredients",
+      "Tropical fruits"
+    ]
+  },
+  {
+    "name": "Muffins",
+    "kind": "corpus-rebuild",
+    "n_matches": 181,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Flours",
+      "Sugar & sweeteners",
+      "Milk",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Zucchini pancakes",
+    "kind": "corpus-rebuild",
+    "n_matches": 116,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Ground spices",
+      "Oils",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Other vegetables",
+      "Eggs",
+      "Salt & seasonings",
+      "Flours",
+      "Aged cheese",
+      "Peppers & nightshades",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Cheesecake",
+    "kind": "corpus-rebuild",
+    "n_matches": 667,
+    "before": [
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Fresh cheese",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Fresh cheese",
+      "Sugar & sweeteners",
+      "Extracts & essences",
+      "Eggs",
+      "Baked snacks & pastries",
+      "Cream & butter",
+      "Fermented dairy"
+    ]
+  },
+  {
+    "name": "Pancakes",
+    "kind": "corpus-rebuild",
+    "n_matches": 603,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Flours",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Milk",
+      "Flours",
+      "Sugar & sweeteners",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Pasta dough",
+    "kind": "corpus-rebuild",
+    "n_matches": 27,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Flours",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Flours",
+      "Salt & seasonings",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Egg noodles",
+    "kind": "corpus-rebuild",
+    "n_matches": 117,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Flours",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Flours",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Mixed nuts",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Nuts",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Nuts"
+    ]
+  },
+  {
+    "name": "Roasted nuts",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Nuts",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Nuts"
+    ]
+  },
+  {
+    "name": "Apple pancakes",
+    "kind": "corpus-rebuild",
+    "n_matches": 73,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Temperate fruits",
+      "Eggs",
+      "Milk",
+      "Sugar & sweeteners",
+      "Flours",
+      "Salt & seasonings",
+      "Ground spices",
+      "Baking ingredients",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Apple dumplings",
+    "kind": "corpus-rebuild",
+    "n_matches": 472,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Temperate fruits",
+      "Ground spices",
+      "Margarine & shortening",
+      "Cream & butter",
+      "Flours",
+      "Baked snacks & pastries"
+    ]
+  },
+  {
+    "name": "Carbonara (with cheddar, with greens, with bacon)",
+    "kind": "corpus-rebuild",
+    "n_matches": 47,
+    "before": [
+      "Aged cheese",
+      "Eggs",
+      "Leafy greens",
+      "Milk",
+      "Processed meat",
+      "Refined grains",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Processed meat",
+      "Eggs",
+      "Aged cheese",
+      "Other vegetables",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Fruit punch",
+    "kind": "corpus-rebuild",
+    "n_matches": 378,
+    "before": [
+      "Soft drinks",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Citrus",
+      "Tropical fruits",
+      "Pickled vegetables",
+      "Sugar & sweeteners",
+      "Juices"
+    ]
+  },
+  {
+    "name": "Tossed salad",
+    "kind": "corpus-rebuild",
+    "n_matches": 25,
+    "before": [
+      "Ground spices",
+      "Leafy greens",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Other vegetables",
+      "Leafy greens",
+      "Peppers & nightshades",
+      "Dressings & dips",
+      "Cruciferous vegetables"
+    ]
+  },
+  {
+    "name": "Garden salad",
+    "kind": "corpus-rebuild",
+    "n_matches": 54,
+    "before": [
+      "Ground spices",
+      "Leafy greens",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Dressings & dips",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Sugar & sweeteners",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Sautéed greens with veg",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Ground spices",
+      "Leafy greens",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Ground spices",
+      "Leafy greens",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces"
+    ]
+  },
+  {
+    "name": "Hollandaise sauce",
+    "kind": "corpus-rebuild",
+    "n_matches": 139,
+    "before": [
+      "Cream & butter",
+      "Eggs",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Citrus",
+      "Eggs",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Béchamel",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Baking ingredients",
+      "Flours",
+      "Milk",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Baking ingredients",
+      "Flours",
+      "Milk",
+      "Oils",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Pie dough",
+    "kind": "corpus-rebuild",
+    "n_matches": 51,
+    "before": [
+      "Cream & butter",
+      "Flours",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Salt & seasonings",
+      "Margarine & shortening",
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ]
+  },
+  {
+    "name": "Shortcrust pastry",
+    "kind": "hand-strip",
+    "n_matches": 8,
+    "before": [
+      "Cream & butter",
+      "Flours",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Cream & butter",
+      "Flours"
+    ]
+  },
+  {
+    "name": "Roux",
+    "kind": "corpus-rebuild",
+    "n_matches": 31,
+    "before": [
+      "Cream & butter",
+      "Flours",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Almond butter",
+    "kind": "corpus-rebuild",
+    "n_matches": 23,
+    "before": [
+      "Nut butters",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Nuts",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Yogurt pancakes",
+    "kind": "corpus-rebuild",
+    "n_matches": 20,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Fermented dairy",
+      "Flours",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Eggs",
+      "Baking ingredients",
+      "Yogurt",
+      "Sugar & sweeteners",
+      "Salt & seasonings",
+      "Milk",
+      "Oils",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Peanut butter cookies",
+    "kind": "corpus-rebuild",
+    "n_matches": 1984,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Nut butters",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Eggs",
+      "Nut butters",
+      "Flours",
+      "Baking ingredients",
+      "Extracts & essences",
+      "Salt & seasonings",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Apple cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 1350,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Temperate fruits",
+      "Eggs",
+      "Flours",
+      "Baking ingredients",
+      "Ground spices",
+      "Salt & seasonings",
+      "Oils",
+      "Extracts & essences"
+    ]
+  },
+  {
+    "name": "Fruit cobbler",
+    "kind": "corpus-rebuild",
+    "n_matches": 629,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Flours",
+      "Milk",
+      "Baking ingredients",
+      "Cream & butter",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Fruit crumble",
+    "kind": "corpus-rebuild",
+    "n_matches": 26,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Flours",
+      "Ground spices",
+      "Temperate fruits",
+      "Cream & butter",
+      "Whole grains"
+    ]
+  },
+  {
+    "name": "Peanut butter eggs",
+    "kind": "corpus-rebuild",
+    "n_matches": 53,
+    "before": [
+      "Eggs",
+      "Nut butters",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Nut butters",
+      "Candy & desserts",
+      "Extracts & essences",
+      "Margarine & shortening",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Sweet potato muffins",
+    "kind": "corpus-rebuild",
+    "n_matches": 70,
+    "before": [
+      "Cream & butter",
+      "Eggs",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Flours",
+      "Ground spices",
+      "Baking ingredients",
+      "Starchy vegetables",
+      "Salt & seasonings",
+      "Milk",
+      "Dried fruits",
+      "Cream & butter",
+      "Nuts"
+    ]
+  },
+  {
+    "name": "Almond cookies",
+    "kind": "corpus-rebuild",
+    "n_matches": 101,
+    "before": [
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Margarine & shortening",
+      "Nuts",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Nuts",
+      "Flours",
+      "Eggs",
+      "Baking ingredients",
+      "Extracts & essences",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Almond milk",
+    "kind": "corpus-rebuild",
+    "n_matches": 43,
+    "before": [
+      "Milk",
+      "Nuts",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Nuts",
+      "Sugar & sweeteners"
+    ]
+  },
+  {
+    "name": "Coffee cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 548,
+    "before": [
+      "Baking ingredients",
+      "Coffee & tea",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Eggs",
+      "Flours",
+      "Baking ingredients",
+      "Ground spices",
+      "Milk",
+      "Salt & seasonings",
+      "Cream & butter",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Beef stew",
+    "kind": "corpus-rebuild",
+    "n_matches": 1010,
+    "before": [
+      "Other vegetables",
+      "Red meat",
+      "Salt & seasonings",
+      "Starchy vegetables"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Starchy vegetables",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Flours"
+    ]
+  },
+  {
+    "name": "Irish coffee",
+    "kind": "corpus-rebuild",
+    "n_matches": 66,
+    "before": [
+      "Alcoholic beverages",
+      "Coffee & tea",
+      "Extracts & essences",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Alcoholic beverages"
+    ]
+  },
+  {
+    "name": "Cooked lentils",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Legumes",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Legumes"
+    ]
+  },
+  {
+    "name": "Black beans",
+    "kind": "corpus-rebuild",
+    "n_matches": 97,
+    "before": [
+      "Legumes",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Other vegetables",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Ground spices",
+      "Oils",
+      "Dried herbs"
+    ]
+  },
+  {
+    "name": "Chickpeas",
+    "kind": "hand-strip",
+    "n_matches": 5,
+    "before": [
+      "Legumes",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Legumes"
+    ]
+  },
+  {
+    "name": "Coffee",
+    "kind": "hand-strip",
+    "n_matches": 14,
+    "before": [
+      "Coffee & tea",
+      "Ground spices",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Hot tea",
+    "kind": "hand-strip",
+    "n_matches": 7,
+    "before": [
+      "Coffee & tea",
+      "Ground spices",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Sliced bread",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Bread & rolls",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Bread & rolls"
+    ]
+  },
+  {
+    "name": "Dinner rolls",
+    "kind": "corpus-rebuild",
+    "n_matches": 287,
+    "before": [
+      "Bread & rolls",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Sugar & sweeteners",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Eggs",
+      "Milk",
+      "Margarine & shortening",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Toast",
+    "kind": "hand-strip",
+    "n_matches": 16,
+    "before": [
+      "Bread & rolls",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Bread & rolls"
+    ]
+  },
+  {
+    "name": "Omelet (with milk)",
+    "kind": "corpus-rebuild",
+    "n_matches": 43,
+    "before": [
+      "Eggs",
+      "Extracts & essences",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Apple cake (with milk)",
+    "kind": "corpus-rebuild",
+    "n_matches": 1350,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Temperate fruits",
+      "Eggs",
+      "Flours",
+      "Baking ingredients",
+      "Ground spices",
+      "Salt & seasonings",
+      "Oils",
+      "Extracts & essences"
+    ]
+  },
+  {
+    "name": "Fruit cobbler (with milk)",
+    "kind": "corpus-rebuild",
+    "n_matches": 629,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Flours",
+      "Milk",
+      "Baking ingredients",
+      "Cream & butter",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Fruit muffins",
+    "kind": "corpus-rebuild",
+    "n_matches": 20,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Flours",
+      "Baking ingredients",
+      "Eggs",
+      "Sugar & sweeteners",
+      "Milk",
+      "Oils",
+      "Salt & seasonings",
+      "Berries",
+      "Dried fruits",
+      "Ground spices",
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Peanut butter cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 161,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Nut butters",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Eggs",
+      "Flours",
+      "Milk",
+      "Nut butters",
+      "Extracts & essences",
+      "Baking ingredients",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Roast chicken",
+    "kind": "corpus-rebuild",
+    "n_matches": 138,
+    "before": [
+      "Poultry"
+    ],
+    "after": [
+      "Poultry",
+      "Salt & seasonings",
+      "Other vegetables",
+      "Fresh herbs",
+      "Peppers & nightshades",
+      "Oils",
+      "Cream & butter",
+      "Citrus"
+    ]
+  },
+  {
+    "name": "Roast turkey",
+    "kind": "corpus-rebuild",
+    "n_matches": 66,
+    "before": [
+      "Poultry"
+    ],
+    "after": [
+      "Poultry",
+      "Salt & seasonings",
+      "Other vegetables",
+      "Cream & butter",
+      "Fresh herbs",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Buttered brown rice",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Whole grains"
+    ],
+    "after": [
+      "Cream & butter",
+      "Whole grains"
+    ]
+  },
+  {
+    "name": "Butter-finished oatmeal",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Whole grains"
+    ],
+    "after": [
+      "Cream & butter",
+      "Whole grains"
+    ]
+  },
+  {
+    "name": "Lentil salad",
+    "kind": "corpus-rebuild",
+    "n_matches": 48,
+    "before": [
+      "Ground spices",
+      "Legumes",
+      "Oils",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Other vegetables",
+      "Oils",
+      "Fresh herbs",
+      "Salt & seasonings",
+      "Legumes",
+      "Peppers & nightshades",
+      "Dressings & dips",
+      "Citrus",
+      "Starchy vegetables"
+    ]
+  },
+  {
+    "name": "Chicken parmesan",
+    "kind": "corpus-rebuild",
+    "n_matches": 521,
+    "before": [
+      "Aged cheese",
+      "Other vegetables",
+      "Poultry"
+    ],
+    "after": [
+      "Poultry",
+      "Aged cheese",
+      "Bread & rolls",
+      "Fresh cheese",
+      "Eggs",
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Coffee with cream",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Coffee & tea",
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Creamy latte",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Coffee & tea",
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Vegetable fried rice",
+    "kind": "corpus-rebuild",
+    "n_matches": 56,
+    "before": [
+      "Fresh herbs",
+      "Ground spices",
+      "Oils",
+      "Other vegetables",
+      "Refined grains",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Other vegetables",
+      "Sauces",
+      "Oils",
+      "Refined grains",
+      "Eggs",
+      "Peppers & nightshades",
+      "Starchy vegetables",
+      "Salt & seasonings",
+      "Legumes"
+    ]
+  },
+  {
+    "name": "Pasta primavera",
+    "kind": "corpus-rebuild",
+    "n_matches": 235,
+    "before": [
+      "Fresh herbs",
+      "Ground spices",
+      "Oils",
+      "Other vegetables",
+      "Refined grains",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Other vegetables",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Aged cheese",
+      "Fresh herbs",
+      "Cruciferous vegetables",
+      "Starchy vegetables",
+      "Oils",
+      "Salt & seasonings",
+      "Cream & butter",
+      "Mushrooms"
+    ]
+  },
+  {
+    "name": "Bloody Mary",
+    "kind": "corpus-rebuild",
+    "n_matches": 78,
+    "before": [
+      "Alcoholic beverages",
+      "Fresh herbs",
+      "Ground spices",
+      "Oils",
+      "Other vegetables",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Sauces",
+      "Peppers & nightshades",
+      "Alcoholic beverages",
+      "Citrus",
+      "Other vegetables",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Ricotta plate",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Fresh cheese",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Fresh cheese"
+    ]
+  },
+  {
+    "name": "Cottage cheese bowl",
+    "kind": "hand-strip",
+    "n_matches": 0,
+    "before": [
+      "Fresh cheese",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Fresh cheese"
+    ]
+  },
+  {
+    "name": "Fresh mozzarella",
+    "kind": "hand-strip",
+    "n_matches": 2,
+    "before": [
+      "Fresh cheese",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Fresh cheese"
+    ]
+  },
+  {
+    "name": "Potato gratin",
+    "kind": "corpus-rebuild",
+    "n_matches": 51,
+    "before": [
+      "Cream & butter",
+      "Flours",
+      "Ground spices",
+      "Milk",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Starchy vegetables"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Other vegetables",
+      "Aged cheese",
+      "Ground spices",
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Bacon",
+    "kind": "corpus-rebuild",
+    "n_matches": 25,
+    "before": [
+      "Processed meat"
+    ],
+    "after": [
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Red meat",
+      "Processed meat",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Breakfast sausage",
+    "kind": "corpus-rebuild",
+    "n_matches": 38,
+    "before": [
+      "Processed meat"
+    ],
+    "after": [
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Fresh herbs",
+      "Red meat",
+      "Ground spices",
+      "Sugar & sweeteners",
+      "Other vegetables"
+    ]
+  },
+  {
+    "name": "Cheesy mashed potatoes",
+    "kind": "corpus-rebuild",
+    "n_matches": 36,
+    "before": [
+      "Aged cheese",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Starchy vegetables"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Aged cheese",
+      "Salt & seasonings",
+      "Fermented dairy",
+      "Cream & butter",
+      "Other vegetables",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Raisin bread",
+    "kind": "corpus-rebuild",
+    "n_matches": 97,
+    "before": [
+      "Baking ingredients",
+      "Dried fruits",
+      "Flours",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Dried fruits",
+      "Sugar & sweeteners",
+      "Baking ingredients",
+      "Flours",
+      "Salt & seasonings",
+      "Eggs",
+      "Milk",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Eggnog",
+    "kind": "corpus-rebuild",
+    "n_matches": 252,
+    "before": [
+      "Alcoholic beverages",
+      "Cream & butter",
+      "Eggs",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Milk",
+      "Ground spices",
+      "Extracts & essences",
+      "Cream & butter",
+      "Alcoholic beverages"
+    ]
+  },
+  {
+    "name": "Cheesecake (flour-based)",
+    "kind": "corpus-rebuild",
+    "n_matches": 667,
+    "before": [
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Fresh cheese",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Fresh cheese",
+      "Sugar & sweeteners",
+      "Extracts & essences",
+      "Eggs",
+      "Baked snacks & pastries",
+      "Cream & butter",
+      "Fermented dairy"
+    ]
+  },
+  {
+    "name": "Ricotta cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 51,
+    "before": [
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Fresh cheese",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Fresh cheese",
+      "Extracts & essences",
+      "Prepared mixes"
+    ]
+  },
+  {
+    "name": "Mashed potatoes",
+    "kind": "corpus-rebuild",
+    "n_matches": 259,
+    "before": [
+      "Starchy vegetables"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Milk",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Roasted potatoes",
+    "kind": "corpus-rebuild",
+    "n_matches": 79,
+    "before": [
+      "Starchy vegetables"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Oils",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Roast beef",
+    "kind": "corpus-rebuild",
+    "n_matches": 142,
+    "before": [
+      "Red meat"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Salt & seasonings",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Grilled steak",
+    "kind": "corpus-rebuild",
+    "n_matches": 20,
+    "before": [
+      "Red meat"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Red meat",
+      "Sauces"
+    ]
+  },
+  {
+    "name": "French toast",
+    "kind": "corpus-rebuild",
+    "n_matches": 414,
+    "before": [
+      "Bread & rolls",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Milk",
+      "Bread & rolls",
+      "Sugar & sweeteners",
+      "Ground spices",
+      "Extracts & essences",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Raisin bread pudding (buttery)",
+    "kind": "corpus-rebuild",
+    "n_matches": 29,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Dried fruits",
+      "Eggs",
+      "Flours",
+      "Ground spices",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Milk",
+      "Dried fruits",
+      "Ground spices",
+      "Extracts & essences",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Bread & rolls"
+    ]
+  },
+  {
+    "name": "Creamy mashed potatoes",
+    "kind": "corpus-rebuild",
+    "n_matches": 51,
+    "before": [
+      "Cream & butter",
+      "Ground spices",
+      "Milk",
+      "Salt & seasonings",
+      "Starchy vegetables"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Milk",
+      "Other vegetables",
+      "Fresh cheese"
+    ]
+  },
+  {
+    "name": "Omelet",
+    "kind": "corpus-rebuild",
+    "n_matches": 43,
+    "before": [
+      "Eggs",
+      "Extracts & essences",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Scrambled eggs",
+    "kind": "corpus-rebuild",
+    "n_matches": 90,
+    "before": [
+      "Eggs",
+      "Extracts & essences",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Salt & seasonings",
+      "Cream & butter",
+      "Milk",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Fried eggs",
+    "kind": "hand-strip",
+    "n_matches": 12,
+    "before": [
+      "Eggs",
+      "Extracts & essences",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Hard-boiled eggs",
+    "kind": "hand-strip",
+    "n_matches": 11,
+    "before": [
+      "Eggs",
+      "Extracts & essences",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Beef pot pie",
+    "kind": "corpus-rebuild",
+    "n_matches": 42,
+    "before": [
+      "Cream & butter",
+      "Flours",
+      "Ground spices",
+      "Other vegetables",
+      "Red meat",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Red meat",
+      "Other vegetables",
+      "Starchy vegetables",
+      "Salt & seasonings",
+      "Flours",
+      "Peppers & nightshades",
+      "Baked snacks & pastries",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Chicken pot pie",
+    "kind": "corpus-rebuild",
+    "n_matches": 1774,
+    "before": [
+      "Cream & butter",
+      "Flours",
+      "Ground spices",
+      "Other vegetables",
+      "Poultry",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Poultry",
+      "Milk",
+      "Other vegetables",
+      "Flours",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Shrimp stir-fry",
+    "kind": "corpus-rebuild",
+    "n_matches": 35,
+    "before": [
+      "Fresh herbs",
+      "Ground spices",
+      "Oils",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Shellfish"
+    ],
+    "after": [
+      "Shellfish",
+      "Other vegetables",
+      "Oils",
+      "Sauces",
+      "Peppers & nightshades",
+      "Refined grains",
+      "Mushrooms"
+    ]
+  },
+  {
+    "name": "Cheesy mashed potatoes (with milk, with vegetables)",
+    "kind": "corpus-rebuild",
+    "n_matches": 36,
+    "before": [
+      "Aged cheese",
+      "Cream & butter",
+      "Ground spices",
+      "Milk",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Starchy vegetables"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Aged cheese",
+      "Salt & seasonings",
+      "Fermented dairy",
+      "Cream & butter",
+      "Other vegetables",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "French toast (flour-based, with milk)",
+    "kind": "corpus-rebuild",
+    "n_matches": 414,
+    "before": [
+      "Bread & rolls",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Milk",
+      "Bread & rolls",
+      "Sugar & sweeteners",
+      "Ground spices",
+      "Extracts & essences",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Apple bread pudding",
+    "kind": "corpus-rebuild",
+    "n_matches": 50,
+    "before": [
+      "Bread & rolls",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Temperate fruits",
+      "Sugar & sweeteners",
+      "Ground spices",
+      "Eggs",
+      "Bread & rolls",
+      "Milk",
+      "Cream & butter",
+      "Extracts & essences",
+      "Dried fruits"
+    ]
+  },
+  {
+    "name": "Cheesecake (creamy)",
+    "kind": "corpus-rebuild",
+    "n_matches": 667,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Extracts & essences",
+      "Flours",
+      "Fresh cheese",
+      "Milk",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Fresh cheese",
+      "Sugar & sweeteners",
+      "Extracts & essences",
+      "Eggs",
+      "Baked snacks & pastries",
+      "Cream & butter",
+      "Fermented dairy"
+    ]
+  },
+  {
+    "name": "Beef curry",
+    "kind": "corpus-rebuild",
+    "n_matches": 34,
+    "before": [
+      "Other vegetables",
+      "Red meat",
+      "Spice blends"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Red meat",
+      "Spice blends",
+      "Oils",
+      "Salt & seasonings",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Sautéed greens",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Leafy greens",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Leafy greens",
+      "Sauces"
+    ]
+  },
+  {
+    "name": "Green salad",
+    "kind": "corpus-rebuild",
+    "n_matches": 86,
+    "before": [
+      "Leafy greens",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Tropical fruits",
+      "Citrus",
+      "Other vegetables"
+    ]
+  },
+  {
+    "name": "Apple bread",
+    "kind": "corpus-rebuild",
+    "n_matches": 278,
+    "before": [
+      "Bread & rolls",
+      "Sugar & sweeteners",
+      "Temperate fruits"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Eggs",
+      "Temperate fruits",
+      "Flours",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Extracts & essences",
+      "Ground spices",
+      "Oils",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Raisin bread pudding",
+    "kind": "corpus-rebuild",
+    "n_matches": 29,
+    "before": [
+      "Baking ingredients",
+      "Dried fruits",
+      "Eggs",
+      "Flours",
+      "Ground spices",
+      "Milk",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Milk",
+      "Dried fruits",
+      "Ground spices",
+      "Extracts & essences",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Bread & rolls"
+    ]
+  },
+  {
+    "name": "Brown rice",
+    "kind": "corpus-rebuild",
+    "n_matches": 309,
+    "before": [
+      "Whole grains"
+    ],
+    "after": [
+      "Refined grains",
+      "Other vegetables",
+      "Red meat",
+      "Margarine & shortening",
+      "Mushrooms",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Oatmeal",
+    "kind": "corpus-rebuild",
+    "n_matches": 50,
+    "before": [
+      "Whole grains"
+    ],
+    "after": [
+      "Whole grains",
+      "Sugar & sweeteners",
+      "Ground spices",
+      "Salt & seasonings",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Beef soup",
+    "kind": "corpus-rebuild",
+    "n_matches": 49,
+    "before": [
+      "Other vegetables",
+      "Prepared soups & broths",
+      "Red meat"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Peppers & nightshades",
+      "Starchy vegetables",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Chopped liver",
+    "kind": "corpus-rebuild",
+    "n_matches": 23,
+    "before": [
+      "Organ meats"
+    ],
+    "after": [
+      "Eggs",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Organ meats",
+      "Oils",
+      "Poultry"
+    ]
+  },
+  {
+    "name": "Chicken fried rice",
+    "kind": "corpus-rebuild",
+    "n_matches": 131,
+    "before": [
+      "Other vegetables",
+      "Poultry",
+      "Refined grains"
+    ],
+    "after": [
+      "Poultry",
+      "Other vegetables",
+      "Refined grains",
+      "Sauces",
+      "Oils",
+      "Eggs",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Starchy vegetables"
+    ]
+  },
+  {
+    "name": "Chicken pasta",
+    "kind": "corpus-rebuild",
+    "n_matches": 29,
+    "before": [
+      "Poultry",
+      "Refined grains",
+      "Sauces"
+    ],
+    "after": [
+      "Poultry",
+      "Refined grains",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Oils",
+      "Aged cheese"
+    ]
+  },
+  {
+    "name": "Chicken pasta (with vegetables)",
+    "kind": "corpus-rebuild",
+    "n_matches": 29,
+    "before": [
+      "Other vegetables",
+      "Poultry",
+      "Refined grains"
+    ],
+    "after": [
+      "Poultry",
+      "Refined grains",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Oils",
+      "Aged cheese"
+    ]
+  },
+  {
+    "name": "Chicken cordon bleu",
+    "kind": "corpus-rebuild",
+    "n_matches": 359,
+    "before": [
+      "Aged cheese",
+      "Fresh cheese",
+      "Poultry",
+      "Sauces"
+    ],
+    "after": [
+      "Poultry",
+      "Aged cheese",
+      "Processed meat",
+      "Bread & rolls",
+      "Cream & butter",
+      "Flours",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Bacon quiche",
+    "kind": "corpus-rebuild",
+    "n_matches": 23,
+    "before": [
+      "Aged cheese",
+      "Eggs",
+      "Ground spices",
+      "Milk",
+      "Other vegetables",
+      "Processed meat",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Eggs",
+      "Processed meat",
+      "Aged cheese",
+      "Salt & seasonings",
+      "Milk",
+      "Baked snacks & pastries",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Latte",
+    "kind": "hand-strip",
+    "n_matches": 2,
+    "before": [
+      "Coffee & tea",
+      "Cream & butter",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Cream & butter",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Steak salad",
+    "kind": "corpus-rebuild",
+    "n_matches": 25,
+    "before": [
+      "Leafy greens",
+      "Red meat",
+      "Sauces",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Leafy greens",
+      "Dressings & dips",
+      "Red meat",
+      "Oils",
+      "Salt & seasonings",
+      "Aged cheese"
+    ]
+  },
+  {
+    "name": "Potato bread",
+    "kind": "corpus-rebuild",
+    "n_matches": 71,
+    "before": [
+      "Baking ingredients",
+      "Flours",
+      "Oils",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Salt & seasonings",
+      "Flours",
+      "Baking ingredients",
+      "Starchy vegetables",
+      "Sugar & sweeteners",
+      "Milk",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Shrimp scampi",
+    "kind": "corpus-rebuild",
+    "n_matches": 397,
+    "before": [
+      "Cream & butter",
+      "Other vegetables",
+      "Shellfish"
+    ],
+    "after": [
+      "Shellfish",
+      "Other vegetables",
+      "Fresh herbs",
+      "Cream & butter",
+      "Citrus",
+      "Salt & seasonings",
+      "Oils",
+      "Peppers & nightshades",
+      "Alcoholic beverages"
+    ]
+  },
+  {
+    "name": "Carbonara",
+    "kind": "corpus-rebuild",
+    "n_matches": 47,
+    "before": [
+      "Eggs",
+      "Extracts & essences",
+      "Ground spices",
+      "Milk",
+      "Refined grains",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Processed meat",
+      "Eggs",
+      "Aged cheese",
+      "Other vegetables",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Beer batter",
+    "kind": "corpus-rebuild",
+    "n_matches": 70,
+    "before": [
+      "Alcoholic beverages",
+      "Flours",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Alcoholic beverages",
+      "Salt & seasonings",
+      "Eggs",
+      "Baking ingredients"
+    ]
+  },
+  {
+    "name": "Mac & cheese",
+    "kind": "corpus-rebuild",
+    "n_matches": 58,
+    "before": [
+      "Aged cheese",
+      "Refined grains",
+      "Sauces"
+    ],
+    "after": [
+      "Refined grains",
+      "Aged cheese",
+      "Milk",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Cheesy chicken",
+    "kind": "corpus-rebuild",
+    "n_matches": 91,
+    "before": [
+      "Aged cheese",
+      "Poultry",
+      "Sauces"
+    ],
+    "after": [
+      "Poultry",
+      "Aged cheese",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Raisin scones",
+    "kind": "corpus-rebuild",
+    "n_matches": 21,
+    "before": [
+      "Baking ingredients",
+      "Dried fruits",
+      "Eggs",
+      "Flours",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Dried fruits",
+      "Flours",
+      "Baking ingredients",
+      "Milk",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Eggs",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Date cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 95,
+    "before": [
+      "Baking ingredients",
+      "Dried fruits",
+      "Eggs",
+      "Flours",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Dried fruits",
+      "Sugar & sweeteners",
+      "Baking ingredients",
+      "Flours",
+      "Eggs",
+      "Extracts & essences",
+      "Salt & seasonings",
+      "Cream & butter",
+      "Nuts"
+    ]
+  },
+  {
+    "name": "Cheese crackers",
+    "kind": "corpus-rebuild",
+    "n_matches": 44,
+    "before": [
+      "Aged cheese",
+      "Flours",
+      "Ground spices",
+      "Margarine & shortening",
+      "Salt & seasonings"
+    ],
+    "after": [
+      "Flours",
+      "Aged cheese",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Margarine & shortening",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Café au lait",
+    "kind": "hand-strip",
+    "n_matches": 4,
+    "before": [
+      "Coffee & tea",
+      "Ground spices",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Ground spices",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Milk tea",
+    "kind": "hand-strip",
+    "n_matches": 1,
+    "before": [
+      "Coffee & tea",
+      "Ground spices",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Ground spices",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Nut bread",
+    "kind": "corpus-rebuild",
+    "n_matches": 146,
+    "before": [
+      "Bread & rolls",
+      "Margarine & shortening",
+      "Nuts",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Flours",
+      "Milk",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Nuts"
+    ]
+  },
+  {
+    "name": "Potato pancakes (buttery)",
+    "kind": "corpus-rebuild",
+    "n_matches": 461,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Flours",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Eggs",
+      "Salt & seasonings",
+      "Flours",
+      "Other vegetables",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Sweet potato cake",
+    "kind": "corpus-rebuild",
+    "n_matches": 88,
+    "before": [
+      "Baking ingredients",
+      "Cream & butter",
+      "Eggs",
+      "Flours",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Starchy vegetables",
+      "Sugar & sweeteners",
+      "Flours",
+      "Ground spices",
+      "Extracts & essences",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Oils",
+      "Nuts"
+    ]
+  },
+  {
+    "name": "Grilled cheese",
+    "kind": "corpus-rebuild",
+    "n_matches": 54,
+    "before": [
+      "Aged cheese",
+      "Bread & rolls"
+    ],
+    "after": [
+      "Bread & rolls",
+      "Cream & butter",
+      "Aged cheese"
+    ]
+  },
+  {
+    "name": "Kefir",
+    "kind": "hand-strip",
+    "n_matches": 3,
+    "before": [
+      "Fermented dairy",
+      "Ground spices",
+      "Margarine & shortening",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Fermented dairy",
+      "Ground spices",
+      "Margarine & shortening"
+    ]
+  }
+]

@@ -1,0 +1,640 @@
+#!/usr/bin/env python3
+"""
+The Council — LLM multi-perspective deliberation
+CLI-first (uses `claude -p`), API key optional.
+
+Run:  python council.py
+Stop: Ctrl+C
+"""
+
+import http.server, json, subprocess, threading, webbrowser, shutil
+
+PORT = 8765
+
+HTML = r"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Council</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#0e0e0f; --s1:#161618; --s2:#1c1c1e; --s3:#222224;
+  --border:#2a2a2e; --text:#d4cec8; --muted:#6b6670;
+  --gold:#c9a84c; --red:#c0544a; --green:#4a8c6f;
+  --blue:#4a72a8; --orange:#b8723a; --purple:#7a5ca8;
+}
+html,body { min-height:100%; background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-size:15px; line-height:1.6; }
+
+/* Toolbar */
+#toolbar {
+  position:sticky; top:0; z-index:40;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 16px; height:44px;
+  background:rgba(14,14,15,.92); backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.tb-brand { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:600; letter-spacing:.08em; color:var(--gold); display:flex; align-items:center; gap:7px; }
+.tb-group { display:flex; gap:4px; }
+.tb-btn { width:32px; height:32px; background:transparent; border:1px solid transparent; border-radius:7px; color:var(--muted); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s,color .15s,border-color .15s; }
+.tb-btn:hover { background:var(--s2); color:var(--text); border-color:var(--border); }
+.tb-btn.active { color:var(--gold); border-color:var(--gold); background:rgba(201,168,76,.08); }
+
+/* Side panels */
+.side-panel { position:fixed; top:44px; bottom:0; width:300px; background:var(--s1); border:1px solid var(--border); z-index:90; overflow-y:auto; transition:transform .28s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column; }
+.side-panel.left  { left:0;  transform:translateX(-100%); }
+.side-panel.right { right:0; transform:translateX(100%); }
+.side-panel.open  { transform:translateX(0); }
+.panel-head { display:flex; align-items:center; justify-content:space-between; padding:16px 18px; border-bottom:1px solid var(--border); font-size:.74rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); flex-shrink:0; }
+.panel-close { background:transparent; border:none; color:var(--muted); font-size:20px; cursor:pointer; padding:2px 5px; border-radius:4px; line-height:1; }
+.panel-close:hover { color:var(--text); }
+.panel-body { padding:16px 18px; flex:1; }
+.panel-footer { padding:14px 18px; border-top:1px solid var(--border); flex-shrink:0; }
+
+/* Settings */
+.s-lbl { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:7px; margin-top:18px; display:block; }
+.s-lbl:first-child { margin-top:0; }
+.key-wrap { display:flex; gap:6px; align-items:center; }
+.key-in { flex:1; background:var(--s2); border:1px solid var(--border); border-radius:7px; padding:7px 10px; color:var(--text); font-family:monospace; font-size:.78rem; outline:none; transition:border-color .15s; min-width:0; }
+.key-in:focus { border-color:var(--gold); }
+.eye-btn { background:var(--s2); border:1px solid var(--border); border-radius:7px; color:var(--muted); width:32px; height:32px; cursor:pointer; font-size:13px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.eye-btn:hover { color:var(--text); }
+.mode-pill { display:inline-flex; align-items:center; gap:5px; padding:5px 10px; border-radius:20px; font-size:.74rem; letter-spacing:.05em; }
+.mode-pill.cli { background:rgba(74,140,111,.14); color:var(--green); border:1px solid rgba(74,140,111,.28); }
+.mode-pill.api { background:rgba(201,168,76,.12); color:var(--gold);  border:1px solid rgba(201,168,76,.25); }
+.link-sm { font-size:.75rem; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--border); }
+.link-sm:hover { color:var(--gold); border-color:var(--gold); }
+.ghost-btn { background:transparent; border:1px solid var(--border); border-radius:7px; color:var(--muted); padding:5px 12px; font-family:'DM Sans',sans-serif; font-size:.74rem; cursor:pointer; transition:color .15s,border-color .15s; }
+.ghost-btn:hover { color:var(--text); border-color:var(--text); }
+
+/* History */
+.hist-empty { font-size:.85rem; color:var(--muted); font-style:italic; }
+.hist-item { padding:12px 0; border-bottom:1px solid var(--border); cursor:pointer; transition:opacity .15s; }
+.hist-item:last-child { border-bottom:none; }
+.hist-item:hover { opacity:.72; }
+.hist-q { font-size:.86rem; color:var(--text); line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.hist-meta { font-size:.7rem; color:var(--muted); margin-top:3px; }
+
+/* Modal */
+#editor-overlay { position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .2s; }
+#editor-overlay.open { opacity:1; pointer-events:all; }
+#editor-modal { background:var(--s1); border:1px solid var(--border); border-radius:14px; width:min(680px,94vw); max-height:82vh; overflow-y:auto; transform:scale(.97) translateY(8px); transition:transform .22s ease; }
+#editor-overlay.open #editor-modal { transform:scale(1) translateY(0); }
+.modal-head { display:flex; align-items:center; justify-content:space-between; padding:18px 24px 16px; border-bottom:1px solid var(--border); position:sticky; top:0; background:var(--s1); z-index:1; }
+.modal-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#ede8e0; }
+.modal-head-r { display:flex; gap:8px; align-items:center; }
+.modal-body { padding:16px 24px 20px; }
+.modal-foot { padding:14px 24px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; position:sticky; bottom:0; background:var(--s1); }
+
+/* Member cards */
+.member-card { border:1px solid var(--border); border-radius:10px; margin-bottom:10px; overflow:hidden; background:var(--s2); }
+.mc-head { display:flex; align-items:center; gap:10px; padding:12px 14px; cursor:pointer; user-select:none; }
+.mc-icon { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
+.mc-name { font-size:.88rem; color:var(--text); }
+.mc-lbl { font-size:.7rem; color:var(--muted); margin-left:3px; }
+.mc-actions { margin-left:auto; display:flex; gap:4px; }
+.icon-btn { background:transparent; border:none; color:var(--muted); font-size:13px; cursor:pointer; padding:3px 6px; border-radius:4px; }
+.icon-btn:hover { color:var(--text); }
+.icon-btn.del:hover { color:var(--red); }
+.mc-form { border-top:1px solid var(--border); padding:14px; display:none; }
+.mc-form.open { display:block; }
+.form-row { display:flex; gap:10px; margin-bottom:10px; }
+.form-field { display:flex; flex-direction:column; gap:4px; flex:1; }
+.form-field label { font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.form-in { background:var(--s1); border:1px solid var(--border); border-radius:6px; padding:6px 9px; color:var(--text); font-family:'DM Sans',sans-serif; font-size:.84rem; outline:none; transition:border-color .15s; width:100%; }
+.form-in:focus { border-color:var(--gold); }
+.form-ta { min-height:80px; resize:vertical; }
+.cdots { display:flex; gap:7px; margin-top:3px; }
+.cdot { width:16px; height:16px; border-radius:50%; cursor:pointer; border:2px solid transparent; transition:transform .12s; }
+.cdot:hover { transform:scale(1.25); }
+.cdot.sel { border-color:#fff; }
+.add-btn { width:100%; background:transparent; border:1px dashed var(--border); border-radius:10px; color:var(--muted); padding:11px; font-family:'DM Sans',sans-serif; font-size:.82rem; cursor:pointer; transition:color .15s,border-color .15s; }
+.add-btn:hover { color:var(--text); border-color:var(--text); }
+
+/* Backdrop */
+#backdrop { position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:45; opacity:0; pointer-events:none; transition:opacity .25s; }
+#backdrop.active { opacity:1; pointer-events:all; }
+
+/* Shell */
+.shell { max-width:820px; margin:0 auto; padding:40px 24px 80px; }
+header { text-align:center; margin-bottom:44px; }
+.crest { display:inline-block; width:44px; height:44px; border:1.5px solid var(--gold); border-radius:50%; line-height:42px; font-size:18px; color:var(--gold); margin-bottom:14px; }
+h1 { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:600; letter-spacing:.04em; color:#ede8e0; line-height:1.1; }
+.tagline { margin-top:6px; font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+#mode-badge { margin-top:14px; cursor:pointer; display:inline-flex; }
+
+/* Input */
+.input-block { background:var(--s1); border:1px solid var(--border); border-radius:10px; padding:20px; }
+.input-label { font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; display:block; }
+textarea { width:100%; background:transparent; border:none; outline:none; resize:none; color:var(--text); font-family:'DM Sans',sans-serif; font-size:.95rem; line-height:1.65; min-height:80px; }
+textarea::placeholder { color:var(--muted); }
+.input-footer { display:flex; align-items:center; justify-content:space-between; margin-top:14px; padding-top:14px; border-top:1px solid var(--border); flex-wrap:wrap; gap:10px; }
+#toggles { display:flex; gap:7px; flex-wrap:wrap; }
+.toggle { font-size:.7rem; letter-spacing:.07em; padding:4px 10px; border-radius:20px; border:1px solid var(--border); background:transparent; color:var(--muted); cursor:pointer; transition:all .15s; font-family:'DM Sans',sans-serif; }
+.convene-btn { background:var(--gold); color:#0e0e0f; border:none; border-radius:7px; padding:9px 22px; font-family:'DM Sans',sans-serif; font-size:.82rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; transition:opacity .2s,transform .1s; white-space:nowrap; }
+.convene-btn:hover { opacity:.88; }
+.convene-btn:active { transform:scale(.97); }
+.convene-btn:disabled { opacity:.35; cursor:not-allowed; }
+
+/* Seats */
+#council { margin-top:36px; display:flex; flex-direction:column; gap:22px; }
+.seat { background:var(--s1); border:1px solid var(--border); border-left-width:3px; border-radius:10px; overflow:hidden; opacity:0; transform:translateY(14px); transition:opacity .4s ease,transform .4s ease; }
+.seat.visible { opacity:1; transform:translateY(0); }
+.seat-header { display:flex; align-items:center; gap:12px; padding:13px 18px; border-bottom:1px solid var(--border); }
+.seat-icon { width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
+.seat-name { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:600; letter-spacing:.03em; color:#ede8e0; }
+.seat-role { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-left:auto; }
+.seat-body { padding:16px 20px; font-size:.88rem; line-height:1.78; color:#c8c2bc; min-height:52px; white-space:pre-wrap; }
+.typing { display:inline-flex; gap:4px; align-items:center; }
+.typing span { width:5px; height:5px; border-radius:50%; background:var(--muted); animation:pulse 1.2s infinite ease-in-out; }
+.typing span:nth-child(2) { animation-delay:.2s; }
+.typing span:nth-child(3) { animation-delay:.4s; }
+@keyframes pulse { 0%,80%,100%{transform:scale(.7);opacity:.4}40%{transform:scale(1);opacity:1} }
+
+/* Session actions */
+#session-actions { display:none; margin-top:28px; gap:10px; justify-content:center; }
+.action-btn { background:transparent; border:1px solid var(--border); border-radius:7px; color:var(--muted); padding:8px 18px; font-family:'DM Sans',sans-serif; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; transition:color .15s,border-color .15s; }
+.action-btn:hover { color:var(--text); border-color:var(--text); }
+.action-btn.hi { background:rgba(201,168,76,.1); color:var(--gold); border-color:rgba(201,168,76,.3); }
+.action-btn.hi:hover { background:rgba(201,168,76,.18); }
+
+/* Error / Toast */
+.error-msg { background:rgba(192,84,74,.1); border:1px solid rgba(192,84,74,.3); border-radius:8px; padding:12px 16px; font-size:.84rem; color:#e08080; margin-top:16px; display:none; }
+#toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(60px); background:var(--s3); border:1px solid var(--border); border-radius:8px; padding:10px 18px; font-size:.82rem; color:var(--text); z-index:300; transition:transform .3s ease,opacity .3s ease; opacity:0; pointer-events:none; white-space:nowrap; }
+#toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button class="tb-btn" id="history-tb-btn" title="History" onclick="togglePanel('history')">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+  </button>
+  <div class="tb-brand">⚖ The Council</div>
+  <div class="tb-group">
+    <button class="tb-btn" id="edit-tb-btn" title="Edit Members" onclick="openEditor()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+    </button>
+    <button class="tb-btn" id="settings-tb-btn" title="Settings" onclick="togglePanel('settings')">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="side-panel left" id="history-panel">
+  <div class="panel-head">History <button class="panel-close" onclick="closePanel('history')">×</button></div>
+  <div class="panel-body" id="history-body"><p class="hist-empty">No past sessions yet.</p></div>
+  <div class="panel-footer"><button class="ghost-btn" onclick="clearHistory()">Clear History</button></div>
+</div>
+
+<div class="side-panel right" id="settings-panel">
+  <div class="panel-head">Settings <button class="panel-close" onclick="closePanel('settings')">×</button></div>
+  <div class="panel-body">
+    <span class="s-lbl">Active Mode</span>
+    <div id="mode-status"></div>
+    <span class="s-lbl" style="margin-top:18px">API Key <span style="text-transform:none;letter-spacing:0;font-size:.9em;color:var(--muted)">(optional)</span></span>
+    <div class="key-wrap">
+      <input class="key-in" id="api-key-input" type="password" placeholder="sk-ant-..." spellcheck="false" oninput="handleKeyInput()">
+      <button class="eye-btn" onclick="toggleKeyVis()" title="Show/hide">👁</button>
+    </div>
+    <div style="margin-top:8px">
+      <button class="ghost-btn" id="clear-key-btn" onclick="clearApiKey()" style="display:none">Clear key</button>
+    </div>
+    <span class="s-lbl" style="margin-top:20px">Resources</span>
+    <a class="link-sm" href="https://console.anthropic.com" target="_blank">Get API key →</a>
+  </div>
+</div>
+
+<div id="editor-overlay">
+  <div id="editor-modal">
+    <div class="modal-head">
+      <span class="modal-title">Edit Council</span>
+      <div class="modal-head-r">
+        <button class="ghost-btn" onclick="resetMembers()">Reset Defaults</button>
+        <button class="panel-close" onclick="closeEditor()">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div id="member-list"></div>
+      <button class="add-btn" onclick="addMember()">+ Add Member</button>
+    </div>
+    <div class="modal-foot">
+      <span style="font-size:.74rem;color:var(--muted)">Changes save automatically</span>
+      <button class="convene-btn" onclick="closeEditor()">Done</button>
+    </div>
+  </div>
+</div>
+
+<div id="backdrop" onclick="closeAll()"></div>
+
+<div class="shell">
+  <header>
+    <div class="crest">⚖</div>
+    <h1>The Council</h1>
+    <p class="tagline">Multi-perspective AI deliberation</p>
+    <div id="mode-badge" onclick="togglePanel('settings')" title="Click to change"></div>
+  </header>
+
+  <div class="input-block">
+    <label class="input-label" for="question">Bring your question before the council</label>
+    <textarea id="question" rows="3" placeholder="e.g. Should I quit my job to start a company? / What are the real tradeoffs of remote work? / Is my product idea viable?"></textarea>
+    <div class="input-footer">
+      <div id="toggles"></div>
+      <button class="convene-btn" id="convene-btn" onclick="convene()">Convene</button>
+    </div>
+  </div>
+
+  <div class="error-msg" id="error-msg"></div>
+  <div id="council"></div>
+
+  <div id="session-actions">
+    <button class="action-btn hi" onclick="exportMarkdown()">📋 Copy Report</button>
+    <button class="action-btn" onclick="resetCouncil()">↩ New Question</button>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const CLR = {
+  red:    {bg:'rgba(192,84,74,.18)',  fg:'#c0544a',hex:'#c0544a'},
+  green:  {bg:'rgba(74,140,111,.18)',fg:'#4a8c6f',hex:'#4a8c6f'},
+  blue:   {bg:'rgba(74,114,168,.18)',fg:'#4a72a8',hex:'#4a72a8'},
+  orange: {bg:'rgba(184,114,58,.18)',fg:'#b8723a',hex:'#b8723a'},
+  purple: {bg:'rgba(122,92,168,.18)',fg:'#7a5ca8',hex:'#7a5ca8'},
+  gold:   {bg:'rgba(201,168,76,.18)', fg:'#c9a84c',hex:'#c9a84c'},
+}
+const CKEYS = ['red','green','blue','orange','purple']
+
+const DEF = [
+  {id:'devil', name:'The Skeptic',    label:"Devil's Advocate",icon:'🗡',color:'red',
+   system:`You are a sharp devil's advocate on a deliberation council. Identify every flaw, risk, blind spot, and reason something might fail. Be genuinely critical — not performatively balanced. Reference prior speakers if it sharpens your critique. 3–5 focused paragraphs. No bullet lists.`},
+  {id:'steel', name:'The Champion',   label:'Steelman',        icon:'🛡',color:'green',
+   system:`You are a steelman advocate on a deliberation council. Build the strongest possible case FOR the idea — surface best arguments, best-case scenarios, underappreciated upsides. Note where the Skeptic had merit, but primarily make the affirmative case. 3–5 focused paragraphs. No bullet lists.`},
+  {id:'first', name:'The Reasoner',   label:'First Principles', icon:'🔬',color:'blue',
+   system:`You are a first-principles thinker on a deliberation council. Strip away assumptions — what is actually true from the ground up? Reason from foundational truths, responding to others where useful. 3–5 paragraphs. No bullet lists.`},
+  {id:'pragma',name:'The Pragmatist', label:'Pragmatist',       icon:'⚙',color:'orange',
+   system:`You are a pragmatist on a deliberation council. Only care about what's actionable given real constraints of time, money, and human nature. Cut through abstract debate and focus on what can realistically be done. 3–5 paragraphs. No bullet lists.`},
+]
+const SYNTH = {id:'synth',name:'The Arbiter',label:'Synthesis',icon:'⚖',color:'gold',
+  system:`You are the Arbiter — the final voice on a deliberation council. Synthesize: where did members agree? Where did they genuinely disagree, and why? End with 2–3 concrete things the person should actually consider or do. 4–6 paragraphs. No bullet lists.`}
+
+const S = {
+  apiKey:'', members:deep(DEF),
+  activeRoles:new Set(['devil','steel','first','pragma']),
+  history:[], session:null, running:false, openPanel:null,
+}
+function deep(x){return JSON.parse(JSON.stringify(x))}
+
+// Storage
+function persist(){
+  try{
+    localStorage.setItem('tc_key',S.apiKey)
+    localStorage.setItem('tc_members',JSON.stringify(S.members))
+    localStorage.setItem('tc_history',JSON.stringify(S.history.slice(0,15)))
+    localStorage.setItem('tc_active',JSON.stringify([...S.activeRoles]))
+  }catch(_){}
+}
+function hydrate(){
+  try{
+    S.apiKey=localStorage.getItem('tc_key')||''
+    const m=localStorage.getItem('tc_members');if(m)S.members=JSON.parse(m)
+    const h=localStorage.getItem('tc_history');if(h)S.history=JSON.parse(h)
+    const a=localStorage.getItem('tc_active')
+    if(a){
+      const ids=new Set(S.members.map(x=>x.id))
+      S.activeRoles=new Set(JSON.parse(a).filter(id=>ids.has(id)))
+      if(S.activeRoles.size<1)S.activeRoles=new Set(S.members.slice(0,2).map(x=>x.id))
+    }
+  }catch(_){}
+}
+
+// API routing
+async function ask(system,content){
+  return S.apiKey ? askAPI(system,content) : askCLI(system,content)
+}
+async function askAPI(system,content){
+  const r=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-api-key':S.apiKey,
+      'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system,messages:[{role:'user',content}]})
+  })
+  const d=await r.json()
+  if(!r.ok)throw new Error(d.error?.message||`API error ${r.status}`)
+  return d.content.map(b=>b.text||'').join('')
+}
+async function askCLI(system,content){
+  const r=await fetch('/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system,prompt:content})})
+  if(!r.ok)throw new Error(`Server error ${r.status}`)
+  const d=await r.json()
+  if(d.error)throw new Error(d.error)
+  return d.text
+}
+
+// Convene
+async function convene(){
+  const q=document.getElementById('question').value.trim()
+  if(!q||S.running)return
+  S.running=true; hideErr()
+  document.getElementById('convene-btn').disabled=true
+  document.getElementById('council').innerHTML=''
+  document.getElementById('session-actions').style.display='none'
+  const sel=S.members.filter(m=>S.activeRoles.has(m.id))
+  const responses=[]
+  try{
+    for(const m of sel){
+      const seat=mkSeat(m)
+      let uc=`The question before the council:\n\n"${q}"`
+      if(responses.length){
+        uc+=`\n\nPrevious council members have spoken:\n\n`
+        responses.forEach(r=>{uc+=`— ${r.name} (${r.label}):\n${r.text}\n\n`})
+        uc+=`Now give your perspective.`
+      }
+      const text=await ask(m.system,uc)
+      setSeat(seat,text); responses.push({...m,text})
+    }
+    const seat=mkSeat(SYNTH)
+    let uc=`The question before the council:\n\n"${q}"\n\nThe council has deliberated:\n\n`
+    responses.forEach(r=>{uc+=`— ${r.name} (${r.label}):\n${r.text}\n\n`})
+    uc+=`Now deliver your synthesis.`
+    const text=await ask(SYNTH.system,uc)
+    setSeat(seat,text); responses.push({...SYNTH,text})
+    S.session={question:q,responses,date:new Date().toISOString()}
+    addHistory(S.session)
+    document.getElementById('session-actions').style.display='flex'
+  }catch(e){showErr(e.message)}
+  finally{S.running=false; document.getElementById('convene-btn').disabled=false}
+}
+function mkSeat(m){
+  const c=CLR[m.color]||CLR.purple
+  const el=document.createElement('div')
+  el.className='seat'; el.style.borderLeftColor=c.hex
+  el.innerHTML=`<div class="seat-header"><div class="seat-icon" style="background:${c.bg};color:${c.fg}">${m.icon}</div><div class="seat-name">${esc(m.name)}</div><div class="seat-role">${esc(m.label)}</div></div><div class="seat-body"><div class="typing"><span></span><span></span><span></span></div></div>`
+  document.getElementById('council').appendChild(el)
+  requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('visible')))
+  return el
+}
+function setSeat(el,text){el.querySelector('.seat-body').textContent=text}
+function resetCouncil(){
+  document.getElementById('council').innerHTML=''
+  document.getElementById('session-actions').style.display='none'
+  document.getElementById('question').value=''
+  document.getElementById('convene-btn').disabled=false
+  document.getElementById('question').focus()
+  hideErr(); S.session=null
+}
+
+// Toggles
+function renderToggles(){
+  const el=document.getElementById('toggles'); el.innerHTML=''
+  S.members.forEach(m=>{
+    const c=CLR[m.color]||CLR.purple; const on=S.activeRoles.has(m.id)
+    const btn=document.createElement('button'); btn.className='toggle'; btn.textContent=m.label
+    if(on){btn.style.background=c.hex;btn.style.borderColor=c.hex;btn.style.color='#0e0e0f'}
+    btn.onclick=()=>{
+      if(S.activeRoles.has(m.id)){
+        if(S.activeRoles.size<=2)return
+        S.activeRoles.delete(m.id); btn.style.background=btn.style.borderColor=btn.style.color=''
+      }else{S.activeRoles.add(m.id);btn.style.background=c.hex;btn.style.borderColor=c.hex;btn.style.color='#0e0e0f'}
+      persist()
+    }
+    el.appendChild(btn)
+  })
+}
+
+// Panels
+function togglePanel(name){
+  if(S.openPanel===name){closePanel(name);return}
+  if(S.openPanel)closePanel(S.openPanel)
+  S.openPanel=name
+  document.getElementById(name+'-panel').classList.add('open')
+  document.getElementById('backdrop').classList.add('active')
+  document.getElementById(name+'-tb-btn').classList.add('active')
+  if(name==='history')renderHistory()
+}
+function closePanel(name){
+  document.getElementById(name+'-panel').classList.remove('open')
+  document.getElementById('backdrop').classList.remove('active')
+  document.getElementById(name+'-tb-btn').classList.remove('active')
+  S.openPanel=null
+}
+function closeAll(){if(S.openPanel)closePanel(S.openPanel);closeEditorEl()}
+
+// Settings
+function handleKeyInput(){S.apiKey=document.getElementById('api-key-input').value.trim();persist();updateMode()}
+function clearApiKey(){S.apiKey='';document.getElementById('api-key-input').value='';persist();updateMode()}
+function toggleKeyVis(){const el=document.getElementById('api-key-input');el.type=el.type==='password'?'text':'password'}
+function updateMode(){
+  const api=!!S.apiKey
+  const pill=`<span class="mode-pill ${api?'api':'cli'}">${api?'🔑 Anthropic API':'⚡ Claude CLI'}</span>`
+  document.getElementById('mode-badge').innerHTML=pill
+  document.getElementById('mode-status').innerHTML=pill
+  document.getElementById('clear-key-btn').style.display=api?'':'none'
+  if(S.apiKey&&!document.getElementById('api-key-input').value)document.getElementById('api-key-input').value=S.apiKey
+}
+
+// History
+function addHistory(session){
+  S.history.unshift({...session,id:Date.now()})
+  if(S.history.length>15)S.history.pop()
+  persist()
+}
+function renderHistory(){
+  const el=document.getElementById('history-body')
+  if(!S.history.length){el.innerHTML='<p class="hist-empty">No past sessions yet.</p>';return}
+  el.innerHTML=''
+  S.history.forEach(s=>{
+    const item=document.createElement('div'); item.className='hist-item'
+    item.innerHTML=`<div class="hist-q">${esc(s.question)}</div><div class="hist-meta">${relTime(new Date(s.date))} · ${s.responses.length} voices</div>`
+    item.onclick=()=>loadSession(s); el.appendChild(item)
+  })
+}
+function loadSession(s){
+  closePanel('history')
+  document.getElementById('question').value=s.question
+  document.getElementById('council').innerHTML=''
+  document.getElementById('session-actions').style.display='none'
+  S.session=s; s.responses.forEach(r=>setSeat(mkSeat(r),r.text))
+  document.getElementById('session-actions').style.display='flex'
+}
+function clearHistory(){S.history=[];persist();renderHistory()}
+
+// Member editor
+function openEditor(){
+  document.getElementById('editor-overlay').classList.add('open')
+  document.getElementById('backdrop').classList.add('active')
+  document.getElementById('edit-tb-btn').classList.add('active')
+  renderMemberList()
+}
+function closeEditor(){closeEditorEl()}
+function closeEditorEl(){
+  document.getElementById('editor-overlay').classList.remove('open')
+  document.getElementById('edit-tb-btn').classList.remove('active')
+  if(!S.openPanel)document.getElementById('backdrop').classList.remove('active')
+}
+function renderMemberList(){
+  const list=document.getElementById('member-list'); list.innerHTML=''
+  S.members.forEach(m=>{
+    const c=CLR[m.color]||CLR.purple
+    const card=document.createElement('div'); card.className='member-card'; card.dataset.id=m.id
+    card.innerHTML=`
+      <div class="mc-head" onclick="toggleForm('${m.id}')">
+        <div class="mc-icon" style="background:${c.bg};color:${c.fg}">${m.icon}</div>
+        <span class="mc-name">${esc(m.name)}</span><span class="mc-lbl">${esc(m.label)}</span>
+        <div class="mc-actions" onclick="event.stopPropagation()">
+          <button class="icon-btn del" onclick="delMember('${m.id}')">✕</button>
+        </div>
+      </div>
+      <div class="mc-form" id="form-${m.id}">
+        <div class="form-row">
+          <div class="form-field" style="max-width:60px"><label>Icon</label>
+            <input class="form-in" value="${esc(m.icon)}" maxlength="4" oninput="updM('${m.id}','icon',this.value);refreshIcon('${m.id}')"></div>
+          <div class="form-field"><label>Name</label>
+            <input class="form-in" value="${esc(m.name)}" oninput="updM('${m.id}','name',this.value)"></div>
+          <div class="form-field"><label>Label</label>
+            <input class="form-in" value="${esc(m.label)}" oninput="updM('${m.id}','label',this.value)"></div>
+        </div>
+        <div class="form-field" style="margin-bottom:10px"><label>Color</label>
+          <div class="cdots">${CKEYS.map(k=>`<div class="cdot${m.color===k?' sel':''}" style="background:${CLR[k].hex}" onclick="updM('${m.id}','color','${k}');refreshColor('${m.id}','${k}');selDot('${m.id}','${k}')"></div>`).join('')}</div></div>
+        <div class="form-field"><label>System Prompt</label>
+          <textarea class="form-in form-ta" oninput="updM('${m.id}','system',this.value)">${esc(m.system)}</textarea></div>
+      </div>`
+    list.appendChild(card)
+  })
+}
+function toggleForm(id){document.getElementById('form-'+id).classList.toggle('open')}
+function updM(id,field,val){const m=S.members.find(x=>x.id===id);if(m){m[field]=val;persist();renderToggles()}}
+function refreshIcon(id){const m=S.members.find(x=>x.id===id);if(!m)return;const el=document.querySelector(`.member-card[data-id="${id}"] .mc-icon`);if(el)el.textContent=m.icon}
+function refreshColor(id,ck){const c=CLR[ck]||CLR.purple;const el=document.querySelector(`.member-card[data-id="${id}"] .mc-icon`);if(el){el.style.background=c.bg;el.style.color=c.fg}}
+function selDot(id,ck){document.querySelectorAll(`#form-${id} .cdot`).forEach((d,i)=>d.classList.toggle('sel',CKEYS[i]===ck))}
+function delMember(id){
+  if(S.members.length<=2){toast('Keep at least 2 members');return}
+  S.members=S.members.filter(m=>m.id!==id); S.activeRoles.delete(id)
+  persist(); renderMemberList(); renderToggles()
+}
+function addMember(){
+  const id='c_'+Date.now()
+  S.members.push({id,name:'New Member',label:'Custom Role',icon:'✦',color:'purple',
+    system:'You are a council member. Give your honest perspective on the question. 3–5 focused paragraphs. No bullet lists.'})
+  S.activeRoles.add(id); persist(); renderMemberList(); renderToggles()
+  setTimeout(()=>toggleForm(id),40)
+}
+function resetMembers(){
+  if(!confirm('Reset all council members to defaults?'))return
+  S.members=deep(DEF); S.activeRoles=new Set(DEF.map(m=>m.id))
+  persist(); renderMemberList(); renderToggles()
+}
+
+// Export
+function exportMarkdown(){
+  if(!S.session)return
+  const{question,responses,date}=S.session
+  let md=`# Council Report\n\n**Question:** ${question}\n**Date:** ${new Date(date).toLocaleString()}\n\n---\n\n`
+  responses.forEach(r=>{md+=`## ${r.name} — ${r.label}\n\n${r.text}\n\n---\n\n`})
+  md+=`*Generated by The Council*`
+  navigator.clipboard.writeText(md).then(()=>toast('Report copied ✓')).catch(()=>toast('Copy failed'))
+}
+
+// Utilities
+function showErr(msg){const e=document.getElementById('error-msg');e.textContent='⚠ '+msg;e.style.display='block'}
+function hideErr(){document.getElementById('error-msg').style.display='none'}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function relTime(d){
+  const m=Math.floor((Date.now()-d)/60000)
+  if(m<1)return'just now';if(m<60)return`${m}m ago`
+  const h=Math.floor(m/60);if(h<24)return`${h}h ago`
+  return`${Math.floor(h/24)}d ago`
+}
+
+document.getElementById('question').addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='Enter')convene()})
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()})
+
+hydrate(); renderToggles(); updateMode()
+</script>
+</body>
+</html>"""
+
+
+class Handler(http.server.BaseHTTPRequestHandler):
+
+    def do_GET(self):
+        if self.path in ('/', '/index.html'):
+            body = HTML.encode('utf-8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/html; charset=utf-8')
+            self.send_header('Content-Length', len(body))
+            self.end_headers()
+            self.wfile.write(body)
+        else:
+            self.send_response(404)
+            self.end_headers()
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self._cors()
+        self.end_headers()
+
+    def do_POST(self):
+        if self.path != '/ask':
+            self.send_response(404)
+            self.end_headers()
+            return
+        length  = int(self.headers.get('Content-Length', 0))
+        payload = json.loads(self.rfile.read(length))
+        system  = payload.get('system', '')
+        prompt  = payload.get('prompt', '')
+        full    = f"{system}\n\n---\n\n{prompt}" if system else prompt
+        try:
+            result = subprocess.run(
+                ['claude', '-p', full],
+                capture_output=True, text=True, timeout=120
+            )
+            if result.returncode != 0 and result.stderr:
+                data = {'text': '', 'error': result.stderr.strip()}
+            else:
+                data = {'text': result.stdout.strip(), 'error': ''}
+        except FileNotFoundError:
+            data = {'text': '', 'error':
+                '`claude` not found. Install Claude Code (https://claude.ai/code) '
+                'or add an API key in Settings (⚙).'}
+        except subprocess.TimeoutExpired:
+            data = {'text': '', 'error': 'Claude CLI timed out after 120s.'}
+        except Exception as e:
+            data = {'text': '', 'error': str(e)}
+        body = json.dumps(data).encode('utf-8')
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Content-Length', len(body))
+        self._cors()
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _cors(self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+
+    def log_message(self, *a): pass
+
+
+if __name__ == '__main__':
+    if not shutil.which('claude'):
+        print("⚠  `claude` not found on PATH.")
+        print("   Install Claude Code: https://claude.ai/code")
+        print("   Or add an API key via the Settings panel (⚙).\n")
+
+    url = f'http://localhost:{PORT}'
+    srv = http.server.HTTPServer(('localhost', PORT), Handler)
+    print(f"⚖  The Council is in session  →  {url}")
+    print(f"   Stop with Ctrl+C\n")
+    threading.Timer(0.8, lambda: webbrowser.open(url)).start()
+    try:
+        srv.serve_forever()
+    except KeyboardInterrupt:
+        print("\n   Council adjourned.")
+        srv.shutdown()

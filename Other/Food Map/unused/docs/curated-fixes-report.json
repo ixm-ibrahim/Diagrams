@@ -1,0 +1,2232 @@
+[
+  {
+    "name": "Chicken stir-fry",
+    "n_matches": 213,
+    "before": [
+      "Poultry",
+      "Other vegetables",
+      "Oils",
+      "Whole grains"
+    ],
+    "after": [
+      "Poultry",
+      "Sauces",
+      "Other vegetables",
+      "Oils",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Cruciferous vegetables"
+    ]
+  },
+  {
+    "name": "Tuna salad",
+    "n_matches": 288,
+    "before": [
+      "Oily fish",
+      "Leafy greens",
+      "Other vegetables"
+    ],
+    "after": [
+      "Other vegetables",
+      "Oily fish",
+      "Extracts & essences",
+      "Pickled vegetables"
+    ]
+  },
+  {
+    "name": "Fish and chips",
+    "n_matches": 67,
+    "before": [
+      "White fish",
+      "Starchy vegetables",
+      "Oils"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Flours",
+      "White fish",
+      "Oils",
+      "Salt & seasonings",
+      "Citrus",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Shrimp pasta",
+    "n_matches": 27,
+    "before": [
+      "Shellfish",
+      "Refined grains",
+      "Cream & butter",
+      "Aged cheese"
+    ],
+    "after": [
+      "Shellfish",
+      "Fresh herbs",
+      "Other vegetables",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Cream & butter",
+      "Oils",
+      "Salt & seasonings",
+      "Aged cheese"
+    ]
+  },
+  {
+    "name": "Burger",
+    "n_matches": 31,
+    "before": [
+      "Red meat",
+      "Bread & rolls",
+      "Other vegetables"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Berry smoothie",
+    "n_matches": 35,
+    "before": [
+      "Yogurt",
+      "Berries",
+      "Temperate fruits",
+      "Seeds"
+    ],
+    "after": [
+      "Berries",
+      "Yogurt",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Greek salad",
+    "n_matches": 243,
+    "before": [
+      "Leafy greens",
+      "Aged cheese",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Oils"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Fresh cheese",
+      "Oils",
+      "Fresh herbs",
+      "Dressings & dips",
+      "Salt & seasonings",
+      "Leafy greens"
+    ]
+  },
+  {
+    "name": "Caesar salad",
+    "n_matches": 364,
+    "before": [
+      "Leafy greens",
+      "Aged cheese",
+      "Bread & rolls",
+      "Oils"
+    ],
+    "after": [
+      "Other vegetables",
+      "Aged cheese",
+      "Oils",
+      "Leafy greens",
+      "Citrus",
+      "Bread & rolls",
+      "Eggs",
+      "Sauces",
+      "Peppers & nightshades",
+      "Oily fish",
+      "Salt & seasonings",
+      "Dressings & dips"
+    ]
+  },
+  {
+    "name": "Mac and cheese",
+    "n_matches": 112,
+    "before": [
+      "Refined grains",
+      "Aged cheese",
+      "Cream & butter",
+      "Milk"
+    ],
+    "after": [
+      "Refined grains",
+      "Milk",
+      "Aged cheese",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Cobb salad",
+    "n_matches": 65,
+    "before": [
+      "Leafy greens",
+      "Poultry",
+      "Eggs",
+      "Aged cheese",
+      "Processed meat"
+    ],
+    "after": [
+      "Other vegetables",
+      "Processed meat",
+      "Peppers & nightshades",
+      "Eggs",
+      "Poultry",
+      "Leafy greens",
+      "Dressings & dips",
+      "Aged cheese",
+      "Oils",
+      "Salt & seasonings",
+      "Citrus"
+    ]
+  },
+  {
+    "name": "Biscuits and gravy",
+    "n_matches": 21,
+    "before": [
+      "Baked snacks & pastries",
+      "Processed meat",
+      "Sauces"
+    ],
+    "after": [
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Reuben sandwich",
+    "n_matches": 54,
+    "before": [
+      "Processed meat",
+      "Aged cheese",
+      "Bread & rolls",
+      "Pickled vegetables"
+    ],
+    "after": [
+      "Aged cheese",
+      "Pickled vegetables",
+      "Bread & rolls",
+      "Red meat",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Buffalo wings",
+    "n_matches": 134,
+    "before": [
+      "Poultry",
+      "Sauces",
+      "Dressings & dips"
+    ],
+    "after": [
+      "Poultry",
+      "Sauces",
+      "Cream & butter",
+      "Dressings & dips"
+    ]
+  },
+  {
+    "name": "Chili con carne",
+    "n_matches": 371,
+    "before": [
+      "Red meat",
+      "Legumes",
+      "Peppers & nightshades",
+      "Ground spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Red meat",
+      "Ground spices",
+      "Salt & seasonings",
+      "Legumes"
+    ]
+  },
+  {
+    "name": "Lobster roll",
+    "n_matches": 20,
+    "before": [
+      "Shellfish",
+      "Bread & rolls",
+      "Dressings & dips"
+    ],
+    "after": [
+      "Shellfish",
+      "Extracts & essences",
+      "Cream & butter",
+      "Other vegetables",
+      "Citrus",
+      "Salt & seasonings",
+      "Processed meat",
+      "Fresh herbs",
+      "Bread & rolls"
+    ]
+  },
+  {
+    "name": "Shepherd's pie",
+    "n_matches": 384,
+    "before": [
+      "Red meat",
+      "Starchy vegetables",
+      "Other vegetables"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Other vegetables",
+      "Red meat",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Cream & butter",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Beef Wellington",
+    "n_matches": 53,
+    "before": [
+      "Red meat",
+      "Mushrooms",
+      "Baked snacks & pastries",
+      "Cream & butter"
+    ],
+    "after": [
+      "Eggs",
+      "Baked snacks & pastries",
+      "Red meat",
+      "Mushrooms",
+      "Other vegetables",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Fresh herbs",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Toad in the hole",
+    "n_matches": 54,
+    "before": [
+      "Processed meat",
+      "Bread & rolls",
+      "Eggs"
+    ],
+    "after": [
+      "Eggs",
+      "Flours",
+      "Milk",
+      "Salt & seasonings",
+      "Processed meat",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Ratatouille",
+    "n_matches": 259,
+    "before": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Oils",
+      "Fresh herbs"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Oils",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Beef bourguignon",
+    "n_matches": 109,
+    "before": [
+      "Red meat",
+      "Mushrooms",
+      "Other vegetables",
+      "Alcoholic beverages"
+    ],
+    "after": [
+      "Other vegetables",
+      "Mushrooms",
+      "Red meat",
+      "Alcoholic beverages",
+      "Fresh herbs",
+      "Flours",
+      "Peppers & nightshades",
+      "Dried herbs",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Processed meat",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Coq au vin",
+    "n_matches": 182,
+    "before": [
+      "Poultry",
+      "Alcoholic beverages",
+      "Mushrooms",
+      "Processed meat"
+    ],
+    "after": [
+      "Other vegetables",
+      "Poultry",
+      "Mushrooms",
+      "Fresh herbs",
+      "Alcoholic beverages",
+      "Processed meat",
+      "Flours",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Dried herbs",
+      "Peppers & nightshades",
+      "Oils",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Bouillabaisse",
+    "n_matches": 88,
+    "before": [
+      "White fish",
+      "Shellfish",
+      "Peppers & nightshades",
+      "Prepared soups & broths"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Oils",
+      "Shellfish",
+      "Fresh herbs",
+      "Salt & seasonings",
+      "Whole spices",
+      "White fish",
+      "Alcoholic beverages",
+      "Dried herbs",
+      "Starchy vegetables"
+    ]
+  },
+  {
+    "name": "Quiche Lorraine",
+    "n_matches": 322,
+    "before": [
+      "Eggs",
+      "Aged cheese",
+      "Processed meat",
+      "Baked snacks & pastries"
+    ],
+    "after": [
+      "Eggs",
+      "Processed meat",
+      "Aged cheese",
+      "Salt & seasonings",
+      "Other vegetables",
+      "Ground spices",
+      "Cream & butter",
+      "Peppers & nightshades",
+      "Baked snacks & pastries",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Cassoulet",
+    "n_matches": 75,
+    "before": [
+      "Legumes",
+      "Processed meat",
+      "Poultry"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Processed meat",
+      "Red meat",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Poultry",
+      "Oils",
+      "Dried herbs",
+      "Bread & rolls",
+      "Alcoholic beverages"
+    ]
+  },
+  {
+    "name": "Caprese salad",
+    "n_matches": 53,
+    "before": [
+      "Fresh cheese",
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Oils"
+    ],
+    "after": [
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Oils",
+      "Fresh cheese",
+      "Salt & seasonings",
+      "Dressings & dips"
+    ]
+  },
+  {
+    "name": "Pasta carbonara",
+    "n_matches": 75,
+    "before": [
+      "Refined grains",
+      "Processed meat",
+      "Eggs",
+      "Aged cheese"
+    ],
+    "after": [
+      "Processed meat",
+      "Aged cheese",
+      "Eggs",
+      "Other vegetables",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Cream & butter",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Pasta bolognese",
+    "n_matches": 26,
+    "before": [
+      "Refined grains",
+      "Red meat",
+      "Peppers & nightshades",
+      "Aged cheese"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Salt & seasonings",
+      "Oils",
+      "Alcoholic beverages",
+      "Refined grains",
+      "Starchy vegetables",
+      "Processed meat"
+    ]
+  },
+  {
+    "name": "Pesto pasta",
+    "n_matches": 24,
+    "before": [
+      "Refined grains",
+      "Sauces",
+      "Aged cheese",
+      "Nuts"
+    ],
+    "after": [
+      "Refined grains",
+      "Fresh herbs",
+      "Other vegetables",
+      "Oils",
+      "Aged cheese",
+      "Peppers & nightshades",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Mushroom risotto",
+    "n_matches": 57,
+    "before": [
+      "Refined grains",
+      "Mushrooms",
+      "Cream & butter",
+      "Aged cheese"
+    ],
+    "after": [
+      "Mushrooms",
+      "Other vegetables",
+      "Refined grains",
+      "Oils",
+      "Cream & butter",
+      "Aged cheese",
+      "Poultry",
+      "Salt & seasonings",
+      "Fresh herbs",
+      "Alcoholic beverages"
+    ]
+  },
+  {
+    "name": "Risotto Milanese",
+    "n_matches": 23,
+    "before": [
+      "Refined grains",
+      "Whole spices",
+      "Cream & butter",
+      "Aged cheese"
+    ],
+    "after": [
+      "Other vegetables",
+      "Cream & butter",
+      "Refined grains",
+      "Poultry",
+      "Whole spices",
+      "Alcoholic beverages",
+      "Aged cheese",
+      "Salt & seasonings",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Pizza margherita",
+    "n_matches": 54,
+    "before": [
+      "Bread & rolls",
+      "Fresh cheese",
+      "Peppers & nightshades",
+      "Fresh herbs"
+    ],
+    "after": [
+      "Fresh cheese",
+      "Fresh herbs",
+      "Peppers & nightshades",
+      "Oils",
+      "Salt & seasonings",
+      "Flours"
+    ]
+  },
+  {
+    "name": "Osso buco",
+    "n_matches": 58,
+    "before": [
+      "Red meat",
+      "Other vegetables",
+      "Sauces",
+      "Alcoholic beverages"
+    ],
+    "after": [
+      "Other vegetables",
+      "Alcoholic beverages",
+      "Red meat",
+      "Fresh herbs",
+      "Starchy vegetables",
+      "Peppers & nightshades",
+      "Oils",
+      "Flours",
+      "Salt & seasonings",
+      "Dried herbs",
+      "Citrus"
+    ]
+  },
+  {
+    "name": "Lasagna",
+    "n_matches": 2135,
+    "before": [
+      "Refined grains",
+      "Red meat",
+      "Fresh cheese",
+      "Aged cheese",
+      "Peppers & nightshades"
+    ],
+    "after": [
+      "Fresh cheese",
+      "Red meat",
+      "Refined grains",
+      "Aged cheese",
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Fresh herbs",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Paella",
+    "n_matches": 177,
+    "before": [
+      "Refined grains",
+      "Shellfish",
+      "Poultry",
+      "Peppers & nightshades",
+      "Whole spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Poultry",
+      "Refined grains",
+      "Shellfish",
+      "Oils",
+      "Legumes",
+      "Whole spices",
+      "Processed meat",
+      "Salt & seasonings",
+      "Fresh herbs",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Gazpacho",
+    "n_matches": 375,
+    "before": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Oils",
+      "Dressings & dips"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Oils",
+      "Salt & seasonings",
+      "Dressings & dips",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Wiener schnitzel",
+    "n_matches": 57,
+    "before": [
+      "Red meat",
+      "Bread & rolls",
+      "Eggs",
+      "Citrus"
+    ],
+    "after": [
+      "Eggs",
+      "Red meat",
+      "Bread & rolls",
+      "Flours",
+      "Salt & seasonings",
+      "Citrus",
+      "Cream & butter",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Sauerbraten",
+    "n_matches": 182,
+    "before": [
+      "Red meat",
+      "Pickled vegetables",
+      "Sauces"
+    ],
+    "after": [
+      "Other vegetables",
+      "Dressings & dips",
+      "Red meat",
+      "Dried herbs",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Sugar & sweeteners",
+      "Whole spices"
+    ]
+  },
+  {
+    "name": "Pierogi (potato-cheese)",
+    "n_matches": 66,
+    "before": [
+      "Refined grains",
+      "Starchy vegetables",
+      "Fresh cheese",
+      "Cream & butter"
+    ],
+    "after": [
+      "Flours",
+      "Eggs",
+      "Salt & seasonings",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Borscht",
+    "n_matches": 83,
+    "before": [
+      "Starchy vegetables",
+      "Other vegetables",
+      "Cream & butter"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Fermented dairy",
+      "Leafy greens",
+      "Fresh herbs",
+      "Red meat",
+      "Dressings & dips"
+    ]
+  },
+  {
+    "name": "Goulash",
+    "n_matches": 416,
+    "before": [
+      "Red meat",
+      "Peppers & nightshades",
+      "Starchy vegetables",
+      "Ground spices"
+    ],
+    "after": [
+      "Red meat",
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Refined grains",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Stuffed cabbage rolls",
+    "n_matches": 154,
+    "before": [
+      "Other vegetables",
+      "Red meat",
+      "Refined grains",
+      "Sauces"
+    ],
+    "after": [
+      "Leafy greens",
+      "Other vegetables",
+      "Red meat",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Refined grains",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Swedish meatballs",
+    "n_matches": 589,
+    "before": [
+      "Red meat",
+      "Sauces",
+      "Cream & butter",
+      "Jams & preserves"
+    ],
+    "after": [
+      "Red meat",
+      "Other vegetables",
+      "Eggs",
+      "Salt & seasonings",
+      "Bread & rolls",
+      "Peppers & nightshades",
+      "Milk"
+    ]
+  },
+  {
+    "name": "Moussaka",
+    "n_matches": 144,
+    "before": [
+      "Red meat",
+      "Other vegetables",
+      "Aged cheese",
+      "Cream & butter"
+    ],
+    "after": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Salt & seasonings",
+      "Ground spices",
+      "Red meat",
+      "Fresh herbs",
+      "Eggs",
+      "Oils",
+      "Aged cheese",
+      "Cream & butter",
+      "Milk",
+      "Flours"
+    ]
+  },
+  {
+    "name": "Spanakopita",
+    "n_matches": 112,
+    "before": [
+      "Leafy greens",
+      "Aged cheese",
+      "Baked snacks & pastries",
+      "Eggs"
+    ],
+    "after": [
+      "Fresh cheese",
+      "Other vegetables",
+      "Eggs",
+      "Fresh herbs",
+      "Leafy greens",
+      "Cream & butter",
+      "Baked snacks & pastries",
+      "Oils",
+      "Salt & seasonings",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Kung pao chicken",
+    "n_matches": 83,
+    "before": [
+      "Poultry",
+      "Peppers & nightshades",
+      "Nuts",
+      "Sauces"
+    ],
+    "after": [
+      "Sauces",
+      "Peppers & nightshades",
+      "Refined grains",
+      "Poultry",
+      "Oils",
+      "Other vegetables",
+      "Nuts",
+      "Sugar & sweeteners",
+      "Dressings & dips",
+      "Pickled vegetables",
+      "Alcoholic beverages"
+    ]
+  },
+  {
+    "name": "Wonton soup",
+    "n_matches": 48,
+    "before": [
+      "Bread & rolls",
+      "Red meat",
+      "Prepared soups & broths",
+      "Leafy greens"
+    ],
+    "after": [
+      "Other vegetables",
+      "Poultry",
+      "Sauces",
+      "Red meat",
+      "Bread & rolls",
+      "Oils",
+      "Pickled vegetables",
+      "Peppers & nightshades",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Okonomiyaki",
+    "n_matches": 38,
+    "before": [
+      "Eggs",
+      "Leafy greens",
+      "Processed meat",
+      "Sauces"
+    ],
+    "after": [
+      "Eggs",
+      "Flours",
+      "Leafy greens",
+      "Other vegetables",
+      "Sauces",
+      "Extracts & essences",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Sukiyaki",
+    "n_matches": 64,
+    "before": [
+      "Red meat",
+      "Soy products",
+      "Leafy greens",
+      "Sauces"
+    ],
+    "after": [
+      "Sauces",
+      "Other vegetables",
+      "Mushrooms",
+      "Sugar & sweeteners",
+      "Red meat",
+      "Oils",
+      "Leafy greens"
+    ]
+  },
+  {
+    "name": "Bibimbap",
+    "n_matches": 22,
+    "before": [
+      "Refined grains",
+      "Red meat",
+      "Eggs",
+      "Other vegetables",
+      "Pastes & ferments"
+    ],
+    "after": [
+      "Other vegetables",
+      "Oils",
+      "Eggs",
+      "Sauces",
+      "Refined grains",
+      "Starchy vegetables",
+      "Seeds",
+      "Sugar & sweeteners",
+      "Peppers & nightshades",
+      "Red meat",
+      "Mushrooms",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Pad thai",
+    "n_matches": 149,
+    "before": [
+      "Refined grains",
+      "Shellfish",
+      "Eggs",
+      "Sauces",
+      "Nuts"
+    ],
+    "after": [
+      "Sauces",
+      "Other vegetables",
+      "Nuts",
+      "Eggs",
+      "Oils",
+      "Sugar & sweeteners",
+      "Refined grains",
+      "Citrus",
+      "Shellfish",
+      "Fresh herbs",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Nasi goreng",
+    "n_matches": 49,
+    "before": [
+      "Refined grains",
+      "Eggs",
+      "Processed meat",
+      "Sauces"
+    ],
+    "after": [
+      "Other vegetables",
+      "Refined grains",
+      "Oils",
+      "Eggs",
+      "Peppers & nightshades",
+      "Sauces",
+      "Shellfish"
+    ]
+  },
+  {
+    "name": "Beef rendang",
+    "n_matches": 29,
+    "before": [
+      "Red meat",
+      "Pastes & ferments",
+      "Whole spices",
+      "Nuts"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Red meat",
+      "Citrus",
+      "Ground spices",
+      "Plant milks",
+      "Salt & seasonings",
+      "Sugar & sweeteners",
+      "Oils",
+      "Sauces",
+      "Tropical fruits"
+    ]
+  },
+  {
+    "name": "Chicken adobo",
+    "n_matches": 113,
+    "before": [
+      "Poultry",
+      "Sauces",
+      "Whole spices",
+      "Refined grains"
+    ],
+    "after": [
+      "Poultry",
+      "Other vegetables",
+      "Sauces",
+      "Dressings & dips",
+      "Dried herbs",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Lumpia",
+    "n_matches": 73,
+    "before": [
+      "Bread & rolls",
+      "Red meat",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Starchy vegetables",
+      "Sauces",
+      "Eggs",
+      "Salt & seasonings",
+      "Peppers & nightshades",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Pancit",
+    "n_matches": 38,
+    "before": [
+      "Refined grains",
+      "Poultry",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "after": [
+      "Other vegetables",
+      "Sauces",
+      "Starchy vegetables",
+      "Leafy greens",
+      "Poultry",
+      "Refined grains",
+      "Oils",
+      "Peppers & nightshades"
+    ]
+  },
+  {
+    "name": "Butter chicken",
+    "n_matches": 106,
+    "before": [
+      "Poultry",
+      "Sauces",
+      "Cream & butter",
+      "Ground spices"
+    ],
+    "after": [
+      "Cream & butter",
+      "Peppers & nightshades",
+      "Poultry",
+      "Other vegetables",
+      "Ground spices",
+      "Spice blends",
+      "Salt & seasonings",
+      "Pickled vegetables",
+      "Yogurt"
+    ]
+  },
+  {
+    "name": "Chicken tikka masala",
+    "n_matches": 121,
+    "before": [
+      "Poultry",
+      "Sauces",
+      "Cream & butter",
+      "Ground spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Poultry",
+      "Ground spices",
+      "Salt & seasonings",
+      "Pickled vegetables",
+      "Cream & butter",
+      "Spice blends",
+      "Yogurt",
+      "Fresh herbs",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Pork vindaloo",
+    "n_matches": 26,
+    "before": [
+      "Red meat",
+      "Pastes & ferments",
+      "Whole spices",
+      "Sauces"
+    ],
+    "after": [
+      "Other vegetables",
+      "Ground spices",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Red meat",
+      "Oils",
+      "Dressings & dips",
+      "Pickled vegetables",
+      "Whole spices",
+      "Sugar & sweeteners"
+    ]
+  },
+  {
+    "name": "Chicken korma",
+    "n_matches": 47,
+    "before": [
+      "Poultry",
+      "Cream & butter",
+      "Nuts",
+      "Whole spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Ground spices",
+      "Poultry",
+      "Oils",
+      "Salt & seasonings",
+      "Whole spices",
+      "Spice blends",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Yogurt",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Rogan josh",
+    "n_matches": 23,
+    "before": [
+      "Red meat",
+      "Sauces",
+      "Ground spices",
+      "Cream & butter"
+    ],
+    "after": [
+      "Ground spices",
+      "Other vegetables",
+      "Yogurt",
+      "Red meat",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Pickled vegetables",
+      "Spice blends",
+      "Whole spices",
+      "Oils",
+      "Fresh herbs",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Chicken biryani",
+    "n_matches": 38,
+    "before": [
+      "Poultry",
+      "Refined grains",
+      "Whole spices",
+      "Cream & butter"
+    ],
+    "after": [
+      "Other vegetables",
+      "Refined grains",
+      "Poultry",
+      "Ground spices",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Oils",
+      "Fresh herbs",
+      "Whole spices",
+      "Pickled vegetables",
+      "Spice blends",
+      "Cream & butter",
+      "Yogurt"
+    ]
+  },
+  {
+    "name": "Palak paneer",
+    "n_matches": 31,
+    "before": [
+      "Leafy greens",
+      "Fresh cheese",
+      "Cream & butter",
+      "Ground spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Salt & seasonings",
+      "Fresh cheese",
+      "Leafy greens",
+      "Oils",
+      "Pickled vegetables",
+      "Spice blends",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Chana masala",
+    "n_matches": 27,
+    "before": [
+      "Legumes",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Other vegetables"
+    ],
+    "after": [
+      "Ground spices",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Spice blends",
+      "Oils",
+      "Salt & seasonings",
+      "Legumes",
+      "Pickled vegetables",
+      "Fresh herbs",
+      "Citrus"
+    ]
+  },
+  {
+    "name": "Aloo gobi",
+    "n_matches": 23,
+    "before": [
+      "Starchy vegetables",
+      "Other vegetables",
+      "Ground spices",
+      "Oils"
+    ],
+    "after": [
+      "Ground spices",
+      "Starchy vegetables",
+      "Cruciferous vegetables",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Oils",
+      "Pickled vegetables",
+      "Salt & seasonings",
+      "Spice blends",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Tandoori chicken",
+    "n_matches": 86,
+    "before": [
+      "Poultry",
+      "Yogurt",
+      "Ground spices",
+      "Citrus"
+    ],
+    "after": [
+      "Poultry",
+      "Other vegetables",
+      "Yogurt",
+      "Ground spices",
+      "Salt & seasonings",
+      "Citrus",
+      "Pickled vegetables",
+      "Peppers & nightshades",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Baba ganoush",
+    "n_matches": 21,
+    "before": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Sauces",
+      "Oils"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Citrus",
+      "Nut butters",
+      "Salt & seasonings",
+      "Oils",
+      "Fresh herbs",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Tabbouleh",
+    "n_matches": 113,
+    "before": [
+      "Fresh herbs",
+      "Whole grains",
+      "Peppers & nightshades",
+      "Citrus"
+    ],
+    "after": [
+      "Fresh herbs",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Citrus",
+      "Oils",
+      "Salt & seasonings",
+      "Whole grains"
+    ]
+  },
+  {
+    "name": "Fattoush",
+    "n_matches": 47,
+    "before": [
+      "Leafy greens",
+      "Bread & rolls",
+      "Peppers & nightshades",
+      "Ground spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Fresh herbs",
+      "Oils",
+      "Peppers & nightshades",
+      "Bread & rolls",
+      "Citrus",
+      "Salt & seasonings",
+      "Leafy greens",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Lamb tagine (prune & almond)",
+    "n_matches": 21,
+    "before": [
+      "Red meat",
+      "Dried fruits",
+      "Nuts",
+      "Whole spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Red meat",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Sugar & sweeteners",
+      "Whole spices",
+      "Dried fruits",
+      "Fresh herbs",
+      "Poultry",
+      "Pickled vegetables",
+      "Citrus"
+    ]
+  },
+  {
+    "name": "Harira",
+    "n_matches": 27,
+    "before": [
+      "Legumes",
+      "Red meat",
+      "Whole spices",
+      "Fresh herbs"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Legumes",
+      "Fresh herbs",
+      "Citrus",
+      "Oils",
+      "Red meat",
+      "Salt & seasonings",
+      "Refined grains",
+      "Whole spices"
+    ]
+  },
+  {
+    "name": "Shakshuka",
+    "n_matches": 42,
+    "before": [
+      "Eggs",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Fresh herbs"
+    ],
+    "after": [
+      "Eggs",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Oils",
+      "Ground spices",
+      "Salt & seasonings",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Jollof rice",
+    "n_matches": 21,
+    "before": [
+      "Refined grains",
+      "Peppers & nightshades",
+      "Poultry",
+      "Ground spices"
+    ],
+    "after": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Refined grains",
+      "Oils",
+      "Poultry",
+      "Salt & seasonings",
+      "Fresh herbs",
+      "Red meat"
+    ]
+  },
+  {
+    "name": "Bobotie",
+    "n_matches": 30,
+    "before": [
+      "Red meat",
+      "Eggs",
+      "Dried fruits",
+      "Ground spices"
+    ],
+    "after": [
+      "Other vegetables",
+      "Eggs",
+      "Salt & seasonings",
+      "Dried fruits",
+      "Red meat",
+      "Spice blends",
+      "Bread & rolls",
+      "Milk",
+      "Ground spices",
+      "Peppers & nightshades",
+      "Dried herbs",
+      "Nuts",
+      "Sugar & sweeteners",
+      "Dressings & dips",
+      "Oils",
+      "Cream & butter",
+      "Citrus",
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Tacos al pastor",
+    "n_matches": 21,
+    "before": [
+      "Red meat",
+      "Bread & rolls",
+      "Tropical fruits",
+      "Fresh herbs"
+    ],
+    "after": [
+      "Fresh herbs",
+      "Other vegetables",
+      "Ground spices",
+      "Red meat",
+      "Peppers & nightshades",
+      "Tropical fruits",
+      "Salt & seasonings",
+      "Dressings & dips",
+      "Bread & rolls",
+      "Oils",
+      "Sauces",
+      "Citrus"
+    ]
+  },
+  {
+    "name": "Baja fish tacos",
+    "n_matches": 24,
+    "before": [
+      "White fish",
+      "Bread & rolls",
+      "Leafy greens",
+      "Dressings & dips"
+    ],
+    "after": [
+      "Bread & rolls",
+      "Citrus",
+      "Leafy greens",
+      "Oils",
+      "Fresh herbs",
+      "White fish",
+      "Salt & seasonings",
+      "Other vegetables",
+      "Extracts & essences",
+      "Peppers & nightshades",
+      "Flours",
+      "Sauces"
+    ]
+  },
+  {
+    "name": "Tamales",
+    "n_matches": 27,
+    "before": [
+      "Whole grains",
+      "Red meat",
+      "Sauces",
+      "Oils"
+    ],
+    "after": [
+      "Salt & seasonings",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Red meat",
+      "Starchy vegetables",
+      "Oils",
+      "Baking ingredients",
+      "Flours"
+    ]
+  },
+  {
+    "name": "Chilaquiles",
+    "n_matches": 54,
+    "before": [
+      "Bread & rolls",
+      "Eggs",
+      "Sauces",
+      "Aged cheese"
+    ],
+    "after": [
+      "Other vegetables",
+      "Bread & rolls",
+      "Peppers & nightshades",
+      "Oils",
+      "Aged cheese",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Huevos rancheros",
+    "n_matches": 127,
+    "before": [
+      "Eggs",
+      "Bread & rolls",
+      "Sauces",
+      "Legumes"
+    ],
+    "after": [
+      "Eggs",
+      "Other vegetables",
+      "Bread & rolls",
+      "Peppers & nightshades",
+      "Oils",
+      "Salt & seasonings",
+      "Fresh herbs",
+      "Sauces",
+      "Aged cheese"
+    ]
+  },
+  {
+    "name": "Feijoada",
+    "n_matches": 27,
+    "before": [
+      "Legumes",
+      "Red meat",
+      "Processed meat",
+      "Refined grains"
+    ],
+    "after": [
+      "Other vegetables",
+      "Processed meat",
+      "Red meat",
+      "Oils",
+      "Peppers & nightshades",
+      "Salt & seasonings",
+      "Dried herbs"
+    ]
+  },
+  {
+    "name": "Jerk chicken",
+    "n_matches": 53,
+    "before": [
+      "Poultry",
+      "Spice blends",
+      "Peppers & nightshades",
+      "Refined grains"
+    ],
+    "after": [
+      "Other vegetables",
+      "Poultry",
+      "Whole spices",
+      "Salt & seasonings",
+      "Fresh herbs",
+      "Ground spices",
+      "Peppers & nightshades",
+      "Oils",
+      "Sugar & sweeteners",
+      "Sauces",
+      "Citrus",
+      "Alcoholic beverages",
+      "Dressings & dips"
+    ]
+  },
+  {
+    "name": "Ropa vieja",
+    "n_matches": 57,
+    "before": [
+      "Red meat",
+      "Peppers & nightshades",
+      "Sauces",
+      "Refined grains"
+    ],
+    "after": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Red meat",
+      "Salt & seasonings",
+      "Oils",
+      "Ground spices",
+      "Dried herbs",
+      "Fresh herbs"
+    ]
+  },
+  {
+    "name": "Cuban sandwich",
+    "n_matches": 37,
+    "before": [
+      "Bread & rolls",
+      "Processed meat",
+      "Aged cheese",
+      "Pickled vegetables"
+    ],
+    "after": [
+      "Aged cheese",
+      "Bread & rolls",
+      "Red meat",
+      "Processed meat",
+      "Pickled vegetables",
+      "Leafy greens",
+      "Extracts & essences",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Arepas",
+    "n_matches": 21,
+    "before": [
+      "Whole grains",
+      "Aged cheese",
+      "Eggs",
+      "Other vegetables"
+    ],
+    "after": [
+      "Salt & seasonings",
+      "Flours",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Tostones",
+    "n_matches": 26,
+    "before": [
+      "Starchy vegetables",
+      "Oils",
+      "Sauces"
+    ],
+    "after": [
+      "Salt & seasonings",
+      "Starchy vegetables",
+      "Oils",
+      "Other vegetables"
+    ]
+  },
+  {
+    "name": "Arroz con pollo",
+    "n_matches": 177,
+    "before": [
+      "Poultry",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Whole spices"
+    ],
+    "after": [
+      "Poultry",
+      "Peppers & nightshades",
+      "Refined grains",
+      "Other vegetables",
+      "Oils",
+      "Salt & seasonings",
+      "Legumes",
+      "Fresh herbs",
+      "Ground spices"
+    ]
+  },
+  {
+    "name": "Antipasto platter",
+    "n_matches": 26,
+    "before": [
+      "Processed meat",
+      "Aged cheese",
+      "Pickled vegetables",
+      "Other vegetables"
+    ],
+    "after": [
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Processed meat",
+      "Other vegetables",
+      "Fresh herbs",
+      "Fresh cheese",
+      "Dressings & dips",
+      "Aged cheese",
+      "Mushrooms",
+      "Oils"
+    ]
+  },
+  {
+    "name": "Caramel popcorn",
+    "n_matches": 347,
+    "before": [
+      "Whole grains",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Nuts"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Baking ingredients",
+      "Salt & seasonings",
+      "Margarine & shortening",
+      "Extracts & essences",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Trail mix",
+    "n_matches": 66,
+    "before": [
+      "Nuts",
+      "Dried fruits",
+      "Seeds",
+      "Candy & desserts"
+    ],
+    "after": [
+      "Nuts",
+      "Dried fruits",
+      "Tropical fruits",
+      "Candy & desserts"
+    ]
+  },
+  {
+    "name": "Carrot cake with cream cheese frosting",
+    "n_matches": 73,
+    "before": [
+      "Bread & rolls",
+      "Starchy vegetables",
+      "Cream & butter",
+      "Nuts"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Flours",
+      "Eggs",
+      "Baking ingredients",
+      "Starchy vegetables",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Extracts & essences",
+      "Fresh cheese",
+      "Cream & butter",
+      "Nuts"
+    ]
+  },
+  {
+    "name": "New York cheesecake",
+    "n_matches": 90,
+    "before": [
+      "Fresh cheese",
+      "Eggs",
+      "Sugar & sweeteners",
+      "Cream & butter"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Fresh cheese",
+      "Eggs",
+      "Extracts & essences",
+      "Cream & butter",
+      "Fermented dairy",
+      "Baked snacks & pastries",
+      "Flours"
+    ]
+  },
+  {
+    "name": "Strawberry cheesecake",
+    "n_matches": 77,
+    "before": [
+      "Fresh cheese",
+      "Berries",
+      "Sugar & sweeteners",
+      "Cream & butter"
+    ],
+    "after": [
+      "Berries",
+      "Sugar & sweeteners",
+      "Fresh cheese",
+      "Baked snacks & pastries",
+      "Cream & butter",
+      "Extracts & essences",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Tres leches cake",
+    "n_matches": 46,
+    "before": [
+      "Bread & rolls",
+      "Milk",
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Milk",
+      "Eggs",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Extracts & essences",
+      "Flours",
+      "Baking ingredients"
+    ]
+  },
+  {
+    "name": "Red velvet cake",
+    "n_matches": 868,
+    "before": [
+      "Bread & rolls",
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Fresh cheese"
+    ],
+    "after": [
+      "Baking ingredients",
+      "Eggs",
+      "Milk",
+      "Sugar & sweeteners",
+      "Extracts & essences",
+      "Flours",
+      "Candy & desserts",
+      "Dressings & dips",
+      "Salt & seasonings",
+      "Margarine & shortening"
+    ]
+  },
+  {
+    "name": "Apple pie",
+    "n_matches": 890,
+    "before": [
+      "Temperate fruits",
+      "Baked snacks & pastries",
+      "Sugar & sweeteners",
+      "Ground spices"
+    ],
+    "after": [
+      "Temperate fruits",
+      "Sugar & sweeteners",
+      "Ground spices",
+      "Flours",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Pumpkin pie",
+    "n_matches": 1210,
+    "before": [
+      "Starchy vegetables",
+      "Baked snacks & pastries",
+      "Sugar & sweeteners",
+      "Whole spices"
+    ],
+    "after": [
+      "Starchy vegetables",
+      "Eggs",
+      "Sugar & sweeteners",
+      "Milk",
+      "Ground spices",
+      "Salt & seasonings",
+      "Pickled vegetables",
+      "Whole spices"
+    ]
+  },
+  {
+    "name": "Pecan pie",
+    "n_matches": 2650,
+    "before": [
+      "Nuts",
+      "Baked snacks & pastries",
+      "Sugar & sweeteners",
+      "Eggs"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Eggs",
+      "Nuts",
+      "Extracts & essences",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Key lime pie",
+    "n_matches": 610,
+    "before": [
+      "Citrus",
+      "Milk",
+      "Baked snacks & pastries",
+      "Eggs"
+    ],
+    "after": [
+      "Milk",
+      "Citrus",
+      "Baked snacks & pastries",
+      "Eggs",
+      "Sugar & sweeteners"
+    ]
+  },
+  {
+    "name": "Tiramisu",
+    "n_matches": 305,
+    "before": [
+      "Baked snacks & pastries",
+      "Fresh cheese",
+      "Coffee & tea",
+      "Eggs"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Sugar & sweeteners",
+      "Candy & desserts",
+      "Fresh cheese",
+      "Eggs",
+      "Baked snacks & pastries",
+      "Alcoholic beverages",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Panna cotta",
+    "n_matches": 35,
+    "before": [
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Berries",
+      "Extracts & essences"
+    ],
+    "after": [
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Milk",
+      "Extracts & essences"
+    ]
+  },
+  {
+    "name": "Bread pudding",
+    "n_matches": 969,
+    "before": [
+      "Bread & rolls",
+      "Milk",
+      "Eggs",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Eggs",
+      "Sugar & sweeteners",
+      "Milk",
+      "Bread & rolls",
+      "Extracts & essences",
+      "Ground spices",
+      "Dried fruits",
+      "Cream & butter",
+      "Salt & seasonings"
+    ]
+  },
+  {
+    "name": "Chocolate fondue",
+    "n_matches": 110,
+    "before": [
+      "Candy & desserts",
+      "Cream & butter",
+      "Temperate fruits",
+      "Berries"
+    ],
+    "after": [
+      "Candy & desserts",
+      "Cream & butter"
+    ]
+  },
+  {
+    "name": "Affogato",
+    "n_matches": 21,
+    "before": [
+      "Coffee & tea",
+      "Frozen dairy"
+    ],
+    "after": [
+      "Coffee & tea",
+      "Cream & butter",
+      "Candy & desserts"
+    ]
+  },
+  {
+    "name": "Green smoothie",
+    "n_matches": 55,
+    "before": [
+      "Leafy greens",
+      "Temperate fruits",
+      "Seeds",
+      "Milk"
+    ],
+    "after": [
+      "Tropical fruits",
+      "Leafy greens",
+      "Temperate fruits"
+    ]
+  },
+  {
+    "name": "Greek salad",
+    "n_matches": null,
+    "before": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Fresh cheese",
+      "Oils",
+      "Fresh herbs",
+      "Dressings & dips",
+      "Salt & seasonings",
+      "Leafy greens"
+    ],
+    "after": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Fresh cheese",
+      "Oils",
+      "Fresh herbs",
+      "Dressings & dips",
+      "Salt & seasonings"
+    ],
+    "kind": "hand-fix"
+  },
+  {
+    "name": "Carrot cake with cream cheese frosting",
+    "n_matches": null,
+    "before": [
+      "Sugar & sweeteners",
+      "Flours",
+      "Eggs",
+      "Baking ingredients",
+      "Starchy vegetables",
+      "Ground spices",
+      "Oils",
+      "Salt & seasonings",
+      "Extracts & essences",
+      "Fresh cheese",
+      "Cream & butter",
+      "Nuts"
+    ],
+    "after": [
+      "Flours",
+      "Sugar & sweeteners",
+      "Eggs",
+      "Baking ingredients",
+      "Starchy vegetables",
+      "Ground spices",
+      "Oils",
+      "Extracts & essences",
+      "Fresh cheese",
+      "Cream & butter",
+      "Salt & seasonings",
+      "Nuts",
+      "Tropical fruits"
+    ],
+    "kind": "hand-fix"
+  },
+  {
+    "name": "Tres leches cake",
+    "n_matches": null,
+    "before": [
+      "Milk",
+      "Eggs",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Extracts & essences",
+      "Flours",
+      "Baking ingredients"
+    ],
+    "after": [
+      "Flours",
+      "Sugar & sweeteners",
+      "Eggs",
+      "Baking ingredients",
+      "Milk",
+      "Cream & butter",
+      "Extracts & essences",
+      "Salt & seasonings"
+    ],
+    "kind": "hand-fix"
+  },
+  {
+    "name": "Red velvet cake",
+    "n_matches": null,
+    "before": [
+      "Baking ingredients",
+      "Eggs",
+      "Milk",
+      "Sugar & sweeteners",
+      "Extracts & essences",
+      "Flours",
+      "Candy & desserts",
+      "Dressings & dips",
+      "Salt & seasonings",
+      "Margarine & shortening"
+    ],
+    "after": [
+      "Flours",
+      "Sugar & sweeteners",
+      "Eggs",
+      "Baking ingredients",
+      "Milk",
+      "Extracts & essences",
+      "Candy & desserts",
+      "Cream & butter",
+      "Fresh cheese",
+      "Dressings & dips",
+      "Salt & seasonings",
+      "Margarine & shortening"
+    ],
+    "kind": "hand-fix"
+  },
+  {
+    "name": "Mochi ice cream",
+    "n_matches": null,
+    "before": [
+      "Refined grains",
+      "Frozen dairy",
+      "Sugar & sweeteners"
+    ],
+    "after": [
+      "Flours",
+      "Frozen dairy",
+      "Sugar & sweeteners",
+      "Extracts & essences"
+    ],
+    "kind": "hand-fix"
+  },
+  {
+    "name": "Crêpes Suzette",
+    "n_matches": null,
+    "before": [
+      "Bread & rolls",
+      "Citrus",
+      "Cream & butter",
+      "Alcoholic beverages"
+    ],
+    "after": [
+      "Flours",
+      "Eggs",
+      "Milk",
+      "Sugar & sweeteners",
+      "Citrus",
+      "Cream & butter",
+      "Alcoholic beverages"
+    ],
+    "kind": "hand-fix"
+  }
+]

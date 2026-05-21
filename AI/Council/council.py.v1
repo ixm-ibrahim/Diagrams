@@ -1,0 +1,3164 @@
+#!/usr/bin/env python3
+"""
+The Council — multi-perspective AI deliberation.
+
+Phase 1: four-stage pipeline scaffold (Pre / Council / Assessment / Synthesis).
+Stages 1 and 3 are empty placeholders; later phases populate them. Fast Mode
+skips Stages 1 and 3 and runs the simple Arbiter. Full Mode runs all four
+stages and produces identical output to Fast Mode until Stages 1 and 3 fill in.
+
+CLI-first (uses `claude -p`), Anthropic API key optional.
+
+Run:  python council.py
+Stop: Ctrl+C
+"""
+
+import http.server, json, subprocess, threading, webbrowser, shutil
+import os, re, datetime
+from urllib.parse import urlparse, unquote
+
+PORT = 8765
+CLI_TIMEOUT_SEC = 300   # bumped from 120 in Phase 1
+
+# Chats folder lives next to this script regardless of where it's launched from.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+CHATS_DIR = os.path.join(_HERE, 'chats')
+os.makedirs(CHATS_DIR, exist_ok=True)
+
+def _slugify(text):
+    """Lowercase, kebab-case, alnum-only slug for folder names. Max 48 chars."""
+    s = re.sub(r'[^A-Za-z0-9\s-]', '', text or '').strip().lower()
+    s = re.sub(r'[\s_-]+', '-', s)
+    return s[:48].strip('-')
+
+def _now_stamp():
+    return datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
+
+def _now_iso():
+    return datetime.datetime.now().isoformat()
+
+HTML = r"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Council</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#0e0e0f; --s1:#161618; --s2:#1c1c1e; --s3:#222224;
+  --border:#2a2a2e; --text:#d4cec8; --muted:#6b6670;
+  --gold:#c9a84c; --red:#c0544a; --green:#4a8c6f;
+  --blue:#4a72a8; --orange:#b8723a; --purple:#7a5ca8;
+}
+html,body { min-height:100%; background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-size:15px; line-height:1.6; }
+
+/* Toolbar */
+#toolbar {
+  position:sticky; top:0; z-index:40;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 16px; height:44px;
+  background:rgba(14,14,15,.92); backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.tb-brand { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:600; letter-spacing:.08em; color:var(--gold); display:flex; align-items:center; gap:7px; }
+.tb-group { display:flex; gap:4px; }
+.tb-btn { width:32px; height:32px; background:transparent; border:1px solid transparent; border-radius:7px; color:var(--muted); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s,color .15s,border-color .15s; }
+.tb-btn:hover { background:var(--s2); color:var(--text); border-color:var(--border); }
+.tb-btn.active { color:var(--gold); border-color:var(--gold); background:rgba(201,168,76,.08); }
+
+/* Side panels */
+.side-panel { position:fixed; top:44px; bottom:0; width:340px; background:var(--s1); border:1px solid var(--border); z-index:90; overflow-y:auto; transition:transform .28s cubic-bezier(.4,0,.2,1); display:flex; flex-direction:column; }
+.side-panel.left  { left:0;  transform:translateX(-100%); }
+.side-panel.right { right:0; transform:translateX(100%); }
+.side-panel.open  { transform:translateX(0); }
+.panel-head { display:flex; align-items:center; justify-content:space-between; padding:16px 18px; border-bottom:1px solid var(--border); font-size:.74rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); flex-shrink:0; }
+.panel-close { background:transparent; border:none; color:var(--muted); font-size:20px; cursor:pointer; padding:2px 5px; border-radius:4px; line-height:1; }
+.panel-close:hover { color:var(--text); }
+.panel-body { padding:16px 18px; flex:1; }
+.panel-footer { padding:14px 18px; border-top:1px solid var(--border); flex-shrink:0; }
+
+/* Settings */
+.s-lbl { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:7px; margin-top:18px; display:flex; align-items:center; justify-content:space-between; }
+.s-lbl:first-child { margin-top:0; }
+.s-lbl .s-hint { font-size:.9em; color:var(--muted); text-transform:none; letter-spacing:0; }
+.key-wrap { display:flex; gap:6px; align-items:center; }
+.key-in { flex:1; background:var(--s2); border:1px solid var(--border); border-radius:7px; padding:7px 10px; color:var(--text); font-family:monospace; font-size:.78rem; outline:none; transition:border-color .15s; min-width:0; }
+.key-in:focus { border-color:var(--gold); }
+.eye-btn { background:var(--s2); border:1px solid var(--border); border-radius:7px; color:var(--muted); width:32px; height:32px; cursor:pointer; font-size:13px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.eye-btn:hover { color:var(--text); }
+.house-ta { width:100%; min-height:160px; max-height:340px; background:var(--s2); border:1px solid var(--border); border-radius:7px; padding:9px 11px; color:var(--text); font-family:'DM Sans',sans-serif; font-size:.78rem; line-height:1.55; outline:none; resize:vertical; transition:border-color .15s; }
+.house-ta:focus { border-color:var(--gold); }
+.s-row { display:flex; gap:6px; margin-top:8px; }
+.mode-pill { display:inline-flex; align-items:center; gap:5px; padding:5px 10px; border-radius:20px; font-size:.74rem; letter-spacing:.05em; }
+.mode-pill.cli { background:rgba(74,140,111,.14); color:var(--green); border:1px solid rgba(74,140,111,.28); }
+.mode-pill.api { background:rgba(201,168,76,.12); color:var(--gold);  border:1px solid rgba(201,168,76,.25); }
+.link-sm { font-size:.75rem; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--border); }
+.link-sm:hover { color:var(--gold); border-color:var(--gold); }
+.ghost-btn { background:transparent; border:1px solid var(--border); border-radius:7px; color:var(--muted); padding:5px 12px; font-family:'DM Sans',sans-serif; font-size:.74rem; cursor:pointer; transition:color .15s,border-color .15s; }
+.ghost-btn:hover { color:var(--text); border-color:var(--text); }
+
+/* Chat list (left panel) */
+.hist-empty { font-size:.85rem; color:var(--muted); font-style:italic; padding:8px 0; }
+.chat-item { display:flex; align-items:flex-start; gap:6px; padding:10px 8px; margin:0 -8px; border-radius:7px; cursor:pointer; transition:background .15s; }
+.chat-item:hover { background:var(--s2); }
+.chat-item.active { background:rgba(201,168,76,.08); border-left:2px solid var(--gold); padding-left:10px; }
+.chat-item-main { flex:1; min-width:0; }
+.chat-item-title { font-size:.85rem; color:var(--text); line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; word-break:break-word; }
+.chat-item-meta { font-size:.7rem; color:var(--muted); margin-top:3px; }
+.chat-item-actions { display:flex; gap:2px; flex-shrink:0; }
+.chat-item-copy, .chat-item-del { background:transparent; border:none; color:var(--muted); cursor:pointer; font-size:12px; padding:2px 6px; border-radius:4px; opacity:0; transition:opacity .15s,color .15s; }
+.chat-item:hover .chat-item-copy, .chat-item:hover .chat-item-del { opacity:.55; }
+.chat-item-copy:hover { color:var(--gold); opacity:1 !important; }
+.chat-item-del:hover { color:var(--red); opacity:1 !important; }
+
+/* Modal */
+#editor-overlay { position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .2s; }
+#editor-overlay.open { opacity:1; pointer-events:all; }
+#editor-modal { background:var(--s1); border:1px solid var(--border); border-radius:14px; width:min(680px,94vw); max-height:82vh; overflow-y:auto; transform:scale(.97) translateY(8px); transition:transform .22s ease; }
+#editor-overlay.open #editor-modal { transform:scale(1) translateY(0); }
+.modal-head { display:flex; align-items:center; justify-content:space-between; padding:18px 24px 16px; border-bottom:1px solid var(--border); position:sticky; top:0; background:var(--s1); z-index:1; }
+.modal-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#ede8e0; }
+.modal-head-r { display:flex; gap:8px; align-items:center; }
+.modal-body { padding:16px 24px 20px; }
+.modal-foot { padding:14px 24px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; position:sticky; bottom:0; background:var(--s1); }
+
+/* Member cards */
+.member-card { border:1px solid var(--border); border-radius:10px; margin-bottom:10px; overflow:hidden; background:var(--s2); }
+.mc-head { display:flex; align-items:center; gap:10px; padding:12px 14px; cursor:pointer; user-select:none; }
+.mc-icon { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
+.mc-name { font-size:.88rem; color:var(--text); }
+.mc-lbl { font-size:.7rem; color:var(--muted); margin-left:3px; }
+.mc-actions { margin-left:auto; display:flex; gap:2px; align-items:center; }
+.icon-btn { background:transparent; border:none; color:var(--muted); font-size:13px; cursor:pointer; padding:3px 6px; border-radius:4px; line-height:1; }
+.icon-btn:hover { color:var(--text); }
+.icon-btn:disabled { opacity:.25; cursor:not-allowed; }
+.icon-btn:disabled:hover { color:var(--muted); }
+.icon-btn.del:hover { color:var(--red); }
+.mc-form { border-top:1px solid var(--border); padding:14px; display:none; }
+.mc-form.open { display:block; }
+.form-row { display:flex; gap:10px; margin-bottom:10px; }
+.form-field { display:flex; flex-direction:column; gap:4px; flex:1; }
+.form-field label { font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.form-in { background:var(--s1); border:1px solid var(--border); border-radius:6px; padding:6px 9px; color:var(--text); font-family:'DM Sans',sans-serif; font-size:.84rem; outline:none; transition:border-color .15s; width:100%; }
+.form-in:focus { border-color:var(--gold); }
+.form-ta { min-height:80px; resize:vertical; }
+.cdots { display:flex; gap:7px; margin-top:3px; }
+.cdot { width:16px; height:16px; border-radius:50%; cursor:pointer; border:2px solid transparent; transition:transform .12s; }
+.cdot:hover { transform:scale(1.25); }
+.cdot.sel { border-color:#fff; }
+.add-btn { width:100%; background:transparent; border:1px dashed var(--border); border-radius:10px; color:var(--muted); padding:11px; font-family:'DM Sans',sans-serif; font-size:.82rem; cursor:pointer; transition:color .15s,border-color .15s; }
+.add-btn:hover { color:var(--text); border-color:var(--text); }
+.order-hint { font-size:.7rem; color:var(--muted); margin-bottom:10px; }
+
+/* Backdrop */
+#backdrop { position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:45; opacity:0; pointer-events:none; transition:opacity .25s; }
+#backdrop.active { opacity:1; pointer-events:all; }
+
+/* Shell — conversation area; padding-bottom is set dynamically to clear the fixed input bar */
+.shell { max-width:820px; margin:0 auto; padding:32px 24px 240px; }
+header { text-align:center; margin-bottom:32px; }
+.crest { display:inline-block; width:44px; height:44px; border:1.5px solid var(--gold); border-radius:50%; line-height:42px; font-size:18px; color:var(--gold); margin-bottom:14px; }
+h1 { font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:600; letter-spacing:.04em; color:#ede8e0; line-height:1.1; }
+.tagline { margin-top:6px; font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+#mode-badge { margin-top:14px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; padding:6px 14px 6px 12px; border:1px solid var(--border); border-radius:24px; background:var(--s2); transition:border-color .15s, background .15s; }
+#mode-badge:hover { border-color:var(--gold); background:var(--s3); }
+#mode-badge .mode-pill { padding:0; background:transparent; border:none; }
+#mode-badge::after { content:'⚙ Open Settings'; color:var(--muted); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; }
+#mode-badge:hover::after { color:var(--gold); }
+
+/* Input — fixed bar at viewport bottom (chatbot layout) */
+#input-bar { position:fixed; left:0; right:0; bottom:0; z-index:50; background:rgba(14,14,15,.96); backdrop-filter:blur(14px); border-top:1px solid var(--border); padding:14px 24px 16px; }
+.input-bar-inner { max-width:820px; margin:0 auto; }
+.input-block { background:var(--s1); border:1px solid var(--border); border-radius:10px; padding:14px 18px; }
+.input-label { font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; display:block; }
+textarea { width:100%; background:transparent; border:none; outline:none; resize:vertical; color:var(--text); font-family:'DM Sans',sans-serif; font-size:.95rem; line-height:1.65; min-height:120px; max-height:60vh; }
+textarea::placeholder { color:var(--muted); }
+.input-footer { display:flex; align-items:center; justify-content:space-between; margin-top:14px; padding-top:14px; border-top:1px solid var(--border); flex-wrap:wrap; gap:10px; }
+#toggles { display:flex; gap:7px; flex-wrap:wrap; }
+.toggle { font-size:.7rem; letter-spacing:.07em; padding:4px 10px; border-radius:20px; border:1px solid var(--border); background:transparent; color:var(--muted); cursor:pointer; transition:all .15s; font-family:'DM Sans',sans-serif; }
+.run-row { display:flex; gap:10px; align-items:center; }
+.mode-toggle { display:inline-flex; border:1px solid var(--border); border-radius:20px; overflow:hidden; }
+.mode-toggle button { background:transparent; border:none; color:var(--muted); padding:5px 12px; font-size:.7rem; letter-spacing:.1em; font-family:'DM Sans',sans-serif; cursor:pointer; transition:background .15s,color .15s; }
+.mode-toggle button.on { background:var(--gold); color:#0e0e0f; }
+.mode-toggle button:hover:not(.on) { color:var(--text); }
+.convene-btn { background:var(--gold); color:#0e0e0f; border:none; border-radius:7px; padding:9px 22px; font-family:'DM Sans',sans-serif; font-size:.82rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; transition:opacity .2s,transform .1s; white-space:nowrap; }
+.convene-btn:hover { opacity:.88; }
+.convene-btn:active { transform:scale(.97); }
+.convene-btn:disabled { opacity:.35; cursor:not-allowed; }
+.stop-btn { background:var(--red); color:#ede8e0; }
+.stop-btn:hover { opacity:.88; }
+
+/* Error-ask modal (when failure policy is 'ask') */
+#ask-overlay { position:fixed; inset:0; z-index:220; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .2s; }
+#ask-overlay.open { opacity:1; pointer-events:all; }
+.ask-modal { background:var(--s1); border:1px solid var(--border); border-radius:12px; padding:24px; max-width:520px; width:90%; }
+.ask-head { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:#ede8e0; margin-bottom:12px; }
+.ask-body { color:var(--text); font-size:.82rem; line-height:1.55; margin-bottom:16px; padding:12px; background:var(--s2); border-radius:7px; word-break:break-word; max-height:240px; overflow-y:auto; font-family:monospace; }
+.ask-meta { font-size:.72rem; color:var(--muted); margin-bottom:12px; }
+.ask-actions { display:flex; gap:8px; justify-content:flex-end; }
+
+/* Failure policy select */
+.s-select { width:100%; background:var(--s2); border:1px solid var(--border); border-radius:7px; padding:7px 10px; color:var(--text); font-family:'DM Sans',sans-serif; font-size:.82rem; outline:none; transition:border-color .15s; }
+.s-select:focus { border-color:var(--gold); }
+.s-num-row { display:flex; gap:8px; align-items:center; margin-top:8px; }
+.s-num-row label { font-size:.72rem; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; }
+.s-num-row input { width:80px; }
+
+/* Seats */
+#council { margin-top:36px; display:flex; flex-direction:column; gap:22px; }
+.seat { background:var(--s1); border:1px solid var(--border); border-left-width:3px; border-radius:10px; overflow:hidden; opacity:0; transform:translateY(14px); transition:opacity .4s ease,transform .4s ease; }
+.seat.visible { opacity:1; transform:translateY(0); }
+.seat[data-revised] .seat-role::after { content:' · ↻ revised'; color:var(--gold); font-style:italic; opacity:.85; margin-left:4px; }
+.seat-header { display:flex; align-items:center; gap:12px; padding:13px 18px; border-bottom:1px solid var(--border); }
+.seat-icon { width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
+.seat-name { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:600; letter-spacing:.03em; color:#ede8e0; }
+.seat-role { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-left:auto; }
+.seat-stage { font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-right:10px; }
+.seat-body { padding:16px 20px; font-size:.88rem; line-height:1.78; color:#c8c2bc; min-height:52px; white-space:pre-wrap; }
+.typing { display:inline-flex; gap:4px; align-items:center; }
+.typing span { width:5px; height:5px; border-radius:50%; background:var(--muted); animation:pulse 1.2s infinite ease-in-out; }
+.typing span:nth-child(2) { animation-delay:.2s; }
+.typing span:nth-child(3) { animation-delay:.4s; }
+@keyframes pulse { 0%,80%,100%{transform:scale(.7);opacity:.4}40%{transform:scale(1);opacity:1} }
+
+/* Session actions */
+#session-actions { display:none; margin-top:28px; gap:10px; justify-content:center; }
+.action-btn { background:transparent; border:1px solid var(--border); border-radius:7px; color:var(--muted); padding:8px 18px; font-family:'DM Sans',sans-serif; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; transition:color .15s,border-color .15s; }
+.action-btn:hover { color:var(--text); border-color:var(--text); }
+.action-btn.hi { background:rgba(201,168,76,.1); color:var(--gold); border-color:rgba(201,168,76,.3); }
+.action-btn.hi:hover { background:rgba(201,168,76,.18); }
+
+/* Error / Toast */
+.error-msg { background:rgba(192,84,74,.1); border:1px solid rgba(192,84,74,.3); border-radius:8px; padding:12px 16px; font-size:.84rem; color:#e08080; margin-top:16px; display:none; }
+#err-sticky { position:fixed; left:50%; bottom:84px; transform:translateX(-50%) translateY(80px); background:rgba(40,18,18,.97); border:1px solid rgba(192,84,74,.5); border-radius:8px; padding:10px 16px; font-size:.82rem; color:#f0b0b0; max-width:min(720px, 92vw); z-index:280; transition:transform .3s ease,opacity .3s ease; opacity:0; pointer-events:none; cursor:pointer; display:flex; align-items:center; gap:10px; }
+#err-sticky.show { transform:translateX(-50%) translateY(0); opacity:1; pointer-events:auto; }
+#err-sticky-dismiss { background:transparent; border:none; color:#f0b0b0; font-size:18px; cursor:pointer; padding:0 4px; line-height:1; opacity:.65; }
+#err-sticky-dismiss:hover { opacity:1; }
+#toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(60px); background:var(--s3); border:1px solid var(--border); border-radius:8px; padding:10px 18px; font-size:.82rem; color:var(--text); z-index:300; transition:transform .3s ease,opacity .3s ease; opacity:0; pointer-events:none; white-space:nowrap; }
+#toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+
+/* Floating "scroll to bottom" arrow, shown when not at bottom */
+#scroll-down-btn {
+  position:fixed; right:24px; bottom:200px;
+  width:38px; height:38px; border-radius:50%;
+  background:var(--gold); color:#0e0e0f;
+  border:none; cursor:pointer;
+  font-size:16px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.4);
+  opacity:0; pointer-events:none; transform:translateY(8px);
+  transition:opacity .2s ease,transform .2s ease;
+  z-index:260;
+}
+#scroll-down-btn.show { opacity:.94; pointer-events:auto; transform:translateY(0); }
+#scroll-down-btn:hover { opacity:1; }
+
+/* Parallel chats: the global body.running disable is gone. Toolbar, panels,
+   settings, and the chat list stay accessible while pipelines run. The Send /
+   Stop button reflects the CURRENT chat's runtime state, not a global flag. */
+
+/* Chat threads — one per loaded chat, only the active one is visible */
+.chat-thread { display:none; }
+.chat-thread:not([style*="none"]) { display:block; }
+
+/* Running indicator: same three-dot typing animation as on seats. */
+.chat-item.running .chat-item-typing { display:inline-flex; gap:4px; align-items:center; margin-right:8px; vertical-align:middle; }
+.chat-item.running .chat-item-typing span { width:5px; height:5px; border-radius:50%; background:var(--gold); animation:pulse 1.2s infinite ease-in-out; }
+.chat-item.running .chat-item-typing span:nth-child(2) { animation-delay:.2s; }
+.chat-item.running .chat-item-typing span:nth-child(3) { animation-delay:.4s; }
+
+/* Pulsing blue "unread" dot on chat-items */
+.chat-item.unread .chat-item-title::before {
+  content:'';
+  display:inline-block;
+  width:8px; height:8px;
+  border-radius:50%;
+  background:var(--blue);
+  margin-right:8px;
+  vertical-align:middle;
+  animation:unreadPulse 1.8s ease-in-out infinite;
+}
+@keyframes unreadPulse {
+  0%, 100% { box-shadow:0 0 0 0 rgba(74,114,168,.55); }
+  50%      { box-shadow:0 0 0 5px rgba(74,114,168,0); }
+}
+
+/* Conversation thread: user message and turn markers */
+.user-msg { margin:32px 0 18px; padding:14px 18px; background:var(--s2); border-left:3px solid var(--gold); border-radius:10px; }
+.user-msg:first-child { margin-top:8px; }
+.user-msg-label { font-size:.65rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; display:flex; align-items:center; justify-content:space-between; }
+.user-msg-mode { font-size:.65rem; letter-spacing:.08em; color:var(--gold); text-transform:none; padding:2px 8px; border:1px solid rgba(201,168,76,.35); border-radius:12px; }
+.user-msg-content { font-size:.93rem; line-height:1.6; color:var(--text); white-space:pre-wrap; word-wrap:break-word; }
+
+/* Seat status line — for retry/elapsed-time visibility on typing seats */
+.seat-status { font-size:.72rem; color:var(--muted); margin-top:8px; font-style:italic; }
+
+/* Per-message copy button (subtle, hover-revealed) */
+.msg-copy-btn { background:transparent; border:none; color:var(--muted); cursor:pointer; padding:3px 7px; border-radius:5px; font-size:13px; line-height:1; opacity:0; transition:opacity .15s, color .15s, background .15s; }
+.user-msg:hover .msg-copy-btn, .seat:hover .msg-copy-btn { opacity:.55; }
+.msg-copy-btn:hover { color:var(--gold); background:var(--s3); opacity:1 !important; }
+.seat-copy-wrap { margin-left:8px; display:inline-flex; }
+
+/* Collapsible thread items — click the header to fold/unfold */
+.msg-chevron { color:var(--muted); font-size:.75em; user-select:none; flex-shrink:0; transition:color .15s; }
+.msg-chevron::before { content:'▾'; }
+.collapsed .msg-chevron::before { content:'▸'; }
+.seat-header { cursor:pointer; user-select:none; }
+.seat-header:hover .msg-chevron { color:var(--text); }
+.seat.collapsed .seat-body { display:none; }
+.seat.collapsed .seat-header { border-bottom:none; }
+.user-msg-label { cursor:pointer; }
+.user-msg-label:hover .msg-chevron { color:var(--text); }
+.user-msg.collapsed .user-msg-content { display:none; }
+
+/* Extended thinking — streamed reasoning block, then collapses */
+.seat-thinking { background:var(--s3); border-left:2px solid var(--muted); padding:10px 14px; margin:0 0 12px; border-radius:6px; font-size:.8rem; color:var(--muted); }
+.seat-thinking-label { font-size:.65rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:6px; color:var(--gold); display:flex; align-items:center; gap:6px; }
+.seat-thinking-label::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--gold); animation:pulse 1.4s infinite ease-in-out; }
+.seat-thinking-content { white-space:pre-wrap; line-height:1.55; max-height:280px; overflow-y:auto; font-style:italic; }
+details.seat-thinking-collapsed { font-size:.78rem; color:var(--muted); margin:0 0 10px; }
+details.seat-thinking-collapsed > summary { cursor:pointer; padding:4px 0; user-select:none; list-style:none; opacity:.7; transition:opacity .15s; }
+details.seat-thinking-collapsed > summary::-webkit-details-marker { display:none; }
+details.seat-thinking-collapsed > summary::before { content:'▶ '; font-size:.7rem; }
+details.seat-thinking-collapsed[open] > summary::before { content:'▼ '; }
+details.seat-thinking-collapsed > summary:hover { opacity:1; }
+details.seat-thinking-collapsed > .seat-thinking-content { margin-top:8px; padding:10px 14px; background:var(--s3); border-left:2px solid var(--muted); border-radius:6px; }
+.seat-response { white-space:pre-wrap; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button class="tb-btn" id="chat-tb-btn" title="Chats" onclick="togglePanel('chat')">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+  </button>
+  <div class="tb-brand">⚖ The Council</div>
+  <div class="tb-group">
+    <button class="tb-btn" id="edit-tb-btn" title="Edit Members" onclick="openEditor()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+    </button>
+    <button class="tb-btn" id="settings-tb-btn" title="Settings" onclick="togglePanel('settings')">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="side-panel left" id="chat-panel">
+  <div class="panel-head">Chats <button class="panel-close" onclick="closePanel('chat')">×</button></div>
+  <div class="panel-body">
+    <button class="add-btn" id="new-chat-btn" onclick="newChat()" style="margin-bottom:14px">+ New Chat</button>
+    <div id="chat-list"><p class="hist-empty">No chats yet.</p></div>
+  </div>
+  <div class="panel-footer" style="font-size:.7rem; color:var(--muted); line-height:1.45">
+    Chats are auto-saved to <code style="font-family:monospace; color:var(--gold)">./chats/</code> next to council.py. Each chat is its own folder; each turn is a numbered JSON file.
+  </div>
+</div>
+
+<div class="side-panel right" id="settings-panel">
+  <div class="panel-head">Settings <button class="panel-close" onclick="closePanel('settings')">×</button></div>
+  <div class="panel-body">
+
+    <span class="s-lbl">Active Mode</span>
+    <div id="mode-status"></div>
+
+    <span class="s-lbl" style="margin-top:20px">House Style <span class="s-hint">(writing-goal preamble)</span></span>
+    <textarea class="house-ta" id="house-style-input" spellcheck="false" oninput="handleHouseStyleInput()"></textarea>
+    <div class="s-row">
+      <button class="ghost-btn" onclick="resetHouseStyle()">Reset to default</button>
+      <button class="ghost-btn" onclick="clearHouseStyle()">Clear</button>
+    </div>
+
+    <span class="s-lbl" style="margin-top:20px">Reasoning Standards <span class="s-hint">(applied alongside House Style)</span></span>
+    <textarea class="house-ta" id="reasoning-input" spellcheck="false" oninput="handleReasoningInput()"></textarea>
+    <div class="s-row">
+      <button class="ghost-btn" onclick="resetReasoning()">Reset to default</button>
+      <button class="ghost-btn" onclick="clearReasoning()">Clear</button>
+    </div>
+
+    <span class="s-lbl" style="margin-top:20px">API model <span class="s-hint">(only used when API key is set)</span></span>
+    <select class="s-select" id="api-model" onchange="handleApiModelChange()">
+      <option value="claude-sonnet-4-5">Claude Sonnet 4.5 — thinking ✓</option>
+      <option value="claude-sonnet-4-6">Claude Sonnet 4.6 — thinking ✓</option>
+      <option value="claude-opus-4-5">Claude Opus 4.5 — thinking ✓</option>
+      <option value="claude-opus-4-6">Claude Opus 4.6 — thinking ✓</option>
+      <option value="claude-haiku-4-5">Claude Haiku 4.5 — thinking ✓</option>
+      <option value="claude-3-7-sonnet-20250219">Claude Sonnet 3.7 — thinking ✓</option>
+      <option value="claude-sonnet-4-20250514">Claude Sonnet 4 (May 2025) — unknown</option>
+      <option value="claude-3-5-sonnet-20241022">Claude Sonnet 3.5 (Oct 2024) — no thinking</option>
+      <option value="claude-3-5-haiku-20241022">Claude Haiku 3.5 (Oct 2024) — no thinking</option>
+      <option value="__custom__">Custom…</option>
+    </select>
+    <input class="key-in" id="api-model-custom" type="text" placeholder="e.g. claude-something-vX" spellcheck="false" oninput="handleApiModelCustomChange()" style="display:none; margin-top:8px">
+    <div id="api-model-note" style="font-size:.72rem; color:var(--muted); margin-top:6px"></div>
+
+    <span class="s-lbl" style="margin-top:20px">Show thinking <span class="s-hint">(API mode only — streamed reasoning)</span></span>
+    <div class="s-row" style="margin-top:4px">
+      <label style="display:flex; align-items:center; gap:8px; font-size:.82rem; color:var(--text); cursor:pointer;">
+        <input type="checkbox" id="show-thinking" onchange="handleShowThinkingChange()">
+        <span>Show Claude's reasoning while it generates</span>
+      </label>
+    </div>
+
+    <span class="s-lbl" style="margin-top:20px">If a Claude query fails</span>
+    <select class="s-select" id="failure-policy" onchange="handleFailurePolicyChange()">
+      <option value="retry">Retry automatically</option>
+      <option value="ask">Ask me what to do</option>
+      <option value="skip">Skip the failed call</option>
+      <option value="stop">Stop the session</option>
+    </select>
+    <div class="s-num-row" id="retry-count-row">
+      <label>Retry count</label>
+      <input class="key-in" type="text" id="retry-count" inputmode="numeric" pattern="[0-9]*" value="10" oninput="handleRetryCountChange()">
+    </div>
+
+    <span class="s-lbl" style="margin-top:20px">Concurrent chats <span class="s-hint">(max parallel)</span></span>
+    <div class="s-num-row">
+      <label>Max</label>
+      <input class="key-in" type="text" id="max-concurrent" inputmode="numeric" pattern="[0-9]*" value="3" oninput="handleMaxConcurrentChange()">
+    </div>
+
+    <span class="s-lbl" style="margin-top:20px">API Key <span class="s-hint">(optional)</span></span>
+    <div class="key-wrap">
+      <input class="key-in" id="api-key-input" type="password" placeholder="sk-ant-..." spellcheck="false" oninput="handleKeyInput()">
+      <button class="eye-btn" onclick="toggleKeyVis()" title="Show/hide">👁</button>
+    </div>
+    <div class="s-row">
+      <button class="ghost-btn" id="clear-key-btn" onclick="clearApiKey()" style="display:none">Clear key</button>
+    </div>
+
+    <span class="s-lbl" style="margin-top:20px">Backup &amp; Restore <span class="s-hint">(conversation transcripts)</span></span>
+    <div style="font-size:.72rem;color:var(--muted);margin-bottom:8px;line-height:1.5">
+      Transcripts save to your browser's localStorage. Export to a file before risky prompts; re-import if you need to restore.
+    </div>
+    <div class="s-row">
+      <button class="ghost-btn" onclick="exportConversation()">↓ Export current</button>
+      <button class="ghost-btn" onclick="importConversation()">↑ Import from file…</button>
+    </div>
+
+    <span class="s-lbl" style="margin-top:20px">Resources</span>
+    <a class="link-sm" href="https://console.anthropic.com" target="_blank">Get API key →</a>
+  </div>
+</div>
+
+<div id="editor-overlay">
+  <div id="editor-modal">
+    <div class="modal-head">
+      <span class="modal-title">Edit Council</span>
+      <div class="modal-head-r">
+        <button class="ghost-btn" onclick="shuffleOrder()">Shuffle</button>
+        <button class="ghost-btn" onclick="resetMembers()">Reset Defaults</button>
+        <button class="panel-close" onclick="closeEditor()">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <p class="order-hint">Members speak in the order shown below. Use ↑ ↓ to reorder.</p>
+      <div id="member-list"></div>
+      <button class="add-btn" onclick="addMember()">+ Add Member</button>
+    </div>
+    <div class="modal-foot">
+      <span style="font-size:.74rem;color:var(--muted)">Changes save automatically</span>
+      <button class="convene-btn" onclick="closeEditor()">Done</button>
+    </div>
+  </div>
+</div>
+
+<div id="backdrop" onclick="closeAll()"></div>
+
+<div id="ask-overlay">
+  <div class="ask-modal">
+    <div class="ask-head">A Claude query failed</div>
+    <div class="ask-meta" id="ask-meta"></div>
+    <div class="ask-body" id="ask-msg"></div>
+    <div class="ask-actions">
+      <button class="ghost-btn" onclick="pickAskChoice('stop')">Stop session</button>
+      <button class="ghost-btn" onclick="pickAskChoice('skip')">Skip this call</button>
+      <button class="convene-btn" onclick="pickAskChoice('retry')">Retry</button>
+    </div>
+  </div>
+</div>
+
+<div class="shell">
+  <header>
+    <div class="crest">⚖</div>
+    <h1>The Council</h1>
+    <p class="tagline">Multi-perspective AI deliberation</p>
+    <div id="mode-badge" onclick="togglePanel('settings')" title="Open Settings"></div>
+  </header>
+
+  <div class="error-msg" id="error-msg"></div>
+  <div id="council"></div>
+
+  <div id="session-actions">
+    <button class="action-btn hi" id="continue-btn" onclick="continueConvene()" style="display:none">▶ Continue</button>
+    <button class="action-btn hi" id="copy-btn" onclick="exportMarkdown()">📋 Copy Report</button>
+    <button class="action-btn" id="export-btn" onclick="exportConversation()">↓ Save as File</button>
+    <button class="action-btn" onclick="resetCouncil()">↩ New Conversation</button>
+  </div>
+</div>
+
+<div id="input-bar">
+  <div class="input-bar-inner">
+    <div class="input-block">
+      <textarea id="question" rows="3" placeholder="Ask the council…"></textarea>
+      <div class="input-footer">
+        <div id="toggles"></div>
+        <div class="run-row">
+          <div class="mode-toggle" title="Quick = single Claude reply (chatbot). Fast = Council + Arbiter. Full = four-stage pipeline.">
+            <button id="mode-quick" onclick="setMode('quick')">Quick</button>
+            <button id="mode-fast"  onclick="setMode('fast')">Fast</button>
+            <button id="mode-full"  onclick="setMode('full')">Full</button>
+          </div>
+          <button class="convene-btn" id="convene-btn" onclick="convene()">Send</button>
+          <button class="convene-btn stop-btn" id="stop-btn" onclick="stopConvene()" style="display:none">Stop</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button id="scroll-down-btn" onclick="scrollToBottom()" title="Scroll to bottom">↓</button>
+
+<div id="err-sticky" onclick="hideErr()">
+  <span id="err-sticky-msg" style="flex:1"></span>
+  <button id="err-sticky-dismiss" onclick="event.stopPropagation(); hideErr()">×</button>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ============================================================
+// PALETTE
+// ============================================================
+const CLR = {
+  red:    {bg:'rgba(192,84,74,.18)',  fg:'#c0544a',hex:'#c0544a'},
+  green:  {bg:'rgba(74,140,111,.18)',fg:'#4a8c6f',hex:'#4a8c6f'},
+  blue:   {bg:'rgba(74,114,168,.18)',fg:'#4a72a8',hex:'#4a72a8'},
+  orange: {bg:'rgba(184,114,58,.18)',fg:'#b8723a',hex:'#b8723a'},
+  purple: {bg:'rgba(122,92,168,.18)',fg:'#7a5ca8',hex:'#7a5ca8'},
+  gold:   {bg:'rgba(201,168,76,.18)', fg:'#c9a84c',hex:'#c9a84c'},
+  slate:  {bg:'rgba(110,118,130,.18)',fg:'#8e96a4',hex:'#8e96a4'},
+}
+const CKEYS = ['red','green','blue','orange','purple']
+
+// ============================================================
+// DEFAULT HOUSE STYLE — prepended to every agent.
+// Sourced from the user's writing-goal file.
+// ============================================================
+const DEFAULT_HOUSE_STYLE = `WRITING GOAL
+
+Demystification. Use plain, common language and keep cognitive load low,
+while staying precise enough that a specialist would agree it's
+accurate. Be hard on the topic, soft on the reader: anticipate where
+someone might feel defensive, but don't soften what's actually true.
+Where something is uncertain, contested, or where an expert would
+object, surface that directly in plain terms — don't hide it behind
+jargon, hedging, emotional appeals, or common misreadings the reader
+might bring in.
+
+Drifts to avoid:
+  (1) academic drift — reaching for Latinate words, nominalizations, or
+      jargon when a common word works.
+  (2) bland drift — hedging or both-sidesing until no real claim is
+      made.
+  (3) false accessibility — oversimplifying in a way a specialist would
+      object to.
+  (4) emotional cushioning that buries the actual point.
+  (5) weight drift — using a phrase that does more work than the point
+      requires. The phrase carries an extra connotation the writer did
+      not intend, and the reader spends effort deciding which reading
+      was meant. Recurring offenders:
+        - "the standard move is to X" reads as "this always happens."
+          If the point is that the move is socially permitted rather
+          than that it always occurs, "an accepted move is to X" is
+          closer to the actual claim and lighter on the reader.
+        - "is treated as" can usually be replaced by a plain verb —
+          "passes as," "counts as," "reads as," or just "is."
+        - "gets X-ed" / "gets X-ed as" ("gets met with," "gets heard
+          as," "gets read as") is a passive-voice tic that hides the
+          subject. Replace with the plain active verb: "gets met
+          with" → "is answered with"; "gets heard as" → "reads as";
+          "gets read as" → "reads as." If the writer can't name the
+          actor doing the action, the agentless "is" form is still
+          shorter than "gets X-ed."
+        - in-house jargon like "demand a ready policy solution"
+          reduces to "ask for a fix on the spot." If a phrase sounds
+          like a policy memo, it is doing too much work for its
+          content.
+If accessibility and precision seem to conflict in a sentence, flag
+that sentence rather than silently picking one.
+
+Connective tissue. Between two clauses joined by a semicolon, comma,
+or em-dash, the relationship between them should be explicit. If the
+second clause contradicts the first, say "but." If it replaces the
+first, say "instead." If it follows from the first, say "so." Reading
+"X; Y" and having to infer the relationship from context costs the
+reader effort the writer can spend a single word to save. Self-check:
+read each multi-clause sentence and ask whether a connective word
+would make the relationship one read shorter. If yes, add it.
+
+Self-check before releasing a version: a smart non-expert should
+understand it on first read; a specialist should read it and not
+wince; no sentence should hedge without saying anything. If any of
+those fail, rewrite.`;
+
+// ============================================================
+// DEFAULT REASONING STANDARDS — prepended to every agent alongside
+// the writing style. Drawn from the user's hierarchical-logic
+// methodology (see METHODOLOGY_NOTES.md for the full extraction).
+// ============================================================
+const DEFAULT_REASONING_STANDARDS = `REASONING STANDARDS (applied alongside the writing goal above):
+
+Truth must remain distinguishable from falsehood. Any reasoning method that, applied consistently, would justify both a claim and its contradiction — or would defend any belief equally well — is not a method. Reject it.
+
+Standards are uniform. Whatever bar of evidence and logic you apply to a competing position applies to your own. No self-exemption.
+
+Parity-of-deficiency. If your view has an explanatory deficiency at some level, don't criticize an opposing view for the same deficiency at the same level without first showing your own view isn't subject to it.
+
+Steelman before critique. Engage the strongest version of an opposing view. Refuting a weak version proves nothing about the strong one.
+
+Every claim worth defending must be writable as explicit premises leading to a conclusion. Surface hidden assumptions. No "obviously this follows" used as a stand-in for an unstated chain of inference. No logical leaps where a real inference step is required.
+
+Argument from ignorance fails in both directions. "We don't know yet, therefore X" is invalid whether X is positive or negative. Gaps are questions, not evidence either way.
+
+Hyperskepticism is rejected. Appealing to the mere possibility of being wrong, without supplying a competing explanation that has comparable evidence and constraints, is not a refutation — it's a move that defeats any claim, true or false.
+
+Ad hoc rescues are rejected. Modifications that apply only to the case under attack, with no principled generalization to other cases, defend false claims as effectively as true ones.
+
+Best-fit explanation requires explicit comparison against steelmanned alternatives under uniform standards. Internal coherence alone doesn't earn the conclusion.
+
+Mark confidence explicitly when it matters. Distinguish "firmly known" (universal observation, survives known objections) from "reasonably confident" (strong best-fit with open links) from "consistent but underdetermined" (no contradiction known, no decisive distinguisher from alternatives). Don't speak with uniform certainty regardless of evidential standing.`;
+
+// ============================================================
+// STAGE 2 — default council members.
+// Each member is a named role with a system prompt. Phase 5 will
+// replace these with named scholars in real traditions.
+// ============================================================
+const DEF_MEMBERS = [
+  {id:'devil', name:'The Skeptic',    label:"Devil's Advocate",icon:'🗡',color:'red',
+   system:`You are a sharp devil's advocate on a deliberation council. Identify every flaw, risk, blind spot, and reason something might fail. Be genuinely critical — not performatively balanced. Reference prior speakers if it sharpens your critique. 3–5 focused paragraphs. No bullet lists.`},
+  {id:'steel', name:'The Champion',   label:'Steelman',        icon:'🛡',color:'green',
+   system:`You are a steelman advocate on a deliberation council. Build the strongest possible case FOR the idea — surface best arguments, best-case scenarios, underappreciated upsides. Note where the Skeptic had merit, but primarily make the affirmative case. 3–5 focused paragraphs. No bullet lists.`},
+  {id:'first', name:'The Reasoner',   label:'First Principles', icon:'🔬',color:'blue',
+   system:`You are a first-principles thinker on a deliberation council. Strip away assumptions — what is actually true from the ground up? Reason from foundational truths, responding to others where useful. 3–5 paragraphs. No bullet lists.`},
+  {id:'pragma',name:'The Pragmatist', label:'Pragmatist',       icon:'⚙',color:'orange',
+   system:`You are a pragmatist on a deliberation council. Only care about what's actionable given real constraints of time, money, and human nature. Cut through abstract debate and focus on what can realistically be done. 3–5 paragraphs. No bullet lists.`},
+]
+
+// ============================================================
+// STAGE 4 — synthesizers.
+// ARBITER runs in Fast Mode: quick synthesis of the council only.
+// FINAL_SYNTH runs in Full Mode: a polished report that reads
+// Stage 1 cards, the (possibly revised) Stage 2 deliberation, and
+// the Stage 3 assessment, and weights voices accordingly.
+// ============================================================
+const ARBITER_PROMPT = `You are the Arbiter — the final voice on a deliberation council. The council members spoke in parallel; they did not see each other's responses while drafting their own. So what you have is N independent contributions, and the cross-engagement work is your job. Synthesize: where do they actually agree? Where do they genuinely disagree, and why? Where did they talk past each other? End with 2–3 concrete things the person should actually consider or do. 4–6 paragraphs. No bullet lists.`;
+
+const FINAL_SYNTH_PROMPT = `You are the Final Synthesizer — Stage 4 of a deliberation pipeline. The report you produce is what the person actually sees, so it must earn the time the rest of the pipeline took. You have read:
+
+  1. The Stage 1 cards. The Prior Scout exposed which framings, hedges, and softenings a typical LLM brings to this question by reflex. The House Style Card flagged which style drifts this specific question invites.
+
+  2. The Stage 2 deliberation. N council members in named roles, each having spoken in parallel — none of them saw the others' responses while drafting their own. So the council deliberation you see is not a back-and-forth; it is N independent contributions, and the cross-engagement work — finding real agreement, real disagreement, and where voices talked past each other — is now your job. Some responses may have been revised after the Stage 3 assessment; a marker on the response tells you which.
+
+  3. The Stage 3 assessment. The Quality Assessor scored each response anonymously against a rubric (engagement, authenticity, productive conflict, style adherence, dodges) and produced a summary plus per-voice notes. Read it as informed criticism, not as a verdict you must echo.
+
+What "polished report in house style" means in practice:
+
+Front the actual answer. The person asked a question; they need an answer before paragraph three, not a tour of perspectives that defers the answer indefinitely. Where the council reached a real conclusion, state it plainly up top. Where the question doesn't have a single answer, say what the actual choice is, in one sentence, before exploring it.
+
+Distinguish real disagreement from bland consensus. If several voices agreed because they all reached for the same RLHF-shaped default, that is not council consensus — that is the Prior Scout's warning becoming the actual response. Flag it. If voices genuinely disagreed for substantive reasons, name the disagreement as a real choice the reader has to make, not a both-sides paragraph that softens both positions.
+
+Weight voices by quality. The Assessor flagged some responses as weak or as dodges. Do not pretend they carried equal weight in the final picture. You don't have to name names; you can write "the council's case for X was thin, mostly resting on a single move that didn't hold up" and leave the reader the option of going back to read the transcript.
+
+Where the council slid into a default the Prior Scout warned about, name it. Do not hide behind "the council generally agreed that…" if the agreement was reflex rather than substance.
+
+End with something usable. Two or three concrete things the reader should actually consider or do, in their own decision context. Not generic platitudes. Not "it depends on your values." Specific.
+
+Follow house style strictly. This is the deliverable, so style matters most here. Plain language, explicit connectives, no academic drift, no bland drift, no hedging without saying anything, no emotional cushioning, no weight drift. The Style Brief card named the specific traps for this question — use it.
+
+Length: scale to the question's weight. A simple question gets a short report (4–6 paragraphs). A complex contested question gets a longer report (8–12 paragraphs). Do not pad; do not truncate. Produce prose. No bullet lists, no numbered sections. Use paragraph breaks and clear topic sentences as your structure.`;
+
+const ARBITER = {
+  id:'arbiter', name:'The Arbiter', label:'Synthesis',
+  icon:'⚖', color:'gold', stage:4, system: ARBITER_PROMPT,
+}
+const FINAL_SYNTH = {
+  id:'final_synth', name:'The Synthesizer', label:'Final Report',
+  icon:'❖', color:'gold', stage:4, system: FINAL_SYNTH_PROMPT,
+}
+
+// ============================================================
+// QUICK AGENT — the chatbot single-call mode.
+// One Claude call with the full preamble (style + reasoning) and
+// the conversation history. No council, no Stage 1 cards. The user
+// toggles Quick when they want a normal chatbot reply rather than
+// a council deliberation.
+// ============================================================
+const QUICK_PROMPT = `You are responding to a user in an ongoing conversation. Engage substantively with the user's message. Read any prior conversation as context. If the prior conversation contains an LLM Council deliberation (multiple named voices and a final report), treat its contents as available context for your reply — you can quote, agree with, push back on, or build on any voice in it.
+
+Follow the writing-goal style and reasoning standards prepended above. Be direct. Don't hedge. Don't preamble. Don't restate the question back at the user. Don't open with "Great question." Just respond.`
+
+const QUICK = {
+  id:'quick', name:'Claude', label:'Reply',
+  icon:'⟡', color:'slate', stage:0, system: QUICK_PROMPT,
+}
+
+// ============================================================
+// STAGE 1 — pre-deliberation agents.
+// They run before the council in Full Mode and their cards are
+// passed into every Stage 2 prompt and the Stage 4 synthesizer.
+// Fast Mode skips them entirely.
+// ============================================================
+
+// Prior Scout — exposure, not opposition. Names the framings, hedges,
+// RLHF-shaped softenings, and corporate-safe defaults a typical LLM
+// would bring to this question, so the downstream council can notice
+// when it slides into a default response.
+const SCOUT_PROMPT = `You are the Prior Scout, a Stage 1 agent that speaks before the council deliberates. The council members are LLMs and will inherit the default reflexes of an LLM trained for broad helpfulness and broad acceptability. Your task: name those reflexes for the specific question below — before the council has a chance to act on them.
+
+Be concrete. Which framings of the question would an LLM reach for first? Which hedges? Which softenings would surface by reflex — phrases like "this is a deeply personal decision," "reasonable people disagree," "it depends on your values"? Which corporate-safe defaults? Which popular framings would the model pass along uncritically because they are popular, not because they are accurate?
+
+Your job is exposure, not opposition. You are not the contrarian voice. You name what an LLM tends to do so the downstream council members can notice the moment they begin doing it and decide whether the default is right for this question or just reflex. Where a default would be appropriate, say so plainly; where it would be a dodge, say that too.
+
+3–5 paragraphs. No bullet lists.`
+
+const SCOUT = {
+  id:'scout', name:'The Scout', label:'Prior Scout',
+  icon:'🧭', color:'purple', stage:1, system: SCOUT_PROMPT,
+}
+
+// House Style Card — reads the question and produces a question-specific
+// style brief. The full style guide is already prepended to every agent;
+// this card names which drifts the question is likely to invite, with
+// concrete sentence-shape examples so the council can recognize the drift
+// when their own response starts to make it.
+const HSC_PROMPT = `You are the House Style Card, a Stage 1 agent. The full house style guide is already prepended to every downstream agent, so do not restate it. Your task: name the specific style risks the question below is likely to invite.
+
+Read the question. Which drifts is it likely to pull writers toward? An abstract or philosophical question invites academic drift — Latinate vocabulary, nominalizations, jargon when a plain word works. A politically charged question invites bland drift — hedging or both-sidesing until no real claim is made. A technical question invites false accessibility — oversimplifying in a way a specialist would object to. An emotionally fraught question invites emotional cushioning that buries the actual point. Many questions invite weight drift — phrasings like "the standard move is to X" or "is treated as" that do more work than the point requires.
+
+Name two or three style risks that this specific question raises, with a phrase or sentence-shape example of what the drift would look like in practice. The council members will read this so they can recognize the drift in their own response before it lands.
+
+Brief — 2–3 paragraphs. No bullet lists.`
+
+const HSC = {
+  id:'hsc', name:'Style Brief', label:'House Style Card',
+  icon:'✒', color:'purple', stage:1, system: HSC_PROMPT,
+}
+
+// Logical Brief — reads the question and produces a question-specific
+// methodology brief. The full reasoning standards are already prepended
+// to every agent; this card names which methodology risks this question
+// is likely to invite, with sentence-shape examples so the council can
+// recognize the move in their own reasoning before they make it.
+const LOGICAL_PROMPT = `You are the Logical Brief, a Stage 1 agent. The full reasoning standards are already prepended to every downstream agent, so do not restate them.
+
+Your audience is the council members who will deliberate on this question. They speak as their traditions (Skeptic, Champion, etc.) and produce substantive engagement with the topic — that is their job, not yours.
+
+You are NOT evaluating the user's argument, scoring their reasoning, or judging the soundness of their position. The user's question is the TOPIC for the council to address, not a claim for you to assess. Treat anything the user has written as the subject matter the council will work on. Substantive engagement belongs to the council members.
+
+Your job has two parts, in order:
+
+1. State what the topic is. One or two sentences: the general subject, and the specific angle or framing the user has brought to it.
+
+2. Flag the methodology traps the council is likely to fall into when addressing this topic. Common traps to watch for: category errors across levels of explanation (a mechanism-level account treated as replacing a phenomenological-level one); hyperskeptical objections that defeat any claim equally without supplying a competing explanation; parity-of-deficiency violations (one position critiquing another for a deficiency it shares); ad hoc rescues to preserve a preferred conclusion; argument-from-ignorance moves in either direction; term-overloading where a word like "purpose," "arbitrary," "random," or "need" silently switches sense; logical leaps treated as obvious because the conclusion feels right; forced alignment — reinterpreting awkward evidence to make it fit a preferred framework.
+
+Name two or three risks the council is likely to encounter on this specific topic, with a sentence-shape example of what each trap would look like in practice. The council will read this so they can recognize the move in their own reasoning before they make it.
+
+Brief — 2–3 paragraphs. First the topic, then the methodology risks. No bullet lists.`
+
+const LOGICAL = {
+  id:'logical', name:'Logical Brief', label:'Reasoning Card',
+  icon:'∴', color:'purple', stage:1, system: LOGICAL_PROMPT,
+}
+
+// ============================================================
+// STAGE 3 — assessment.
+// The Anonymizer is a deterministic code step (no system prompt): it
+// maps Stage 2 responses to anonymous IDs (A, B, C, D) so the Assessor
+// scores on substance, not on role.
+// The Quality Assessor reads the anonymized responses and scores each
+// one against an explicit rubric, returning JSON. The redo loop sends
+// any response with verdict='redo' back to its seat with the critique
+// attached. Cap: one redo per seat per session.
+// ============================================================
+const ASSESSOR_PROMPT = `You are the Quality Assessor, a Stage 3 agent. Read the anonymized council responses below and score each one against the rubric. You don't know which traditional voice produced which response, by design — score on substance, not on who said it.
+
+Critical: do NOT attempt to infer or label which traditional voice (skeptic / champion / pragmatist / etc.) produced each anonymized response. Do not use role-language in your critiques — no "the skeptic," no "the optimist," no "the steelman," no "this voice sounds like X." Just analyze each response on its own terms, using Response A / B / C / D as the only identifiers. If a response's content tempts you to guess a role, resist; the rubric doesn't ask you to.
+
+The rubric, each scored 1–5:
+  • engagement — Does the response actually engage with the substance of the question, or does it hedge, restate the question, or pad?
+  • authenticity — Does the response come from a distinct point of view, or is it AI-default-helpful — the kind of even-handed, lightly-hedged response any LLM would produce by reflex?
+  • conflict — Does it add productive friction with the other voices? A council where every voice agrees is a failure of the council. Friction means engaging with what others said and pushing back substantively, not contrarianism for its own sake.
+  • reasoning — Does the response demonstrate clear methodology — explicit premises, traceable inferences, no hidden assumptions, no logical leaps, no ad hoc rescues, no parity-of-deficiency violations (criticizing an opposing view for a deficiency the response itself shares at the same level), no hyperskeptical or argument-from-ignorance moves? Score 5 if the reasoning is fully laid out and methodologically sound; 1 if it's mostly unjustified assertions or commits explicit reasoning failures.
+  • style — Does it follow the writing-goal style prepended above? Plain language, explicit connectives, no academic drift, no bland drift, no weight drift, no emotional cushioning.
+  • dodges — Did it dodge the hard parts of the question? Score 5 if it engaged fully, 1 if it dodged systematically.
+
+For each response, decide a verdict: "ok" if it should stand, "redo" if it would benefit from a revision pass. A response with most scores at 3 or below should usually be flagged "redo." Be willing to flag redo — being conservative here defeats the purpose of having you in the pipeline.
+
+Output exactly one JSON object, no other text, no markdown fences, in this shape:
+
+{
+  "responses": [
+    {
+      "id": "A",
+      "scores": {"engagement": 4, "authenticity": 3, "conflict": 2, "reasoning": 4, "style": 4, "dodges": 3},
+      "critique": "One paragraph explaining what worked and where it slipped. Concrete: name the specific sentences or moves that failed.",
+      "verdict": "redo"
+    }
+  ],
+  "summary": "Brief paragraph on the deliberation as a whole — where the council found real disagreement, where it converged into bland consensus, which voices were strong, which were weak."
+}
+
+Do not include any text outside the JSON object.`
+
+const ASSESSOR = {
+  id:'assessor', name:'The Assessor', label:'Quality Assessment',
+  icon:'◐', color:'slate', stage:3, system: ASSESSOR_PROMPT,
+}
+
+// ============================================================
+// STAGES — declarative shape of the pipeline.
+// ============================================================
+const STAGES = {
+  stage1: { name:'Pre',        agents: [SCOUT, HSC, LOGICAL] },
+  stage2: { name:'Council',    getMembers: () => orderedActiveMembers() },
+  stage3: { name:'Assessment', agents: [ASSESSOR], redoCapPerSeat: 1 },
+  stage4: { name:'Synthesis',  fast: ARBITER, full: FINAL_SYNTH },
+}
+
+// ============================================================
+// STATE
+// ============================================================
+const S = {
+  apiKey: '',
+  members: deep(DEF_MEMBERS),
+  activeRoles: new Set(['devil','steel','first','pragma']),
+  order: DEF_MEMBERS.map(m => m.id),  // speaker order, separate from members[]
+  houseStyle: DEFAULT_HOUSE_STYLE,
+  reasoningStandards: DEFAULT_REASONING_STANDARDS,
+  mode: 'quick',                      // 'quick' | 'fast' | 'full' — default is chatbot
+  failurePolicy: 'retry',             // 'retry' | 'ask' | 'skip' | 'stop'
+  retryCount: 10,
+  showThinking: true,                 // streamed extended thinking visibility (API mode)
+  apiModel: 'claude-sonnet-4-5',      // default model for API mode; user-editable
+  maxConcurrent: 3,                   // max chats that can run in parallel
+  currentChatId: null,                // id of the currently visible chat
+  chats: [],                          // chat list metadata loaded from server
+  runtimes: new Map(),                // chatId → ChatRuntime (per-chat state)
+  unread: new Set(),                  // chatIds completed/updated while not viewed
+  history: [],                        // legacy slot — no longer surfaced
+  openPanel: null,
+}
+function deep(x){ return JSON.parse(JSON.stringify(x)) }
+
+// ============================================================
+// CHAT RUNTIME — per-chat state. Each loaded/active chat has its own runtime
+// holding: its DOM thread (where seats render), its conversation (working
+// copy), its pipeline ctx + abort controller (so pipelines run concurrently
+// without trampling each other), and its lastFailed state for Continue.
+// ============================================================
+function getOrCreateRuntime(chatId){
+  let rt = S.runtimes.get(chatId)
+  if (rt) return rt
+  const threadEl = document.createElement('div')
+  threadEl.className = 'chat-thread'
+  threadEl.dataset.chatId = chatId
+  threadEl.style.display = 'none'
+  document.getElementById('council').appendChild(threadEl)
+  rt = {
+    chatId,
+    threadEl,
+    conversation: { turns: [] },
+    isRunning: false,
+    abortController: null,
+    ctx: null,
+    lastFailedCtx: null,
+    lastFailedAtStage: null,
+    session: null,
+  }
+  S.runtimes.set(chatId, rt)
+  return rt
+}
+
+function currentRuntime(){
+  return S.currentChatId ? S.runtimes.get(S.currentChatId) : null
+}
+
+function countRunning(){
+  let n = 0
+  for (const rt of S.runtimes.values()) if (rt.isRunning) n++
+  return n
+}
+
+// Show only the given chat's thread; hide all others.
+function showOnlyThread(chatId){
+  document.querySelectorAll('#council .chat-thread').forEach(el => {
+    el.style.display = (el.dataset.chatId === chatId) ? 'block' : 'none'
+  })
+}
+
+// Update Send/Stop/Continue/session-actions to match the current chat's
+// runtime state. Call any time the current chat or its state changes.
+function updateRuntimeUI(){
+  const rt = currentRuntime()
+  const isRunning = !!(rt && rt.isRunning)
+  const hasFailed = !!(rt && rt.lastFailedCtx)
+  const hasContent = !!(rt && rt.conversation.turns.length)
+  document.getElementById('convene-btn').style.display = isRunning ? 'none' : ''
+  document.getElementById('stop-btn').style.display    = isRunning ? '' : 'none'
+  document.getElementById('session-actions').style.display = (hasContent || hasFailed) ? 'flex' : 'none'
+  document.getElementById('continue-btn').style.display    = hasFailed ? '' : 'none'
+}
+
+function markUnread(chatId){
+  if (chatId && chatId !== S.currentChatId) {
+    S.unread.add(chatId)
+    renderChatList()
+  }
+}
+function markRead(chatId){
+  if (S.unread.has(chatId)) { S.unread.delete(chatId); renderChatList() }
+}
+
+// ============================================================
+// STORAGE
+// ============================================================
+function persist(){
+  try{
+    localStorage.setItem('tc_key', S.apiKey)
+    localStorage.setItem('tc_members', JSON.stringify(S.members))
+    localStorage.setItem('tc_active', JSON.stringify([...S.activeRoles]))
+    localStorage.setItem('tc_order', JSON.stringify(S.order))
+    localStorage.setItem('tc_housestyle', S.houseStyle)
+    localStorage.setItem('tc_reasoning', S.reasoningStandards)
+    localStorage.setItem('tc_mode', S.mode)
+    localStorage.setItem('tc_failure_policy', S.failurePolicy)
+    localStorage.setItem('tc_retry_count', String(S.retryCount))
+    localStorage.setItem('tc_show_thinking', S.showThinking ? '1' : '0')
+    localStorage.setItem('tc_api_model', S.apiModel || '')
+    localStorage.setItem('tc_current_chat_id', S.currentChatId || '')
+    localStorage.setItem('tc_max_concurrent', String(S.maxConcurrent))
+    localStorage.setItem('tc_history', JSON.stringify(S.history.slice(0,15)))
+  }catch(_){}
+}
+function hydrate(){
+  try{
+    S.apiKey = localStorage.getItem('tc_key') || ''
+    const m = localStorage.getItem('tc_members'); if (m) S.members = JSON.parse(m)
+    const h = localStorage.getItem('tc_history'); if (h) S.history = JSON.parse(h)
+    const a = localStorage.getItem('tc_active')
+    if (a) {
+      const ids = new Set(S.members.map(x => x.id))
+      S.activeRoles = new Set(JSON.parse(a).filter(id => ids.has(id)))
+      if (S.activeRoles.size < 1) S.activeRoles = new Set(S.members.slice(0,2).map(x => x.id))
+    }
+    const o = localStorage.getItem('tc_order')
+    if (o) {
+      const ids = new Set(S.members.map(x => x.id))
+      S.order = JSON.parse(o).filter(id => ids.has(id))
+    } else {
+      S.order = S.members.map(m => m.id)
+    }
+    // reconcile: any member not in order goes to the end
+    S.members.forEach(m => { if (!S.order.includes(m.id)) S.order.push(m.id) })
+
+    const hs = localStorage.getItem('tc_housestyle')
+    S.houseStyle = (hs === null) ? DEFAULT_HOUSE_STYLE : hs
+    const rs = localStorage.getItem('tc_reasoning')
+    S.reasoningStandards = (rs === null) ? DEFAULT_REASONING_STANDARDS : rs
+    const md = localStorage.getItem('tc_mode')
+    if (md === 'fast' || md === 'full') S.mode = md
+    const fp = localStorage.getItem('tc_failure_policy')
+    if (['retry','ask','skip','stop'].includes(fp)) S.failurePolicy = fp
+    const rc = parseInt(localStorage.getItem('tc_retry_count'), 10)
+    if (Number.isFinite(rc) && rc >= 0 && rc <= 50) S.retryCount = rc
+    const st = localStorage.getItem('tc_show_thinking')
+    if (st === '1' || st === '0') S.showThinking = (st === '1')
+    const am = localStorage.getItem('tc_api_model')
+    if (typeof am === 'string' && am.length) S.apiModel = am
+    const cid = localStorage.getItem('tc_current_chat_id')
+    if (typeof cid === 'string' && cid.length) S.currentChatId = cid
+    const mc = parseInt(localStorage.getItem('tc_max_concurrent'), 10)
+    if (Number.isFinite(mc) && mc >= 1 && mc <= 20) S.maxConcurrent = mc
+  }catch(_){}
+}
+
+// ============================================================
+// PROVIDER LAYER — adapter-shaped.
+// Claude only for now. The shape supports per-seat model and
+// temperature selection (Phase 7) without changing call sites.
+// ============================================================
+const Provider = {
+  // Models I'm confident support extended thinking via the API.
+  KNOWN_THINKING_MODELS: new Set([
+    'claude-opus-4-5',
+    'claude-opus-4-6',
+    'claude-sonnet-4-5',
+    'claude-sonnet-4-6',
+    'claude-haiku-4-5',
+    'claude-haiku-4-5-20251001',
+    'claude-3-7-sonnet-20250219',
+  ]),
+  // Models I'm confident do NOT support thinking. The Claude 3.5 generation
+  // predates extended thinking; the Sonnet 4 May-2025 snapshot is borderline
+  // (treated as unknown rather than asserted unsupported — see the fallback).
+  KNOWN_NOTHINKING_MODELS: new Set([
+    'claude-3-5-sonnet-20241022',
+    'claude-3-5-sonnet-20240620',
+    'claude-3-5-haiku-20241022',
+    'claude-3-opus-20240229',
+    'claude-3-sonnet-20240229',
+    'claude-3-haiku-20240307',
+  ]),
+  modelSupportsThinking(m){
+    if (!m) return false
+    return this.KNOWN_THINKING_MODELS.has(m)
+  },
+  modelKnownNoThinking(m){
+    if (!m) return false
+    return this.KNOWN_NOTHINKING_MODELS.has(m)
+  },
+
+  async invoke({ system, prompt, model = null, temperature = null, maxTokens = 16000, onRetry = null, onThinking = null, signal = null }) {
+    const payload  = { system: system || '', prompt: prompt || '', model, temperature, maxTokens, onThinking }
+    // The signal is per-runtime now; callers pass their runtime's
+    // AbortController.signal. If none is passed, the call is uncancellable.
+    const policy   = S.failurePolicy || 'retry'
+    const maxTries = Math.max(0, (S.retryCount | 0)) + 1   // attempts = retries + 1
+
+    let lastErr
+    for (let attempt = 0; attempt < maxTries; attempt++) {
+      if (signal && signal.aborted) throw new DOMException('Aborted by user', 'AbortError')
+      try {
+        return await (S.apiKey ? this._invokeAPI(payload, signal) : this._invokeCLI(payload, signal))
+      } catch (err) {
+        lastErr = err
+        if (err.name === 'AbortError') throw err           // user-stop, never retry
+        if (!isRetryableError(err)) throw err              // 401/403/400 etc — won't help
+        if (policy === 'stop') throw err
+        if (policy === 'skip') return `⚠ Failed and skipped: ${err.message}`
+        if (policy === 'ask') {
+          const choice = await askUserPolicy(err.message, attempt)
+          if (choice === 'stop') throw err
+          if (choice === 'skip') return `⚠ Failed and skipped: ${err.message}`
+          // 'retry' falls through; doesn't consume a retry budget
+          if (onRetry) try { onRetry({ attempt: attempt + 1, error: err, waitMs: 0 }) } catch (_) {}
+          continue
+        }
+        // 'retry' policy: wait with backoff and try again
+        if (attempt < maxTries - 1) {
+          const wait = backoffMs(attempt)
+          if (onRetry) try { onRetry({ attempt: attempt + 1, error: err, waitMs: wait }) } catch (_) {}
+          await sleepWithAbort(wait, signal)
+        }
+      }
+    }
+    throw lastErr
+  },
+
+  async _invokeAPI({ system, prompt, model, temperature, maxTokens, onThinking }, signal) {
+    const finalModel  = model || S.apiModel || 'claude-sonnet-4-5'
+    const wantStream  = !!onThinking && S.showThinking
+    const knownNoThk  = this.modelKnownNoThinking(finalModel)
+    // Decide initial thinking use: skip proactively for known-no-thinking models.
+    let useThinking = wantStream && !knownNoThk
+
+    try {
+      return await this._sendAPI({ system, prompt, model: finalModel, temperature, maxTokens, useThinking }, signal, onThinking)
+    } catch (err) {
+      // Graceful fallback: if the API rejected thinking specifically, retry
+      // the same request without thinking. Model selection is honored either way.
+      if (useThinking && this._isThinkingError(err) && !(signal && signal.aborted)) {
+        try { toast(`'${finalModel}' doesn't support thinking — falling back`) } catch (_) {}
+        return await this._sendAPI({ system, prompt, model: finalModel, temperature, maxTokens, useThinking: false }, signal, null)
+      }
+      throw err
+    }
+  },
+
+  _isThinkingError(err){
+    if (!err) return false
+    const msg = (err.message || '').toLowerCase()
+    if (!msg) return false
+    // Anthropic returns messages like "Extended thinking is not supported for model X"
+    return msg.includes('thinking') && (msg.includes('not supported') || msg.includes('not available') || msg.includes('does not support') || msg.includes('invalid'))
+  },
+
+  async _sendAPI({ system, prompt, model, temperature, maxTokens, useThinking }, signal, onThinking) {
+    const body = {
+      model,
+      max_tokens: maxTokens,
+      system,
+      messages: [{ role:'user', content: prompt }]
+    }
+    if (temperature != null) body.temperature = temperature
+    if (useThinking) {
+      body.stream = true
+      const thinkingBudget = Math.max(1024, Math.min(8000, Math.floor(maxTokens / 3)))
+      body.thinking = { type: 'enabled', budget_tokens: thinkingBudget }
+      if ('temperature' in body) delete body.temperature
+    }
+    const r = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': S.apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify(body),
+      signal,
+    })
+    if (useThinking) return await this._readStream(r, onThinking)
+    const d = await r.json()
+    if (!r.ok) {
+      const e = new Error(d.error?.message || `API error ${r.status}`)
+      e.status = r.status
+      throw e
+    }
+    return d.content.map(b => b.text || '').join('')
+  },
+
+  // Parse Anthropic streaming SSE events. Accumulates thinking + text and
+  // calls onThinking({ thinking, content }) as each delta arrives so the seat
+  // can render progressively. Returns the final response text on stream end.
+  async _readStream(response, onThinking) {
+    if (!response.ok) {
+      const text = await response.text()
+      let errMsg
+      try { errMsg = JSON.parse(text).error?.message || text } catch (_) { errMsg = text }
+      const e = new Error(errMsg || `API error ${response.status}`)
+      e.status = response.status
+      throw e
+    }
+    const reader  = response.body.getReader()
+    const decoder = new TextDecoder()
+    let buffer   = ''
+    let thinking = ''
+    let content  = ''
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      buffer += decoder.decode(value, { stream: true })
+      // SSE: events are separated by \n\n; each event has a "data: " line.
+      let nl
+      while ((nl = buffer.indexOf('\n\n')) !== -1) {
+        const chunk = buffer.slice(0, nl); buffer = buffer.slice(nl + 2)
+        for (const line of chunk.split('\n')) {
+          if (!line.startsWith('data: ')) continue
+          const data = line.slice(6).trim()
+          if (!data || data === '[DONE]') continue
+          let ev
+          try { ev = JSON.parse(data) } catch (_) { continue }
+          if (ev.type === 'content_block_delta') {
+            if (ev.delta?.type === 'thinking_delta') {
+              thinking += ev.delta.thinking || ''
+              try { onThinking && onThinking({ thinking, content }) } catch (_) {}
+            } else if (ev.delta?.type === 'text_delta') {
+              content += ev.delta.text || ''
+              try { onThinking && onThinking({ thinking, content }) } catch (_) {}
+            }
+          } else if (ev.type === 'message_delta' && ev.delta?.stop_reason === 'error') {
+            const e = new Error(ev.delta.stop_sequence || 'stream error')
+            throw e
+          } else if (ev.type === 'error') {
+            const e = new Error(ev.error?.message || 'stream error')
+            e.status = ev.error?.status
+            throw e
+          }
+        }
+      }
+    }
+    return content
+  },
+
+  async _invokeCLI({ system, prompt, model }, signal) {
+    // The Python server runs `claude -p`. Per-seat model selection is
+    // plumbed through but the server only acts on it when set.
+    const r = await fetch('/ask', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ system, prompt, model }),
+      signal,
+    })
+    if (!r.ok) {
+      const e = new Error(`Server error ${r.status}`)
+      e.status = r.status
+      throw e
+    }
+    const d = await r.json()
+    if (d.error) throw new Error(d.error)
+    return d.text
+  },
+}
+
+// --- Retry helpers ---
+
+function isRetryableError(err) {
+  if (!err) return false
+  if (err.name === 'AbortError') return false
+  // 4xx auth / bad-request errors won't be fixed by retrying.
+  const status = err.status
+  if (status === 400 || status === 401 || status === 403 || status === 404) return false
+  const msg = (err.message || '').toLowerCase()
+  if (msg.includes('authentication') || msg.includes('invalid_api_key')) return false
+  // Note: we used to bail on "claude not found" thinking it meant the
+  // binary is missing. But laptop sleep / system suspend produces the
+  // same FileNotFoundError transiently while the system finishes waking.
+  // Retrying recovers cleanly; the cost of being wrong (claude genuinely
+  // missing) is just the user waiting through the retry budget once.
+  return true
+}
+
+function backoffMs(attempt) {
+  // Exponential backoff capped at 10s. 1s, 2s, 4s, 8s, 10s, 10s, ...
+  return Math.min(1000 * Math.pow(2, attempt), 10000)
+}
+
+function sleepWithAbort(ms, signal) {
+  return new Promise((resolve, reject) => {
+    if (signal && signal.aborted) return reject(new DOMException('Aborted by user', 'AbortError'))
+    const t = setTimeout(resolve, ms)
+    if (signal) signal.addEventListener('abort', () => {
+      clearTimeout(t); reject(new DOMException('Aborted by user', 'AbortError'))
+    }, { once: true })
+  })
+}
+
+// --- Error-ask modal (used when failurePolicy === 'ask') ---
+
+let _askResolver = null
+function askUserPolicy(errMsg, attempt) {
+  return new Promise(resolve => {
+    _askResolver = resolve
+    document.getElementById('ask-meta').textContent =
+      attempt > 0 ? `After ${attempt} retr${attempt === 1 ? 'y' : 'ies'}` : 'First failure'
+    document.getElementById('ask-msg').textContent  = errMsg
+    document.getElementById('ask-overlay').classList.add('open')
+    document.getElementById('backdrop').classList.add('active')
+  })
+}
+function pickAskChoice(choice) {
+  document.getElementById('ask-overlay').classList.remove('open')
+  if (!S.openPanel) document.getElementById('backdrop').classList.remove('active')
+  const r = _askResolver; _askResolver = null
+  if (r) r(choice)
+}
+
+// ============================================================
+// PROMPT BUILDING
+// ============================================================
+function withPreamble(systemPrompt) {
+  // Prepends both the writing-style guide and the reasoning standards
+  // to every agent's system prompt. Both are user-editable in Settings.
+  const style     = (S.houseStyle || '').trim()
+  const standards = (S.reasoningStandards || '').trim()
+  const parts = [style, standards].filter(Boolean)
+  if (!parts.length) return systemPrompt
+  return `${parts.join('\n\n---\n\n')}\n\n---\n\n${systemPrompt}`
+}
+
+// Conversation preamble — emits the prior turns of S.conversation as
+// a structured "Conversation so far" block.
+//
+// opts.summaryOnly: when true, prior Council turns are collapsed to only
+// their final synthesis output. Used for all non-Quick prompts so that
+// (a) new council members aren't tempted to mimic prior voices, and
+// (b) the Anonymizer is real — the Assessor never sees the named voices
+// from previous turns and so can't pattern-match against the anonymized
+// responses for the current turn.
+//
+// Quick replies use full mode (default) because the user may want to ask
+// follow-up questions referring to specific voices ("what did the Skeptic
+// argue?") and needs the full deliberation in context.
+function buildConversationPreamble(turns, opts = {}) {
+  const summaryOnly = !!opts.summaryOnly
+  if (!turns || !turns.length) return ''
+  let s = `## Conversation so far\n\n`
+  for (const t of turns) {
+    if (t.role === 'user') {
+      s += `### User\n${t.content}\n\n`
+    } else if (t.role === 'assistant') {
+      if (t.mode === 'quick') {
+        s += `### Assistant\n${t.responses?.[0]?.text || ''}\n\n`
+      } else if (summaryOnly) {
+        // Collapse the council turn to its final synthesis only.
+        const finalR = (t.responses || []).find(r => r.id === 'arbiter' || r.id === 'final_synth')
+        if (finalR && finalR.text) {
+          s += `### Assistant\n${finalR.text}\n\n`
+        }
+        // If no synthesis (failed mid-turn): skip; don't leak partial inner voices.
+      } else {
+        s += `### Assistant (LLM Council, ${t.mode} mode)\n\n`
+        ;(t.responses || []).forEach(r => {
+          s += `**${r.name} — ${r.label}**\n${r.text}\n\n`
+        })
+      }
+    }
+  }
+  return s
+}
+
+function buildQuickPrompt(ctx) {
+  const conv = buildConversationPreamble(ctx.conversationTurns || [])
+  let p = ''
+  if (conv) p += `${conv}\n`
+  p += `## New user message\n\n${ctx.question}\n\nRespond as the assistant.`
+  return p
+}
+
+function buildStage1Prompt(ctx, agent) {
+  // Stage 1 agents (Scout / House Style Card / Logical Brief) are PURE FUNCTIONS
+  // of the current question. They don't see prior conversation turns and they
+  // don't see each other's Stage 1 cards. Each runs independently with the
+  // same single input. Any overlap between their outputs is OK — different
+  // angles on the same question.
+  let p = `The question before the council:\n\n"${ctx.question}"`
+  p += `\n\nNow produce your card for this question.`
+  return p
+}
+
+function buildStage2Prompt(ctx, member) {
+  // Council members are isolated voices. Each sees ONLY:
+  //   - the current question
+  //   - the current turn's Stage 1 cards (Scout / Style / Logical)
+  // They do NOT see prior conversation turns and they do NOT see other
+  // current-turn members. They voice their tradition's perspective on this
+  // question, fresh. If multi-turn coherence is needed, the synthesizer
+  // handles it; council members work from a clean slate every turn.
+  let p = `The question before the council:\n\n"${ctx.question}"`
+  if (ctx.stage1 && ctx.stage1.length) {
+    p += `\n\nPre-deliberation cards (read before producing your response):\n\n`
+    ctx.stage1.forEach(c => { p += `— ${c.name} (${c.label}):\n${c.text}\n\n` })
+  }
+  p += `\n\nNow give your perspective. You are speaking independently; you have not heard the other council members. Do not reference them or speculate about what they might say. Stay in your own voice and your own tradition.
+
+Do not identify yourself in the response. Do not name your role, your label, or write phrases like "as a Skeptic," "from a steelman view," "as the Pragmatist," or any similar self-attribution. Speak the perspective directly. An anonymizing Assessor will read this without your label and should have no way to identify the voice from the text.`
+  return p
+}
+
+function buildSynthPrompt(ctx) {
+  let p = ''
+  const conv = buildConversationPreamble(ctx.conversationTurns || [], { summaryOnly: true })
+  if (conv) p += `${conv}\n`
+  p += `The new question before the council:\n\n"${ctx.question}"\n\n`
+
+  if (ctx.stage1 && ctx.stage1.length) {
+    p += `Pre-deliberation cards:\n\n`
+    ctx.stage1.forEach(c => { p += `— ${c.name} (${c.label}):\n${c.text}\n\n` })
+  }
+
+  p += `The council has deliberated:\n\n`
+  ctx.stage2.forEach(r => {
+    const revisedMark = r._redone ? ' (this response was revised after critique)' : ''
+    p += `— ${r.name} (${r.label})${revisedMark}:\n${r.text}\n\n`
+  })
+
+  if (ctx.stage3) {
+    if (ctx.stage3.scores) {
+      if (ctx.stage3.scores.summary) {
+        p += `Stage 3 assessment — overall:\n\n${ctx.stage3.scores.summary}\n\n`
+      }
+      const perVoice = (ctx.stage3.scores.responses || [])
+        .map(r => {
+          const anon  = (ctx.stage3.anonymized || []).find(a => a.anonId === r.id)
+          const entry = anon ? ctx.stage2.find(x => x.id === anon.seatId) : null
+          if (!entry || !r.critique) return null
+          return `— ${entry.name}: ${r.critique}`
+        })
+        .filter(Boolean)
+      if (perVoice.length) {
+        p += `Stage 3 assessment — per-voice notes (use as informed criticism, not as a verdict):\n\n${perVoice.join('\n')}\n\n`
+      }
+    } else if (ctx.stage3.summary) {
+      p += `Stage 3 assessment summary:\n\n${ctx.stage3.summary}\n\n`
+    }
+  }
+
+  p += `Now deliver your synthesis.`
+  return p
+}
+
+// --- Stage 3 helpers ---
+
+function anonymizeResponses(stage2) {
+  // Deterministic Anonymizer: relabels responses A/B/C/D. Doesn't rewrite
+  // in-text cross-references; the Assessor is told to score on substance
+  // and treat any leaked attribution as noise.
+  return stage2.map((r, i) => ({
+    anonId: String.fromCharCode(65 + i),
+    seatId: r.id,
+    text:   r.text,
+  }))
+}
+
+function buildAssessorPrompt(ctx, anonymized) {
+  // The Assessor scores the CURRENT turn's anonymized responses against its
+  // rubric. None of the rubric axes (engagement, authenticity, conflict,
+  // reasoning, style, dodges) depend on conversation history. Passing prior
+  // turns to the Assessor would leak named voices and let it deanonymize.
+  // So: nothing from prior turns. Current turn only.
+  let p = `The question before the council:\n\n"${ctx.question}"\n\n`
+  if (ctx.stage1 && ctx.stage1.length) {
+    p += `Stage 1 cards the council had access to:\n\n`
+    ctx.stage1.forEach(c => { p += `— ${c.name} (${c.label}):\n${c.text}\n\n` })
+  }
+  p += `Anonymized council responses to assess:\n\n`
+  anonymized.forEach(a => { p += `=== Response ${a.anonId} ===\n${a.text}\n\n` })
+  p += `Now produce the JSON assessment per the rubric in your instructions. Output exactly one JSON object and nothing else.`
+  return p
+}
+
+function parseAssessorOutput(text) {
+  if (!text) return null
+  // Defensive: pull the first {...} block in case the model wraps it.
+  const start = text.indexOf('{')
+  const end   = text.lastIndexOf('}')
+  if (start < 0 || end < 0 || end <= start) return null
+  try {
+    const obj = JSON.parse(text.slice(start, end + 1))
+    if (!obj || !Array.isArray(obj.responses)) return null
+    return obj
+  } catch (e) {
+    return null
+  }
+}
+
+function buildRedoPrompt(ctx, member, original, critique) {
+  // Same Stage 2 context the seat originally saw, plus the critique.
+  let p = buildStage2Prompt(ctx, member)
+  p += `\n\nYou earlier produced this response:\n\n${original}\n\nA reviewer assessed it with this critique:\n\n"${critique}"\n\nProduce a revised response that takes the critique seriously. Do not apologize, do not restate the critique, do not pad. Produce a better response.`
+  return p
+}
+
+function avgScore(sc) {
+  if (!sc) return 0
+  const vals = ['engagement','authenticity','conflict','reasoning','style','dodges']
+    .map(k => sc[k]).filter(v => typeof v === 'number')
+  if (!vals.length) return 0
+  return vals.reduce((a,b) => a+b, 0) / vals.length
+}
+
+function renderAssessment(ctx) {
+  const s = ctx.stage3
+  if (!s) return '(assessment unavailable)'
+  if (!s.scores) return s.rawText || '(assessment unavailable — model output did not parse as JSON)'
+  let out = ''
+  if (s.scores.summary) out += `${s.scores.summary}\n\n`
+  out += `Per-response scores:\n`
+  s.scores.responses.forEach(r => {
+    const anon = s.anonymized.find(a => a.anonId === r.id)
+    const entry = anon ? ctx.stage2.find(x => x.id === anon.seatId) : null
+    const name = entry ? entry.name : `Response ${r.id}`
+    const sc = r.scores || {}
+    const avg = avgScore(sc).toFixed(1)
+    out += `\n• ${name} — avg ${avg}/5  (engagement ${sc.engagement ?? '?'}, authenticity ${sc.authenticity ?? '?'}, conflict ${sc.conflict ?? '?'}, reasoning ${sc.reasoning ?? '?'}, style ${sc.style ?? '?'}, dodges ${sc.dodges ?? '?'}) — verdict: ${r.verdict || '?'}`
+    if (r.critique) out += `\n  ${r.critique}`
+  })
+  return out
+}
+
+function markSeatRevised(seat) {
+  if (seat) seat.setAttribute('data-revised', 'true')
+}
+
+// ============================================================
+// PIPELINE — four stages. Stage 1 and Stage 3 are empty in Phase 1.
+// pipeline(mode) returns the ordered list of stage runners.
+// ============================================================
+function pipeline(mode) {
+  if (mode === 'quick') return [runQuick]
+  return mode === 'fast'
+    ? [runStage1Skip, runStage2, runStage3Skip, runStage4Fast]
+    : [runStage1,     runStage2, runStage3,     runStage4Full]
+}
+
+// Quick mode: a single Claude call with preamble + conversation context.
+// No council, no Stage 1 cards. The conversation history already prepended
+// to the prompt carries any prior council deliberations as context.
+async function runQuick(ctx) {
+  if (ctx.quick && ctx.quick.text) return ctx   // idempotent resume
+  const seat   = mkSeat(QUICK, ctx.threadEl)
+  const prompt = buildQuickPrompt(ctx)
+  const text   = await Provider.invoke({
+    system: withPreamble(QUICK.system),
+    prompt,
+    signal: ctx.signal,
+    onThinking: ev => updateSeatStream(seat, ev),
+    onRetry: ev => { resetSeatStream(seat); setSeatStatus(seat, `Retrying… (${ev.attempt}/${S.retryCount}) — ${ev.error.message}`) },
+  })
+  setSeat(seat, text)
+  ctx.quick = { ...QUICK, text }
+  return ctx
+}
+
+async function runStage1(ctx) {
+  // Run each Stage 1 agent in order. Each sees the question and any
+  // prior Stage 1 cards. The cards land in ctx.stage1 and flow into
+  // every Stage 2 prompt and the Stage 4 synthesizer prompt.
+  // Idempotent: agents already in ctx.stage1 (from a prior partial run)
+  // are skipped, so resume only runs the missing ones.
+  if (!Array.isArray(ctx.stage1)) ctx.stage1 = []
+  const doneIds = new Set(ctx.stage1.map(c => c.id))
+  for (const agent of STAGES.stage1.agents) {
+    if (doneIds.has(agent.id)) continue
+    const seat = mkSeat(agent, ctx.threadEl)
+    const prompt = buildStage1Prompt(ctx, agent)
+    const text = await Provider.invoke({
+      system: withPreamble(agent.system),
+      prompt,
+      signal: ctx.signal,
+      onThinking: ev => updateSeatStream(seat, ev),
+      onRetry: ev => { resetSeatStream(seat); setSeatStatus(seat, `Retrying… (${ev.attempt}/${S.retryCount}) — ${ev.error.message}`) },
+    })
+    setSeat(seat, text)
+    ctx.stage1.push({ ...agent, text })
+  }
+  return ctx
+}
+async function runStage1Skip(ctx) { ctx.stage1 = null; return ctx }
+
+function orderedActiveMembers() {
+  return S.order
+    .map(id => S.members.find(m => m.id === id))
+    .filter(m => m && S.activeRoles.has(m.id))
+}
+
+async function runStage2(ctx) {
+  const selected = orderedActiveMembers()
+  if (selected.length < 1) throw new Error('No active members. Open Edit Council to enable at least one.')
+
+  // Idempotent resume: members whose response is already in ctx.stage2
+  // (from a prior partial run) are skipped. Only run the missing ones.
+  if (!Array.isArray(ctx.stage2)) ctx.stage2 = []
+  const doneIds = new Set(ctx.stage2.map(r => r.id))
+  const toRun   = selected.filter(m => !doneIds.has(m.id))
+  if (toRun.length === 0) return ctx
+
+  // Create seats only for members we still need to run. They appear in
+  // speaker order with typing indicators; each updates as its call resolves.
+  const seats   = toRun.map(m => mkSeat(m, ctx.threadEl))
+  const prompts = toRun.map(m => buildStage2Prompt(ctx, m))
+
+  // Per-task catch: each task resolves either as {ok:true, ...} or
+  // {ok:false, error}. This preserves partial successes in ctx.stage2
+  // even when some members fail — so resume only re-fires the failed ones.
+  const tasks = toRun.map((m, i) =>
+    Provider.invoke({
+      system: withPreamble(m.system),
+      prompt: prompts[i],
+      signal: ctx.signal,
+      onThinking: ev => updateSeatStream(seats[i], ev),
+      onRetry: ev => { resetSeatStream(seats[i]); setSeatStatus(seats[i], `Retrying… (${ev.attempt}/${S.retryCount}) — ${ev.error.message}`) },
+    })
+      .then(text => { setSeat(seats[i], text); return { ok:true, member:m, text } })
+      .catch(err => {
+        const seatMsg = err.name === 'AbortError' ? '(stopped)' : `⚠ ${err.message}`
+        setSeat(seats[i], seatMsg)
+        return { ok:false, member:m, error:err }
+      })
+  )
+  const results = await Promise.all(tasks)
+
+  // Push successes into ctx.stage2, then re-sort to honor speaker order.
+  results.filter(r => r.ok).forEach(r => ctx.stage2.push({ ...r.member, text:r.text }))
+  ctx.stage2.sort((a, b) => S.order.indexOf(a.id) - S.order.indexOf(b.id))
+
+  // If any failed, throw — the first AbortError if present, otherwise a
+  // combined message. Resume will re-fire only the still-missing members.
+  const failures = results.filter(r => !r.ok)
+  if (failures.length > 0) {
+    const abortFailure = failures.find(r => r.error && r.error.name === 'AbortError')
+    if (abortFailure) throw abortFailure.error
+    const e = new Error(failures.map(f => f.error?.message || 'unknown').join('; '))
+    throw e
+  }
+  return ctx
+}
+
+async function runStage3(ctx) {
+  if (!ctx.stage2 || !ctx.stage2.length) { ctx.stage3 = null; return ctx }
+
+  // 1. Anonymize Stage 2 responses (rule-based, silent).
+  // 2. Run the Quality Assessor as a visible seat — but skip if a prior
+  //    run already completed it (idempotent resume).
+  if (!ctx.stage3 || !ctx.stage3.scores) {
+    const anonymized = anonymizeResponses(ctx.stage2)
+    const seat   = mkSeat(ASSESSOR, ctx.threadEl)
+    const prompt = buildAssessorPrompt(ctx, anonymized)
+    const rawText = await Provider.invoke({
+      system: withPreamble(ASSESSOR.system),
+      prompt,
+      signal: ctx.signal,
+      onThinking: ev => updateSeatStream(seat, ev),
+      onRetry: ev => { resetSeatStream(seat); setSeatStatus(seat, `Retrying… (${ev.attempt}/${S.retryCount}) — ${ev.error.message}`) },
+    })
+    const scores = parseAssessorOutput(rawText)
+    ctx.stage3 = {
+      anonymized,
+      rawText,
+      scores,
+      summary: (scores && scores.summary) ? scores.summary : rawText,
+    }
+    setSeat(seat, renderAssessment(ctx))
+  }
+  const scores = ctx.stage3.scores
+  // Redo loop uses anonymized; pull it from ctx (set by the fresh-Assessor
+  // path above) or recompute from ctx.stage2 if we resumed past the Assessor.
+  const anonymized = ctx.stage3.anonymized || anonymizeResponses(ctx.stage2)
+
+  // 3. Redo loop. Cap: one redo per seat per session.
+  if (scores && Array.isArray(scores.responses)) {
+    for (const r of scores.responses) {
+      if (r.verdict !== 'redo') continue
+      const anon = anonymized.find(a => a.anonId === r.id)
+      if (!anon) continue
+      const entry = ctx.stage2.find(s => s.id === anon.seatId)
+      if (!entry || entry._redone) continue
+      const member = S.members.find(m => m.id === entry.id) || entry
+      const redoPrompt = buildRedoPrompt(ctx, member, entry.text, r.critique || '')
+      const origSeat = (ctx.threadEl || document).querySelector(`.seat[data-seat-id="${entry.id}"]`)
+      if (origSeat) setSeatStatus(origSeat, 'Revising after critique…')
+      const newText = await Provider.invoke({
+        system: withPreamble(member.system),
+        prompt: redoPrompt,
+        signal: ctx.signal,
+        onThinking: ev => { if (origSeat) updateSeatStream(origSeat, ev) },
+        onRetry: ev => { if (origSeat) { resetSeatStream(origSeat); setSeatStatus(origSeat, `Retrying revision… (${ev.attempt}/${S.retryCount})`) } },
+      })
+      if (origSeat) { setSeat(origSeat, newText); markSeatRevised(origSeat) }
+      entry._original = entry.text
+      entry.text     = newText
+      entry._redone  = true
+    }
+  }
+
+  return ctx
+}
+async function runStage3Skip(ctx) { ctx.stage3 = null; return ctx }
+
+async function runStage4Fast(ctx) { return runArbiter(ctx, STAGES.stage4.fast) }
+async function runStage4Full(ctx) { return runArbiter(ctx, STAGES.stage4.full) }
+
+async function runArbiter(ctx, synth) {
+  // Idempotent resume: if a prior run already produced a Stage 4 result,
+  // skip the call.
+  if (ctx.stage4 && ctx.stage4.text) return ctx
+  const seat = mkSeat(synth, ctx.threadEl)
+  const prompt = buildSynthPrompt(ctx)
+  const text = await Provider.invoke({
+    system: withPreamble(synth.system),
+    prompt,
+    signal: ctx.signal,
+    onThinking: ev => updateSeatStream(seat, ev),
+    onRetry: ev => { resetSeatStream(seat); setSeatStatus(seat, `Retrying… (${ev.attempt}/${S.retryCount}) — ${ev.error.message}`) },
+  })
+  setSeat(seat, text)
+  ctx.stage4 = { ...synth, text }
+  return ctx
+}
+
+// ============================================================
+// CONVENE — entry point
+// ============================================================
+async function convene(){
+  const q = document.getElementById('question').value.trim()
+  let rt = currentRuntime()
+
+  // Resume check on the CURRENT chat: if it has saved failed state and the
+  // user hasn't typed a different question, resume it.
+  const canResume = !!(rt && rt.lastFailedCtx && (!q || rt.lastFailedCtx.question === q))
+  if (!canResume && !q) return  // nothing to do
+
+  // Per-chat busy check + global concurrency cap.
+  if (rt && rt.isRunning) { toast('This chat is already running.'); return }
+  if (!canResume && countRunning() >= S.maxConcurrent) {
+    toast(`Already ${S.maxConcurrent} chats running. Wait for one to finish, or raise the cap in Settings.`)
+    return
+  }
+
+  let ctx, startStage
+  if (canResume) {
+    ctx = rt.lastFailedCtx
+    startStage = rt.lastFailedAtStage || 0
+    ctx.threadEl = rt.threadEl    // refresh transient field
+    reconstructCurrentTurn(ctx, rt)
+  } else {
+    // Fresh turn. Create chat folder on disk if none yet, then a runtime.
+    if (!S.currentChatId) {
+      try {
+        const meta = await ChatStore.create(q.slice(0, 60))
+        S.currentChatId = meta.id
+        persist()
+        refreshChatList().catch(()=>{})
+      } catch (e) { console.warn('create chat failed', e); toast('Could not create chat'); return }
+    }
+    rt = getOrCreateRuntime(S.currentChatId)
+    showOnlyThread(rt.chatId)
+    markRead(rt.chatId)
+
+    const turn = { role:'user', content: q, mode: S.mode, timestamp: new Date().toISOString() }
+    rt.conversation.turns.push(turn)
+    addUserMessage(q, S.mode, rt.threadEl)
+    ChatStore.appendTurn(rt.chatId, turn).catch(e => console.warn('save user turn', e))
+    if (rt.conversation.turns.length === 1) {
+      autoGenerateTitle(rt.chatId, q).catch(e => console.warn('autoGenerateTitle', e))
+    }
+    ctx = {
+      chatId: rt.chatId,
+      threadEl: rt.threadEl,
+      question: q,
+      mode: S.mode,
+      conversationTurns: rt.conversation.turns.slice(0, -1),
+      stage1: null, stage2: null, stage3: null, stage4: null, quick: null,
+    }
+    startStage = 0
+    rt.lastFailedCtx = null
+    rt.lastFailedAtStage = null
+    document.getElementById('question').value = ''
+    autoGrowQ()
+  }
+
+  // Mark running and create abort controller scoped to this runtime.
+  rt.isRunning = true
+  rt.abortController = new AbortController()
+  rt.ctx = ctx
+  ctx.signal = rt.abortController.signal
+
+  hideErr()
+  if (rt.chatId === S.currentChatId) updateRuntimeUI()
+  renderChatList()                  // show running indicator
+
+  const stages = pipeline(ctx.mode || S.mode)
+  try {
+    for (let i = startStage; i < stages.length; i++) {
+      try {
+        await stages[i](ctx)
+        if (rt.chatId) {
+          const { threadEl, signal, ...persistableCtx } = ctx
+          ChatStore.saveInflight(rt.chatId, { ctx: persistableCtx, resumeAt: i + 1 })
+            .catch(err => console.warn('saveInflight (progress)', err))
+        }
+      } catch (e) {
+        rt.lastFailedAtStage = i
+        rt.lastFailedCtx     = ctx
+        if (rt.chatId) {
+          const { threadEl, signal, ...persistableCtx } = ctx
+          ChatStore.saveInflight(rt.chatId, { ctx: persistableCtx, resumeAt: i })
+            .catch(err => console.warn('saveInflight (failure)', err))
+        }
+        throw e
+      }
+    }
+    // Success — record assistant turn, persist to disk.
+    rt.lastFailedAtStage = null
+    rt.lastFailedCtx     = null
+    const responses = []
+    if (ctx.quick)  responses.push(ctx.quick)
+    if (ctx.stage1) ctx.stage1.forEach(c => responses.push(c))
+    if (ctx.stage2) ctx.stage2.forEach(r => responses.push(r))
+    if (ctx.stage3 && (ctx.stage3.scores !== undefined || ctx.stage3.rawText)) {
+      responses.push({ ...ASSESSOR, text: renderAssessment(ctx) })
+    }
+    if (ctx.stage4) responses.push(ctx.stage4)
+    const assistantTurn = {
+      role:'assistant', mode: ctx.mode || S.mode, responses, date: new Date().toISOString()
+    }
+    rt.conversation.turns.push(assistantTurn)
+    rt.session = { question: ctx.question, mode: assistantTurn.mode, responses, date: assistantTurn.date }
+    if (rt.chatId) {
+      ChatStore.appendTurn(rt.chatId, assistantTurn)
+        .then(async () => {
+          try { await ChatStore.clearInflight(rt.chatId) } catch (_) {}
+          refreshChatList().catch(()=>{})
+        })
+        .catch(e => console.warn('save assistant turn', e))
+    }
+    // If the user isn't looking at this chat, surface completion via unread dot.
+    if (rt.chatId !== S.currentChatId) markUnread(rt.chatId)
+    else document.getElementById('question').focus()
+  } catch (e) {
+    if (e.name === 'AbortError') {
+      rt.threadEl.querySelectorAll('.seat').forEach(seat => {
+        if (seat.querySelector('.typing')) setSeat(seat, '(stopped)')
+      })
+      if (rt.chatId === S.currentChatId) toast('Stopped — click Continue to resume')
+    } else {
+      if (rt.chatId === S.currentChatId) {
+        showErr(e.message + ' — click Continue to retry from this stage')
+      }
+      // Surface failure to the user even if they're viewing a different chat.
+      if (rt.chatId !== S.currentChatId) markUnread(rt.chatId)
+    }
+  } finally {
+    rt.isRunning = false
+    rt.abortController = null
+    rt.ctx = null
+    if (rt.chatId === S.currentChatId) updateRuntimeUI()
+    renderChatList()
+    document.getElementById('ask-overlay').classList.remove('open')
+  }
+}
+
+function addUserMessage(text, mode, threadEl){
+  const root = threadEl || currentRuntime()?.threadEl || document.getElementById('council')
+  const div  = document.createElement('div')
+  div.className = 'user-msg'
+  const modeLabel = mode === 'quick' ? 'Quick reply' : mode === 'fast' ? 'Fast council' : 'Full council'
+  div.innerHTML = `
+    <div class="user-msg-label" onclick="toggleMsg(this.parentElement)">
+      <span style="display:flex; align-items:center; gap:8px;">
+        <span class="msg-chevron"></span>
+        <span>You</span>
+      </span>
+      <span style="display:flex; gap:6px; align-items:center;">
+        <button class="msg-copy-btn" onclick="event.stopPropagation(); copyMessageText(this)" title="Copy">⧉</button>
+        <span class="user-msg-mode">${esc(modeLabel)}</span>
+      </span>
+    </div>
+    <div class="user-msg-content">${esc(text)}</div>`
+  root.appendChild(div)
+  // User just sent a message — always bring it into view regardless of
+  // previous scroll position. After this, normal auto-scroll behavior resumes.
+  scrollToBottom()
+}
+
+function continueConvene(){
+  const rt = currentRuntime()
+  if (!rt) { toast('No active chat'); return }
+  if (rt.isRunning) return
+  if (!rt.lastFailedCtx) { toast('Nothing to continue'); return }
+  document.getElementById('question').value = ''
+  autoGrowQ()
+  convene()
+}
+
+function stopConvene(){
+  const rt = currentRuntime()
+  if (!rt || !rt.isRunning || !rt.abortController) return
+  rt.abortController.abort()
+  if (_askResolver) { pickAskChoice('stop') }
+}
+
+// Per-turn DOM reconstruction inside a runtime's thread. After a failure,
+// the user clicks Continue; we clear only the seats belonging to the LATEST
+// turn (everything after the last user-msg div) and rebuild them from the
+// saved ctx. Prior turns stay in place.
+function reconstructCurrentTurn(ctx, rt){
+  rt = rt || currentRuntime()
+  if (!rt) return
+  const root = rt.threadEl
+  const userMsgs = root.querySelectorAll('.user-msg')
+  const lastMsg  = userMsgs[userMsgs.length - 1]
+  if (lastMsg) {
+    let sib = lastMsg.nextElementSibling
+    while (sib) { const next = sib.nextElementSibling; sib.remove(); sib = next }
+  } else {
+    addUserMessage(ctx.question, ctx.mode || 'quick', root)
+  }
+  const restore = (member, text, opts = {}) => {
+    const seat = mkSeat(member, root)
+    setSeat(seat, text)
+    seat.classList.add('visible')
+    if (opts.revised) markSeatRevised(seat)
+  }
+  if (ctx.quick && ctx.quick.text) restore(ctx.quick, ctx.quick.text)
+  if (Array.isArray(ctx.stage1)) ctx.stage1.forEach(c => restore(c, c.text))
+  if (Array.isArray(ctx.stage2)) ctx.stage2.forEach(r => restore(r, r.text, { revised: !!r._redone }))
+  if (ctx.stage3 && (ctx.stage3.scores !== undefined || ctx.stage3.rawText)) {
+    restore(ASSESSOR, renderAssessment(ctx))
+  }
+  if (ctx.stage4 && ctx.stage4.text) restore(ctx.stage4, ctx.stage4.text)
+}
+
+// Render a runtime's conversation into its threadEl. Used on chat load and
+// after import. Each runtime has its own DOM thread.
+function renderConversation(rt){
+  rt = rt || currentRuntime()
+  if (!rt) return
+  rt.threadEl.innerHTML = ''
+  for (const t of rt.conversation.turns) {
+    if (t.role === 'user') {
+      addUserMessage(t.content, t.mode || 'quick', rt.threadEl)
+    } else if (t.role === 'assistant') {
+      for (const r of (t.responses || [])) {
+        const seat = mkSeat(r, rt.threadEl)
+        setSeat(seat, r.text)
+        seat.classList.add('visible')
+        if (r._redone) markSeatRevised(seat)
+      }
+    }
+  }
+}
+
+function mkSeat(m, threadEl){
+  const c = CLR[m.color] || CLR.purple
+  const el = document.createElement('div')
+  el.className = 'seat'; el.style.borderLeftColor = c.hex
+  el.dataset.seatId = m.id
+  el.innerHTML = `<div class="seat-header" onclick="toggleMsg(this.parentElement)"><span class="msg-chevron"></span><div class="seat-icon" style="background:${c.bg};color:${c.fg}">${m.icon}</div><div class="seat-name">${esc(m.name)}</div><div class="seat-role">${esc(m.label)}</div><span class="seat-copy-wrap"><button class="msg-copy-btn" onclick="event.stopPropagation(); copyMessageText(this)" title="Copy">⧉</button></span></div><div class="seat-body"><div class="typing"><span></span><span></span><span></span></div></div>`
+  const target = threadEl || currentRuntime()?.threadEl || document.getElementById('council')
+  target.appendChild(el)
+  requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('visible')))
+  maybeAutoScroll()
+  // Elapsed-time clock on typing seats so the user knows it's still working.
+  const startTime = Date.now()
+  const timer = setInterval(() => {
+    if (!el.isConnected || !el.querySelector('.typing')) { clearInterval(timer); return }
+    const elapsed = Math.floor((Date.now() - startTime) / 1000)
+    if (elapsed >= 3) {
+      const existing = el.querySelector('.seat-status')
+      if (!existing || !existing.dataset.retry) {
+        setSeatStatus(el, `Working… ${elapsed}s`)
+      }
+    }
+  }, 1000)
+  return el
+}
+function setSeat(el, text){
+  const wasAtBottom = isAtBottom()
+  const body = el.querySelector('.seat-body')
+  // If streaming was used, the seat already has .seat-thinking and/or
+  // .seat-response. Collapse thinking and ensure response text is final.
+  const thinkLive = body.querySelector('.seat-thinking')
+  const respLive  = body.querySelector('.seat-response')
+  if (thinkLive || respLive) {
+    if (thinkLive) {
+      const t = thinkLive.querySelector('.seat-thinking-content')?.textContent || ''
+      thinkLive.remove()
+      if (t.trim()) {
+        const det = document.createElement('details')
+        det.className = 'seat-thinking-collapsed'
+        det.innerHTML = `<summary>Reasoning</summary><div class="seat-thinking-content"></div>`
+        det.querySelector('.seat-thinking-content').textContent = t
+        body.insertBefore(det, body.firstChild)
+      }
+    }
+    if (respLive) {
+      respLive.textContent = text || respLive.textContent
+    } else if (text) {
+      const r = document.createElement('div'); r.className = 'seat-response'; r.textContent = text
+      body.appendChild(r)
+    }
+    const st = body.querySelector('.seat-status'); if (st) st.remove()
+    if (wasAtBottom) maybeAutoScroll()
+    return
+  }
+  // Non-streaming path: replace the body content with the final text.
+  body.textContent = text
+  const st = el.querySelector('.seat-status'); if (st) st.remove()
+  if (wasAtBottom) maybeAutoScroll()
+}
+
+// Called by the streaming Provider as thinking + content deltas arrive.
+// Builds .seat-thinking and .seat-response sections progressively.
+function updateSeatStream(seat, { thinking, content }){
+  if (!seat) return
+  const wasAtBottom = isAtBottom()
+  const body = seat.querySelector('.seat-body')
+  const typing = body.querySelector('.typing'); if (typing) typing.remove()
+  const status = body.querySelector('.seat-status'); if (status) status.remove()
+  if (thinking) {
+    let el = body.querySelector('.seat-thinking')
+    if (!el) {
+      el = document.createElement('div')
+      el.className = 'seat-thinking'
+      el.innerHTML = `<div class="seat-thinking-label">Thinking</div><div class="seat-thinking-content"></div>`
+      body.appendChild(el)
+    }
+    const c = el.querySelector('.seat-thinking-content')
+    c.textContent = thinking
+    c.scrollTop = c.scrollHeight   // follow inside the thinking box as it streams
+  }
+  if (content) {
+    let el = body.querySelector('.seat-response')
+    if (!el) {
+      el = document.createElement('div')
+      el.className = 'seat-response'
+      body.appendChild(el)
+    }
+    el.textContent = content
+  }
+  if (wasAtBottom) maybeAutoScroll()
+}
+
+// On retry, wipe any partial streamed content so the new attempt starts clean.
+function resetSeatStream(seat){
+  if (!seat) return
+  const body = seat.querySelector('.seat-body')
+  body.querySelector('.seat-thinking')?.remove()
+  body.querySelector('.seat-response')?.remove()
+  // Restore typing indicator so it's visible during backoff
+  if (!body.querySelector('.typing')) {
+    const t = document.createElement('div')
+    t.className = 'typing'
+    t.innerHTML = '<span></span><span></span><span></span>'
+    body.appendChild(t)
+  }
+}
+
+function setSeatStatus(el, text){
+  if (!el) return
+  let s = el.querySelector('.seat-status')
+  if (!s) {
+    const body = el.querySelector('.seat-body')
+    if (!body) return
+    s = document.createElement('div')
+    s.className = 'seat-status'
+    body.appendChild(s)
+  }
+  s.textContent = text
+  // Mark "retry" status so the elapsed-time clock doesn't overwrite it
+  if (text.startsWith('Retrying')) s.dataset.retry = '1'
+  else delete s.dataset.retry
+}
+
+// ============================================================
+// AUTO-SCROLL — chatbot-style. Track whether the user is at the bottom;
+// only auto-scroll new content into view if they were. Floating ↓ button
+// appears when scrolled up so they can jump back.
+// ============================================================
+function isAtBottom(){
+  // Threshold expands to cover the fixed input bar so "scrolled all the way
+  // down" includes the empty padding the bar overlays.
+  const bar  = document.getElementById('input-bar')
+  const barH = bar ? bar.offsetHeight : 0
+  const threshold = Math.max(100, barH - 40)
+  const dist = document.documentElement.scrollHeight - window.scrollY - window.innerHeight
+  return dist <= threshold
+}
+function scrollToBottom(){
+  window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+}
+function maybeAutoScroll(){
+  if (isAtBottom()) {
+    // Defer to next frame so layout/animation has applied before we scroll.
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+    })
+  }
+}
+function refreshScrollDownBtn(){
+  const btn = document.getElementById('scroll-down-btn')
+  if (!btn) return
+  btn.classList.toggle('show', !isAtBottom())
+}
+window.addEventListener('scroll', refreshScrollDownBtn, { passive: true })
+window.addEventListener('resize', refreshScrollDownBtn, { passive: true })
+function resetCouncil(){
+  // "New Conversation" — the chat data is already saved to disk after every
+  // turn, so we just delegate to newChat which clears runtime state and
+  // eagerly creates a fresh chat folder.
+  newChat()
+}
+
+// Auto-grow the question textarea up to a viewport-aware cap, unless the
+// user has manually dragged the corner — in which case we treat the dragged
+// height as a floor and only grow past it when content exceeds it.
+let _userResizedQ = false
+function autoGrowQ(){
+  const ta = document.getElementById('question')
+  if (!ta) return
+  const maxH = Math.floor(window.innerHeight * 0.6)
+  const userFloor = _userResizedQ ? ta.offsetHeight : 0
+  ta.style.height = 'auto'
+  const needed = ta.scrollHeight
+  ta.style.height = Math.min(Math.max(needed, userFloor), maxH) + 'px'
+  syncShellPadding()
+}
+
+// Keep the shell's padding-bottom equal to the fixed input bar's height so
+// the last conversation content never gets hidden behind the bar.
+function syncShellPadding(){
+  const bar   = document.getElementById('input-bar')
+  const shell = document.querySelector('.shell')
+  if (!bar || !shell) return
+  shell.style.paddingBottom = (bar.offsetHeight + 32) + 'px'
+}
+
+// ============================================================
+// MODE TOGGLE
+// ============================================================
+function setMode(mode){
+  if (!['quick','fast','full'].includes(mode)) return
+  S.mode = mode; persist(); renderMode()
+}
+function renderMode(){
+  document.getElementById('mode-quick').classList.toggle('on', S.mode === 'quick')
+  document.getElementById('mode-fast').classList.toggle('on',  S.mode === 'fast')
+  document.getElementById('mode-full').classList.toggle('on',  S.mode === 'full')
+}
+
+// ============================================================
+// TOGGLES — which members are active
+// ============================================================
+function renderToggles(){
+  const el = document.getElementById('toggles'); el.innerHTML = ''
+  // Render in S.order so the toggle row reflects speaker order.
+  S.order.forEach(id => {
+    const m = S.members.find(x => x.id === id); if (!m) return
+    const c = CLR[m.color] || CLR.purple; const on = S.activeRoles.has(m.id)
+    const btn = document.createElement('button'); btn.className = 'toggle'; btn.textContent = m.label
+    if (on) { btn.style.background = c.hex; btn.style.borderColor = c.hex; btn.style.color = '#0e0e0f' }
+    btn.onclick = () => {
+      if (S.activeRoles.has(m.id)) {
+        if (S.activeRoles.size <= 2) return
+        S.activeRoles.delete(m.id); btn.style.background = btn.style.borderColor = btn.style.color = ''
+      } else {
+        S.activeRoles.add(m.id); btn.style.background = c.hex; btn.style.borderColor = c.hex; btn.style.color = '#0e0e0f'
+      }
+      persist()
+    }
+    el.appendChild(btn)
+  })
+}
+
+// ============================================================
+// PANELS
+// ============================================================
+function togglePanel(name){
+  if (S.openPanel === name) { closePanel(name); return }
+  if (S.openPanel) closePanel(S.openPanel)
+  S.openPanel = name
+  document.getElementById(name+'-panel').classList.add('open')
+  document.getElementById('backdrop').classList.add('active')
+  document.getElementById(name+'-tb-btn').classList.add('active')
+  if (name === 'chat')     refreshChatList()
+  if (name === 'settings') renderSettings()
+}
+function closePanel(name){
+  document.getElementById(name+'-panel').classList.remove('open')
+  document.getElementById('backdrop').classList.remove('active')
+  document.getElementById(name+'-tb-btn').classList.remove('active')
+  S.openPanel = null
+}
+function closeAll(){ if (S.openPanel) closePanel(S.openPanel); closeEditorEl() }
+
+// ============================================================
+// SETTINGS
+// ============================================================
+function renderSettings(){
+  document.getElementById('house-style-input').value = S.houseStyle || ''
+  document.getElementById('reasoning-input').value   = S.reasoningStandards || ''
+  document.getElementById('failure-policy').value    = S.failurePolicy
+  document.getElementById('retry-count').value       = String(S.retryCount)
+  document.getElementById('max-concurrent').value    = String(S.maxConcurrent)
+  document.getElementById('retry-count-row').style.display = (S.failurePolicy === 'retry') ? '' : 'none'
+  document.getElementById('show-thinking').checked   = !!S.showThinking
+  applyApiModelSelectionUI()
+  updateMode()
+}
+function handleShowThinkingChange(){
+  S.showThinking = !!document.getElementById('show-thinking').checked
+  persist()
+}
+
+function updateApiModelNote(){
+  const el = document.getElementById('api-model-note')
+  if (!el) return
+  const m = (S.apiModel || '').trim()
+  if (!m) { el.textContent = '(no model set — calls will fail in API mode)'; el.style.color = '#e08080'; return }
+  if (Provider.modelSupportsThinking(m)) {
+    el.textContent = `✓ '${m}' supports streamed thinking.`
+    el.style.color = '#7aa890'
+  } else if (Provider.modelKnownNoThinking(m)) {
+    el.textContent = `'${m}' does NOT support thinking. Thinking will be skipped for this model.`
+    el.style.color = 'var(--muted)'
+  } else {
+    el.textContent = `Thinking support for '${m}' is unknown. The call will attempt thinking; if the API rejects it, it falls back to a non-thinking call automatically.`
+    el.style.color = 'var(--muted)'
+  }
+}
+
+function applyApiModelSelectionUI(){
+  // Reflect S.apiModel in the select and custom input on render.
+  const sel    = document.getElementById('api-model')
+  const custom = document.getElementById('api-model-custom')
+  if (!sel || !custom) return
+  const options = Array.from(sel.options).map(o => o.value).filter(v => v !== '__custom__')
+  if (options.includes(S.apiModel)) {
+    sel.value = S.apiModel
+    custom.style.display = 'none'
+    custom.value = ''
+  } else {
+    sel.value = '__custom__'
+    custom.style.display = ''
+    custom.value = S.apiModel || ''
+  }
+  updateApiModelNote()
+}
+
+function handleApiModelChange(){
+  const sel    = document.getElementById('api-model')
+  const custom = document.getElementById('api-model-custom')
+  if (sel.value === '__custom__') {
+    custom.style.display = ''
+    custom.focus()
+    S.apiModel = (custom.value || '').trim()
+  } else {
+    custom.style.display = 'none'
+    custom.value = ''
+    S.apiModel = sel.value
+  }
+  updateApiModelNote()
+  persist()
+}
+
+function handleApiModelCustomChange(){
+  S.apiModel = (document.getElementById('api-model-custom').value || '').trim()
+  updateApiModelNote()
+  persist()
+}
+function handleFailurePolicyChange(){
+  const v = document.getElementById('failure-policy').value
+  if (['retry','ask','skip','stop'].includes(v)) {
+    S.failurePolicy = v
+    document.getElementById('retry-count-row').style.display = (v === 'retry') ? '' : 'none'
+    persist()
+  }
+}
+function handleRetryCountChange(){
+  const raw = document.getElementById('retry-count').value.trim()
+  const n   = parseInt(raw, 10)
+  if (Number.isFinite(n) && n >= 0 && n <= 50) {
+    S.retryCount = n
+    persist()
+  }
+}
+function handleMaxConcurrentChange(){
+  const raw = document.getElementById('max-concurrent').value.trim()
+  const n = parseInt(raw, 10)
+  if (Number.isFinite(n) && n >= 1 && n <= 20) {
+    S.maxConcurrent = n
+    persist()
+  }
+}
+function handleHouseStyleInput(){
+  S.houseStyle = document.getElementById('house-style-input').value
+  persist()
+}
+function resetHouseStyle(){
+  if (!confirm('Reset House Style to the default writing-goal text?')) return
+  S.houseStyle = DEFAULT_HOUSE_STYLE
+  document.getElementById('house-style-input').value = DEFAULT_HOUSE_STYLE
+  persist(); toast('House Style reset to default')
+}
+function clearHouseStyle(){
+  if (!confirm('Clear House Style? Agents will run with no style preamble.')) return
+  S.houseStyle = ''
+  document.getElementById('house-style-input').value = ''
+  persist(); toast('House Style cleared')
+}
+function handleReasoningInput(){
+  S.reasoningStandards = document.getElementById('reasoning-input').value
+  persist()
+}
+function resetReasoning(){
+  if (!confirm('Reset Reasoning Standards to the default methodology rules?')) return
+  S.reasoningStandards = DEFAULT_REASONING_STANDARDS
+  document.getElementById('reasoning-input').value = DEFAULT_REASONING_STANDARDS
+  persist(); toast('Reasoning Standards reset to default')
+}
+function clearReasoning(){
+  if (!confirm('Clear Reasoning Standards? Agents will run with no methodology preamble.')) return
+  S.reasoningStandards = ''
+  document.getElementById('reasoning-input').value = ''
+  persist(); toast('Reasoning Standards cleared')
+}
+function handleKeyInput(){ S.apiKey = document.getElementById('api-key-input').value.trim(); persist(); updateMode() }
+function clearApiKey(){ S.apiKey = ''; document.getElementById('api-key-input').value = ''; persist(); updateMode() }
+function toggleKeyVis(){ const el = document.getElementById('api-key-input'); el.type = el.type === 'password' ? 'text' : 'password' }
+function updateMode(){
+  const api = !!S.apiKey
+  const pill = `<span class="mode-pill ${api?'api':'cli'}">${api?'🔑 Anthropic API':'⚡ Claude CLI'}</span>`
+  document.getElementById('mode-badge').innerHTML = pill
+  document.getElementById('mode-status').innerHTML = pill
+  document.getElementById('clear-key-btn').style.display = api ? '' : 'none'
+  if (S.apiKey && !document.getElementById('api-key-input').value) document.getElementById('api-key-input').value = S.apiKey
+}
+
+// ============================================================
+// CHAT STORE — disk-backed chats live in ./chats/ next to council.py.
+// Each chat is a folder; each turn is a JSON file inside it. The
+// Python server exposes CRUD endpoints; this client wraps them.
+// ============================================================
+const ChatStore = {
+  async list(){
+    const r = await fetch('/chats'); if (!r.ok) throw new Error(`list ${r.status}`)
+    return (await r.json()).chats || []
+  },
+  async create(title){
+    const r = await fetch('/chats/new', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ title: title || 'New chat' })
+    })
+    if (!r.ok) throw new Error(`create ${r.status}`)
+    return await r.json()
+  },
+  async get(id){
+    const r = await fetch(`/chats/${encodeURIComponent(id)}`)
+    if (!r.ok) throw new Error(`get ${r.status}`)
+    return await r.json()
+  },
+  async appendTurn(id, turn){
+    const r = await fetch(`/chats/${encodeURIComponent(id)}/turns`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ turn })
+    })
+    if (!r.ok) throw new Error(`append ${r.status}`)
+    return await r.json()
+  },
+  async delete(id){
+    const r = await fetch(`/chats/${encodeURIComponent(id)}`, { method:'DELETE' })
+    if (!r.ok) throw new Error(`delete ${r.status}`)
+    return await r.json()
+  },
+  async saveInflight(id, payload){
+    const r = await fetch(`/chats/${encodeURIComponent(id)}/inflight`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(payload),
+    })
+    if (!r.ok) throw new Error(`save inflight ${r.status}`)
+    return await r.json()
+  },
+  async clearInflight(id){
+    const r = await fetch(`/chats/${encodeURIComponent(id)}/inflight`, { method:'DELETE' })
+    if (!r.ok) throw new Error(`clear inflight ${r.status}`)
+    return await r.json()
+  },
+  async setTitle(id, title){
+    const r = await fetch(`/chats/${encodeURIComponent(id)}/title`, {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ title }),
+    })
+    if (!r.ok) throw new Error(`set title ${r.status}`)
+    return await r.json()
+  },
+}
+
+// Generate a short descriptive title from the user's first message, using
+// Claude. Non-blocking; if it fails the chat keeps the default truncated
+// title. Runs ONCE per chat, right after the first user turn is saved.
+async function autoGenerateTitle(chatId, userMessage){
+  if (!chatId || !userMessage) return
+  try {
+    const text = await Provider.invoke({
+      system: 'You generate concise, descriptive titles for conversations. Respond with ONLY the title — no quotes, no preamble, no explanation. Keep it 3 to 8 words.',
+      prompt: `Generate a title (3–8 words) for a conversation that starts with this user message:\n\n${userMessage}\n\nTitle:`,
+      maxTokens: 80,
+    })
+    const cleaned = (text || '').trim()
+      .replace(/^["'`]+|["'`.,!?:;]+$/g, '')
+      .replace(/^title:\s*/i, '')
+      .split(/\r?\n/)[0]
+      .trim()
+      .slice(0, 120)
+    if (cleaned && cleaned.length >= 3) {
+      await ChatStore.setTitle(chatId, cleaned)
+      refreshChatList().catch(()=>{})
+    }
+  } catch (e) {
+    console.warn('autoGenerateTitle', e)
+  }
+}
+
+async function refreshChatList(){
+  try { S.chats = await ChatStore.list() } catch (e) { S.chats = []; console.warn('refreshChatList', e) }
+  renderChatList()
+}
+
+// An in-flight ctx is only meaningful if its question matches the chat's
+// most recent user turn. If they drift apart (manual edit, test pollution,
+// race between sessions), the in-flight is stale and we should discard it.
+function isInflightFresh(inflight, turns){
+  if (!inflight || !inflight.ctx || typeof inflight.ctx.question !== 'string') return false
+  const lastUser = (turns || []).filter(t => t.role === 'user').slice(-1)[0]
+  if (!lastUser) return false
+  return lastUser.content === inflight.ctx.question
+}
+
+// Garbage-collect chats with 0 turns that aren't the currently active one.
+// Empty folders contain no content, so removing them never loses information.
+async function cleanupEmptyChats(){
+  const toDelete = (S.chats || []).filter(c =>
+    (c.turn_count || 0) === 0 && c.id !== S.currentChatId
+  )
+  if (!toDelete.length) return
+  for (const c of toDelete) {
+    try { await ChatStore.delete(c.id) } catch (_) {}
+  }
+  await refreshChatList()
+}
+function renderChatList(){
+  const el = document.getElementById('chat-list')
+  if (!el) return
+  // Hide empty chats that aren't currently active. They're invisible noise
+  // until they have content; auto-cleanup elsewhere removes them from disk too.
+  const visible = (S.chats || []).filter(c =>
+    (c.turn_count || 0) > 0 || c.id === S.currentChatId
+  )
+  if (!visible.length) {
+    el.innerHTML = '<p class="hist-empty">No chats yet. Type a question below to start one.</p>'
+    return
+  }
+  el.innerHTML = ''
+  for (const c of visible) {
+    const row = document.createElement('div')
+    let cls = 'chat-item'
+    if (c.id === S.currentChatId)            cls += ' active'
+    const rt = S.runtimes.get(c.id)
+    if (rt && rt.isRunning)                  cls += ' running'
+    if (S.unread.has(c.id))                  cls += ' unread'
+    row.className = cls
+    const turnsTxt = (c.turn_count === 1) ? '1 turn' : `${c.turn_count || 0} turns`
+    const when = c.updated_at || c.created_at
+    const whenTxt = when ? relTime(new Date(when)) : ''
+    const sep = whenTxt ? ' · ' : ''
+    const runningDots = (rt && rt.isRunning)
+      ? '<span class="chat-item-typing"><span></span><span></span><span></span></span>'
+      : ''
+    row.innerHTML = `
+      <div class="chat-item-main">
+        <div class="chat-item-title">${runningDots}${esc(c.title || c.id)}</div>
+        <div class="chat-item-meta">${turnsTxt}${sep}${esc(whenTxt)}</div>
+      </div>
+      <div class="chat-item-actions">
+        <button class="chat-item-copy" title="Copy initial prompt">⧉</button>
+        <button class="chat-item-del" title="Delete chat">✕</button>
+      </div>`
+    row.querySelector('.chat-item-main').onclick = () => loadChat(c.id)
+    row.querySelector('.chat-item-copy').onclick = (e) => { e.stopPropagation(); copyChatPrompt(c.id) }
+    row.querySelector('.chat-item-del').onclick  = (e) => { e.stopPropagation(); deleteChat(c.id) }
+    el.appendChild(row)
+  }
+}
+
+async function copyChatPrompt(id){
+  try {
+    const data = await ChatStore.get(id)
+    const firstUser = (data.turns || []).find(t => t.role === 'user')
+    if (!firstUser || !firstUser.content) { toast('No prompt found in this chat'); return }
+    await navigator.clipboard.writeText(firstUser.content)
+    toast('Prompt copied')
+  } catch (e) {
+    toast(`Copy failed: ${e.message}`)
+  }
+}
+
+// Collapse / expand a single thread item (user-msg or seat). The copy
+// button inside the header uses event.stopPropagation so it never triggers
+// the toggle accidentally.
+function toggleMsg(el){
+  if (!el) return
+  el.classList.toggle('collapsed')
+}
+
+// Copy the content of a single message in the thread (user-msg or seat).
+// For seats that streamed thinking, only the response text is copied; the
+// collapsed reasoning stays available in the UI but isn't part of the copy.
+function copyMessageText(button){
+  const container = button.closest('.user-msg, .seat')
+  if (!container) return
+  let text = ''
+  if (container.classList.contains('user-msg')) {
+    text = container.querySelector('.user-msg-content')?.textContent || ''
+  } else {
+    const resp = container.querySelector('.seat-response')
+    text = (resp ? resp.textContent : (container.querySelector('.seat-body')?.textContent || '')).trim()
+  }
+  if (!text) { toast('Nothing to copy'); return }
+  navigator.clipboard.writeText(text)
+    .then(() => toast('Copied'))
+    .catch(err => toast(`Copy failed: ${err.message}`))
+}
+
+async function newChat(){
+  closePanel('chat')
+  // If current chat is empty (no turns, no pending failed work, not running),
+  // delete its disk folder and its runtime — keeps stale empties from piling up.
+  const curRt = currentRuntime()
+  if (curRt && !curRt.isRunning && !curRt.conversation.turns.length && !curRt.lastFailedCtx) {
+    try { await ChatStore.delete(curRt.chatId) } catch (_) {}
+    curRt.threadEl.remove()
+    S.runtimes.delete(curRt.chatId)
+  }
+  // Clear current chat reference. New folder is created lazily by convene()
+  // on the first send, so the panel only shows chats that have content.
+  S.currentChatId = null
+  showOnlyThread(null)
+  document.getElementById('question').value = ''
+  autoGrowQ()
+  hideErr()
+  persist()
+  updateRuntimeUI()
+  await refreshChatList()
+  document.getElementById('question').focus()
+}
+
+async function loadChat(id){
+  closePanel('chat')
+  // No-op if already viewing this chat — just make sure its thread is visible.
+  if (S.currentChatId === id) {
+    showOnlyThread(id); markRead(id); renderChatList(); return
+  }
+  // If leaving behind an empty, non-running current chat, garbage-collect it.
+  const curRt = currentRuntime()
+  if (curRt && curRt.chatId !== id && !curRt.isRunning &&
+      !curRt.conversation.turns.length && !curRt.lastFailedCtx) {
+    try { await ChatStore.delete(curRt.chatId) } catch (_) {}
+    curRt.threadEl.remove()
+    S.runtimes.delete(curRt.chatId)
+  }
+  // Get or build the runtime for this chat (lazy-load from disk if needed).
+  let rt = S.runtimes.get(id)
+  if (!rt) {
+    try {
+      const data = await ChatStore.get(id)
+      rt = getOrCreateRuntime(id)
+      rt.conversation = { turns: (data.turns || []).slice() }
+      renderConversation(rt)
+      if (isInflightFresh(data.inflight, data.turns)) {
+        rt.lastFailedCtx = data.inflight.ctx
+        rt.lastFailedAtStage = (data.inflight.resumeAt != null) ? data.inflight.resumeAt : 0
+        reconstructCurrentTurn(rt.lastFailedCtx, rt)
+      } else if (data.inflight) {
+        try { await ChatStore.clearInflight(id) } catch (_) {}
+      }
+    } catch (e) {
+      showErr(`Failed to load chat: ${e.message}`)
+      return
+    }
+  }
+  S.currentChatId = id
+  showOnlyThread(id)
+  markRead(id)
+  persist()
+  updateRuntimeUI()
+  renderChatList()
+}
+
+async function deleteChat(id){
+  if (!confirm('Delete this chat? The folder and all its turn files will be removed.')) return
+  try {
+    // If the chat is currently running, abort it first.
+    const rt = S.runtimes.get(id)
+    if (rt && rt.abortController) rt.abortController.abort()
+    await ChatStore.delete(id)
+    if (rt) { rt.threadEl.remove(); S.runtimes.delete(id) }
+    S.unread.delete(id)
+    if (S.currentChatId === id) {
+      S.currentChatId = null
+      showOnlyThread(null)
+      persist()
+      updateRuntimeUI()
+    }
+    await refreshChatList()
+    toast('Chat deleted')
+  } catch (e) {
+    showErr(`Delete failed: ${e.message}`)
+  }
+}
+
+// ----- Legacy localStorage history: kept harmless, no longer surfaced -----
+function addHistory(_session){ /* superseded by ChatStore */ }
+
+// ============================================================
+// MEMBER EDITOR
+// ============================================================
+function openEditor(){
+  document.getElementById('editor-overlay').classList.add('open')
+  document.getElementById('backdrop').classList.add('active')
+  document.getElementById('edit-tb-btn').classList.add('active')
+  renderMemberList()
+}
+function closeEditor(){ closeEditorEl() }
+function closeEditorEl(){
+  document.getElementById('editor-overlay').classList.remove('open')
+  document.getElementById('edit-tb-btn').classList.remove('active')
+  if (!S.openPanel) document.getElementById('backdrop').classList.remove('active')
+}
+function renderMemberList(){
+  const list = document.getElementById('member-list'); list.innerHTML = ''
+  // Render in S.order so the editor reflects speaker order.
+  S.order.forEach((id, idx) => {
+    const m = S.members.find(x => x.id === id); if (!m) return
+    const c = CLR[m.color] || CLR.purple
+    const card = document.createElement('div'); card.className = 'member-card'; card.dataset.id = m.id
+    const first = idx === 0, last = idx === S.order.length - 1
+    card.innerHTML = `
+      <div class="mc-head" onclick="toggleForm('${m.id}')">
+        <div class="mc-icon" style="background:${c.bg};color:${c.fg}">${m.icon}</div>
+        <span class="mc-name">${esc(m.name)}</span><span class="mc-lbl">${esc(m.label)}</span>
+        <div class="mc-actions" onclick="event.stopPropagation()">
+          <button class="icon-btn" onclick="moveMember('${m.id}', -1)" ${first?'disabled':''} title="Move up">↑</button>
+          <button class="icon-btn" onclick="moveMember('${m.id}',  1)" ${last?'disabled':''} title="Move down">↓</button>
+          <button class="icon-btn del" onclick="delMember('${m.id}')" title="Delete">✕</button>
+        </div>
+      </div>
+      <div class="mc-form" id="form-${m.id}">
+        <div class="form-row">
+          <div class="form-field" style="max-width:60px"><label>Icon</label>
+            <input class="form-in" value="${esc(m.icon)}" maxlength="4" oninput="updM('${m.id}','icon',this.value);refreshIcon('${m.id}')"></div>
+          <div class="form-field"><label>Name</label>
+            <input class="form-in" value="${esc(m.name)}" oninput="updM('${m.id}','name',this.value)"></div>
+          <div class="form-field"><label>Label</label>
+            <input class="form-in" value="${esc(m.label)}" oninput="updM('${m.id}','label',this.value)"></div>
+        </div>
+        <div class="form-field" style="margin-bottom:10px"><label>Color</label>
+          <div class="cdots">${CKEYS.map(k => `<div class="cdot${m.color===k?' sel':''}" style="background:${CLR[k].hex}" onclick="updM('${m.id}','color','${k}');refreshColor('${m.id}','${k}');selDot('${m.id}','${k}')"></div>`).join('')}</div></div>
+        <div class="form-field"><label>System Prompt</label>
+          <textarea class="form-in form-ta" oninput="updM('${m.id}','system',this.value)">${esc(m.system)}</textarea></div>
+      </div>`
+    list.appendChild(card)
+  })
+}
+function toggleForm(id){ document.getElementById('form-'+id).classList.toggle('open') }
+function updM(id, field, val){ const m = S.members.find(x => x.id === id); if (m) { m[field] = val; persist(); renderToggles() } }
+function refreshIcon(id){ const m = S.members.find(x => x.id === id); if (!m) return; const el = document.querySelector(`.member-card[data-id="${id}"] .mc-icon`); if (el) el.textContent = m.icon }
+function refreshColor(id, ck){ const c = CLR[ck] || CLR.purple; const el = document.querySelector(`.member-card[data-id="${id}"] .mc-icon`); if (el) { el.style.background = c.bg; el.style.color = c.fg } }
+function selDot(id, ck){ document.querySelectorAll(`#form-${id} .cdot`).forEach((d, i) => d.classList.toggle('sel', CKEYS[i] === ck)) }
+
+function moveMember(id, delta){
+  const i = S.order.indexOf(id); if (i < 0) return
+  const j = i + delta; if (j < 0 || j >= S.order.length) return
+  const tmp = S.order[i]; S.order[i] = S.order[j]; S.order[j] = tmp
+  persist(); renderMemberList(); renderToggles()
+}
+function shuffleOrder(){
+  // Fisher-Yates
+  for (let i = S.order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    const t = S.order[i]; S.order[i] = S.order[j]; S.order[j] = t
+  }
+  persist(); renderMemberList(); renderToggles(); toast('Order shuffled')
+}
+function delMember(id){
+  if (S.members.length <= 2) { toast('Keep at least 2 members'); return }
+  S.members = S.members.filter(m => m.id !== id)
+  S.activeRoles.delete(id)
+  S.order = S.order.filter(x => x !== id)
+  persist(); renderMemberList(); renderToggles()
+}
+function addMember(){
+  const id = 'c_' + Date.now()
+  S.members.push({ id, name:'New Member', label:'Custom Role', icon:'✦', color:'purple',
+    system:'You are a council member. Give your honest perspective on the question. 3–5 focused paragraphs. No bullet lists.' })
+  S.activeRoles.add(id); S.order.push(id)
+  persist(); renderMemberList(); renderToggles()
+  setTimeout(() => toggleForm(id), 40)
+}
+function resetMembers(){
+  if (!confirm('Reset all council members to defaults?')) return
+  S.members = deep(DEF_MEMBERS)
+  S.activeRoles = new Set(DEF_MEMBERS.map(m => m.id))
+  S.order = DEF_MEMBERS.map(m => m.id)
+  persist(); renderMemberList(); renderToggles()
+}
+
+// ============================================================
+// EXPORT
+// ============================================================
+// Export the current conversation as a downloadable JSON file. This is the
+// recovery primitive: drop the file somewhere safe before a risky prompt;
+// re-import it later if anything goes sideways.
+function exportConversation(){
+  const rt = currentRuntime()
+  if (!rt || !rt.conversation.turns.length) {
+    toast('No conversation to export'); return
+  }
+  const data = {
+    version: 1,
+    exported_at: new Date().toISOString(),
+    app: 'The Council',
+    conversation: rt.conversation,
+  }
+  const json = JSON.stringify(data, null, 2)
+  const blob = new Blob([json], { type:'application/json' })
+  const url  = URL.createObjectURL(blob)
+  const firstUser = rt.conversation.turns.find(t => t.role === 'user')
+  const slug = (firstUser?.content || 'conversation')
+    .slice(0, 48).replace(/\s+/g, '-').replace(/[^a-z0-9\-]+/gi, '').toLowerCase() || 'conversation'
+  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `council-${slug}-${stamp}.json`
+  document.body.appendChild(a); a.click(); a.remove()
+  URL.revokeObjectURL(url)
+  toast('Conversation exported')
+}
+
+// Import a conversation from a JSON file. Archives the current conversation
+// to history first (so import doesn't blow away unsaved work), then loads
+// the imported turns and renders them.
+function importConversation(){
+  const input = document.createElement('input')
+  input.type   = 'file'
+  input.accept = 'application/json,.json'
+  input.onchange = async () => {
+    const file = input.files && input.files[0]
+    if (!file) return
+    try {
+      const text = await file.text()
+      const data = JSON.parse(text)
+      // Accept either { conversation: { turns: [...] } } or just { turns: [...] }
+      const conv = (data && data.conversation && Array.isArray(data.conversation.turns))
+        ? data.conversation
+        : (data && Array.isArray(data.turns) ? data : null)
+      if (!conv) throw new Error('Not a valid conversation file (no turns array found)')
+      // Replace the CURRENT chat's conversation with the imported turns.
+      // (Future: create a separate chat folder for imports.)
+      const rt = currentRuntime() || (S.currentChatId ? getOrCreateRuntime(S.currentChatId) : null)
+      if (!rt) { toast('Open or create a chat first, then import into it.'); return }
+      rt.conversation = { turns: conv.turns.slice() }
+      rt.lastFailedCtx = null
+      rt.lastFailedAtStage = null
+      rt.session = null
+      renderConversation(rt)
+      updateRuntimeUI()
+      closePanel('settings')
+      toast(`Imported ${conv.turns.length} turn${conv.turns.length === 1 ? '' : 's'}`)
+    } catch (e) {
+      toast(`Import failed: ${e.message}`)
+    }
+  }
+  input.click()
+}
+
+function exportMarkdown(){
+  const rt = currentRuntime()
+  if (!rt || !rt.conversation.turns.length) return
+  let md = `# Council Conversation\n\n**Exported:** ${new Date().toLocaleString()}\n\n---\n\n`
+  for (const t of rt.conversation.turns) {
+    if (t.role === 'user') {
+      const modeLabel = t.mode === 'quick' ? 'Quick' : t.mode === 'fast' ? 'Fast Council' : t.mode === 'full' ? 'Full Council' : (t.mode || '')
+      md += `## You${modeLabel ? ` — ${modeLabel}` : ''}\n\n${t.content}\n\n---\n\n`
+    } else if (t.role === 'assistant') {
+      const modeLabel = t.mode === 'quick' ? 'Quick Reply' : t.mode === 'fast' ? 'Fast Council' : 'Full Council'
+      md += `## Assistant — ${modeLabel}\n\n`
+      for (const r of (t.responses || [])) {
+        md += `### ${r.name} — ${r.label}\n\n${r.text}\n\n`
+      }
+      md += `---\n\n`
+    }
+  }
+  md += `*Generated by The Council*`
+  navigator.clipboard.writeText(md).then(() => toast('Conversation copied ✓')).catch(() => toast('Copy failed'))
+}
+
+// ============================================================
+// UTILITIES
+// ============================================================
+function showErr(msg){
+  const e = document.getElementById('error-msg')
+  e.textContent = '⚠ ' + msg; e.style.display = 'block'
+  // Sticky banner at the bottom of the viewport — visible regardless of scroll.
+  const sticky = document.getElementById('err-sticky')
+  const stickyMsg = document.getElementById('err-sticky-msg')
+  if (sticky && stickyMsg) {
+    stickyMsg.textContent = '⚠ ' + msg
+    sticky.classList.add('show')
+  }
+}
+function hideErr(){
+  document.getElementById('error-msg').style.display = 'none'
+  const sticky = document.getElementById('err-sticky')
+  if (sticky) sticky.classList.remove('show')
+}
+function toast(msg){ const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2600) }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') }
+function relTime(d){
+  const m = Math.floor((Date.now() - d) / 60000)
+  if (m < 1) return 'just now'; if (m < 60) return `${m}m ago`
+  const h = Math.floor(m / 60); if (h < 24) return `${h}h ago`
+  return `${Math.floor(h/24)}d ago`
+}
+
+{
+  const ta = document.getElementById('question')
+  ta.addEventListener('keydown', e => { if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') convene() })
+  ta.addEventListener('input', autoGrowQ)
+  // Manual corner-drag: detect a height change that doesn't come from typing
+  // and lock the auto-grow to that height as a floor.
+  let lastH = ta.offsetHeight
+  ta.addEventListener('mousedown', () => { lastH = ta.offsetHeight })
+  ta.addEventListener('mouseup',   () => {
+    if (ta.offsetHeight !== lastH) _userResizedQ = true
+  })
+  window.addEventListener('resize', autoGrowQ)
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll() })
+
+hydrate(); renderToggles(); renderMode(); updateMode(); autoGrowQ(); syncShellPadding()
+window.addEventListener('resize', syncShellPadding, { passive: true })
+
+// Boot sequence: load chat list from disk, build a runtime for the current
+// chat (if any), reject stale in-flight files, render the thread.
+;(async () => {
+  await refreshChatList()
+  if (S.currentChatId) {
+    try {
+      const data = await ChatStore.get(S.currentChatId)
+      const rt = getOrCreateRuntime(S.currentChatId)
+      rt.conversation = { turns: (data.turns || []).slice() }
+      renderConversation(rt)
+      if (isInflightFresh(data.inflight, data.turns)) {
+        rt.lastFailedCtx = data.inflight.ctx
+        rt.lastFailedAtStage = (data.inflight.resumeAt != null) ? data.inflight.resumeAt : 0
+        reconstructCurrentTurn(rt.lastFailedCtx, rt)
+      } else if (data.inflight) {
+        try { await ChatStore.clearInflight(S.currentChatId) } catch (_) {}
+      }
+      showOnlyThread(S.currentChatId)
+    } catch (_) {
+      S.currentChatId = null
+      persist()
+    }
+  }
+  await cleanupEmptyChats()
+  updateRuntimeUI()
+  renderChatList()
+})()
+</script>
+</body>
+</html>"""
+
+
+class Handler(http.server.BaseHTTPRequestHandler):
+
+    # ---------------- routing ----------------
+
+    def do_GET(self):
+        path = urlparse(self.path).path
+        if path in ('/', '/index.html'):
+            return self._serve_html()
+        if path == '/chats':
+            return self._chats_list()
+        if path.startswith('/chats/'):
+            rest = path[len('/chats/'):]
+            if rest and '/' not in rest:
+                return self._chats_get(unquote(rest))
+        self.send_response(404); self.end_headers()
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self._cors()
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
+        self.end_headers()
+
+    def do_POST(self):
+        path = urlparse(self.path).path
+        if path == '/ask':
+            return self._handle_ask()
+        if path == '/chats/new':
+            return self._chats_create()
+        if path.startswith('/chats/'):
+            if path.endswith('/turns'):
+                chat_id = unquote(path[len('/chats/'):-len('/turns')])
+                return self._chats_append(chat_id)
+            if path.endswith('/inflight'):
+                chat_id = unquote(path[len('/chats/'):-len('/inflight')])
+                return self._chats_save_inflight(chat_id)
+            if path.endswith('/title'):
+                chat_id = unquote(path[len('/chats/'):-len('/title')])
+                return self._chats_set_title(chat_id)
+        self.send_response(404); self.end_headers()
+
+    def do_DELETE(self):
+        path = urlparse(self.path).path
+        if path.startswith('/chats/'):
+            if path.endswith('/inflight'):
+                chat_id = unquote(path[len('/chats/'):-len('/inflight')])
+                return self._chats_clear_inflight(chat_id)
+            chat_id = unquote(path[len('/chats/'):])
+            return self._chats_delete(chat_id)
+        self.send_response(404); self.end_headers()
+
+    # ---------------- HTML serve ----------------
+
+    def _serve_html(self):
+        body = HTML.encode('utf-8')
+        self.send_response(200)
+        self.send_header('Content-Type', 'text/html; charset=utf-8')
+        self.send_header('Content-Length', len(body))
+        self.end_headers()
+        self.wfile.write(body)
+
+    # ---------------- chat store ----------------
+
+    def _chat_dir(self, chat_id):
+        # Reject path traversal: chat_id must be a plain folder name
+        if not chat_id or '/' in chat_id or '\\' in chat_id or chat_id.startswith('.'):
+            return None
+        return os.path.join(CHATS_DIR, chat_id)
+
+    def _read_meta(self, chat_dir):
+        meta_path = os.path.join(chat_dir, 'meta.json')
+        if not os.path.exists(meta_path):
+            return {}
+        try:
+            with open(meta_path, encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            return {}
+
+    def _write_meta(self, chat_dir, meta):
+        with open(os.path.join(chat_dir, 'meta.json'), 'w', encoding='utf-8') as f:
+            json.dump(meta, f, indent=2, ensure_ascii=False)
+
+    def _chats_list(self):
+        items = []
+        try:
+            for name in os.listdir(CHATS_DIR):
+                p = os.path.join(CHATS_DIR, name)
+                if not os.path.isdir(p):
+                    continue
+                meta = self._read_meta(p)
+                if not meta:
+                    # Folder without meta — provide a minimal stand-in
+                    meta = {'id': name, 'title': name, 'created_at': '',
+                            'updated_at': '', 'turn_count': 0}
+                else:
+                    meta.setdefault('id', name)
+                items.append(meta)
+            # Newest first by updated_at, fallback to created_at, fallback to name
+            items.sort(key=lambda m: (m.get('updated_at') or m.get('created_at') or m.get('id') or ''), reverse=True)
+        except Exception as e:
+            self._json({'chats': [], 'error': str(e)}); return
+        self._json({'chats': items})
+
+    def _chats_create(self):
+        payload = self._read_json_body() or {}
+        title = (payload.get('title') or 'New chat').strip() or 'New chat'
+        stamp = _now_stamp()
+        slug = _slugify(title)
+        chat_id = f"{stamp}-{slug}" if slug else stamp
+        # Avoid collision (e.g. two new chats in the same second)
+        suffix = 1
+        base_id = chat_id
+        while os.path.exists(os.path.join(CHATS_DIR, chat_id)):
+            suffix += 1
+            chat_id = f"{base_id}-{suffix}"
+        chat_dir = os.path.join(CHATS_DIR, chat_id)
+        try:
+            os.makedirs(chat_dir, exist_ok=False)
+        except Exception as e:
+            self._json({'error': str(e)}, status=500); return
+        meta = {
+            'id': chat_id,
+            'title': title,
+            'created_at': _now_iso(),
+            'updated_at': _now_iso(),
+            'turn_count': 0,
+        }
+        self._write_meta(chat_dir, meta)
+        self._json(meta)
+
+    def _chats_get(self, chat_id):
+        chat_dir = self._chat_dir(chat_id)
+        if not chat_dir or not os.path.isdir(chat_dir):
+            self.send_response(404); self.end_headers(); return
+        meta     = self._read_meta(chat_dir)
+        turns    = []
+        inflight = None
+        try:
+            for fname in sorted(os.listdir(chat_dir)):
+                if fname == 'meta.json' or not fname.endswith('.json'):
+                    continue
+                if fname == '_inflight.json':
+                    try:
+                        with open(os.path.join(chat_dir, fname), encoding='utf-8') as f:
+                            inflight = json.load(f)
+                    except Exception:
+                        pass
+                    continue
+                try:
+                    with open(os.path.join(chat_dir, fname), encoding='utf-8') as f:
+                        turns.append(json.load(f))
+                except Exception:
+                    pass
+        except Exception as e:
+            self._json({'error': str(e)}, status=500); return
+        self._json({'meta': meta, 'turns': turns, 'inflight': inflight})
+
+    def _chats_save_inflight(self, chat_id):
+        chat_dir = self._chat_dir(chat_id)
+        if not chat_dir or not os.path.isdir(chat_dir):
+            self.send_response(404); self.end_headers(); return
+        payload = self._read_json_body() or {}
+        if not isinstance(payload, dict):
+            self.send_response(400); self.end_headers(); return
+        payload['saved_at'] = _now_iso()
+        try:
+            with open(os.path.join(chat_dir, '_inflight.json'), 'w', encoding='utf-8') as f:
+                json.dump(payload, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            self._json({'error': str(e)}, status=500); return
+        self._json({'saved': True})
+
+    def _chats_clear_inflight(self, chat_id):
+        chat_dir = self._chat_dir(chat_id)
+        if not chat_dir or not os.path.isdir(chat_dir):
+            self.send_response(404); self.end_headers(); return
+        p = os.path.join(chat_dir, '_inflight.json')
+        if os.path.exists(p):
+            try: os.remove(p)
+            except Exception: pass
+        self._json({'cleared': True})
+
+    def _chats_set_title(self, chat_id):
+        chat_dir = self._chat_dir(chat_id)
+        if not chat_dir or not os.path.isdir(chat_dir):
+            self.send_response(404); self.end_headers(); return
+        payload = self._read_json_body() or {}
+        title = (payload.get('title') or '').strip()
+        if not title:
+            self.send_response(400); self.end_headers(); return
+        meta = self._read_meta(chat_dir)
+        meta.setdefault('id', chat_id)
+        meta['title'] = title[:160]
+        meta['updated_at'] = _now_iso()
+        self._write_meta(chat_dir, meta)
+        self._json(meta)
+
+    def _chats_append(self, chat_id):
+        chat_dir = self._chat_dir(chat_id)
+        if not chat_dir or not os.path.isdir(chat_dir):
+            self.send_response(404); self.end_headers(); return
+        payload = self._read_json_body() or {}
+        turn = payload.get('turn')
+        if not isinstance(turn, dict) or 'role' not in turn:
+            self.send_response(400); self.end_headers(); return
+        existing = [f for f in os.listdir(chat_dir)
+                    if f.endswith('.json') and f != 'meta.json']
+        seq = len(existing) + 1
+        role = re.sub(r'[^a-z]', '', (turn.get('role') or 'unknown').lower()) or 'unknown'
+        fname = f"{seq:04d}-{datetime.datetime.now().strftime('%Y%m%dT%H%M%S')}-{role}.json"
+        turn_record = dict(turn)
+        turn_record.setdefault('seq', seq)
+        turn_record.setdefault('timestamp', _now_iso())
+        with open(os.path.join(chat_dir, fname), 'w', encoding='utf-8') as f:
+            json.dump(turn_record, f, indent=2, ensure_ascii=False)
+        meta = self._read_meta(chat_dir)
+        meta.setdefault('id', chat_id)
+        meta['turn_count'] = seq
+        meta['updated_at'] = _now_iso()
+        # First user turn: replace placeholder title with the user's content
+        if seq == 1 and role == 'user':
+            content = (turn.get('content') or '').strip()
+            if content:
+                meta['title'] = content[:80]
+        self._write_meta(chat_dir, meta)
+        self._json(meta)
+
+    def _chats_delete(self, chat_id):
+        chat_dir = self._chat_dir(chat_id)
+        if not chat_dir or not os.path.isdir(chat_dir):
+            self.send_response(404); self.end_headers(); return
+        try:
+            shutil.rmtree(chat_dir)
+        except Exception as e:
+            self._json({'error': str(e)}, status=500); return
+        self._json({'deleted': chat_id})
+
+    # ---------------- helpers ----------------
+
+    def _json(self, data, status=200):
+        body = json.dumps(data, ensure_ascii=False).encode('utf-8')
+        self.send_response(status)
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Content-Length', len(body))
+        self._cors()
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _read_json_body(self):
+        length = int(self.headers.get('Content-Length', 0) or 0)
+        if not length:
+            return {}
+        try:
+            return json.loads(self.rfile.read(length).decode('utf-8'))
+        except Exception:
+            return {}
+
+    # ---------------- /ask (CLI provider) ----------------
+
+    def _handle_ask(self):
+        length  = int(self.headers.get('Content-Length', 0))
+        payload = json.loads(self.rfile.read(length))
+        system  = payload.get('system', '')
+        prompt  = payload.get('prompt', '')
+        model   = payload.get('model') or None      # Phase 7 will use this per seat
+        full    = f"{system}\n\n---\n\n{prompt}" if system else prompt
+
+        # Per-seat model selection (Phase 7) — for now the server respects
+        # `model` if the client sets it, otherwise falls back to the CLI default.
+        args = ['claude']
+        if model:
+            args.extend(['--model', str(model)])
+        args.append('-p')
+        # IMPORTANT: pass the prompt via stdin, not as a positional argument.
+        # Windows has a command-line length limit (~32KB) and big inputs (e.g.,
+        # the Assessor's prompt with all council responses) can exceed it; the
+        # OS then refuses to spawn the process, which Python surfaces as
+        # FileNotFoundError. Passing via stdin sidesteps the limit entirely.
+
+        try:
+            result = subprocess.run(
+                args,
+                input=full,
+                capture_output=True, text=True,
+                encoding='utf-8', errors='replace',
+                timeout=CLI_TIMEOUT_SEC,
+            )
+            if result.returncode != 0:
+                err = (result.stderr or '').strip() or f'claude exited with code {result.returncode}'
+                data = {'text': '', 'error': err}
+            else:
+                data = {'text': (result.stdout or '').strip(), 'error': ''}
+        except FileNotFoundError as e:
+            data = {'text': '', 'error':
+                f'Could not spawn `claude` ({e}). The Python server cannot find it on PATH. '
+                f'Check that `claude --version` works in the terminal where you launched python council.py. '
+                f'If you recently re-authenticated or installed/updated Claude Code, restart the Python server.'}
+        except subprocess.TimeoutExpired:
+            data = {'text': '', 'error':
+                f'Claude CLI timed out after {CLI_TIMEOUT_SEC}s. Input was {len(full)} chars.'}
+        except Exception as e:
+            data = {'text': '', 'error': f'{type(e).__name__}: {e}'}
+        body = json.dumps(data).encode('utf-8')
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Content-Length', len(body))
+        self._cors()
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _cors(self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+
+    def log_message(self, *a): pass
+
+
+if __name__ == '__main__':
+    if not shutil.which('claude'):
+        print("⚠  `claude` not found on PATH.")
+        print("   Install Claude Code: https://claude.ai/code")
+        print("   Or add an API key via the Settings panel (⚙).\n")
+
+    url = f'http://localhost:{PORT}'
+    # ThreadingHTTPServer so parallel Stage 2 council calls (and any other
+    # concurrent /ask requests) actually run in parallel instead of being
+    # serialized by the server.
+    srv = http.server.ThreadingHTTPServer(('localhost', PORT), Handler)
+    print(f"⚖  The Council is in session  →  {url}")
+    print(f"   Stop with Ctrl+C\n")
+    threading.Timer(0.8, lambda: webbrowser.open(url)).start()
+    try:
+        srv.serve_forever()
+    except KeyboardInterrupt:
+        print("\n   Council adjourned.")
+        srv.shutdown()

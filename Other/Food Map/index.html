@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)" />
+  <title>Food Map</title>
+  <!-- Phase 13.5 round 6: resolve the user's theme synchronously BEFORE
+       any CSS is processed, so the loading overlay and first paint use
+       the correct light/dark tokens. Without this the page briefly
+       renders in OS-default then snaps to the persisted theme. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('foodMap.theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { /* private mode or other — leave data-theme="auto" */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="src/styles/tokens.css" />
+  <link rel="stylesheet" href="src/styles/layout.css" />
+  <link rel="stylesheet" href="src/styles/components.css" />
+</head>
+<body>
+  <header class="app-header" role="banner">
+    <div class="app-header-left">
+      <h1 class="app-title">Food Map</h1>
+      <button class="rail-toggle" id="rail-toggle" type="button"
+              aria-label="Hide filters" aria-controls="rail-left" title="Hide filters">
+        <span class="rail-toggle-icon" aria-hidden="true">←</span>
+      </button>
+    </div>
+    <div class="app-header-center">
+      <div id="view-toggle" aria-label="3D or table view"></div>
+      <div id="view-level" class="view-controls" aria-label="Display level"></div>
+      <div id="unit-toggle-slot" aria-label="Nutrient unit"></div>
+      <div id="search-slot" aria-label="Search"></div>
+    </div>
+    <div class="app-header-actions">
+      <div id="view-3d-controls" class="view-controls" aria-label="3D camera controls"></div>
+      <div id="theme-toggle-slot" aria-label="Theme"></div>
+      <div id="config-menu-slot" aria-label="Config"></div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <aside class="rail rail-left" id="rail-left" aria-label="Filters">
+      <!-- Phase 6: ingredient filter; Phase 7: nutrient thresholds; Phase 9: meal builder -->
+    </aside>
+
+    <section class="canvas-container" id="canvas-container" aria-label="3D ingredient map">
+      <!-- Phase 3: Three.js renderer canvas mounts here -->
+    </section>
+
+    <section class="table-container" id="table-container" aria-label="Food data table" hidden>
+      <!-- Phase 8: sortable table view of the same dataset -->
+    </section>
+
+    <aside class="rail rail-right" id="rail-right" aria-label="Selected ingredient">
+      <!-- Phase 5: detail panel for the selected ingredient -->
+    </aside>
+  </main>
+
+  <div class="legend" id="legend" hidden>
+    <!-- Phase 4: ingredient-group legend -->
+  </div>
+
+  <!-- Phase 13.75 refinement: per-axis manual controls (pan / zoom /
+       capture as threshold). Sits stacked above the legend. -->
+  <div class="axis-controls" id="axis-controls" hidden></div>
+
+  <!-- Phase 38: active-filters chip rail. Sits at the bottom-left,
+       opposite the legend / axes cluster. Auto-hides when no filters
+       are active. -->
+  <div class="active-filters" id="active-filters" hidden></div>
+
+
+  <div class="empty-filter" id="empty-filter" role="alertdialog" aria-live="polite" hidden>
+    <div class="empty-filter-card">
+      <p class="empty-filter-message">No items match the active filters.</p>
+      <button class="btn empty-filter-ok" type="button">OK</button>
+    </div>
+  </div>
+
+  <!-- Lightweight loading indicator for in-app queries (e.g., table render
+       of the full meals dataset). Delayed-fade CSS means brief sync work
+       never visibly surfaces it; long work shows the spinner + progress bar. -->
+  <div class="loading-indicator" id="loading-indicator" role="status" aria-live="polite">
+    <div class="loading-spinner" aria-hidden="true"></div>
+    <div class="loading-text-wrap">
+      <span class="loading-label">Loading…</span>
+      <div class="loading-progress-track" hidden>
+        <div class="loading-progress-bar" style="--pct: 0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="boot-overlay" id="boot-overlay" role="status" aria-live="polite">
+    <div class="boot-card">
+      <div class="boot-spinner" aria-hidden="true"></div>
+      <p class="boot-message" id="boot-message">Loading food data…</p>
+      <details class="boot-error" id="boot-error" hidden>
+        <summary class="boot-error-summary">Show error</summary>
+        <pre class="boot-error-stack" id="boot-error-stack"></pre>
+        <button class="btn boot-error-reset" id="boot-error-reset" type="button">
+          Clear saved settings and reload
+        </button>
+      </details>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

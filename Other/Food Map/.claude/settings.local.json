@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import json; json.load\\(open\\('src/data/foods.json'\\)\\); print\\('foods.json: valid JSON'\\)\")",
+      "Bash(python -c \"import ast, py_compile; py_compile.compile\\('dev_server.py', doraise=True\\); print\\('dev_server.py: parses OK'\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python dev_server.py --port 8765)",
+      "Bash(python -c ' *)",
+      "Bash(curl -sv http://localhost:8765/)",
+      "Bash(python -u dev_server.py --port 34676)",
+      "Bash(powershell -NoProfile -Command 'Get-NetTCPConnection -LocalPort 34676 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess | Sort-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }')",
+      "Bash(python -X utf8 -c ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8765/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8765/src/main.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8765/src/ui/detail-panel.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8765/src/scene/picking.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:8765/src/main.js\")",
+      "Bash(curl -s -I http://localhost:8765/)",
+      "Bash(curl -s http://localhost:8765/)",
+      "Bash(curl -s \"http://localhost:8765/src/main.js\")",
+      "Bash(curl -s \"http://localhost:8765/\")",
+      "Bash(curl -s -o /dev/null -w \"code=%{http_code} url=%{url_effective}\\\\n\" \"http://localhost:8765/index.html\")",
+      "Bash(netstat -ano)",
+      "Bash(findstr 8765)",
+      "Bash(findstr LISTENING)",
+      "Bash(findstr \":876\")",
+      "Bash(taskkill /F /PID 39888)",
+      "Bash(taskkill /F /PID 32416)",
+      "Bash(findstr \":8765\")",
+      "Bash(node *)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('src/data/foods.json',encoding='utf-8'\\)\\); print\\('count:', len\\(d\\)\\); print\\('keys:', list\\(d[0].keys\\(\\)\\)\\); print\\('first 3 names:', [x['name'] for x in d[:3]]\\)\")",
+      "Bash(python *)",
+      "PowerShell(Get-ChildItem -Recurse -File | Where-Object { $_.Length -gt 50MB } | Select-Object FullName, @{N='SizeMB';E={[math]::Round\\($_.Length/1MB,1\\)}} | Format-Table -AutoSize)"
+    ]
+  }
+}

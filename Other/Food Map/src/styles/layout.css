@@ -1,0 +1,457 @@
+/* Layout — minimal reset, app shell grid, responsive rail behavior.
+ * Single breakpoint at 768px (mobile <= 768 < desktop), matching the plan.
+ * Mobile: rails are full-bleed overlays / bottom sheets (off-screen by default).
+ * Desktop: rails are fixed-width side panels flanking the canvas.
+ */
+
+/* --- Minimal modern reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Canvas owns the viewport; rails scroll internally. */
+  overscroll-behavior: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* --- App shell --- */
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  z-index: var(--z-header);
+  /* Phase 13.5 round 3: header background matches the rail surface
+   * rather than the canvas. In light mode the two are barely
+   * distinguishable; in dark mode the rail is visibly lighter than the
+   * page bg, so matching surface here keeps the header / rail boundary
+   * invisible while the header still reads as floating over the canvas
+   * (the rail's right border anchors the transition). Header stays
+   * click-through via pointer-events: none. */
+  background: var(--color-surface);
+  pointer-events: none;
+}
+
+.app-header-center {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  pointer-events: auto;
+}
+
+.app-header > * {
+  pointer-events: auto;
+}
+
+.app-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.01em;
+  line-height: var(--line-height-tight);
+}
+
+/* On mobile the header crams six control clusters into a narrow viewport,
+ * which forces flex-wrap. Shrink the title so the header has a better
+ * shot at staying single-row, and so the wrapped row count is bounded. */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto; /* push the camera + snap cluster to the right edge */
+}
+
+.app-main {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "canvas";
+}
+
+.canvas-container {
+  grid-area: canvas;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  z-index: var(--z-scene);
+  overflow: hidden;
+  touch-action: none; /* Phase 3 controls own pointer/touch gestures. */
+}
+
+.canvas-container[hidden] { display: none; }
+
+.table-container {
+  grid-area: canvas;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  z-index: var(--z-scene);
+  overflow: hidden;
+  padding-top: var(--header-height);
+}
+
+.table-container[hidden] { display: none; }
+
+/* On mobile the header can wrap to 2 rows (3D/Table + level on row 1,
+ * camera/snap on row 2). Reserve enough room above the table so the
+ * Columns button isn't obscured. */
+@media (max-width: 768px) {
+  .table-container {
+    padding-top: calc(var(--header-height) * 2);
+  }
+}
+
+/* --- Rails (mobile-first: overlays) --- */
+
+.rail {
+  position: fixed;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-2);
+  z-index: var(--z-rail);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transition: transform var(--duration-base) var(--ease-out),
+              opacity var(--duration-base) var(--ease-out);
+}
+
+.rail[hidden] {
+  display: none;
+}
+
+/* Mobile defaults — left rail slides in from the left, right rail is a bottom sheet. */
+.rail-left {
+  top: var(--header-height);
+  bottom: 0;
+  left: 0;
+  width: min(85vw, var(--rail-width));
+  border-right: 1px solid var(--color-border);
+  border-radius: 0;
+  transform: translateX(-100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.rail-left.is-open {
+  transform: translateX(0);
+}
+
+/* Backdrop overlay so taps outside the drawer dismiss it on mobile. */
+.rail-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1; /* sits behind the rail but above the canvas */
+}
+
+.rail-left.is-open .rail-backdrop {
+  display: block;
+}
+
+.rail-right {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 75vh;
+  min-height: var(--bottom-sheet-min);
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  transform: translateY(100%);
+  overflow-x: hidden;
+}
+
+.rail-right.is-open {
+  transform: translateY(0);
+}
+
+/* --- Legend (corner overlay) --- */
+
+.legend {
+  position: fixed;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  z-index: var(--z-rail);
+  font-size: var(--font-size-sm);
+  /* Phase 13.5 round 5: fixed width so the card doesn't reflow when
+   * switching between A/P/D and food_group schemes. Width is generous
+   * enough for "Condiments & sauces" + swatch without wrapping. */
+  width: 220px;
+}
+.legend.legend-collapsed {
+  /* Collapsed pill: just the "Legend" button, no width constraint. */
+  width: auto;
+}
+
+.legend[hidden] {
+  display: none;
+}
+
+/* Phase 13.75 refinement: axis controls panel sits to the LEFT of the
+ * legend (not stacked above it — the legend's height varies with
+ * scheme, and stacking ended up overlapping). Same fixed-position
+ * pattern as the legend so they cohere visually.
+ *
+ * Round 6: --legend-width is published by the legend itself via a
+ * ResizeObserver (see legend.js), so the panel hugs the legend's
+ * actual left edge — collapsed or expanded, both states stay flush. */
+.axis-controls {
+  position: fixed;
+  right: calc(var(--legend-width, 220px) + var(--space-3) + var(--space-3));
+  bottom: var(--space-3);
+  width: 240px;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  z-index: var(--z-rail);
+  font-size: var(--font-size-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  /* Smooth slide when the legend resizes (collapse / scheme swap). */
+  transition: right var(--duration-base) var(--ease-out);
+}
+.axis-controls[hidden] {
+  display: none;
+}
+.axis-controls.is-collapsed {
+  /* Collapsed pill: just the "Axes" button, no width constraint. */
+  width: auto;
+}
+@media (min-width: 769px) {
+  /* When the right rail is open, sit beside it like the legend does
+   * — but still to the left of the legend. */
+  .axis-controls {
+    right: calc(var(--right-rail-w) + var(--legend-width, 220px) + var(--space-3) + var(--space-3));
+  }
+  body:has(.app-main[data-right-open="false"]) .axis-controls {
+    right: calc(var(--rail-handle) + var(--legend-width, 220px) + var(--space-3) + var(--space-3));
+  }
+}
+
+/* --- Phase 38: active-filters chip rail --- */
+
+/* Sits in the bottom-LEFT corner, opposite the legend / axes cluster.
+ * Auto-hidden when no filters are active (see active-filters.js). On
+ * desktop, dock beside the left rail just like legend docks beside the
+ * right rail. */
+.active-filters {
+  position: fixed;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  max-width: min(420px, calc(100vw - 2 * var(--space-3)));
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  z-index: var(--z-rail);
+  font-size: var(--font-size-sm);
+}
+.active-filters[hidden] { display: none; }
+
+.active-filters.is-collapsed {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  max-width: none;
+}
+
+@media (min-width: 769px) {
+  /* Dock to the right of the left rail (mirroring how the legend docks
+   * to the left of the right rail). */
+  .active-filters {
+    left: calc(var(--left-rail-w) + var(--space-3));
+  }
+  body:has(.app-main[data-left-open="false"]) .active-filters {
+    left: calc(var(--rail-handle) + var(--space-3));
+  }
+}
+
+/* Tester feedback: in table view, the Color Guide and Active Filters
+ * overlays cover the bottom edge of the table. Hovering a row that
+ * lives behind those panels used to leave the row partially obscured.
+ * While the cursor is over any table row, the overlays fade to nearly
+ * transparent so the row reads clearly through them. The moment the
+ * cursor enters the panel itself, the panel snaps back to full opacity
+ * (otherwise the user can't read the contents they came to inspect). */
+.legend,
+.active-filters {
+  transition: opacity 0.12s ease-out;
+}
+body:has(.table-view tbody tr:hover) .legend,
+body:has(.table-view tbody tr:hover) .active-filters {
+  opacity: 0.15;
+}
+.legend:hover,
+.active-filters:hover {
+  opacity: 1 !important;
+}
+
+/* --- Desktop overrides --- */
+
+@media (min-width: 769px) {
+  .app-main {
+    grid-template-columns: var(--left-rail-w) 1fr var(--right-rail-w);
+    grid-template-areas: "left canvas right";
+    /* No transition on grid-template-columns — would fight the resize
+     * drag and add a frame of lag. Collapsed states still snap. */
+  }
+
+  /* When a rail is collapsed, give its grid column back to the canvas
+   * (shrinks to a thin handle). Both can collapse independently. */
+  .app-main[data-left-open="false"] {
+    grid-template-columns: var(--rail-handle) 1fr var(--right-rail-w);
+  }
+  .app-main[data-right-open="false"] {
+    grid-template-columns: var(--left-rail-w) 1fr var(--rail-handle);
+  }
+  .app-main[data-left-open="false"][data-right-open="false"] {
+    grid-template-columns: var(--rail-handle) 1fr var(--rail-handle);
+  }
+
+  /* Phase 13.5 round 4: header occupies only the canvas region — the
+   * left rail (with its own title chrome) and the right rail extend
+   * top-to-bottom underneath, so their right/left borders run the full
+   * page height without being occluded by the header. */
+  .app-header {
+    left: var(--left-rail-w);
+    right: var(--right-rail-w);
+  }
+
+  .legend {
+    right: calc(var(--right-rail-w) + var(--space-3));
+  }
+
+  /* When a rail collapses, follow its edge so the header content and
+   * the legend stay in the canvas region (not on top of the rail's
+   * collapsed strip). :has() is supported in all evergreen browsers. */
+  body:has(.app-main[data-left-open="false"]) .app-header {
+    left: var(--rail-handle);
+  }
+  body:has(.app-main[data-right-open="false"]) .app-header {
+    right: var(--rail-handle);
+  }
+  body:has(.app-main[data-right-open="false"]) .legend {
+    right: calc(var(--rail-handle) + var(--space-3));
+  }
+
+  /* On desktop, rails are docked side panels — always-visible containers
+   * with collapse handled by toggling .is-collapsed in Phase 6/7.
+   * Phase 13.5 round 4: no more padding-top — the rail now owns its
+   * top region via .rail-chrome, so the rail's right border / scrollbar
+   * run from top to bottom. */
+  .rail-left {
+    position: relative;
+    grid-area: left;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    transform: none;
+    border-radius: 0;
+    border-right: 1px solid var(--color-border);
+    box-shadow: none;
+    overflow-x: hidden;
+  }
+
+  /* On desktop the backdrop never participates — the rail is docked, not
+   * an overlay drawer. */
+  .rail-left .rail-backdrop {
+    display: none !important;
+  }
+
+  .rail-right {
+    position: relative;
+    grid-area: right;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-height: none;
+    min-height: 0;
+    transform: none;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-left: 1px solid var(--color-border);
+    box-shadow: none;
+    /* Phase 13.5 round 4: header no longer overlaps the rail, so no
+     * padding-top is needed — the rail-chrome sits at the very top
+     * symmetric with the left rail's title chrome. */
+    overflow-x: hidden;
+  }
+
+  .rail-left.is-collapsed,
+  .rail-right.is-collapsed {
+    /* Grid template above owns the width; just hide overflow and the
+     * inner content so only the inline expand handle paints. */
+    overflow: hidden;
+  }
+
+  .rail-left.is-collapsed .rail-sections {
+    display: none;
+  }
+
+  .right-rail.is-collapsed .detail-body,
+  .right-rail.is-collapsed .detail-close,
+  .right-rail.is-collapsed .detail-grab {
+    display: none;
+  }
+}

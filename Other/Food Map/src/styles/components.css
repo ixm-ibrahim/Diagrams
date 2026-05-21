@@ -1,0 +1,4488 @@
+/* Component styles — buttons, form controls, checkbox trees, badges, sliders.
+ * Phase 1 ships only the primitives (.btn, .input, focus styles) so the rest of
+ * the app has a consistent baseline. Later phases extend this file in place.
+ */
+
+/* --- Boot overlay (loading + error surface) --- */
+
+.boot-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg);
+  z-index: 10000;
+  padding: var(--space-4);
+  transition: opacity 200ms ease;
+}
+.boot-overlay[hidden] { display: none; }
+.boot-overlay.is-fading { opacity: 0; pointer-events: none; }
+.boot-card {
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+.boot-spinner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  animation: boot-spin 0.9s linear infinite;
+}
+.boot-overlay.has-error .boot-spinner { display: none; }
+@keyframes boot-spin { to { transform: rotate(360deg); } }
+.boot-message {
+  margin: 0;
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+}
+.boot-overlay.has-error .boot-message {
+  color: var(--color-score-bad);
+  font-weight: 500;
+}
+.boot-error {
+  width: 100%;
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-3);
+}
+.boot-error-summary {
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  user-select: none;
+}
+.boot-error-stack {
+  margin: var(--space-3) 0 var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-sm, 4px);
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-text);
+  overflow: auto;
+  max-height: 280px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.boot-error-reset {
+  width: 100%;
+}
+
+/* --- In-app loading indicator ---
+ *
+ * Shown during in-app data queries (table render of the full meals
+ * dataset, heavy filter recomputations, view-level rebuilds). Distinct
+ * from .boot-overlay (full-screen, blocking) — this is a small chip
+ * pinned to the top-right that never blocks interaction.
+ *
+ * Delayed fade-in: the indicator is invisible for the first ~250 ms
+ * after .is-loading is applied, so sub-frame work never produces a
+ * visible flash. Only operations that genuinely take >250 ms surface
+ * the spinner.
+ */
+.loading-indicator {
+  position: fixed;
+  top: 64px;
+  right: var(--space-4, 12px);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 10px);
+  padding: var(--space-2, 6px) var(--space-3, 10px);
+  background: var(--color-surface, #1d2026);
+  border: 1px solid var(--color-border, #2a2e36);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-size: var(--font-size-sm, 13px);
+  color: var(--color-text, #e6e7eb);
+  z-index: 9000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.loading-indicator.is-loading {
+  /* Delayed fade so brief queries never flash. */
+  animation: loading-indicator-appear 0.22s ease 0.25s forwards;
+}
+@keyframes loading-indicator-appear {
+  0%   { opacity: 0; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0);    }
+}
+.loading-spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border, #2a2e36);
+  border-top-color: var(--color-accent, #6aa9ff);
+  animation: boot-spin 0.9s linear infinite;
+}
+.loading-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 120px;
+}
+.loading-label {
+  font-weight: 500;
+  line-height: 1;
+}
+.loading-progress-track {
+  height: 4px;
+  background: var(--color-border, #2a2e36);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.loading-progress-bar {
+  height: 100%;
+  width: var(--pct, 0%);
+  background: var(--color-accent, #6aa9ff);
+  border-radius: 2px;
+  transition: width 0.12s linear;
+}
+.loading-progress-track[hidden] { display: none; }
+
+/* --- Focus --- */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Buttons --- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px; /* Mobile touch target — Phase 10 spec. */
+  min-width: 44px;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out);
+}
+
+.btn:hover {
+  background: var(--color-surface-2);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-icon {
+  padding: var(--space-2);
+}
+
+.btn-primary {
+  color: var(--color-text-inverse);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--color-surface-2);
+}
+
+/* --- Inputs --- */
+
+.input {
+  width: 100%;
+  min-height: 40px;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+/* --- Utility --- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.muted {
+  color: var(--color-text-muted);
+}
+
+/* --- Axis picker popover --- */
+
+.axis-picker {
+  position: fixed;
+  z-index: var(--z-overlay);
+  min-width: 220px;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.axis-picker[hidden] { display: none; }
+
+.axis-picker-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.axis-picker-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.axis-picker-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.axis-picker-nutrient {
+  width: 100%;
+}
+
+.axis-picker-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.axis-picker-direction,
+.axis-picker-orientation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.axis-picker-direction legend,
+.axis-picker-orientation legend {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.axis-picker-radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.axis-picker-radio:hover {
+  background: var(--color-surface-2);
+}
+
+.axis-picker-radio input[type="radio"] {
+  accent-color: var(--color-accent);
+}
+
+.axis-picker-range-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.axis-picker-range-row label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  min-width: 0;
+}
+
+.axis-picker-range-row label > span:first-child {
+  font-weight: var(--font-weight-medium);
+}
+
+.axis-picker-range-row label > span:last-child {
+  font-size: 11px;
+}
+
+.axis-picker-range-row input[type="number"] {
+  /* slimmer than the default .input — these inputs sit in a tight grid */
+  min-height: 32px;
+  padding: var(--space-1) var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.axis-picker-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 32px;
+  padding: var(--space-1) var(--space-2);
+  align-self: flex-start;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.axis-picker-reset:hover {
+  color: var(--color-text);
+}
+
+/* --- Legend (animal / plant / dairy color guide) --- */
+
+.legend-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.legend-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.legend-close {
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 6px;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.legend-close:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.legend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.legend-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Phase 13.75: legend rows are checkboxes (uncheck = filter out). The
+ * .is-hidden class fades the row so the user can see what's filtered. */
+.legend-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  width: 100%;
+}
+.legend-check input[type="checkbox"] {
+  margin: 0;
+  flex: 0 0 auto;
+}
+.legend-item.is-hidden .legend-item-label,
+.legend-item.is-hidden .legend-swatch {
+  opacity: 0.4;
+}
+.legend-item.is-hidden .legend-swatch {
+  /* Hint at the "ring" / hollow rendering used in the 3D scene for
+   * filtered-out items: swap the swatch for a colored outline. */
+  background: transparent !important;
+  border: 2px solid currentColor;
+  color: var(--color-text-muted);
+}
+.legend-item-static .legend-check-spacer {
+  width: 13px; /* matches a checkbox's column so the rows align. */
+  flex: 0 0 auto;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+/* Phase 13.5 round 3: small "all three primaries" mix swatch. Uses a
+ * radial gradient because pure (255,255,255) is invisible against the
+ * legend's surface bg. */
+.legend-swatch-tri {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 0, 0, 0.55) 0, transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(0, 255, 0, 0.55) 0, transparent 60%),
+    radial-gradient(circle at 50% 75%, rgba(0, 0, 255, 0.55) 0, transparent 60%),
+    rgb(245, 245, 245);
+}
+
+.legend-section-title {
+  margin: var(--space-2) 0 var(--space-1);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.legend-section-title:first-child {
+  margin-top: 0;
+}
+
+.legend-scheme {
+  margin-bottom: var(--space-2);
+}
+.legend-scheme .seg-btn {
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+/* Tester feedback: the legend used to be a fixed 304px box with a
+ * scrollbar; the user wanted it taller and scrollbar-free. The body
+ * now grows to its content. A min-height keeps the card from looking
+ * stubby in the A/P/D scheme (which has fewer rows than food_group). */
+.legend-body {
+  min-height: 220px;
+  font-size: var(--font-size-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.legend-body .legend-list {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.legend-note {
+  font-size: var(--font-size-xs);
+  margin: 0;
+}
+
+.legend.legend-collapsed {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Phase 13.75 round 7: the Legend and Axes collapsed pills share the
+ * same dimensions and shape so they read as a matched pair sitting in
+ * the bottom-right corner — only the label inside differs. Phase 38
+ * adds the Active-filters pill in the bottom-left, sharing the same
+ * shape so the corners read as a coherent set. */
+.legend-expand,
+.axis-controls-expand,
+.active-filters-expand {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+}
+
+.legend-expand:hover,
+.axis-controls-expand:hover,
+.active-filters-expand:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+/* --- Phase 38 chip styles --- */
+
+.active-filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.active-filters-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.active-filters-collapse {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.active-filters-collapse:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+.active-filters-collapse:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.active-filters-collapse:disabled:hover {
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.active-filters-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+
+.active-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 2px 2px 10px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  line-height: 1.25;
+}
+
+.active-filter-chip-label {
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active-filter-chip-x {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.active-filter-chip-x:hover {
+  color: var(--color-bg);
+  background: var(--color-danger);
+}
+
+/* Tinted chip variants so the user reads at a glance which axis a chip
+ * lives on — keeps the rail scannable when many filters stack. */
+.active-filter-chip[data-kind="restriction"] {
+  background: color-mix(in srgb, var(--color-accent) 14%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="tag"] {
+  background: color-mix(in srgb, var(--color-plant) 14%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="threshold"] {
+  background: color-mix(in srgb, var(--color-dairy) 14%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="composition-add"] {
+  background: color-mix(in srgb, var(--color-accent) 18%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="composition-remove"] {
+  background: color-mix(in srgb, var(--color-danger) 14%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="draft"] {
+  background: color-mix(in srgb, var(--color-danger) 20%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="ingredient-filter"],
+.active-filter-chip[data-kind="meal-filter"] {
+  background: var(--color-surface);
+}
+.active-filter-chip[data-kind="meal-filter-nutrient"] {
+  background: color-mix(in srgb, var(--color-dairy) 14%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="category-included"] {
+  background: color-mix(in srgb, var(--color-accent) 16%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="category-excluded"],
+.active-filter-chip[data-kind="food-group-excluded"] {
+  background: color-mix(in srgb, var(--color-danger, #c0392b) 14%, var(--color-surface-2));
+}
+.active-filter-chip[data-kind="legend-hidden"] {
+  background: var(--color-surface);
+}
+.active-filter-chip[data-kind="diet-included"],
+.active-filter-chip[data-kind="cuisine-included"] {
+  background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface-2));
+}
+
+/* --- Phase 40 round 8: header-level per-100g / per-serving toggle --- */
+
+.unit-toggle {
+  display: inline-flex;
+}
+.unit-toggle-group {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+.unit-toggle-group .seg-btn {
+  border-radius: 0;
+  border: 0;
+  border-right: 1px solid var(--color-border);
+  min-height: 28px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+.unit-toggle-group .seg-btn:last-child {
+  border-right: 0;
+}
+.unit-toggle-group .seg-btn.is-active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+/* --- Phase 40 round 7: Diet + Cuisine filter section --- */
+
+.diet-cuisine-help {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+.diet-cuisine-block {
+  margin-bottom: var(--space-3);
+}
+.diet-cuisine-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--space-2) 0 4px;
+}
+.diet-cuisine-block-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+.diet-cuisine-bulk {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  background: transparent;
+  border: 0;
+  padding: 2px 4px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.diet-cuisine-bulk:hover {
+  color: var(--color-accent-hover);
+}
+.diet-cuisine-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.diet-cuisine-list-cuisine {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  margin-top: 4px;
+}
+.diet-cuisine-search {
+  width: 100%;
+  min-height: 28px;
+  padding: 2px var(--space-2);
+  font-size: var(--font-size-xs);
+}
+.diet-cuisine-item[hidden] { display: none; }
+.diet-cuisine-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  padding: 2px 0;
+  cursor: pointer;
+}
+.diet-cuisine-check input[type="checkbox"] {
+  accent-color: var(--color-accent);
+}
+
+/* Phase 40 round 3: bulk Check-all / Uncheck-all toggle. Used by
+ * legend, ingredient tree, tag filter, restrictions — same visual
+ * everywhere so the affordance reads consistently. */
+.legend-bulk-toggle,
+.ingredient-filter-bulk,
+.tag-filter-bulk,
+.restrictions-bulk {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  background: transparent;
+  border: 0;
+  padding: 2px 4px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.legend-bulk-toggle:hover,
+.ingredient-filter-bulk:hover,
+.tag-filter-bulk:hover,
+.restrictions-bulk:hover {
+  color: var(--color-accent-hover);
+}
+
+.legend-section-row,
+.ingredient-filter-bulk-row,
+.tag-filter-bulk-row,
+.restrictions-bulk-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: 2px 0;
+}
+
+/* Phase 40 round 9: filter mode controls — TWO independent toggle
+ * groups per multi-select filter section:
+ *   filter-scope-toggle (ANY/ALL): whether items can carry extras
+ *                                   beyond the selection.
+ *   filter-match-toggle (OR/AND):  how multiple selections combine.
+ *
+ * Stacked one pair per row so labels stay readable. The two pairs
+ * sit side-by-side in a .filter-modes-row container. */
+.filter-modes-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: var(--space-2) 0;
+}
+.filter-mode-pair {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.filter-mode-label {
+  font-size: var(--font-size-xs);
+}
+
+.filter-match-toggle,
+.filter-scope-toggle {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+.filter-match-toggle .seg-btn,
+.filter-scope-toggle .seg-btn {
+  border-radius: 0;
+  border: 0;
+  border-right: 1px solid var(--color-border);
+  min-height: 24px;
+  padding: 2px 10px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+.filter-match-toggle .seg-btn:last-child,
+.filter-scope-toggle .seg-btn:last-child {
+  border-right: 0;
+}
+.filter-match-toggle .seg-btn.is-active,
+.filter-scope-toggle .seg-btn.is-active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+/* Phase 40 round 2: pinned-selections section at the top of the
+ * Modify Meals dropdown. Mirrors the visual rhythm of the alphabetical
+ * list below but emphasizes that these rows are "the active overlay". */
+.compose-meals-pinned {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2px 0;
+  margin-bottom: var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+}
+.compose-meals-divider {
+  padding: 4px 0 2px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.meal-filter-option-tri.is-pinned {
+  background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface-2));
+}
+.meal-filter-option-tri.is-pinned[data-state="include"] {
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+.meal-filter-option-tri.is-pinned[data-state="exclude"] {
+  background: color-mix(in srgb, var(--color-danger, #c0392b) 18%, transparent);
+}
+
+.active-filters-clear {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+}
+
+/* --- Header view controls (segmented groups + snap buttons) --- */
+
+.view-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Author CSS's `display: flex` on .view-controls would otherwise override
+ * the UA stylesheet's `[hidden] { display: none }` (same specificity but
+ * author beats UA). Re-assert with a more specific selector. */
+.view-controls[hidden] {
+  display: none;
+}
+
+.seg-group {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.seg-btn {
+  min-height: 32px;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+}
+
+.seg-group .seg-btn:last-child {
+  border-right: 0;
+}
+
+.seg-btn:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.seg-btn.is-active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.seg-btn-snap {
+  min-width: 36px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Phase 13.5 round 7: Categories segment is a dropdown — the button
+ * inside the seg-group toggles a popover menu (food_group / category /
+ * subcategory). The wrapper inherits the seg-btn behavior so it sits
+ * in the segmented control row cleanly. */
+.seg-btn-dropdown {
+  display: inline-flex;
+  border-right: 1px solid var(--color-border);
+}
+.seg-group .seg-btn-dropdown:last-child {
+  border-right: 0;
+}
+.seg-btn-dropdown .seg-btn {
+  border-right: 0;
+}
+.seg-btn-dropdown.is-active .seg-btn-category {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+.seg-btn-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.seg-btn-chev {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* The dropdown menu uses position: fixed so it escapes the seg-group's
+ * overflow:hidden. Coordinates are set in view-controls.js on open. */
+.seg-dropdown {
+  position: fixed;
+  z-index: var(--z-overlay);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  padding: 4px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.seg-dropdown[hidden] { display: none; }
+.seg-dropdown-item {
+  padding: 6px var(--space-3);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm, 4px);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+}
+.seg-dropdown-item:hover {
+  background: var(--color-surface-2);
+}
+.seg-dropdown-item.is-active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+/* --- Hover tooltip (ingredient name pill) --- */
+
+.ingredient-tooltip {
+  position: fixed;
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  padding: 4px 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  transform: translate(0, 0);
+}
+
+.ingredient-tooltip[hidden] { display: none; }
+
+/* Phase 13.5 round 2: when the hovered sphere is greyed out, the tooltip
+ * widens to fit the reason(s) below the name. The pill shape becomes a
+ * card; non-grey ingredients keep the original compact pill. */
+.ingredient-tooltip:has(.ingredient-tooltip-name) {
+  white-space: normal;
+  border-radius: var(--radius-md, 8px);
+  padding: 6px 10px 8px;
+  max-width: 320px;
+}
+.ingredient-tooltip-name {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  margin-bottom: 4px;
+}
+.ingredient-tooltip-reasons {
+  margin: 0;
+  padding-left: 14px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+.ingredient-tooltip-reasons li {
+  margin: 0;
+}
+
+/* --- Detail panel (right rail / bottom sheet) --- */
+
+.detail-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.detail-grab {
+  display: none;
+  flex: 0 0 auto;
+  height: 6px;
+  width: 36px;
+  margin: 8px auto 4px;
+  background: var(--color-border);
+  border-radius: 3px;
+  touch-action: none;
+}
+
+.detail-close {
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  line-height: 1;
+  margin-left: auto; /* sticks to the right even when rail-collapse is hidden (mobile) */
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.detail-close:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+/* Mobile bottom sheet doesn't have a docked "collapsed" state — the
+ * × button already dismisses, so the rail-collapse arrow is redundant
+ * on the right rail's mobile presentation. */
+@media (max-width: 768px) {
+  .right-rail .rail-collapse {
+    display: none;
+  }
+}
+
+.detail-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: var(--space-4);
+}
+
+.detail-header {
+  margin-bottom: var(--space-4);
+}
+
+.detail-name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+/* Phase 14: small chip surfacing the optional `form` field next to the
+ * ingredient name (e.g. "canned", "dried", "frozen"). */
+.detail-form-chip {
+  display: inline-block;
+  margin-left: var(--space-2);
+  padding: 2px 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  vertical-align: middle;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+/* Phase 37: "draft" badge in the detail header signals an unsaved
+ * remix on the currently-selected meal. */
+.detail-draft-badge {
+  display: inline-block;
+  margin-left: var(--space-2);
+  padding: 2px 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-bg);
+  background: var(--color-danger);
+  border: 1px solid var(--color-danger);
+  border-radius: 999px;
+  vertical-align: middle;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.detail-subtitle {
+  margin-top: 2px;
+  font-size: var(--font-size-sm);
+}
+
+.detail-blurb {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  color: var(--color-text-secondary, var(--color-text));
+  line-height: 1.45;
+}
+
+.detail-tags {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.detail-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  border-radius: 999px;
+}
+
+.detail-section {
+  margin-bottom: var(--space-5);
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-section-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+
+.detail-group-bar {
+  display: flex;
+  width: 100%;
+  height: 14px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  margin-bottom: var(--space-2);
+}
+
+.detail-group-seg {
+  display: block;
+  height: 100%;
+  min-width: 0;
+}
+
+.detail-group-legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+}
+
+.detail-group-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-group-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+}
+
+.detail-nutrients {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.detail-nutrients th,
+.detail-nutrients td {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.detail-nutrients th {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  text-align: left;
+}
+
+.detail-nutrients td {
+  text-align: right;
+}
+
+.detail-nutrients tr:last-child th,
+.detail-nutrients tr:last-child td {
+  border-bottom: 0;
+}
+
+.detail-examples {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.detail-examples li {
+  padding: 3px 10px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+}
+
+.detail-notes {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.detail-empty {
+  padding: var(--space-3) 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.detail-empty p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .detail-grab {
+    display: block;
+    cursor: grab;
+  }
+  .detail-body {
+    padding-top: var(--space-3);
+  }
+}
+
+/* --- App-header rail toggle (left-rail collapse/expand) --- */
+/*
+ * Single button in the page header that toggles the left rail. Icon
+ * flips ← / → based on leftRailOpen so the user always sees where the
+ * panel is going. Visible on every viewport — on mobile it doubles as
+ * the drawer-open affordance, on desktop the docked-collapse one.
+ */
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  pointer-events: auto;
+}
+
+/* On desktop, the left section is sized to the left rail's column so
+ * the rail toggle (margin-left: auto) lands exactly at the rail's
+ * inner edge — mirroring the right rail's collapse arrow which sits at
+ * its own inner edge. The reserve in the flex-basis carves out room for
+ * the rail's own vertical scrollbar so the toggle never sits directly
+ * on top of it. When the rail collapses, the toggle is hidden (the
+ * rail-expand strip is the wide click target instead) and the section
+ * reflows to its natural width. */
+@media (min-width: 769px) {
+  /* Phase 13.5 round 4: on desktop the "Food Map" title and rail-toggle
+   * live inside the rail's own chrome row (top of .rail-left). The
+   * header-mounted .app-header-left is hidden — its title and toggle
+   * are redundant with the rail's chrome. On mobile the rail is a
+   * drawer (off-screen by default) so the header retains them. */
+  .app-header-left {
+    display: none;
+  }
+  /* Conversely, the rail-mounted chrome is the desktop-only title host.
+   * When the rail collapses on desktop the chrome would compete with
+   * the .rail-expand handle, so hide it then. */
+  .rail-left.is-collapsed .rail-chrome { display: none; }
+}
+@media (max-width: 768px) {
+  /* Mobile keeps the header title; hide the rail-mounted duplicate. */
+  .left-rail .rail-chrome { display: none; }
+
+  /* .rail-fade removed in Phase 13.5 round 4 — the rail no longer
+   * sits under the header so the fade is moot. */
+}
+
+.rail-toggle {
+  /* Push to the right edge of .app-header-left, then nudge inward so the
+   * collapse arrow sits inside the rail's right edge — mirroring the
+   * right rail's collapse arrow, which sits just inside its own inner
+   * edge (Phase 13.5 round 3). */
+  margin-left: auto;
+  margin-right: var(--space-3);
+}
+
+.rail-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.rail-toggle:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+/* --- Rail chrome (in-flow collapse row + edge expand handle) --- */
+/*
+ * Each rail has a small chrome row at the top with its collapse arrow.
+ * In-flow (not absolute) so it never overlaps section content. When
+ * collapsed on desktop, the rail shrinks to var(--rail-handle) and the
+ * full-height .rail-expand button takes over — a wide click target so
+ * re-opening doesn't require pixel-precise aiming.
+ */
+
+.rail-chrome {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--header-height);
+  padding: var(--space-2) var(--space-3);
+  /* No border-bottom — the first .rail-section's border-top serves as
+   * the divider between chrome and content. Avoids a doubled 2px line. */
+}
+
+.right-rail .rail-chrome { justify-content: space-between; }
+.left-rail .rail-chrome  { justify-content: space-between; }
+
+/* Phase 13.5 round 4: rail-mounted "Food Map" title. Only shows on
+ * desktop — on mobile the rail is a drawer and the header keeps its own
+ * .app-title for the always-visible title. */
+.app-title-rail {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.01em;
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+}
+@media (max-width: 768px) {
+  .app-title-rail { font-size: var(--font-size-lg); }
+}
+
+.rail-collapse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.rail-collapse:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.rail-sections {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* --- Phase 11 polish: rail resize handles (desktop-only) --- */
+
+.rail-resize {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .rail-resize {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    cursor: col-resize;
+    z-index: 3;
+    background: transparent;
+    transition: background var(--duration-fast) var(--ease-out);
+  }
+  .rail-resize:hover,
+  .rail-resize.is-dragging {
+    background: var(--color-focus-ring);
+  }
+  .left-rail .rail-resize  { right: -4px; }
+  .right-rail .rail-resize { left:  -4px; }
+
+  /* Hide while the rail is collapsed — no point dragging a 32px strip. */
+  .left-rail.is-collapsed .rail-resize,
+  .right-rail.is-collapsed .rail-resize {
+    display: none;
+  }
+}
+
+body.is-rail-resizing,
+body.is-rail-resizing * {
+  cursor: col-resize !important;
+  user-select: none !important;
+}
+
+/* Desktop expand handle, only visible while a rail is collapsed.
+ * Fills the entire rail-handle column so the click target is the full
+ * width × height of the collapsed strip. */
+.rail-expand {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .left-rail.is-collapsed .rail-expand,
+  .right-rail.is-collapsed .rail-expand {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    margin-top: var(--header-height);
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    border: 0;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .left-rail.is-collapsed .rail-expand:hover,
+  .right-rail.is-collapsed .rail-expand:hover {
+    background: var(--color-surface-2);
+    color: var(--color-text);
+  }
+  /* Hide everything else when collapsed; only the expand handle paints. */
+  .left-rail.is-collapsed  > :not(.rail-expand),
+  .right-rail.is-collapsed > :not(.rail-expand) {
+    display: none;
+  }
+}
+
+/* --- Flat segment-style rail sections --- */
+/*
+ * Sections read as segments of the panel itself, not as bordered cards
+ * inside it. Each section has a top divider so the stack looks like a
+ * series of horizontal panes; the last section gets a bottom divider to
+ * close the stack.
+ */
+
+.rail-section {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.rail-section:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rail-section-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold, 600);
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  text-align: left;
+  letter-spacing: -0.005em;
+}
+
+.rail-section-toggle:hover {
+  background: var(--color-surface-2);
+}
+
+.rail-section-chevron {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+
+.rail-section-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.rail-section-body {
+  padding: var(--space-1) var(--space-4) var(--space-3);
+}
+
+.rail-section[data-collapsed="true"] .rail-section-body {
+  display: none;
+}
+
+/* Phase 13.75 refinement: axis controls panel rows + buttons. */
+.axis-controls-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.axis-controls-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+.axis-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--color-border);
+  transition: opacity var(--duration-fast, 120ms) var(--ease-out, ease-out);
+}
+/* Tester feedback: in an orthographic snap view, the axis aligned
+ * with the camera is edge-on — its 3D label is invisible AND its row
+ * here greys out so the user can't accidentally try to pick it. */
+.axis-row.is-faded {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.axis-row:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.axis-row-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.axis-row-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-inverse);
+  flex: 0 0 auto;
+}
+.axis-row-tag[data-axis-color="x"] { background: var(--color-axis-x); }
+.axis-row-tag[data-axis-color="y"] { background: var(--color-axis-y); }
+.axis-row-tag[data-axis-color="z"] { background: var(--color-axis-z); }
+.axis-row-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: var(--color-text);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.axis-row-name:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.axis-row-pan,
+.axis-row-zoom {
+  flex: 0 0 auto;
+  padding: 3px 8px;
+  font-size: var(--font-size-xs);
+  min-height: 0;
+}
+.axis-row-pan.is-active,
+.axis-row-zoom.is-active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+.axis-row-zoom-caret {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+/* Click the Zoom button (no drag) → this menu appears, letting the
+ * user pick where zoom is anchored (left/center/right). The choice
+ * persists in state.zoomAnchor and applies to subsequent zoom drags. */
+.zoom-anchor-menu {
+  position: fixed;
+  z-index: var(--z-overlay, 1000);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: var(--shadow-overlay, 0 8px 24px rgba(0,0,0,0.18));
+  padding: var(--space-1) 0;
+  min-width: 180px;
+  font-size: var(--font-size-sm);
+}
+.zoom-anchor-menu-title {
+  padding: 4px 12px 6px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.zoom-anchor-option {
+  display: grid;
+  grid-template-columns: 16px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 12px;
+  background: transparent;
+  border: 0;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+.zoom-anchor-option:hover {
+  background: var(--color-surface-2);
+}
+.zoom-anchor-option.is-current {
+  color: var(--color-accent);
+}
+.zoom-anchor-check {
+  font-size: var(--font-size-sm);
+  line-height: 1;
+}
+.zoom-anchor-hint {
+  font-size: var(--font-size-xs);
+}
+.axis-row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding-left: 24px; /* line up under the name, past the tag */
+}
+.axis-row-range {
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.axis-row-reset {
+  flex: 0 0 auto;
+  padding: 1px 6px;
+  font-size: var(--font-size-sm);
+  line-height: 1;
+  min-height: 0;
+  color: var(--color-text-muted);
+}
+.axis-row-reset:hover {
+  color: var(--color-accent);
+}
+/* Footer row holds the "Fit visible" and "Filter by axis ranges"
+ * buttons side-by-side. Keeping them on one row instead of stacking
+ * preserves the panel's height — tester didn't want it taller. */
+.axis-controls-footer {
+  margin-top: var(--space-1);
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+.axis-controls-fit {
+  flex: 0 0 auto;
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+}
+.axis-controls-capture {
+  flex: 1 1 auto;
+  font-size: var(--font-size-xs);
+}
+.axis-controls-close {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 0;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  line-height: 1;
+  padding: 0;
+}
+.axis-controls-close:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+.axis-controls-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.axis-controls-reset-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 0;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--font-size-xs);
+  line-height: 1;
+}
+.axis-controls-reset-all:hover {
+  background: var(--color-surface-2);
+  color: var(--color-accent);
+}
+.axis-controls.is-collapsed {
+  /* Collapsed pill: just the "Axes" button, no width constraint. The
+   * button styling itself lives on .axis-controls-expand below,
+   * shared with the legend's collapsed pill. */
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+body.axis-drag-locked,
+body.axis-drag-locked * {
+  /* Phase 13.75 refinement: ns-resize is the vertical double-arrow,
+   * which matches what the drag actually controls (up/down pan or
+   * zoom). The descendant selector + !important is needed because
+   * .btn declares its own `cursor: pointer` — without forcing every
+   * child the press-down cursor stays a pointer over the button. */
+  cursor: ns-resize !important;
+  user-select: none;
+}
+
+/* Phase 13.75: small colored dot that follows the cursor while over an
+ * axis line. Provides a positive hover affordance independent of the
+ * cursor change (which browsers don't always honor mid-move). */
+.axis-hover-dot {
+  position: fixed;
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-surface);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%);
+  transition: opacity 80ms ease;
+}
+.axis-hover-dot[hidden] { display: none; }
+
+/* Phase 13.5 round 3: axis-label hide toggle. Same styling family as
+ * the seg-btns next to it; "is-active" means labels are currently shown. */
+.axis-labels-toggle,
+.capture-thresholds {
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  min-width: 36px;
+}
+.capture-thresholds {
+  font-size: 18px;
+  line-height: 1;
+}
+.capture-thresholds:hover {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+.axis-labels-toggle:not(.is-active) {
+  color: var(--color-text-muted);
+  background: transparent;
+}
+.axis-labels-toggle.is-active {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+/* --- Detail panel: greyed-out reason block (Phase 13.5 round 2) --- */
+
+.detail-reasons {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--color-surface-2);
+  padding: var(--space-3);
+}
+.detail-reasons-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+.detail-reasons-list li + li {
+  margin-top: 4px;
+}
+
+/* --- Dietary restrictions (Phase 13.5) --- */
+
+.restrictions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.restrictions-help {
+  margin: 0;
+  font-size: var(--font-size-xs);
+}
+.restrictions-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.restrictions-group-title {
+  margin: 0 0 var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.restrictions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.restriction-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 4px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: var(--radius-sm, 4px);
+}
+.restriction-check:hover {
+  background: var(--color-surface-2);
+}
+.restriction-check input[type="checkbox"] {
+  margin: 0;
+  flex: 0 0 auto;
+}
+.restrictions-clear {
+  align-self: flex-start;
+  font-size: var(--font-size-xs);
+}
+.restrictions-summary {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-style: italic;
+}
+
+/* --- Tag filter (Phase 26) --- */
+
+.tag-filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.tag-filter-help {
+  margin: 0;
+  font-size: var(--font-size-xs);
+}
+.tag-filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag-filter-item { margin: 0; }
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+.tag-chip input[type="checkbox"] {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+}
+.tag-chip:hover { background: var(--color-surface-3, var(--color-surface-2)); }
+.tag-chip:has(input:checked) {
+  background: var(--color-accent, var(--color-text));
+  color: var(--color-bg);
+  border-color: var(--color-accent, var(--color-text));
+}
+.tag-filter-clear {
+  align-self: flex-start;
+  font-size: var(--font-size-xs);
+}
+.tag-filter-summary {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-style: italic;
+}
+
+/* --- Ingredient filter (Phase 6) --- */
+
+.ingredient-filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.ingredient-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ingredient-filter-search {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ingredient-filter-count {
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ingredient-filter-tree {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.filter-group + .filter-group {
+  margin-top: var(--space-2);
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 0;
+  min-width: 0;
+}
+
+.filter-row-group {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+/* Phase 13.5 round 2: bump the food_group chevron so it reads as a
+ * sub-section header rather than a leaf-row decoration. Sits between the
+ * rail-section chevron (16px / 22px box) and the category chevron. */
+.filter-row-group > .filter-disclose {
+  width: 26px;
+  height: 26px;
+  font-size: 17px;
+}
+
+.filter-row-category {
+  padding-left: var(--space-3);
+  font-size: var(--font-size-sm);
+}
+/* Category chevrons sit a step below food_group — still visible but
+ * smaller. */
+.filter-row-category > .filter-disclose {
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+}
+
+.filter-leaves {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 var(--space-1) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.filter-leaf .filter-check {
+  font-size: var(--font-size-sm);
+}
+
+.filter-disclose {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1;
+  font-size: 11px;
+}
+
+.filter-disclose:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.filter-check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.filter-checkbox {
+  flex: 0 0 auto;
+  accent-color: var(--color-accent);
+  width: 16px;
+  height: 16px;
+}
+
+.filter-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  flex: 0 0 auto;
+}
+
+.filter-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.filter-count {
+  flex: 0 0 auto;
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+[hidden].filter-leaves,
+.filter-body[hidden] {
+  display: none;
+}
+
+/* --- Nutrient thresholds (Phase 7) --- */
+
+.nutrient-thresholds {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.threshold-modes {
+  align-self: stretch;
+}
+
+.threshold-modes .seg-btn {
+  flex: 1 1 auto;
+}
+
+.threshold-profiles {
+  position: relative;
+  padding: var(--space-2) 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.profile-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 6px var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+}
+.profile-dropdown-trigger:hover {
+  border-color: var(--color-accent);
+}
+.profile-dropdown-trigger.is-active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.profile-dropdown-label {
+  flex: 1 1 auto;
+  text-align: left;
+}
+.profile-dropdown-caret {
+  flex: 0 0 auto;
+  font-size: 10px;
+}
+
+.profile-dropdown-panel {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% - 4px);
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  padding: var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.profile-dropdown-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.threshold-profile-combine {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+}
+
+.threshold-profile-mode {
+  font-size: var(--font-size-xs);
+  padding: 2px var(--space-1);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+}
+
+.profile-dropdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Tester feedback: profiles are one-shot apply buttons. Each row is
+ * a button — click stacks that profile's constraints onto the current
+ * thresholds per the Combine mode at the top of the popup. */
+.profile-apply-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+}
+.profile-apply-btn:hover {
+  background: var(--color-surface-2);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.profile-apply-btn:active {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.threshold-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.threshold-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.threshold-row-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.threshold-row-label {
+  flex: 0 0 auto;
+  font-weight: var(--font-weight-medium);
+}
+
+.threshold-row-value {
+  flex: 1 1 auto;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size-xs);
+  min-width: 0;
+}
+
+.threshold-row-reset {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  background: transparent;
+  font-size: 12px;
+  border: 0;
+  cursor: pointer;
+}
+
+.threshold-row-reset:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+/* Dual-handle slider.
+ * Two range inputs stacked over a shared visual track. The actual range
+ * fill (--lo and --hi, set as %, written by JS on every state change) is
+ * painted as a colored band between the thumbs. */
+.threshold-range {
+  position: relative;
+  height: 22px;
+  padding: 0;
+}
+
+.threshold-range-track {
+  position: absolute;
+  inset: 9px 0 9px 0;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  --lo: 0%;
+  --hi: 100%;
+  background-image: linear-gradient(
+    to right,
+    var(--color-surface-2) 0% var(--lo),
+    var(--color-accent)   var(--lo) var(--hi),
+    var(--color-surface-2) var(--hi) 100%
+  );
+}
+
+/* Both inputs occupy the same row; pointer-events on the track itself
+ * are turned off so only the thumbs receive interaction. */
+.threshold-range input[type="range"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 22px;
+  margin: 0;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.threshold-range input[type="range"]::-webkit-slider-runnable-track {
+  background: transparent;
+  border: 0;
+  height: 22px;
+}
+.threshold-range input[type="range"]::-moz-range-track {
+  background: transparent;
+  border: 0;
+  height: 22px;
+}
+
+.threshold-range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  margin-top: 3px;
+  box-shadow: var(--shadow-1);
+  cursor: grab;
+}
+.threshold-range input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--shadow-1);
+  cursor: grab;
+}
+
+.threshold-reset-all {
+  align-self: flex-start;
+  font-size: var(--font-size-xs);
+  min-height: 28px;
+  padding: 4px var(--space-2);
+}
+
+.threshold-reset-all:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  /* Larger thumb + taller track so fingers can grab sliders cleanly. */
+  .threshold-range {
+    height: 28px;
+  }
+  .threshold-range-track {
+    inset: 12px 0 12px 0;
+  }
+  .threshold-range input[type="range"]::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+  }
+  .threshold-range input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* --- Table view (Phase 8) --- */
+
+.table-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  position: relative;
+}
+
+.table-toolbar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.table-columns-btn {
+  font-size: var(--font-size-sm);
+  min-height: 36px;
+  padding: 4px var(--space-3);
+}
+
+.table-rowcount {
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.table-columns-menu {
+  position: absolute;
+  top: 60px;
+  left: var(--space-4);
+  z-index: var(--z-overlay);
+  width: min(360px, calc(100% - var(--space-4) * 2));
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.table-columns-menu[hidden] { display: none; }
+
+.table-columns-title {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.table-columns-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.table-columns-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.table-columns-item input[type="checkbox"] {
+  accent-color: var(--color-accent);
+}
+
+.table-weight-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 40px;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 0;
+  font-size: var(--font-size-xs);
+}
+
+.table-weight-label {
+  font-weight: var(--font-weight-medium);
+}
+
+.table-weight-value {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.table-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  font-variant-numeric: tabular-nums;
+  /* Phase 13.5 round 5: fixed layout so column widths set via inline
+   * styles (or CSS custom properties) actually take effect, enabling
+   * column resize. */
+  table-layout: fixed;
+}
+
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  z-index: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Phase 13.5 round 5: column resize handle — a thin strip on the right
+ * edge of each header. Cursor flips to col-resize on hover. The handle
+ * is a sibling of the sort button (not nested) so its drag pointer
+ * events don't trigger sort. */
+.th-resize {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+  background: transparent;
+  z-index: 2;
+}
+.th-resize:hover,
+.th-resize.is-dragging {
+  background: var(--color-border);
+}
+.data-table.is-resizing,
+.data-table.is-resizing * {
+  cursor: col-resize !important;
+  user-select: none;
+}
+
+.data-th-btn {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  background: transparent;
+  border: 0;
+  color: inherit;
+  text-align: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.data-th-btn:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+/* Phase 13.5 round 6: right-justify the button's flex content when the
+ * column is right-aligned, so the header label sits over the numeric
+ * cells underneath. */
+.data-table thead th[data-align="right"] .data-th-btn {
+  justify-content: flex-end;
+}
+
+.data-th-arrow {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  min-width: 10px;
+}
+
+.data-table tbody td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+  /* Phase 40 round 2: clip overflow at the cell boundary and surface
+   * the full text via the cell's `title` attribute (set by table-view.js).
+   * Without this, long names (e.g. composed meals like "Other vegetables
+   * + Red meat + Salt & seasonings") spill into adjacent cells. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Phase 40 round 2: the Name cell hosts an inline color dot + text. The
+ * td stays `display: table-cell` (NEVER use display: flex here — it
+ * disables the cell's table-layout: fixed width allocation, which makes
+ * the cell shrink-wrap its content and leaves a big gap to the next
+ * column). The dot is inline-block; text overflow ellipsizes via the
+ * td's overflow/text-overflow rules. */
+.data-table tbody td.cell-name .cell-name-text {
+  /* No special rule needed — inherits white-space:nowrap from td.
+   * Kept here for the title-attribute hook in table-view.js. */
+}
+
+.data-table tbody tr {
+  cursor: pointer;
+}
+
+.data-table tbody tr:hover {
+  background: var(--color-surface-2);
+}
+
+.data-table tbody tr.is-selected {
+  background: var(--color-surface-2);
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.data-table tbody tr.is-scored:hover {
+  filter: brightness(1.08);
+}
+
+.composite-cell {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  min-width: 90px;
+}
+
+.composite-bar {
+  flex: 1 1 auto;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    to right,
+    var(--color-score-good) 0% var(--pct, 0%),
+    var(--color-surface-2)  var(--pct, 0%) 100%
+  );
+  border: 1px solid var(--color-border);
+}
+
+.composite-value {
+  flex: 0 0 auto;
+  width: 28px;
+  text-align: right;
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+.ingredient-color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: var(--space-2);
+  border: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+/* --- Meal builder (Phase 9) --- */
+
+.meal-builder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.meal-builder-empty {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.meal-builder-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.meal-builder-add {
+  align-self: flex-start;
+  min-height: 32px;
+  padding: 4px var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.meal-card-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+.meal-card-collapse {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+}
+.meal-card-collapse:hover {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+}
+
+.meal-card[data-collapsed="true"] .meal-card-body {
+  display: none;
+}
+
+.meal-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.meal-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.meal-tag-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.meal-tag-chips:empty {
+  display: none;
+}
+.meal-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 6px 2px 8px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+.meal-tag-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.meal-tag-remove:hover {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+}
+.meal-tag-input {
+  font-size: var(--font-size-xs);
+  padding: 4px var(--space-2);
+}
+
+.meal-name {
+  flex: 1 1 auto;
+  min-height: 30px;
+  padding: 4px var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.meal-description {
+  width: 100%;
+  padding: var(--space-2);
+  font-size: var(--font-size-xs);
+  font-family: inherit;
+  line-height: 1.4;
+  resize: vertical;
+  min-height: 36px;
+}
+
+.meal-delete {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+}
+
+.meal-delete:hover {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border-color: var(--color-border);
+}
+
+.meal-ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.meal-ingredient {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meal-ingredient-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.meal-ingredient-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meal-ingredient-grams {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size-xs);
+}
+
+.meal-ingredient-remove {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border-radius: var(--radius-sm);
+}
+
+.meal-ingredient-remove:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.meal-ingredient-slider {
+  width: 100%;
+  height: 18px;
+  accent-color: var(--color-accent);
+}
+
+.meal-add-wrapper {
+  position: relative;
+}
+
+.meal-add-input {
+  width: 100%;
+  min-height: 32px;
+  padding: 4px var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.meal-add-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 2px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-add-suggestions[hidden] { display: none; }
+
+.meal-add-option {
+  text-align: left;
+  padding: 6px var(--space-3);
+  font-size: var(--font-size-sm);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.meal-add-option:hover {
+  background: var(--color-surface-2);
+}
+
+.meal-stats {
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  padding: 0 var(--space-1);
+}
+
+.meal-section-title {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: var(--font-weight-medium);
+  margin: var(--space-2) 0 var(--space-1);
+}
+
+.meal-section-title:first-child {
+  margin-top: 0;
+}
+
+.meal-card-curated {
+  /* Differentiate curated cards from editable ones — slightly muted bg
+   * and a subtle dashed border so the user knows they're read-only. */
+  background: var(--color-surface-2);
+  border-style: dashed;
+}
+
+.meal-card-curated .meal-name-static {
+  flex: 1 1 auto;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: 4px var(--space-2);
+}
+
+.meal-badge {
+  flex: 0 0 auto;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+}
+
+.meal-static-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+
+.meal-static-cat {
+  padding: 2px 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+}
+
+/* --- Phase 37: Remix section in the detail panel --- */
+
+.detail-remix {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+}
+
+.remix-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.btn-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.btn-link:hover { color: var(--color-accent-hover); }
+
+.remix-blurb {
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+  margin: 0 0 var(--space-2);
+}
+
+.remix-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  margin-bottom: var(--space-2);
+}
+
+.remix-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px 2px 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+}
+
+.remix-chip-label {
+  white-space: nowrap;
+}
+
+.remix-chip-remove {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.remix-chip-remove:hover {
+  color: var(--color-bg);
+  background: var(--color-danger);
+}
+
+.remix-add-wrapper {
+  position: relative;
+  margin-bottom: var(--space-2);
+}
+
+.remix-add-input {
+  width: 100%;
+  min-height: 28px;
+  padding: 4px var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.remix-add-suggestions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 2px);
+  z-index: var(--z-overlay);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.remix-add-suggestions[hidden] { display: none; }
+
+.remix-add-option {
+  text-align: left;
+  padding: 6px var(--space-2);
+  font-size: var(--font-size-sm);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.remix-add-option:hover {
+  background: var(--color-surface-2);
+}
+
+.remix-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remix-save {
+  font-size: var(--font-size-sm);
+}
+.remix-save[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Saved category-shape user meal card (the "Save remix" output). */
+.meal-card-user-category .meal-static-list {
+  margin-top: var(--space-1);
+}
+
+/* --- Meal filter dropdowns --- */
+
+.meal-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.meal-filter {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.meal-filter-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 4px var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.meal-filter-button:hover {
+  background: var(--color-surface-2);
+}
+
+.meal-filter.is-active .meal-filter-button {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.meal-filter-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  width: min(280px, 80vw);
+  max-height: 320px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  z-index: var(--z-overlay);
+  overflow: hidden;
+}
+
+.meal-filter-panel[hidden] { display: none; }
+
+.meal-filter-panel-head {
+  display: flex;
+  gap: 4px;
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.meal-filter-search {
+  flex: 1 1 auto;
+  min-height: 28px;
+  padding: 4px var(--space-2);
+  font-size: var(--font-size-xs);
+}
+
+.meal-filter-clear {
+  flex: 0 0 auto;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.meal-filter-clear:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.meal-filter-options {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: var(--space-1) var(--space-2);
+}
+
+.meal-filter-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 0;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.meal-filter-option input[type="checkbox"] {
+  accent-color: var(--color-accent);
+}
+
+/* --- Phase 33 tri-state +/− rows (also reused by Phase 35 compose-meals) --- */
+
+.meal-filter-options.is-tri {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meal-filter-option-tri {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: 4px 2px;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.meal-filter-option-tri[data-state="include"] {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+}
+.meal-filter-option-tri[data-state="exclude"] {
+  background: color-mix(in srgb, var(--color-danger, #c0392b) 12%, transparent);
+}
+
+.meal-filter-option-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tri-state-controls {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.tri-state-btn {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  user-select: none;
+}
+.tri-state-btn:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+.tri-state-btn[aria-pressed="true"][data-action="include"] {
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.tri-state-btn[aria-pressed="true"][data-action="exclude"] {
+  color: var(--color-bg);
+  background: var(--color-danger, #c0392b);
+  border-color: var(--color-danger, #c0392b);
+}
+
+/* --- Phase 35 compose-meals section --- */
+
+.compose-meals { display: flex; flex-direction: column; gap: var(--space-2); }
+
+.compose-meals-blurb {
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.compose-meals-head {
+  display: flex;
+  gap: 4px;
+}
+
+.compose-meals-search {
+  flex: 1 1 auto;
+  min-height: 28px;
+  padding: 4px var(--space-2);
+  font-size: var(--font-size-xs);
+}
+
+.compose-meals-reset {
+  flex: 0 0 auto;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.compose-meals-reset:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.compose-meals-summary {
+  font-size: var(--font-size-xs);
+  min-height: 1.2em;
+}
+
+.compose-meals-list {
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-2);
+}
+
+/* --- Meal sub-sections (Curated, Your meals) --- */
+
+.meal-subsection {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.meal-subsection:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.meal-subsection-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) 0;
+  background: transparent;
+  border: 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.meal-subsection-toggle:hover {
+  color: var(--color-accent);
+}
+
+.meal-subsection-chevron {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  font-size: 17px;
+  color: var(--color-text-muted);
+}
+
+.meal-subsection-title {
+  flex: 1 1 auto;
+}
+
+.meal-subsection-count {
+  flex: 0 0 auto;
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.meal-subsection-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.meal-subsection-body[hidden] {
+  display: none;
+}
+
+/* --- Phase 11: theme toggle --- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+/* --- Phase 11: keyboard shortcut help overlay --- */
+
+.shortcut-help {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shortcut-help[hidden] { display: none; }
+
+.shortcut-help-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.shortcut-help-panel {
+  position: relative;
+  width: min(440px, 92vw);
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-3);
+}
+
+.shortcut-help-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.shortcut-help-head h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.shortcut-help-close {
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-pill);
+}
+
+.shortcut-help-close:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.shortcut-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.shortcut-list dt {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: var(--font-weight-medium);
+}
+
+.shortcut-list dd {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.shortcut-list kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+/* --- Phase 12: config menu + import modal --- */
+
+#config-menu-slot {
+  position: relative;
+}
+
+.config-menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.config-menu-button:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.config-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  min-width: 200px;
+  padding: var(--space-1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+}
+
+.config-menu[hidden] { display: none; }
+
+.config-menu-item {
+  text-align: left;
+  padding: 8px var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.config-menu-item:hover {
+  background: var(--color-surface-2);
+}
+
+.config-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.config-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.config-modal-panel {
+  position: relative;
+  width: min(540px, 92vw);
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-3);
+  overflow-y: auto;
+}
+
+.config-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.config-modal-head h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.config-modal-close {
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-pill);
+}
+
+.config-modal-close:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.config-modal-help {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.config-modal-file {
+  font-size: var(--font-size-sm);
+}
+
+.config-modal-text {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  resize: vertical;
+  min-height: 160px;
+}
+
+.config-modal-status {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  min-height: 1em;
+}
+
+.config-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+/* --- Phase 11: empty-filter state --- */
+
+.empty-filter {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.empty-filter[hidden] { display: none; }
+
+.empty-filter-card {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  text-align: center;
+  max-width: 380px;
+}
+
+.empty-filter-message {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.empty-filter-ok {
+  min-height: 36px;
+  padding: var(--space-2) var(--space-4);
+}
+
+/* --- Phase 40 round 5: persistent "filters hide everything" warning --- */
+
+.active-filters-warning {
+  margin: 0 0 var(--space-2);
+  padding: 6px 10px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-danger, #c0392b);
+  background: color-mix(in srgb, var(--color-danger, #c0392b) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-danger, #c0392b) 35%, transparent);
+  border-radius: var(--radius-sm);
+}
+
+.active-filters.has-warning .active-filters-expand {
+  color: var(--color-danger, #c0392b);
+  border-color: color-mix(in srgb, var(--color-danger, #c0392b) 50%, var(--color-border));
+  background: color-mix(in srgb, var(--color-danger, #c0392b) 10%, var(--color-surface));
+  font-weight: var(--font-weight-medium);
+}
+.active-filters.has-warning .active-filters-expand:hover {
+  background: color-mix(in srgb, var(--color-danger, #c0392b) 18%, var(--color-surface));
+}
+
+/* --- Phase 10: mobile touch-target bumps --- */
+/*
+ * Desktop UIs lean dense — small chevrons, 22-28px icon buttons, etc. On
+ * touch the WCAG 2.1 AAA recommendation is 44x44; we hit that for the
+ * most-used controls. Some controls (filter-disclose) stay smaller than
+ * 44 to keep the 179-row tree from becoming unusable tall, but their
+ * containing row's padding grows so the EFFECTIVE tap area is larger.
+ */
+@media (max-width: 768px) {
+  .rail-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .seg-btn {
+    min-height: 40px;
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+  }
+  .seg-btn-snap {
+    min-width: 44px;
+  }
+
+  /* Filter tree: bump the chevron buttons + row padding so the whole
+   * row reads as a 36-40px-tall tap target. */
+  .filter-disclose {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .filter-row {
+    padding: 8px 0;
+  }
+  .filter-leaves {
+    gap: 4px;
+  }
+  .filter-leaf .filter-check {
+    padding: 6px 0;
+  }
+  .filter-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .filter-section-chevron,
+  .rail-section-chevron {
+    width: 28px;
+    font-size: 18px;
+  }
+  .rail-section-toggle {
+    padding: var(--space-3) var(--space-4);
+    min-height: 44px;
+  }
+
+  /* Thresholds + meal builder icon buttons. */
+  .threshold-row-reset,
+  .meal-ingredient-remove {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  .meal-delete {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+  .meal-name {
+    min-height: 40px;
+    font-size: var(--font-size-md);
+  }
+  .meal-add-input {
+    min-height: 40px;
+    font-size: var(--font-size-md);
+  }
+  .meal-add-option {
+    padding: 10px var(--space-3);
+    font-size: var(--font-size-md);
+  }
+  .meal-ingredient-slider {
+    height: 28px;
+  }
+
+  /* Data-table headers are the sort buttons; bump padding so a finger
+   * can hit them on dense column layouts. */
+  .data-th-btn {
+    padding: var(--space-3) var(--space-3);
+    min-height: 44px;
+  }
+  .data-table tbody td {
+    padding: var(--space-3);
+  }
+
+  /* Inputs everywhere shouldn't trigger iOS auto-zoom — that requires
+   * font-size ≥ 16px. The base .input already sits at sm (14px); bump
+   * to md on mobile to suppress the zoom. */
+  .input {
+    font-size: var(--font-size-md);
+  }
+
+  /* Mobile bottom-sheet handle wider so it's easier to drag, and pad
+   * the search input so the on-screen keyboard doesn't cramp it. */
+  .detail-grab {
+    height: 8px;
+    width: 48px;
+  }
+  .ingredient-filter-search {
+    min-height: 40px;
+  }
+}
+
+/* --- Score-mode gradient legend (Phase 7) --- */
+
+.legend-gradient {
+  width: 100%;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(to right,
+    rgb(77, 199, 115),
+    rgb(235, 92, 82));
+  border: 1px solid var(--color-border);
+  margin-bottom: 4px;
+}
+
+.legend-gradient-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--space-2);
+}
+
+/* --- Phase 40.7: body-portaled meal filter popover --- */
+
+.meal-filter-popover {
+  /* Body-level + position:fixed so the left rail's overflow:hidden
+   * doesn't clip dropdowns at the rail edge. Width/max-height keep
+   * the popover usable on mobile. */
+  position: fixed;
+  z-index: var(--z-overlay);
+  width: min(320px, calc(100vw - 16px));
+  max-height: min(420px, calc(100vh - 32px));
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+
+.meal-filter-popover[hidden] { display: none; }
+
+.meal-filter-panel-title {
+  flex: 1 1 auto;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.meal-filter.is-open .meal-filter-button {
+  border-color: var(--color-accent);
+  background: var(--color-surface-2);
+}
+
+/* --- Phase 40.2: per-nutrient meal-filter rows --- */
+
+.meal-nutrient-blurb {
+  margin: var(--space-2) var(--space-3) 0;
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+
+.meal-nutrient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meal-nutrient-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 70px auto 70px auto;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 2px;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.meal-nutrient-row.is-enabled {
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+}
+
+.meal-nutrient-enable {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meal-nutrient-enable input[type="checkbox"] {
+  accent-color: var(--color-accent);
+  flex: 0 0 auto;
+}
+
+.meal-nutrient-label {
+  font-weight: var(--font-weight-medium);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meal-nutrient-unit {
+  font-size: var(--font-size-xs);
+}
+
+.meal-nutrient-min,
+.meal-nutrient-max {
+  min-height: 28px;
+  padding: 2px 6px;
+  font-size: var(--font-size-xs);
+  width: 100%;
+  text-align: right;
+}
+
+.meal-nutrient-min:disabled,
+.meal-nutrient-max:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.meal-nutrient-dash {
+  font-size: var(--font-size-xs);
+}
+
+.meal-nutrient-reset {
+  font-size: var(--font-size-sm);
+  padding: 2px 6px;
+  min-width: 26px;
+  min-height: 26px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.meal-nutrient-reset:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* --- Phase 40.4: search dropdown --- */
+
+.search-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-input.input {
+  min-width: 200px;
+  max-width: 280px;
+  min-height: 36px;
+  /* Phase 40 round 2: leave room for the larger custom clear button. */
+  padding-right: 36px;
+}
+
+/* Phase 40 round 2: hide the native (small, finicky) clear button. The
+ * custom button below provides a generous touch target. */
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-clear {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+.search-clear:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+.search-clear[hidden] { display: none; }
+
+.search-dropdown {
+  position: fixed;
+  z-index: var(--z-overlay);
+  max-height: min(360px, calc(100vh - 96px));
+  overflow-y: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.search-dropdown[hidden] { display: none; }
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 8px;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  cursor: pointer;
+}
+
+.search-row:hover,
+.search-row.is-active {
+  background: var(--color-surface-2);
+}
+
+.search-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+}
+
+.search-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.search-name {
+  font-weight: var(--font-weight-medium);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-sub {
+  font-size: var(--font-size-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-empty {
+  padding: 10px 8px;
+  font-size: var(--font-size-sm);
+}
+
+/* Progressive-disclosure footer: "Show more (N)" / "Show all (N)"
+ * buttons under the result rows when more matches exist than are
+ * currently displayed. */
+.search-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--color-border);
+}
+.search-more {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  cursor: pointer;
+}
+.search-more:hover,
+.search-more:focus-visible {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+/* --- Phase 40.5: pick disambiguation menu --- */
+
+.pick-menu {
+  position: fixed;
+  z-index: var(--z-overlay);
+  min-width: 220px;
+  max-width: min(320px, calc(100vw - 16px));
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pick-menu[hidden] { display: none; }
+
+.pick-menu-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  background: transparent;
+  border: 0;
+  color: inherit;
+}
+
+.pick-menu-row:hover {
+  background: var(--color-surface-2);
+}
+
+.pick-menu-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+}
+
+.pick-menu-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pick-menu-name {
+  font-weight: var(--font-weight-medium);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pick-menu-sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Phase 40.6: Size axis row in axis-controls --- */
+
+.axis-row-size-blurb {
+  margin: var(--space-2) 0 4px;
+  padding: 0 2px;
+  font-size: var(--font-size-xs);
+  line-height: 1.35;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-2);
+}
+
+.axis-row-size-tag {
+  background: color-mix(in srgb, var(--color-text) 18%, transparent);
+}
+
+.axis-row-size-collapsed .axis-row-top {
+  padding-bottom: 0;
+}
+
+.axis-row-size-disabled {
+  font-style: italic;
+}
+
+.axis-row-size-select {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 28px;
+  padding: 2px 6px;
+  font-size: var(--font-size-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.axis-row-size-toggle {
+  font-size: var(--font-size-xs);
+  padding: 2px 8px;
+}
+
+/* --- Phase 40.9: active-filters empty state + pill polish --- */
+
+.active-filters-expand {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.active-filters-empty {
+  padding: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+}
+
+.active-filters-clear:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Phase 40.8: macro-remainder row in detail panel --- */
+
+.detail-nutrient-remainder th,
+.detail-nutrient-remainder td {
+  border-top: 1px dashed var(--color-border);
+  padding-top: 6px;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* --- First-run guided tour ---
+ *
+ * Four absolutely-positioned dim panels surround the target rect,
+ * leaving the target itself in a transparent gap so it stays
+ * interactive. A pulsing ring traces the target; a card explains.
+ */
+
+.tutorial {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  pointer-events: none; /* children opt in below */
+  font-family: var(--font-family);
+  color: var(--color-text);
+}
+.tutorial.is-leaving { opacity: 0; transition: opacity 160ms var(--ease-out); }
+
+.tutorial-dim {
+  position: absolute;
+  background: rgba(8, 10, 14, 0.62);
+  pointer-events: auto;
+  transition: top 180ms var(--ease-out), left 180ms var(--ease-out),
+              width 180ms var(--ease-out), height 180ms var(--ease-out);
+}
+:root[data-theme="light"] .tutorial-dim { background: rgba(20, 23, 28, 0.45); }
+
+.tutorial-ring {
+  position: absolute;
+  pointer-events: none;
+  border-radius: var(--radius-md);
+  box-shadow:
+    0 0 0 2px var(--color-accent),
+    0 0 0 4px rgba(0, 0, 0, 0.25),
+    0 0 24px 4px var(--color-focus-ring);
+  transition: top 180ms var(--ease-out), left 180ms var(--ease-out),
+              width 180ms var(--ease-out), height 180ms var(--ease-out);
+  animation: tutorial-pulse 1.6s ease-in-out infinite;
+}
+@keyframes tutorial-pulse {
+  0%, 100% { box-shadow:
+    0 0 0 2px var(--color-accent),
+    0 0 0 4px rgba(0, 0, 0, 0.25),
+    0 0 16px  4px var(--color-focus-ring); }
+  50%      { box-shadow:
+    0 0 0 2px var(--color-accent),
+    0 0 0 4px rgba(0, 0, 0, 0.25),
+    0 0 28px 10px var(--color-focus-ring); }
+}
+
+.tutorial-card {
+  position: absolute;
+  width: 360px;
+  max-width: calc(100vw - 24px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-3);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: top 180ms var(--ease-out), left 180ms var(--ease-out),
+              right 180ms var(--ease-out);
+  animation: tutorial-card-in 220ms var(--ease-out);
+}
+@keyframes tutorial-card-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tutorial.is-centered .tutorial-card {
+  /* Layout JS still sets left/top; this just bumps the visual weight
+   * for the welcome / wrap-up steps that don't anchor to anything. */
+  box-shadow: var(--shadow-3), 0 0 0 1px var(--color-border);
+}
+
+.tutorial-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin: calc(var(--space-2) * -1) calc(var(--space-2) * -1) 0;
+  padding: 0 var(--space-2);
+}
+.tutorial-progress {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-medium);
+}
+.tutorial-skip-x {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 20px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+.tutorial-skip-x:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.tutorial-title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+.tutorial-body {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+}
+.tutorial-tip {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+.tutorial-tip[hidden] { display: none; }
+
+.tutorial-bullets {
+  margin: 0;
+  padding-left: var(--space-4);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tutorial-bullets[hidden] { display: none; }
+.tutorial-bullets li::marker {
+  color: var(--color-text-muted);
+}
+
+.tutorial-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 0;
+}
+.tutorial-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+  transition: background var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out);
+}
+.tutorial-dot.is-active {
+  background: var(--color-accent);
+  transform: scale(1.4);
+}
+
+.tutorial-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+.tutorial-actions-spacer { flex: 1; }
+.tutorial-actions .btn {
+  min-height: 36px;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+.tutorial-skip {
+  color: var(--color-text-muted);
+  background: transparent;
+  border-color: transparent;
+}
+.tutorial-skip:hover {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+}
+.tutorial-back:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .tutorial-card { width: calc(100vw - 24px); }
+  .tutorial-actions .btn { min-height: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-ring { animation: none; }
+  .tutorial-dim, .tutorial-ring, .tutorial-card {
+    transition: none;
+  }
+  .tutorial-card { animation: none; }
+}
+

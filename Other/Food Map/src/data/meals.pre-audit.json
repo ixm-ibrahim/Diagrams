@@ -1,0 +1,5974 @@
+[
+  {
+    "id": "chicken-rice-bowl",
+    "name": "Chicken & rice bowl",
+    "ingredient_categories": [
+      "Poultry",
+      "Whole grains",
+      "Other vegetables"
+    ],
+    "notes": "Lean protein over a whole grain with vegetables. Standard balanced bowl.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1139,
+    "source": "curated"
+  },
+  {
+    "id": "chicken-stir-fry",
+    "name": "Chicken stir-fry",
+    "ingredient_categories": [
+      "Poultry",
+      "Other vegetables",
+      "Oils",
+      "Whole grains"
+    ],
+    "notes": "Wok-cooked chicken and vegetables over a grain.",
+    "cuisine": "Chinese-American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "salmon-plate",
+    "name": "Salmon plate",
+    "ingredient_categories": [
+      "Oily fish",
+      "Starchy vegetables",
+      "Leafy greens"
+    ],
+    "notes": "Roasted fatty fish, a starchy side, and a green.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sashimi-platter",
+    "name": "Sashimi platter",
+    "ingredient_categories": [
+      "Oily fish",
+      "White fish",
+      "Refined grains"
+    ],
+    "notes": "Raw fish with rice.",
+    "cuisine": "Japanese",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tuna-salad",
+    "name": "Tuna salad",
+    "ingredient_categories": [
+      "Oily fish",
+      "Leafy greens",
+      "Other vegetables"
+    ],
+    "notes": "Canned or seared tuna over greens.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fish-and-chips",
+    "name": "Fish and chips",
+    "ingredient_categories": [
+      "White fish",
+      "Starchy vegetables",
+      "Oils"
+    ],
+    "notes": "Battered white fish with fried potato.",
+    "cuisine": "British",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "shrimp-pasta",
+    "name": "Shrimp pasta",
+    "ingredient_categories": [
+      "Shellfish",
+      "Refined grains",
+      "Cream & butter",
+      "Aged cheese"
+    ],
+    "notes": "Pasta in a cream-butter sauce with sautéed shrimp.",
+    "cuisine": "Italian-American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "burger",
+    "name": "Burger",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Other vegetables"
+    ],
+    "notes": "Beef patty in a bun with vegetables.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 199,
+    "source": "curated"
+  },
+  {
+    "id": "cheeseburger",
+    "name": "Cheeseburger",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Aged cheese",
+      "Other vegetables"
+    ],
+    "notes": "Burger with cheese on top.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 205,
+    "source": "curated"
+  },
+  {
+    "id": "steak-dinner",
+    "name": "Steak dinner",
+    "ingredient_categories": [
+      "Red meat",
+      "Starchy vegetables",
+      "Leafy greens",
+      "Cream & butter"
+    ],
+    "notes": "Steak, mashed/baked potato, and a green.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bacon-and-eggs",
+    "name": "Bacon and eggs",
+    "ingredient_categories": [
+      "Processed meat",
+      "Eggs"
+    ],
+    "notes": "Breakfast classic.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "omelet-veg-cheese",
+    "name": "Vegetable & cheese omelet",
+    "ingredient_categories": [
+      "Eggs",
+      "Other vegetables",
+      "Aged cheese"
+    ],
+    "notes": "Eggs folded over sautéed veg and cheese.",
+    "cuisine": "French",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 121,
+    "source": "curated"
+  },
+  {
+    "id": "yogurt-parfait",
+    "name": "Yogurt parfait",
+    "ingredient_categories": [
+      "Yogurt",
+      "Berries",
+      "Nuts"
+    ],
+    "notes": "Greek yogurt layered with berries and nuts.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "smoothie",
+    "name": "Berry smoothie",
+    "ingredient_categories": [
+      "Yogurt",
+      "Berries",
+      "Temperate fruits",
+      "Seeds"
+    ],
+    "notes": "Blended yogurt, fruit, and seeds.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "cereal-bowl",
+    "name": "Cereal bowl",
+    "ingredient_categories": [
+      "Refined grains",
+      "Milk",
+      "Temperate fruits"
+    ],
+    "notes": "Boxed cereal with milk and sliced fruit.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "oatmeal-berries",
+    "name": "Oatmeal with berries",
+    "ingredient_categories": [
+      "Whole grains",
+      "Berries",
+      "Nuts",
+      "Milk"
+    ],
+    "notes": "Cooked oats topped with berries, nuts, and milk.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "cheese-plate",
+    "name": "Cheese plate",
+    "ingredient_categories": [
+      "Aged cheese",
+      "Fresh cheese",
+      "Dried fruits",
+      "Nuts"
+    ],
+    "notes": "Charcuterie-style spread of cheeses and dried fruit.",
+    "cuisine": "European",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "greek-salad",
+    "name": "Greek salad",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Aged cheese",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Oils"
+    ],
+    "notes": "Greens, feta, tomato, cucumber, olive oil.",
+    "cuisine": "Greek",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "caesar-salad",
+    "name": "Caesar salad",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Aged cheese",
+      "Bread & rolls",
+      "Oils"
+    ],
+    "notes": "Romaine, parmesan, croutons, dressing.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "hummus-plate",
+    "name": "Hummus plate",
+    "ingredient_categories": [
+      "Legumes",
+      "Oils",
+      "Bread & rolls",
+      "Other vegetables"
+    ],
+    "notes": "Hummus with pita and crudités.",
+    "cuisine": "Levantine",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bean-burrito",
+    "name": "Bean burrito",
+    "ingredient_categories": [
+      "Legumes",
+      "Bread & rolls",
+      "Aged cheese",
+      "Other vegetables"
+    ],
+    "notes": "Beans, cheese, and salsa in a flour tortilla.",
+    "cuisine": "Mexican-American",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "vegan-bowl",
+    "name": "Vegan grain bowl",
+    "ingredient_categories": [
+      "Legumes",
+      "Whole grains",
+      "Leafy greens",
+      "Other vegetables"
+    ],
+    "notes": "All-plant bowl of grain, beans, and vegetables.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tofu-stir-fry",
+    "name": "Tofu stir-fry",
+    "ingredient_categories": [
+      "Soy products",
+      "Other vegetables",
+      "Whole grains",
+      "Oils"
+    ],
+    "notes": "Tofu and vegetables over a grain.",
+    "cuisine": "Asian",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pb-sandwich",
+    "name": "Peanut butter sandwich",
+    "ingredient_categories": [
+      "Nut butters",
+      "Bread & rolls",
+      "Temperate fruits"
+    ],
+    "notes": "Bread with peanut butter and sliced fruit or jam.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pasta-red-sauce",
+    "name": "Pasta with red sauce",
+    "ingredient_categories": [
+      "Refined grains",
+      "Peppers & nightshades",
+      "Aged cheese"
+    ],
+    "notes": "Pasta with tomato sauce and grated cheese.",
+    "cuisine": "Italian",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fruit-and-nuts",
+    "name": "Fruit & nuts",
+    "ingredient_categories": [
+      "Temperate fruits",
+      "Nuts"
+    ],
+    "notes": "Snack — fresh fruit with a handful of nuts.",
+    "cuisine": "Mediterranean",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 843,
+    "source": "curated"
+  },
+  {
+    "id": "pancakes-syrup",
+    "name": "Pancakes & syrup",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Eggs"
+    ],
+    "cuisine": "American",
+    "notes": "Buttermilk pancakes stacked with butter and maple syrup.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 149,
+    "source": "curated"
+  },
+  {
+    "id": "mac-and-cheese",
+    "name": "Mac and cheese",
+    "ingredient_categories": [
+      "Refined grains",
+      "Aged cheese",
+      "Cream & butter",
+      "Milk"
+    ],
+    "cuisine": "American",
+    "notes": "Baked or stovetop macaroni in a cheese-cream-butter sauce.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "cobb-salad",
+    "name": "Cobb salad",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Poultry",
+      "Eggs",
+      "Aged cheese",
+      "Processed meat"
+    ],
+    "cuisine": "American",
+    "notes": "Composed salad: chicken, bacon, egg, blue cheese, avocado over romaine.",
+    "diet_compatibility": [
+      "keto",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bbq-plate",
+    "name": "BBQ plate",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Other vegetables",
+      "Bread & rolls"
+    ],
+    "cuisine": "American",
+    "notes": "Smoked brisket / ribs with BBQ sauce, slaw, and a bun.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 195,
+    "source": "curated"
+  },
+  {
+    "id": "thanksgiving-plate",
+    "name": "Thanksgiving plate",
+    "ingredient_categories": [
+      "Poultry",
+      "Starchy vegetables",
+      "Sauces",
+      "Bread & rolls"
+    ],
+    "cuisine": "American",
+    "notes": "Roast turkey, mashed potatoes, gravy, and stuffing.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "biscuits-and-gravy",
+    "name": "Biscuits and gravy",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Processed meat",
+      "Sauces"
+    ],
+    "cuisine": "American",
+    "notes": "Buttermilk biscuits smothered in sausage cream gravy.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chicken-and-waffles",
+    "name": "Chicken and waffles",
+    "ingredient_categories": [
+      "Poultry",
+      "Bread & rolls",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "American",
+    "notes": "Fried chicken on a sweet waffle drizzled with syrup.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "club-sandwich",
+    "name": "Club sandwich",
+    "ingredient_categories": [
+      "Processed meat",
+      "Poultry",
+      "Bread & rolls",
+      "Aged cheese",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "American",
+    "notes": "Triple-decker turkey, bacon, lettuce, tomato, cheese.",
+    "diet_compatibility": [
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "reuben-sandwich",
+    "name": "Reuben sandwich",
+    "ingredient_categories": [
+      "Processed meat",
+      "Aged cheese",
+      "Bread & rolls",
+      "Pickled vegetables"
+    ],
+    "cuisine": "American",
+    "notes": "Corned beef, Swiss, sauerkraut, Russian dressing on rye.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "buffalo-wings",
+    "name": "Buffalo wings",
+    "ingredient_categories": [
+      "Poultry",
+      "Sauces",
+      "Dressings & dips"
+    ],
+    "cuisine": "American",
+    "notes": "Fried chicken wings tossed in hot sauce; blue cheese dip.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chili-con-carne",
+    "name": "Chili con carne",
+    "ingredient_categories": [
+      "Red meat",
+      "Legumes",
+      "Peppers & nightshades",
+      "Ground spices"
+    ],
+    "cuisine": "American",
+    "notes": "Beef and bean stew with chili powder + cumin.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "philly-cheesesteak",
+    "name": "Philly cheesesteak",
+    "ingredient_categories": [
+      "Red meat",
+      "Aged cheese",
+      "Bread & rolls",
+      "Other vegetables"
+    ],
+    "cuisine": "American",
+    "notes": "Thin-sliced beef + provolone + sautéed onions on a hoagie.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "meatloaf-mashed-potato",
+    "name": "Meatloaf with mashed potato",
+    "ingredient_categories": [
+      "Red meat",
+      "Starchy vegetables",
+      "Eggs",
+      "Sauces"
+    ],
+    "cuisine": "American",
+    "notes": "Baked ground-beef loaf with a tomato glaze.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "lobster-roll",
+    "name": "Lobster roll",
+    "ingredient_categories": [
+      "Shellfish",
+      "Bread & rolls",
+      "Dressings & dips"
+    ],
+    "cuisine": "American",
+    "notes": "Chunked lobster meat in mayo on a butter-toasted bun.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "full-english-breakfast",
+    "name": "Full English breakfast",
+    "ingredient_categories": [
+      "Eggs",
+      "Processed meat",
+      "Peppers & nightshades",
+      "Mushrooms",
+      "Legumes",
+      "Bread & rolls"
+    ],
+    "cuisine": "British",
+    "notes": "Bacon, sausage, eggs, beans, tomato, mushrooms, toast.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "shepherds-pie",
+    "name": "Shepherd's pie",
+    "ingredient_categories": [
+      "Red meat",
+      "Starchy vegetables",
+      "Other vegetables"
+    ],
+    "cuisine": "British",
+    "notes": "Ground lamb / vegetables under a mashed-potato crust.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1641,
+    "source": "curated"
+  },
+  {
+    "id": "bangers-and-mash",
+    "name": "Bangers and mash",
+    "ingredient_categories": [
+      "Processed meat",
+      "Starchy vegetables",
+      "Sauces"
+    ],
+    "cuisine": "British",
+    "notes": "Pork sausage over mashed potato with onion gravy.",
+    "diet_compatibility": [
+      "paleo",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ploughmans-lunch",
+    "name": "Ploughman's lunch",
+    "ingredient_categories": [
+      "Aged cheese",
+      "Processed meat",
+      "Pickled vegetables",
+      "Bread & rolls",
+      "Temperate fruits"
+    ],
+    "cuisine": "British",
+    "notes": "Cheese, ham, pickle, bread, apple, chutney on a board.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sunday-roast",
+    "name": "Sunday roast",
+    "ingredient_categories": [
+      "Red meat",
+      "Starchy vegetables",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "cuisine": "British",
+    "notes": "Roast beef, roast potatoes, vegetables, gravy.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 248,
+    "source": "curated"
+  },
+  {
+    "id": "scones-cream-jam",
+    "name": "Scones with cream and jam",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Cream & butter",
+      "Jams & preserves"
+    ],
+    "cuisine": "British",
+    "notes": "Cream tea: scones, clotted cream, strawberry jam.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "beef-wellington",
+    "name": "Beef Wellington",
+    "ingredient_categories": [
+      "Red meat",
+      "Mushrooms",
+      "Baked snacks & pastries",
+      "Cream & butter"
+    ],
+    "cuisine": "British",
+    "notes": "Filet wrapped in mushroom duxelles + puff pastry.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "toad-in-the-hole",
+    "name": "Toad in the hole",
+    "ingredient_categories": [
+      "Processed meat",
+      "Bread & rolls",
+      "Eggs"
+    ],
+    "cuisine": "British",
+    "notes": "Sausages baked in Yorkshire-pudding batter.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "croque-monsieur",
+    "name": "Croque-monsieur",
+    "ingredient_categories": [
+      "Processed meat",
+      "Aged cheese",
+      "Bread & rolls",
+      "Cream & butter"
+    ],
+    "cuisine": "French",
+    "notes": "Grilled ham + Gruyère sandwich with béchamel.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ratatouille",
+    "name": "Ratatouille",
+    "ingredient_categories": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Oils",
+      "Fresh herbs"
+    ],
+    "cuisine": "French",
+    "notes": "Provençal stew of eggplant, zucchini, tomatoes, herbs.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "beef-bourguignon",
+    "name": "Beef bourguignon",
+    "ingredient_categories": [
+      "Red meat",
+      "Mushrooms",
+      "Other vegetables",
+      "Alcoholic beverages"
+    ],
+    "cuisine": "French",
+    "notes": "Beef braised in red wine with mushrooms + pearl onions.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "nicoise-salad",
+    "name": "Salade niçoise",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Oily fish",
+      "Eggs",
+      "Pickled vegetables",
+      "Starchy vegetables"
+    ],
+    "cuisine": "French",
+    "notes": "Tuna, egg, olives, potato, beans over salad greens.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "omelette-french",
+    "name": "French omelette",
+    "ingredient_categories": [
+      "Eggs",
+      "Aged cheese",
+      "Cream & butter"
+    ],
+    "cuisine": "French",
+    "notes": "Soft-curd butter-rich rolled egg omelette.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "coq-au-vin",
+    "name": "Coq au vin",
+    "ingredient_categories": [
+      "Poultry",
+      "Alcoholic beverages",
+      "Mushrooms",
+      "Processed meat"
+    ],
+    "cuisine": "French",
+    "notes": "Chicken braised in red wine with lardons + mushrooms.",
+    "diet_compatibility": [
+      "keto",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bouillabaisse",
+    "name": "Bouillabaisse",
+    "ingredient_categories": [
+      "White fish",
+      "Shellfish",
+      "Peppers & nightshades",
+      "Prepared soups & broths"
+    ],
+    "cuisine": "French",
+    "notes": "Provençal fisherman's stew, saffron-tomato broth.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "quiche-lorraine",
+    "name": "Quiche Lorraine",
+    "ingredient_categories": [
+      "Eggs",
+      "Aged cheese",
+      "Processed meat",
+      "Baked snacks & pastries"
+    ],
+    "cuisine": "French",
+    "notes": "Egg + cream custard with bacon in a pastry shell.",
+    "diet_compatibility": [
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "cassoulet",
+    "name": "Cassoulet",
+    "ingredient_categories": [
+      "Legumes",
+      "Processed meat",
+      "Poultry"
+    ],
+    "cuisine": "French",
+    "notes": "White beans slow-cooked with duck confit + sausage.",
+    "diet_compatibility": [
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "crepes-savory",
+    "name": "Savory crêpes",
+    "ingredient_categories": [
+      "Eggs",
+      "Aged cheese",
+      "Processed meat",
+      "Bread & rolls"
+    ],
+    "cuisine": "French",
+    "notes": "Buckwheat galette with ham, cheese, egg.",
+    "diet_compatibility": [
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "caprese",
+    "name": "Caprese salad",
+    "ingredient_categories": [
+      "Fresh cheese",
+      "Peppers & nightshades",
+      "Fresh herbs",
+      "Oils"
+    ],
+    "cuisine": "Italian",
+    "notes": "Mozzarella, tomato, basil, olive oil.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pasta-carbonara",
+    "name": "Pasta carbonara",
+    "ingredient_categories": [
+      "Refined grains",
+      "Processed meat",
+      "Eggs",
+      "Aged cheese"
+    ],
+    "cuisine": "Italian",
+    "notes": "Spaghetti, guanciale, egg, pecorino, black pepper.",
+    "diet_compatibility": [
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pasta-bolognese",
+    "name": "Pasta bolognese",
+    "ingredient_categories": [
+      "Refined grains",
+      "Red meat",
+      "Peppers & nightshades",
+      "Aged cheese"
+    ],
+    "cuisine": "Italian",
+    "notes": "Tagliatelle with slow-cooked beef-tomato ragù.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pesto-pasta",
+    "name": "Pesto pasta",
+    "ingredient_categories": [
+      "Refined grains",
+      "Sauces",
+      "Aged cheese",
+      "Nuts"
+    ],
+    "cuisine": "Italian",
+    "notes": "Pasta with basil-pine-nut-Parmesan pesto.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pasta-amatriciana",
+    "name": "Pasta all'amatriciana",
+    "ingredient_categories": [
+      "Refined grains",
+      "Processed meat",
+      "Peppers & nightshades",
+      "Aged cheese"
+    ],
+    "cuisine": "Italian",
+    "notes": "Bucatini with guanciale, tomato, pecorino.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "risotto-mushroom",
+    "name": "Mushroom risotto",
+    "ingredient_categories": [
+      "Refined grains",
+      "Mushrooms",
+      "Cream & butter",
+      "Aged cheese"
+    ],
+    "cuisine": "Italian",
+    "notes": "Arborio rice creamy-cooked with mushrooms + Parmesan.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "risotto-milanese",
+    "name": "Risotto Milanese",
+    "ingredient_categories": [
+      "Refined grains",
+      "Whole spices",
+      "Cream & butter",
+      "Aged cheese"
+    ],
+    "cuisine": "Italian",
+    "notes": "Saffron-yellow risotto, classic ossobuco partner.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pizza-margherita",
+    "name": "Pizza margherita",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Fresh cheese",
+      "Peppers & nightshades",
+      "Fresh herbs"
+    ],
+    "cuisine": "Italian",
+    "notes": "Naples-style tomato + mozzarella + basil pizza.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "osso-buco",
+    "name": "Osso buco",
+    "ingredient_categories": [
+      "Red meat",
+      "Other vegetables",
+      "Sauces",
+      "Alcoholic beverages"
+    ],
+    "cuisine": "Italian",
+    "notes": "Braised veal shanks; Milanese gremolata garnish.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "lasagna",
+    "name": "Lasagna",
+    "ingredient_categories": [
+      "Refined grains",
+      "Red meat",
+      "Fresh cheese",
+      "Aged cheese",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Italian",
+    "notes": "Layered pasta, ragù, ricotta, mozzarella, Parmesan.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "paella",
+    "name": "Paella",
+    "ingredient_categories": [
+      "Refined grains",
+      "Shellfish",
+      "Poultry",
+      "Peppers & nightshades",
+      "Whole spices"
+    ],
+    "cuisine": "Spanish",
+    "notes": "Saffron rice with chicken, shrimp, mussels, peppers.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tortilla-espanola",
+    "name": "Tortilla española",
+    "ingredient_categories": [
+      "Eggs",
+      "Starchy vegetables",
+      "Oils"
+    ],
+    "cuisine": "Spanish",
+    "notes": "Thick potato + egg omelette.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "gazpacho",
+    "name": "Gazpacho",
+    "ingredient_categories": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Oils",
+      "Dressings & dips"
+    ],
+    "cuisine": "Spanish",
+    "notes": "Chilled raw-vegetable soup; tomato + cucumber + pepper + vinegar.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "patatas-bravas",
+    "name": "Patatas bravas",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Sauces"
+    ],
+    "cuisine": "Spanish",
+    "notes": "Fried potatoes with spicy tomato sauce + aioli.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 139,
+    "source": "curated"
+  },
+  {
+    "id": "bacalhau-com-natas",
+    "name": "Bacalhau com natas",
+    "ingredient_categories": [
+      "Canned & cured fish",
+      "Starchy vegetables",
+      "Cream & butter"
+    ],
+    "cuisine": "Portuguese",
+    "notes": "Salt-cod casserole with potato and cream.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "schnitzel",
+    "name": "Wiener schnitzel",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Eggs",
+      "Citrus"
+    ],
+    "cuisine": "Austrian",
+    "notes": "Breaded-fried veal cutlet with lemon.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "rosti",
+    "name": "Rösti",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Oils"
+    ],
+    "cuisine": "Swiss",
+    "notes": "Pan-fried grated potato cake.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 266,
+    "source": "curated"
+  },
+  {
+    "id": "sauerbraten",
+    "name": "Sauerbraten",
+    "ingredient_categories": [
+      "Red meat",
+      "Pickled vegetables",
+      "Sauces"
+    ],
+    "cuisine": "German",
+    "notes": "Vinegar-marinated braised pot roast.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "raclette-platter",
+    "name": "Raclette platter",
+    "ingredient_categories": [
+      "Aged cheese",
+      "Starchy vegetables",
+      "Processed meat",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Swiss",
+    "notes": "Melted raclette over potatoes with charcuterie + cornichons.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "muesli-bowl",
+    "name": "Muesli bowl",
+    "ingredient_categories": [
+      "Whole grains",
+      "Dried fruits",
+      "Nuts",
+      "Milk"
+    ],
+    "cuisine": "Swiss",
+    "notes": "Bircher-style oats with fruit, nuts, milk.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "spaetzle-cheese",
+    "name": "Käsespätzle",
+    "ingredient_categories": [
+      "Refined grains",
+      "Aged cheese",
+      "Other vegetables"
+    ],
+    "cuisine": "German",
+    "notes": "Soft egg noodles tossed with cheese + caramelized onion.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 229,
+    "source": "curated"
+  },
+  {
+    "id": "currywurst",
+    "name": "Currywurst",
+    "ingredient_categories": [
+      "Processed meat",
+      "Sauces",
+      "Ground spices"
+    ],
+    "cuisine": "German",
+    "notes": "Sliced sausage with curry-ketchup sauce.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pierogi-potato-cheese",
+    "name": "Pierogi (potato-cheese)",
+    "ingredient_categories": [
+      "Refined grains",
+      "Starchy vegetables",
+      "Fresh cheese",
+      "Cream & butter"
+    ],
+    "cuisine": "Polish",
+    "notes": "Boiled / pan-fried dumplings; sour cream on top.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "borscht",
+    "name": "Borscht",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Other vegetables",
+      "Cream & butter"
+    ],
+    "cuisine": "Eastern European",
+    "notes": "Beet soup with sour cream; Russian / Ukrainian.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 409,
+    "source": "curated"
+  },
+  {
+    "id": "goulash",
+    "name": "Goulash",
+    "ingredient_categories": [
+      "Red meat",
+      "Peppers & nightshades",
+      "Starchy vegetables",
+      "Ground spices"
+    ],
+    "cuisine": "Hungarian",
+    "notes": "Paprika-rich beef stew.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "blini-caviar",
+    "name": "Blini with caviar",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Canned & cured fish",
+      "Cream & butter"
+    ],
+    "cuisine": "Russian",
+    "notes": "Small yeasted buckwheat pancakes; caviar + sour cream.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "stuffed-cabbage",
+    "name": "Stuffed cabbage rolls",
+    "ingredient_categories": [
+      "Other vegetables",
+      "Red meat",
+      "Refined grains",
+      "Sauces"
+    ],
+    "cuisine": "Eastern European",
+    "notes": "Gołąbki: cabbage leaves stuffed with meat + rice + tomato.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 178,
+    "source": "curated"
+  },
+  {
+    "id": "smorgasbord-plate",
+    "name": "Smörgåsbord plate",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Canned & cured fish",
+      "Aged cheese",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Scandinavian",
+    "notes": "Mixed cold open-face sandwiches + cured fish + cheese.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "gravlax-plate",
+    "name": "Gravlax plate",
+    "ingredient_categories": [
+      "Canned & cured fish",
+      "Dressings & dips",
+      "Bread & rolls"
+    ],
+    "cuisine": "Scandinavian",
+    "notes": "Cured salmon with mustard-dill sauce on rye.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "swedish-meatballs",
+    "name": "Swedish meatballs",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Cream & butter",
+      "Jams & preserves"
+    ],
+    "cuisine": "Swedish",
+    "notes": "Pork-beef meatballs with cream gravy + lingonberry jam.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pickled-herring-plate",
+    "name": "Pickled herring plate",
+    "ingredient_categories": [
+      "Canned & cured fish",
+      "Cream & butter",
+      "Bread & rolls"
+    ],
+    "cuisine": "Scandinavian",
+    "notes": "Pickled herring with sour cream + dark rye.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "danish-pastry-coffee",
+    "name": "Danish pastry & coffee",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Coffee & tea",
+      "Cream & butter"
+    ],
+    "cuisine": "Danish",
+    "notes": "Morning kaffe with a buttery laminated pastry.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "moussaka",
+    "name": "Moussaka",
+    "ingredient_categories": [
+      "Red meat",
+      "Other vegetables",
+      "Aged cheese",
+      "Cream & butter"
+    ],
+    "cuisine": "Greek",
+    "notes": "Layered eggplant + lamb + béchamel bake.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "spanakopita",
+    "name": "Spanakopita",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Aged cheese",
+      "Baked snacks & pastries",
+      "Eggs"
+    ],
+    "cuisine": "Greek",
+    "notes": "Spinach + feta in filo dough.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "souvlaki-plate",
+    "name": "Souvlaki plate",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Dressings & dips",
+      "Other vegetables"
+    ],
+    "cuisine": "Greek",
+    "notes": "Grilled meat skewers, tzatziki, pita, vegetables.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kung-pao-chicken",
+    "name": "Kung pao chicken",
+    "ingredient_categories": [
+      "Poultry",
+      "Peppers & nightshades",
+      "Nuts",
+      "Sauces"
+    ],
+    "cuisine": "Chinese-Sichuan",
+    "notes": "Diced chicken stir-fried with peanuts, dried chilies, scallion.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sweet-and-sour-pork",
+    "name": "Sweet-and-sour pork",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Peppers & nightshades",
+      "Tropical fruits"
+    ],
+    "cuisine": "Chinese-Cantonese",
+    "notes": "Battered pork in a vinegar-sugar pineapple sauce.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mapo-tofu",
+    "name": "Mapo tofu",
+    "ingredient_categories": [
+      "Soy products",
+      "Red meat",
+      "Pastes & ferments",
+      "Whole spices"
+    ],
+    "cuisine": "Chinese-Sichuan",
+    "notes": "Silken tofu in a numbing chili-bean sauce with ground pork.",
+    "diet_compatibility": [
+      "mediterranean",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "dim-sum-platter",
+    "name": "Dim sum platter",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Red meat",
+      "Shellfish",
+      "Leafy greens"
+    ],
+    "cuisine": "Chinese-Cantonese",
+    "notes": "Steamed dumplings (har gow, siu mai), char siu bao, gai lan.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "jiaozi-pork-cabbage",
+    "name": "Jiaozi (pork & cabbage)",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Red meat",
+      "Leafy greens",
+      "Sauces"
+    ],
+    "cuisine": "Chinese-Northern",
+    "notes": "Boiled or pan-fried dumplings; vinegar-soy-ginger dip.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "xiao-long-bao",
+    "name": "Xiao long bao",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Red meat",
+      "Prepared soups & broths"
+    ],
+    "cuisine": "Chinese-Shanghainese",
+    "notes": "Soup-filled steamed dumplings.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "wonton-soup",
+    "name": "Wonton soup",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Red meat",
+      "Prepared soups & broths",
+      "Leafy greens"
+    ],
+    "cuisine": "Chinese-Cantonese",
+    "notes": "Pork-shrimp wontons in light chicken broth with greens.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "congee-rice",
+    "name": "Congee",
+    "ingredient_categories": [
+      "Refined grains",
+      "Eggs",
+      "Processed meat",
+      "Leafy greens"
+    ],
+    "cuisine": "Chinese-Cantonese",
+    "notes": "Slow-cooked rice porridge with century egg, scallions, pork.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "peking-duck",
+    "name": "Peking duck",
+    "ingredient_categories": [
+      "Poultry",
+      "Bread & rolls",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "cuisine": "Chinese-Northern",
+    "notes": "Roast duck with thin pancakes, scallion, hoisin.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "lions-head-meatball",
+    "name": "Lion's head meatballs",
+    "ingredient_categories": [
+      "Red meat",
+      "Leafy greens",
+      "Sauces",
+      "Prepared soups & broths"
+    ],
+    "cuisine": "Chinese-Shanghainese",
+    "notes": "Oversized pork meatballs braised over napa cabbage.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "yuxiang-eggplant",
+    "name": "Yu-xiang eggplant",
+    "ingredient_categories": [
+      "Peppers & nightshades",
+      "Pastes & ferments",
+      "Sauces",
+      "Other vegetables"
+    ],
+    "cuisine": "Chinese-Sichuan",
+    "notes": "Eggplant in 'fish-fragrant' chili-vinegar-garlic sauce.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "twice-cooked-pork",
+    "name": "Twice-cooked pork",
+    "ingredient_categories": [
+      "Red meat",
+      "Other vegetables",
+      "Pastes & ferments",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Chinese-Sichuan",
+    "notes": "Pork belly poached then stir-fried with bean paste and leeks.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "dan-dan-noodles",
+    "name": "Dan dan noodles",
+    "ingredient_categories": [
+      "Refined grains",
+      "Red meat",
+      "Sauces",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Chinese-Sichuan",
+    "notes": "Wheat noodles in chili oil + sesame paste + minced pork.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fried-rice-egg",
+    "name": "Egg fried rice",
+    "ingredient_categories": [
+      "Refined grains",
+      "Eggs",
+      "Other vegetables",
+      "Oils"
+    ],
+    "cuisine": "Chinese",
+    "notes": "Wok-tossed rice with egg, scallion, soy.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "char-siu-pork-rice",
+    "name": "Char siu pork over rice",
+    "ingredient_categories": [
+      "Red meat",
+      "Refined grains",
+      "Sauces",
+      "Leafy greens"
+    ],
+    "cuisine": "Chinese-Cantonese",
+    "notes": "BBQ-glazed roast pork sliced over white rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sichuan-hot-pot",
+    "name": "Sichuan hot pot",
+    "ingredient_categories": [
+      "Red meat",
+      "Soy products",
+      "Other vegetables",
+      "Mushrooms",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Chinese-Sichuan",
+    "notes": "Communal numbing-spicy broth; meat, tofu, vegetables dipped to cook.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "salt-pepper-shrimp",
+    "name": "Salt-and-pepper shrimp",
+    "ingredient_categories": [
+      "Shellfish",
+      "Whole spices",
+      "Oils",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Chinese-Cantonese",
+    "notes": "Fried shell-on shrimp with peppercorn-chili-salt seasoning.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sushi-nigiri-platter",
+    "name": "Sushi nigiri platter",
+    "ingredient_categories": [
+      "Oily fish",
+      "White fish",
+      "Refined grains",
+      "Sauces"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Hand-pressed rice topped with raw fish; soy + wasabi.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ramen-tonkotsu",
+    "name": "Ramen (tonkotsu)",
+    "ingredient_categories": [
+      "Refined grains",
+      "Prepared soups & broths",
+      "Red meat",
+      "Eggs"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Wheat noodles in rich pork-bone broth with chashu pork and ajitsuke egg.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ramen-shoyu",
+    "name": "Ramen (shoyu)",
+    "ingredient_categories": [
+      "Refined grains",
+      "Prepared soups & broths",
+      "Poultry",
+      "Eggs"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Soy-based clear broth; chicken or pork chashu, scallion.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ramen-miso",
+    "name": "Ramen (miso)",
+    "ingredient_categories": [
+      "Refined grains",
+      "Pastes & ferments",
+      "Red meat",
+      "Other vegetables"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Hokkaido miso broth; ground pork, corn, butter optional.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "donburi-gyudon",
+    "name": "Gyudon (beef bowl)",
+    "ingredient_categories": [
+      "Red meat",
+      "Refined grains",
+      "Sauces",
+      "Other vegetables"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Thin-sliced beef simmered with onion in soy-mirin; over rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "donburi-oyakodon",
+    "name": "Oyakodon",
+    "ingredient_categories": [
+      "Poultry",
+      "Eggs",
+      "Refined grains",
+      "Sauces"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Chicken + egg simmered in dashi-soy over rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "donburi-katsudon",
+    "name": "Katsudon",
+    "ingredient_categories": [
+      "Red meat",
+      "Eggs",
+      "Refined grains",
+      "Bread & rolls"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Breaded pork cutlet + egg over rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tempura-platter",
+    "name": "Tempura platter",
+    "ingredient_categories": [
+      "White fish",
+      "Shellfish",
+      "Other vegetables",
+      "Bread & rolls"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Light battered-fried fish + shrimp + vegetables.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "okonomiyaki",
+    "name": "Okonomiyaki",
+    "ingredient_categories": [
+      "Eggs",
+      "Leafy greens",
+      "Processed meat",
+      "Sauces"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Savory cabbage pancake with pork, mayo, okonomiyaki sauce.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "soba-noodles",
+    "name": "Soba noodles",
+    "ingredient_categories": [
+      "Whole grains",
+      "Prepared soups & broths",
+      "Sauces"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Buckwheat noodles cold with tsuyu or hot in dashi broth.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "udon-noodles",
+    "name": "Udon noodles",
+    "ingredient_categories": [
+      "Refined grains",
+      "Prepared soups & broths",
+      "Other vegetables"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Thick wheat noodles in dashi-soy broth.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tonkatsu-plate",
+    "name": "Tonkatsu plate",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Leafy greens",
+      "Sauces"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Breaded-fried pork cutlet with shredded cabbage + tonkatsu sauce.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sukiyaki",
+    "name": "Sukiyaki",
+    "ingredient_categories": [
+      "Red meat",
+      "Soy products",
+      "Leafy greens",
+      "Sauces"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Hot pot of beef + tofu + napa cabbage in sweet soy.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "shabu-shabu",
+    "name": "Shabu-shabu",
+    "ingredient_categories": [
+      "Red meat",
+      "Leafy greens",
+      "Soy products",
+      "Mushrooms"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Diners swish thin beef + vegetables through hot dashi.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bibimbap",
+    "name": "Bibimbap",
+    "ingredient_categories": [
+      "Refined grains",
+      "Red meat",
+      "Eggs",
+      "Other vegetables",
+      "Pastes & ferments"
+    ],
+    "cuisine": "Korean",
+    "notes": "Stone-bowl rice topped with vegetables, beef, egg, gochujang.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bulgogi-plate",
+    "name": "Bulgogi plate",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Refined grains",
+      "Leafy greens"
+    ],
+    "cuisine": "Korean",
+    "notes": "Soy-marinated grilled beef strips over rice with lettuce wraps.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kimbap",
+    "name": "Kimbap",
+    "ingredient_categories": [
+      "Refined grains",
+      "Other vegetables",
+      "Eggs",
+      "Processed meat"
+    ],
+    "cuisine": "Korean",
+    "notes": "Seaweed rice rolls with pickled radish, carrot, egg, ham.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kimchi-jjigae",
+    "name": "Kimchi jjigae",
+    "ingredient_categories": [
+      "Other vegetables",
+      "Red meat",
+      "Soy products",
+      "Pastes & ferments"
+    ],
+    "cuisine": "Korean",
+    "notes": "Aged-kimchi stew with pork belly + tofu.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sundubu-jjigae",
+    "name": "Sundubu jjigae",
+    "ingredient_categories": [
+      "Soy products",
+      "Shellfish",
+      "Pastes & ferments",
+      "Eggs"
+    ],
+    "cuisine": "Korean",
+    "notes": "Spicy soft-tofu stew with clams and a cracked egg.",
+    "diet_compatibility": [
+      "mediterranean",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "korean-bbq",
+    "name": "Korean BBQ platter",
+    "ingredient_categories": [
+      "Red meat",
+      "Leafy greens",
+      "Pastes & ferments",
+      "Other vegetables"
+    ],
+    "cuisine": "Korean",
+    "notes": "Table-grilled marinated meats; ssamjang + lettuce + banchan.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "japchae",
+    "name": "Japchae",
+    "ingredient_categories": [
+      "Refined grains",
+      "Other vegetables",
+      "Red meat",
+      "Sauces"
+    ],
+    "cuisine": "Korean",
+    "notes": "Sweet-potato glass noodles stir-fried with beef + vegetables.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "samgyetang",
+    "name": "Samgyetang",
+    "ingredient_categories": [
+      "Poultry",
+      "Whole grains",
+      "Whole spices",
+      "Prepared soups & broths"
+    ],
+    "cuisine": "Korean",
+    "notes": "Whole young chicken stuffed with sticky rice, ginseng, jujube.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tteokbokki",
+    "name": "Tteokbokki",
+    "ingredient_categories": [
+      "Refined grains",
+      "Pastes & ferments",
+      "Sauces"
+    ],
+    "cuisine": "Korean",
+    "notes": "Chewy rice cakes simmered in spicy gochujang sauce.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pad-thai",
+    "name": "Pad thai",
+    "ingredient_categories": [
+      "Refined grains",
+      "Shellfish",
+      "Eggs",
+      "Sauces",
+      "Nuts"
+    ],
+    "cuisine": "Thai",
+    "notes": "Stir-fried rice noodles with shrimp, egg, tamarind, peanut.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tom-yum-goong",
+    "name": "Tom yum goong",
+    "ingredient_categories": [
+      "Shellfish",
+      "Prepared soups & broths",
+      "Peppers & nightshades",
+      "Citrus"
+    ],
+    "cuisine": "Thai",
+    "notes": "Hot-sour shrimp soup with lemongrass, lime, chili.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "green-curry-chicken",
+    "name": "Green curry chicken",
+    "ingredient_categories": [
+      "Poultry",
+      "Pastes & ferments",
+      "Other vegetables",
+      "Refined grains"
+    ],
+    "cuisine": "Thai",
+    "notes": "Coconut-green-curry-paste with chicken, eggplant, basil; over rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "red-curry-chicken",
+    "name": "Red curry chicken",
+    "ingredient_categories": [
+      "Poultry",
+      "Pastes & ferments",
+      "Peppers & nightshades",
+      "Refined grains"
+    ],
+    "cuisine": "Thai",
+    "notes": "Coconut-red-curry with chicken and bamboo shoots; over rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "massaman-curry",
+    "name": "Massaman curry",
+    "ingredient_categories": [
+      "Red meat",
+      "Pastes & ferments",
+      "Starchy vegetables",
+      "Nuts"
+    ],
+    "cuisine": "Thai",
+    "notes": "Mild Persian-influenced curry with beef, potato, peanut.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "som-tam",
+    "name": "Som tam (green papaya salad)",
+    "ingredient_categories": [
+      "Tropical fruits",
+      "Peppers & nightshades",
+      "Sauces",
+      "Nuts"
+    ],
+    "cuisine": "Thai",
+    "notes": "Shredded unripe papaya pounded with chili, lime, fish sauce, peanut.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "larb",
+    "name": "Larb",
+    "ingredient_categories": [
+      "Poultry",
+      "Fresh herbs",
+      "Peppers & nightshades",
+      "Citrus"
+    ],
+    "cuisine": "Thai",
+    "notes": "Minced meat salad with toasted rice powder, mint, chili, lime.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "khao-soi",
+    "name": "Khao soi",
+    "ingredient_categories": [
+      "Refined grains",
+      "Poultry",
+      "Pastes & ferments",
+      "Prepared soups & broths"
+    ],
+    "cuisine": "Thai-Northern",
+    "notes": "Curried coconut-broth noodle soup; crispy noodle garnish.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pad-see-ew",
+    "name": "Pad see ew",
+    "ingredient_categories": [
+      "Refined grains",
+      "Red meat",
+      "Leafy greens",
+      "Sauces"
+    ],
+    "cuisine": "Thai",
+    "notes": "Wide rice noodles stir-fried with dark soy + Chinese broccoli + egg.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pho-bo",
+    "name": "Pho bo",
+    "ingredient_categories": [
+      "Red meat",
+      "Refined grains",
+      "Prepared soups & broths",
+      "Fresh herbs"
+    ],
+    "cuisine": "Vietnamese",
+    "notes": "Beef-bone broth with rice noodles, raw beef slices, basil, lime.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pho-ga",
+    "name": "Pho ga",
+    "ingredient_categories": [
+      "Poultry",
+      "Refined grains",
+      "Prepared soups & broths",
+      "Fresh herbs"
+    ],
+    "cuisine": "Vietnamese",
+    "notes": "Chicken-broth version of pho.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "banh-mi",
+    "name": "Bánh mì",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Processed meat",
+      "Pickled vegetables",
+      "Fresh herbs"
+    ],
+    "cuisine": "Vietnamese",
+    "notes": "Baguette with cold cuts, pâté, pickled daikon-carrot, cilantro.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bun-bo-hue",
+    "name": "Bun bo Hue",
+    "ingredient_categories": [
+      "Red meat",
+      "Refined grains",
+      "Prepared soups & broths",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Vietnamese",
+    "notes": "Spicy beef-pork noodle soup with lemongrass + chili oil.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "summer-rolls",
+    "name": "Summer rolls",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Shellfish",
+      "Fresh herbs",
+      "Leafy greens"
+    ],
+    "cuisine": "Vietnamese",
+    "notes": "Rice-paper rolls with shrimp, herbs, vermicelli; peanut dip.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bun-cha",
+    "name": "Bún chả",
+    "ingredient_categories": [
+      "Red meat",
+      "Refined grains",
+      "Pickled vegetables",
+      "Fresh herbs"
+    ],
+    "cuisine": "Vietnamese",
+    "notes": "Grilled pork patties with rice noodles, nuoc cham, herbs.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "com-tam",
+    "name": "Cơm tấm",
+    "ingredient_categories": [
+      "Refined grains",
+      "Red meat",
+      "Eggs",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Vietnamese",
+    "notes": "Broken rice with grilled pork chop, egg cake, pickles.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "nasi-goreng",
+    "name": "Nasi goreng",
+    "ingredient_categories": [
+      "Refined grains",
+      "Eggs",
+      "Processed meat",
+      "Sauces"
+    ],
+    "cuisine": "Indonesian",
+    "notes": "Indonesian fried rice with kecap manis, chili, fried egg.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "rendang",
+    "name": "Beef rendang",
+    "ingredient_categories": [
+      "Red meat",
+      "Pastes & ferments",
+      "Whole spices",
+      "Nuts"
+    ],
+    "cuisine": "Indonesian",
+    "notes": "Coconut-curry beef slow-cooked until dark and dry.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "laksa",
+    "name": "Laksa",
+    "ingredient_categories": [
+      "Refined grains",
+      "Shellfish",
+      "Pastes & ferments",
+      "Prepared soups & broths"
+    ],
+    "cuisine": "Malay",
+    "notes": "Coconut-curry noodle soup; shrimp, tofu puffs, fish cake.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "satay-plate",
+    "name": "Satay plate",
+    "ingredient_categories": [
+      "Poultry",
+      "Sauces",
+      "Nuts",
+      "Refined grains"
+    ],
+    "cuisine": "Indonesian",
+    "notes": "Grilled meat skewers with peanut sauce + cucumber + rice cake.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "gado-gado",
+    "name": "Gado-gado",
+    "ingredient_categories": [
+      "Other vegetables",
+      "Eggs",
+      "Soy products",
+      "Sauces"
+    ],
+    "cuisine": "Indonesian",
+    "notes": "Mixed boiled vegetables with peanut sauce; egg + tofu + tempeh.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mee-goreng",
+    "name": "Mee goreng",
+    "ingredient_categories": [
+      "Refined grains",
+      "Shellfish",
+      "Eggs",
+      "Sauces"
+    ],
+    "cuisine": "Malay",
+    "notes": "Stir-fried egg noodles with shrimp, soy, tomato sauce, chili.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chicken-adobo",
+    "name": "Chicken adobo",
+    "ingredient_categories": [
+      "Poultry",
+      "Sauces",
+      "Whole spices",
+      "Refined grains"
+    ],
+    "cuisine": "Filipino",
+    "notes": "Chicken braised in soy + vinegar + garlic + bay; over rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sinigang",
+    "name": "Sinigang",
+    "ingredient_categories": [
+      "Red meat",
+      "Prepared soups & broths",
+      "Other vegetables",
+      "Citrus"
+    ],
+    "cuisine": "Filipino",
+    "notes": "Sour pork-or-shrimp soup with tamarind, kangkong, daikon.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "lumpia",
+    "name": "Lumpia",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Red meat",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "cuisine": "Filipino",
+    "notes": "Crisp spring rolls with pork-vegetable filling; sweet chili dip.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kare-kare",
+    "name": "Kare-kare",
+    "ingredient_categories": [
+      "Red meat",
+      "Nut butters",
+      "Other vegetables",
+      "Pastes & ferments"
+    ],
+    "cuisine": "Filipino",
+    "notes": "Oxtail stew in peanut-annatto sauce with bok choy + eggplant.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pancit",
+    "name": "Pancit",
+    "ingredient_categories": [
+      "Refined grains",
+      "Poultry",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "cuisine": "Filipino",
+    "notes": "Stir-fried noodles with chicken, vegetables, soy, calamansi.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 171,
+    "source": "curated"
+  },
+  {
+    "id": "butter-chicken",
+    "name": "Butter chicken",
+    "ingredient_categories": [
+      "Poultry",
+      "Sauces",
+      "Cream & butter",
+      "Ground spices"
+    ],
+    "cuisine": "Indian",
+    "notes": "Tandoori-style chicken in tomato-cream-fenugreek sauce; served with rice or naan.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chicken-tikka-masala",
+    "name": "Chicken tikka masala",
+    "ingredient_categories": [
+      "Poultry",
+      "Sauces",
+      "Cream & butter",
+      "Ground spices"
+    ],
+    "cuisine": "Indian",
+    "notes": "Marinated grilled chicken in creamy spiced tomato gravy.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "vindaloo-pork",
+    "name": "Pork vindaloo",
+    "ingredient_categories": [
+      "Red meat",
+      "Pastes & ferments",
+      "Whole spices",
+      "Sauces"
+    ],
+    "cuisine": "Indian",
+    "notes": "Goan vinegar-chili pork curry; fiery and tangy.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chicken-korma",
+    "name": "Chicken korma",
+    "ingredient_categories": [
+      "Poultry",
+      "Cream & butter",
+      "Nuts",
+      "Whole spices"
+    ],
+    "cuisine": "Indian",
+    "notes": "Mughlai mild curry with yogurt, cashew/almond paste, cardamom.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "rogan-josh",
+    "name": "Rogan josh",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Ground spices",
+      "Cream & butter"
+    ],
+    "cuisine": "Indian-Kashmiri",
+    "notes": "Lamb curry with Kashmiri chili and warm spices.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chicken-biryani",
+    "name": "Chicken biryani",
+    "ingredient_categories": [
+      "Poultry",
+      "Refined grains",
+      "Whole spices",
+      "Cream & butter"
+    ],
+    "cuisine": "Indian",
+    "notes": "Layered basmati rice with marinated chicken and saffron.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "paneer-tikka",
+    "name": "Paneer tikka",
+    "ingredient_categories": [
+      "Fresh cheese",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Sauces"
+    ],
+    "cuisine": "Indian",
+    "notes": "Tandoor-grilled paneer cubes marinated in spiced yogurt.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "palak-paneer",
+    "name": "Palak paneer",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Fresh cheese",
+      "Cream & butter",
+      "Ground spices"
+    ],
+    "cuisine": "Indian",
+    "notes": "Spinach purée with paneer and warm spices.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "dal-makhani",
+    "name": "Dal makhani",
+    "ingredient_categories": [
+      "Legumes",
+      "Cream & butter",
+      "Sauces",
+      "Ground spices"
+    ],
+    "cuisine": "Indian-Punjabi",
+    "notes": "Slow-cooked black lentils + kidney beans with butter + cream.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "dal-tadka",
+    "name": "Dal tadka",
+    "ingredient_categories": [
+      "Legumes",
+      "Oils",
+      "Ground spices",
+      "Other vegetables"
+    ],
+    "cuisine": "Indian",
+    "notes": "Yellow lentils tempered with cumin, garlic, mustard seeds.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "masala-dosa",
+    "name": "Masala dosa",
+    "ingredient_categories": [
+      "Whole grains",
+      "Starchy vegetables",
+      "Pastes & ferments",
+      "Legumes"
+    ],
+    "cuisine": "Indian-South",
+    "notes": "Fermented rice-lentil crêpe with spiced potato filling; sambar + chutney.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "idli-sambar",
+    "name": "Idli sambar",
+    "ingredient_categories": [
+      "Whole grains",
+      "Legumes",
+      "Other vegetables",
+      "Whole spices"
+    ],
+    "cuisine": "Indian-South",
+    "notes": "Steamed rice-lentil cakes with lentil-vegetable stew.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "vegetarian-thali",
+    "name": "Vegetarian thali",
+    "ingredient_categories": [
+      "Legumes",
+      "Refined grains",
+      "Leafy greens",
+      "Yogurt",
+      "Bread & rolls"
+    ],
+    "cuisine": "Indian",
+    "notes": "Composed plate: dal, curry, rice, roti, raita, pickle.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "samosa-chaat",
+    "name": "Samosa chaat",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Legumes",
+      "Yogurt",
+      "Sauces"
+    ],
+    "cuisine": "Indian",
+    "notes": "Crushed samosas with chickpeas, yogurt, tamarind + cilantro chutney.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chana-masala",
+    "name": "Chana masala",
+    "ingredient_categories": [
+      "Legumes",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Other vegetables"
+    ],
+    "cuisine": "Indian",
+    "notes": "Chickpeas in onion-tomato gravy with chana masala spice.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "aloo-gobi",
+    "name": "Aloo gobi",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Other vegetables",
+      "Ground spices",
+      "Oils"
+    ],
+    "cuisine": "Indian",
+    "notes": "Dry potato + cauliflower curry.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 137,
+    "source": "curated"
+  },
+  {
+    "id": "tandoori-chicken",
+    "name": "Tandoori chicken",
+    "ingredient_categories": [
+      "Poultry",
+      "Yogurt",
+      "Ground spices",
+      "Citrus"
+    ],
+    "cuisine": "Indian",
+    "notes": "Yogurt-marinated chicken roasted in a clay oven.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "rajma",
+    "name": "Rajma",
+    "ingredient_categories": [
+      "Legumes",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Refined grains"
+    ],
+    "cuisine": "Indian-Punjabi",
+    "notes": "Red kidney bean curry served over rice.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "nihari",
+    "name": "Nihari",
+    "ingredient_categories": [
+      "Red meat",
+      "Ground spices",
+      "Sauces",
+      "Bread & rolls"
+    ],
+    "cuisine": "Pakistani",
+    "notes": "Slow-cooked beef shank stew in spiced gravy; eaten with naan.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "haleem",
+    "name": "Haleem",
+    "ingredient_categories": [
+      "Red meat",
+      "Whole grains",
+      "Legumes",
+      "Ground spices"
+    ],
+    "cuisine": "Pakistani",
+    "notes": "Pounded wheat + lentils + meat porridge; Muharram tradition.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pakistani-biryani-mutton",
+    "name": "Pakistani mutton biryani",
+    "ingredient_categories": [
+      "Red meat",
+      "Refined grains",
+      "Whole spices",
+      "Yogurt"
+    ],
+    "cuisine": "Pakistani",
+    "notes": "Spicier and oilier than Indian; potato often layered in.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fish-curry-bengali",
+    "name": "Bengali fish curry",
+    "ingredient_categories": [
+      "Freshwater fish",
+      "Pastes & ferments",
+      "Oils",
+      "Ground spices"
+    ],
+    "cuisine": "Bangladeshi",
+    "notes": "Hilsa or rui in mustard-oil curry.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chapli-kebab",
+    "name": "Chapli kebab",
+    "ingredient_categories": [
+      "Red meat",
+      "Ground spices",
+      "Eggs",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Pakistani-Pashtun",
+    "notes": "Flat ground-beef patties with pomegranate seeds and spices.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "rice-and-curry-sri-lankan",
+    "name": "Sri Lankan rice & curry",
+    "ingredient_categories": [
+      "Refined grains",
+      "White fish",
+      "Other vegetables",
+      "Ground spices"
+    ],
+    "cuisine": "Sri Lankan",
+    "notes": "Bowl of rice surrounded by 3-5 small curries (vegetable + fish + dal).",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "hoppers",
+    "name": "Hoppers (appa)",
+    "ingredient_categories": [
+      "Refined grains",
+      "Eggs",
+      "Cream & butter",
+      "Sauces"
+    ],
+    "cuisine": "Sri Lankan",
+    "notes": "Bowl-shaped rice-coconut crêpe with an egg in the center; lunu miris.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kottu-roti",
+    "name": "Kottu roti",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Poultry",
+      "Other vegetables",
+      "Ground spices"
+    ],
+    "cuisine": "Sri Lankan",
+    "notes": "Chopped roti stir-fried with vegetables, egg, meat, spiced sauce.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mezze-plate",
+    "name": "Mezze plate",
+    "ingredient_categories": [
+      "Legumes",
+      "Other vegetables",
+      "Bread & rolls",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Hummus, baba ganoush, tabbouleh, olives, pita.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "baba-ganoush",
+    "name": "Baba ganoush",
+    "ingredient_categories": [
+      "Peppers & nightshades",
+      "Other vegetables",
+      "Sauces",
+      "Oils"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Smoked-eggplant + tahini + lemon dip.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tabbouleh",
+    "name": "Tabbouleh",
+    "ingredient_categories": [
+      "Fresh herbs",
+      "Whole grains",
+      "Peppers & nightshades",
+      "Citrus"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Parsley-bulgur salad with tomato + mint + lemon.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fattoush",
+    "name": "Fattoush",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Bread & rolls",
+      "Peppers & nightshades",
+      "Ground spices"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Mixed-greens salad with crispy pita + sumac dressing.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kibbeh",
+    "name": "Kibbeh",
+    "ingredient_categories": [
+      "Red meat",
+      "Whole grains",
+      "Whole spices",
+      "Oils"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Bulgur + ground lamb football-shaped fritters.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "shawarma-chicken",
+    "name": "Chicken shawarma",
+    "ingredient_categories": [
+      "Poultry",
+      "Bread & rolls",
+      "Dressings & dips",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Spit-roasted spiced chicken wrapped in pita with toum + pickles.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "shawarma-beef",
+    "name": "Beef shawarma",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Sauces",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Beef-lamb spit shaved into pita with tahini sauce.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "manakish-zaatar",
+    "name": "Manakish (za'atar)",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Spice blends",
+      "Oils",
+      "Aged cheese"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Flatbread topped with za'atar + olive oil (or cheese).",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kafta-kebab",
+    "name": "Kafta kebab",
+    "ingredient_categories": [
+      "Red meat",
+      "Fresh herbs",
+      "Ground spices",
+      "Bread & rolls"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Ground-lamb skewers with parsley, onion, allspice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fatteh",
+    "name": "Fatteh",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Legumes",
+      "Yogurt",
+      "Nuts"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Toasted pita layered with chickpeas + garlicky yogurt + pine nuts.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "falafel-plate",
+    "name": "Falafel plate",
+    "ingredient_categories": [
+      "Legumes",
+      "Bread & rolls",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "cuisine": "Levantine",
+    "notes": "Fried chickpea-fava balls with pita, hummus, tahini, salad.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kabab-koobideh",
+    "name": "Kabab koobideh",
+    "ingredient_categories": [
+      "Red meat",
+      "Other vegetables",
+      "Refined grains",
+      "Whole spices"
+    ],
+    "cuisine": "Iranian",
+    "notes": "Saffron-onion ground-meat kebabs over saffron rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ghormeh-sabzi",
+    "name": "Ghormeh sabzi",
+    "ingredient_categories": [
+      "Red meat",
+      "Leafy greens",
+      "Legumes",
+      "Citrus"
+    ],
+    "cuisine": "Iranian",
+    "notes": "Herb stew with lamb, kidney beans, dried lime.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fesenjan",
+    "name": "Fesenjan",
+    "ingredient_categories": [
+      "Poultry",
+      "Nuts",
+      "Sauces",
+      "Whole spices"
+    ],
+    "cuisine": "Iranian",
+    "notes": "Chicken in pomegranate-walnut sauce.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tahdig-saffron",
+    "name": "Saffron tahdig",
+    "ingredient_categories": [
+      "Refined grains",
+      "Cream & butter",
+      "Whole spices",
+      "Oils"
+    ],
+    "cuisine": "Iranian",
+    "notes": "Crispy-bottomed saffron rice; centerpiece of Persian meals.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ash-reshteh",
+    "name": "Ash reshteh",
+    "ingredient_categories": [
+      "Legumes",
+      "Refined grains",
+      "Leafy greens",
+      "Yogurt"
+    ],
+    "cuisine": "Iranian",
+    "notes": "Thick noodle-bean-herb soup with kashk.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "adana-kebab",
+    "name": "Adana kebab",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Peppers & nightshades",
+      "Ground spices"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Hand-minced spicy lamb skewers.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "doner-kebab",
+    "name": "Döner kebab",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Yogurt",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Vertical-spit roasted meat in flatbread with yogurt sauce.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "iskender-kebab",
+    "name": "İskender kebab",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Yogurt",
+      "Cream & butter"
+    ],
+    "cuisine": "Turkish-Bursa",
+    "notes": "Sliced döner over pide with tomato sauce, butter, yogurt.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "dolma-stuffed-grape-leaves",
+    "name": "Dolma (stuffed grape leaves)",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Refined grains",
+      "Fresh herbs",
+      "Citrus"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Vine-leaf packets stuffed with herbed rice (vegan) or rice-and-meat.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "borek-cheese",
+    "name": "Cheese börek",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Aged cheese",
+      "Fresh herbs",
+      "Eggs"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Filo-pastry pie with feta + parsley.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "lahmacun",
+    "name": "Lahmacun",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Red meat",
+      "Peppers & nightshades",
+      "Fresh herbs"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Thin flatbread topped with spiced minced lamb; lemon + parsley.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kunefe",
+    "name": "Künefe",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Fresh cheese",
+      "Sugar & sweeteners",
+      "Nuts"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Shredded-pastry + cheese soaked in sugar syrup; pistachio.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chicken-tagine",
+    "name": "Chicken tagine (preserved lemon)",
+    "ingredient_categories": [
+      "Poultry",
+      "Pickled vegetables",
+      "Whole spices",
+      "Other vegetables"
+    ],
+    "cuisine": "Moroccan",
+    "notes": "Slow-braised chicken with olives and preserved lemon.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "lamb-tagine",
+    "name": "Lamb tagine (prune & almond)",
+    "ingredient_categories": [
+      "Red meat",
+      "Dried fruits",
+      "Nuts",
+      "Whole spices"
+    ],
+    "cuisine": "Moroccan",
+    "notes": "Sweet-savory lamb with prunes, almonds, ras el hanout.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "moroccan-couscous",
+    "name": "Moroccan couscous",
+    "ingredient_categories": [
+      "Refined grains",
+      "Poultry",
+      "Other vegetables",
+      "Whole spices"
+    ],
+    "cuisine": "Moroccan",
+    "notes": "Steamed semolina with seven-vegetable + meat stew.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "harira",
+    "name": "Harira",
+    "ingredient_categories": [
+      "Legumes",
+      "Red meat",
+      "Whole spices",
+      "Fresh herbs"
+    ],
+    "cuisine": "Moroccan",
+    "notes": "Tomato-lentil-chickpea Ramadan soup with lamb.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ful-medames",
+    "name": "Ful medames",
+    "ingredient_categories": [
+      "Legumes",
+      "Oils",
+      "Citrus",
+      "Ground spices"
+    ],
+    "cuisine": "Egyptian",
+    "notes": "Stewed fava beans with olive oil, lemon, cumin; bread on the side.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "koshari",
+    "name": "Koshari",
+    "ingredient_categories": [
+      "Refined grains",
+      "Legumes",
+      "Peppers & nightshades",
+      "Other vegetables"
+    ],
+    "cuisine": "Egyptian",
+    "notes": "Rice + lentils + pasta + chickpeas + tomato + fried onion.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "brik",
+    "name": "Brik",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Eggs",
+      "Canned & cured fish",
+      "Fresh herbs"
+    ],
+    "cuisine": "Tunisian",
+    "notes": "Filo pastry triangle with runny egg + tuna + capers.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "shakshuka",
+    "name": "Shakshuka",
+    "ingredient_categories": [
+      "Eggs",
+      "Peppers & nightshades",
+      "Ground spices",
+      "Fresh herbs"
+    ],
+    "cuisine": "North African",
+    "notes": "Eggs poached in spiced tomato-pepper sauce.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bstilla",
+    "name": "B'stilla",
+    "ingredient_categories": [
+      "Poultry",
+      "Baked snacks & pastries",
+      "Nuts",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Moroccan",
+    "notes": "Sweet-savory filo pie with shredded pigeon/chicken + almond + cinnamon.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mloukhia",
+    "name": "Mloukhia",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Poultry",
+      "Whole spices",
+      "Oils"
+    ],
+    "cuisine": "Egyptian",
+    "notes": "Jute-leaf stew with chicken or rabbit, garlic, coriander.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "meze-turkish",
+    "name": "Turkish meze plate",
+    "ingredient_categories": [
+      "Yogurt",
+      "Peppers & nightshades",
+      "Pickled vegetables",
+      "Bread & rolls"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Cacık, ezme, haydari, olives, bread; small-plate appetizer board.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "jollof-rice",
+    "name": "Jollof rice",
+    "ingredient_categories": [
+      "Refined grains",
+      "Peppers & nightshades",
+      "Poultry",
+      "Ground spices"
+    ],
+    "cuisine": "West African",
+    "notes": "One-pot tomato-pepper rice with chicken; Nigerian/Ghanaian classic.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "egusi-soup",
+    "name": "Egusi soup",
+    "ingredient_categories": [
+      "Seeds",
+      "Leafy greens",
+      "Red meat",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "West African-Nigerian",
+    "notes": "Ground-melon-seed stew with bitter leaf and meat.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "suya-skewers",
+    "name": "Suya skewers",
+    "ingredient_categories": [
+      "Red meat",
+      "Spice blends",
+      "Nuts",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "West African",
+    "notes": "Hausa peanut-spice-crusted grilled beef skewers.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fufu-and-stew",
+    "name": "Fufu and palm-nut stew",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Red meat",
+      "Oils",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "West African",
+    "notes": "Pounded cassava/plantain dumpling with palm-nut + meat stew.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "peanut-stew",
+    "name": "West African peanut stew",
+    "ingredient_categories": [
+      "Nut butters",
+      "Poultry",
+      "Starchy vegetables",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "West African",
+    "notes": "Groundnut + tomato + chili stew with chicken or sweet potato.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "waakye",
+    "name": "Waakye",
+    "ingredient_categories": [
+      "Refined grains",
+      "Legumes",
+      "Ground spices",
+      "Sauces"
+    ],
+    "cuisine": "Ghanaian",
+    "notes": "Rice and beans cooked with millet leaves; served with shito sauce.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "thieboudienne",
+    "name": "Thieboudienne",
+    "ingredient_categories": [
+      "White fish",
+      "Refined grains",
+      "Other vegetables",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Senegalese",
+    "notes": "Senegal's national dish: fish + jollof-style rice + vegetables.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "injera-doro-wat",
+    "name": "Injera with doro wat",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Poultry",
+      "Spice blends",
+      "Eggs"
+    ],
+    "cuisine": "Ethiopian",
+    "notes": "Sourdough teff flatbread with spicy chicken-egg berbere stew.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "injera-misir-wat",
+    "name": "Injera with misir wat",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Legumes",
+      "Spice blends",
+      "Oils"
+    ],
+    "cuisine": "Ethiopian",
+    "notes": "Injera with red-lentil berbere stew (vegan).",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "injera-alicha",
+    "name": "Injera with alicha",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Other vegetables",
+      "Ground spices",
+      "Cream & butter"
+    ],
+    "cuisine": "Ethiopian",
+    "notes": "Injera with mild turmeric vegetable stew.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ugali-sukuma-wiki",
+    "name": "Ugali with sukuma wiki",
+    "ingredient_categories": [
+      "Whole grains",
+      "Leafy greens",
+      "Red meat",
+      "Oils"
+    ],
+    "cuisine": "Kenyan",
+    "notes": "Stiff cornmeal porridge with sautéed collard greens.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pilau-east-african",
+    "name": "East African pilau",
+    "ingredient_categories": [
+      "Refined grains",
+      "Red meat",
+      "Whole spices",
+      "Other vegetables"
+    ],
+    "cuisine": "East African-Kenyan",
+    "notes": "Spiced rice with beef; cardamom, cumin, cinnamon.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bobotie",
+    "name": "Bobotie",
+    "ingredient_categories": [
+      "Red meat",
+      "Eggs",
+      "Dried fruits",
+      "Ground spices"
+    ],
+    "cuisine": "South African",
+    "notes": "Curried minced beef baked under an egg-milk topping.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bunny-chow",
+    "name": "Bunny chow",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Poultry",
+      "Ground spices",
+      "Sauces"
+    ],
+    "cuisine": "South African-Durban",
+    "notes": "Hollowed half-loaf filled with curry.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pap-chakalaka",
+    "name": "Pap and chakalaka",
+    "ingredient_categories": [
+      "Whole grains",
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Ground spices"
+    ],
+    "cuisine": "South African",
+    "notes": "Stiff maize porridge with spicy tomato-pepper relish.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "biltong-plate",
+    "name": "Biltong plate",
+    "ingredient_categories": [
+      "Processed meat",
+      "Aged cheese",
+      "Pickled vegetables",
+      "Bread & rolls"
+    ],
+    "cuisine": "South African",
+    "notes": "Cured beef strips with cheese, pickle, dried fruit.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tacos-al-pastor",
+    "name": "Tacos al pastor",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Tropical fruits",
+      "Fresh herbs"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Spit-roasted spiced pork in corn tortillas with pineapple, cilantro.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tacos-carnitas",
+    "name": "Tacos carnitas",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Pickled vegetables",
+      "Fresh herbs"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Slow-confit pork shoulder in tortillas with onion + cilantro + salsa.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tacos-fish",
+    "name": "Baja fish tacos",
+    "ingredient_categories": [
+      "White fish",
+      "Bread & rolls",
+      "Leafy greens",
+      "Dressings & dips"
+    ],
+    "cuisine": "Mexican-Baja",
+    "notes": "Beer-battered fish with cabbage slaw + crema in corn tortillas.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tacos-lengua",
+    "name": "Tacos de lengua",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Other vegetables",
+      "Fresh herbs"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Braised beef tongue tacos with onion + cilantro + salsa verde.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tacos-barbacoa",
+    "name": "Tacos de barbacoa",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Pit-cooked spiced lamb/beef in corn tortillas.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "enchiladas-rojas",
+    "name": "Enchiladas rojas",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Poultry",
+      "Sauces",
+      "Aged cheese"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Tortillas rolled with chicken, smothered in red chile sauce + cheese.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mole-poblano-chicken",
+    "name": "Mole poblano with chicken",
+    "ingredient_categories": [
+      "Poultry",
+      "Pastes & ferments",
+      "Refined grains",
+      "Nuts"
+    ],
+    "cuisine": "Mexican-Puebla",
+    "notes": "Chicken in a complex chocolate-chile sauce; rice on the side.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tamales",
+    "name": "Tamales",
+    "ingredient_categories": [
+      "Whole grains",
+      "Red meat",
+      "Sauces",
+      "Oils"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Masa dough with savory filling, steamed in corn husks.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chilaquiles",
+    "name": "Chilaquiles",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Eggs",
+      "Sauces",
+      "Aged cheese"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Fried tortilla chips simmered in salsa with egg + queso.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pozole-rojo",
+    "name": "Pozole rojo",
+    "ingredient_categories": [
+      "Red meat",
+      "Whole grains",
+      "Peppers & nightshades",
+      "Prepared soups & broths"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Hominy + pork stew with dried red chiles.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sopes",
+    "name": "Sopes",
+    "ingredient_categories": [
+      "Whole grains",
+      "Legumes",
+      "Aged cheese",
+      "Sauces"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Thick fried-masa boats with refried beans, cheese, salsa, lettuce.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "huevos-rancheros",
+    "name": "Huevos rancheros",
+    "ingredient_categories": [
+      "Eggs",
+      "Bread & rolls",
+      "Sauces",
+      "Legumes"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Fried eggs over warm tortillas with salsa ranchera + beans.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "feijoada",
+    "name": "Feijoada",
+    "ingredient_categories": [
+      "Legumes",
+      "Red meat",
+      "Processed meat",
+      "Refined grains"
+    ],
+    "cuisine": "Brazilian",
+    "notes": "Black-bean + smoked-meat stew over rice with farofa + orange slices.",
+    "diet_compatibility": [
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "moqueca",
+    "name": "Moqueca",
+    "ingredient_categories": [
+      "White fish",
+      "Peppers & nightshades",
+      "Oils",
+      "Fresh herbs"
+    ],
+    "cuisine": "Brazilian-Bahian",
+    "notes": "Coconut-milk fish stew with palm oil + tomato + bell pepper.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "churrasco-plate",
+    "name": "Churrasco plate",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Refined grains",
+      "Legumes"
+    ],
+    "cuisine": "Brazilian",
+    "notes": "Open-flame grilled meats with chimichurri, rice + beans, farofa.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pao-de-queijo",
+    "name": "Pão de queijo",
+    "ingredient_categories": [
+      "Refined grains",
+      "Aged cheese",
+      "Eggs",
+      "Oils"
+    ],
+    "cuisine": "Brazilian",
+    "notes": "Tapioca-cheese bread puffs.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "acaraje",
+    "name": "Acarajé",
+    "ingredient_categories": [
+      "Legumes",
+      "Shellfish",
+      "Oils",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Brazilian-Bahian",
+    "notes": "Black-eyed-pea fritters in palm oil with shrimp + vatapa filling.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "vatapa",
+    "name": "Vatapa",
+    "ingredient_categories": [
+      "Shellfish",
+      "Bread & rolls",
+      "Nut butters",
+      "Oils"
+    ],
+    "cuisine": "Brazilian-Bahian",
+    "notes": "Creamy shrimp-bread-peanut paste; afro-Brazilian classic.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ceviche-peruvian",
+    "name": "Peruvian ceviche",
+    "ingredient_categories": [
+      "White fish",
+      "Citrus",
+      "Peppers & nightshades",
+      "Other vegetables"
+    ],
+    "cuisine": "Peruvian",
+    "notes": "Raw fish cured in lime juice with aji amarillo + red onion + sweet potato.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "lomo-saltado",
+    "name": "Lomo saltado",
+    "ingredient_categories": [
+      "Red meat",
+      "Starchy vegetables",
+      "Peppers & nightshades",
+      "Sauces"
+    ],
+    "cuisine": "Peruvian",
+    "notes": "Stir-fried beef + onion + tomato + fries over rice.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "aji-de-gallina",
+    "name": "Ají de gallina",
+    "ingredient_categories": [
+      "Poultry",
+      "Pastes & ferments",
+      "Bread & rolls",
+      "Nuts"
+    ],
+    "cuisine": "Peruvian",
+    "notes": "Shredded chicken in a creamy ají-amarillo-walnut sauce.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "anticuchos",
+    "name": "Anticuchos",
+    "ingredient_categories": [
+      "Organ meats",
+      "Peppers & nightshades",
+      "Whole spices",
+      "Sauces"
+    ],
+    "cuisine": "Peruvian",
+    "notes": "Marinated grilled beef-heart skewers.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "papa-huancaina",
+    "name": "Papa a la huancaína",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Aged cheese",
+      "Pastes & ferments",
+      "Eggs"
+    ],
+    "cuisine": "Peruvian",
+    "notes": "Boiled potato with ají-cheese sauce + olive + boiled egg.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "asado-plate",
+    "name": "Asado plate",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Other vegetables",
+      "Bread & rolls"
+    ],
+    "cuisine": "Argentine",
+    "notes": "Long-grilled cuts (ribs, chorizo, sweetbreads) with chimichurri.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "milanesa",
+    "name": "Milanesa",
+    "ingredient_categories": [
+      "Red meat",
+      "Bread & rolls",
+      "Eggs",
+      "Citrus"
+    ],
+    "cuisine": "Argentine",
+    "notes": "Breaded-fried beef cutlet; often topped with ham + cheese.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "empanadas-argentine",
+    "name": "Empanadas argentinas",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Red meat",
+      "Eggs",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Argentine",
+    "notes": "Baked turnovers with beef, hard-boiled egg, olive, raisin.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chimichurri-steak",
+    "name": "Chimichurri grilled steak",
+    "ingredient_categories": [
+      "Red meat",
+      "Sauces",
+      "Fresh herbs",
+      "Oils"
+    ],
+    "cuisine": "Argentine",
+    "notes": "Grilled steak with parsley-garlic-vinegar herb sauce.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "jerk-chicken",
+    "name": "Jerk chicken",
+    "ingredient_categories": [
+      "Poultry",
+      "Spice blends",
+      "Peppers & nightshades",
+      "Refined grains"
+    ],
+    "cuisine": "Jamaican",
+    "notes": "Allspice-Scotch-bonnet-marinated grilled chicken; rice and peas.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ackee-saltfish",
+    "name": "Ackee and saltfish",
+    "ingredient_categories": [
+      "Tropical fruits",
+      "Canned & cured fish",
+      "Peppers & nightshades",
+      "Other vegetables"
+    ],
+    "cuisine": "Jamaican",
+    "notes": "Boiled ackee with salt cod, peppers, onion; the national dish.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ropa-vieja",
+    "name": "Ropa vieja",
+    "ingredient_categories": [
+      "Red meat",
+      "Peppers & nightshades",
+      "Sauces",
+      "Refined grains"
+    ],
+    "cuisine": "Cuban",
+    "notes": "Shredded braised flank steak in tomato-pepper sauce; black beans + rice.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "jamaican-oxtail",
+    "name": "Jamaican oxtail",
+    "ingredient_categories": [
+      "Red meat",
+      "Legumes",
+      "Refined grains",
+      "Sauces"
+    ],
+    "cuisine": "Jamaican",
+    "notes": "Slow-braised oxtail with butter beans, over rice and peas.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "callaloo",
+    "name": "Callaloo",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Shellfish",
+      "Oils",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Caribbean",
+    "notes": "Amaranth/taro leaves cooked with coconut milk + crab or salt fish.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "caribbean-roti",
+    "name": "Caribbean curry roti",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Poultry",
+      "Starchy vegetables",
+      "Ground spices"
+    ],
+    "cuisine": "Trinidadian",
+    "notes": "Curried chicken or goat wrapped in a dhalpuri roti.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "cuban-sandwich",
+    "name": "Cuban sandwich",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Processed meat",
+      "Aged cheese",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Cuban",
+    "notes": "Pressed sandwich with roast pork, ham, Swiss, pickles, mustard.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mofongo",
+    "name": "Mofongo",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Processed meat",
+      "Shellfish",
+      "Sauces"
+    ],
+    "cuisine": "Puerto Rican",
+    "notes": "Mashed fried green plantains with garlic + chicharron; shrimp on top.",
+    "diet_compatibility": [
+      "paleo",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "arepas",
+    "name": "Arepas",
+    "ingredient_categories": [
+      "Whole grains",
+      "Aged cheese",
+      "Eggs",
+      "Other vegetables"
+    ],
+    "cuisine": "Venezuelan-Colombian",
+    "notes": "Corn-flour cakes split and filled with cheese, egg, or shredded meat.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pupusas",
+    "name": "Pupusas",
+    "ingredient_categories": [
+      "Whole grains",
+      "Aged cheese",
+      "Legumes",
+      "Pickled vegetables"
+    ],
+    "cuisine": "Salvadoran",
+    "notes": "Thick masa cakes stuffed with cheese, beans, or pork; curtido on top.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "gallo-pinto",
+    "name": "Gallo pinto",
+    "ingredient_categories": [
+      "Legumes",
+      "Refined grains",
+      "Eggs",
+      "Sauces"
+    ],
+    "cuisine": "Costa Rican",
+    "notes": "Black-bean-and-rice breakfast with egg + sour cream + Lizano sauce.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "baleadas",
+    "name": "Baleadas",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Legumes",
+      "Aged cheese",
+      "Eggs"
+    ],
+    "cuisine": "Honduran",
+    "notes": "Folded flour tortilla with beans, cheese, crema, optional egg.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "haitian-griot",
+    "name": "Haitian griot",
+    "ingredient_categories": [
+      "Red meat",
+      "Starchy vegetables",
+      "Citrus",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Haitian",
+    "notes": "Marinated fried pork with pikliz + fried plantains.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tostones",
+    "name": "Tostones",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Oils",
+      "Sauces"
+    ],
+    "cuisine": "Caribbean",
+    "notes": "Twice-fried green plantain rounds; garlic dip.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "arroz-con-pollo",
+    "name": "Arroz con pollo",
+    "ingredient_categories": [
+      "Poultry",
+      "Refined grains",
+      "Peppers & nightshades",
+      "Whole spices"
+    ],
+    "cuisine": "Latin American",
+    "notes": "Saffron/achiote rice cooked with chicken + peas + bell pepper.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "charcuterie-board",
+    "name": "Charcuterie board",
+    "ingredient_categories": [
+      "Processed meat",
+      "Aged cheese",
+      "Bread & rolls",
+      "Pickled vegetables"
+    ],
+    "cuisine": "European",
+    "notes": "Cured meats, cheeses, crackers, olives, mustard, fruit.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "antipasto-platter",
+    "name": "Antipasto platter",
+    "ingredient_categories": [
+      "Processed meat",
+      "Aged cheese",
+      "Pickled vegetables",
+      "Other vegetables"
+    ],
+    "cuisine": "Italian",
+    "notes": "Salumi, cheeses, marinated vegetables, olives, peperoncini.",
+    "diet_compatibility": [
+      "keto",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "popcorn-buttered",
+    "name": "Buttered popcorn",
+    "ingredient_categories": [
+      "Whole grains",
+      "Cream & butter",
+      "Salt & seasonings"
+    ],
+    "cuisine": "American",
+    "notes": "Stovetop or air-popped popcorn tossed with melted butter and salt.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 121,
+    "source": "curated"
+  },
+  {
+    "id": "popcorn-caramel",
+    "name": "Caramel popcorn",
+    "ingredient_categories": [
+      "Whole grains",
+      "Sugar & sweeteners",
+      "Cream & butter",
+      "Nuts"
+    ],
+    "cuisine": "American",
+    "notes": "Popcorn coated in caramel; often peanut + Cracker Jack-style.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 125,
+    "source": "curated"
+  },
+  {
+    "id": "chips-and-salsa",
+    "name": "Chips & salsa",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Sauces",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Mexican-American",
+    "notes": "Tortilla chips with fresh tomato salsa.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chips-and-guacamole",
+    "name": "Chips & guacamole",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Sauces",
+      "Citrus",
+      "Fresh herbs"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Tortilla chips with avocado dip + lime + cilantro.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chips-and-queso",
+    "name": "Chips & queso",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Processed cheese",
+      "Peppers & nightshades"
+    ],
+    "cuisine": "Tex-Mex",
+    "notes": "Chips with hot melted-cheese-and-pepper dip.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "nut-mix-roasted",
+    "name": "Roasted nut mix",
+    "ingredient_categories": [
+      "Nuts",
+      "Salt & seasonings",
+      "Oils"
+    ],
+    "cuisine": "Cross-cultural",
+    "notes": "Roasted, lightly salted mixed nuts.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "trail-mix",
+    "name": "Trail mix",
+    "ingredient_categories": [
+      "Nuts",
+      "Dried fruits",
+      "Seeds",
+      "Candy & desserts"
+    ],
+    "cuisine": "American",
+    "notes": "Nuts + raisins + M&Ms or chocolate chips.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "crudite-platter",
+    "name": "Crudité platter",
+    "ingredient_categories": [
+      "Other vegetables",
+      "Peppers & nightshades",
+      "Dressings & dips",
+      "Leafy greens"
+    ],
+    "cuisine": "Cross-cultural",
+    "notes": "Raw vegetable sticks with ranch or hummus dip.",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "fruit-platter",
+    "name": "Fruit platter",
+    "ingredient_categories": [
+      "Tropical fruits",
+      "Berries",
+      "Temperate fruits",
+      "Citrus"
+    ],
+    "cuisine": "Cross-cultural",
+    "notes": "Cut fresh fruit assortment.",
+    "diet_compatibility": [
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "snack-board-mediterranean",
+    "name": "Mediterranean snack board",
+    "ingredient_categories": [
+      "Legumes",
+      "Pickled vegetables",
+      "Aged cheese",
+      "Bread & rolls"
+    ],
+    "cuisine": "Mediterranean",
+    "notes": "Hummus, olives, feta, pita, cucumber, peppers.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pretzels-mustard",
+    "name": "Pretzels with mustard",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Sauces"
+    ],
+    "cuisine": "German-American",
+    "notes": "Soft pretzel with grainy or German mustard.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chocolate-cake-slice",
+    "name": "Chocolate cake slice",
+    "ingredient_categories": [
+      "Candy & desserts",
+      "Cream & butter",
+      "Eggs",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "American",
+    "notes": "Layer cake with chocolate ganache or buttercream frosting.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "carrot-cake-slice",
+    "name": "Carrot cake with cream cheese frosting",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Starchy vegetables",
+      "Cream & butter",
+      "Nuts"
+    ],
+    "cuisine": "American",
+    "notes": "Spiced cake with shredded carrot and cream-cheese icing.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "cheesecake-plain",
+    "name": "New York cheesecake",
+    "ingredient_categories": [
+      "Fresh cheese",
+      "Eggs",
+      "Sugar & sweeteners",
+      "Cream & butter"
+    ],
+    "cuisine": "American",
+    "notes": "Dense cream-cheese cake on a graham-cracker crust.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 225,
+    "source": "curated"
+  },
+  {
+    "id": "cheesecake-strawberry",
+    "name": "Strawberry cheesecake",
+    "ingredient_categories": [
+      "Fresh cheese",
+      "Berries",
+      "Sugar & sweeteners",
+      "Cream & butter"
+    ],
+    "cuisine": "American",
+    "notes": "Cheesecake topped with strawberry compote.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 148,
+    "source": "curated"
+  },
+  {
+    "id": "tres-leches-cake",
+    "name": "Tres leches cake",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Milk",
+      "Cream & butter",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Latin American",
+    "notes": "Sponge cake soaked in three milks; whipped cream topping.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 284,
+    "source": "curated"
+  },
+  {
+    "id": "red-velvet-cake",
+    "name": "Red velvet cake",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Fresh cheese"
+    ],
+    "cuisine": "American-Southern",
+    "notes": "Cocoa-tinted layer cake with cream-cheese frosting.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 104,
+    "source": "curated"
+  },
+  {
+    "id": "apple-pie",
+    "name": "Apple pie",
+    "ingredient_categories": [
+      "Temperate fruits",
+      "Baked snacks & pastries",
+      "Sugar & sweeteners",
+      "Ground spices"
+    ],
+    "cuisine": "American",
+    "notes": "Double-crust pie with cinnamon-spiced apples; à la mode optional.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pumpkin-pie",
+    "name": "Pumpkin pie",
+    "ingredient_categories": [
+      "Starchy vegetables",
+      "Baked snacks & pastries",
+      "Sugar & sweeteners",
+      "Whole spices"
+    ],
+    "cuisine": "American",
+    "notes": "Custard pie of spiced pumpkin purée; Thanksgiving classic.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "pecan-pie",
+    "name": "Pecan pie",
+    "ingredient_categories": [
+      "Nuts",
+      "Baked snacks & pastries",
+      "Sugar & sweeteners",
+      "Eggs"
+    ],
+    "cuisine": "American-Southern",
+    "notes": "Corn-syrup + brown sugar + pecan filling in pastry.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "key-lime-pie",
+    "name": "Key lime pie",
+    "ingredient_categories": [
+      "Citrus",
+      "Milk",
+      "Baked snacks & pastries",
+      "Eggs"
+    ],
+    "cuisine": "American-Floridian",
+    "notes": "Key-lime + condensed-milk custard in graham crust.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "ice-cream-sundae",
+    "name": "Ice cream sundae",
+    "ingredient_categories": [
+      "Frozen dairy",
+      "Candy & desserts",
+      "Cream & butter",
+      "Nuts"
+    ],
+    "cuisine": "American",
+    "notes": "Scoops with hot fudge, whipped cream, nuts, cherry.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "tiramisu",
+    "name": "Tiramisu",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Fresh cheese",
+      "Coffee & tea",
+      "Eggs"
+    ],
+    "cuisine": "Italian",
+    "notes": "Layers of espresso-soaked ladyfingers + mascarpone cream + cocoa.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "halwa-semolina",
+    "name": "Suji halwa",
+    "ingredient_categories": [
+      "Refined grains",
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Nuts"
+    ],
+    "cuisine": "Indian",
+    "notes": "Semolina cooked in ghee + sugar + cardamom + cashew + raisin.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mochi-ice-cream",
+    "name": "Mochi ice cream",
+    "ingredient_categories": [
+      "Refined grains",
+      "Frozen dairy",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Japanese-American",
+    "notes": "Ice cream wrapped in soft glutinous-rice dough.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "churros-chocolate",
+    "name": "Churros with chocolate",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Sugar & sweeteners",
+      "Candy & desserts",
+      "Milk"
+    ],
+    "cuisine": "Spanish",
+    "notes": "Fried-dough sticks rolled in cinnamon sugar; thick chocolate dip.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "creme-brulee",
+    "name": "Crème brûlée",
+    "ingredient_categories": [
+      "Eggs",
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Extracts & essences"
+    ],
+    "cuisine": "French",
+    "notes": "Vanilla custard with a torched caramelized sugar lid.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 954,
+    "source": "curated"
+  },
+  {
+    "id": "panna-cotta",
+    "name": "Panna cotta",
+    "ingredient_categories": [
+      "Cream & butter",
+      "Sugar & sweeteners",
+      "Berries",
+      "Extracts & essences"
+    ],
+    "cuisine": "Italian",
+    "notes": "Set-cream dessert; berry coulis on top.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 160,
+    "source": "curated"
+  },
+  {
+    "id": "crepe-suzette",
+    "name": "Crêpes Suzette",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Citrus",
+      "Cream & butter",
+      "Alcoholic beverages"
+    ],
+    "cuisine": "French",
+    "notes": "Thin crêpes flambéed in orange-Grand Marnier butter sauce.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bread-pudding",
+    "name": "Bread pudding",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Milk",
+      "Eggs",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "American",
+    "notes": "Custard-soaked stale bread baked with raisins + spice.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "chocolate-fondue",
+    "name": "Chocolate fondue",
+    "ingredient_categories": [
+      "Candy & desserts",
+      "Cream & butter",
+      "Temperate fruits",
+      "Berries"
+    ],
+    "cuisine": "Swiss",
+    "notes": "Melted chocolate-cream dip with fruit + cake skewers.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "affogato",
+    "name": "Affogato",
+    "ingredient_categories": [
+      "Coffee & tea",
+      "Frozen dairy"
+    ],
+    "cuisine": "Italian",
+    "notes": "Hot espresso poured over a scoop of vanilla gelato.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "berry-smoothie",
+    "name": "Berry smoothie",
+    "ingredient_categories": [
+      "Berries",
+      "Yogurt",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "American",
+    "notes": "Blended berries + yogurt + milk + honey.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "green-smoothie",
+    "name": "Green smoothie",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Temperate fruits",
+      "Seeds",
+      "Milk"
+    ],
+    "cuisine": "American",
+    "notes": "Spinach/kale + banana + chia + plant milk.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "protein-smoothie",
+    "name": "Protein smoothie",
+    "ingredient_categories": [
+      "Milk",
+      "Berries",
+      "Nut butters",
+      "Seeds"
+    ],
+    "cuisine": "American",
+    "notes": "Milk + protein powder + frozen berries + nut butter.",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "vanilla-latte",
+    "name": "Vanilla latte",
+    "ingredient_categories": [
+      "Coffee & tea",
+      "Milk",
+      "Sugar & sweeteners",
+      "Extracts & essences"
+    ],
+    "cuisine": "American",
+    "notes": "Espresso + steamed milk + vanilla syrup.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 118,
+    "source": "curated"
+  },
+  {
+    "id": "masala-chai-latte",
+    "name": "Masala chai latte",
+    "ingredient_categories": [
+      "Coffee & tea",
+      "Milk",
+      "Whole spices",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Indian",
+    "notes": "Black tea simmered with milk + cardamom + ginger + cinnamon.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "matcha-latte",
+    "name": "Matcha latte",
+    "ingredient_categories": [
+      "Coffee & tea",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Whisked matcha + steamed milk.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1007,
+    "source": "curated"
+  },
+  {
+    "id": "boba-milk-tea",
+    "name": "Boba milk tea",
+    "ingredient_categories": [
+      "Coffee & tea",
+      "Milk",
+      "Refined grains",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Taiwanese",
+    "notes": "Sweetened milk tea with chewy tapioca pearls.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "sweet-lassi",
+    "name": "Sweet lassi",
+    "ingredient_categories": [
+      "Yogurt",
+      "Milk",
+      "Sugar & sweeteners",
+      "Whole spices"
+    ],
+    "cuisine": "Indian",
+    "notes": "Sweet yogurt-milk drink with cardamom + rose.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "mango-lassi",
+    "name": "Mango lassi",
+    "ingredient_categories": [
+      "Yogurt",
+      "Tropical fruits",
+      "Milk",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Indian",
+    "notes": "Yogurt + ripe mango + sugar; blended cold.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "horchata-mexican",
+    "name": "Mexican horchata",
+    "ingredient_categories": [
+      "Refined grains",
+      "Milk",
+      "Sugar & sweeteners",
+      "Ground spices"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Rice + cinnamon + milk + sugar blended drink.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "agua-fresca-watermelon",
+    "name": "Watermelon agua fresca",
+    "ingredient_categories": [
+      "Temperate fruits",
+      "Citrus",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Mexican",
+    "notes": "Blended watermelon + lime + water + a touch of sugar.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "hot-chocolate",
+    "name": "Hot chocolate",
+    "ingredient_categories": [
+      "Milk",
+      "Candy & desserts",
+      "Sugar & sweeteners"
+    ],
+    "cuisine": "Cross-cultural",
+    "notes": "Steamed milk with cocoa and sugar; marshmallow optional.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "turkish-coffee",
+    "name": "Turkish coffee",
+    "ingredient_categories": [
+      "Coffee & tea",
+      "Sugar & sweeteners",
+      "Whole spices"
+    ],
+    "cuisine": "Turkish",
+    "notes": "Unfiltered finely-ground coffee; cardamom-laced.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "continental-breakfast",
+    "name": "Continental breakfast",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Coffee & tea",
+      "Jams & preserves",
+      "Cream & butter"
+    ],
+    "cuisine": "European",
+    "notes": "Croissant + butter + jam + coffee + juice.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "afternoon-tea-spread",
+    "name": "Afternoon tea spread",
+    "ingredient_categories": [
+      "Baked snacks & pastries",
+      "Coffee & tea",
+      "Cream & butter",
+      "Jams & preserves"
+    ],
+    "cuisine": "British",
+    "notes": "Tea, scones with cream + jam, finger sandwiches, petits fours.",
+    "diet_compatibility": [],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "brunch-platter",
+    "name": "Brunch platter",
+    "ingredient_categories": [
+      "Eggs",
+      "Processed meat",
+      "Bread & rolls",
+      "Temperate fruits"
+    ],
+    "cuisine": "American",
+    "notes": "Eggs Benedict-style with bacon, toast, fruit, mimosa.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "kids-lunchbox",
+    "name": "Kids' lunchbox",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Processed meat",
+      "Aged cheese",
+      "Temperate fruits"
+    ],
+    "cuisine": "American",
+    "notes": "PB&J or ham-and-cheese sandwich, apple, crackers, juice.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "bistro-plate",
+    "name": "Bistro plate",
+    "ingredient_categories": [
+      "Aged cheese",
+      "Processed meat",
+      "Pickled vegetables",
+      "Baked snacks & pastries"
+    ],
+    "cuisine": "French",
+    "notes": "Charcuterie + cheese + cornichon + crusty bread.",
+    "diet_compatibility": [
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "japanese-breakfast",
+    "name": "Japanese breakfast",
+    "ingredient_categories": [
+      "Refined grains",
+      "Oily fish",
+      "Soy products",
+      "Pastes & ferments"
+    ],
+    "cuisine": "Japanese",
+    "notes": "Steamed rice + grilled fish + miso soup + pickles + natto.",
+    "diet_compatibility": [
+      "mediterranean",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "dim-sum-brunch",
+    "name": "Dim sum brunch",
+    "ingredient_categories": [
+      "Bread & rolls",
+      "Shellfish",
+      "Coffee & tea",
+      "Leafy greens"
+    ],
+    "cuisine": "Chinese-Cantonese",
+    "notes": "Multiple steamed/fried small plates with tea.",
+    "diet_compatibility": [
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  },
+  {
+    "id": "indian-breakfast",
+    "name": "South Indian breakfast",
+    "ingredient_categories": [
+      "Whole grains",
+      "Legumes",
+      "Pastes & ferments",
+      "Coffee & tea"
+    ],
+    "cuisine": "Indian-South",
+    "notes": "Idli or dosa with sambar + coconut chutney + filter coffee.",
+    "diet_compatibility": [
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated"
+  }
+]

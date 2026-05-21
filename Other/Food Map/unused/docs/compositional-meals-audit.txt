@@ -1,0 +1,113 @@
+# Compositional meals audit
+
+Input patterns: 2409
+Output patterns: 4230
+Dropped patterns: 77
+Patterns with fallback (composed) names: 56
+
+## Dropped (no recognizable dish name)
+  freq=4607  Sugar & sweeteners
+  freq=2227  Baking ingredients + Flours + Oils + Salt & seasonings + Sugar & sweeteners
+  freq=1128  Sauces
+  freq=1122  Flours + Oils + Salt & seasonings
+  freq=1052  Baking ingredients + Flours + Oils + Salt & seasonings
+  freq=1014  Prepared mixes + Sugar & sweeteners
+  freq=903  Baking ingredients + Extracts & essences + Flours + Oils + Salt & seasonings + Sauces + Sugar & sweeteners
+  freq=899  Sauces + Sugar & sweeteners
+  freq=790  Extracts & essences + Sugar & sweeteners
+  freq=782  Baking ingredients + Flours + Salt & seasonings + Sugar & sweeteners
+  freq=776  Prepared mixes
+  freq=718  Ground spices
+  freq=618  Ground spices + Sugar & sweeteners
+  freq=589  Baking ingredients + Flours + Salt & seasonings
+  freq=508  Ground spices + Sauces + Sugar & sweeteners
+  freq=500  Flours + Salt & seasonings
+  freq=449  Salt & seasonings
+  freq=441  Fresh herbs + Sugar & sweeteners
+  freq=382  Baking ingredients
+  freq=382  Baking ingredients + Extracts & essences + Flours + Oils + Salt & seasonings
+  freq=375  Baking ingredients + Sugar & sweeteners
+  freq=371  Oils
+  freq=344  Flours + Margarine & shortening + Sugar & sweeteners
+  freq=339  Ground spices + Salt & seasonings
+  freq=330  Ground spices + Salt & seasonings + Sauces + Sugar & sweeteners
+  freq=325  Ground spices + Sauces
+  freq=323  Flours
+  freq=318  Margarine & shortening + Sugar & sweeteners
+  freq=312  Flours + Margarine & shortening
+  freq=296  Oils + Salt & seasonings
+  freq=287  Oils + Sugar & sweeteners
+  freq=284  Salt & seasonings + Sauces + Sugar & sweeteners
+  freq=267  Salt & seasonings + Sugar & sweeteners
+  freq=260  Ground spices + Salt & seasonings + Sugar & sweeteners
+  freq=248  Salt & seasonings + Sauces
+  freq=244  Flours + Margarine & shortening + Salt & seasonings
+  freq=237  Baking ingredients + Flours + Margarine & shortening + Salt & seasonings + Sugar & sweeteners
+  freq=236  Flours + Oils
+  freq=234  Flours + Sugar & sweeteners
+  freq=234  Extracts & essences + Salt & seasonings + Sugar & sweeteners
+  freq=231  Flours + Oils + Salt & seasonings + Sugar & sweeteners
+  freq=228  Baking ingredients + Extracts & essences + Flours + Salt & seasonings + Sauces + Sugar & sweeteners
+  freq=227  Ground spices + Oils + Salt & seasonings
+  freq=225  Fresh herbs
+  freq=224  Ground spices + Salt & seasonings + Sauces
+  freq=219  Oils + Sauces
+  freq=214  Baking ingredients + Extracts & essences + Flours + Sauces + Sugar & sweeteners
+  freq=214  Baking ingredients + Flours + Oils + Sugar & sweeteners
+  freq=204  Fresh herbs + Ground spices
+  freq=186  Ground spices + Margarine & shortening + Sugar & sweeteners
+  freq=185  Baking ingredients + Flours + Sugar & sweeteners
+  freq=185  Baking ingredients + Flours
+  freq=177  Extracts & essences
+  freq=177  Fresh herbs + Ground spices + Salt & seasonings
+  freq=174  Oils + Sauces + Sugar & sweeteners
+  freq=169  Extracts & essences + Flours + Margarine & shortening + Sugar & sweeteners
+  freq=166  Baking ingredients + Flours + Ground spices + Oils + Salt & seasonings + Sugar & sweeteners
+  freq=159  Extracts & essences + Margarine & shortening + Sugar & sweeteners
+  freq=143  Extracts & essences + Flours + Oils + Salt & seasonings
+  freq=143  Extracts & essences + Ground spices + Sugar & sweeteners
+  freq=135  Ground spices + Oils + Salt & seasonings + Sauces + Sugar & sweeteners
+  freq=127  Oils + Salt & seasonings + Sauces + Sugar & sweeteners
+  freq=123  Baking ingredients + Sauces + Sugar & sweeteners
+  freq=120  Flours + Salt & seasonings + Sugar & sweeteners
+  freq=119  Soft drinks
+  freq=118  Fresh herbs + Sauces
+  freq=116  Fresh herbs + Ground spices + Oils + Salt & seasonings
+  freq=116  Baking ingredients + Salt & seasonings
+  freq=115  Extracts & essences + Flours + Margarine & shortening + Salt & seasonings + Sugar & sweeteners
+  freq=115  Baking ingredients + Extracts & essences + Sugar & sweeteners
+  freq=112  Extracts & essences + Prepared mixes + Sugar & sweeteners
+  freq=108  Ground spices + Oils
+  freq=108  Fresh herbs + Oils
+  freq=108  Flours + Ground spices + Oils + Salt & seasonings
+  freq=107  Oils + Salt & seasonings + Sauces
+  freq=105  Baking ingredients + Flours + Oils + Salt & seasonings + Sauces + Sugar & sweeteners
+  freq=103  Ground spices + Oils + Salt & seasonings + Sauces
+
+## Fallback-named (first 200)
+  Egg with milk  <-  Cream & butter + Eggs + Milk
+  Beef with ricotta  <-  Fresh cheese + Other vegetables + Red meat
+  Bacon with ricotta  <-  Fresh cheese + Other vegetables + Processed meat
+  Egg with potato  <-  Eggs + Flours + Milk + Starchy vegetables
+  Ricotta with apple  <-  Fresh cheese + Nuts + Temperate fruits
+  Ricotta with berry  <-  Berries + Bread & rolls + Cream & butter + Fresh cheese
+  Ricotta with apple  <-  Fresh cheese + Nuts + Other vegetables + Temperate fruits
+  Apple with milk  <-  Cream & butter + Flours + Milk + Temperate fruits
+  Apple with bread  <-  Bread & rolls + Cream & butter + Temperate fruits
+  Egg with peanut butter  <-  Eggs + Flours + Milk + Nut butters
+  Yogurt with buttered  <-  Cream & butter + Fermented dairy + Flours
+  Potato with vegetable  <-  Cream & butter + Milk + Other vegetables + Starchy vegetables
+  Liver with apple  <-  Organ meats + Temperate fruits
+  Egg with oat  <-  Eggs + Flours + Milk + Whole grains
+  Vegetable with buttered  <-  Cream & butter + Other vegetables + Prepared soups & broths
+  Bacon with egg  <-  Eggs + Leafy greens + Milk + Processed cheese + Processed meat + Refined grains
+  American cheese with broccoli  <-  Bread & rolls + Cream & butter + Cruciferous vegetables + Processed cheese
+  Wine-braised with soda  <-  Alcoholic beverages + Soft drinks
+  American cheese with broccoli  <-  Bread & rolls + Cruciferous vegetables + Processed cheese
+  Walnut with milk  <-  Cream & butter + Flours + Milk + Nuts
+  Chicken with bacon  <-  Other vegetables + Poultry + Processed meat + Whole grains
+  Ricotta with American cheese  <-  Fresh cheese + Other vegetables + Processed cheese
+  Chicken with ricotta  <-  Fresh cheese + Other vegetables + Poultry
+  Bean with peanut butter  <-  Legumes + Nut butters + Whole grains
+  Bacon with ricotta  <-  Fresh cheese + Processed meat + Refined grains
+  Apple with walnut  <-  Nuts + Temperate fruits + Yogurt

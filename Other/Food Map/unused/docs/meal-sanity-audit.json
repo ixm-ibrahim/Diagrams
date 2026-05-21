@@ -1,0 +1,2745 @@
+{
+  "counts": {
+    "total": 3687,
+    "files": {
+      "curated": 332,
+      "compositional": 696,
+      "corpus-titled": 2659
+    }
+  },
+  "issue_counts": {
+    "name_implies_missing_category": 140,
+    "too_few_categories": 21
+  },
+  "issues": {
+    "name_implies_missing_category": [
+      {
+        "file": "curated",
+        "id": "pizza-margherita",
+        "name": "Pizza margherita",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Fresh herbs",
+          "Peppers & nightshades",
+          "Oils",
+          "Salt & seasonings",
+          "Flours"
+        ]
+      },
+      {
+        "file": "curated",
+        "id": "soba-noodles",
+        "name": "Soba noodles",
+        "missing_implied": [
+          "Refined grains"
+        ],
+        "stored": [
+          "Whole grains",
+          "Prepared soups & broths",
+          "Sauces"
+        ]
+      },
+      {
+        "file": "curated",
+        "id": "egusi-soup",
+        "name": "Egusi soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Seeds",
+          "Leafy greens",
+          "Red meat",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-coffee-cake",
+        "name": "Coffee cake",
+        "missing_implied": [
+          "Coffee & tea"
+        ],
+        "stored": [
+          "Eggs",
+          "Flours",
+          "Baking ingredients",
+          "Ground spices",
+          "Milk",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Margarine & shortening"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-beef-soup",
+        "name": "Beef soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Red meat",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-potato-soup",
+        "name": "Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Milk",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Poultry",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-spaghetti-sauce",
+        "name": "Spaghetti Sauce",
+        "missing_implied": [
+          "Refined grains"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Red meat",
+          "Fresh herbs",
+          "Salt & seasonings",
+          "Sugar & sweeteners",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-taco-soup",
+        "name": "Taco Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Red meat",
+          "Legumes",
+          "Starchy vegetables",
+          "Spice blends",
+          "Bread & rolls"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-fruit-pizza",
+        "name": "Fruit Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Sugar & sweeteners",
+          "Fresh cheese",
+          "Tropical fruits",
+          "Extracts & essences",
+          "Berries",
+          "Citrus"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-vegetable-soup",
+        "name": "Vegetable Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Red meat",
+          "Leafy greens"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-vegetable-pizza",
+        "name": "Vegetable Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Baked snacks & pastries",
+          "Extracts & essences",
+          "Aged cheese",
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-french-onion-soup",
+        "name": "French Onion Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Bread & rolls",
+          "Cream & butter",
+          "Red meat",
+          "Aged cheese",
+          "Salt & seasonings",
+          "Alcoholic beverages",
+          "Peppers & nightshades",
+          "Flours",
+          "Sauces"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza-casserole",
+        "name": "Pizza Casserole",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Red meat",
+          "Sauces",
+          "Other vegetables",
+          "Processed meat",
+          "Peppers & nightshades",
+          "Refined grains",
+          "Mushrooms",
+          "Aged cheese",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-fruit-cocktail-cake",
+        "name": "Fruit Cocktail Cake",
+        "missing_implied": [
+          "Alcoholic beverages"
+        ],
+        "stored": [
+          "Sugar & sweeteners",
+          "Eggs",
+          "Flours",
+          "Baking ingredients",
+          "Candy & desserts",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-corn-chowder",
+        "name": "Corn Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Milk",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Processed meat",
+          "Cream & butter"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-breakfast-pizza",
+        "name": "Breakfast Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Eggs",
+          "Aged cheese",
+          "Milk",
+          "Processed meat",
+          "Baked snacks & pastries",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Starchy vegetables"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-broccoli-soup",
+        "name": "Cream Of Broccoli Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Poultry",
+          "Milk",
+          "Cream & butter",
+          "Flours",
+          "Salt & seasonings",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-broccoli-soup",
+        "name": "Broccoli Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Milk",
+          "Poultry",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Flours",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-clam-chowder",
+        "name": "Clam Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Starchy vegetables",
+          "Shellfish",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Milk",
+          "Peppers & nightshades",
+          "Processed meat",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza",
+        "name": "Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Peppers & nightshades",
+          "Processed meat",
+          "Other vegetables",
+          "Sauces",
+          "Salt & seasonings",
+          "Flours",
+          "Oils",
+          "Baking ingredients",
+          "Red meat",
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza-dough",
+        "name": "Pizza Dough",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Flours",
+          "Baking ingredients",
+          "Salt & seasonings",
+          "Oils",
+          "Sugar & sweeteners"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-noodle-soup",
+        "name": "Chicken Noodle Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Eggs",
+          "Fresh herbs",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-mexican-lasagna",
+        "name": "Mexican Lasagna",
+        "missing_implied": [
+          "Refined grains"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Red meat",
+          "Aged cheese",
+          "Peppers & nightshades",
+          "Bread & rolls",
+          "Sauces",
+          "Ground spices",
+          "Fresh cheese",
+          "Fermented dairy"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-hamburger-soup",
+        "name": "Hamburger Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Red meat",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-tortilla-soup",
+        "name": "Tortilla Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Poultry",
+          "Ground spices",
+          "Oils",
+          "Fresh herbs",
+          "Bread & rolls",
+          "Salt & seasonings",
+          "Aged cheese",
+          "Starchy vegetables",
+          "Baked snacks & pastries"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-lentil-soup",
+        "name": "Lentil Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Legumes",
+          "Starchy vegetables",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Oils",
+          "Dried herbs",
+          "Processed meat"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-broccoli-cheese-soup",
+        "name": "Broccoli Cheese Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Poultry",
+          "Milk",
+          "Processed cheese",
+          "Cream & butter",
+          "Flours",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-black-bean-soup",
+        "name": "Black Bean Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Ground spices",
+          "Fresh herbs",
+          "Salt & seasonings",
+          "Oils",
+          "Poultry",
+          "Starchy vegetables",
+          "Processed meat"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cheese-soup",
+        "name": "Cheese Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Poultry",
+          "Starchy vegetables",
+          "Processed cheese",
+          "Milk",
+          "Flours",
+          "Cream & butter"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-soup",
+        "name": "Chicken Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-tortilla-soup",
+        "name": "Chicken Tortilla Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Ground spices",
+          "Fresh herbs",
+          "Starchy vegetables",
+          "Oils",
+          "Salt & seasonings",
+          "Bread & rolls",
+          "Sauces",
+          "Aged cheese",
+          "Baked snacks & pastries"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-minestrone-soup",
+        "name": "Minestrone Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Fresh herbs",
+          "Refined grains",
+          "Salt & seasonings",
+          "Legumes",
+          "Leafy greens",
+          "Red meat",
+          "Oils",
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-split-pea-soup",
+        "name": "Split Pea Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Legumes",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Processed meat",
+          "Peppers & nightshades",
+          "Dried herbs",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-tomato-soup",
+        "name": "Tomato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Sugar & sweeteners",
+          "Cream & butter",
+          "Fresh herbs",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-veggie-pizza",
+        "name": "Veggie Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Baked snacks & pastries",
+          "Extracts & essences",
+          "Other vegetables",
+          "Cruciferous vegetables",
+          "Aged cheese",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-spaghetti",
+        "name": "Spaghetti",
+        "missing_implied": [
+          "Refined grains"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Red meat",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Sauces"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cabbage-soup",
+        "name": "Cabbage Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Leafy greens",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Red meat",
+          "Starchy vegetables"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-bean-soup",
+        "name": "Bean Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Processed meat",
+          "Salt & seasonings",
+          "Starchy vegetables",
+          "Legumes"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-baked-potato-soup",
+        "name": "Baked Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Processed meat",
+          "Salt & seasonings",
+          "Milk",
+          "Aged cheese",
+          "Flours",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Fermented dairy",
+          "Poultry"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-new-england-clam-chowder",
+        "name": "New England Clam Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Starchy vegetables",
+          "Shellfish",
+          "Cream & butter",
+          "Milk",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Processed meat",
+          "Flours",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-vegetable-beef-soup",
+        "name": "Vegetable Beef Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Red meat",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza-sauce",
+        "name": "Pizza Sauce",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Oils",
+          "Sugar & sweeteners"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cocktail-meatballs",
+        "name": "Cocktail Meatballs",
+        "missing_implied": [
+          "Alcoholic beverages"
+        ],
+        "stored": [
+          "Red meat",
+          "Sauces",
+          "Other vegetables",
+          "Eggs",
+          "Bread & rolls",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Temperate fruits",
+          "Fresh herbs",
+          "Milk"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-strawberry-pizza",
+        "name": "Strawberry Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Sugar & sweeteners",
+          "Flours",
+          "Fresh cheese",
+          "Berries",
+          "Margarine & shortening",
+          "Cream & butter"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-onion-soup",
+        "name": "Onion Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Cream & butter",
+          "Aged cheese",
+          "Bread & rolls",
+          "Red meat",
+          "Salt & seasonings",
+          "Alcoholic beverages",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-butternut-squash-soup",
+        "name": "Butternut Squash Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Poultry",
+          "Ground spices",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Oils",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza-dip",
+        "name": "Pizza Dip",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Sauces",
+          "Peppers & nightshades",
+          "Processed meat",
+          "Other vegetables",
+          "Fermented dairy",
+          "Fresh herbs",
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pumpkin-soup",
+        "name": "Pumpkin Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Poultry",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Ground spices",
+          "Peppers & nightshades",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza-crust",
+        "name": "Pizza Crust",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Flours",
+          "Baking ingredients",
+          "Salt & seasonings",
+          "Oils",
+          "Sugar & sweeteners"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-zucchini-soup",
+        "name": "Zucchini Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Salt & seasonings",
+          "Poultry",
+          "Fresh herbs",
+          "Peppers & nightshades",
+          "Cream & butter"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-egg-drop-soup",
+        "name": "Egg Drop Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Eggs",
+          "Poultry",
+          "Other vegetables",
+          "Refined grains",
+          "Sauces",
+          "Salt & seasonings",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-tomato-soup-cake",
+        "name": "Tomato Soup Cake",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Sugar & sweeteners",
+          "Baking ingredients",
+          "Ground spices",
+          "Flours",
+          "Whole spices",
+          "Dried fruits",
+          "Margarine & shortening",
+          "Eggs",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-mushroom-soup",
+        "name": "Cream Of Mushroom Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Mushrooms",
+          "Cream & butter",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Flours",
+          "Poultry",
+          "Peppers & nightshades",
+          "Milk",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-fish-chowder",
+        "name": "Fish Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Milk",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "White fish",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-tortellini-soup",
+        "name": "Tortellini Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Refined grains",
+          "Poultry",
+          "Fresh herbs",
+          "Aged cheese",
+          "Leafy greens",
+          "Starchy vegetables",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-creamy-potato-soup",
+        "name": "Creamy Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Milk",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Poultry",
+          "Fresh herbs",
+          "Processed meat",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-potato-soup",
+        "name": "Cream Of Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Milk",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Flours",
+          "Fresh herbs",
+          "Poultry"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-italian-wedding-soup",
+        "name": "Italian Wedding Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Leafy greens",
+          "Eggs",
+          "Aged cheese",
+          "Fresh herbs",
+          "Red meat",
+          "Salt & seasonings",
+          "Bread & rolls",
+          "Refined grains",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Processed meat"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-mushroom-soup",
+        "name": "Mushroom Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Mushrooms",
+          "Other vegetables",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Poultry",
+          "Flours",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Milk"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-steak-marinade",
+        "name": "Steak Marinade",
+        "missing_implied": [
+          "Red meat"
+        ],
+        "stored": [
+          "Sauces",
+          "Other vegetables",
+          "Oils",
+          "Peppers & nightshades",
+          "Dressings & dips",
+          "Salt & seasonings",
+          "Ground spices",
+          "Citrus"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-manhattan-clam-chowder",
+        "name": "Manhattan Clam Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Fresh herbs",
+          "Shellfish",
+          "Salt & seasonings",
+          "Processed meat",
+          "Dried herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-potato-cheese-soup",
+        "name": "Potato Cheese Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Milk",
+          "Salt & seasonings",
+          "Poultry",
+          "Aged cheese",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Fresh herbs",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cauliflower-soup",
+        "name": "Cauliflower Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Poultry",
+          "Salt & seasonings",
+          "Milk",
+          "Cream & butter",
+          "Starchy vegetables",
+          "Peppers & nightshades",
+          "Flours",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-carrot-soup",
+        "name": "Carrot Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Poultry",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cheesy-potato-soup",
+        "name": "Cheesy Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Milk",
+          "Poultry",
+          "Salt & seasonings",
+          "Processed cheese",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Flours",
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cocktail-sauce",
+        "name": "Cocktail Sauce",
+        "missing_implied": [
+          "Alcoholic beverages"
+        ],
+        "stored": [
+          "Sauces",
+          "Citrus",
+          "Salt & seasonings",
+          "Other vegetables",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-wild-rice-soup",
+        "name": "Wild Rice Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Refined grains",
+          "Poultry",
+          "Cream & butter",
+          "Starchy vegetables",
+          "Processed meat",
+          "Flours",
+          "Salt & seasonings",
+          "Milk",
+          "Peppers & nightshades",
+          "Mushrooms"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-seafood-chowder",
+        "name": "Seafood Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Shellfish",
+          "Starchy vegetables",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Milk",
+          "Salt & seasonings",
+          "White fish",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-hot-and-sour-soup",
+        "name": "Hot And Sour Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Sauces",
+          "Poultry",
+          "Mushrooms",
+          "Peppers & nightshades",
+          "Refined grains",
+          "Dressings & dips",
+          "Eggs",
+          "Oils",
+          "Red meat",
+          "Soy products",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-upside-down-pizza",
+        "name": "Upside-Down Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Red meat",
+          "Other vegetables",
+          "Sauces",
+          "Aged cheese",
+          "Peppers & nightshades",
+          "Eggs",
+          "Baked snacks & pastries",
+          "Milk",
+          "Salt & seasonings",
+          "Flours",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-beef-barley-soup",
+        "name": "Beef Barley Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Whole grains",
+          "Red meat",
+          "Starchy vegetables",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-zucchini-lasagna",
+        "name": "Zucchini Lasagna",
+        "missing_implied": [
+          "Refined grains"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Fresh cheese",
+          "Fresh herbs",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Aged cheese",
+          "Eggs",
+          "Red meat",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-tomato-soup",
+        "name": "Cream Of Tomato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Flours",
+          "Sugar & sweeteners",
+          "Milk",
+          "Fresh herbs",
+          "Dried herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-italian-vegetable-soup",
+        "name": "Italian Vegetable Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Starchy vegetables",
+          "Red meat",
+          "Refined grains",
+          "Salt & seasonings",
+          "Legumes",
+          "Leafy greens",
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-italian-spaghetti-sauce",
+        "name": "Italian Spaghetti Sauce",
+        "missing_implied": [
+          "Refined grains"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Fresh herbs",
+          "Salt & seasonings",
+          "Red meat",
+          "Oils",
+          "Sugar & sweeteners",
+          "Mushrooms",
+          "Dried herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-crab-bisque",
+        "name": "Crab Bisque",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Shellfish",
+          "Cream & butter",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Alcoholic beverages",
+          "Milk",
+          "Fresh herbs",
+          "Salt & seasonings",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-navy-bean-soup",
+        "name": "Navy Bean Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Processed meat",
+          "Salt & seasonings",
+          "Starchy vegetables",
+          "Peppers & nightshades",
+          "Dried herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cocktail-wieners",
+        "name": "Cocktail Wieners",
+        "missing_implied": [
+          "Alcoholic beverages"
+        ],
+        "stored": [
+          "Processed meat",
+          "Leafy greens",
+          "Sauces",
+          "Temperate fruits",
+          "Berries"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-beef-vegetable-soup",
+        "name": "Beef Vegetable Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Red meat",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Dried herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-crab-soup",
+        "name": "Crab Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Shellfish",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Milk",
+          "Alcoholic beverages",
+          "Spice blends",
+          "Starchy vegetables"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chocolate-pizza",
+        "name": "Chocolate Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Candy & desserts",
+          "Nuts",
+          "Refined grains",
+          "Tropical fruits",
+          "Temperate fruits",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-fried-steak",
+        "name": "Chicken Fried Steak",
+        "missing_implied": [
+          "Poultry"
+        ],
+        "stored": [
+          "Flours",
+          "Salt & seasonings",
+          "Eggs",
+          "Milk",
+          "Oils",
+          "Peppers & nightshades",
+          "Red meat",
+          "Other vegetables"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-potato-leek-soup",
+        "name": "Potato Leek Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Poultry",
+          "Fresh herbs",
+          "Milk",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-shrimp-cocktail",
+        "name": "Shrimp Cocktail",
+        "missing_implied": [
+          "Alcoholic beverages"
+        ],
+        "stored": [
+          "Shellfish",
+          "Sauces",
+          "Citrus",
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-vegetable-soup",
+        "name": "Chicken Vegetable Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza-hot-dish",
+        "name": "Pizza Hot Dish",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Red meat",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Aged cheese",
+          "Fresh cheese",
+          "Fresh herbs",
+          "Sauces",
+          "Mushrooms",
+          "Salt & seasonings",
+          "Eggs",
+          "Processed meat"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pea-soup",
+        "name": "Pea Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Legumes",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Processed meat",
+          "Peppers & nightshades",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chili-soup",
+        "name": "Chili Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Red meat",
+          "Other vegetables",
+          "Ground spices",
+          "Salt & seasonings",
+          "Legumes"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-asparagus-soup",
+        "name": "Cream Of Asparagus Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Poultry",
+          "Peppers & nightshades",
+          "Milk",
+          "Flours",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-creamy-broccoli-soup",
+        "name": "Creamy Broccoli Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Milk",
+          "Poultry",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Flours",
+          "Ground spices"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-beer-cheese-soup",
+        "name": "Beer Cheese Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Flours",
+          "Alcoholic beverages",
+          "Aged cheese",
+          "Cream & butter",
+          "Sauces",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Milk",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-salmon-chowder",
+        "name": "Salmon Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Oily fish",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Milk",
+          "Fresh herbs",
+          "Poultry",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pizza-cups",
+        "name": "Pizza Cups",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Red meat",
+          "Fresh cheese",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Baked snacks & pastries",
+          "Spice blends",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-asparagus-soup",
+        "name": "Asparagus Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Poultry",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Starchy vegetables",
+          "Milk"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-corn-chowder",
+        "name": "Chicken Corn Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Starchy vegetables",
+          "Other vegetables",
+          "Milk",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-turkey-soup",
+        "name": "Turkey Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Refined grains"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-leek-and-potato-soup",
+        "name": "Leek And Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Poultry",
+          "Fresh herbs",
+          "Peppers & nightshades",
+          "Milk"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-hamburger-vegetable-soup",
+        "name": "Hamburger Vegetable Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Red meat",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Refined grains",
+          "Dried herbs",
+          "Fresh herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-spaghetti-pizza",
+        "name": "Spaghetti Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Eggs",
+          "Processed meat",
+          "Milk",
+          "Sauces",
+          "Other vegetables",
+          "Red meat",
+          "Aged cheese",
+          "Refined grains",
+          "Mushrooms",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-creamy-tomato-soup",
+        "name": "Creamy Tomato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Cream & butter",
+          "Poultry",
+          "Milk",
+          "Sugar & sweeteners",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-mushroom-barley-soup",
+        "name": "Mushroom Barley Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Mushrooms",
+          "Whole grains",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Peppers & nightshades",
+          "Red meat",
+          "Oils",
+          "Poultry",
+          "Cream & butter"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cheddar-cheese-soup",
+        "name": "Cheddar Cheese Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Aged cheese",
+          "Flours",
+          "Milk",
+          "Poultry",
+          "Starchy vegetables",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Sauces",
+          "Leafy greens"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-deep-dish-pizza",
+        "name": "Deep Dish Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Red meat",
+          "Mushrooms",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-broccoli-and-cheese-soup",
+        "name": "Broccoli And Cheese Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Milk",
+          "Poultry",
+          "Processed cheese",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Flours",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-shrimp-bisque",
+        "name": "Shrimp Bisque",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Shellfish",
+          "Cream & butter",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Alcoholic beverages",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Ground spices",
+          "Flours",
+          "Starchy vegetables",
+          "Milk",
+          "Refined grains"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-mulligatawny-soup",
+        "name": "Mulligatawny Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Poultry",
+          "Starchy vegetables",
+          "Spice blends",
+          "Salt & seasonings",
+          "Temperate fruits",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Fresh herbs",
+          "Ground spices",
+          "Refined grains",
+          "Flours",
+          "Citrus",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cheeseburger-soup",
+        "name": "Cheeseburger Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Red meat",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Peppers & nightshades",
+          "Milk",
+          "Salt & seasonings",
+          "Poultry",
+          "Flours",
+          "Fresh herbs",
+          "Cream & butter",
+          "Aged cheese",
+          "Processed cheese",
+          "Fermented dairy"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-cauliflower-soup",
+        "name": "Cream Of Cauliflower Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Cruciferous vegetables",
+          "Other vegetables",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Poultry",
+          "Flours",
+          "Fresh herbs",
+          "Milk",
+          "Peppers & nightshades",
+          "Ground spices"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-mexican-chicken-soup",
+        "name": "Mexican Chicken Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Fresh herbs",
+          "Ground spices",
+          "Salt & seasonings",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-enchilada-soup",
+        "name": "Chicken Enchilada Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Sauces",
+          "Ground spices",
+          "Starchy vegetables",
+          "Oils",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-tomato-basil-soup",
+        "name": "Tomato Basil Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Cream & butter",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Poultry",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-roasted-tomato-soup",
+        "name": "Roasted Tomato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Peppers & nightshades",
+          "Other vegetables",
+          "Oils",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Poultry",
+          "Cream & butter",
+          "Sugar & sweeteners"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-meatball-soup",
+        "name": "Meatball Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Red meat",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Eggs",
+          "Starchy vegetables",
+          "Fresh herbs",
+          "Refined grains",
+          "Bread & rolls"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-lobster-bisque",
+        "name": "Lobster Bisque",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Shellfish",
+          "Cream & butter",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Alcoholic beverages",
+          "Ground spices",
+          "Fresh herbs",
+          "Flours",
+          "Milk",
+          "Dried herbs",
+          "Starchy vegetables"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-mexican-soup",
+        "name": "Mexican Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Red meat",
+          "Legumes",
+          "Ground spices",
+          "Poultry"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-italian-sausage-soup",
+        "name": "Italian Sausage Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Processed meat",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Red meat",
+          "Refined grains",
+          "Poultry",
+          "Salt & seasonings",
+          "Aged cheese",
+          "Alcoholic beverages"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-lemon-bisque",
+        "name": "Lemon Bisque",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Citrus",
+          "Sugar & sweeteners",
+          "Milk",
+          "Baked snacks & pastries",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-corn-soup",
+        "name": "Chicken Corn Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Other vegetables",
+          "Eggs",
+          "Fresh herbs",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-white-bean-soup",
+        "name": "White Bean Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Poultry",
+          "Salt & seasonings",
+          "Starchy vegetables",
+          "Oils",
+          "Processed meat",
+          "Legumes"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-carrot-soup",
+        "name": "Cream Of Carrot Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Poultry",
+          "Fresh herbs",
+          "Milk",
+          "Peppers & nightshades",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-shrimp-chowder",
+        "name": "Shrimp Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Shellfish",
+          "Other vegetables",
+          "Starchy vegetables",
+          "Milk",
+          "Cream & butter",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-strawberry-soup",
+        "name": "Strawberry Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Berries",
+          "Sugar & sweeteners",
+          "Citrus",
+          "Alcoholic beverages",
+          "Fermented dairy"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-autumn-soup",
+        "name": "Autumn Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Red meat",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Dried herbs"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-garlic-soup",
+        "name": "Garlic Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Salt & seasonings",
+          "Poultry",
+          "Oils",
+          "Bread & rolls",
+          "Fresh herbs",
+          "Eggs",
+          "Peppers & nightshades",
+          "Cream & butter"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-red-lentil-soup",
+        "name": "Red Lentil Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Legumes",
+          "Ground spices",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Oils",
+          "Starchy vegetables",
+          "Fresh herbs",
+          "Citrus",
+          "Poultry"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-steak-soup",
+        "name": "Steak Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Red meat",
+          "Flours",
+          "Starchy vegetables",
+          "Cream & butter",
+          "Salt & seasonings"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-hearty-vegetable-soup",
+        "name": "Hearty Vegetable Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Starchy vegetables",
+          "Fresh herbs",
+          "Salt & seasonings",
+          "Legumes",
+          "Dried herbs",
+          "Oils",
+          "Poultry",
+          "Red meat"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-corn-soup",
+        "name": "Corn Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Peppers & nightshades",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Milk",
+          "Flours"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-chicken-and-rice-soup",
+        "name": "Chicken And Rice Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Poultry",
+          "Refined grains",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Starchy vegetables",
+          "Peppers & nightshades"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-spinach-soup",
+        "name": "Spinach Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Leafy greens",
+          "Poultry",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Cream & butter",
+          "Peppers & nightshades",
+          "Flours",
+          "Milk",
+          "Starchy vegetables"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-pepperoni-pizza-dip",
+        "name": "Pepperoni Pizza Dip",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Fresh cheese",
+          "Processed meat",
+          "Peppers & nightshades",
+          "Fermented dairy",
+          "Sauces",
+          "Fresh herbs",
+          "Other vegetables",
+          "Ground spices"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-cream-of-crab-soup",
+        "name": "Cream Of Crab Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Shellfish",
+          "Cream & butter",
+          "Flours",
+          "Milk",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Fresh herbs",
+          "Poultry",
+          "Alcoholic beverages"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-canadian-cheese-soup",
+        "name": "Canadian Cheese Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Poultry",
+          "Other vegetables",
+          "Milk",
+          "Flours",
+          "Cream & butter",
+          "Aged cheese",
+          "Salt & seasonings",
+          "Processed cheese",
+          "Fresh herbs",
+          "Refined grains"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-potato-chowder",
+        "name": "Potato Chowder",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Fresh herbs",
+          "Milk",
+          "Peppers & nightshades",
+          "Poultry",
+          "Cream & butter",
+          "Flours",
+          "Processed meat"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-sweet-potato-soup",
+        "name": "Sweet Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Ground spices",
+          "Fresh herbs",
+          "Poultry",
+          "Milk",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Oils"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-dessert-pizza",
+        "name": "Dessert Pizza",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Sugar & sweeteners",
+          "Fresh cheese",
+          "Berries",
+          "Candy & desserts"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-hearty-potato-soup",
+        "name": "Hearty Potato Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Starchy vegetables",
+          "Other vegetables",
+          "Salt & seasonings",
+          "Milk",
+          "Flours",
+          "Peppers & nightshades",
+          "Cream & butter",
+          "Poultry"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-fruit-soup",
+        "name": "Fruit Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Citrus",
+          "Sugar & sweeteners",
+          "Refined grains",
+          "Temperate fruits",
+          "Berries",
+          "Ground spices",
+          "Tropical fruits",
+          "Dried fruits"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-ham-and-bean-soup",
+        "name": "Ham And Bean Soup",
+        "missing_implied": [
+          "Prepared soups & broths"
+        ],
+        "stored": [
+          "Other vegetables",
+          "Processed meat",
+          "Starchy vegetables",
+          "Salt & seasonings",
+          "Peppers & nightshades",
+          "Dried herbs",
+          "Fresh herbs",
+          "Poultry"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-basic-pizza-dough",
+        "name": "Basic Pizza Dough",
+        "missing_implied": [
+          "Bread & rolls"
+        ],
+        "stored": [
+          "Salt & seasonings",
+          "Flours",
+          "Baking ingredients",
+          "Oils",
+          "Sugar & sweeteners"
+        ]
+      }
+    ],
+    "too_few_categories": [
+      {
+        "file": "compositional",
+        "id": "corpus-sliced-apples",
+        "name": "Sliced apples",
+        "categories": [
+          "Temperate fruits"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-glass-of-milk",
+        "name": "Glass of milk",
+        "categories": [
+          "Milk"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-mixed-berries",
+        "name": "Mixed berries",
+        "categories": [
+          "Berries"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-glass-of-wine",
+        "name": "Glass of wine",
+        "categories": [
+          "Alcoholic beverages"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-mixed-nuts",
+        "name": "Mixed nuts",
+        "categories": [
+          "Nuts"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-ricotta-plate",
+        "name": "Ricotta plate",
+        "categories": [
+          "Fresh cheese"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-cooked-lentils",
+        "name": "Cooked lentils",
+        "categories": [
+          "Legumes"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-sliced-bread",
+        "name": "Sliced bread",
+        "categories": [
+          "Bread & rolls"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-cooked-pasta",
+        "name": "Cooked pasta",
+        "categories": [
+          "Refined grains"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-fried-eggs",
+        "name": "Fried eggs",
+        "categories": [
+          "Eggs"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-grilled-chicken-breast",
+        "name": "Grilled chicken breast",
+        "categories": [
+          "Poultry"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-ham-slices",
+        "name": "Ham slices",
+        "categories": [
+          "Processed meat"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-baked-sweet-potato",
+        "name": "Baked sweet potato",
+        "categories": [
+          "Starchy vegetables"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-ground-beef-skillet",
+        "name": "Ground beef skillet",
+        "categories": [
+          "Red meat"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-yogurt-bowl",
+        "name": "Yogurt bowl",
+        "categories": [
+          "Yogurt"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-steamed-shrimp",
+        "name": "Steamed shrimp",
+        "categories": [
+          "Shellfish"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-cooked-quinoa",
+        "name": "Cooked quinoa",
+        "categories": [
+          "Whole grains"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-pan-seared-liver",
+        "name": "Pan-seared liver",
+        "categories": [
+          "Organ meats"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-glass-of-juice",
+        "name": "Glass of juice",
+        "categories": [
+          "Juices"
+        ]
+      },
+      {
+        "file": "compositional",
+        "id": "corpus-sliced-cheddar",
+        "name": "Sliced cheddar",
+        "categories": [
+          "Aged cheese"
+        ]
+      },
+      {
+        "file": "corpus-titled",
+        "id": "corpus-titled-syrup",
+        "name": "Syrup",
+        "categories": [
+          "Sugar & sweeteners"
+        ]
+      }
+    ]
+  }
+}

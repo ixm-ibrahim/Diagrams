@@ -1,0 +1,2010 @@
+# Compositional meal core shapes (669 unique, 2409 total patterns)
+# Noise categories stripped before grouping: Baking ingredients, Extracts & essences, Fresh herbs, Ground spices, Margarine & shortening, Oils, Prepared mixes, Salt & seasonings, Sauces, Sugar & sweeteners
+
+## total=39799 variants=58
+   core: Other vegetables
+
+## total=30830 variants=38
+   core: Temperate fruits
+
+## total=23557 variants=34
+   core: Cream & butter + Eggs + Flours
+
+## total=19767 variants=48
+   core: (EMPTY — pure noise)
+
+## total=19536 variants=55
+   core: Other vegetables + Temperate fruits
+
+## total=17641 variants=42
+   core: Eggs + Flours
+
+## total=17147 variants=41
+   core: Other vegetables + Red meat
+
+## total=14731 variants=23
+   core: Cream & butter + Eggs + Flours + Milk
+
+## total=13528 variants=30
+   core: Eggs + Flours + Milk
+
+## total=11787 variants=15
+   core: Berries + Temperate fruits
+
+## total=11670 variants=28
+   core: Flours
+
+## total=10715 variants=22
+   core: Cream & butter
+
+## total=10700 variants=13
+   core: Alcoholic beverages + Temperate fruits
+
+## total=8946 variants=19
+   core: Cream & butter + Eggs + Flours + Temperate fruits
+
+## total=8659 variants=23
+   core: Eggs + Flours + Temperate fruits
+
+## total=8598 variants=13
+   core: Cream & butter + Eggs + Flours + Nuts
+
+## total=8499 variants=34
+   core: Other vegetables + Poultry
+
+## total=8438 variants=31
+   core: Other vegetables + Starchy vegetables
+
+## total=8224 variants=14
+   core: Milk
+
+## total=8163 variants=27
+   core: Leafy greens + Other vegetables
+
+## total=7970 variants=13
+   core: Cream & butter + Milk
+
+## total=6561 variants=13
+   core: Cream & butter + Temperate fruits
+
+## total=6296 variants=21
+   core: Eggs
+
+## total=6017 variants=16
+   core: Cream & butter + Flours
+
+## total=5703 variants=21
+   core: Cream & butter + Other vegetables
+
+## total=5281 variants=11
+   core: Berries
+
+## total=4955 variants=16
+   core: Flours + Milk
+
+## total=4693 variants=15
+   core: Cream & butter + Eggs + Flours + Milk + Temperate fruits
+
+## total=4205 variants=18
+   core: Eggs + Fermented dairy + Flours
+
+## total=4153 variants=14
+   core: Other vegetables + Red meat + Starchy vegetables
+
+## total=4065 variants=7
+   core: Milk + Temperate fruits
+
+## total=4039 variants=7
+   core: Fresh cheese + Temperate fruits
+
+## total=3952 variants=6
+   core: Nuts + Temperate fruits
+
+## total=3598 variants=15
+   core: Aged cheese + Other vegetables
+
+## total=3594 variants=13
+   core: Cream & butter + Flours + Milk
+
+## total=3568 variants=7
+   core: Cream & butter + Nuts
+
+## total=3543 variants=11
+   core: Cream & butter + Eggs + Flours + Nuts + Temperate fruits
+
+## total=3511 variants=14
+   core: Starchy vegetables
+
+## total=3502 variants=13
+   core: Cream & butter + Starchy vegetables
+
+## total=3490 variants=7
+   core: Cream & butter + Nuts + Temperate fruits
+
+## total=3460 variants=19
+   core: Other vegetables + Poultry + Temperate fruits
+
+## total=3430 variants=10
+   core: Eggs + Flours + Nuts + Temperate fruits
+
+## total=3350 variants=13
+   core: Eggs + Nuts
+
+## total=3290 variants=13
+   core: Other vegetables + Processed meat
+
+## total=3269 variants=10
+   core: Cream & butter + Eggs + Flours + Milk + Nuts
+
+## total=3083 variants=13
+   core: Cream & butter + Eggs
+
+## total=3055 variants=14
+   core: Other vegetables + Refined grains
+
+## total=2987 variants=9
+   core: Eggs + Milk
+
+## total=2970 variants=9
+   core: Eggs + Temperate fruits
+
+## total=2878 variants=11
+   core: Eggs + Flours + Nuts
+
+## total=2840 variants=10
+   core: Other vegetables + Red meat + Whole grains
+
+## total=2839 variants=9
+   core: Milk + Nuts
+
+## total=2826 variants=11
+   core: Leafy greens + Other vegetables + Starchy vegetables
+
+## total=2768 variants=11
+   core: Red meat
+
+## total=2742 variants=12
+   core: Other vegetables + Poultry + Starchy vegetables
+
+## total=2741 variants=6
+   core: Eggs + Flours + Starchy vegetables
+
+## total=2679 variants=10
+   core: Cream & butter + Eggs + Fermented dairy + Flours
+
+## total=2674 variants=5
+   core: Cream & butter + Milk + Nuts
+
+## total=2671 variants=11
+   core: Leafy greens + Other vegetables + Red meat
+
+## total=2657 variants=7
+   core: Alcoholic beverages
+
+## total=2611 variants=10
+   core: Nuts
+
+## total=2599 variants=7
+   core: Bread & rolls
+
+## total=2563 variants=9
+   core: Cream & butter + Eggs + Milk
+
+## total=2521 variants=5
+   core: Cream & butter + Flours + Nuts
+
+## total=2503 variants=15
+   core: Other vegetables + Red meat + Temperate fruits
+
+## total=2489 variants=9
+   core: Poultry
+
+## total=2470 variants=15
+   core: Leafy greens + Other vegetables + Temperate fruits
+
+## total=2447 variants=5
+   core: Cream & butter + Eggs + Nuts
+
+## total=2373 variants=9
+   core: Eggs + Flours + Milk + Temperate fruits
+
+## total=2329 variants=6
+   core: Nut butters
+
+## total=2312 variants=7
+   core: Fresh cheese
+
+## total=2258 variants=9
+   core: Cream & butter + Other vegetables + Starchy vegetables
+
+## total=2250 variants=4
+   core: Alcoholic beverages + Berries + Temperate fruits
+
+## total=2237 variants=4
+   core: Bread & rolls + Cream & butter
+
+## total=2139 variants=9
+   core: Legumes + Other vegetables + Red meat
+
+## total=2101 variants=6
+   core: Cream & butter + Flours + Temperate fruits
+
+## total=2049 variants=9
+   core: Fresh cheese + Other vegetables
+
+## total=1968 variants=10
+   core: Legumes + Other vegetables
+
+## total=1944 variants=9
+   core: Aged cheese + Other vegetables + Refined grains
+
+## total=1938 variants=10
+   core: Cream & butter + Other vegetables + Poultry
+
+## total=1871 variants=8
+   core: Cream & butter + Eggs + Temperate fruits
+
+## total=1781 variants=5
+   core: Fermented dairy + Flours
+
+## total=1731 variants=3
+   core: Berries + Cream & butter + Temperate fruits
+
+## total=1727 variants=6
+   core: Aged cheese + Cream & butter + Other vegetables + Starchy vegetables
+
+## total=1721 variants=7
+   core: Legumes
+
+## total=1694 variants=5
+   core: Juices + Temperate fruits
+
+## total=1679 variants=6
+   core: Aged cheese + Cream & butter + Other vegetables + Poultry + Starchy vegetables
+
+## total=1532 variants=6
+   core: Cream & butter + Legumes
+
+## total=1514 variants=5
+   core: Berries + Cream & butter
+
+## total=1500 variants=8
+   core: Cream & butter + Other vegetables + Poultry + Starchy vegetables
+
+## total=1493 variants=7
+   core: Eggs + Flours + Whole grains
+
+## total=1489 variants=4
+   core: Milk + Nuts + Temperate fruits
+
+## total=1458 variants=9
+   core: Leafy greens
+
+## total=1420 variants=3
+   core: Berries + Nuts + Temperate fruits
+
+## total=1415 variants=8
+   core: Other vegetables + Poultry + Whole grains
+
+## total=1414 variants=3
+   core: Eggs + Flours + Other vegetables
+
+## total=1407 variants=5
+   core: Processed meat
+
+## total=1403 variants=5
+   core: Cream & butter + Eggs + Flours + Nut butters
+
+## total=1365 variants=7
+   core: Other vegetables + Red meat + Refined grains
+
+## total=1361 variants=6
+   core: Other vegetables + Starchy vegetables + Temperate fruits
+
+## total=1359 variants=4
+   core: Bread & rolls + Milk
+
+## total=1318 variants=3
+   core: Cream & butter + Milk + Nut butters + Whole grains
+
+## total=1308 variants=10
+   core: Cream & butter + Other vegetables + Temperate fruits
+
+## total=1306 variants=3
+   core: Cream & butter + Nut butters
+
+## total=1282 variants=3
+   core: Cream & butter + Fresh cheese
+
+## total=1273 variants=6
+   core: Other vegetables + Processed meat + Starchy vegetables
+
+## total=1267 variants=5
+   core: Aged cheese + Fresh cheese + Other vegetables
+
+## total=1265 variants=3
+   core: Bread & rolls + Milk + Temperate fruits
+
+## total=1259 variants=4
+   core: Cream & butter + Eggs + Flours + Whole grains
+
+## total=1250 variants=3
+   core: Coffee & tea
+
+## total=1235 variants=3
+   core: Cream & butter + Eggs + Fresh cheese
+
+## total=1186 variants=5
+   core: Eggs + Fresh cheese
+
+## total=1185 variants=3
+   core: Alcoholic beverages + Cream & butter
+
+## total=1185 variants=6
+   core: Aged cheese + Cream & butter + Other vegetables
+
+## total=1169 variants=4
+   core: Leafy greens + Legumes + Other vegetables + Processed meat + Red meat
+
+## total=1168 variants=4
+   core: Berries + Cream & butter + Eggs + Flours + Milk
+
+## total=1162 variants=4
+   core: Fresh cheese + Nuts + Temperate fruits
+
+## total=1148 variants=4
+   core: Cream & butter + Fresh cheese + Temperate fruits
+
+## total=1146 variants=7
+   core: Cream & butter + Other vegetables + Red meat
+
+## total=1132 variants=4
+   core: Milk + Nut butters
+
+## total=1123 variants=4
+   core: Cream & butter + Milk + Temperate fruits
+
+## total=1110 variants=4
+   core: Cream & butter + Flours + Milk + Temperate fruits
+
+## total=1109 variants=5
+   core: Fresh cheese + Milk
+
+## total=1108 variants=3
+   core: Milk + Nut butters + Whole grains
+
+## total=1098 variants=5
+   core: Eggs + Flours + Milk + Nuts
+
+## total=1095 variants=5
+   core: Whole grains
+
+## total=1077 variants=5
+   core: Cream & butter + Eggs + Starchy vegetables
+
+## total=1075 variants=3
+   core: Bread & rolls + Cream & butter + Nuts
+
+## total=1055 variants=2
+   core: Aged cheese + Processed meat
+
+## total=1043 variants=4
+   core: Cream & butter + Eggs + Flours + Fresh cheese
+
+## total=1035 variants=5
+   core: Cream & butter + Eggs + Flours + Milk + Starchy vegetables
+
+## total=1034 variants=3
+   core: Cream & butter + Milk + Nut butters
+
+## total=1010 variants=1
+   core: Bread & rolls + Cream & butter + Milk + Nuts
+
+## total=996 variants=5
+   core: Eggs + Other vegetables + Red meat + Refined grains
+
+## total=985 variants=3
+   core: Alcoholic beverages + Soft drinks + Temperate fruits
+
+## total=984 variants=5
+   core: Cream & butter + Eggs + Flours + Milk + Nuts + Temperate fruits
+
+## total=982 variants=7
+   core: Flours + Other vegetables + Red meat + Starchy vegetables
+
+## total=978 variants=6
+   core: Leafy greens + Other vegetables + Processed meat
+
+## total=963 variants=4
+   core: Bread & rolls + Cream & butter + Temperate fruits
+
+## total=941 variants=4
+   core: Fresh cheese + Nuts
+
+## total=937 variants=6
+   core: Other vegetables + Whole grains
+
+## total=935 variants=6
+   core: Cream & butter + Dried fruits + Eggs + Flours
+
+## total=926 variants=3
+   core: Alcoholic beverages + Cream & butter + Temperate fruits
+
+## total=924 variants=2
+   core: Nut butters + Whole grains
+
+## total=923 variants=6
+   core: Flours + Temperate fruits
+
+## total=882 variants=5
+   core: Fresh cheese + Milk + Temperate fruits
+
+## total=879 variants=3
+   core: Bread & rolls + Cream & butter + Eggs + Nuts
+
+## total=868 variants=6
+   core: Other vegetables + Shellfish + Temperate fruits
+
+## total=859 variants=4
+   core: Other vegetables + Spice blends
+
+## total=859 variants=4
+   core: Eggs + Milk + Starchy vegetables
+
+## total=859 variants=5
+   core: Berries + Cream & butter + Eggs + Flours
+
+## total=858 variants=2
+   core: Fresh cheese + Other vegetables + Red meat
+
+## total=852 variants=4
+   core: Coffee & tea + Cream & butter
+
+## total=850 variants=3
+   core: Soft drinks + Temperate fruits
+
+## total=836 variants=2
+   core: Fresh cheese + Other vegetables + Processed meat
+
+## total=832 variants=3
+   core: Eggs + Flours + Nut butters
+
+## total=831 variants=3
+   core: Berries + Fresh cheese + Temperate fruits
+
+## total=829 variants=3
+   core: Bread & rolls + Cream & butter + Milk + Temperate fruits
+
+## total=821 variants=6
+   core: Eggs + Other vegetables
+
+## total=811 variants=5
+   core: Cream & butter + Eggs + Milk + Starchy vegetables
+
+## total=795 variants=4
+   core: Cream & butter + Starchy vegetables + Temperate fruits
+
+## total=792 variants=2
+   core: Temperate fruits + Yogurt
+
+## total=791 variants=2
+   core: Bread & rolls + Milk + Nuts
+
+## total=786 variants=3
+   core: Cream & butter + Flours + Temperate fruits + Whole grains
+
+## total=778 variants=5
+   core: Dried fruits + Eggs + Flours
+
+## total=771 variants=3
+   core: Cream & butter + Fresh cheese + Milk
+
+## total=769 variants=4
+   core: Cream & butter + Eggs + Milk + Nuts
+
+## total=760 variants=3
+   core: Fresh cheese + Nuts + Other vegetables + Temperate fruits
+
+## total=758 variants=3
+   core: Berries + Milk + Temperate fruits
+
+## total=748 variants=2
+   core: Berries + Other vegetables + Temperate fruits
+
+## total=743 variants=4
+   core: Cream & butter + Milk + Other vegetables + Starchy vegetables
+
+## total=741 variants=3
+   core: Refined grains
+
+## total=738 variants=2
+   core: Cruciferous vegetables + Other vegetables + Whole grains
+
+## total=735 variants=2
+   core: Berries + Cream & butter + Nuts + Temperate fruits
+
+## total=732 variants=4
+   core: Bread & rolls + Temperate fruits
+
+## total=723 variants=5
+   core: Aged cheese + Cream & butter + Other vegetables + Refined grains
+
+## total=711 variants=3
+   core: Coffee & tea + Temperate fruits
+
+## total=703 variants=3
+   core: Dried fruits + Temperate fruits
+
+## total=697 variants=3
+   core: Eggs + Flours + Milk + Starchy vegetables
+
+## total=696 variants=5
+   core: Cream & butter + Dried fruits + Eggs + Flours + Nuts + Temperate fruits
+
+## total=693 variants=2
+   core: Cream & butter + Whole grains
+
+## total=691 variants=2
+   core: Alcoholic beverages + Berries
+
+## total=687 variants=2
+   core: Eggs + Flours + Nuts + Starchy vegetables
+
+## total=679 variants=3
+   core: Cream & butter + Eggs + Flours + Nuts + Whole grains
+
+## total=676 variants=4
+   core: Flours + Other vegetables + Red meat
+
+## total=675 variants=4
+   core: Alcoholic beverages + Other vegetables + Red meat
+
+## total=666 variants=2
+   core: Berries + Bread & rolls + Fresh cheese
+
+## total=665 variants=2
+   core: Leafy greens + Other vegetables + Processed meat + Red meat
+
+## total=649 variants=3
+   core: Other vegetables + Processed cheese
+
+## total=645 variants=4
+   core: Aged cheese + Other vegetables + Red meat + Refined grains
+
+## total=641 variants=2
+   core: Dried fruits + Eggs + Flours + Temperate fruits
+
+## total=630 variants=3
+   core: Legumes + Other vegetables + Red meat + Starchy vegetables
+
+## total=630 variants=4
+   core: Fresh cheese + Other vegetables + Refined grains
+
+## total=625 variants=2
+   core: Aged cheese + Eggs + Leafy greens + Milk + Processed meat + Refined grains
+
+## total=625 variants=3
+   core: Cream & butter + Other vegetables + Poultry + Whole grains
+
+## total=625 variants=4
+   core: Berries + Juices + Temperate fruits
+
+## total=623 variants=3
+   core: Berries + Bread & rolls
+
+## total=621 variants=2
+   core: Eggs + Nut butters
+
+## total=618 variants=2
+   core: Berries + Temperate fruits + Yogurt
+
+## total=611 variants=2
+   core: Alcoholic beverages + Juices + Temperate fruits
+
+## total=610 variants=4
+   core: Other vegetables + Processed meat + Red meat
+
+## total=601 variants=3
+   core: Flours + Nuts
+
+## total=600 variants=2
+   core: Berries + Bread & rolls + Cream & butter + Fresh cheese
+
+## total=596 variants=2
+   core: Eggs + Flours + Nuts + Whole grains
+
+## total=591 variants=3
+   core: Flours + Other vegetables
+
+## total=590 variants=4
+   core: Cream & butter + Other vegetables + Refined grains
+
+## total=587 variants=3
+   core: Cream & butter + Refined grains
+
+## total=586 variants=3
+   core: Flours + Milk + Temperate fruits
+
+## total=574 variants=2
+   core: Flours + Fresh cheese + Milk + Nuts
+
+## total=567 variants=2
+   core: Nut butters + Starchy vegetables
+
+## total=563 variants=3
+   core: Berries + Cream & butter + Eggs + Flours + Temperate fruits
+
+## total=562 variants=4
+   core: Cream & butter + Eggs + Flours + Fresh cheese + Temperate fruits
+
+## total=558 variants=2
+   core: Berries + Eggs + Flours + Milk
+
+## total=558 variants=4
+   core: Cream & butter + Eggs + Milk + Refined grains
+
+## total=556 variants=3
+   core: Berries + Milk
+
+## total=555 variants=3
+   core: Starchy vegetables + Temperate fruits
+
+## total=549 variants=3
+   core: Bread & rolls + Cream & butter + Flours + Temperate fruits
+
+## total=548 variants=3
+   core: Dried fruits + Eggs + Flours + Nuts + Temperate fruits
+
+## total=544 variants=3
+   core: Cream & butter + Eggs + Fermented dairy + Flours + Temperate fruits
+
+## total=541 variants=3
+   core: Aged cheese + Other vegetables + Red meat
+
+## total=532 variants=2
+   core: Bread & rolls + Nut butters
+
+## total=531 variants=2
+   core: Cream & butter + Fresh cheese + Nuts
+
+## total=530 variants=3
+   core: Cruciferous vegetables + Other vegetables
+
+## total=525 variants=1
+   core: Bread & rolls + Eggs + Fresh cheese
+
+## total=523 variants=3
+   core: Eggs + Fermented dairy + Flours + Temperate fruits
+
+## total=522 variants=2
+   core: Cream & butter + Flours + Fresh cheese + Milk + Nuts
+
+## total=519 variants=3
+   core: Eggs + Milk + Temperate fruits
+
+## total=511 variants=2
+   core: Bread & rolls + Fresh cheese + Milk + Temperate fruits
+
+## total=509 variants=2
+   core: Bread & rolls + Cream & butter + Eggs + Temperate fruits
+
+## total=506 variants=3
+   core: Aged cheese + Cream & butter + Starchy vegetables
+
+## total=501 variants=2
+   core: Eggs + Other vegetables + Red meat + Whole grains
+
+## total=501 variants=3
+   core: Other vegetables + Poultry + Refined grains
+
+## total=497 variants=3
+   core: Berries + Fresh cheese
+
+## total=495 variants=3
+   core: Processed meat + Temperate fruits
+
+## total=494 variants=3
+   core: Other vegetables + Processed cheese + Red meat
+
+## total=485 variants=3
+   core: Cream & butter + Dried fruits + Eggs + Flours + Nuts
+
+## total=482 variants=2
+   core: Aged cheese + Other vegetables + Red meat + Starchy vegetables
+
+## total=481 variants=2
+   core: Bread & rolls + Fresh cheese
+
+## total=477 variants=1
+   core: Bread & rolls + Eggs + Fresh cheese + Temperate fruits
+
+## total=475 variants=2
+   core: Aged cheese + Bread & rolls + Other vegetables
+
+## total=470 variants=1
+   core: Cream & butter + Other vegetables + Poultry + Processed meat + Red meat
+
+## total=459 variants=1
+   core: Eggs + Flours + Nuts + Other vegetables
+
+## total=458 variants=3
+   core: Leafy greens + Temperate fruits
+
+## total=457 variants=2
+   core: Berries + Cream & butter + Fresh cheese + Temperate fruits
+
+## total=454 variants=1
+   core: Bread & rolls + Cream & butter + Eggs + Fresh cheese
+
+## total=453 variants=3
+   core: Bread & rolls + Nuts
+
+## total=443 variants=2
+   core: Other vegetables + Temperate fruits + Whole grains
+
+## total=443 variants=2
+   core: Alcoholic beverages + Other vegetables
+
+## total=442 variants=3
+   core: Other vegetables + Shellfish
+
+## total=441 variants=2
+   core: Alcoholic beverages + Nuts + Temperate fruits
+
+## total=436 variants=2
+   core: Aged cheese + Other vegetables + Processed meat
+
+## total=434 variants=2
+   core: Cream & butter + Fermented dairy + Flours
+
+## total=434 variants=2
+   core: Eggs + Flours + Nuts + Starchy vegetables + Temperate fruits
+
+## total=434 variants=3
+   core: Leafy greens + Other vegetables + Red meat + Whole grains
+
+## total=432 variants=1
+   core: Fresh cheese + Other vegetables + Shellfish
+
+## total=429 variants=2
+   core: Organ meats
+
+## total=422 variants=2
+   core: Berries + Nuts + Other vegetables + Temperate fruits
+
+## total=418 variants=2
+   core: Berries + Eggs + Flours
+
+## total=417 variants=3
+   core: Cream & butter + Other vegetables + Red meat + Starchy vegetables
+
+## total=413 variants=2
+   core: Aged cheese + Eggs + Other vegetables
+
+## total=402 variants=2
+   core: Aged cheese + Bread & rolls + Cream & butter + Other vegetables
+
+## total=400 variants=1
+   core: Cream & butter + Leafy greens + Other vegetables + Prepared soups & broths
+
+## total=399 variants=2
+   core: Aged cheese + Other vegetables + Poultry
+
+## total=397 variants=1
+   core: Dried fruits + Eggs + Flours + Starchy vegetables
+
+## total=396 variants=2
+   core: Bread & rolls + Cream & butter + Fresh cheese + Temperate fruits
+
+## total=396 variants=3
+   core: Milk + Other vegetables
+
+## total=393 variants=2
+   core: Other vegetables + Refined grains + Temperate fruits
+
+## total=391 variants=1
+   core: Bread & rolls + Milk + Nuts + Temperate fruits
+
+## total=391 variants=3
+   core: Fresh cheese + Other vegetables + Temperate fruits
+
+## total=389 variants=2
+   core: Organ meats + Temperate fruits
+
+## total=388 variants=3
+   core: Cream & butter + Leafy greens + Other vegetables
+
+## total=385 variants=2
+   core: Cream & butter + Poultry
+
+## total=381 variants=1
+   core: Legumes + Other vegetables + Pickled vegetables + Starchy vegetables
+
+## total=380 variants=3
+   core: Cream & butter + Eggs + Flours + Starchy vegetables
+
+## total=375 variants=1
+   core: Bread & rolls + Juices + Milk
+
+## total=373 variants=2
+   core: Flours + Fresh cheese + Milk
+
+## total=372 variants=3
+   core: Poultry + Temperate fruits
+
+## total=372 variants=3
+   core: Bread & rolls + Eggs + Nuts
+
+## total=370 variants=1
+   core: Bread & rolls + Cream & butter + Nut butters
+
+## total=369 variants=2
+   core: Bread & rolls + Cream & butter + Poultry
+
+## total=367 variants=2
+   core: Bread & rolls + Fresh cheese + Temperate fruits
+
+## total=363 variants=2
+   core: Fermented dairy + Temperate fruits
+
+## total=363 variants=2
+   core: Berries + Cream & butter + Eggs + Flours + Milk + Temperate fruits
+
+## total=362 variants=2
+   core: Eggs + Flours + Starchy vegetables + Temperate fruits
+
+## total=359 variants=1
+   core: Cream & butter + Nut butters + Whole grains
+
+## total=358 variants=2
+   core: Bread & rolls + Cream & butter + Nuts + Temperate fruits
+
+## total=356 variants=1
+   core: Dried fruits + Other vegetables + Poultry
+
+## total=356 variants=3
+   core: Cream & butter + Eggs + Fresh cheese + Nuts
+
+## total=352 variants=1
+   core: Coffee & tea + Juices
+
+## total=352 variants=1
+   core: Eggs + Flours + Milk + Nut butters
+
+## total=352 variants=2
+   core: Cream & butter + Eggs + Flours + Fresh cheese + Nuts
+
+## total=352 variants=2
+   core: Cream & butter + Legumes + Milk
+
+## total=351 variants=1
+   core: Fresh cheese + Organ meats + Other vegetables + Shellfish
+
+## total=351 variants=2
+   core: Coffee & tea + Milk
+
+## total=350 variants=1
+   core: Cream & butter + Cruciferous vegetables + Other vegetables + Whole grains
+
+## total=347 variants=2
+   core: Coffee & tea + Cream & butter + Milk
+
+## total=346 variants=1
+   core: Milk + Other vegetables + Poultry + Whole grains
+
+## total=346 variants=2
+   core: Bread & rolls + Other vegetables
+
+## total=346 variants=3
+   core: Other vegetables + Pickled vegetables
+
+## total=343 variants=2
+   core: Alcoholic beverages + Coffee & tea + Cream & butter
+
+## total=339 variants=2
+   core: Cream & butter + Dried fruits + Eggs + Flours + Milk
+
+## total=337 variants=2
+   core: Aged cheese + Other vegetables + Temperate fruits
+
+## total=336 variants=2
+   core: Aged cheese + Other vegetables + Starchy vegetables
+
+## total=336 variants=2
+   core: Berries + Cream & butter + Eggs + Flours + Nuts
+
+## total=333 variants=2
+   core: Bread & rolls + Cream & butter + Eggs + Milk + Nuts
+
+## total=331 variants=1
+   core: Cruciferous vegetables + Dried fruits + Other vegetables + Processed meat
+
+## total=330 variants=2
+   core: Aged cheese + Other vegetables + Poultry + Refined grains
+
+## total=330 variants=2
+   core: Fresh cheese + Processed meat
+
+## total=329 variants=2
+   core: Berries + Fresh cheese + Nuts + Temperate fruits
+
+## total=328 variants=2
+   core: Eggs + Milk + Other vegetables + Red meat + Refined grains
+
+## total=326 variants=2
+   core: Legumes + Other vegetables + Temperate fruits
+
+## total=326 variants=2
+   core: Bread & rolls + Cream & butter + Other vegetables + Poultry
+
+## total=324 variants=1
+   core: Berries + Other vegetables
+
+## total=323 variants=2
+   core: Cruciferous vegetables + Other vegetables + Poultry + Whole grains
+
+## total=322 variants=1
+   core: Fresh cheese + Other vegetables + Shellfish + Temperate fruits
+
+## total=322 variants=2
+   core: Other vegetables + Poultry + Red meat + Whole grains
+
+## total=322 variants=2
+   core: Cream & butter + Dried fruits + Eggs + Flours + Temperate fruits
+
+## total=320 variants=1
+   core: Cream & butter + Other vegetables + Red meat + Whole grains
+
+## total=320 variants=2
+   core: Other vegetables + Processed meat + Refined grains
+
+## total=319 variants=2
+   core: Eggs + Flours + Fresh cheese
+
+## total=318 variants=1
+   core: Dried fruits + Eggs + Flours + Other vegetables
+
+## total=317 variants=2
+   core: Yogurt
+
+## total=317 variants=2
+   core: Leafy greens + Other vegetables + Refined grains
+
+## total=316 variants=1
+   core: Cream & butter + Eggs + Refined grains + Temperate fruits
+
+## total=316 variants=2
+   core: Aged cheese + Cream & butter + Other vegetables + Poultry + Refined grains
+
+## total=316 variants=2
+   core: Cream & butter + Dried fruits + Eggs + Flours + Whole grains
+
+## total=311 variants=2
+   core: Legumes + Whole grains
+
+## total=310 variants=1
+   core: Coffee & tea + Cream & butter + Eggs + Flours
+
+## total=309 variants=2
+   core: Bread & rolls + Eggs + Milk + Temperate fruits
+
+## total=307 variants=2
+   core: Aged cheese + Bread & rolls + Other vegetables + Poultry
+
+## total=307 variants=2
+   core: Eggs + Flours + Milk + Nuts + Temperate fruits
+
+## total=307 variants=2
+   core: Cream & butter + Eggs + Fresh cheese + Temperate fruits
+
+## total=306 variants=1
+   core: Fresh cheese + Shellfish
+
+## total=306 variants=2
+   core: Cream & butter + Milk + Starchy vegetables
+
+## total=305 variants=2
+   core: Eggs + Leafy greens + Other vegetables + Starchy vegetables
+
+## total=301 variants=1
+   core: Alcoholic beverages + Coffee & tea
+
+## total=301 variants=2
+   core: Cream & butter + Fresh cheese + Nuts + Temperate fruits
+
+## total=298 variants=2
+   core: Eggs + Leafy greens
+
+## total=298 variants=2
+   core: Aged cheese + Other vegetables + Processed meat + Refined grains
+
+## total=295 variants=2
+   core: Cream & butter + Eggs + Fermented dairy + Flours + Nuts
+
+## total=293 variants=2
+   core: Berries + Soft drinks + Temperate fruits
+
+## total=293 variants=2
+   core: Aged cheese
+
+## total=292 variants=1
+   core: Aged cheese + Bread & rolls + Processed meat
+
+## total=292 variants=2
+   core: Cream & butter + Other vegetables + Poultry + Temperate fruits
+
+## total=285 variants=2
+   core: Cream & butter + Eggs + Flours + Milk + Nuts + Starchy vegetables
+
+## total=284 variants=2
+   core: Bread & rolls + Cream & butter + Eggs + Flours + Milk
+
+## total=283 variants=1
+   core: Bread & rolls + Processed meat
+
+## total=283 variants=1
+   core: Alcoholic beverages + Bread & rolls + Nuts
+
+## total=282 variants=2
+   core: Cream & butter + Eggs + Milk + Temperate fruits
+
+## total=279 variants=2
+   core: Berries + Cream & butter + Flours + Milk
+
+## total=278 variants=2
+   core: Other vegetables + Processed meat + Whole grains
+
+## total=277 variants=1
+   core: Berries + Eggs
+
+## total=271 variants=1
+   core: Bread & rolls + Cream & butter + Eggs + Fresh cheese + Temperate fruits
+
+## total=271 variants=1
+   core: Aged cheese + Cruciferous vegetables + Other vegetables + Processed meat
+
+## total=271 variants=2
+   core: Aged cheese + Fresh cheese + Other vegetables + Red meat + Refined grains
+
+## total=269 variants=2
+   core: Shellfish
+
+## total=268 variants=2
+   core: Bread & rolls + Dried fruits + Milk + Nuts + Temperate fruits
+
+## total=265 variants=1
+   core: Cream & butter + Eggs + Flours + Milk + Nut butters
+
+## total=263 variants=2
+   core: Dried fruits + Eggs + Flours + Whole grains
+
+## total=262 variants=2
+   core: Cream & butter + Flours + Nuts + Temperate fruits
+
+## total=261 variants=2
+   core: Dried fruits + Nuts + Temperate fruits
+
+## total=261 variants=2
+   core: Other vegetables + Spice blends + Temperate fruits
+
+## total=260 variants=2
+   core: Other vegetables + Red meat + Starchy vegetables + Whole grains
+
+## total=260 variants=2
+   core: Cream & butter + Milk + Whole grains
+
+## total=257 variants=2
+   core: Other vegetables + Seeds
+
+## total=256 variants=1
+   core: Bread & rolls + Eggs + Temperate fruits
+
+## total=256 variants=2
+   core: Bread & rolls + Nuts + Temperate fruits
+
+## total=255 variants=2
+   core: Milk + Temperate fruits + Yogurt
+
+## total=254 variants=2
+   core: Bread & rolls + Other vegetables + Processed cheese
+
+## total=253 variants=2
+   core: Eggs + Nuts + Temperate fruits
+
+## total=252 variants=2
+   core: Aged cheese + Eggs + Milk + Processed meat + Refined grains
+
+## total=252 variants=2
+   core: Cream & butter + Flours + Fresh cheese + Milk
+
+## total=251 variants=1
+   core: Aged cheese + Cream & butter + Flours
+
+## total=250 variants=2
+   core: Legumes + Other vegetables + Starchy vegetables
+
+## total=249 variants=1
+   core: Legumes + Other vegetables + Processed meat + Red meat
+
+## total=249 variants=1
+   core: Dried fruits + Eggs + Flours + Nuts + Starchy vegetables
+
+## total=249 variants=2
+   core: Bread & rolls + Cream & butter + Poultry + Seeds
+
+## total=247 variants=2
+   core: Fresh cheese + Other vegetables + Processed meat + Refined grains
+
+## total=246 variants=2
+   core: Eggs + Other vegetables + Starchy vegetables
+
+## total=245 variants=1
+   core: Aged cheese + Bread & rolls + Cream & butter + Flours + Temperate fruits
+
+## total=245 variants=2
+   core: Flours + Other vegetables + Poultry
+
+## total=243 variants=2
+   core: Eggs + Fermented dairy + Flours + Nuts
+
+## total=242 variants=2
+   core: Bread & rolls + Eggs + Other vegetables + Red meat
+
+## total=241 variants=1
+   core: Processed cheese + Processed meat
+
+## total=241 variants=2
+   core: Berries + Yogurt
+
+## total=238 variants=2
+   core: Aged cheese + Fresh cheese + Other vegetables + Processed meat
+
+## total=238 variants=2
+   core: Berries + Cream & butter + Eggs
+
+## total=235 variants=1
+   core: Other vegetables + Processed cheese + Red meat + Starchy vegetables
+
+## total=235 variants=2
+   core: Poultry + Refined grains
+
+## total=234 variants=2
+   core: Nuts + Other vegetables + Poultry + Temperate fruits
+
+## total=233 variants=1
+   core: Alcoholic beverages + Juices
+
+## total=233 variants=2
+   core: Cream & butter + Eggs + Flours + Milk + Whole grains
+
+## total=232 variants=1
+   core: Cream & butter + Flours + Whole grains
+
+## total=232 variants=2
+   core: Bread & rolls + Fresh cheese + Processed meat
+
+## total=231 variants=1
+   core: Cream & butter + Flours + Milk + Other vegetables + Starchy vegetables
+
+## total=230 variants=2
+   core: Dried fruits + Eggs + Flours + Milk
+
+## total=230 variants=2
+   core: Cream & butter + Milk + Nuts + Temperate fruits
+
+## total=230 variants=2
+   core: Cream & butter + Other vegetables + Processed meat
+
+## total=228 variants=1
+   core: Eggs + Milk + Nuts
+
+## total=228 variants=1
+   core: Legumes + Nut butters
+
+## total=226 variants=2
+   core: Bread & rolls + Other vegetables + Processed cheese + Red meat
+
+## total=225 variants=1
+   core: Bread & rolls + Fresh cheese + Milk + Nut butters
+
+## total=224 variants=1
+   core: Cream & butter + Flours + Fresh cheese
+
+## total=224 variants=1
+   core: Cruciferous vegetables + Dried fruits + Other vegetables + Processed meat + Seeds
+
+## total=224 variants=2
+   core: Cream & butter + Dried fruits + Eggs + Fermented dairy + Flours
+
+## total=223 variants=1
+   core: Oily fish + Other vegetables + Temperate fruits
+
+## total=223 variants=2
+   core: Alcoholic beverages + Other vegetables + Temperate fruits
+
+## total=223 variants=2
+   core: Fresh cheese + Processed meat + Refined grains
+
+## total=221 variants=1
+   core: Alcoholic beverages + Other vegetables + Poultry
+
+## total=221 variants=1
+   core: Berries + Eggs + Flours + Temperate fruits
+
+## total=220 variants=1
+   core: Cream & butter + Eggs + Flours + Legumes
+
+## total=220 variants=2
+   core: Berries + Cream & butter + Milk
+
+## total=219 variants=2
+   core: Bread & rolls + Other vegetables + Red meat
+
+## total=217 variants=1
+   core: Aged cheese + Bread & rolls + Other vegetables + Red meat
+
+## total=217 variants=2
+   core: Bread & rolls + Eggs + Milk + Nuts
+
+## total=215 variants=1
+   core: Fresh cheese + Milk + Nuts + Temperate fruits
+
+## total=215 variants=1
+   core: Dried fruits + Flours
+
+## total=213 variants=1
+   core: Alcoholic beverages + Cream & butter + Eggs
+
+## total=213 variants=2
+   core: Cream & butter + Eggs + Milk + Refined grains + Temperate fruits
+
+## total=212 variants=2
+   core: Fresh cheese + Other vegetables + Red meat + Refined grains
+
+## total=211 variants=1
+   core: Legumes + Refined grains
+
+## total=210 variants=1
+   core: Berries + Eggs + Flours + Nuts
+
+## total=208 variants=1
+   core: Dried fruits + Eggs + Flours + Nuts + Starchy vegetables + Temperate fruits
+
+## total=206 variants=1
+   core: Bread & rolls + Fresh cheese + Nut butters
+
+## total=206 variants=1
+   core: Flours + Whole grains
+
+## total=206 variants=2
+   core: Aged cheese + Refined grains
+
+## total=205 variants=2
+   core: Plant milks + Temperate fruits
+
+## total=204 variants=2
+   core: Nuts + Other vegetables + Temperate fruits
+
+## total=202 variants=1
+   core: Bread & rolls + Other vegetables + Poultry
+
+## total=201 variants=1
+   core: Aged cheese + Bread & rolls + Flours + Temperate fruits
+
+## total=200 variants=1
+   core: Cream & butter + Other vegetables + Whole grains
+
+## total=200 variants=1
+   core: Bread & rolls + Other vegetables + Poultry + Processed cheese
+
+## total=197 variants=1
+   core: Other vegetables + Poultry + Red meat + Starchy vegetables
+
+## total=194 variants=1
+   core: Eggs + Fermented dairy + Flours + Whole grains
+
+## total=194 variants=1
+   core: Other vegetables + Poultry + Starchy vegetables + Temperate fruits
+
+## total=192 variants=1
+   core: Eggs + Flours + Milk + Whole grains
+
+## total=191 variants=1
+   core: Cream & butter + Eggs + Nuts + Temperate fruits
+
+## total=191 variants=1
+   core: Bread & rolls + Cream & butter + Eggs
+
+## total=190 variants=1
+   core: Bread & rolls + Poultry
+
+## total=190 variants=1
+   core: Flours + Other vegetables + Processed meat + Starchy vegetables
+
+## total=188 variants=1
+   core: Aged cheese + Cruciferous vegetables + Eggs + Other vegetables
+
+## total=188 variants=1
+   core: Leafy greens + Other vegetables + Seeds
+
+## total=187 variants=1
+   core: Aged cheese + Cruciferous vegetables + Leafy greens + Other vegetables + Processed meat
+
+## total=187 variants=1
+   core: Milk + Other vegetables + Poultry
+
+## total=186 variants=1
+   core: Bread & rolls + Cream & butter + Eggs + Nuts + Temperate fruits
+
+## total=182 variants=1
+   core: Eggs + Flours + Other vegetables + Temperate fruits
+
+## total=179 variants=1
+   core: Other vegetables + Poultry + Red meat
+
+## total=179 variants=1
+   core: Dried fruits + Eggs + Flours + Nuts + Other vegetables
+
+## total=178 variants=1
+   core: Cream & butter + Other vegetables + Prepared soups & broths
+
+## total=178 variants=1
+   core: Aged cheese + Organ meats + Other vegetables
+
+## total=178 variants=1
+   core: Eggs + Flours + Legumes + Temperate fruits
+
+## total=177 variants=1
+   core: Milk + Plant milks
+
+## total=176 variants=1
+   core: Other vegetables + Processed cheese + Processed meat
+
+## total=176 variants=1
+   core: Flours + Temperate fruits + Whole grains
+
+## total=173 variants=1
+   core: Cream & butter + Flours + Other vegetables + Red meat
+
+## total=171 variants=1
+   core: Cream & butter + Eggs + Flours + Fresh cheese + Other vegetables
+
+## total=170 variants=1
+   core: Aged cheese + Cream & butter + Flours + Milk + Refined grains
+
+## total=170 variants=1
+   core: Bread & rolls + Cream & butter + Fresh cheese
+
+## total=169 variants=1
+   core: Eggs + Leafy greens + Other vegetables
+
+## total=169 variants=1
+   core: Cream & butter + Flours + Other vegetables + Poultry
+
+## total=169 variants=1
+   core: Aged cheese + Cream & butter + Refined grains
+
+## total=167 variants=1
+   core: Cream & butter + Other vegetables + Poultry + Refined grains
+
+## total=165 variants=1
+   core: Legumes + Other vegetables + Pickled vegetables
+
+## total=163 variants=1
+   core: Aged cheese + Leafy greens + Legumes + Other vegetables + Processed meat
+
+## total=161 variants=1
+   core: Aged cheese + Eggs + Fresh cheese + Other vegetables + Red meat + Refined grains
+
+## total=161 variants=1
+   core: Legumes + Milk
+
+## total=161 variants=1
+   core: Cream & butter + Eggs + Flours + Nut butters + Whole grains
+
+## total=159 variants=1
+   core: Dried fruits + Other vegetables + Temperate fruits
+
+## total=158 variants=1
+   core: Legumes + Other vegetables + Processed meat
+
+## total=157 variants=1
+   core: Eggs + Leafy greens + Milk + Processed cheese + Processed meat + Refined grains
+
+## total=157 variants=1
+   core: Coffee & tea + Cream & butter + Eggs + Flours + Nuts
+
+## total=155 variants=1
+   core: Bread & rolls + Cream & butter + Eggs + Flours + Nuts
+
+## total=153 variants=1
+   core: Alcoholic beverages + Other vegetables + Red meat + Starchy vegetables
+
+## total=153 variants=1
+   core: Other vegetables + Poultry + Processed cheese + Refined grains
+
+## total=153 variants=1
+   core: Bread & rolls + Cream & butter + Cruciferous vegetables + Processed cheese
+
+## total=152 variants=1
+   core: Other vegetables + Processed cheese + Processed meat + Red meat
+
+## total=152 variants=1
+   core: Berries + Nuts
+
+## total=152 variants=1
+   core: Bread & rolls + Fresh cheese + Milk
+
+## total=152 variants=1
+   core: Alcoholic beverages + Soft drinks
+
+## total=152 variants=1
+   core: Eggs + Flours + Nuts + Other vegetables + Temperate fruits
+
+## total=152 variants=1
+   core: Aged cheese + Cream & butter + Milk + Other vegetables + Starchy vegetables
+
+## total=152 variants=1
+   core: Fresh cheese + Nut butters
+
+## total=151 variants=1
+   core: Red meat + Temperate fruits
+
+## total=151 variants=1
+   core: Eggs + Flours + Other vegetables + Starchy vegetables
+
+## total=151 variants=1
+   core: Other vegetables + Temperate fruits + White fish
+
+## total=150 variants=1
+   core: Cream & butter + Legumes + Whole grains
+
+## total=150 variants=1
+   core: Dried fruits + Eggs + Fermented dairy + Flours
+
+## total=149 variants=1
+   core: Berries + Bread & rolls + Cream & butter + Fresh cheese + Temperate fruits
+
+## total=148 variants=1
+   core: Eggs + Leafy greens + Other vegetables + Red meat + Refined grains
+
+## total=148 variants=1
+   core: Bread & rolls + Eggs + Flours + Milk + Temperate fruits
+
+## total=148 variants=1
+   core: Fresh cheese + Milk + Nut butters
+
+## total=147 variants=1
+   core: Cream & butter + Eggs + Flours + Fresh cheese + Milk
+
+## total=147 variants=1
+   core: Other vegetables + Red meat + Spice blends
+
+## total=147 variants=1
+   core: Aged cheese + Cream & butter
+
+## total=147 variants=1
+   core: Other vegetables + Poultry + Processed cheese
+
+## total=146 variants=1
+   core: Dried fruits
+
+## total=146 variants=1
+   core: Leafy greens + Legumes + Other vegetables + Red meat
+
+## total=146 variants=1
+   core: Flours + Fresh cheese
+
+## total=146 variants=1
+   core: Aged cheese + Fresh cheese + Red meat + Refined grains
+
+## total=146 variants=1
+   core: Bread & rolls + Eggs + Nuts + Temperate fruits
+
+## total=145 variants=1
+   core: Aged cheese + Cream & butter + Other vegetables + Poultry
+
+## total=145 variants=1
+   core: Bread & rolls + Cruciferous vegetables + Processed cheese
+
+## total=144 variants=1
+   core: Bread & rolls + Cream & butter + Legumes
+
+## total=144 variants=1
+   core: Aged cheese + Cream & butter + Flours + Milk + Other vegetables + Processed meat + Starchy vegetables
+
+## total=143 variants=1
+   core: Flours + Fresh cheese + Milk + Temperate fruits
+
+## total=143 variants=1
+   core: Alcoholic beverages + Other vegetables + Shellfish
+
+## total=143 variants=1
+   core: Berries + Cream & butter + Eggs + Flours + Nuts + Temperate fruits
+
+## total=142 variants=1
+   core: Milk + Yogurt
+
+## total=142 variants=1
+   core: Cream & butter + Eggs + Nut butters + Whole grains
+
+## total=141 variants=1
+   core: Aged cheese + Bread & rolls + Leafy greens + Other vegetables + Red meat
+
+## total=140 variants=1
+   core: Aged cheese + Other vegetables + Refined grains + Temperate fruits
+
+## total=140 variants=1
+   core: Legumes + Nuts
+
+## total=140 variants=1
+   core: Cream & butter + Eggs + Fermented dairy + Flours + Nuts + Temperate fruits
+
+## total=139 variants=1
+   core: Cream & butter + Flours + Milk + Nuts
+
+## total=138 variants=1
+   core: Cream & butter + Other vegetables + Processed cheese + Starchy vegetables
+
+## total=137 variants=1
+   core: Legumes + Other vegetables + Red meat + Spice blends + Starchy vegetables
+
+## total=136 variants=1
+   core: Other vegetables + Poultry + Processed cheese + Starchy vegetables
+
+## total=136 variants=1
+   core: Aged cheese + Bread & rolls + Leafy greens + Other vegetables + Processed meat + Seeds
+
+## total=135 variants=1
+   core: Bread & rolls + Cream & butter + Other vegetables
+
+## total=135 variants=1
+   core: Eggs + Fresh cheese + Milk
+
+## total=135 variants=1
+   core: Cream & butter + Temperate fruits + Whole grains
+
+## total=135 variants=1
+   core: Legumes + Nut butters + Other vegetables + Temperate fruits
+
+## total=134 variants=1
+   core: Aged cheese + Nuts + Other vegetables
+
+## total=134 variants=1
+   core: Nut butters + Other vegetables + Temperate fruits
+
+## total=134 variants=1
+   core: Aged cheese + Organ meats
+
+## total=134 variants=1
+   core: Aged cheese + Fresh cheese
+
+## total=134 variants=1
+   core: Flours + Poultry
+
+## total=133 variants=1
+   core: Cream & butter + Fermented dairy
+
+## total=133 variants=1
+   core: Poultry + Whole grains
+
+## total=132 variants=1
+   core: Other vegetables + Poultry + Processed meat + Whole grains
+
+## total=132 variants=1
+   core: Aged cheese + Cream & butter + Other vegetables + Poultry + Whole grains
+
+## total=132 variants=1
+   core: Leafy greens + Other vegetables + Red meat + Starchy vegetables
+
+## total=132 variants=1
+   core: Alcoholic beverages + Eggs + Temperate fruits
+
+## total=132 variants=1
+   core: Dried fruits + Eggs + Milk + Whole grains
+
+## total=131 variants=1
+   core: Cream & butter + Fresh cheese + Other vegetables
+
+## total=131 variants=1
+   core: Juices + Milk
+
+## total=131 variants=1
+   core: Alcoholic beverages + Cream & butter + Milk
+
+## total=131 variants=1
+   core: Coffee & tea + Cream & butter + Eggs
+
+## total=130 variants=1
+   core: Dried fruits + Nuts
+
+## total=130 variants=1
+   core: Cream & butter + Fresh cheese + Milk + Nuts + Other vegetables + Red meat
+
+## total=130 variants=1
+   core: Aged cheese + Cream & butter + Flours + Milk + Other vegetables + Starchy vegetables
+
+## total=129 variants=1
+   core: Fresh cheese + Refined grains
+
+## total=129 variants=1
+   core: Leafy greens + Other vegetables + Red meat + Temperate fruits
+
+## total=129 variants=1
+   core: Cream & butter + Cruciferous vegetables + Other vegetables + Poultry + Whole grains
+
+## total=128 variants=1
+   core: Fresh cheese + Red meat + Refined grains
+
+## total=128 variants=1
+   core: Cream & butter + Fresh cheese + Other vegetables + Red meat
+
+## total=128 variants=1
+   core: Nut butters + Temperate fruits
+
+## total=128 variants=1
+   core: Aged cheese + Other vegetables + Poultry + Whole grains
+
+## total=128 variants=1
+   core: Aged cheese + Bread & rolls
+
+## total=127 variants=1
+   core: Other vegetables + Prepared soups & broths + Red meat
+
+## total=127 variants=1
+   core: Cream & butter + Leafy greens + Other vegetables + Temperate fruits
+
+## total=127 variants=1
+   core: Flours + Fresh cheese + Milk + Nuts + Temperate fruits
+
+## total=127 variants=1
+   core: Berries + Cream & butter + Eggs + Fermented dairy + Flours
+
+## total=127 variants=1
+   core: Berries + Cream & butter + Fresh cheese + Nuts + Temperate fruits
+
+## total=126 variants=1
+   core: Fresh cheese + Other vegetables + Processed cheese
+
+## total=125 variants=1
+   core: Other vegetables + Processed cheese + Starchy vegetables
+
+## total=125 variants=1
+   core: Alcoholic beverages + Cream & butter + Nuts
+
+## total=124 variants=1
+   core: Cream & butter + Fresh cheese + Other vegetables + Starchy vegetables
+
+## total=124 variants=1
+   core: Aged cheese + Alcoholic beverages + Cream & butter + Poultry
+
+## total=124 variants=1
+   core: Cream & butter + Refined grains + Temperate fruits
+
+## total=124 variants=1
+   core: Eggs + Fermented dairy + Flours + Nuts + Temperate fruits
+
+## total=123 variants=1
+   core: Cream & butter + Other vegetables + Poultry + Processed cheese + Starchy vegetables
+
+## total=122 variants=1
+   core: Coffee & tea + Eggs + Flours + Milk
+
+## total=122 variants=1
+   core: Aged cheese + Fresh cheese + Poultry
+
+## total=122 variants=1
+   core: Aged cheese + Eggs + Milk + Other vegetables + Processed meat
+
+## total=121 variants=1
+   core: Alcoholic beverages + Flours + Other vegetables + Red meat + Starchy vegetables
+
+## total=121 variants=1
+   core: Alcoholic beverages + Cream & butter + Other vegetables + Poultry
+
+## total=121 variants=1
+   core: Aged cheese + Red meat
+
+## total=120 variants=1
+   core: Eggs + Flours + Seeds
+
+## total=120 variants=1
+   core: Berries + Bread & rolls + Cream & butter
+
+## total=120 variants=1
+   core: Temperate fruits + Whole grains
+
+## total=120 variants=1
+   core: Aged cheese + Bread & rolls + Leafy greens + Other vegetables
+
+## total=120 variants=1
+   core: Eggs + Other vegetables + Poultry
+
+## total=119 variants=1
+   core: Legumes + Other vegetables + Processed meat + Starchy vegetables
+
+## total=119 variants=1
+   core: Processed meat + Starchy vegetables
+
+## total=119 variants=1
+   core: Processed meat + Refined grains
+
+## total=119 variants=1
+   core: Soft drinks
+
+## total=119 variants=1
+   core: Fresh cheese + Other vegetables + Poultry
+
+## total=119 variants=1
+   core: Legumes + Starchy vegetables
+
+## total=118 variants=1
+   core: Berries + Organ meats + Temperate fruits
+
+## total=118 variants=1
+   core: Cream & butter + Eggs + Flours + Legumes + Nut butters
+
+## total=118 variants=1
+   core: Berries + Bread & rolls + Fresh cheese + Temperate fruits
+
+## total=117 variants=1
+   core: Eggs + Fresh cheese + Temperate fruits
+
+## total=117 variants=1
+   core: Legumes + Nut butters + Whole grains
+
+## total=116 variants=1
+   core: Berries + Cream & butter + Eggs + Temperate fruits
+
+## total=116 variants=1
+   core: Aged cheese + Poultry + Refined grains
+
+## total=116 variants=1
+   core: Alcoholic beverages + Other vegetables + Refined grains + Shellfish
+
+## total=116 variants=1
+   core: Eggs + Other vegetables + Red meat
+
+## total=115 variants=1
+   core: Cream & butter + Nuts + Starchy vegetables
+
+## total=115 variants=1
+   core: Leafy greens + Red meat
+
+## total=115 variants=1
+   core: Cream & butter + Eggs + Flours + Refined grains + Temperate fruits
+
+## total=114 variants=1
+   core: Bread & rolls + Cream & butter + Eggs + Milk + Temperate fruits
+
+## total=114 variants=1
+   core: Bread & rolls + Fresh cheese + Other vegetables
+
+## total=113 variants=1
+   core: Juices
+
+## total=113 variants=1
+   core: Cruciferous vegetables + Other vegetables + Processed meat
+
+## total=113 variants=1
+   core: Cream & butter + Flours + Other vegetables
+
+## total=113 variants=1
+   core: Flours + Starchy vegetables
+
+## total=113 variants=1
+   core: Cream & butter + Eggs + Flours + Fresh cheese + Starchy vegetables
+
+## total=112 variants=1
+   core: Aged cheese + Cream & butter + Other vegetables + Processed meat + Starchy vegetables
+
+## total=112 variants=1
+   core: Aged cheese + Eggs + Leafy greens + Milk + Other vegetables + Processed meat + Refined grains
+
+## total=111 variants=1
+   core: Fresh cheese + Poultry
+
+## total=111 variants=1
+   core: Bread & rolls + Eggs + Milk + Starchy vegetables
+
+## total=111 variants=1
+   core: Cream & butter + Milk + Other vegetables + Poultry + Starchy vegetables
+
+## total=111 variants=1
+   core: Bread & rolls + Cream & butter + Eggs + Flours
+
+## total=111 variants=1
+   core: Dried fruits + Eggs + Flours + Nuts
+
+## total=110 variants=1
+   core: Other vegetables + Processed cheese + Red meat + Refined grains
+
+## total=110 variants=1
+   core: Fermented dairy
+
+## total=110 variants=1
+   core: Bread & rolls + Cream & butter + Milk
+
+## total=110 variants=1
+   core: Alcoholic beverages + Bread & rolls
+
+## total=110 variants=1
+   core: Dried fruits + Eggs + Temperate fruits
+
+## total=110 variants=1
+   core: Cream & butter + Other vegetables + Shellfish
+
+## total=110 variants=1
+   core: Dried fruits + Eggs + Flours + Other vegetables + Temperate fruits
+
+## total=109 variants=1
+   core: Aged cheese + Leafy greens + Other vegetables
+
+## total=109 variants=1
+   core: Milk + Other vegetables + Red meat + Starchy vegetables
+
+## total=109 variants=1
+   core: Aged cheese + Cream & butter + Flours + Other vegetables
+
+## total=109 variants=1
+   core: Legumes + Temperate fruits
+
+## total=109 variants=1
+   core: Eggs + Milk + Refined grains
+
+## total=109 variants=1
+   core: Eggs + Refined grains + Temperate fruits
+
+## total=109 variants=1
+   core: Aged cheese + Fresh cheese + Other vegetables + Red meat
+
+## total=108 variants=1
+   core: Dried fruits + Eggs + Nuts + Whole grains
+
+## total=108 variants=1
+   core: Alcoholic beverages + Flours
+
+## total=108 variants=1
+   core: Alcoholic beverages + Flours + Other vegetables + Poultry
+
+## total=108 variants=1
+   core: Aged cheese + Other vegetables + Processed meat + Starchy vegetables
+
+## total=107 variants=1
+   core: Cream & butter + Milk + Nuts + Whole grains
+
+## total=107 variants=1
+   core: Cream & butter + Flours + Milk + Other vegetables
+
+## total=107 variants=1
+   core: Nuts + Temperate fruits + Yogurt
+
+## total=107 variants=1
+   core: Cream & butter + Flours + Milk + Whole grains
+
+## total=107 variants=1
+   core: Red meat + Starchy vegetables
+
+## total=107 variants=1
+   core: Aged cheese + Fresh cheese + Refined grains
+
+## total=107 variants=1
+   core: Berries + Eggs + Flours + Nuts + Temperate fruits
+
+## total=106 variants=1
+   core: Aged cheese + Cream & butter + Other vegetables + Whole grains
+
+## total=106 variants=1
+   core: Other vegetables + Poultry + Refined grains + Temperate fruits
+
+## total=105 variants=1
+   core: Aged cheese + Bread & rolls + Cream & butter + Leafy greens + Other vegetables + Processed meat + Seeds
+
+## total=105 variants=1
+   core: Aged cheese + Bread & rolls + Cream & butter + Other vegetables + Red meat
+
+## total=105 variants=1
+   core: Aged cheese + Cream & butter + Fresh cheese + Other vegetables
+
+## total=105 variants=1
+   core: Alcoholic beverages + Milk
+
+## total=105 variants=1
+   core: Aged cheese + Bread & rolls + Fresh cheese
+
+## total=104 variants=1
+   core: Berries + Cream & butter + Flours
+
+## total=104 variants=1
+   core: Berries + Milk + Temperate fruits + Yogurt
+
+## total=104 variants=1
+   core: Fresh cheese + Red meat
+
+## total=104 variants=1
+   core: Other vegetables + Refined grains + Shellfish
+
+## total=104 variants=1
+   core: Aged cheese + Poultry
+
+## total=103 variants=1
+   core: Aged cheese + Fresh cheese + Nuts + Other vegetables
+
+## total=103 variants=1
+   core: Alcoholic beverages + Cream & butter + Eggs + Milk
+
+## total=103 variants=1
+   core: Aged cheese + Bread & rolls + Cruciferous vegetables + Eggs + Other vegetables
+
+## total=103 variants=1
+   core: Berries + Bread & rolls + Cream & butter + Eggs + Fresh cheese
+
+## total=103 variants=1
+   core: Cream & butter + Dried fruits + Eggs + Flours + Nuts + Whole grains
+
+## total=103 variants=1
+   core: Cream & butter + Flours + Starchy vegetables
+
+## total=103 variants=1
+   core: Cream & butter + Dried fruits + Eggs + Fermented dairy + Flours + Nuts + Temperate fruits
+
+## total=103 variants=1
+   core: Fresh cheese + Nuts + Oily fish + Other vegetables + Temperate fruits
+
+## total=103 variants=1
+   core: Other vegetables + Refined grains + Spice blends
+
+## total=103 variants=1
+   core: Cream & butter + Dried fruits + Eggs + Nuts + Whole grains
+
+## total=102 variants=1
+   core: Milk + Whole grains
+
+## total=102 variants=1
+   core: Other vegetables + Red meat + Seeds
+
+## total=102 variants=1
+   core: Aged cheese + Bread & rolls + Other vegetables + Processed meat
+
+## total=102 variants=1
+   core: Aged cheese + Other vegetables + Red meat + Whole grains
+
+## total=102 variants=1
+   core: Fresh cheese + Other vegetables + Processed meat + Red meat + Refined grains
+
+## total=102 variants=1
+   core: Fresh cheese + Legumes
+
+## total=102 variants=1
+   core: Cruciferous vegetables + Other vegetables + Temperate fruits
+
+## total=102 variants=1
+   core: Other vegetables + Yogurt
+
+## total=101 variants=1
+   core: Berries + Milk + Nuts + Temperate fruits
+
+## total=101 variants=1
+   core: Eggs + Fresh cheese + Nuts
+
+## total=101 variants=1
+   core: Coffee & tea + Cream & butter + Eggs + Flours + Milk
+
+## total=101 variants=1
+   core: Bread & rolls + Cream & butter + Eggs + Milk
+
+## total=101 variants=1
+   core: Dried fruits + Eggs + Flours + Milk + Whole grains
+
+## total=100 variants=1
+   core: Berries + Dried fruits + Temperate fruits
+
+## total=100 variants=1
+   core: Aged cheese + Eggs + Leafy greens + Milk + Red meat + Refined grains
+
+## total=100 variants=1
+   core: Cream & butter + Dried fruits + Eggs + Flours + Milk + Nuts
+
+## total=100 variants=1
+   core: Aged cheese + Flours
+

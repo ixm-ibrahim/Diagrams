@@ -1,0 +1,185 @@
+/* Design tokens — single source of truth for color, spacing, type, z-index, breakpoints.
+ * Light theme lives on :root. Dark theme overrides apply when either the OS reports
+ * prefers-color-scheme: dark or when [data-theme="dark"] is set explicitly (Phase 11 toggle).
+ * Three.js reads these via getComputedStyle() so scene colors track the theme.
+ *
+ * Phase 13.5 round 6: color-scheme drives the browser's native widgets
+ * (scrollbars, form controls) so they match the active theme.
+ */
+:root                       { color-scheme: light; }
+:root[data-theme="dark"]    { color-scheme: dark; }
+:root[data-theme="light"]   { color-scheme: light; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; }
+}
+
+:root {
+  /* Surfaces & text */
+  --color-bg:            #fafafa;
+  --color-surface:       #ffffff;
+  --color-surface-2:     #f1f2f4;
+  --color-border:        #d8dadf;
+  --color-text:          #14171c;
+  --color-text-muted:    #5b6270;
+  --color-text-inverse:  #fafafa;
+
+  /* Brand accent (used sparingly — primary buttons, focus rings) */
+  --color-accent:        #3b82f6;
+  --color-accent-hover:  #2563eb;
+  --color-focus-ring:    rgba(59, 130, 246, 0.45);
+
+  /* Phase 33: exclusion / danger accent (tri-state '−' buttons, etc.). */
+  --color-danger:        #dc2626;
+  --color-danger-hover:  #b91c1c;
+
+  /* Animal/plant/dairy channels (used by Phase 4 sphere colors) */
+  --color-animal:        #e85d4a;
+  --color-plant:         #4ec07a;
+  --color-dairy:         #5aa7e8;
+
+  /* Axis lines + ticks (Phase 3) */
+  --color-axis:          #2a2f38;
+  --color-axis-x:        #d97706; /* calories — amber */
+  --color-axis-y:        #ca8a04; /* carbs — gold */
+  --color-axis-z:        #7c3aed; /* protein — violet */
+  --color-axis-tick:     #5b6270;
+  --color-grid:          rgba(20, 23, 28, 0.08);
+
+  /* Score gradient endpoints (Phase 7 score mode) */
+  --color-score-good:    #4ec07a;
+  --color-score-bad:     #e85d4a;
+
+  /* State */
+  --color-shadow:        rgba(20, 23, 28, 0.12);
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Typography */
+  --font-family:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:      ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --font-size-xs:   12px;
+  --font-size-sm:   14px;
+  --font-size-md:   16px;
+  --font-size-lg:   20px;
+  --font-size-xl:   24px;
+  --font-size-2xl:  32px;
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+  --line-height-tight: 1.2;
+  --line-height-base:  1.5;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  /* Elevation */
+  --shadow-1: 0 1px 2px var(--color-shadow);
+  --shadow-2: 0 4px 12px var(--color-shadow);
+  --shadow-3: 0 12px 32px var(--color-shadow);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration-fast:   120ms;
+  --duration-base:   200ms;
+  --duration-slow:   320ms;
+
+  /* z-index scale */
+  --z-scene:   0;
+  --z-rail:    10;
+  --z-header:  20;
+  --z-overlay: 100;
+  --z-modal:   200;
+  --z-toast:   1000;
+
+  /* Breakpoints (used in @media; surfaced here as documentation) */
+  --bp-desktop: 768px;
+
+  /* Layout constants */
+  --header-height:    56px;
+  --rail-width:       320px;
+  /* Per-rail effective widths — defaults to --rail-width but can be
+   * overridden by the resize handles (Phase 11 polish, non-persistent). */
+  --left-rail-w:      var(--rail-width);
+  --right-rail-w:     var(--rail-width);
+  --rail-handle:      32px;   /* collapsed-rail click target — needs to fit a finger */
+  --rail-min-w:       160px;
+  --rail-max-w:       640px;
+  --bottom-sheet-min: 40vh;
+}
+
+/* Dark theme — applied either by OS preference or explicit data-theme="dark" */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"],
+  :root:not([data-theme]) {
+    --color-bg:            #0e1014;
+    --color-surface:       #171a21;
+    --color-surface-2:     #1f232b;
+    --color-border:        #2a2f38;
+    --color-text:          #e8eaed;
+    --color-text-muted:    #9aa1ad;
+    --color-text-inverse:  #14171c;
+
+    --color-accent:        #60a5fa;
+    --color-accent-hover:  #3b82f6;
+    --color-focus-ring:    rgba(96, 165, 250, 0.5);
+
+    --color-danger:        #f87171;
+    --color-danger-hover:  #ef4444;
+
+    --color-animal:        #ff7361;
+    --color-plant:         #5fd28b;
+    --color-dairy:         #74b7f0;
+
+    --color-axis:          #d0d4dc;
+    --color-axis-x:        #f59e0b;
+    --color-axis-y:        #eab308;
+    --color-axis-z:        #a78bfa;
+    --color-axis-tick:     #9aa1ad;
+    --color-grid:          rgba(232, 234, 237, 0.08);
+
+    --color-score-good:    #5fd28b;
+    --color-score-bad:     #ff7361;
+
+    --color-shadow:        rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg:            #0e1014;
+  --color-surface:       #171a21;
+  --color-surface-2:     #1f232b;
+  --color-border:        #2a2f38;
+  --color-text:          #e8eaed;
+  --color-text-muted:    #9aa1ad;
+  --color-text-inverse:  #14171c;
+
+  --color-accent:        #60a5fa;
+  --color-accent-hover:  #3b82f6;
+  --color-focus-ring:    rgba(96, 165, 250, 0.5);
+
+  --color-animal:        #ff7361;
+  --color-plant:         #5fd28b;
+  --color-dairy:         #74b7f0;
+
+  --color-axis:          #d0d4dc;
+  --color-axis-x:        #f59e0b;
+  --color-axis-y:        #eab308;
+  --color-axis-z:        #a78bfa;
+  --color-axis-tick:     #9aa1ad;
+  --color-grid:          rgba(232, 234, 237, 0.08);
+
+  --color-score-good:    #5fd28b;
+  --color-score-bad:     #ff7361;
+
+  --color-shadow:        rgba(0, 0, 0, 0.5);
+}

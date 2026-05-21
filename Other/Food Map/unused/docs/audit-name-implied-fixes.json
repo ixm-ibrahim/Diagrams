@@ -1,0 +1,1021 @@
+{
+  "applied": true,
+  "fixes": [
+    {
+      "file": "curated",
+      "id": "pizza-margherita",
+      "name": "Pizza margherita",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "curated",
+      "id": "soba-noodles",
+      "name": "Soba noodles",
+      "added": [
+        "Refined grains"
+      ]
+    },
+    {
+      "file": "curated",
+      "id": "egusi-soup",
+      "name": "Egusi soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "compositional",
+      "id": "corpus-beef-soup",
+      "name": "Beef soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-potato-soup",
+      "name": "Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-taco-soup",
+      "name": "Taco Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-fruit-pizza",
+      "name": "Fruit Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-vegetable-soup",
+      "name": "Vegetable Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-vegetable-pizza",
+      "name": "Vegetable Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-french-onion-soup",
+      "name": "French Onion Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-corn-chowder",
+      "name": "Corn Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-breakfast-pizza",
+      "name": "Breakfast Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-broccoli-soup",
+      "name": "Cream Of Broccoli Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-broccoli-soup",
+      "name": "Broccoli Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-clam-chowder",
+      "name": "Clam Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pizza",
+      "name": "Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pizza-dough",
+      "name": "Pizza Dough",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-noodle-soup",
+      "name": "Chicken Noodle Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-hamburger-soup",
+      "name": "Hamburger Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-tortilla-soup",
+      "name": "Tortilla Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-lentil-soup",
+      "name": "Lentil Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-broccoli-cheese-soup",
+      "name": "Broccoli Cheese Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-black-bean-soup",
+      "name": "Black Bean Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cheese-soup",
+      "name": "Cheese Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-soup",
+      "name": "Chicken Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-tortilla-soup",
+      "name": "Chicken Tortilla Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-minestrone-soup",
+      "name": "Minestrone Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-split-pea-soup",
+      "name": "Split Pea Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-tomato-soup",
+      "name": "Tomato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-veggie-pizza",
+      "name": "Veggie Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-spaghetti",
+      "name": "Spaghetti",
+      "added": [
+        "Refined grains"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cabbage-soup",
+      "name": "Cabbage Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-bean-soup",
+      "name": "Bean Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-baked-potato-soup",
+      "name": "Baked Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-new-england-clam-chowder",
+      "name": "New England Clam Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-vegetable-beef-soup",
+      "name": "Vegetable Beef Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pizza-sauce",
+      "name": "Pizza Sauce",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-strawberry-pizza",
+      "name": "Strawberry Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-onion-soup",
+      "name": "Onion Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-butternut-squash-soup",
+      "name": "Butternut Squash Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pizza-dip",
+      "name": "Pizza Dip",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pumpkin-soup",
+      "name": "Pumpkin Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pizza-crust",
+      "name": "Pizza Crust",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-zucchini-soup",
+      "name": "Zucchini Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-egg-drop-soup",
+      "name": "Egg Drop Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-tomato-soup-cake",
+      "name": "Tomato Soup Cake",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-mushroom-soup",
+      "name": "Cream Of Mushroom Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-fish-chowder",
+      "name": "Fish Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-tortellini-soup",
+      "name": "Tortellini Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-creamy-potato-soup",
+      "name": "Creamy Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-potato-soup",
+      "name": "Cream Of Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-italian-wedding-soup",
+      "name": "Italian Wedding Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-mushroom-soup",
+      "name": "Mushroom Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-manhattan-clam-chowder",
+      "name": "Manhattan Clam Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-potato-cheese-soup",
+      "name": "Potato Cheese Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cauliflower-soup",
+      "name": "Cauliflower Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-carrot-soup",
+      "name": "Carrot Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cheesy-potato-soup",
+      "name": "Cheesy Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-wild-rice-soup",
+      "name": "Wild Rice Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-seafood-chowder",
+      "name": "Seafood Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-hot-and-sour-soup",
+      "name": "Hot And Sour Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-upside-down-pizza",
+      "name": "Upside-Down Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-beef-barley-soup",
+      "name": "Beef Barley Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-tomato-soup",
+      "name": "Cream Of Tomato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-italian-vegetable-soup",
+      "name": "Italian Vegetable Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-crab-bisque",
+      "name": "Crab Bisque",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-navy-bean-soup",
+      "name": "Navy Bean Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-beef-vegetable-soup",
+      "name": "Beef Vegetable Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-crab-soup",
+      "name": "Crab Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chocolate-pizza",
+      "name": "Chocolate Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-potato-leek-soup",
+      "name": "Potato Leek Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-vegetable-soup",
+      "name": "Chicken Vegetable Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pizza-hot-dish",
+      "name": "Pizza Hot Dish",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pea-soup",
+      "name": "Pea Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chili-soup",
+      "name": "Chili Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-asparagus-soup",
+      "name": "Cream Of Asparagus Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-creamy-broccoli-soup",
+      "name": "Creamy Broccoli Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-beer-cheese-soup",
+      "name": "Beer Cheese Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-salmon-chowder",
+      "name": "Salmon Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pizza-cups",
+      "name": "Pizza Cups",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-asparagus-soup",
+      "name": "Asparagus Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-corn-chowder",
+      "name": "Chicken Corn Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-turkey-soup",
+      "name": "Turkey Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-leek-and-potato-soup",
+      "name": "Leek And Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-hamburger-vegetable-soup",
+      "name": "Hamburger Vegetable Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-spaghetti-pizza",
+      "name": "Spaghetti Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-creamy-tomato-soup",
+      "name": "Creamy Tomato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-mushroom-barley-soup",
+      "name": "Mushroom Barley Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cheddar-cheese-soup",
+      "name": "Cheddar Cheese Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-deep-dish-pizza",
+      "name": "Deep Dish Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-broccoli-and-cheese-soup",
+      "name": "Broccoli And Cheese Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-shrimp-bisque",
+      "name": "Shrimp Bisque",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-mulligatawny-soup",
+      "name": "Mulligatawny Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cheeseburger-soup",
+      "name": "Cheeseburger Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-cauliflower-soup",
+      "name": "Cream Of Cauliflower Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-mexican-chicken-soup",
+      "name": "Mexican Chicken Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-enchilada-soup",
+      "name": "Chicken Enchilada Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-tomato-basil-soup",
+      "name": "Tomato Basil Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-roasted-tomato-soup",
+      "name": "Roasted Tomato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-meatball-soup",
+      "name": "Meatball Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-lobster-bisque",
+      "name": "Lobster Bisque",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-mexican-soup",
+      "name": "Mexican Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-italian-sausage-soup",
+      "name": "Italian Sausage Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-lemon-bisque",
+      "name": "Lemon Bisque",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-corn-soup",
+      "name": "Chicken Corn Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-white-bean-soup",
+      "name": "White Bean Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-carrot-soup",
+      "name": "Cream Of Carrot Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-shrimp-chowder",
+      "name": "Shrimp Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-strawberry-soup",
+      "name": "Strawberry Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-autumn-soup",
+      "name": "Autumn Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-garlic-soup",
+      "name": "Garlic Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-red-lentil-soup",
+      "name": "Red Lentil Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-steak-soup",
+      "name": "Steak Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-hearty-vegetable-soup",
+      "name": "Hearty Vegetable Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-corn-soup",
+      "name": "Corn Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-chicken-and-rice-soup",
+      "name": "Chicken And Rice Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-spinach-soup",
+      "name": "Spinach Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-pepperoni-pizza-dip",
+      "name": "Pepperoni Pizza Dip",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-cream-of-crab-soup",
+      "name": "Cream Of Crab Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-canadian-cheese-soup",
+      "name": "Canadian Cheese Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-potato-chowder",
+      "name": "Potato Chowder",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-sweet-potato-soup",
+      "name": "Sweet Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-dessert-pizza",
+      "name": "Dessert Pizza",
+      "added": [
+        "Bread & rolls"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-hearty-potato-soup",
+      "name": "Hearty Potato Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-fruit-soup",
+      "name": "Fruit Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-ham-and-bean-soup",
+      "name": "Ham And Bean Soup",
+      "added": [
+        "Prepared soups & broths"
+      ]
+    },
+    {
+      "file": "corpus-titled",
+      "id": "corpus-titled-basic-pizza-dough",
+      "name": "Basic Pizza Dough",
+      "added": [
+        "Bread & rolls"
+      ]
+    }
+  ]
+}

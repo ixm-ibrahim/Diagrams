@@ -1,0 +1,182 @@
+# Project updates needed
+# -------------------------------------------------------------------------
+# Structural / schema-level recommendations for src/data/ and src/core/
+# that emerged from analyzing the recipe NLG dataset against the
+# current 864-ingredient dataset.
+# -------------------------------------------------------------------------
+
+## 0. HIGHEST-IMPACT GAP: plain salt is not in the project
+
+"salt" is the single most-used cooking
+ingredient in the dataset. The project currently has only:
+
+ - Salt cod (bacalao) (a fish, not a seasoning)
+ - Saltine crackers (a baked good)
+
+No plain salt / kosher salt / sea salt / coarse salt entry exists, and
+no "Salt & seasonings" category exists either. Recommendation: add at
+least these three ingredients (per-100g values):
+
+ Salt (table) kcal=0 carbs=0 protein=0 sodium=38758
+ Salt (kosher) kcal=0 carbs=0 protein=0 sodium=37500
+ Salt (sea) kcal=0 carbs=0 protein=0 sodium=38758
+
+Major group: pick a convention. Salt is mineral, not animal/plant/dairy.
+Per single-channel rule, the closest fit is `plant` (consistent with how
+other inorganic-leaning items like baking soda are categorized). This is
+a real edge case worth documenting in CLAUDE.md.
+
+## A. New categories to add to src/data/schema.js
+
+See MISSING_CATEGORIES.txt for the full list. The recipe data shows
+clear gaps in:
+
+ - Salt & seasonings (salt and seasoned-salt blends)
+ - Bread & baked goods (bread crumbs, crackers, vanilla wafers,
+ graham crackers, crescent rolls, pretzels)
+
+ - Margarine & shortening (margarine, oleo, Crisco, shortening, lard)
+
+ - Alcoholic beverages (wine, beer, spirits, liqueurs)
+
+ - Prepared mixes (bisquick, cake mix, jello, pudding mix,
+ fruit cocktail, cherry pie filling)
+
+ - Processed cheese (Velveeta, American cheese, shredded /
+ grated cheese, Monterey Jack)
+
+ - Pickled vegetables (pickles, olives, capers, pimentos,
+ sauerkraut, kimchi)
+
+ - Prepared soups & broths (cream of mushroom / chicken broth / etc.)
+
+ - Coffee & tea (coffee, espresso, instant coffee, tea)
+
+ - Soft drinks (ginger ale, sprite, cola)
+
+ - Jams & preserves (jam, jelly, marmalade, apple butter)
+
+## B. New subcategories within EXISTING categories
+
+See MISSING_SUBCATEGORIES.txt. Some existing categories need new
+subcategories to host the recipe-driven additions, e.g.:
+
+ - Refined grains + "Pasta", "Noodles" (spaghetti, macaroni, egg noodles
+ etc. should land here)
+ - Aged cheese + "Hard grating cheese" (romano, pecorino)
+ - Aged cheese + "Soft-ripened" (already exists)
+ - Non-starchy vegetables + "Stalks" (rhubarb), "Bulbs" (fennel)
+ - Whole grains + "Pseudocereals" (already exists), but recipe data
+ brings hominy as a separate subcategory candidate.
+
+## C. Possible new food group: Beverages
+
+The current 11 food groups don't have a natural home for liquids that
+aren't condiments (juice, soda, coffee, tea, alcohol, broth). Options:
+
+ (1) Add a 12th food group "Beverages" and migrate Juices / Alcoholic
+ beverages / Soft drinks / Coffee & tea / Prepared soups & broths
+ under it. Cleanest semantically.
+
+ (2) Keep 11 groups and slot Juices under Fruits, alcohol under
+ Condiments & sauces, broths under Condiments & sauces, coffee
+ & tea under Herbs & spices (this is what the current proposed
+ taxonomy does). Less semantically pure but avoids touching
+ FOOD_GROUPS constant and the validators/UI built around it.
+
+Recommendation: (1) is cleaner but requires updating
+food-map-development-plan.md (which lists 11 groups in Phase 13.5),
+the filter tree default ordering, and the contains-tag examples.
+If aiming for minimal churn, do (2).
+
+## D. Schema: optional 'form' field
+
+Form distinctions (fresh / canned / frozen / dried / cooked / cured)
+multiply categories if encoded as separate categories. Example: Fruits
+would explode from 47 to ~200 entries if we added every canned/frozen/
+dried form.
+
+Recommendation: add an optional `form` field to the schema:
+ form: 'fresh' | 'canned' | 'frozen' | 'dried' | 'cured' | 'cooked'
+ | 'powdered' | 'paste' | 'pickled' | undefined
+
+Default behavior (when not set): treat as 'fresh' for produce, 'raw'
+for meats. This lets recipe-meal authoring match the right form (e.g.
+"canned tomato" vs "fresh tomato") without doubling the category tree.
+
+## E. 'contains' tag additions
+
+The recipe dataset surfaces foods that need new `contains` tags or
+should pick up existing ones the current ingredients miss:
+
+ - 'alcohol' tag: needs to apply to wine, beer, sherry, brandy,
+ vermouth, all liqueurs. Existing only marks Shaoxing wine and
+ extracts. When alcoholic beverages are added, ensure the tag.
+ - 'caffeine' tag: new tag for coffee, tea, cola, chocolate (cacao).
+ Currently no caffeine restriction exists; users with caffeine
+ sensitivity (or pregnancy considerations) would benefit.
+ - 'soy' tag: many soy-containing ingredients (soy sauce, tempeh,
+ edamame) already tag this, but verify miso, hoisin, teriyaki,
+ tofu-based mixes do too.
+
+## F. Beverages group implications for restrictions
+
+If alcoholic beverages are added, the existing Halal restriction
+(excludes pork, alcohol) becomes meaningful for the first time at
+scale. Currently only ~3 ingredients carry the alcohol tag.
+
+## G. group_weights for spanning ingredients
+
+Several ingredients the recipes assume don't cleanly fit the
+single-channel group_weights rule:
+
+ - Cream of mushroom soup: dairy + plant (mushroom) - per the
+ single-group rule it must pick one. Recommend `dairy`
+ (dominant by mass).
+ - Egg noodles: grain (plant) + egg (animal) - recommend `plant`
+ (grain dominant), tag `contains: ['gluten', 'eggs']`.
+ - Velveeta / American cheese: dairy-dominant but contains added
+ oil/emulsifiers. Recommend `dairy`.
+ - Margarine: plant fat with optional dairy. Recommend `plant`
+ (most margarine is plant-based; tag dairy when applicable).
+ - Eggnog: dairy + egg. Recommend `dairy`.
+
+Reaffirm the single-group rule in CLAUDE.md or schema.js so the dev
+agent doesn't accidentally introduce blended group_weights.
+
+## H. Naming convention for prepared / processed entries
+
+Suggested convention so search and filter UX stay readable:
+
+ Cream of mushroom soup (condensed)
+ Chicken broth (low-sodium)
+ Bisquick (baking mix)
+ American cheese (slices)
+ Margarine (stick)
+ Whipped topping (frozen)
+ Cherry pie filling (canned)
+
+Parenthetical form is consistent with existing entries like
+"Tomato sauce (canned)" and "Coconut milk (canned)".
+
+## I. Phase 14 alignment
+
+Phase 14 of food-map-development-plan.md targets ~30-50 categories
+with ~80-120 subcategories total. The category gaps surfaced here
+would put the count around 51 categories - on the upper end of Phase
+14's target. With the new subcategories from MISSING_SUBCATEGORIES.txt,
+the total subcategory count grows by ~40-60 new subcategory NAMES (most
+within new categories; a smaller number within existing categories).
+
+Phase 14's `tags` array is the right home for cross-cutting labels
+like "snack ingredient", "breakfast", form labels (canned/frozen/dried),
+and cuisine markers.
+
+## J. Validation step
+
+After adding new ingredients & categories, re-run analyze_recipes.py
+to confirm coverage:
+ - <5% of recipe ingredient occurrences should remain uncategorized
+ - No category should hold >50 ingredients (sign of needing a split)
+ - Every food_group should have >=2 categories
+ - Every category should have >=2 subcategories (avoid singletons)

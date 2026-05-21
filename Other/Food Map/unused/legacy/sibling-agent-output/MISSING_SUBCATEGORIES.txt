@@ -1,0 +1,119 @@
+# Missing subcategories
+# (category, subcategory) pairs proposed for unmatched ingredients that do not
+# exist in the project today.
+#
+# Current dataset has 292 subcategory NAMES across 40 categories.
+#
+# Sorted alphabetically by subcategory name.  Rows whose CATEGORY is itself new
+# are flagged in the category_status column (see MISSING_CATEGORIES.txt).
+#
+# category_status: 'NEW category' (defined in MISSING_CATEGORIES.txt) or 'existing'.
+#
+category,subcategory,food_group,category_status
+Margarine & shortening,Animal fats,Fats & oils,NEW category
+Prepared mixes,Baking mixes,Grains,NEW category
+Alcoholic beverages,Beer,Condiments & sauces,NEW category
+Bread & baked goods,Biscuits,Grains,NEW category
+Alcoholic beverages,Brandy,Condiments & sauces,NEW category
+Bread & baked goods,Bread,Grains,NEW category
+Bread & baked goods,Bread crumbs,Grains,NEW category
+Prepared soups & broths,Broths & stocks,Condiments & sauces,NEW category
+Prepared mixes,Cake mixes,Sweets,NEW category
+Pickled vegetables,Capers,Condiments & sauces,NEW category
+Prepared mixes,Cereals,Grains,NEW category
+Alcoholic beverages,Cider,Condiments & sauces,NEW category
+Alcoholic beverages,Cocktail mixers,Condiments & sauces,NEW category
+Coffee & tea,Coffee,Herbs & spices,NEW category
+Prepared mixes,Cookie mixes,Sweets,NEW category
+Bread & baked goods,Cookies,Grains,NEW category
+Bread & baked goods,Cornbread,Grains,NEW category
+Bread & baked goods,Crackers,Grains,NEW category
+Bread & baked goods,Croutons,Grains,NEW category
+Soft drinks,Dairy beverages,Sweets,NEW category
+Bread & baked goods,Flatbread,Grains,NEW category
+Extracts & essences,Food coloring,Herbs & spices,existing
+Frozen dairy,Frozen desserts,Dairy,existing
+Juices,Fruit juices,Fruits,NEW category
+Juices,Fruit nectars,Fruits,NEW category
+Jams & preserves,Fruit preserves,Sweets,NEW category
+Prepared mixes,Gelatins,Sweets,NEW category
+Alcoholic beverages,Gin,Condiments & sauces,NEW category
+Bread & baked goods,Graham crackers,Grains,NEW category
+Aged cheese,Hard grating cheese,Dairy,existing
+Alcoholic beverages,Liqueurs,Condiments & sauces,NEW category
+Margarine & shortening,Margarine,Fats & oils,NEW category
+Bread & baked goods,Muffins,Grains,NEW category
+Pickled vegetables,Other pickled,Condiments & sauces,NEW category
+Bread & baked goods,Pastries,Grains,NEW category
+Legumes,Peas,Protein (plant),existing
+Pickled vegetables,Pickled cucumber & cabbage,Condiments & sauces,NEW category
+Prepared mixes,Pie fillings,Sweets,NEW category
+Pickled vegetables,Pimentos,Condiments & sauces,NEW category
+Bread & baked goods,Pizza dough,Grains,NEW category
+Bread & baked goods,Pretzels,Grains,NEW category
+Processed cheese,Processed cheese,Dairy,NEW category
+Prepared mixes,Puddings,Sweets,NEW category
+Bread & baked goods,Rolls,Grains,NEW category
+Alcoholic beverages,Rum,Condiments & sauces,NEW category
+Salt & seasonings,Salt,Herbs & spices,NEW category
+Salt & seasonings,Seasoned salts,Herbs & spices,NEW category
+Prepared mixes,Seasoning mixes,Condiments & sauces,NEW category
+Processed cheese,Semi-soft cheese,Dairy,NEW category
+Margarine & shortening,Shortening,Fats & oils,NEW category
+Processed cheese,Shredded cheese,Dairy,NEW category
+Soft drinks,Soft drinks,Sweets,NEW category
+Non-starchy vegetables,Stalks,Vegetables,existing
+Prepared mixes,Stuffing mixes,Grains,NEW category
+Jams & preserves,Sweet spreads,Sweets,NEW category
+Coffee & tea,Tea,Herbs & spices,NEW category
+Alcoholic beverages,Tequila,Condiments & sauces,NEW category
+Bread & baked goods,Tortillas,Grains,NEW category
+Alcoholic beverages,Vodka,Condiments & sauces,NEW category
+Prepared mixes,Whipped toppings,Sweets,NEW category
+Alcoholic beverages,Whisky,Condiments & sauces,NEW category
+Alcoholic beverages,Wine,Condiments & sauces,NEW category
+Bread & baked goods,Wrappers,Grains,NEW category
+
+# ---
+# Reference: existing subcategories per category
+# ---
+# Aged cheese: Aged cheese, Blue, Blue cheese, Cheddar, Feta, Mozzarella, Parmesan, Soft-ripened, Swiss
+# Baking ingredients: Leaveners, Setting agents, Stabilizers, Starches
+# Berries: Berries, Blackberry, Blueberry, Cranberry, Raspberry, Strawberry
+# Canned & cured fish: Canned fish, Cured fish, Roe, Smoked fish
+# Condiments & sauces: Asian sauces, Avocado, Chili pastes, Chinese pantry, Chutneys, Curry pastes, Dairy sauces, Emulsions, Fermented pastes, Herb sauces, Hot sauces, Indian curry pastes, Japanese pantry, Korean pantry, Latin American pastes, Mexican pastes, Mixed condiments, Mustards, Pickled, Salad dressings, Southeast Asian pantry, Spreads, Syrups, Thai pantry, Tomato condiments, Vietnamese pantry, Vinegars
+# Cream & butter: Animal fats, Butter, Butter alternatives, Clarified butter, Cream, Cultured cream, Spiced butters
+# Cruciferous vegetables: Brassicas, Broccoli, Brussels sprouts, Cauliflower, Root brassicas
+# Dried fruits: Date, Dried apricot, Dried cranberry, Dried fruits, Florals, Prune, Raisin
+# Dried spices: Chili powders, Dried herbs, Ground spices, Peppers, Pods, Seed spices, Whole spices
+# Eggs: Egg white, Egg yolk, Eggs, Whole egg
+# Extracts & essences: Extracts, Floral waters, Whole spices
+# Fermented dairy: Cultured milk, Fermented milk, Other, Strained yogurt, Yogurt drink, Yogurt-style
+# Flours: Legume flours, Nut flours, Other flours, Starches, Wheat flours
+# Fresh cheese: Concentrated milk, Cottage, Cream cheese, Fresh cheese, Mozzarella, Ricotta, Stretched curd
+# Fresh herbs: Aromatics, Hard herbs, Soft herbs
+# Freshwater fish: Freshwater fish
+# Frozen dairy: Ice cream
+# Fruits: Apple, Avocado, Banana, Citrus, Grape, Melon, Melons, Other fruits, Pear, Stone fruit, Stone fruits, Tropical
+# Leafy greens: Alliums, Arugula, Asian greens, Bitter greens, Cabbage, Chard, Collards, Cooking greens, Kale, Lettuce, Salad greens, Spinach, Sprouts, Wild greens
+# Legumes: Beans, Chickpea, Lentil, Lentils, Peanut, Plant protein, Soy, Wheat protein
+# Milk: Animal milk, Concentrated milk, Cow milk
+# Non-starchy vegetables: Allium, Alliums, Aquatic, Aromatics, Asparagus, Bell pepper, Bulbs, Celery, Chili peppers, Cucumber, Eggplant, Fermented vegetables, Flower vegetables, Gourds, Green beans, Mushroom, Mushrooms, Olives, Other, Pickled vegetables, Pods, Root vegetables, Sea vegetables, Shoots, Sprouts, Summer squash, Tomato, Tomato products, Tomatoes
+# Nut butters: Almond butter, Nut butters, Peanut butter, Seed butters, Sesame paste
+# Nuts: Almond, Cashew, Cocoa, Coconut, Hazelnut, Pecan, Pistachio, Tree nuts, Tubers, Walnut
+# Oils: Avocado oil, Canola oil, Coconut oil, Infused oils, Olive oil, Sesame oil, Solid fats, Vegetable oils
+# Oily fish: Anchovies, Mackerel, Oily fish, Salmon, Sardines, Trout, Tuna
+# Organ meats: Heart, Kidney, Liver, Other, Other animal products, Sweetbreads, Tongue, Tripe
+# Plant milks: Plant milks
+# Poultry: Chicken, Duck, Game bird, Goose, Ground poultry, Turkey
+# Processed meat: Canned meat, Cured meat, Cured pork, Cured sausage, Deli, Dried, Fresh sausage, Other, Sausage, Smoked sausage
+# Red meat: Beef, Game, Ground beef, Lamb, Other, Pork, Veal
+# Refined grains: Bread, Crackers, Flatbread, Noodles, Pasta, Pastry, Rice, Tortilla
+# Seeds: Chia, Flax, Pumpkin seed, Seeds, Sesame, Sunflower seed
+# Shellfish: Bivalves, Cephalopods, Crab, Crustaceans, Lobster, Mollusks, Mussels, Other, Oysters, Scallops, Shrimp
+# Spice blends: American blends, Caribbean blends, Chinese blends, Egyptian blends, Ethiopian blends, European blends, Indian blends, Japanese blends, Latin blends, Levantine blends, Mexican blends, Middle Eastern blends, North African blends
+# Starchy vegetables: Beet, Carrot, Cassava products, Corn, Other, Potato, Potatoes, Root vegetables, Squash, Sweet potato, Tropical starches, Tubers, Winter squash
+# Sweets: Chocolate, Confectionery, Honey, Pastries, Preserves, Sugar, Sugar substitutes, Sweeteners, Syrup
+# White fish: Cod, Flatfish, Haddock, Halibut, Pollock, Saltwater white fish, Tilapia
+# Whole grains: Barley, Bread, Flatbread, Noodles, Oats, Pasta, Pseudocereal, Pseudocereals, Rice, Wheat, Whole grains
+# Yogurt: Greek yogurt, Regular yogurt

@@ -1,0 +1,14 @@
+# Conversation data — personal, often large, not source.
+chats/
+
+# Local backup created during the Phase 1 refactor.
+council.py.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# System
+.DS_Store
+Thumbs.db

@@ -1,0 +1,467 @@
+[
+  {
+    "id": "corpus-fresh-fruit-plate",
+    "name": "Fresh fruit plate",
+    "reason": "duplicate signature; absorbed into 'Sliced apples'"
+  },
+  {
+    "id": "corpus-fruit-cocktail",
+    "name": "Fruit cocktail",
+    "reason": "duplicate signature; absorbed into 'Sliced apples'"
+  },
+  {
+    "id": "corpus-brown-butter-sauce",
+    "name": "Brown butter sauce",
+    "reason": "duplicate signature; absorbed into 'Compound butter'"
+  },
+  {
+    "id": "corpus-roasted-potatoes",
+    "name": "Roasted potatoes",
+    "reason": "duplicate signature; absorbed into 'Roasted vegetables'"
+  },
+  {
+    "id": "corpus-warm-milk",
+    "name": "Warm milk",
+    "reason": "duplicate signature; absorbed into 'Glass of milk'"
+  },
+  {
+    "id": "corpus-saut-ed-pears",
+    "name": "Sautéed pears",
+    "reason": "duplicate signature; absorbed into 'Buttered apples'"
+  },
+  {
+    "id": "corpus-brown-butter-praline",
+    "name": "Brown-butter praline",
+    "reason": "duplicate signature; absorbed into 'Buttered nuts'"
+  },
+  {
+    "id": "corpus-potato-pancakes-5",
+    "name": "Potato pancakes (buttery)",
+    "reason": "duplicate signature; absorbed into 'Potato pancakes'"
+  },
+  {
+    "id": "corpus-cottage-cheese-peaches",
+    "name": "Cottage cheese & peaches",
+    "reason": "duplicate signature; absorbed into 'Ricotta with fruit'"
+  },
+  {
+    "id": "corpus-strawberry-bowl",
+    "name": "Strawberry bowl",
+    "reason": "duplicate signature; absorbed into 'Mixed berries'"
+  },
+  {
+    "id": "corpus-roasted-veg-with-apple",
+    "name": "Roasted veg with apple",
+    "reason": "duplicate signature; absorbed into 'Waldorf-style salad'"
+  },
+  {
+    "id": "corpus-peanut-butter-cookies-2",
+    "name": "Peanut butter cookies",
+    "reason": "duplicate signature; absorbed into 'Peanut butter cookies (buttery)'"
+  },
+  {
+    "id": "corpus-pecan-shortbread",
+    "name": "Pecan shortbread",
+    "reason": "duplicate signature; absorbed into 'Almond cookies (buttery)'"
+  },
+  {
+    "id": "corpus-almond-cookies-6",
+    "name": "Almond cookies",
+    "reason": "duplicate signature; absorbed into 'Almond cookies (buttery)'"
+  },
+  {
+    "id": "corpus-nut-cake-4",
+    "name": "Nut cake (with milk)",
+    "reason": "duplicate signature; absorbed into 'Nut cake'"
+  },
+  {
+    "id": "corpus-pecan-muffins",
+    "name": "Pecan muffins",
+    "reason": "duplicate signature; absorbed into 'Nut cake'"
+  },
+  {
+    "id": "corpus-cr-pes",
+    "name": "Crêpes (with milk)",
+    "reason": "duplicate signature; absorbed into 'Pancakes (with milk)'"
+  },
+  {
+    "id": "corpus-waffles",
+    "name": "Waffles",
+    "reason": "duplicate signature; absorbed into 'Pancakes (with milk)'"
+  },
+  {
+    "id": "corpus-pancakes-2",
+    "name": "Pancakes (buttery, with milk)",
+    "reason": "duplicate signature; absorbed into 'Pancakes (with milk)'"
+  },
+  {
+    "id": "corpus-waffles-2",
+    "name": "Waffles (buttery)",
+    "reason": "duplicate signature; absorbed into 'Pancakes (with milk)'"
+  },
+  {
+    "id": "corpus-muffins",
+    "name": "Muffins",
+    "reason": "duplicate signature; absorbed into 'Pancakes (with milk)'"
+  },
+  {
+    "id": "corpus-pancakes-4",
+    "name": "Pancakes",
+    "reason": "duplicate signature; absorbed into 'Pancakes (with milk)'"
+  },
+  {
+    "id": "corpus-apple-pancakes",
+    "name": "Apple pancakes",
+    "reason": "duplicate signature; absorbed into 'Apple pancakes (with milk)'"
+  },
+  {
+    "id": "corpus-pot-roast-with-veg",
+    "name": "Pot roast with veg",
+    "reason": "duplicate signature; absorbed into 'Beef & vegetables'"
+  },
+  {
+    "id": "corpus-pecan-pear-bread",
+    "name": "Pecan-pear bread",
+    "reason": "duplicate signature; absorbed into 'Apple-walnut muffin'"
+  },
+  {
+    "id": "corpus-cheesecake-3",
+    "name": "Cheesecake (flour-based)",
+    "reason": "duplicate signature; absorbed into 'Cheesecake'"
+  },
+  {
+    "id": "corpus-cheesecake-creamy",
+    "name": "Cheesecake (creamy)",
+    "reason": "duplicate signature; absorbed into 'Cheesecake'"
+  },
+  {
+    "id": "corpus-roasted-nuts",
+    "name": "Roasted nuts",
+    "reason": "duplicate signature; absorbed into 'Mixed nuts'"
+  },
+  {
+    "id": "corpus-apple-cake",
+    "name": "Apple cake",
+    "reason": "duplicate signature; absorbed into 'Fruit clafoutis'"
+  },
+  {
+    "id": "corpus-apple-cake-5",
+    "name": "Apple cake (with milk)",
+    "reason": "duplicate signature; absorbed into 'Fruit clafoutis'"
+  },
+  {
+    "id": "corpus-fruit-crumble",
+    "name": "Fruit crumble",
+    "reason": "duplicate signature; absorbed into 'Whole-wheat apple crisp'"
+  },
+  {
+    "id": "corpus-carbonara-3",
+    "name": "Carbonara",
+    "reason": "duplicate signature; absorbed into 'Carbonara (with cheddar, with greens, with bacon)'"
+  },
+  {
+    "id": "corpus-vegetable-hash",
+    "name": "Vegetable hash",
+    "reason": "duplicate signature; absorbed into 'Roasted root medley'"
+  },
+  {
+    "id": "corpus-ham-cheese-plate",
+    "name": "Ham & cheese plate",
+    "reason": "duplicate signature; absorbed into 'Cheese & charcuterie'"
+  },
+  {
+    "id": "corpus-sour-cream-biscuit",
+    "name": "Sour cream biscuit",
+    "reason": "duplicate signature; absorbed into 'Yogurt flatbread'"
+  },
+  {
+    "id": "corpus-cocktail",
+    "name": "Cocktail",
+    "reason": "duplicate signature; absorbed into 'Glass of wine'"
+  },
+  {
+    "id": "corpus-beer",
+    "name": "Beer",
+    "reason": "duplicate signature; absorbed into 'Glass of wine'"
+  },
+  {
+    "id": "corpus-baked-egg-with-fruit",
+    "name": "Baked egg with fruit",
+    "reason": "duplicate signature; absorbed into 'Apple-egg pancake'"
+  },
+  {
+    "id": "corpus-cr-pe-batter",
+    "name": "Crêpe batter",
+    "reason": "duplicate signature; absorbed into 'Pancake batter'"
+  },
+  {
+    "id": "corpus-cheese-topped-vegetables",
+    "name": "Cheese-topped vegetables",
+    "reason": "duplicate signature; absorbed into 'Cheesy roasted veg'"
+  },
+  {
+    "id": "corpus-yogurt-loaf",
+    "name": "Yogurt loaf",
+    "reason": "duplicate signature; absorbed into 'Sour cream pound cake'"
+  },
+  {
+    "id": "corpus-walnut-apple-pie",
+    "name": "Walnut apple pie",
+    "reason": "duplicate signature; absorbed into 'Apple-pecan cake'"
+  },
+  {
+    "id": "corpus-almond-butter-on-brown-rice",
+    "name": "Almond butter on brown rice",
+    "reason": "duplicate signature; absorbed into 'Peanut butter oatmeal'"
+  },
+  {
+    "id": "corpus-oat-cookies",
+    "name": "Oat cookies (buttery)",
+    "reason": "duplicate signature; absorbed into 'Whole-wheat cookies'"
+  },
+  {
+    "id": "corpus-fruit-cobbler-5",
+    "name": "Fruit cobbler (with milk)",
+    "reason": "duplicate signature; absorbed into 'Fruit cobbler'"
+  },
+  {
+    "id": "corpus-beef-quinoa-bowl",
+    "name": "Beef quinoa bowl",
+    "reason": "duplicate signature; absorbed into 'Beef & brown rice'"
+  },
+  {
+    "id": "corpus-almond-butter-spread",
+    "name": "Almond butter spread",
+    "reason": "duplicate signature; absorbed into 'Whipped peanut butter'"
+  },
+  {
+    "id": "corpus-saut-ed-veg-in-butter",
+    "name": "Sautéed veg in butter",
+    "reason": "duplicate signature; absorbed into 'Buttered vegetables'"
+  },
+  {
+    "id": "corpus-ham-vegetables",
+    "name": "Ham & vegetables",
+    "reason": "duplicate signature; absorbed into 'Bacon-stewed greens'"
+  },
+  {
+    "id": "corpus-sheet-pan-chicken",
+    "name": "Sheet-pan chicken",
+    "reason": "duplicate signature; absorbed into 'Chicken & vegetables'"
+  },
+  {
+    "id": "corpus-ricotta-whipped-with-butter",
+    "name": "Ricotta whipped with butter",
+    "reason": "duplicate signature; absorbed into 'Creamy cheese spread'"
+  },
+  {
+    "id": "corpus-boozy-creamy-coffee",
+    "name": "Boozy creamy coffee",
+    "reason": "duplicate signature; absorbed into 'Irish coffee'"
+  },
+  {
+    "id": "corpus-chickpeas",
+    "name": "Chickpeas",
+    "reason": "duplicate signature; absorbed into 'Cooked lentils'"
+  },
+  {
+    "id": "corpus-whole-wheat-pancakes",
+    "name": "Whole-wheat pancakes",
+    "reason": "duplicate signature; absorbed into 'Oat cookies'"
+  },
+  {
+    "id": "corpus-hot-tea",
+    "name": "Hot tea",
+    "reason": "duplicate signature; absorbed into 'Coffee'"
+  },
+  {
+    "id": "corpus-toast",
+    "name": "Toast",
+    "reason": "duplicate signature; absorbed into 'Sliced bread'"
+  },
+  {
+    "id": "corpus-scrambled-eggs-with-milk",
+    "name": "Scrambled eggs with milk",
+    "reason": "duplicate signature; absorbed into 'French custard'"
+  },
+  {
+    "id": "corpus-omelet-2",
+    "name": "Omelet",
+    "reason": "duplicate signature; absorbed into 'Omelet (with milk)'"
+  },
+  {
+    "id": "corpus-date-cake",
+    "name": "Date cake",
+    "reason": "duplicate signature; absorbed into 'Date-walnut butter cake'"
+  },
+  {
+    "id": "corpus-almond-macaroon",
+    "name": "Almond macaroon",
+    "reason": "duplicate signature; absorbed into 'Nut meringue'"
+  },
+  {
+    "id": "corpus-butter-finished-oatmeal",
+    "name": "Butter-finished oatmeal",
+    "reason": "duplicate signature; absorbed into 'Buttered brown rice'"
+  },
+  {
+    "id": "corpus-ricotta-stuffed-vegetables",
+    "name": "Ricotta-stuffed vegetables",
+    "reason": "duplicate signature; absorbed into 'Caprese with veg'"
+  },
+  {
+    "id": "corpus-milk-soaked-bread",
+    "name": "Milk-soaked bread",
+    "reason": "duplicate signature; absorbed into 'Bread pudding base'"
+  },
+  {
+    "id": "corpus-creamy-latte",
+    "name": "Creamy latte",
+    "reason": "duplicate signature; absorbed into 'Coffee with cream'"
+  },
+  {
+    "id": "corpus-cottage-cheese-bowl",
+    "name": "Cottage cheese bowl",
+    "reason": "duplicate signature; absorbed into 'Ricotta plate'"
+  },
+  {
+    "id": "corpus-fresh-mozzarella",
+    "name": "Fresh mozzarella",
+    "reason": "duplicate signature; absorbed into 'Ricotta plate'"
+  },
+  {
+    "id": "corpus-plain-rice",
+    "name": "Plain rice",
+    "reason": "duplicate signature; absorbed into 'Cooked pasta'"
+  },
+  {
+    "id": "corpus-cheesy-mashed-potatoes-2",
+    "name": "Cheesy mashed potatoes (with milk, with vegetables)",
+    "reason": "duplicate signature; absorbed into 'Cheesy mashed potatoes'"
+  },
+  {
+    "id": "corpus-pan-fried-potatoes",
+    "name": "Pan-fried potatoes",
+    "reason": "duplicate signature; absorbed into 'Buttered mashed potatoes'"
+  },
+  {
+    "id": "corpus-lentils-in-butter-sauce",
+    "name": "Lentils in butter sauce",
+    "reason": "duplicate signature; absorbed into 'Buttered beans'"
+  },
+  {
+    "id": "corpus-pork-pear",
+    "name": "Pork & pear",
+    "reason": "duplicate signature; absorbed into 'Beef with apples (with vegetables)'"
+  },
+  {
+    "id": "corpus-french-toast-2",
+    "name": "French toast (flour-based, with milk)",
+    "reason": "duplicate signature; absorbed into 'French toast'"
+  },
+  {
+    "id": "corpus-cheese-in-milk-sauce",
+    "name": "Cheese in milk sauce",
+    "reason": "duplicate signature; absorbed into 'Paneer in milk'"
+  },
+  {
+    "id": "corpus-raisin-bread-pudding-3",
+    "name": "Raisin bread pudding",
+    "reason": "duplicate signature; absorbed into 'Raisin bread pudding (buttery)'"
+  },
+  {
+    "id": "corpus-fruit-infused-tea",
+    "name": "Fruit-infused tea",
+    "reason": "duplicate signature; absorbed into 'Apple-spiced tea'"
+  },
+  {
+    "id": "corpus-hard-boiled-eggs",
+    "name": "Hard-boiled eggs",
+    "reason": "duplicate signature; absorbed into 'Fried eggs'"
+  },
+  {
+    "id": "corpus-fruit-and-nut-muffins",
+    "name": "Fruit-and-nut muffins",
+    "reason": "duplicate signature; absorbed into 'Apple-walnut cake'"
+  },
+  {
+    "id": "corpus-beef-pasta",
+    "name": "Beef pasta",
+    "reason": "duplicate signature; absorbed into 'Beef stir-fry with rice'"
+  },
+  {
+    "id": "corpus-chicken-in-butter-sauce",
+    "name": "Chicken in butter sauce",
+    "reason": "duplicate signature; absorbed into 'Butter-roasted chicken'"
+  },
+  {
+    "id": "corpus-chicken-pasta",
+    "name": "Chicken pasta (with vegetables)",
+    "reason": "duplicate signature; absorbed into 'Chicken pasta'"
+  },
+  {
+    "id": "corpus-buttered-rice",
+    "name": "Buttered rice",
+    "reason": "duplicate signature; absorbed into 'Buttered pasta'"
+  },
+  {
+    "id": "corpus-rice-beans",
+    "name": "Rice & beans",
+    "reason": "duplicate signature; absorbed into 'Bean burrito filling'"
+  },
+  {
+    "id": "corpus-lentil-grain-bowl",
+    "name": "Lentil grain bowl",
+    "reason": "duplicate signature; absorbed into 'Rice & beans (with whole grain)'"
+  },
+  {
+    "id": "corpus-ricotta-egg-pancakes",
+    "name": "Ricotta-egg pancakes",
+    "reason": "duplicate signature; absorbed into 'Cheese soufflé'"
+  },
+  {
+    "id": "corpus-milk-tea",
+    "name": "Milk tea",
+    "reason": "duplicate signature; absorbed into 'Café au lait'"
+  },
+  {
+    "id": "corpus-boiled-crab",
+    "name": "Boiled crab",
+    "reason": "duplicate signature; absorbed into 'Steamed shrimp'"
+  },
+  {
+    "id": "corpus-raisins",
+    "name": "Raisins",
+    "reason": "duplicate signature; absorbed into 'Dried fruit mix'"
+  },
+  {
+    "id": "corpus-chicken-ricotta",
+    "name": "Chicken & ricotta",
+    "reason": "duplicate signature; absorbed into 'Chicken with feta'"
+  },
+  {
+    "id": "corpus-pie-dough",
+    "name": "Pie dough",
+    "reason": "duplicate sig; absorbed into 'Pastry dough'"
+  },
+  {
+    "id": "corpus-cream-sauce",
+    "name": "Cream sauce",
+    "reason": "duplicate sig; absorbed into 'Béchamel base'"
+  },
+  {
+    "id": "corpus-trail-mix-with-apples",
+    "name": "Trail mix with apples",
+    "reason": "duplicate sig; absorbed into 'Fruit & nut platter'"
+  },
+  {
+    "id": "corpus-caf-au-lait",
+    "name": "Café au lait (buttery)",
+    "reason": "duplicate sig; absorbed into 'Latte'"
+  },
+  {
+    "id": "corpus-kefir",
+    "name": "Kefir",
+    "reason": "duplicate sig; absorbed into 'Yogurt bowl (with yogurt)'"
+  }
+]

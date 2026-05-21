@@ -1,0 +1,218 @@
+# Corpus title stats
+
+Total rows: 2,231,142
+Distinct canonical titles: 1,162,731
+
+## Frequency buckets
+  >=  1000: 70 titles
+  >=   500: 192 titles
+  >=   200: 621 titles
+  >=   100: 1,314 titles
+  >=    50: 2,825 titles
+  >=    20: 7,534 titles
+  >=    10: 16,360 titles
+  >=     5: 38,253 titles
+  >=     2: 169,137 titles
+  >=     1: 1,162,731 titles
+
+## Top 200 canonical titles by frequency
+    4492  Chicken Casserole
+    4167  Broccoli Casserole
+    2693  Banana Bread
+    2650  Pecan Pie
+    2622  Cheese Ball
+    2607  Squash Casserole
+    2512  Zucchini Bread
+    2317  Chili
+    2264  Meat Loaf
+    2135  Lasagna
+    2091  Baked Beans
+    2063  Fruit Salad
+    1984  Peanut Butter Cookies
+    1934  Pumpkin Bread
+    1813  Carrot Cake
+    1812  Corn Casserole
+    1791  Cranberry Salad
+    1776  Chicken Pot Pie
+    1766  Potato Casserole
+    1758  Chocolate Chip Cookies
+    1752  Broccoli Salad
+    1688  Brownies
+    1668  Banana Nut Bread
+    1633  Sweet Potato Casserole
+    1615  Taco Salad
+    1597  Apple Crisp
+    1586  Sugar Cookies
+    1580  Pound Cake
+    1534  Peanut Brittle
+    1520  Peanut Butter Pie
+    1520  Peach Cobbler
+    1496  Peanut Butter Fudge
+    1472  Beef Stroganoff
+    1464  Sausage Balls
+    1437  Corn Pudding
+    1436  Breakfast Casserole
+    1397  Strawberry Pie
+    1390  Barbecue Sauce
+    1365  Green Bean Casserole
+    1350  Apple Cake
+    1339  Potato Soup
+    1333  Dump Cake
+    1321  Spinach Dip
+    1317  Fresh Apple Cake
+    1304  Banana Pudding
+    1302  Monkey Bread
+    1281  Potato Salad
+    1272  Chocolate Pie
+    1257  Oatmeal Cookies
+    1240  Macaroni And Cheese
+    1236  Fudge
+    1211  Pumpkin Pie
+    1163  Shrimp Dip
+    1149  Punch
+    1113  Spaghetti Sauce
+    1103  Chicken Salad
+    1089  Taco Dip
+    1080  Chocolate Cake
+    1076  Scalloped Potatoes
+    1056  Pie Crust
+    1053  Banana Split Cake
+    1045  Fruit Dip
+    1044  Pasta Salad
+    1040  Zucchini Casserole
+    1036  Chicken Enchiladas
+    1034  Vegetable Casserole
+    1031  Sweet Potato Pie
+    1010  Beef Stew
+    1010  Rice Pudding
+    1001  Caramel Corn
+     987  Macaroni Salad
+     986  Hot Chicken Salad
+     977  Coconut Pie
+     971  Hamburger Casserole
+     969  Bread Pudding
+     964  Mexican Cornbread
+     954  Mexican Casserole
+     937  Sloppy Joes
+     928  Stuffed Mushrooms
+     907  Hush Puppies
+     902  Cheese Cake
+     898  Chicken Divan
+     891  Apple Pie
+     883  Chicken And Rice
+     882  Blueberry Muffins
+     872  Taco Soup
+     870  Chicken Spaghetti
+     869  Watergate Salad
+     868  Red Velvet Cake
+     866  Tuna Casserole
+     855  Fruit Pizza
+     829  Applesauce Cake
+     829  Spanish Rice
+     828  Hash Brown Casserole
+     812  Vegetable Dip
+     809  No Bake Cookies
+     809  Dirt Cake
+     808  Peanut Butter Balls
+     803  Salsa
+     796  Tater Tot Casserole
+     788  Chicken Pie
+     783  Cook The Book
+     773  Chicken And Dumplings
+     770  Vegetable Soup
+     761  Buttermilk Pie
+     748  Vegetable Pizza
+     740  Coconut Cake
+     717  French Onion Soup
+     714  Pizza Casserole
+     713  Angel Biscuits
+     713  Snickerdoodles
+     705  Corn Bread
+     702  Cabbage Casserole
+     700  Guacamole
+     699  Lasagne
+     699  Ice Cream
+     698  Sour Cream Pound Cake
+     693  Punch Bowl Cake
+     684  Chicken Tetrazzini
+     684  Pretzel Salad
+     679  Spaghetti Salad
+     672  Strawberry Salad
+     669  Cheesecake
+     666  Strawberry Cake
+     662  Artichoke Dip
+     661  Bread And Butter Pickles
+     656  Rolls
+     656  Pepper Steak
+     651  Bran Muffins
+     649  Chicken And Rice Casserole
+     643  Broccoli Cornbread
+     640  Cream Cheese Pound Cake
+     634  Pork Chop Casserole
+     629  Fruit Cobbler
+     626  Lemon Pie
+     624  Chicken Cacciatore
+     624  Crab Dip
+     622  Deviled Eggs
+     620  Mexican Corn Bread
+     612  Stuffed Peppers
+     611  Key Lime Pie
+     603  Pancakes
+     603  Swiss Steak
+     599  Mexican Chicken
+     599  Asparagus Casserole
+     596  Cinnamon Rolls
+     590  Swedish Meatballs
+     590  Cornbread
+     589  German Potato Salad
+     585  Oatmeal Cake
+     581  Meatballs
+     580  Taco Casserole
+     576  Mexican Dip
+     576  Chocolate Pound Cake
+     576  Biscuits
+     572  Sauerkraut Salad
+     569  Turtle Cake
+     569  Shrimp Creole
+     564  Sausage Casserole
+     564  Enchilada Casserole
+     564  Spinach Balls
+     559  Fried Rice
+     555  Chess Pie
+     553  Fruit Cocktail Cake
+     553  Spinach Salad
+     548  Coffee Cake
+     548  Strawberry Bread
+     547  Earthquake Cake
+     546  Pineapple Casserole
+     545  Corn Chowder
+     545  Spinach Casserole
+     542  Banana Cake
+     542  Breakfast Pizza
+     541  Pumpkin Cake
+     537  Frozen Fruit Salad
+     532  Scalloped Corn
+     529  Marinated Carrots
+     527  Meatloaf
+     525  Russian Tea
+     523  Yeast Rolls
+     522  Chocolate Fudge
+     521  Chicken Parmesan
+     521  Cole Slaw
+     516  Cucumber Salad
+     513  Chicken
+     511  Party Punch
+     508  Shepherd'S Pie
+     508  Pineapple Cake
+     508  Dinner Tonight
+     507  Dill Dip
+     507  Quiche
+     502  Corn Fritters
+     496  Jello Salad
+     496  Lemon Bars
+     496  Apple Butter
+     491  Seven Layer Salad
+     489  Eggplant Casserole
+     489  Salmon Loaf
+     488  Pot Roast
+     488  Cream Of Broccoli Soup
