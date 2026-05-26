@@ -27,6 +27,12 @@ export function mountLeftRail(root, { state }) {
   // top-to-bottom (header no longer covers it). On mobile the rail is a
   // drawer; when closed the chrome is off-screen with the rail, and the
   // .app-header-left .app-title still shows.
+  /* Batch 8: sticky "Collapse all" button sits as the first child of
+   * .rail-sections so it pins to the top of the rail's scroll viewport
+   * once the chrome scrolls out of view. Background is transparent by
+   * default and surfaces on hover/focus — keeps the rail visually quiet
+   * but always available. The button calls collapseAll() exposed on
+   * this rail handle below. */
   root.innerHTML = `
     <header class="rail-chrome">
       <h1 class="app-title-rail">Food Map</h1>
@@ -35,7 +41,13 @@ export function mountLeftRail(root, { state }) {
         <span aria-hidden="true">←</span>
       </button>
     </header>
-    <div class="rail-sections"></div>
+    <div class="rail-sections">
+      <button class="rail-collapse-all" type="button"
+              aria-label="Collapse all sections" title="Collapse all sections">
+        <span class="rail-collapse-all-icon" aria-hidden="true">⌃</span>
+        <span class="rail-collapse-all-label">Collapse all</span>
+      </button>
+    </div>
     <button class="rail-expand" type="button"
             aria-label="Show filters" title="Show filters">
       <span aria-hidden="true">→</span>
@@ -45,10 +57,59 @@ export function mountLeftRail(root, { state }) {
     <div class="rail-backdrop" aria-hidden="true"></div>
   `;
 
-  const expandBtn   = root.querySelector('.rail-expand');
-  const collapseBtn = root.querySelector('.rail-collapse');
-  const backdrop    = root.querySelector('.rail-backdrop');
-  const sections    = root.querySelector('.rail-sections');
+  const expandBtn      = root.querySelector('.rail-expand');
+  const collapseBtn    = root.querySelector('.rail-collapse');
+  const backdrop       = root.querySelector('.rail-backdrop');
+  const sections       = root.querySelector('.rail-sections');
+  const collapseAllBtn = root.querySelector('.rail-collapse-all');
+
+  /* Batch 8: collapse every section currently open. Sections are the
+   * single source of truth for their own collapsed state via
+   * data-collapsed — write it, then sync the chevron and aria so the
+   * UI matches without each section needing its own subscription. */
+  function collapseAll() {
+    const openSections = sections.querySelectorAll(
+      '.rail-section[data-collapsed="false"]'
+    );
+    for (const section of openSections) {
+      section.dataset.collapsed = 'true';
+      const toggle  = section.querySelector('.rail-section-toggle');
+      const chevron = section.querySelector('.rail-section-chevron');
+      if (toggle)  toggle.setAttribute('aria-expanded', 'false');
+      if (chevron) chevron.textContent = '▸';
+    }
+  }
+  collapseAllBtn.addEventListener('click', collapseAll);
+
+  /* Batch 10: nothing to collapse means nothing to offer. Section
+   * collapsed-state lives only on each section's data-collapsed
+   * attribute (no central state slice), so we watch the subtree with
+   * a MutationObserver — fires on toggle clicks AND on collapseAll
+   * itself, which is what flips us back to hidden. */
+  /* Batch 10 + 14 fix: observe `data-collapsed` AND `hidden` on
+   * sections so view-level visibility changes (diet-cuisine section
+   * hiding outside meals view) also flow into the collapse-all
+   * visibility. The button itself sits inside the observed subtree —
+   * setting its own `hidden` attribute would re-trigger the observer
+   * and infinite-loop the page (this hung boot). Guard the write so
+   * we only mutate when the value actually needs to flip. */
+  function syncCollapseAllVisibility() {
+    const anyOpen = !!sections.querySelector(
+      '.rail-section[data-collapsed="false"]:not([hidden])'
+    );
+    const shouldHide = !anyOpen;
+    if (collapseAllBtn.hidden !== shouldHide) {
+      collapseAllBtn.hidden = shouldHide;
+    }
+  }
+  const collapseObserver = new MutationObserver(syncCollapseAllVisibility);
+  collapseObserver.observe(sections, {
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['data-collapsed', 'hidden'],
+    childList: true,
+  });
+  syncCollapseAllVisibility();
 
   function setOpen(open) {
     state.set({ leftRailOpen: open });
@@ -81,6 +142,7 @@ export function mountLeftRail(root, { state }) {
   return {
     getContentEl: () => sections,
     addSection: (section) => sections.appendChild(section),
+    collapseAll,
   };
 }
 
@@ -95,9 +157,10 @@ export function mountLeftRail(root, { state }) {
  * The chevron rotates between ▾ (expanded) and ▸ (collapsed) — matches
  * the ingredient-filter disclosure style.
  */
-export function createRailSection({ title, initiallyCollapsed = true, tooltip = '' } = {}) {
+export function createRailSection({ title, initiallyCollapsed = true, tooltip = '', id = '' } = {}) {
   const root = document.createElement('section');
   root.className = 'rail-section';
+  if (id) root.id = id;
   root.dataset.collapsed = initiallyCollapsed ? 'true' : 'false';
 
   root.innerHTML = `

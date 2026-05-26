@@ -12,10 +12,27 @@
  *     the app (detail panel, scene halo, table) reacts uniformly.
  *   - Escape clears + blurs; outside click closes.
  *
+ * Performance (Batch 7):
+ *   - The hidden-set is computed ONCE per open() call, not per item.
+ *     Caller passes `getHiddenIds` returning a Set | null. The previous
+ *     `isHidden(id)` signature recomputed the entire filter pipeline
+ *     inside the per-item loop, turning each keystroke into N × full
+ *     filter pipeline (O(N²)-ish in practice for the meals view).
+ *   - Input is debounced 120 ms so chord typing only triggers one
+ *     pipeline run, not one per keystroke.
+ *   - The includes-scan caps at MAX_SCAN matches before sorting, with
+ *     a "Keep typing to narrow…" hint when exceeded. Without the cap,
+ *     a broad single-letter query collected ~3,000 substring hits and
+ *     sorted them all, blocking the main thread visibly.
+ *   - A small spinner glyph appears in the input while debouncing or
+ *     running, so the user has feedback even when the query takes a
+ *     measurable beat.
+ *
  * Decoupled from picking.js — this lives entirely in DOM space.
  */
 
 import { FOOD_GROUP_COLORS } from '../data/schema.js';
+import { escapeHtml } from '../util/dom.js';
 
 /* Progressive disclosure:
  *   - First batch: INITIAL_RESULTS rows.
@@ -27,10 +44,23 @@ const INITIAL_RESULTS = 20;
 const RESULT_STEP     = 20;
 const VIEWPORT_MARGIN = 8;
 
+/* Batch 7: stop accumulating substring matches at MAX_SCAN. The user
+ * can't meaningfully scan more than this anyway, and the sort cost on
+ * the unbounded set was the visible hang at one-letter queries. */
+const MAX_SCAN        = 500;
+
+/* Batch 7: debounce window between keystrokes and the pipeline run.
+ * 120ms is short enough to feel responsive, long enough to coalesce
+ * chord typing. */
+const DEBOUNCE_MS     = 120;
+
 export function mountSearch(root, {
   state,
   getCurrentIngredients,
-  isHidden = () => false,
+  getHiddenIds = () => null,
+  /* Batch 3: resolve an ingredient id to its name so a meal can match by the
+   * specific ingredients it uses, not just its own name. */
+  getIngredientName = () => '',
 }) {
   if (!root) return;
 
@@ -38,18 +68,25 @@ export function mountSearch(root, {
   // Phase 40 round 2: custom clear button. The native ::-webkit-search-cancel
   // button is ~12px and finicky to click; this one is 28×28 and uses the
   // full bounding box as a hit target.
+  // Batch 7: spinner glyph sits just left of the clear button — visible
+  // while the input is debouncing or the pipeline is running.
   root.innerHTML = `
     <input class="search-input input" type="search"
            placeholder="Search…" aria-label="Search ingredients, categories, or meals"
            autocomplete="off">
+    <span class="search-spinner" aria-hidden="true" hidden></span>
     <button class="search-clear" type="button" aria-label="Clear search" title="Clear" hidden>×</button>
   `;
-  const inputEl = root.querySelector('.search-input');
-  const clearBtn = root.querySelector('.search-clear');
+  const inputEl   = root.querySelector('.search-input');
+  const clearBtn  = root.querySelector('.search-clear');
+  const spinnerEl = root.querySelector('.search-spinner');
 
   function syncClearVisibility() {
     clearBtn.hidden = !inputEl.value;
   }
+  function showSpinner() { spinnerEl.hidden = false; }
+  function hideSpinner() { spinnerEl.hidden = true; }
+
   clearBtn.addEventListener('click', (ev) => {
     ev.preventDefault();
     inputEl.value = '';
@@ -66,10 +103,18 @@ export function mountSearch(root, {
 
   let allMatches  = [];   // full sorted list; lastResults is its prefix
   let lastResults = [];
+  let currentQuery = '';  // Batch 3: kept so render() can show ingredient hits
   let activeIndex = -1;
   let displayLimit = INITIAL_RESULTS;
+  let scanCapped   = false;
+  let debounceTimer = null;
 
   function close() {
+    if (debounceTimer !== null) {
+      clearTimeout(debounceTimer);
+      debounceTimer = null;
+    }
+    hideSpinner();
     if (dropdown.hidden) return;
     dropdown.hidden = true;
     dropdown.innerHTML = '';
@@ -77,6 +122,7 @@ export function mountSearch(root, {
     lastResults = [];
     activeIndex = -1;
     displayLimit = INITIAL_RESULTS;
+    scanCapped = false;
     // Phase 40 round 2: clear the preview pulse when the dropdown closes
     // — leaving it on would orphan a pulsing dot with no menu to dismiss.
     if (state.get('previewIngredientId') !== null) {
@@ -98,6 +144,18 @@ export function mountSearch(root, {
     dropdown.style.minWidth = `${Math.round(rect.width)}px`;
   }
 
+  /* Batch 3: when a meal row matched on an ingredient it uses (rather than
+   * its own name), name that ingredient so the row explains why it appears. */
+  function ingredientHint(item) {
+    if (!currentQuery || !item || !Array.isArray(item.example_ingredients)) return '';
+    if (item.name && item.name.toLowerCase().includes(currentQuery)) return '';
+    for (const id of item.example_ingredients) {
+      const nm = getIngredientName(id);
+      if (nm && nm.toLowerCase().includes(currentQuery)) return `uses ${nm}`;
+    }
+    return '';
+  }
+
   function render() {
     if (lastResults.length === 0) {
       dropdown.innerHTML = `<p class="search-empty muted">No matches.</p>`;
@@ -110,7 +168,7 @@ export function mountSearch(root, {
               aria-hidden="true"></span>
         <span class="search-text">
           <span class="search-name">${escapeHtml(r.name)}</span>
-          <span class="search-sub muted">${escapeHtml(subtitleFor(r))}</span>
+          <span class="search-sub muted">${escapeHtml(ingredientHint(r) || subtitleFor(r))}</span>
         </span>
       </button>
     `).join('');
@@ -139,18 +197,33 @@ export function mountSearch(root, {
       footerHtml += `</div>`;
     }
 
-    dropdown.innerHTML = rowsHtml + footerHtml;
+    // Batch 7: cap-exceeded hint. Sits above the rows so the user reads
+    // it before scrolling. The cap is intentionally a hard stop on the
+    // includes-scan, not a window into a larger result set — narrowing
+    // the query is the prescribed remedy.
+    const capHtml = scanCapped
+      ? `<p class="search-cap-notice muted">Showing the first ${MAX_SCAN} matches — keep typing to narrow.</p>`
+      : '';
+
+    dropdown.innerHTML = capHtml + rowsHtml + footerHtml;
   }
 
   function open(q) {
     const all = getCurrentIngredients() || [];
     const query = String(q || '').trim().toLowerCase();
+    currentQuery = query;
     if (!query) {
       lastResults = [];
       activeIndex = -1;
       dropdown.hidden = true;
+      hideSpinner();
       return;
     }
+    /* Batch 7: compute hidden-set ONCE for the whole open() call. The
+     * old `isHidden(id)` signature called tableHiddenSet() per-item,
+     * which re-ran the entire filter pipeline N times per keystroke. */
+    const hiddenSet = getHiddenIds();
+
     // Collect ALL matches first, then sort, then slice — otherwise a
     // pre-cap in the loop excludes high-ranking items that happen to
     // appear later in the dataset iteration order. Example bug: in
@@ -159,13 +232,35 @@ export function mountSearch(root, {
     // that match "red meat" as a substring. They fill the 12-row cap
     // before the loop ever reaches the single-category "Red meat"
     // pattern, even though it's a prefix match and should be #1.
+    //
+    // Batch 7: but cap the OUTER includes-scan at MAX_SCAN, because a
+    // broad one-letter query previously accumulated thousands of hits
+    // and the post-sort blocked the main thread visibly. The "Keep
+    // typing to narrow" message in render() tells the user the result
+    // set is truncated.
     const matches = [];
+    scanCapped = false;
     for (const item of all) {
       if (!item || !item.name) continue;
-      if (isHidden(item.id)) continue;
-      const hay = item.name.toLowerCase();
-      if (!hay.includes(query)) continue;
+      if (hiddenSet && hiddenSet.has(item.id)) continue;
+      let isMatch = item.name.toLowerCase().includes(query);
+      // Batch 3: a meal also matches on the specific ingredients it uses, so
+      // typing "bagel" at the Meals level surfaces meals that actually use a
+      // bagel rather than every refined-grain dish.
+      if (!isMatch && Array.isArray(item.example_ingredients)) {
+        for (const ingId of item.example_ingredients) {
+          if (getIngredientName(ingId).toLowerCase().includes(query)) {
+            isMatch = true;
+            break;
+          }
+        }
+      }
+      if (!isMatch) continue;
       matches.push(item);
+      if (matches.length >= MAX_SCAN) {
+        scanCapped = true;
+        break;
+      }
     }
     // Sort tiers: exact name → prefix match → substring match.
     // Within every tier, ALPHABETICAL (case-insensitive). The earlier
@@ -191,6 +286,7 @@ export function mountSearch(root, {
     dropdown.hidden = false;
     render();
     positionDropdown();
+    hideSpinner();
     document.addEventListener('pointerdown', onOutside, true);
   }
 
@@ -214,16 +310,35 @@ export function mountSearch(root, {
     inputEl.blur();
   }
 
+  /* Batch 7: debounced input. Every keystroke restarts the timer; the
+   * heavy open() call only runs DEBOUNCE_MS after the user stops
+   * typing. The spinner shows immediately on input so the user knows
+   * a search is queued. Empty input bypasses the debounce so clearing
+   * the field feels instant. */
+  function scheduleOpen(value) {
+    if (debounceTimer !== null) clearTimeout(debounceTimer);
+    if (!value || !value.trim()) {
+      debounceTimer = null;
+      open(value);
+      return;
+    }
+    showSpinner();
+    debounceTimer = setTimeout(() => {
+      debounceTimer = null;
+      open(inputEl.value);
+    }, DEBOUNCE_MS);
+  }
+
   inputEl.addEventListener('input', () => {
     syncClearVisibility();
-    open(inputEl.value);
+    scheduleOpen(inputEl.value);
   });
   inputEl.addEventListener('focus', () => {
     // Bug-fix: only re-open if the dropdown is currently closed.
     // Previously, programmatic refocus (after clicking "Show more" /
     // "Show all") would call open() which reset displayLimit back to
     // INITIAL_RESULTS, undoing the expansion.
-    if (inputEl.value.trim() && dropdown.hidden) open(inputEl.value);
+    if (inputEl.value.trim() && dropdown.hidden) scheduleOpen(inputEl.value);
   });
 
   inputEl.addEventListener('keydown', (ev) => {
@@ -320,11 +435,4 @@ function subtitleFor(item) {
   if (item.category === 'Meal') return item.cuisine || 'Meal';
   const parts = [item.food_group, item.category].filter(Boolean);
   return parts.join(' · ');
-}
-
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }

@@ -64,6 +64,15 @@ const PULSE_BASE      = 1.4;
 const PULSE_AMPLITUDE = 0.22;
 const PULSE_FREQ_HZ   = 1.6;
 
+// Batch 11: when a selected dot is hidden by the current filters,
+// render it at FULL pulse scale (same as a normal selection) and force
+// pure red so the "this is filtered out" signal is unmistakable. The
+// original gray + shrink treatment was too subtle — testers couldn't
+// tell the ghost dot apart from regular faded dots in the cloud.
+// Blend = 1.0 → original food-group color is fully replaced.
+const DIMMED_FILTERED_RED   = new THREE.Color(1.0, 0.0, 0.0);
+const DIMMED_FILTERED_BLEND = 1.0;
+
 // Score-mode gradient endpoints: green at 0 (best — closest to targets),
 // red at 1 (worst). Slightly muted so it doesn't blow out against the
 // scene's lit material.
@@ -172,8 +181,11 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
   const previewOverlay   = makeOverlay('preview-overlay');
 
   /* Glow halos for the selected and preview-hovered dots. Each is a
-   * camera-facing Sprite with a radial-gradient texture and additive
-   * blending — reads as a soft light source radiating from the dot.
+   * camera-facing Sprite with a radial-gradient texture — blending
+   * mode swaps with the theme: additive on dark (so the halo reads as
+   * emitted light against a near-black background), normal on light
+   * (additive would push toward pure white on the already-white
+   * background and the halo vanished, per tester feedback).
    * Pulses scale + opacity in sync with the size-pulse + color-pulse
    * so the dot appears to "breathe light". */
   function makeGlowTexture() {
@@ -211,6 +223,31 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
   const selectionGlow = makeGlow('selection-glow');
   const previewGlow   = makeGlow('preview-glow');
 
+  /* Theme-driven glow settings. The constants below are the dark-mode
+   * defaults (additive blending, mostly white-blended color, brighter
+   * peak opacity). Light-mode swaps to normal blending so the halo
+   * darkens the background instead of brightening it, keeps the
+   * food-group identity color (less white-mix), and runs at a higher
+   * opacity floor since normal blending doesn't accumulate. */
+  let glowBlending      = THREE.AdditiveBlending;
+  let glowWhiteBlend    = 0.55;
+  let glowOpacityMin    = 0.175;
+  let glowOpacityMax    = 0.5;
+  function applyGlowThemeSettings(theme) {
+    const isLight = theme === 'light';
+    glowBlending   = isLight ? THREE.NormalBlending : THREE.AdditiveBlending;
+    glowWhiteBlend = isLight ? 0.15 : 0.55;
+    glowOpacityMin = isLight ? 0.35 : 0.175;
+    glowOpacityMax = isLight ? 0.75 : 0.5;
+    for (const g of [selectionGlow, previewGlow]) {
+      g.material.blending = glowBlending;
+      g.material.needsUpdate = true;
+    }
+  }
+  // Read the initial theme from the document attribute (state isn't
+  // imported here). main.js calls refreshTheme() on theme changes.
+  applyGlowThemeSettings(document.documentElement.getAttribute('data-theme'));
+
   // Declared above writeColors so the initial writeColors() call below
   // doesn't hit a TDZ on hoveredIndex (the hover-tint branch reads it).
   let hoveredIndex = -1;
@@ -228,6 +265,12 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
         // blend" branch here — non-passing items end up in hiddenSet
         // and render at scale 0. Only score-mode coloring remains.
         tmpColor.copy(originalColors[i]);
+      }
+      // Batch 11: filtered-out ghost selection blends hard toward red
+      // so the "you're still selecting this, but it's not passing your
+      // filters" signal is unmistakable in the cloud.
+      if (isDimmedExempt(i)) {
+        tmpColor.lerp(DIMMED_FILTERED_RED, DIMMED_FILTERED_BLEND);
       }
       // Selection and cursor-hover used to lerp the base instance color
       // toward white, but a tester rightly pointed out that washed the
@@ -290,14 +333,24 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
   }
 
   /* Compose the per-instance target scale. Order:
-   *   1. Hidden → 0
-   *   2. Selected / preview → pulsing scale
-   *   3. Hover → HOVER_SCALE
-   *   4. Default → 1
+   *   1. Hidden + selected (or preview) → FULL pulsing scale (batch 11:
+   *      keep the ghost dot at the same size as a normal selection so
+   *      the user can spot it in the cloud — the red color does the
+   *      "filtered out" signaling, not a size reduction).
+   *   2. Hidden → 0
+   *   3. Selected / preview → pulsing scale
+   *   4. Hover → HOVER_SCALE
+   *   5. Default → 1
    * The Size axis multiplier scales the result. */
   function targetScale(i, now) {
     const id = ingredients[i].id;
-    if (hiddenSet && hiddenSet.has(id)) return 0;
+    const isHidden = hiddenSet && hiddenSet.has(id);
+    if (isHidden) {
+      if (i !== selectedIndex && i !== previewIndex) return 0;
+      const tSec = (now || performance.now()) / 1000;
+      const base = PULSE_BASE + PULSE_AMPLITUDE * Math.sin(tSec * 2 * Math.PI * PULSE_FREQ_HZ);
+      return base * sizeAxisMultiplier(i);
+    }
 
     let base;
     if (i === selectedIndex || i === previewIndex) {
@@ -309,6 +362,18 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
       base = 1;
     }
     return base * sizeAxisMultiplier(i);
+  }
+
+  /* True iff this instance is currently in the hidden set but is also
+   * the selected or preview-hovered item — i.e. the "filtered-out but
+   * visible as a ghost" exemption above. Drives the red color blend
+   * and the overlay/halo bypass (overlay is suppressed so the bright
+   * food-group tint doesn't undo the red ghost signal). */
+  function isDimmedExempt(i) {
+    if (!hiddenSet) return false;
+    if (i !== selectedIndex && i !== previewIndex) return false;
+    const id = ingredients[i] && ingredients[i].id;
+    return !!(id && hiddenSet.has(id));
   }
 
   function update(now) {
@@ -387,15 +452,15 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
   // not washed out white at all".
   const TINT_PULSE_MIN   = 0.0;
   const TINT_PULSE_MAX   = 0.95;
-  // Glow halo: scale (in world units) and opacity both oscillate.
+  // Glow halo: scale (in world units) oscillates as a const; opacity
+  // range is theme-driven (see applyGlowThemeSettings) so the halo stays
+  // legible against either background.
   const GLOW_SCALE_MIN   = 0.08;
   const GLOW_SCALE_MAX   = 0.22;
-  const GLOW_OPACITY_MIN = 0.175;
-  const GLOW_OPACITY_MAX = 0.5;
-  // Glow color: lerp the food-group color toward white so the halo
-  // is bright but still tinted by identity (Vegetables glow green-
-  // white, Sweets violet-white, etc.).
-  const GLOW_COLOR_WHITE_BLEND = 0.55;
+  // Glow color: lerp the food-group color toward white. The blend amount
+  // is theme-driven — heavier white-mix on dark (so the halo reads as
+  // emitted light), lighter on white so it keeps the identity color and
+  // doesn't dissolve into the background.
   const tmpGlowColor = new THREE.Color();
 
   function updateOverlays(now) {
@@ -411,6 +476,9 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
     syncGlow(previewGlow,   previewIndex,  pulseT);
 
     function syncOverlay(overlay, index, tintAmount) {
+      // Hidden + selected/preview = dimmed ghost (handled by instance
+      // color + scale). The bright always-on-top overlay would undo
+      // that ghost effect, so keep it off when the item is filtered out.
       if (index < 0 || (hiddenSet && hiddenSet.has(ingredients[index]?.id))) {
         overlay.visible = false;
         return;
@@ -433,10 +501,11 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
 
     function syncGlow(glow, index, t) {
       const { sprite, material } = glow;
-      if (index < 0 || (hiddenSet && hiddenSet.has(ingredients[index]?.id))) {
+      if (index < 0) {
         sprite.visible = false;
         return;
       }
+      const isGhost = hiddenSet && hiddenSet.has(ingredients[index]?.id);
       const p = positions[index];
       if (!p) {
         sprite.visible = false;
@@ -446,9 +515,16 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
       sprite.position.set(p.x, p.y, p.z);
       const glowScale = GLOW_SCALE_MIN + (GLOW_SCALE_MAX - GLOW_SCALE_MIN) * t;
       sprite.scale.set(glowScale, glowScale, glowScale);
-      material.opacity = GLOW_OPACITY_MIN + (GLOW_OPACITY_MAX - GLOW_OPACITY_MIN) * t;
-      tmpGlowColor.copy(originalColors[index]).lerp(WHITE, GLOW_COLOR_WHITE_BLEND);
-      material.color.copy(tmpGlowColor);
+      material.opacity = glowOpacityMin + (glowOpacityMax - glowOpacityMin) * t;
+      if (isGhost) {
+        /* Batch 11 follow-up: filtered-out ghost gets a pure red halo
+         * so it's easy to spot in the cloud at a glance, regardless of
+         * theme. No white-blend (white-mix on red shifts toward pink). */
+        material.color.copy(DIMMED_FILTERED_RED);
+      } else {
+        tmpGlowColor.copy(originalColors[index]).lerp(WHITE, glowWhiteBlend);
+        material.color.copy(tmpGlowColor);
+      }
     }
   }
 
@@ -490,6 +566,11 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
      * the new target scale immediately in both directions so filter
      * responses feel instant. The initial pop-in animation is still
      * preserved (handled by the !fadeDone branch in update()). */
+    // Color is now a function of hidden-AND-selected (the dimmed
+    // exemption blend) — repaint instance colors so the red ghost
+    // treatment flips on/off when filters move the selected dot in or
+    // out of the hidden set.
+    writeColors();
     if (!fadeDone) return;
     const now = performance.now();
     let dirty = false;
@@ -507,17 +588,21 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
     if (id === selectedId) return;
     selectedId = id || null;
     resolveSelectedIndex();
-    // Color isn't a function of selection anymore — the size pulse +
-    // always-on-top overlay carry the visual signal. No writeColors.
+    // Color now depends on selection in one specific case: when the
+    // selected item is in the hidden set (filtered out) we paint it
+    // red as a "ghosted selection". Repaint so a new selection that
+    // happens to be hidden picks up the red treatment immediately.
+    writeColors();
   }
 
   function setPreviewId(id) {
     if (id === previewId) return;
     previewId = id || null;
     resolvePreviewIndex();
-    // No writeColors — preview tint lives on the overlay mesh, not the
-    // base instance color. The instance's own pulse is driven by
-    // targetScale recognizing previewIndex.
+    // Preview can also trigger the dimmed exemption (search-hovering a
+    // currently-hidden item still shows it as a ghost), so repaint on
+    // preview changes too.
+    writeColors();
   }
 
   function setSizeAxis(config) {
@@ -600,12 +685,17 @@ export function buildPoints(scene, ingredients, axes, ranges, { animate = true }
     writeMatrices();
   }
 
+  function refreshTheme() {
+    applyGlowThemeSettings(document.documentElement.getAttribute('data-theme'));
+  }
+
   return {
     mesh, ingredients,
     update, setAxes, setHover, setActiveSet, setScoreMap,
     setColorScheme, setColorFilteredSet,
     setHiddenSet, setSelectedId, setPreviewId, setSizeAxis,
     setNutrientUnit,
+    refreshTheme,
     getInstancePosition, getIndexById, replayFadeIn, dispose,
   };
 }

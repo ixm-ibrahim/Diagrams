@@ -10,6 +10,7 @@
 
 import { createRailSection } from './left-rail.js';
 import { TAGS } from '../data/schema.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 // Display labels for the vocabulary tags. Falls back to the slug itself.
 const TAG_LABELS = {
@@ -18,6 +19,8 @@ const TAG_LABELS = {
   'low-cal':      'Low calorie',
   'high-sodium':  'High sodium',
   'breakfast':    'Breakfast',
+  'lunch':        'Lunch',
+  'dinner':       'Dinner',
   'snack':        'Snack',
   'dessert':      'Dessert',
   'condiment':    'Condiment',
@@ -144,10 +147,3 @@ export function mountTagFilter(host, { state }) {
   state.subscribe(s => s.tagFilter, refresh);
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

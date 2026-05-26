@@ -1,0 +1,603 @@
+[0] chicken-rice-bowl  |  Chicken & rice bowl
+     notes: Sliced grilled chicken fanned over a bed of fluffy white rice, finished with charred vegetables and a drizzle of pan jus — a clean weeknight bowl that satisfies without weighing you down.
+     cats : Poultry, Whole grains, Other vegetables, Oils, Refined grains
+       - Poultry                  Chicken breast  (chicken-breast)
+       - Whole grains             Brown rice  (brown-rice)
+       - Other vegetables         Onion  (onion)
+       - Oils                     Olive oil  (olive-oil)
+       - Refined grains           White rice  (white-rice)
+
+[1] chicken-stir-fry  |  Chicken stir-fry
+     notes: Strips of chicken seared in a screaming-hot wok with bell peppers, broccoli, and onion, glossed in a savory soy-garlic sauce and tipped over steamed rice.
+     cats : Poultry, Sauces, Other vegetables, Oils, Refined grains, Peppers & nightshades, Cruciferous vegetables
+       - Poultry                  Chicken breast  (chicken-breast)
+       - Sauces                   Soy sauce  (soy-sauce)
+       - Sauces                   Chinese hot mustard  (mustard-chinese-hot)
+       - Other vegetables         Garlic  (garlic)
+       - Oils                     Vegetable oil (generic blend)  (vegetable-oil-blend)
+       - Refined grains           Rice noodles  (rice-noodles)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Cruciferous vegetables   Chinese broccoli (gai lan)  (chinese-broccoli-gai-lan)
+
+[2] salmon-plate  |  Salmon plate
+     notes: A blushing fillet of salmon, skin crackling-crisp, plated beside roasted potatoes and a tangle of bright greens — restaurant comfort, weeknight-easy.
+     cats : Oily fish, Starchy vegetables, Leafy greens, Oils
+       - Oily fish                Salmon  (salmon)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Leafy greens             Collard greens  (collard-greens)
+       - Oils                     Olive oil  (olive-oil)
+
+[3] sashimi-platter  |  Sashimi platter
+     notes: Glassy slices of raw tuna, salmon, and yellowtail fanned across a chilled board with pickled ginger, a green daub of wasabi, and a side of soy.
+     cats : Oily fish, White fish, Refined grains, Sauces
+       - Oily fish                Yellowtail (hamachi)  (yellowtail-hamachi)
+       - White fish               Cod  (cod)
+       - Refined grains           White rice  (white-rice)
+       - Sauces                   Wasabi paste  (wasabi)
+
+[4] tuna-salad  |  Tuna salad
+     notes: Flaked tuna folded into a lemon-bright dressing with celery and red onion, mounded over crisp greens — a brown-bag classic done well.
+     cats : Other vegetables, Oily fish, Extracts & essences, Pickled vegetables, Citrus
+       - Other vegetables         Red onion  (onion-red)
+       - Oily fish                Tuna (bluefin)  (tuna-bluefin)
+       - Pickled vegetables       Sweet gherkin  (pickle-sweet-gherkin)
+       - Citrus                   Lemon  (lemon)
+
+[5] fish-and-chips  |  Fish and chips
+     notes: Golden-battered white fish that shatters at first bite, paired with thick salt-flecked chips, a scoop of mushy peas, and a wedge of lemon.
+     cats : Starchy vegetables, Flours, White fish, Oils, Salt & seasonings, Citrus, Eggs
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Flours                   All-purpose flour  (all-purpose-flour)
+       - White fish               Cod  (cod)
+       - Oils                     Olive oil  (olive-oil)
+       - Salt & seasonings        Salt (table)  (salt-table)
+       - Citrus                   Lemon  (lemon)
+       - Eggs                     Egg white  (egg-white)
+
+[6] shrimp-pasta  |  Shrimp pasta
+     notes: Pink shrimp tossed in butter, garlic, and white wine, draped over al dente pasta with a snow of parmesan and fresh parsley.
+     cats : Shellfish, Fresh herbs, Other vegetables, Refined grains, Peppers & nightshades, Cream & butter, Oils, Salt & seasonings, Aged cheese
+       - Shellfish                Shrimp  (shrimp)
+       - Fresh herbs              Parsley  (parsley)
+       - Other vegetables         Snow peas  (snow-peas)
+       - Refined grains           White pasta  (white-pasta)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Cream & butter           Butter  (butter)
+       - Oils                     Olive oil  (olive-oil)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Aged cheese              Parmesan  (parmesan)
+
+[7] burger  |  Burger
+     notes: A char-edged beef patty stacked with lettuce, tomato, onion, and pickles between a soft toasted bun — the original handheld comfort.
+     cats : Other vegetables, Red meat, Peppers & nightshades, Bread & rolls
+       - Other vegetables         Onion  (onion)
+       - Red meat                 Ground beef (80/20)  (ground-beef-80-20)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Bread & rolls            Hamburger bun  (burger-bun)
+
+[8] cheeseburger  |  Cheeseburger
+     notes: A juicy beef patty crowned with a melting slice of American cheese, layered with crisp lettuce, tomato, and pickles in a buttery toasted bun.
+     cats : Red meat, Bread & rolls, Aged cheese, Other vegetables, Sauces, Pickled vegetables, Cream & butter
+       - Red meat                 Ground beef (80/20)  (ground-beef-80-20)
+       - Bread & rolls            Bread crumbs  (bread-crumbs)
+       - Aged cheese              Cheddar  (cheddar)
+       - Other vegetables         Onion  (onion)
+       - Sauces                   Soy sauce  (soy-sauce)
+       - Pickled vegetables       Pickle (dill)  (pickle-dill)
+       - Cream & butter           Beef tallow  (beef-tallow)
+
+[9] steak-dinner  |  Steak dinner
+     notes: A rested ribeye sliced against the grain, plated with buttery mashed potatoes and a stem of charred green vegetable — the steakhouse blueprint.
+     cats : Red meat, Starchy vegetables, Leafy greens, Cream & butter
+       - Red meat                 Beef ribeye  (beef-ribeye)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Leafy greens             Green cabbage  (cabbage-green)
+       - Cream & butter           Butter  (butter)
+
+[10] bacon-and-eggs  |  Bacon and eggs
+     notes: Eggs cooked sunny-side up, yolks ready to break across the plate, served with crisp bacon and buttered toast.
+     cats : Processed meat, Eggs
+       - Processed meat           Bacon  (bacon)
+       - Eggs                     Egg (whole)  (egg-whole)
+
+[11] omelet-veg-cheese  |  Vegetable & cheese omelet
+     notes: A pale-gold three-egg omelet folded around a melting heap of sautéed peppers, mushrooms, and shredded cheese.
+     cats : Eggs, Other vegetables, Aged cheese, Oils
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Other vegetables         Onion  (onion)
+       - Aged cheese              Cheddar  (cheddar)
+       - Oils                     Vegetable oil (generic blend)  (vegetable-oil-blend)
+
+[12] yogurt-parfait  |  Yogurt parfait
+     notes: Tangy Greek yogurt layered with fresh berries, a drizzle of honey, and toasted granola for crunch — served in a tall glass.
+     cats : Yogurt, Berries, Nuts, Whole grains
+       - Yogurt                   Greek yogurt (whole)  (greek-yogurt-whole)
+       - Berries                  Strawberry  (strawberry)
+       - Nuts                     Almond  (almond)
+       - Whole grains             Granola  (granola)
+
+[13] berry-smoothie  |  Berry smoothie
+     notes: Frozen berries blended with yogurt and a splash of milk into a thick purple pour, optionally sweetened with honey.
+     cats : Berries, Yogurt, Milk
+       - Berries                  Goji berry  (goji-berry)
+       - Yogurt                   Yogurt (whole)  (yogurt-whole)
+       - Milk                     Whole milk  (whole-milk)
+
+[14] cereal-bowl  |  Cereal bowl
+     notes: A cold bowl of crisp flakes and milk with sliced banana on top — the unglamorous classic that just works.
+     cats : Refined grains, Milk, Temperate fruits, Sugar & sweeteners
+       - Refined grains           White rice  (white-rice)
+       - Milk                     Whole milk  (whole-milk)
+       - Temperate fruits         Banana  (banana)
+       - Sugar & sweeteners       White sugar  (white-sugar)
+
+[15] oatmeal-berries  |  Oatmeal with berries
+     notes: Creamy steel-cut oats topped with juicy berries, a scatter of nuts, and a swirl of milk and brown sugar.
+     cats : Whole grains, Berries, Nuts, Milk, Cream & butter
+       - Whole grains             Steel-cut oats  (steel-cut-oats)
+       - Berries                  Strawberry  (strawberry)
+       - Nuts                     Almond  (almond)
+       - Milk                     Strawberry milk  (strawberry-milk)
+       - Cream & butter           Butter  (butter)
+
+[16] cheese-plate  |  Cheese plate
+     notes: An assortment of sliced and cubed cheeses on a wooden board with dried fruit, honey, and a fan of crackers.
+     cats : Aged cheese, Fresh cheese, Dried fruits, Nuts
+       - Aged cheese              Cheddar  (cheddar)
+       - Fresh cheese             Cream cheese  (cream-cheese)
+       - Dried fruits             Raisin  (raisin)
+       - Nuts                     Almond  (almond)
+
+[17] greek-salad  |  Greek salad
+     notes: Crisp cucumber, ripe tomato, red onion, and briny olives tossed in olive oil and oregano, crowned with a thick slab of feta.
+     cats : Other vegetables, Peppers & nightshades, Pickled vegetables, Fresh cheese, Oils, Fresh herbs, Dressings & dips, Salt & seasonings
+       - Other vegetables         Red onion  (onion-red)
+       - Peppers & nightshades    Green bell pepper  (bell-pepper-green)
+       - Peppers & nightshades    Red bell pepper  (bell-pepper-red)
+       - Pickled vegetables       Olives (green)  (olives-green)
+       - Pickled vegetables       Olives (black)  (olives-black)
+       - Fresh cheese             Cream cheese  (cream-cheese)
+       - Oils                     Olive oil  (olive-oil)
+       - Fresh herbs              Salad burnet  (salad-burnet)
+       - Dressings & dips         Greek dressing  (greek-dressing)
+       - Salt & seasonings        Celery salt  (celery-salt)
+
+[18] caesar-salad  |  Caesar salad
+     notes: Crunchy romaine tossed in a garlicky anchovy-laced dressing, finished with parmesan shards and golden croutons.
+     cats : Other vegetables, Aged cheese, Oils, Leafy greens, Citrus, Bread & rolls, Eggs, Sauces, Peppers & nightshades, Oily fish, Salt & seasonings, Dressings & dips
+       - Other vegetables         Garlic  (garlic)
+       - Aged cheese              Parmesan  (parmesan)
+       - Oils                     Olive oil  (olive-oil)
+       - Leafy greens             Romaine lettuce  (romaine-lettuce)
+       - Citrus                   Lemon  (lemon)
+       - Bread & rolls            Croutons  (croutons)
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Sauces                   Worcestershire sauce  (worcestershire)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Oily fish                Salmon  (salmon)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Dressings & dips         Red wine vinegar  (red-wine-vinegar)
+       - Dressings & dips         Caesar dressing  (caesar-dressing)
+
+[19] hummus-plate  |  Hummus plate
+     notes: A pool of silky, lemon-bright hummus dimpled with olive oil, served with warm pita triangles and a scatter of crudités.
+     cats : Legumes, Oils, Bread & rolls, Other vegetables, Nut butters, Citrus
+       - Legumes                  Chickpeas (canned)  (chickpeas-canned)
+       - Oils                     Olive oil  (olive-oil)
+       - Bread & rolls            White bread  (white-bread)
+       - Other vegetables         Garlic  (garlic)
+       - Nut butters              Peanut butter  (peanut-butter)
+       - Citrus                   Lemon  (lemon)
+       - Dressings & dips         Hummus  (hummus)  <hero/out-of-cat>
+
+[20] bean-burrito  |  Bean burrito
+     notes: Refried beans, melted cheese, and a spoon of salsa wrapped tight in a soft warm flour tortilla, griddled until lightly toasted.
+     cats : Legumes, Bread & rolls, Aged cheese, Other vegetables
+       - Legumes                  Pinto bean  (pinto-bean)
+       - Bread & rolls            White bread  (white-bread)
+       - Aged cheese              Cheddar  (cheddar)
+       - Other vegetables         Bean sprouts  (bean-sprouts)
+
+[21] vegan-bowl  |  Vegan grain bowl
+     notes: A composed bowl of warm grains, roasted vegetables, beans, and a tahini drizzle — plant-only and deeply satisfying.
+     cats : Legumes, Whole grains, Leafy greens, Other vegetables, Oils
+       - Legumes                  Lima beans  (lima-beans)
+       - Whole grains             Brown rice  (brown-rice)
+       - Leafy greens             Spinach  (spinach)
+       - Other vegetables         Green beans  (green-beans)
+       - Oils                     Olive oil  (olive-oil)
+
+[22] tofu-stir-fry  |  Tofu stir-fry
+     notes: Cubes of golden-seared tofu tossed with crisp vegetables in a glossy ginger-soy sauce, served over steamed rice.
+     cats : Soy products, Other vegetables, Whole grains, Oils, Sauces
+       - Soy products             Tofu (firm)  (tofu-firm)
+       - Other vegetables         Snow peas  (snow-peas)
+       - Other vegetables         Red onion  (onion-red)
+       - Whole grains             Brown rice  (brown-rice)
+       - Oils                     Sesame oil  (sesame-oil)
+       - Sauces                   Soy sauce  (soy-sauce)
+
+[23] pb-sandwich  |  Peanut butter sandwich
+     notes: Creamy peanut butter and a thin slick of jam between two slices of soft bread — the lunchbox staple.
+     cats : Nut butters, Bread & rolls, Jams & preserves, Cream & butter
+       - Nut butters              Peanut butter  (peanut-butter)
+       - Bread & rolls            White bread  (white-bread)
+       - Jams & preserves         Jam (strawberry)  (jam-strawberry)
+       - Cream & butter           Butter  (butter)
+       - Legumes                  Peanut  (peanut)  <hero/out-of-cat>
+
+[24] pasta-red-sauce  |  Pasta with red sauce
+     notes: Al dente pasta tossed in a long-simmered tomato sauce, finished with torn basil and a generous shower of parmesan.
+     cats : Refined grains, Peppers & nightshades, Aged cheese
+       - Refined grains           White pasta  (white-pasta)
+       - Peppers & nightshades    Tomato sauce (canned)  (tomato-sauce-canned)
+       - Aged cheese              Parmesan  (parmesan)
+
+[25] fruit-and-nuts  |  Fruit & nuts
+     notes: A small handful of fresh sliced fruit beside a scatter of roasted, salted nuts — a snack that feels grown-up.
+     cats : Temperate fruits, Nuts, Oils
+       - Temperate fruits         Apple  (apple)
+       - Nuts                     Almond  (almond)
+       - Oils                     Olive oil  (olive-oil)
+
+[26] pancakes-syrup  |  Pancakes & syrup
+     notes: A stack of buttermilk pancakes, edges lacy and golden, crowned with a melting pat of butter and a slow pour of maple syrup.
+     cats : Flours, Eggs, Milk, Sugar & sweeteners, Cream & butter, Baking ingredients, Salt & seasonings
+       - Flours                   Rice flour  (rice-flour)
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Milk                     Whole milk  (whole-milk)
+       - Sugar & sweeteners       Maple syrup  (maple-syrup)
+       - Cream & butter           Butter  (butter)
+       - Baking ingredients       Baking powder  (baking-powder)
+       - Salt & seasonings        Salt (table)  (salt-table)
+
+[27] mac-and-cheese  |  Mac and cheese
+     notes: Tender macaroni in a silky cheddar-cream sauce, baked under a crackling breadcrumb crust — the ultimate comfort.
+     cats : Refined grains, Milk, Aged cheese, Cream & butter, Salt & seasonings, Peppers & nightshades
+       - Refined grains           Macaroni  (macaroni)
+       - Milk                     Whole milk  (whole-milk)
+       - Aged cheese              Cheddar  (cheddar)
+       - Cream & butter           Butter  (butter)
+       - Salt & seasonings        Salt (table)  (salt-table)
+       - Peppers & nightshades    Tomato  (tomato)
+
+[28] cobb-salad  |  Cobb salad
+     notes: Composed rows of grilled chicken, crisp bacon, avocado, hard-boiled egg, and blue cheese over chopped romaine — a salad that eats like a meal.
+     cats : Other vegetables, Processed meat, Peppers & nightshades, Eggs, Poultry, Leafy greens, Dressings & dips, Aged cheese, Oils, Salt & seasonings, Citrus
+       - Other vegetables         Green beans  (green-beans)
+       - Processed meat           Bacon  (bacon)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Poultry                  Chicken breast  (chicken-breast)
+       - Leafy greens             Romaine lettuce  (romaine-lettuce)
+       - Dressings & dips         House vinaigrette  (vinaigrette-house)
+       - Aged cheese              Blue cheese  (blue-cheese)
+       - Oils                     Avocado oil  (avocado-oil)
+       - Salt & seasonings        Salt (table)  (salt-table)
+       - Citrus                   Lemon  (lemon)
+
+[29] bbq-plate  |  BBQ plate
+     notes: Smoky pulled pork or sliced brisket lacquered with sauce, served with creamy coleslaw, cornbread, and a soft bun.
+     cats : Red meat, Sauces, Other vegetables, Bread & rolls, Cream & butter
+       - Red meat                 Pulled pork (cooked)  (pulled-pork)
+       - Sauces                   BBQ sauce  (bbq-sauce)
+       - Other vegetables         Onion  (onion)
+       - Bread & rolls            Cornbread  (cornbread)
+       - Cream & butter           Butter  (butter)
+
+[30] thanksgiving-plate  |  Thanksgiving plate
+     notes: A slice of roast turkey blanketed in gravy, beside mashed potatoes, sage stuffing, candied yams, green beans, and a spoon of cranberry sauce.
+     cats : Poultry, Starchy vegetables, Sauces, Bread & rolls
+       - Poultry                  Turkey thigh  (turkey-thigh)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Sauces                   Cranberry sauce (canned)  (cranberry-sauce-canned)
+       - Bread & rolls            White bread  (white-bread)
+
+[31] biscuits-and-gravy  |  Biscuits and gravy
+     notes: Flaky buttermilk biscuits split open and smothered in peppery sausage gravy — a Southern Sunday plate.
+     cats : Flours, Milk, Salt & seasonings, Peppers & nightshades, Processed meat
+       - Flours                   All-purpose flour  (all-purpose-flour)
+       - Milk                     Whole milk  (whole-milk)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Processed meat           Blood sausage  (blood-sausage)
+
+[32] chicken-and-waffles  |  Chicken and waffles
+     notes: Crisp buttermilk-fried chicken perched on golden waffles, syrup pooling at the edges and a knob of butter melting on top.
+     cats : Poultry, Bread & rolls, Sugar & sweeteners, Oils
+       - Poultry                  Chicken breast  (chicken-breast)
+       - Bread & rolls            White bread  (white-bread)
+       - Sugar & sweeteners       Golden syrup  (golden-syrup)
+       - Oils                     Olive oil  (olive-oil)
+
+[33] club-sandwich  |  Club sandwich
+     notes: A triple-decker tower of toasted bread layered with turkey, bacon, lettuce, tomato, and mayo, skewered into four neat triangles.
+     cats : Processed meat, Poultry, Bread & rolls, Aged cheese, Peppers & nightshades
+       - Processed meat           Bacon  (bacon)
+       - Poultry                  Turkey thigh  (turkey-thigh)
+       - Bread & rolls            White bread  (white-bread)
+       - Aged cheese              Cheddar  (cheddar)
+       - Peppers & nightshades    Tomato  (tomato)
+
+[34] reuben-sandwich  |  Reuben sandwich
+     notes: Corned beef, Swiss cheese, sauerkraut, and Russian dressing griddled between slices of rye until the cheese is melting and the bread is buttery-crisp.
+     cats : Aged cheese, Pickled vegetables, Bread & rolls, Red meat, Cream & butter
+       - Aged cheese              Swiss cheese  (swiss)
+       - Bread & rolls            White bread  (white-bread)
+       - Red meat                 Beef shank  (beef-shank)
+       - Cream & butter           Beef tallow  (beef-tallow)
+
+[35] buffalo-wings  |  Buffalo wings
+     notes: Crackling fried chicken wings tumbled in a glossy butter-hot-sauce, served with celery sticks and a cup of cool blue cheese dressing.
+     cats : Poultry, Sauces, Cream & butter, Dressings & dips, Oils
+       - Poultry                  Chicken breast  (chicken-breast)
+       - Sauces                   Hot sauce (green)  (green-hot-sauce)
+       - Cream & butter           Butter  (butter)
+       - Dressings & dips         Blue cheese dressing  (blue-cheese-dressing)
+       - Dressings & dips         Red wine vinegar  (red-wine-vinegar)
+       - Oils                     Olive oil  (olive-oil)
+
+[36] chili-con-carne  |  Chili con carne
+     notes: A slow-simmered bowl of ground beef, beans, tomato, and chiles — thick, smoky, and topped with cheese, sour cream, and scallions.
+     cats : Other vegetables, Peppers & nightshades, Red meat, Ground spices, Salt & seasonings, Legumes
+       - Other vegetables         Yellow squash  (yellow-squash)
+       - Peppers & nightshades    Tomato sauce (canned)  (tomato-sauce-canned)
+       - Red meat                 Ground beef (80/20)  (ground-beef-80-20)
+       - Ground spices            Chili powder  (chili-powder)
+       - Salt & seasonings        Salt (table)  (salt-table)
+       - Legumes                  Kidney bean  (kidney-bean)
+
+[37] philly-cheesesteak  |  Philly cheesesteak
+     notes: Thin shaved beef and sweated onions piled into a soft hoagie roll, draped with melted provolone or Cheez Whiz.
+     cats : Red meat, Aged cheese, Bread & rolls, Other vegetables
+       - Red meat                 Beef chuck roast  (beef-chuck-roast)
+       - Aged cheese              Provolone  (provolone)
+       - Bread & rolls            Hoagie roll  (hoagie-roll)
+       - Other vegetables         Onion  (onion)
+
+[38] meatloaf-mashed-potato  |  Meatloaf with mashed potato
+     notes: A thick slab of glazed meatloaf beside a soft mound of mashed potatoes pooling with gravy — diner comfort.
+     cats : Red meat, Starchy vegetables, Eggs, Sauces
+       - Red meat                 Ground beef (80/20)  (ground-beef-80-20)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Sauces                   Brown gravy  (gravy-brown)
+
+[39] lobster-roll  |  Lobster roll
+     notes: Cool lobster meat barely bound with mayo (or warmed in butter), tucked into a buttery, griddled split-top bun.
+     cats : Shellfish, Extracts & essences, Cream & butter, Other vegetables, Citrus, Salt & seasonings, Processed meat, Fresh herbs, Bread & rolls
+       - Shellfish                Lobster  (lobster)
+       - Cream & butter           Butter  (butter)
+       - Other vegetables         Onion  (onion)
+       - Citrus                   Lemon  (lemon)
+       - Salt & seasonings        Salt (table)  (salt-table)
+       - Processed meat           Bacon  (bacon)
+       - Fresh herbs              Parsley  (parsley)
+       - Bread & rolls            Hoagie roll  (hoagie-roll)
+
+[40] full-english-breakfast  |  Full English breakfast
+     notes: Eggs, bacon, sausages, baked beans, grilled tomato, mushrooms, and a slice of toast — the full plate, all at once.
+     cats : Eggs, Processed meat, Peppers & nightshades, Mushrooms, Legumes, Bread & rolls, Oils
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Processed meat           Breakfast sausage  (breakfast-sausage)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Mushrooms                White mushroom  (mushroom-white)
+       - Legumes                  Lima beans  (lima-beans)
+       - Bread & rolls            White bread  (white-bread)
+       - Oils                     Olive oil  (olive-oil)
+
+[41] shepherds-pie  |  Shepherd's pie
+     notes: Spiced minced lamb and peas beneath a crown of mashed potato, baked until the top peaks are crisp and golden.
+     cats : Starchy vegetables, Other vegetables, Red meat, Salt & seasonings, Peppers & nightshades, Cream & butter, Milk
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Other vegetables         Onion  (onion)
+       - Red meat                 Lamb leg  (lamb-leg)
+       - Salt & seasonings        Onion salt  (onion-salt)
+       - Peppers & nightshades    Padrón pepper  (padron-pepper)
+       - Cream & butter           Butter  (butter)
+       - Milk                     Whole milk  (whole-milk)
+
+[42] bangers-and-mash  |  Bangers and mash
+     notes: Plump pork sausages over creamy mashed potatoes, smothered with rich onion gravy — pub comfort.
+     cats : Processed meat, Starchy vegetables, Sauces, Cream & butter
+       - Processed meat           Sausage (pork)  (sausage)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Sauces                   Brown gravy  (gravy-brown)
+       - Cream & butter           Butter  (butter)
+
+[43] ploughmans-lunch  |  Ploughman's lunch
+     notes: A casual lunch board of cheese, cold ham, pickles, crusty bread, butter, and a tart apple.
+     cats : Aged cheese, Processed meat, Pickled vegetables, Bread & rolls, Temperate fruits
+       - Aged cheese              Cheddar  (cheddar)
+       - Processed meat           Ham  (ham)
+       - Pickled vegetables       Pickle (dill)  (pickle-dill)
+       - Bread & rolls            White bread  (white-bread)
+       - Temperate fruits         Apple  (apple)
+
+[44] sunday-roast  |  Sunday roast
+     notes: Sliced roast beef with crisp Yorkshire pudding, roast potatoes, root vegetables, and a glossy ladle of gravy.
+     cats : Red meat, Starchy vegetables, Other vegetables, Sauces
+       - Red meat                 Beef chuck roast  (beef-chuck-roast)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Other vegetables         Lotus root  (lotus-root)
+       - Sauces                   Brown gravy  (gravy-brown)
+
+[45] scones-cream-jam  |  Scones with cream and jam
+     notes: Warm crumbly scones split and piled high with thick clotted cream and strawberry jam, alongside a pot of tea.
+     cats : Baked snacks & pastries, Cream & butter, Jams & preserves
+       - Baked snacks & pastries  Graham crackers  (graham-crackers)
+       - Cream & butter           Clotted cream  (clotted-cream)
+       - Jams & preserves         Jam (strawberry)  (jam-strawberry)
+
+[46] beef-wellington  |  Beef Wellington
+     notes: A rosy beef tenderloin wrapped in mushroom duxelles and golden puff pastry, sliced to reveal blush-pink centers.
+     cats : Eggs, Baked snacks & pastries, Red meat, Mushrooms, Other vegetables, Cream & butter, Salt & seasonings, Fresh herbs, Oils
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Baked snacks & pastries  Puff pastry  (puff-pastry)
+       - Red meat                 Beef tenderloin  (beef-tenderloin)
+       - Mushrooms                White mushroom  (mushroom-white)
+       - Other vegetables         Garlic  (garlic)
+       - Cream & butter           Beef tallow  (beef-tallow)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Fresh herbs              Parsley  (parsley)
+       - Oils                     Olive oil  (olive-oil)
+
+[47] toad-in-the-hole  |  Toad in the hole
+     notes: Plump pork sausages baked into a billowing golden Yorkshire pudding, served with onion gravy.
+     cats : Eggs, Flours, Milk, Salt & seasonings, Processed meat, Oils
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Flours                   All-purpose flour  (all-purpose-flour)
+       - Milk                     Whole milk  (whole-milk)
+       - Salt & seasonings        Onion salt  (onion-salt)
+       - Processed meat           Sausage (pork)  (sausage)
+       - Oils                     Olive oil  (olive-oil)
+
+[48] croque-monsieur  |  Croque-monsieur
+     notes: Ham and Gruyère sandwiched in buttered bread, the top blanketed in béchamel and broiled until bubbling and bronzed.
+     cats : Processed meat, Aged cheese, Bread & rolls, Cream & butter
+       - Processed meat           Ham  (ham)
+       - Aged cheese              Swiss cheese  (swiss)
+       - Bread & rolls            White bread  (white-bread)
+       - Cream & butter           Butter  (butter)
+
+[49] ratatouille  |  Ratatouille
+     notes: Slow-stewed eggplant, zucchini, peppers, onion, and tomato in olive oil and herbs — silky, savory, deeply Provençal.
+     cats : Other vegetables, Peppers & nightshades, Salt & seasonings, Oils, Fresh herbs
+       - Other vegetables         Zucchini  (zucchini)
+       - Peppers & nightshades    Green bell pepper  (bell-pepper-green)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Salt & seasonings        Onion salt  (onion-salt)
+       - Oils                     Olive oil  (olive-oil)
+       - Fresh herbs              Summer savory  (summer-savory)
+
+[50] beef-bourguignon  |  Beef bourguignon
+     notes: Chunks of beef braised slowly in red wine with mushrooms, pearl onions, and bacon until forktender and gravy-rich.
+     cats : Other vegetables, Mushrooms, Red meat, Alcoholic beverages, Fresh herbs, Flours, Peppers & nightshades, Dried herbs, Salt & seasonings, Starchy vegetables, Processed meat, Oils
+       - Other vegetables         Celery  (celery)
+       - Mushrooms                White mushroom  (mushroom-white)
+       - Red meat                 Beef shank  (beef-shank)
+       - Alcoholic beverages      Red wine  (wine-red)
+       - Fresh herbs              Oregano (fresh)  (oregano-fresh)
+       - Flours                   All-purpose flour  (all-purpose-flour)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Dried herbs              Oregano (dried)  (dried-oregano)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Salt & seasonings        Celery salt  (celery-salt)
+       - Starchy vegetables       Red potato  (potato-red)
+       - Processed meat           Beef jerky  (beef-jerky)
+       - Oils                     Olive oil  (olive-oil)
+
+[51] nicoise-salad  |  Salade niçoise
+     notes: Composed wedges of seared tuna, green beans, olives, hard-boiled egg, and small potatoes over greens with a sharp vinaigrette.
+     cats : Leafy greens, Oily fish, Eggs, Pickled vegetables, Starchy vegetables, Oils
+       - Leafy greens             Collard greens  (collard-greens)
+       - Oily fish                Tuna (bluefin)  (tuna-bluefin)
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Pickled vegetables       Olives (green)  (olives-green)
+       - Pickled vegetables       Olives (black)  (olives-black)
+       - Starchy vegetables       Purple potato  (potato-purple)
+       - Oils                     Olive oil  (olive-oil)
+
+[52] omelette-french  |  French omelette
+     notes: A pale, just-set omelette rolled into a slim cylinder, the inside still loose — buttery, custardy, deceptively simple.
+     cats : Eggs, Aged cheese, Cream & butter
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Aged cheese              Cheddar  (cheddar)
+       - Cream & butter           Butter  (butter)
+
+[53] coq-au-vin  |  Coq au vin
+     notes: Chicken simmered low and slow in red wine with mushrooms, lardons, and pearl onions until the sauce turns silky.
+     cats : Other vegetables, Poultry, Mushrooms, Fresh herbs, Alcoholic beverages, Processed meat, Flours, Salt & seasonings, Starchy vegetables, Dried herbs, Peppers & nightshades, Oils, Cream & butter
+       - Other vegetables         Garlic  (garlic)
+       - Poultry                  Chicken breast  (chicken-breast)
+       - Mushrooms                White mushroom  (mushroom-white)
+       - Fresh herbs              Salad burnet  (salad-burnet)
+       - Alcoholic beverages      Red wine  (wine-red)
+       - Processed meat           Lardons  (lardons)
+       - Flours                   All-purpose flour  (all-purpose-flour)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Starchy vegetables       Red potato  (potato-red)
+       - Dried herbs              Oregano (dried)  (dried-oregano)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Oils                     Olive oil  (olive-oil)
+       - Cream & butter           Butter  (butter)
+
+[54] bouillabaisse  |  Bouillabaisse
+     notes: A saffron-stained Provençal seafood stew of fish and shellfish, served with crusty bread and a smear of garlicky rouille.
+     cats : Other vegetables, Peppers & nightshades, Oils, Shellfish, Fresh herbs, Salt & seasonings, Whole spices, White fish, Alcoholic beverages, Dried herbs, Starchy vegetables, Bread & rolls, Prepared soups & broths
+       - Other vegetables         Garlic  (garlic)
+       - Peppers & nightshades    Tomato  (tomato)
+       - Oils                     Olive oil  (olive-oil)
+       - Shellfish                Shrimp  (shrimp)
+       - Fresh herbs              Parsley  (parsley)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Whole spices             Saffron  (saffron)
+       - White fish               Cod  (cod)
+       - Alcoholic beverages      White wine  (wine-white)
+       - Dried herbs              Thyme (dried)  (dried-thyme)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Bread & rolls            White bread  (white-bread)
+       - Prepared soups & broths  Chicken broth (canned)  (chicken-broth)
+
+[55] quiche-lorraine  |  Quiche Lorraine
+     notes: A blind-baked tart shell holding a custard of cream and eggs, studded with smoky lardons — set just enough to slice clean.
+     cats : Eggs, Processed meat, Aged cheese, Salt & seasonings, Other vegetables, Ground spices, Cream & butter, Peppers & nightshades, Baked snacks & pastries, Milk
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Processed meat           Lardons  (lardons)
+       - Aged cheese              Swiss cheese  (swiss)
+       - Salt & seasonings        Onion salt  (onion-salt)
+       - Other vegetables         Onion  (onion)
+       - Ground spices            Cayenne pepper  (cayenne)
+       - Cream & butter           Heavy cream  (heavy-cream)
+       - Peppers & nightshades    Padrón pepper  (padron-pepper)
+       - Baked snacks & pastries  Pie crust (baked)  (pie-crust)
+       - Milk                     Whole milk  (whole-milk)
+
+[56] cassoulet  |  Cassoulet
+     notes: A bubbling earthenware crock of white beans slow-cooked with duck confit, sausage, and pork, capped with a crisp golden crust.
+     cats : Other vegetables, Peppers & nightshades, Fresh herbs, Processed meat, Red meat, Salt & seasonings, Starchy vegetables, Poultry, Oils, Dried herbs, Bread & rolls, Alcoholic beverages
+       - Other vegetables         Green beans  (green-beans)
+       - Peppers & nightshades    Tomato paste  (tomato-paste)
+       - Peppers & nightshades    Green bell pepper  (bell-pepper-green)
+       - Fresh herbs              Parsley  (parsley)
+       - Processed meat           Sausage (pork)  (sausage)
+       - Red meat                 Ground beef (80/20)  (ground-beef-80-20)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Salt & seasonings        Celery salt  (celery-salt)
+       - Starchy vegetables       Russet potato  (potato-russet)
+       - Poultry                  Duck leg confit  (duck-leg-confit)
+       - Oils                     Olive oil  (olive-oil)
+       - Dried herbs              Oregano (dried)  (dried-oregano)
+       - Bread & rolls            White bread  (white-bread)
+       - Alcoholic beverages      White wine  (wine-white)
+
+[57] crepes-savory  |  Savory crêpes
+     notes: Paper-thin buckwheat crêpes folded around ham, Gruyère, and a runny egg, edges crisp and lacy.
+     cats : Eggs, Aged cheese, Processed meat, Bread & rolls
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Aged cheese              Gruyère  (gruyere)
+       - Processed meat           Ham  (ham)
+       - Bread & rolls            White bread  (white-bread)
+
+[58] caprese  |  Caprese salad
+     notes: Alternating slices of milky mozzarella and ripe tomato, finished with torn basil, flaky salt, and a slick of olive oil.
+     cats : Peppers & nightshades, Fresh herbs, Oils, Fresh cheese, Salt & seasonings, Dressings & dips
+       - Peppers & nightshades    Cherry tomato  (tomato-cherry)
+       - Fresh herbs              Salad burnet  (salad-burnet)
+       - Oils                     Olive oil  (olive-oil)
+       - Fresh cheese             Fresh mozzarella  (fresh-mozzarella)
+       - Salt & seasonings        Salt (table)  (salt-table)
+       - Dressings & dips         Balsamic vinegar  (balsamic-vinegar)
+
+[59] pasta-carbonara  |  Pasta carbonara
+     notes: Hot spaghetti tossed with crisp guanciale, sharp pecorino, and egg yolks into a glossy, peppery sauce — no cream, just emulsion.
+     cats : Processed meat, Aged cheese, Eggs, Other vegetables, Refined grains, Peppers & nightshades, Salt & seasonings, Cream & butter, Fresh herbs
+       - Processed meat           Guanciale  (guanciale)
+       - Aged cheese              Pecorino Romano  (pecorino-romano)
+       - Eggs                     Egg (whole)  (egg-whole)
+       - Other vegetables         Garlic  (garlic)
+       - Refined grains           White pasta  (white-pasta)
+       - Peppers & nightshades    Green bell pepper  (bell-pepper-green)
+       - Salt & seasonings        Garlic salt  (garlic-salt)
+       - Cream & butter           Butter  (butter)
+       - Fresh herbs              Parsley  (parsley)

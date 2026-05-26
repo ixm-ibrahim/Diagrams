@@ -26,6 +26,7 @@
  */
 
 import { createRailSection } from './left-rail.js';
+import { escapeHtml, escapeAttr, cssEscape } from '../util/dom.js';
 
 const DEFAULT_GRAMS  = 100;
 const GRAMS_MIN      = 5;
@@ -419,14 +420,3 @@ function computeTotals(meal, ingredientById) {
   return { grams, calories };
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }
-function cssEscape(s) {
-  if (typeof CSS !== 'undefined' && CSS.escape) return CSS.escape(String(s));
-  return String(s).replace(/(["\\])/g, '\\$1');
-}

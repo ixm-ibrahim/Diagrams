@@ -40,11 +40,12 @@
 const AXIS_LINE_DRAG_DISABLED = true;
 
 import * as THREE from 'three';
-import { AXIS_DIRS, AXIS_LEN } from './axes.js';
+import { AXIS_DIRS, AXIS_LEN, AXIS_COLOR_VARS } from './axes.js';
+import { pointerNDC, worldToClient } from './pointer-math.js';
+import { readCssString } from './setup.js';
 
 const RAYCAST_LINE_THRESHOLD = 0.04;
 const MIN_SCREEN_AXIS_LEN_PX = 10;
-const AXIS_COLOR_VARS = ['--color-axis-x', '--color-axis-y', '--color-axis-z'];
 
 /* Phase 13.75 refinement: pick a clean step size for a given range so
  * the pan snaps to familiar increments. Aim for ~1% of range, then
@@ -84,8 +85,7 @@ export function attachAxisDrag({
   function showHoverDot(idx, clientX, clientY) {
     const varName = AXIS_COLOR_VARS[idx];
     if (varName) {
-      const css = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
-      hoverDot.style.background = css || '#888';
+      hoverDot.style.background = readCssString(varName, '#888');
     }
     hoverDot.style.left = `${clientX}px`;
     hoverDot.style.top  = `${clientY}px`;
@@ -96,9 +96,7 @@ export function attachAxisDrag({
   }
 
   function setPointerFromEvent(ev) {
-    const rect = dom.getBoundingClientRect();
-    pointer.x =  ((ev.clientX - rect.left) / rect.width)  * 2 - 1;
-    pointer.y = -((ev.clientY - rect.top)  / rect.height) * 2 + 1;
+    pointerNDC(ev, dom, pointer);
   }
 
   function axisLineObjects() {
@@ -126,15 +124,10 @@ export function attachAxisDrag({
 
   function screenAxisGeom(axisIdx) {
     const cam = getCamera();
-    const rect = dom.getBoundingClientRect();
-    const o = new THREE.Vector3(0, 0, 0).project(cam);
-    const t = AXIS_DIRS[axisIdx].clone().multiplyScalar(AXIS_LEN).project(cam);
-    const ox = (o.x + 1) / 2 * rect.width;
-    const oy = (1 - (o.y + 1) / 2) * rect.height;
-    const tx = (t.x + 1) / 2 * rect.width;
-    const ty = (1 - (t.y + 1) / 2) * rect.height;
-    const dx = tx - ox;
-    const dy = ty - oy;
+    const origin = worldToClient(new THREE.Vector3(0, 0, 0), cam, dom);
+    const tip    = worldToClient(AXIS_DIRS[axisIdx].clone().multiplyScalar(AXIS_LEN), cam, dom);
+    const dx = tip.x - origin.x;
+    const dy = tip.y - origin.y;
     const len = Math.hypot(dx, dy);
     return { dx, dy, len };
   }

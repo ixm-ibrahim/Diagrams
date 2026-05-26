@@ -1,0 +1,1489 @@
+### Aged cheese  (36)
+    appenzeller                      Appenzeller
+    asiago                           Asiago
+    blue-cheese                      Blue cheese
+    brie                             Brie
+    caciocavallo                     Caciocavallo
+    cambozola                        Cambozola
+    camembert                        Camembert
+    cheddar                          Cheddar
+    cheese-curds                     Cheese curds (cheddar)
+    comte                            Comté
+    cotija                           Cotija
+    edam                             Edam
+    emmental                         Emmental
+    feta                             Feta
+    fontina                          Fontina
+    gjetost                          Gjetost (Norwegian brown cheese)
+    gorgonzola                       Gorgonzola
+    gouda                            Gouda
+    gouda-aged                       Gouda (aged)
+    gruyere                          Gruyère
+    havarti                          Havarti
+    jarlsberg                        Jarlsberg
+    limburger                        Limburger
+    manchego                         Manchego
+    mozzarella-low-moisture          Mozzarella (low-moisture)
+    muenster                         Muenster (American)
+    parmesan                         Parmesan
+    pecorino-romano                  Pecorino Romano
+    pecorino-toscano                 Pecorino Toscano
+    provolone                        Provolone
+    raclette                         Raclette cheese
+    ricotta-salata                   Ricotta salata
+    romano-cheese                    Romano cheese
+    roquefort                        Roquefort
+    stilton                          Stilton
+    swiss                            Swiss cheese
+
+### Alcoholic beverages  (33)
+    absinthe                         Absinthe
+    ale                              Ale
+    amaretto                         Amaretto
+    beer-lager                       Beer (lager)
+    bourbon                          Bourbon whiskey
+    brandy                           Brandy / cognac
+    wine-champagne                   Champagne
+    kahlua                           Coffee liqueur (Kahlua-style)
+    baileys-style                    Cream liqueur (Baileys-style)
+    gin                              Gin
+    hard-cider                       Hard cider
+    ipa                              IPA (India Pale Ale)
+    marsala-wine                     Marsala wine (cooking)
+    schnapps-peppermint              Peppermint schnapps
+    port-wine                        Port wine
+    wine-red                         Red wine
+    wine-rose                        Rosé wine
+    rum-dark                         Rum (dark)
+    rum-light                        Rum (white)
+    rye-whiskey                      Rye whiskey
+    sake                             Sake
+    sambuca                          Sambuca
+    scotch-whisky                    Scotch whisky
+    sherry-dry                       Sherry (dry)
+    wine-sparkling                   Sparkling wine / prosecco
+    stout-beer                       Stout
+    tequila                          Tequila
+    triple-sec                       Triple sec / Cointreau
+    vermouth-dry                     Vermouth (dry)
+    vermouth-sweet                   Vermouth (sweet)
+    vodka                            Vodka
+    wheat-beer                       Wheat beer
+    wine-white                       White wine
+
+### Baked snacks & pastries  (36)
+    biscotti                         Biscotti
+    biscuit                          Biscuit (American)
+    biscuit-mix                      Biscuit mix (Bisquick-style)
+    blueberry-muffin                 Blueberry muffin
+    bran-muffin                      Bran muffin
+    breadstick                       Breadstick (grissini)
+    buttermilk-biscuit               Buttermilk biscuit
+    ritz-cracker                     Buttery round cracker (Ritz-style)
+    cheese-cracker                   Cheese cracker
+    chocolate-chip-cookie            Chocolate chip cookie
+    danish                           Danish pastry
+    digestive-biscuit                Digestive biscuit
+    doritos                          Flavored tortilla chip (Doritos-style)
+    ginger-snap                      Gingersnap
+    graham-cracker-crumb             Graham cracker crumbs
+    graham-cracker-crust             Graham cracker crust
+    graham-crackers                  Graham crackers
+    hard-pretzel                     Hard pretzel
+    melba-toast                      Melba toast
+    oatmeal-cookie                   Oatmeal cookie
+    peanut-butter-cookie             Peanut butter cookie
+    phyllo-dough                     Phyllo dough
+    pie-crust                        Pie crust (baked)
+    pita-chip                        Pita chip
+    puff-pastry                      Puff pastry
+    rice-cracker                     Rice cracker
+    saltine-crackers                 Saltine crackers
+    oreo                             Sandwich cookie (Oreo-style)
+    scone                            Scone
+    shortbread                       Shortbread
+    soda-cracker                     Soda cracker
+    soft-pretzel                     Soft pretzel
+    sugar-cookie                     Sugar cookie
+    tortilla-chip                    Tortilla chip
+    vanilla-wafer                    Vanilla wafer
+    water-cracker                    Water cracker
+
+### Baking ingredients  (9)
+    agar-agar                        Agar agar
+    arrowroot-powder                 Arrowroot powder
+    baking-powder                    Baking powder
+    baking-soda                      Baking soda
+    cornstarch                       Cornstarch
+    cream-of-tartar                  Cream of tartar
+    xanthan-gum                      Xanthan gum
+    yeast-active-dry                 Yeast (active dry)
+    yeast-instant                    Yeast (instant)
+
+### Berries  (16)
+    acai-berry                       Açaí berry
+    black-currant                    Black currant
+    blackberry                       Blackberry
+    blueberry                        Blueberry
+    boysenberry                      Boysenberry
+    cape-gooseberry                  Cape gooseberry (physalis)
+    cranberry                        Cranberry
+    elderberry                       Elderberry
+    goji-berry                       Goji berry
+    gooseberry                       Gooseberry
+    huckleberry                      Huckleberry
+    mulberry                         Mulberry
+    raspberry                        Raspberry
+    red-currant                      Red currant
+    strawberry                       Strawberry
+    white-currant                    White currant
+
+### Bread & rolls  (29)
+    banana-bread                     Banana bread
+    bread-crumbs                     Bread crumbs
+    challah                          Challah
+    corn-muffin                      Corn muffin
+    cornbread                        Cornbread
+    croutons                         Croutons
+    dinner-roll                      Dinner roll
+    dumpling-wrapper                 Dumpling wrapper
+    focaccia                         Focaccia
+    french-bread                     French bread
+    burger-bun                       Hamburger bun
+    hawaiian-roll                    Hawaiian sweet roll
+    hoagie-roll                      Hoagie roll
+    hot-dog-bun                      Hot dog bun
+    kaiser-roll                      Kaiser roll
+    lavash                           Lavash
+    matzo                            Matzo
+    multigrain-bread                 Multigrain bread
+    panko                            Panko (Japanese bread crumbs)
+    paratha                          Paratha
+    pizza-dough                      Pizza dough
+    potato-bread                     Potato bread
+    pumpernickel-bread               Pumpernickel bread
+    roti                             Roti
+    spring-roll-wrapper              Spring roll wrapper (rice)
+    taco-shell                       Taco shell (hard)
+    white-bread                      White bread
+    whole-wheat-bread                Whole wheat bread
+    wonton-wrapper                   Wonton wrapper
+
+### Candy & desserts  (36)
+    amaretti                         Amaretti
+    baking-chocolate-unsweetened     Baking chocolate (unsweetened)
+    baklava                          Baklava
+    licorice-black                   Black licorice
+    candy-corn                       Candy corn
+    caramel-soft                     Caramel
+    gum-chewing                      Chewing gum (sweetened)
+    chocolate-bar-milk               Chocolate bar (milk)
+    chocolate-chips-dark             Chocolate chips (dark)
+    chocolate-chips-milk             Chocolate chips (milk)
+    chocolate-truffle                Chocolate truffle
+    cocoa-powder                     Cocoa powder
+    dark-chocolate                   Dark chocolate
+    dragees                          Dragées (silver-coated)
+    fudge                            Fudge
+    gulab-jamun                      Gulab jamun
+    gummy-bear                       Gummy bears
+    halva                            Halva
+    hard-candy                       Hard candy
+    jelly-bean                       Jelly beans
+    lollipop                         Lollipop (hard candy)
+    marshmallow                      Marshmallow
+    marzipan                         Marzipan
+    meringue-cookie                  Meringue cookies
+    milk-chocolate                   Milk chocolate
+    nougat                           Nougat
+    brittle-peanut                   Peanut brittle
+    peanut-butter-cup                Peanut butter cup
+    peppermint-candy                 Peppermint candy
+    praline                          Praline (pecan)
+    licorice-red                     Red licorice (Twizzlers-style)
+    rock-candy                       Rock candy
+    toffee                           Toffee
+    turkish-delight                  Turkish delight
+    white-chocolate                  White chocolate
+    white-chocolate-chips            White chocolate chips
+
+### Canned & cured fish  (17)
+    anchovy-paste                    Anchovy paste
+    canned-anchovies-oil             Canned anchovies (in oil)
+    canned-mackerel                  Canned mackerel
+    canned-salmon                    Canned salmon
+    canned-sardines-oil              Canned sardines (in oil)
+    canned-tuna-oil                  Canned tuna (in oil)
+    canned-tuna-water                Canned tuna (in water)
+    caviar                           Caviar
+    ikura                            Ikura (salmon roe)
+    masago                           Masago (capelin roe)
+    mentaiko                         Mentaiko (pollock roe)
+    pickled-herring                  Pickled herring
+    salt-cod-bacalao                 Salt cod (bacalao)
+    smoked-mackerel                  Smoked mackerel
+    smoked-salmon-lox                Smoked salmon (lox)
+    smoked-trout                     Smoked trout
+    tobiko                           Tobiko (flying-fish roe)
+
+### Citrus  (16)
+    blood-orange                     Blood orange
+    calamansi                        Calamansi
+    clementine                       Clementine
+    finger-lime                      Finger lime
+    grapefruit                       Grapefruit
+    key-lime                         Key lime
+    kumquat                          Kumquat
+    lemon                            Lemon
+    lime                             Lime
+    mandarin                         Mandarin orange
+    meyer-lemon                      Meyer lemon
+    orange                           Orange
+    pomelo                           Pomelo
+    satsuma                          Satsuma
+    tangerine                        Tangerine
+    yuzu                             Yuzu
+
+### Coffee & tea  (15)
+    tea-black-brewed                 Black tea (brewed)
+    cappuccino                       Cappuccino
+    chai-concentrate                 Chai concentrate
+    coffee-brewed                    Coffee (brewed)
+    cold-brew-coffee                 Cold brew coffee
+    decaf-coffee                     Decaf coffee (brewed)
+    espresso                         Espresso
+    green-tea                        Green tea (brewed)
+    herbal-tea                       Herbal tea (brewed)
+    instant-coffee                   Instant coffee (prepared)
+    latte                            Latte
+    matcha                           Matcha (powder, prepared)
+    mocha-coffee                     Mocha
+    oolong-tea                       Oolong tea (brewed)
+    white-tea                        White tea (brewed)
+
+### Cream & butter  (16)
+    beef-tallow                      Beef tallow
+    butter                           Butter
+    clotted-cream                    Clotted cream
+    creme-fraiche                    Crème fraîche
+    duck-fat                         Duck fat
+    ghee                             Ghee
+    half-and-half                    Half-and-half
+    heavy-cream                      Heavy cream
+    kajmak                           Kajmak
+    light-cream                      Light cream (table cream)
+    malai                            Malai (Indian cream)
+    niter-kibbeh                     Niter kibbeh
+    schmaltz                         Schmaltz (chicken fat)
+    sour-cream                       Sour cream
+    vegan-butter                     Vegan butter
+    whipping-cream                   Whipping cream
+
+### Cruciferous vegetables  (11)
+    broccoli                         Broccoli
+    broccoli-rabe                    Broccoli rabe
+    broccolini                       Broccolini
+    brussels-sprouts                 Brussels sprouts
+    cauliflower                      Cauliflower
+    chinese-broccoli-gai-lan         Chinese broccoli (gai lan)
+    choy-sum                         Choy sum
+    daikon-radish                    Daikon radish
+    kohlrabi                         Kohlrabi
+    radish                           Radish
+    yu-choy                          Yu choy
+
+### Dressings & dips  (48)
+    aioli                            Aioli
+    ajvar                            Ajvar
+    apple-cider-vinegar              Apple cider vinegar
+    baba-ganoush                     Baba ganoush
+    balsamic-vinaigrette             Balsamic vinaigrette
+    balsamic-vinegar                 Balsamic vinegar
+    vinegar-banyuls                  Banyuls vinegar
+    blue-cheese-dressing             Blue cheese dressing
+    caesar-dressing                  Caesar dressing
+    vinegar-champagne                Champagne vinegar
+    chimichurri                      Chimichurri
+    chinese-black-vinegar            Chinese black vinegar
+    vinegar-coconut                  Coconut vinegar
+    dill-pickle-relish               Dill pickle relish
+    vinegar-distilled-white          Distilled white vinegar
+    french-dressing                  French dressing
+    greek-dressing                   Greek dressing
+    guacamole                        Guacamole
+    vinaigrette-house                House vinaigrette
+    hummus                           Hummus
+    italian-dressing                 Italian dressing
+    malt-vinegar                     Malt vinegar
+    marmite                          Marmite
+    mayonnaise                       Mayonnaise
+    mojo-rojo                        Mojo rojo
+    mojo-verde                       Mojo verde
+    muhammara                        Muhammara
+    pesto-basil                      Pesto (basil)
+    pickled-ginger                   Pickled ginger
+    pomegranate-molasses             Pomegranate molasses
+    poppy-seed-dressing              Poppy seed dressing
+    preserved-lemon                  Preserved lemon
+    raita                            Raita
+    ranch-dressing                   Ranch dressing
+    red-wine-vinegar                 Red wine vinegar
+    remoulade                        Remoulade
+    rice-vinegar                     Rice vinegar
+    romesco                          Romesco sauce
+    russian-dressing                 Russian dressing
+    sherry-vinegar                   Sherry vinegar
+    relish-sweet                     Sweet pickle relish
+    tarama                           Taramasalata
+    tartar-sauce                     Tartar sauce
+    thousand-island                  Thousand Island dressing
+    tzatziki                         Tzatziki
+    vegemite                         Vegemite
+    white-wine-vinegar               White wine vinegar
+    zhug                             Zhug (Yemenite green sauce)
+
+### Dried fruits  (17)
+    dried-banana                     Banana chip / dried banana
+    barberries                       Barberries
+    candied-citron                   Candied citron peel
+    date-medjool                     Date (Medjool)
+    dried-apricot                    Dried apricot
+    dried-blueberry                  Dried blueberry
+    dried-cherry                     Dried cherry
+    dried-coconut                    Dried coconut (unsweetened)
+    dried-cranberry                  Dried cranberry
+    dried-fig                        Dried fig
+    dried-mango                      Dried mango
+    dried-pineapple                  Dried pineapple
+    dried-rose-petals                Dried rose petals
+    dried-strawberry                 Dried strawberry
+    raisin-golden                    Golden raisin
+    prune                            Prune
+    raisin                           Raisin
+
+### Dried herbs  (12)
+    dried-basil                      Basil (dried)
+    bay-leaf-dried                   Bay leaf (dried)
+    dried-curry-leaves               Curry leaves (dried)
+    dried-dill                       Dill (dried)
+    kasoori-methi                    Kasoori methi (dried fenugreek leaves)
+    dried-marjoram                   Marjoram (dried)
+    mexican-oregano                  Mexican oregano
+    dried-oregano                    Oregano (dried)
+    dried-rosemary                   Rosemary (dried)
+    dried-sage                       Sage (dried)
+    dried-tarragon                   Tarragon (dried)
+    dried-thyme                      Thyme (dried)
+
+### Eggs  (6)
+    egg-duck                         Duck egg
+    egg-whole                        Egg (whole)
+    egg-white                        Egg white
+    egg-yolk                         Egg yolk
+    egg-goose                        Goose egg
+    egg-quail                        Quail egg
+
+### Extracts & essences  (5)
+    almond-extract                   Almond extract
+    orange-blossom-water             Orange blossom water
+    rose-water                       Rose water
+    vanilla-bean                     Vanilla bean
+    vanilla-extract                  Vanilla extract
+
+### Fermented dairy  (10)
+    ayran                            Ayran
+    buttermilk                       Buttermilk
+    clabber-cream                    Clabber cream / cultured cream
+    doogh                            Doogh
+    kashk                            Kashk
+    kefir                            Kefir
+    kefir-plain                      Kefir (plain)
+    labneh                           Labneh
+    lassi-sweet                      Lassi (sweet)
+    skyr                             Skyr
+
+### Flours  (18)
+    all-purpose-flour                All-purpose flour
+    almond-flour                     Almond flour
+    arrowroot-starch                 Arrowroot starch
+    atta-flour                       Atta flour
+    bread-flour                      Bread flour
+    buckwheat-flour                  Buckwheat flour
+    cake-flour                       Cake flour
+    coconut-flour                    Coconut flour
+    cornmeal                         Cornmeal
+    masa-harina                      Masa harina
+    oat-flour                        Oat flour
+    potato-starch                    Potato starch
+    rice-flour                       Rice flour
+    rye-flour                        Rye flour
+    semolina                         Semolina
+    spelt-flour                      Spelt flour
+    tapioca-flour                    Tapioca flour
+    whole-wheat-flour                Whole wheat flour
+
+### Fresh cheese  (23)
+    bocconcini                       Bocconcini
+    burrata                          Burrata
+    caciotta                         Caciotta
+    chhena                           Chhena
+    chevre                           Chèvre (fresh goat)
+    cottage-cheese                   Cottage cheese
+    cream-cheese                     Cream cheese
+    farmers-cheese                   Farmer's cheese
+    fresh-mozzarella                 Fresh mozzarella
+    fromage-blanc                    Fromage blanc
+    halloumi                         Halloumi
+    khoya                            Khoya
+    mascarpone                       Mascarpone
+    mizithra                         Mizithra
+    paneer                           Paneer
+    quark                            Quark
+    queso-oaxaca                     Queso Oaxaca
+    queso-asadero                    Queso asadero
+    queso-blanco                     Queso blanco
+    queso-fresco                     Queso fresco
+    queso-panela                     Queso panela
+    requeson                         Requesón
+    ricotta                          Ricotta
+
+### Fresh herbs  (27)
+    banana-leaf                      Banana leaf
+    basil                            Basil
+    chervil                          Chervil (fresh)
+    chives                           Chives
+    cilantro                         Cilantro
+    curry-leaves                     Curry leaves (fresh)
+    dill                             Dill
+    epazote                          Epazote
+    hoja-santa                       Hoja santa
+    holy-basil                       Holy basil
+    kaffir-lime-leaf                 Kaffir lime leaf
+    lemon-balm                       Lemon balm
+    lemongrass                       Lemongrass
+    lovage                           Lovage
+    mint                             Mint
+    oregano-fresh                    Oregano (fresh)
+    pandan-leaf                      Pandan leaf
+    parsley                          Parsley
+    perilla                          Perilla leaf (shiso)
+    rosemary                         Rosemary
+    sage                             Sage
+    salad-burnet                     Salad burnet
+    summer-savory                    Summer savory
+    tarragon                         Tarragon
+    thai-basil                       Thai basil
+    thyme                            Thyme
+    vietnamese-coriander             Vietnamese coriander (rau ram)
+
+### Freshwater fish  (6)
+    carp                             Carp
+    catfish                          Catfish
+    whitefish-lake                   Lake whitefish
+    perch                            Perch
+    pike                             Pike
+    bass-striped                     Striped bass
+
+### Frozen dairy  (11)
+    frozen-custard                   Frozen custard
+    frozen-yogurt                    Frozen yogurt (vanilla)
+    gelato-vanilla                   Gelato (vanilla)
+    ice-cream-chocolate              Ice cream (chocolate)
+    ice-cream-cookies-cream          Ice cream (cookies & cream)
+    ice-cream-mint-chip              Ice cream (mint chip)
+    ice-cream-strawberry             Ice cream (strawberry)
+    ice-cream-vanilla                Ice cream (vanilla)
+    ice-cream-sandwich               Ice cream sandwich
+    sherbet                          Sherbet (orange)
+    sorbet                           Sorbet
+
+### Ground spices  (28)
+    aleppo-pepper                    Aleppo pepper
+    amchur                           Amchur (mango powder)
+    asafoetida                       Asafoetida (hing)
+    black-pepper                     Black pepper
+    cayenne                          Cayenne pepper
+    chili-powder                     Chili powder
+    chipotle-powder                  Chipotle powder
+    cinnamon-ground                  Cinnamon (ground)
+    garlic-powder                    Garlic powder
+    ginger-ground                    Ginger (ground)
+    gochugaru                        Gochugaru
+    long-pepper                      Long pepper
+    mahleb                           Mahleb
+    mustard-powder                   Mustard powder
+    nutmeg                           Nutmeg
+    onion-powder                     Onion powder
+    paprika-hot                      Paprika (hot)
+    paprika-smoked                   Paprika (smoked)
+    paprika                          Paprika (sweet)
+    espelette                        Piment d'Espelette
+    pink-peppercorn                  Pink peppercorn
+    red-pepper-flakes                Red pepper flakes
+    sansho                           Sansho pepper
+    sichuan-peppercorn               Sichuan peppercorn
+    sumac                            Sumac
+    turmeric-ground                  Turmeric (ground)
+    urfa-biber                       Urfa biber
+    white-pepper                     White pepper
+
+### Jams & preserves  (14)
+    almond-butter-sweetened          Almond butter (sweetened)
+    apple-butter                     Apple butter
+    preserves-apricot                Apricot preserves
+    jam-blueberry                    Blueberry jam
+    nutella                          Chocolate-hazelnut spread (Nutella-style)
+    biscoff-spread                   Cookie butter (Biscoff-style)
+    fruit-chutney                    Fruit chutney (Indian-style)
+    jelly-grape                      Grape jelly
+    jam-strawberry                   Jam (strawberry)
+    lemon-curd                       Lemon curd
+    preserves-mixed-berry            Mixed berry preserves
+    marmalade-orange                 Orange marmalade
+    pumpkin-butter                   Pumpkin butter
+    jam-raspberry                    Raspberry jam
+
+### Juices  (12)
+    apple-juice                      Apple juice
+    cranberry-juice                  Cranberry juice (cocktail)
+    fruit-nectar                     Fruit nectar
+    grape-juice                      Grape juice
+    grapefruit-juice                 Grapefruit juice
+    lemonade                         Lemonade
+    orange-juice                     Orange juice
+    pineapple-juice                  Pineapple juice
+    pomegranate-juice                Pomegranate juice
+    prune-juice                      Prune juice
+    tomato-juice                     Tomato juice
+    vegetable-juice                  Vegetable juice (V8-style)
+
+### Leafy greens  (31)
+    amaranth-leaves                  Amaranth leaves
+    arugula                          Arugula
+    bok-choy                         Bok choy
+    butter-lettuce                   Butter lettuce
+    callaloo                         Callaloo
+    collard-greens                   Collard greens
+    dandelion-greens                 Dandelion greens
+    endive                           Endive
+    escarole                         Escarole
+    fiddlehead                       Fiddlehead
+    cabbage-green                    Green cabbage
+    iceberg-lettuce                  Iceberg lettuce
+    jute-leaves-molokhia             Jute leaves (molokhia)
+    kale                             Kale
+    mizuna                           Mizuna
+    moringa-leaves                   Moringa leaves
+    mustard-greens                   Mustard greens
+    napa-cabbage                     Napa cabbage
+    nettle                           Nettle
+    pea-shoots                       Pea shoots
+    purslane                         Purslane
+    radicchio                        Radicchio
+    ramps                            Ramps
+    cabbage-red                      Red cabbage
+    romaine-lettuce                  Romaine lettuce
+    sorrel                           Sorrel
+    spinach                          Spinach
+    swiss-chard                      Swiss chard
+    taro-leaves                      Taro leaves
+    water-spinach                    Water spinach (ong choy / kangkong)
+    watercress                       Watercress
+
+### Legumes  (28)
+    adzuki-beans                     Adzuki beans
+    anko-red-bean-paste              Anko (red bean paste)
+    black-beans                      Black beans
+    black-eyed-peas                  Black-eyed peas
+    lentils-brown                    Brown lentils
+    cannellini-beans                 Cannellini beans
+    chana-dal                        Chana dal
+    chickpea                         Chickpea
+    chickpea-flour-besan             Chickpea flour (besan)
+    chickpeas-canned                 Chickpeas (canned)
+    fava-beans                       Fava beans
+    great-northern-beans             Great northern beans
+    kidney-bean                      Kidney bean
+    lentils-green                    Lentils (green)
+    lentils-red                      Lentils (red)
+    lima-beans                       Lima beans
+    lupini-bean                      Lupini bean
+    masoor-dal                       Masoor dal
+    moong-dal                        Moong dal
+    mung-beans                       Mung beans
+    peanut                           Peanut
+    pigeon-peas                      Pigeon peas
+    pinto-bean                       Pinto bean
+    split-peas                       Split peas
+    toor-dal                         Toor dal
+    urad-dal                         Urad dal
+    white-bean                       White bean (navy)
+    white-bean-paste                 White bean paste (shiroan)
+
+### Margarine & shortening  (9)
+    bacon-fat                        Bacon fat (rendered)
+    beef-suet                        Beef suet
+    goose-fat                        Goose fat
+    lard                             Lard
+    margarine-light                  Margarine (light)
+    margarine-stick                  Margarine (stick)
+    margarine-tub                    Margarine (tub)
+    margarine-with-butter            Margarine + butter blend
+    shortening                       Shortening
+
+### Meat alternatives  (5)
+    beyond-meat-burger               Beyond Meat-style plant burger
+    impossible-burger                Impossible-style plant burger
+    nutritional-yeast                Nutritional yeast
+    seitan                           Seitan
+    vital-wheat-gluten               Vital wheat gluten
+
+### Milk  (13)
+    chocolate-milk                   Chocolate milk
+    evaporated-milk                  Evaporated milk
+    goat-milk                        Goat milk
+    malted-milk-powder               Malted milk powder
+    milk-1-percent                   Milk (1%)
+    milk-2-percent                   Milk (2%)
+    milk-powder-nonfat               Milk powder (nonfat, dry)
+    milk-powder                      Milk powder (whole, dry)
+    sheep-milk                       Sheep milk
+    skim-milk                        Skim milk
+    strawberry-milk                  Strawberry milk
+    condensed-milk-sweetened         Sweetened condensed milk
+    whole-milk                       Whole milk
+
+### Mushrooms  (15)
+    mushroom-chanterelle             Chanterelle mushroom
+    mushroom-cremini                 Cremini mushroom
+    mushroom-enoki                   Enoki mushroom
+    king-trumpet-mushroom            King trumpet mushroom
+    lions-mane-mushroom              Lion's mane mushroom
+    maitake-mushroom                 Maitake mushroom
+    mushroom-morel                   Morel mushroom
+    nameko-mushroom                  Nameko mushroom
+    mushroom-oyster                  Oyster mushroom
+    mushroom-porcini                 Porcini mushroom
+    mushroom-portobello              Portobello mushroom
+    mushroom-shiitake                Shiitake mushroom
+    mushroom-truffle                 Truffle
+    mushroom-white                   White mushroom
+    mushroom-wood-ear                Wood ear mushroom
+
+### Nut butters  (9)
+    almond-butter                    Almond butter
+    almond-paste                     Almond paste
+    cashew-butter                    Cashew butter
+    gianduja                         Gianduja (chocolate-hazelnut paste)
+    hazelnut-paste                   Hazelnut paste (pure)
+    peanut-butter                    Peanut butter
+    pistachio-paste                  Pistachio paste
+    sunflower-seed-butter            Sunflower seed butter
+    tahini                           Tahini
+
+### Nuts  (19)
+    almond                           Almond
+    brazil-nut                       Brazil nut
+    cacao-nibs                       Cacao nibs
+    cashew                           Cashew
+    chestnut                         Chestnut
+    chestnut-puree-sweetened         Chestnut purée (sweetened)
+    coconut-shredded                 Coconut (shredded, dried)
+    coconut-cream                    Coconut cream
+    ginkgo-nut                       Ginkgo nut
+    hazelnut                         Hazelnut
+    macadamia                        Macadamia nut
+    marcona-almond                   Marcona almond
+    pecan                            Pecan
+    pili-nut                         Pili nut
+    pine-nut                         Pine nut
+    pistachio                        Pistachio
+    tigernut                         Tigernut (chufa)
+    walnut                           Walnut
+    coconut-young                    Young coconut flesh
+
+### Oils  (35)
+    almond-oil                       Almond oil
+    argan-oil                        Argan oil
+    avocado-oil                      Avocado oil
+    basil-infused-oil                Basil-infused oil
+    canola-oil                       Canola oil
+    chia-seed-oil                    Chia seed oil
+    chili-oil                        Chili oil
+    coconut-oil                      Coconut oil
+    corn-oil                         Corn oil
+    cottonseed-oil                   Cottonseed oil
+    flaxseed-oil                     Flaxseed oil
+    garlic-infused-oil               Garlic-infused oil
+    grapeseed-oil                    Grapeseed oil
+    hazelnut-oil                     Hazelnut oil
+    hempseed-oil                     Hempseed oil
+    lemon-infused-oil                Lemon-infused oil
+    mct-oil                          MCT oil
+    macadamia-oil                    Macadamia oil
+    mustard-oil                      Mustard oil
+    olive-oil                        Olive oil
+    palm-oil                         Palm oil
+    peanut-oil                       Peanut oil
+    pistachio-oil                    Pistachio oil
+    pumpkin-seed-oil                 Pumpkin seed oil
+    rice-bran-oil                    Rice bran oil
+    rosemary-infused-oil             Rosemary-infused oil
+    safflower-oil                    Safflower oil
+    sesame-oil                       Sesame oil
+    sesame-oil-toasted               Sesame oil (toasted)
+    soybean-oil                      Soybean oil
+    sunflower-oil                    Sunflower oil
+    truffle-oil                      Truffle oil
+    vegetable-oil-blend              Vegetable oil (generic blend)
+    walnut-oil                       Walnut oil
+    wheat-germ-oil                   Wheat germ oil
+
+### Oily fish  (15)
+    ahi-tuna                         Ahi tuna (yellowfin)
+    anchovies                        Anchovies
+    arctic-char                      Arctic char
+    herring                          Herring
+    mackerel                         Mackerel
+    marlin                           Marlin
+    salmon                           Salmon
+    sardines                         Sardines
+    swordfish                        Swordfish
+    trout                            Trout
+    tuna-bluefin                     Tuna (bluefin)
+    tuna-skipjack                    Tuna (skipjack)
+    tuna                             Tuna (yellowfin)
+    whitebait                        Whitebait
+    yellowtail-hamachi               Yellowtail (hamachi)
+
+### Organ meats  (14)
+    beef-heart                       Beef heart
+    beef-kidney                      Beef kidney
+    beef-liver                       Beef liver
+    beef-tongue                      Beef tongue
+    bone-marrow                      Bone marrow
+    brain-calf                       Brain (calf)
+    chicken-heart                    Chicken heart
+    chicken-liver                    Chicken liver
+    foie-gras                        Foie gras
+    gelatin                          Gelatin
+    lamb-kidney                      Lamb kidney
+    pork-liver                       Pork liver
+    sweetbreads                      Sweetbreads
+    tripe                            Tripe
+
+### Other vegetables  (39)
+    artichoke                        Artichoke
+    asparagus                        Asparagus
+    bamboo-shoots                    Bamboo shoots
+    bean-sprouts                     Bean sprouts
+    bitter-melon                     Bitter melon
+    bottle-gourd                     Bottle gourd
+    celeriac                         Celeriac
+    celery                           Celery
+    chayote                          Chayote
+    cucumber                         Cucumber
+    fennel-bulb                      Fennel bulb
+    galangal                         Galangal
+    garlic                           Garlic
+    gim                              Gim (Korean nori)
+    ginger-fresh                     Ginger (fresh)
+    green-beans                      Green beans
+    hijiki                           Hijiki
+    horseradish-fresh                Horseradish (fresh)
+    jicama                           Jicama
+    kimchi                           Kimchi
+    kombu                            Kombu
+    leek                             Leek
+    lotus-root                       Lotus root
+    nopales                          Nopales (cactus)
+    nori                             Nori
+    okra                             Okra
+    onion                            Onion
+    onion-red                        Red onion
+    ridge-gourd                      Ridge gourd
+    sauerkraut                       Sauerkraut
+    scallion                         Scallion
+    shallot                          Shallot
+    snap-peas                        Snap peas
+    snow-peas                        Snow peas
+    turmeric-fresh                   Turmeric (fresh)
+    wakame                           Wakame
+    water-chestnut                   Water chestnut
+    yellow-squash                    Yellow squash
+    zucchini                         Zucchini
+
+### Pastes & ferments  (38)
+    aji-amarillo-paste               Ají amarillo paste
+    aji-panca-paste                  Ají panca paste
+    char-siu-sauce                   Char siu sauce
+    chili-crisp                      Chili crisp
+    chutney-mango                    Chutney (mango)
+    chutney-mint                     Chutney (mint-cilantro)
+    chutney-tamarind                 Chutney (tamarind)
+    green-curry-paste                Curry paste (green, Thai)
+    massaman-paste                   Curry paste (massaman, Thai)
+    curry-paste-red                  Curry paste (red, Thai)
+    yellow-curry-paste               Curry paste (yellow, Thai)
+    dashi                            Dashi
+    doenjang                         Doenjang
+    doubanjiang                      Doubanjiang
+    black-bean-sauce-douchi          Fermented black bean (douchi)
+    furikake                         Furikake
+    gochujang                        Gochujang
+    harissa                          Harissa
+    iru                              Iru (fermented locust bean)
+    madras-paste                     Madras paste
+    mirin                            Mirin
+    miso-white                       Miso (white)
+    mole-paste                       Mole paste
+    nam-prik-pao                     Nam prik pao
+    nuoc-cham                        Nuoc cham
+    okonomiyaki-sauce                Okonomiyaki sauce
+    ponzu                            Ponzu
+    recado-rojo                      Recado rojo (achiote paste)
+    sake-cooking                     Sake (cooking)
+    salsa-criolla                    Salsa criolla
+    sambal-oelek                     Sambal oelek
+    shaoxing-wine                    Shaoxing wine
+    shrimp-paste                     Shrimp paste (belacan/kapi)
+    ssamjang                         Ssamjang
+    tonkatsu-sauce                   Tonkatsu sauce
+    vindaloo-paste                   Vindaloo paste
+    xo-sauce                         XO sauce
+    yuzukosho                        Yuzu kosho
+
+### Peppers & nightshades  (25)
+    anaheim-pepper                   Anaheim pepper
+    beefsteak-tomato                 Beefsteak tomato
+    tomato-cherry                    Cherry tomato
+    cubanelle                        Cubanelle pepper
+    eggplant                         Eggplant
+    grape-tomato                     Grape tomato
+    bell-pepper-green                Green bell pepper
+    habanero                         Habanero
+    hatch-chile                      Hatch chile
+    heirloom-tomato                  Heirloom tomato
+    jalapeno                         Jalapeño
+    padron-pepper                    Padrón pepper
+    poblano                          Poblano
+    bell-pepper-red                  Red bell pepper
+    tomato-roma                      Roma tomato
+    scotch-bonnet                    Scotch bonnet
+    serrano-pepper                   Serrano pepper
+    shishito-pepper                  Shishito pepper
+    sun-dried-tomato                 Sun-dried tomato
+    thai-chili                       Thai chili (bird's eye)
+    tomatillo                        Tomatillo
+    tomato                           Tomato
+    tomato-canned-whole              Tomato (canned, whole)
+    tomato-paste                     Tomato paste
+    tomato-sauce-canned              Tomato sauce (canned)
+
+### Pickled vegetables  (14)
+    pickle-bread-and-butter          Bread-and-butter pickle
+    capers                           Capers
+    olive-castelvetrano              Castelvetrano olive
+    cornichon                        Cornichon
+    kalamata-olive                   Kalamata olive
+    olives-black                     Olives (black)
+    olives-green                     Olives (green)
+    pepperoncini                     Pepperoncini (pickled)
+    pickle-dill                      Pickle (dill)
+    pickled-beet                     Pickled beet
+    pickled-jalapeno                 Pickled jalapeño
+    pickled-okra                     Pickled okra
+    pimento                          Pimento (jarred)
+    pickle-sweet-gherkin             Sweet gherkin
+
+### Plant milks  (10)
+    almond-milk                      Almond milk
+    cashew-milk                      Cashew milk
+    coconut-milk-beverage            Coconut milk (beverage)
+    coconut-milk-canned              Coconut milk (canned)
+    coconut-water                    Coconut water
+    hemp-milk                        Hemp milk
+    horchata-rice                    Horchata (rice)
+    oat-milk                         Oat milk
+    rice-milk                        Rice milk
+    soy-milk                         Soy milk
+
+### Poultry  (18)
+    chicken-whole-roasted            Chicken (whole, roasted)
+    chicken-breast                   Chicken breast
+    chicken-drumstick                Chicken drumstick
+    chicken-thigh-skin-on            Chicken thigh (skin on)
+    chicken-thigh-skinless           Chicken thigh (skinless)
+    chicken-wing                     Chicken wing
+    cornish-hen                      Cornish hen
+    duck-breast                      Duck breast
+    duck-leg-confit                  Duck leg confit
+    goose                            Goose
+    ground-chicken                   Ground chicken
+    ground-turkey                    Ground turkey
+    ostrich                          Ostrich
+    pheasant                         Pheasant
+    quail                            Quail
+    squab                            Squab
+    turkey-breast                    Turkey breast
+    turkey-thigh                     Turkey thigh
+
+### Prepared mixes  (32)
+    apple-pie-filling                Apple pie filling (canned)
+    baking-mix                       Baking mix (Bisquick-style)
+    blueberry-pie-filling            Blueberry pie filling (canned)
+    bran-cereal                      Bran cereal
+    brownie-mix                      Brownie mix
+    cake-mix-angel-food              Cake mix (angel food)
+    cake-mix-carrot                  Cake mix (carrot)
+    cake-mix-chocolate               Cake mix (chocolate)
+    cake-mix-devils-food             Cake mix (devil's food)
+    cake-mix-white                   Cake mix (white)
+    cake-mix-yellow                  Cake mix (yellow)
+    cherry-pie-filling               Cherry pie filling (canned)
+    cookie-mix                       Cookie mix (chocolate-chip)
+    corn-flakes                      Corn flakes
+    frosting-chocolate-canned        Frosting (chocolate, canned)
+    frosting-vanilla-canned          Frosting (vanilla, canned)
+    fruit-cocktail-canned            Fruit cocktail (canned)
+    gelatin-unflavored               Gelatin (unflavored)
+    gelatin-cherry                   Gelatin dessert (cherry)
+    gelatin-lime                     Gelatin dessert (lime)
+    granola-cereal                   Granola cereal
+    mincemeat                        Mincemeat (filling)
+    pudding-mix-butterscotch         Pudding mix (butterscotch, instant)
+    pudding-mix-chocolate            Pudding mix (chocolate, instant)
+    pudding-mix-lemon                Pudding mix (lemon, cook & serve)
+    pudding-mix-pistachio            Pudding mix (pistachio, instant)
+    pudding-mix-vanilla              Pudding mix (vanilla, instant)
+    rice-cereal                      Rice cereal (crispy)
+    rice-pudding                     Rice pudding (prepared)
+    stuffing-mix                     Stuffing mix (dry)
+    whipped-cream-aerosol            Whipped cream (aerosol)
+    whipped-topping-frozen           Whipped topping (frozen)
+
+### Prepared soups & broths  (18)
+    beef-broth                       Beef broth (canned)
+    bone-broth-chicken               Bone broth (chicken)
+    bouillon-cube-beef               Bouillon cube (beef)
+    bouillon-cube-chicken            Bouillon cube (chicken)
+    bouillon-cube-vegetable          Bouillon cube (vegetable)
+    butternut-squash-soup            Butternut squash soup
+    chicken-broth                    Chicken broth (canned)
+    chicken-noodle-soup              Chicken noodle soup (canned)
+    cream-of-celery-soup             Cream of celery soup (condensed)
+    cream-of-chicken-soup            Cream of chicken soup (condensed)
+    cream-of-mushroom-soup           Cream of mushroom soup (condensed)
+    french-onion-soup                French onion soup
+    lentil-soup                      Lentil soup
+    minestrone                       Minestrone
+    miso-broth                       Miso broth
+    mushroom-broth                   Mushroom broth
+    tomato-soup                      Tomato soup (canned)
+    vegetable-broth                  Vegetable broth (canned)
+
+### Processed cheese  (14)
+    american-cheese                  American cheese (slices)
+    cheez-whiz                       Cheese sauce (Cheez Whiz-style)
+    cheese-spread                    Cheese spread (cold pack)
+    colby                            Colby cheese
+    colby-jack                       Colby-Jack
+    monterey-jack                    Monterey Jack
+    nacho-cheese                     Nacho cheese sauce (canned)
+    pepper-jack                      Pepper Jack
+    shredded-italian-blend           Shredded Italian-blend cheese
+    shredded-mexican-blend           Shredded Mexican-blend cheese
+    shredded-cheddar                 Shredded cheddar
+    shredded-mozzarella              Shredded mozzarella
+    string-cheese                    String cheese
+    velveeta                         Velveeta-style processed cheese
+
+### Processed meat  (36)
+    nduja                            'Nduja
+    andouille                        Andouille
+    bacon                            Bacon
+    beef-jerky                       Beef jerky
+    blood-sausage                    Blood sausage
+    boudin                           Boudin (Cajun sausage)
+    bratwurst                        Bratwurst
+    liverwurst-braunschweiger        Braunschweiger
+    breakfast-sausage                Breakfast sausage
+    bresaola                         Bresaola
+    capicola                         Capicola
+    chorizo-mexican                  Chorizo (Mexican)
+    chorizo-spanish                  Chorizo (Spanish)
+    corned-beef                      Corned beef
+    deli-turkey                      Deli turkey
+    guanciale                        Guanciale
+    haggis                           Haggis
+    ham                              Ham
+    head-cheese                      Head cheese
+    hot-dog                          Hot dog (beef)
+    italian-sausage                  Italian sausage
+    lardons                          Lardons
+    liverwurst                       Liverwurst
+    merguez                          Merguez
+    mortadella                       Mortadella
+    pancetta                         Pancetta
+    pastrami                         Pastrami
+    pepperoni                        Pepperoni
+    prosciutto                       Prosciutto
+    salami                           Salami
+    sausage                          Sausage (pork)
+    smoked-turkey-deli               Smoked turkey (deli)
+    soppressata                      Soppressata
+    spam                             Spam
+    sucuk                            Sucuk (Bosnian/Turkish sausage)
+    summer-sausage                   Summer sausage
+
+### Red meat  (39)
+    alligator                        Alligator
+    beef-brisket                     Beef brisket
+    beef-cheek                       Beef cheek
+    beef-chuck-roast                 Beef chuck roast
+    beef-flank-steak                 Beef flank steak
+    beef-ribeye                      Beef ribeye
+    beef-shank                       Beef shank
+    beef-short-ribs                  Beef short ribs
+    beef-sirloin                     Beef sirloin
+    beef-skirt-steak                 Beef skirt steak
+    beef-tenderloin                  Beef tenderloin
+    bison                            Bison
+    camel                            Camel
+    elk                              Elk
+    frog-legs                        Frog legs
+    goat                             Goat
+    ground-beef-80-20                Ground beef (80/20)
+    ground-beef-90-10                Ground beef (90/10)
+    ground-lamb                      Ground lamb
+    ground-pork                      Ground pork
+    lamb-breast                      Lamb breast
+    lamb-chop                        Lamb chop
+    lamb-leg                         Lamb leg
+    lamb-shank                       Lamb shank
+    lamb-shoulder                    Lamb shoulder
+    oxtail                           Oxtail
+    pork-belly                       Pork belly
+    pork-chop                        Pork chop
+    pork-loin                        Pork loin
+    pork-shoulder                    Pork shoulder
+    pork-ribs-spare                  Pork spare ribs
+    pork-tenderloin                  Pork tenderloin
+    pulled-pork                      Pulled pork (cooked)
+    rabbit                           Rabbit
+    veal-cutlet                      Veal cutlet
+    venison                          Venison
+    wagyu-beef                       Wagyu beef (ribeye)
+    wild-boar                        Wild boar
+    yak                              Yak
+
+### Refined grains  (40)
+    arborio-rice                     Arborio rice
+    bagel-plain                      Bagel (plain)
+    baguette                         Baguette
+    basmati-rice                     Basmati rice
+    brioche                          Brioche
+    ciabatta                         Ciabatta
+    couscous                         Couscous
+    croissant                        Croissant
+    egg-noodle                       Egg noodle
+    english-muffin                   English muffin
+    fettuccine                       Fettuccine
+    white-tortilla                   Flour tortilla
+    fusilli                          Fusilli
+    glass-noodles                    Glass noodles
+    gnocchi                          Gnocchi
+    jasmine-rice                     Jasmine rice
+    lasagna-noodle                   Lasagna noodle
+    linguine                         Linguine
+    macaroni                         Macaroni
+    mochi                            Mochi
+    naan                             Naan
+    orzo                             Orzo
+    penne                            Penne
+    pita-white                       Pita (white)
+    ramen-noodle                     Ramen noodle (dried)
+    ravioli-cheese                   Ravioli (cheese, fresh)
+    rice-noodles                     Rice noodles
+    rice-paper                       Rice paper
+    rigatoni                         Rigatoni
+    rotini                           Rotini
+    shirataki                        Shirataki noodles
+    somen                            Somen noodles
+    spaghetti                        Spaghetti (white)
+    sticky-rice                      Sticky rice (glutinous)
+    sushi-rice                       Sushi rice
+    tortellini-cheese                Tortellini (cheese, fresh)
+    udon-noodles                     Udon noodles
+    vermicelli-rice                  Vermicelli (rice)
+    white-pasta                      White pasta
+    white-rice                       White rice
+
+### Salt & seasonings  (10)
+    celery-salt                      Celery salt
+    garlic-salt                      Garlic salt
+    msg                              MSG (monosodium glutamate)
+    onion-salt                       Onion salt
+    pickling-salt                    Pickling salt
+    salt-kosher                      Salt (kosher)
+    salt-sea                         Salt (sea)
+    salt-table                       Salt (table)
+    seasoned-salt                    Seasoned salt
+    smoked-salt                      Smoked salt
+
+### Sauces  (45)
+    a1-sauce                         A1 steak sauce
+    applesauce-unsweetened           Applesauce (unsweetened)
+    bbq-sauce                        BBQ sauce
+    gravy-brown                      Brown gravy
+    mustard-chinese-hot              Chinese hot mustard
+    cocktail-sauce                   Cocktail sauce
+    coconut-aminos                   Coconut aminos
+    cranberry-sauce-canned           Cranberry sauce (canned)
+    demi-glace                       Demi-glace
+    eel-sauce                        Eel sauce (unagi)
+    mustard-english                  English mustard
+    fish-sauce                       Fish sauce
+    hp-sauce                         HP sauce
+    steak-sauce-heinz57              Heinz 57 steak sauce
+    hoisin                           Hoisin sauce
+    honey-mustard                    Honey mustard
+    horseradish-prepared             Horseradish (prepared)
+    hot-sauce-louisiana              Hot sauce (Louisiana-style)
+    hot-sauce-tabasco                Hot sauce (Tabasco-style)
+    green-hot-sauce                  Hot sauce (green)
+    kecap-manis                      Kecap manis
+    ketchup                          Ketchup
+    liquid-aminos                    Liquid aminos
+    liquid-smoke                     Liquid smoke
+    mushroom-soy-sauce               Mushroom soy sauce
+    mustard-dijon                    Mustard (Dijon)
+    mustard-yellow                   Mustard (yellow)
+    oyster-sauce                     Oyster sauce
+    peanut-sauce                     Peanut sauce
+    pico-de-gallo                    Pico de gallo
+    piri-piri-sauce                  Piri piri sauce
+    plum-sauce                       Plum sauce
+    salsa-roja                       Salsa (roja)
+    salsa-verde-mexican              Salsa verde (Mexican)
+    soy-sauce                        Soy sauce
+    dark-soy-sauce                   Soy sauce (dark)
+    light-soy-sauce                  Soy sauce (light)
+    sriracha                         Sriracha
+    sweet-chili-sauce                Sweet chili sauce
+    tamari                           Tamari
+    tamarind-paste                   Tamarind paste
+    teriyaki-sauce                   Teriyaki sauce
+    wasabi                           Wasabi paste
+    mustard-whole-grain              Whole grain mustard
+    worcestershire                   Worcestershire sauce
+
+### Seeds  (12)
+    chia-seed                        Chia seed
+    egusi-seeds                      Egusi seeds
+    flax-seed                        Flax seed
+    hemp-seed                        Hemp seed
+    lotus-seed                       Lotus seed
+    pepitas-shelled                  Pepitas (shelled pumpkin seed)
+    poppy-seed                       Poppy seed
+    pumpkin-seed                     Pumpkin seed
+    sacha-inchi-seeds                Sacha inchi seeds
+    sesame-seed                      Sesame seed
+    sunflower-seed                   Sunflower seed
+    watermelon-seeds                 Watermelon seeds
+
+### Shellfish  (22)
+    abalone                          Abalone
+    clams                            Clams
+    conch                            Conch
+    crab                             Crab
+    crayfish                         Crayfish
+    dungeness-crab                   Dungeness crab
+    geoduck                          Geoduck
+    king-crab                        King crab
+    lobster                          Lobster
+    mussels                          Mussels
+    octopus                          Octopus
+    oysters                          Oysters
+    prawn                            Prawn (large)
+    razor-clams                      Razor clams
+    scallops                         Scallops
+    sea-urchin                       Sea urchin (uni)
+    shrimp                           Shrimp
+    snails-escargot                  Snails (escargot)
+    snow-crab                        Snow crab
+    soft-shell-crab                  Soft-shell crab
+    squid                            Squid
+    whelk                            Whelk
+
+### Soft drinks  (12)
+    club-soda                        Club soda
+    cola                             Cola
+    diet-cola                        Diet cola
+    eggnog                           Eggnog
+    energy-drink                     Energy drink (Red Bull-style)
+    ginger-ale                       Ginger ale
+    iced-tea-sweetened               Iced tea (bottled, sweetened)
+    lemon-lime-soda                  Lemon-lime soda
+    root-beer                        Root beer
+    sparkling-water                  Sparkling water
+    sports-drink                     Sports drink (Gatorade-style)
+    tonic-water                      Tonic water
+
+### Soy products  (11)
+    aburaage                         Aburaage (fried tofu)
+    edamame                          Edamame
+    natto                            Natto
+    smoked-tofu                      Smoked tofu
+    soya-chunks                      Soya chunks
+    soybeans                         Soybeans
+    tvp                              TVP (textured vegetable protein)
+    tempeh                           Tempeh
+    tofu-firm                        Tofu (firm)
+    tofu-silken                      Tofu (silken)
+    yuba                             Yuba (tofu skin)
+
+### Spice blends  (28)
+    adobo-seasoning                  Adobo seasoning
+    bbq-rub                          BBQ rub
+    baharat                          Baharat
+    berbere                          Berbere
+    blackening-seasoning             Blackening seasoning
+    cajun-seasoning                  Cajun seasoning
+    chaat-masala                     Chaat masala
+    creole-seasoning                 Creole seasoning
+    curry-powder                     Curry powder
+    dukkah                           Dukkah
+    fajita-seasoning                 Fajita seasoning
+    fines-herbes                     Fines herbes
+    five-spice-powder                Five-spice powder
+    garam-masala                     Garam masala
+    herbes-de-provence               Herbes de Provence
+    italian-seasoning                Italian seasoning
+    jerk-seasoning                   Jerk seasoning
+    lemon-pepper                     Lemon-pepper seasoning
+    mitmita                          Mitmita
+    montreal-steak                   Montreal steak seasoning
+    old-bay                          Old Bay
+    poultry-seasoning                Poultry seasoning
+    ranch-seasoning                  Ranch seasoning
+    ras-el-hanout                    Ras el hanout
+    shichimi-togarashi               Shichimi togarashi
+    taco-seasoning                   Taco seasoning
+    tajin                            Tajín (chili-lime seasoning)
+    za-atar                          Za'atar
+
+### Starchy vegetables  (33)
+    acorn-squash                     Acorn squash
+    beet                             Beet
+    breadfruit                       Breadfruit
+    burdock-root                     Burdock root (gobo)
+    butternut-squash                 Butternut squash
+    carrot                           Carrot
+    cassava-yuca                     Cassava (yuca)
+    corn                             Corn
+    delicata-squash                  Delicata squash
+    potato-fingerling                Fingerling potato
+    fufu-flour                       Fufu flour
+    garri                            Garri
+    sunchoke                         Jerusalem artichoke (sunchoke)
+    kabocha                          Kabocha squash
+    maca                             Maca
+    malanga                          Malanga
+    potato-new                       New potato (baby)
+    parsnip                          Parsnip
+    plantain                         Plantain
+    plantain-flour                   Plantain flour
+    pumpkin                          Pumpkin
+    potato-purple                    Purple potato
+    potato-red                       Red potato
+    potato-russet                    Russet potato
+    rutabaga                         Rutabaga
+    salsify                          Salsify
+    spaghetti-squash                 Spaghetti squash
+    sweet-potato                     Sweet potato
+    taro                             Taro
+    turnip                           Turnip
+    yacon                            Yacon
+    yam                              Yam
+    potato-yukon                     Yukon gold potato
+
+### Sugar & sweeteners  (32)
+    agave-nectar                     Agave nectar
+    allulose                         Allulose
+    brown-sugar                      Brown sugar
+    cane-syrup                       Cane syrup
+    caramel-sauce                    Caramel sauce
+    chocolate-syrup                  Chocolate syrup
+    coconut-sugar                    Coconut sugar
+    corn-syrup                       Corn syrup
+    date-syrup                       Date syrup
+    demerara                         Demerara sugar
+    erythritol                       Erythritol
+    golden-syrup                     Golden syrup
+    grenadine                        Grenadine
+    honey                            Honey
+    hot-fudge-sauce                  Hot fudge sauce
+    jaggery                          Jaggery
+    maple-sugar                      Maple sugar (granulated)
+    maple-syrup                      Maple syrup
+    molasses                         Molasses
+    monk-fruit-sweetener             Monk fruit sweetener
+    muscovado                        Muscovado
+    palm-sugar                       Palm sugar
+    pancake-syrup                    Pancake syrup (table)
+    piloncillo                       Piloncillo
+    powdered-sugar                   Powdered sugar
+    rose-syrup                       Rose syrup
+    simple-syrup                     Simple syrup
+    sorghum-syrup                    Sorghum syrup
+    stevia                           Stevia
+    strawberry-topping               Strawberry ice cream topping
+    turbinado                        Turbinado sugar
+    white-sugar                      White sugar
+
+### Temperate fruits  (35)
+    apple                            Apple
+    apple-fuji                       Apple (Fuji)
+    apple-gala                       Apple (Gala)
+    apple-granny-smith               Apple (Granny Smith)
+    apple-honeycrisp                 Apple (Honeycrisp)
+    apple-pink-lady                  Apple (Pink Lady)
+    apricot-fresh                    Apricot (fresh)
+    pear-asian                       Asian pear
+    avocado                          Avocado
+    banana                           Banana
+    cantaloupe                       Cantaloupe
+    cherry-bing                      Cherry (Bing, sweet)
+    cherry                           Cherry (sweet)
+    grape-concord                    Concord grape
+    crenshaw-melon                   Crenshaw melon
+    plum-damson                      Damson plum
+    fig-fresh                        Fig (fresh)
+    galia-melon                      Galia melon
+    grape                            Grape
+    honeydew                         Honeydew
+    loquat                           Loquat
+    nectarine                        Nectarine
+    peach                            Peach
+    pear                             Pear
+    pear-bartlett                    Pear (Bartlett)
+    pear-bosc                        Pear (Bosc)
+    persimmon                        Persimmon
+    plum                             Plum
+    pluot                            Pluot
+    pomegranate                      Pomegranate
+    quince                           Quince
+    cherry-sour                      Sour cherry
+    grape-thompson                   Thompson seedless grape
+    watermelon                       Watermelon
+    watermelon-yellow                Yellow watermelon
+
+### Tropical fruits  (23)
+    ackee                            Ackee
+    cherimoya                        Cherimoya
+    dragon-fruit                     Dragon fruit
+    durian                           Durian
+    guava                            Guava
+    jackfruit                        Jackfruit
+    jamun                            Jamun
+    kiwi                             Kiwi
+    longan                           Longan
+    lychee                           Lychee
+    mamey-sapote                     Mamey sapote
+    mango                            Mango
+    mangosteen                       Mangosteen
+    papaya                           Papaya
+    passion-fruit                    Passion fruit
+    pineapple                        Pineapple
+    rambutan                         Rambutan
+    rose-apple                       Rose apple
+    salak                            Salak (snake fruit)
+    sapodilla                        Sapodilla (chiku)
+    soursop                          Soursop
+    starfruit                        Starfruit
+    tamarind                         Tamarind (pulp, raw)
+
+### White fish  (15)
+    branzino                         Branzino
+    cod                              Cod
+    flounder                         Flounder
+    grouper                          Grouper
+    haddock                          Haddock
+    halibut                          Halibut
+    mahi-mahi                        Mahi mahi
+    monkfish                         Monkfish
+    pollock                          Pollock
+    pomfret                          Pomfret
+    snapper                          Red snapper
+    sea-bass                         Sea bass
+    sole                             Sole
+    tilapia                          Tilapia
+    tilefish                         Tilefish
+
+### Whole grains  (32)
+    amaranth                         Amaranth
+    barley                           Barley
+    black-rice                       Black rice
+    brown-rice                       Brown rice
+    buckwheat                        Buckwheat
+    bulgur                           Bulgur
+    corn-tortilla                    Corn tortilla
+    einkorn                          Einkorn
+    farro                            Farro
+    freekeh                          Freekeh
+    granola                          Granola
+    grits                            Grits (dry)
+    hominy                           Hominy (canned)
+    kamut                            Kamut (khorasan wheat)
+    millet                           Millet
+    oatmeal-instant                  Oatmeal (instant, plain)
+    polenta                          Polenta (dry)
+    popcorn                          Popcorn
+    quinoa                           Quinoa
+    oats-rolled                      Rolled oats
+    rye-bread                        Rye bread
+    soba-noodles                     Soba noodles
+    sorghum                          Sorghum
+    sourdough-bread                  Sourdough bread
+    spelt                            Spelt
+    steel-cut-oats                   Steel-cut oats
+    teff                             Teff
+    wheat-berries                    Wheat berries
+    wheat-germ                       Wheat germ
+    whole-wheat-pasta                Whole wheat pasta
+    whole-wheat-tortilla             Whole wheat tortilla
+    wild-rice                        Wild rice
+
+### Whole spices  (24)
+    ajwain                           Ajwain
+    allspice                         Allspice
+    anise-seed                       Anise seed
+    annatto-seed                     Annatto seed
+    caraway-seed                     Caraway seed
+    cardamom-black                   Cardamom (black)
+    cardamom-green                   Cardamom (green)
+    cassia                           Cassia
+    celery-seed                      Celery seed
+    cinnamon-stick                   Cinnamon stick
+    clove                            Clove
+    coriander-seed                   Coriander seed
+    cumin                            Cumin
+    fennel-seed                      Fennel seed
+    fenugreek-seed                   Fenugreek seed
+    grains-of-paradise               Grains of paradise
+    juniper-berries                  Juniper berries
+    limu-omani                       Limu omani (dried lime)
+    mace                             Mace
+    mustard-seed-brown               Mustard seed (brown)
+    mustard-seed-yellow              Mustard seed (yellow)
+    nigella-seed                     Nigella seed
+    saffron                          Saffron
+    star-anise                       Star anise
+
+### Yogurt  (5)
+    greek-yogurt-nonfat              Greek yogurt (non-fat)
+    greek-yogurt-whole               Greek yogurt (whole)
+    yogurt-fruit                     Yogurt (fruit, sweetened)
+    yogurt-low-fat                   Yogurt (low-fat, plain)
+    yogurt-whole                     Yogurt (whole)

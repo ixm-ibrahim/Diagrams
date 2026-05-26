@@ -1,0 +1,333 @@
+id,name,tags,rule
+chicken-rice-bowl,Chicken & rice bowl,"dinner,lunch",default main → lunch + dinner
+chicken-stir-fry,Chicken stir-fry,"dinner,lunch",default main → lunch + dinner
+salmon-plate,Salmon plate,"dinner,lunch",default main → lunch + dinner
+sashimi-platter,Sashimi platter,"dinner,lunch",default main → lunch + dinner
+tuna-salad,Tuna salad,"dinner,lunch",default main → lunch + dinner
+fish-and-chips,Fish and chips,"dinner,lunch",default main → lunch + dinner
+shrimp-pasta,Shrimp pasta,"dinner,lunch",default main → lunch + dinner
+burger,Burger,"dinner,lunch",default main → lunch + dinner
+cheeseburger,Cheeseburger,"dinner,lunch",default main → lunch + dinner
+steak-dinner,Steak dinner,"dinner,lunch",default main → lunch + dinner
+bacon-and-eggs,Bacon and eggs,breakfast,breakfast
+omelet-veg-cheese,Vegetable & cheese omelet,breakfast,breakfast
+yogurt-parfait,Yogurt parfait,breakfast,breakfast
+berry-smoothie,Berry smoothie,snack,drink → snack
+cereal-bowl,Cereal bowl,breakfast,breakfast
+oatmeal-berries,Oatmeal with berries,breakfast,breakfast
+cheese-plate,Cheese plate,"dinner,lunch",default main → lunch + dinner
+greek-salad,Greek salad,"dinner,lunch",default main → lunch + dinner
+caesar-salad,Caesar salad,"dinner,lunch",default main → lunch + dinner
+hummus-plate,Hummus plate,"dinner,lunch",default main → lunch + dinner
+bean-burrito,Bean burrito,"dinner,lunch",default main → lunch + dinner
+vegan-bowl,Vegan grain bowl,"dinner,lunch",default main → lunch + dinner
+tofu-stir-fry,Tofu stir-fry,"dinner,lunch",default main → lunch + dinner
+pb-sandwich,Peanut butter sandwich,"dinner,lunch",default main → lunch + dinner
+pasta-red-sauce,Pasta with red sauce,"dinner,lunch",default main → lunch + dinner
+fruit-and-nuts,Fruit & nuts,"dinner,lunch",default main → lunch + dinner
+pancakes-syrup,Pancakes & syrup,breakfast,breakfast
+mac-and-cheese,Mac and cheese,"dinner,lunch",default main → lunch + dinner
+cobb-salad,Cobb salad,"dinner,lunch",default main → lunch + dinner
+bbq-plate,BBQ plate,"dinner,lunch",default main → lunch + dinner
+thanksgiving-plate,Thanksgiving plate,"dinner,lunch",default main → lunch + dinner
+biscuits-and-gravy,Biscuits and gravy,breakfast,breakfast
+chicken-and-waffles,Chicken and waffles,breakfast,breakfast
+club-sandwich,Club sandwich,"dinner,lunch",default main → lunch + dinner
+reuben-sandwich,Reuben sandwich,"dinner,lunch",default main → lunch + dinner
+buffalo-wings,Buffalo wings,"dinner,lunch",default main → lunch + dinner
+chili-con-carne,Chili con carne,"dinner,lunch",default main → lunch + dinner
+philly-cheesesteak,Philly cheesesteak,"dinner,lunch",default main → lunch + dinner
+meatloaf-mashed-potato,Meatloaf with mashed potato,"dinner,lunch",default main → lunch + dinner
+lobster-roll,Lobster roll,"dinner,lunch",default main → lunch + dinner
+full-english-breakfast,Full English breakfast,breakfast,breakfast
+shepherds-pie,Shepherd's pie,"dinner,lunch",default main → lunch + dinner
+bangers-and-mash,Bangers and mash,"dinner,lunch",default main → lunch + dinner
+ploughmans-lunch,Ploughman's lunch,"dinner,lunch",default main → lunch + dinner
+sunday-roast,Sunday roast,"dinner,lunch",default main → lunch + dinner
+scones-cream-jam,Scones with cream and jam,"dinner,lunch",default main → lunch + dinner
+beef-wellington,Beef Wellington,"dinner,lunch",default main → lunch + dinner
+toad-in-the-hole,Toad in the hole,"dinner,lunch",default main → lunch + dinner
+croque-monsieur,Croque-monsieur,"dinner,lunch",default main → lunch + dinner
+ratatouille,Ratatouille,"dinner,lunch",default main → lunch + dinner
+beef-bourguignon,Beef bourguignon,"dinner,lunch",default main → lunch + dinner
+nicoise-salad,Salade niçoise,"dinner,lunch",default main → lunch + dinner
+omelette-french,French omelette,breakfast,breakfast
+coq-au-vin,Coq au vin,"dinner,lunch",default main → lunch + dinner
+bouillabaisse,Bouillabaisse,"dinner,lunch",default main → lunch + dinner
+quiche-lorraine,Quiche Lorraine,"dinner,lunch",default main → lunch + dinner
+cassoulet,Cassoulet,"dinner,lunch",default main → lunch + dinner
+crepes-savory,Savory crêpes,"dinner,lunch",default main → lunch + dinner
+caprese,Caprese salad,"dinner,lunch",default main → lunch + dinner
+pasta-carbonara,Pasta carbonara,"dinner,lunch",default main → lunch + dinner
+pasta-bolognese,Pasta bolognese,"dinner,lunch",default main → lunch + dinner
+pesto-pasta,Pesto pasta,"dinner,lunch",default main → lunch + dinner
+pasta-amatriciana,Pasta all'amatriciana,"dinner,lunch",default main → lunch + dinner
+risotto-mushroom,Mushroom risotto,"dinner,lunch",default main → lunch + dinner
+risotto-milanese,Risotto Milanese,"dinner,lunch",default main → lunch + dinner
+pizza-margherita,Pizza margherita,"dinner,lunch",default main → lunch + dinner
+osso-buco,Osso buco,"dinner,lunch",default main → lunch + dinner
+lasagna,Lasagna,"dinner,lunch",default main → lunch + dinner
+paella,Paella,"dinner,lunch",default main → lunch + dinner
+tortilla-espanola,Tortilla española,"dinner,lunch",default main → lunch + dinner
+gazpacho,Gazpacho,"dinner,lunch",default main → lunch + dinner
+patatas-bravas,Patatas bravas,"dinner,lunch",default main → lunch + dinner
+bacalhau-com-natas,Bacalhau com natas,"dinner,lunch",default main → lunch + dinner
+schnitzel,Wiener schnitzel,"dinner,lunch",default main → lunch + dinner
+rosti,Rösti,"dinner,lunch",default main → lunch + dinner
+sauerbraten,Sauerbraten,"dinner,lunch",default main → lunch + dinner
+raclette-platter,Raclette platter,"dinner,lunch",default main → lunch + dinner
+muesli-bowl,Muesli bowl,breakfast,breakfast
+spaetzle-cheese,Käsespätzle,"dinner,lunch",default main → lunch + dinner
+currywurst,Currywurst,"dinner,lunch",default main → lunch + dinner
+pierogi-potato-cheese,Pierogi (potato-cheese),"dinner,lunch",default main → lunch + dinner
+borscht,Borscht,"dinner,lunch",default main → lunch + dinner
+goulash,Goulash,"dinner,lunch",default main → lunch + dinner
+blini-caviar,Blini with caviar,"dinner,lunch",default main → lunch + dinner
+stuffed-cabbage,Stuffed cabbage rolls,"dinner,lunch",default main → lunch + dinner
+smorgasbord-plate,Smörgåsbord plate,"breakfast,lunch",brunch → breakfast + lunch
+gravlax-plate,Gravlax plate,"dinner,lunch",default main → lunch + dinner
+swedish-meatballs,Swedish meatballs,"dinner,lunch",default main → lunch + dinner
+pickled-herring-plate,Pickled herring plate,"dinner,lunch",default main → lunch + dinner
+danish-pastry-coffee,Danish pastry & coffee,breakfast,breakfast
+moussaka,Moussaka,"dinner,lunch",default main → lunch + dinner
+spanakopita,Spanakopita,"dinner,lunch",default main → lunch + dinner
+souvlaki-plate,Souvlaki plate,"dinner,lunch",default main → lunch + dinner
+kung-pao-chicken,Kung pao chicken,"dinner,lunch",default main → lunch + dinner
+sweet-and-sour-pork,Sweet-and-sour pork,"dinner,lunch",default main → lunch + dinner
+mapo-tofu,Mapo tofu,"dinner,lunch",default main → lunch + dinner
+dim-sum-platter,Dim sum platter,"lunch,snack",tapas → snack + lunch
+jiaozi-pork-cabbage,Jiaozi (pork & cabbage),"dinner,lunch",default main → lunch + dinner
+xiao-long-bao,Xiao long bao,"dinner,lunch",default main → lunch + dinner
+wonton-soup,Wonton soup,"dinner,lunch",default main → lunch + dinner
+congee-rice,Congee,breakfast,breakfast
+peking-duck,Peking duck,"dinner,lunch",default main → lunch + dinner
+lions-head-meatball,Lion's head meatballs,"dinner,lunch",default main → lunch + dinner
+yuxiang-eggplant,Yu-xiang eggplant,"dinner,lunch",default main → lunch + dinner
+twice-cooked-pork,Twice-cooked pork,"dinner,lunch",default main → lunch + dinner
+dan-dan-noodles,Dan dan noodles,"dinner,lunch",default main → lunch + dinner
+fried-rice-egg,Egg fried rice,"dinner,lunch",default main → lunch + dinner
+char-siu-pork-rice,Char siu pork over rice,"dinner,lunch",default main → lunch + dinner
+sichuan-hot-pot,Sichuan hot pot,"dinner,lunch",default main → lunch + dinner
+salt-pepper-shrimp,Salt-and-pepper shrimp,"dinner,lunch",default main → lunch + dinner
+sushi-nigiri-platter,Sushi nigiri platter,"dinner,lunch",default main → lunch + dinner
+ramen-tonkotsu,Ramen (tonkotsu),"dinner,lunch",default main → lunch + dinner
+ramen-shoyu,Ramen (shoyu),"dinner,lunch",default main → lunch + dinner
+ramen-miso,Ramen (miso),"dinner,lunch",default main → lunch + dinner
+donburi-gyudon,Gyudon (beef bowl),"dinner,lunch",default main → lunch + dinner
+donburi-oyakodon,Oyakodon,"dinner,lunch",default main → lunch + dinner
+donburi-katsudon,Katsudon,"dinner,lunch",default main → lunch + dinner
+tempura-platter,Tempura platter,"dinner,lunch",default main → lunch + dinner
+okonomiyaki,Okonomiyaki,"dinner,lunch",default main → lunch + dinner
+soba-noodles,Soba noodles,"dinner,lunch",default main → lunch + dinner
+udon-noodles,Udon noodles,"dinner,lunch",default main → lunch + dinner
+tonkatsu-plate,Tonkatsu plate,"dinner,lunch",default main → lunch + dinner
+sukiyaki,Sukiyaki,"dinner,lunch",default main → lunch + dinner
+shabu-shabu,Shabu-shabu,"dinner,lunch",default main → lunch + dinner
+bibimbap,Bibimbap,"dinner,lunch",default main → lunch + dinner
+bulgogi-plate,Bulgogi plate,"dinner,lunch",default main → lunch + dinner
+kimbap,Kimbap,"dinner,lunch",default main → lunch + dinner
+kimchi-jjigae,Kimchi jjigae,"dinner,lunch",default main → lunch + dinner
+sundubu-jjigae,Sundubu jjigae,"dinner,lunch",default main → lunch + dinner
+korean-bbq,Korean BBQ platter,"dinner,lunch",default main → lunch + dinner
+japchae,Japchae,"dinner,lunch",default main → lunch + dinner
+samgyetang,Samgyetang,"dinner,lunch",default main → lunch + dinner
+tteokbokki,Tteokbokki,"dinner,lunch",default main → lunch + dinner
+pad-thai,Pad thai,"dinner,lunch",default main → lunch + dinner
+tom-yum-goong,Tom yum goong,"dinner,lunch",default main → lunch + dinner
+green-curry-chicken,Green curry chicken,"dinner,lunch",default main → lunch + dinner
+red-curry-chicken,Red curry chicken,"dinner,lunch",default main → lunch + dinner
+massaman-curry,Massaman curry,"dinner,lunch",default main → lunch + dinner
+som-tam,Som tam (green papaya salad),"dinner,lunch",default main → lunch + dinner
+larb,Larb,"dinner,lunch",default main → lunch + dinner
+khao-soi,Khao soi,"dinner,lunch",default main → lunch + dinner
+pad-see-ew,Pad see ew,"dinner,lunch",default main → lunch + dinner
+pho-bo,Pho bo,"dinner,lunch",default main → lunch + dinner
+pho-ga,Pho ga,"dinner,lunch",default main → lunch + dinner
+banh-mi,Bánh mì,"dinner,lunch",default main → lunch + dinner
+bun-bo-hue,Bun bo Hue,"dinner,lunch",default main → lunch + dinner
+summer-rolls,Summer rolls,"dinner,lunch",default main → lunch + dinner
+bun-cha,Bún chả,"dinner,lunch",default main → lunch + dinner
+com-tam,Cơm tấm,"dinner,lunch",default main → lunch + dinner
+nasi-goreng,Nasi goreng,"dinner,lunch",default main → lunch + dinner
+rendang,Beef rendang,"dinner,lunch",default main → lunch + dinner
+laksa,Laksa,"dinner,lunch",default main → lunch + dinner
+satay-plate,Satay plate,"dinner,lunch",default main → lunch + dinner
+gado-gado,Gado-gado,"dinner,lunch",default main → lunch + dinner
+mee-goreng,Mee goreng,"dinner,lunch",default main → lunch + dinner
+chicken-adobo,Chicken adobo,"dinner,lunch",default main → lunch + dinner
+sinigang,Sinigang,"dinner,lunch",default main → lunch + dinner
+lumpia,Lumpia,"dinner,lunch",default main → lunch + dinner
+kare-kare,Kare-kare,"dinner,lunch",default main → lunch + dinner
+pancit,Pancit,"dinner,lunch",default main → lunch + dinner
+butter-chicken,Butter chicken,"dinner,lunch",default main → lunch + dinner
+chicken-tikka-masala,Chicken tikka masala,"dinner,lunch",default main → lunch + dinner
+vindaloo-pork,Pork vindaloo,"dinner,lunch",default main → lunch + dinner
+chicken-korma,Chicken korma,"dinner,lunch",default main → lunch + dinner
+rogan-josh,Rogan josh,"dinner,lunch",default main → lunch + dinner
+chicken-biryani,Chicken biryani,"dinner,lunch",default main → lunch + dinner
+paneer-tikka,Paneer tikka,"dinner,lunch",default main → lunch + dinner
+palak-paneer,Palak paneer,"dinner,lunch",default main → lunch + dinner
+dal-makhani,Dal makhani,"dinner,lunch",default main → lunch + dinner
+dal-tadka,Dal tadka,"dinner,lunch",default main → lunch + dinner
+masala-dosa,Masala dosa,"dinner,lunch",default main → lunch + dinner
+idli-sambar,Idli sambar,"dinner,lunch",default main → lunch + dinner
+vegetarian-thali,Vegetarian thali,"dinner,lunch",default main → lunch + dinner
+samosa-chaat,Samosa chaat,"dinner,lunch",default main → lunch + dinner
+chana-masala,Chana masala,"dinner,lunch",default main → lunch + dinner
+aloo-gobi,Aloo gobi,"dinner,lunch",default main → lunch + dinner
+tandoori-chicken,Tandoori chicken,"dinner,lunch",default main → lunch + dinner
+rajma,Rajma,"dinner,lunch",default main → lunch + dinner
+nihari,Nihari,"dinner,lunch",default main → lunch + dinner
+haleem,Haleem,"dinner,lunch",default main → lunch + dinner
+pakistani-biryani-mutton,Pakistani mutton biryani,"dinner,lunch",default main → lunch + dinner
+fish-curry-bengali,Bengali fish curry,"dinner,lunch",default main → lunch + dinner
+chapli-kebab,Chapli kebab,"dinner,lunch",default main → lunch + dinner
+rice-and-curry-sri-lankan,Sri Lankan rice & curry,"dinner,lunch",default main → lunch + dinner
+hoppers,Hoppers (appa),"dinner,lunch",default main → lunch + dinner
+kottu-roti,Kottu roti,"dinner,lunch",default main → lunch + dinner
+mezze-plate,Mezze plate,"lunch,snack",tapas → snack + lunch
+baba-ganoush,Baba ganoush,"dinner,lunch",default main → lunch + dinner
+tabbouleh,Tabbouleh,"dinner,lunch",default main → lunch + dinner
+fattoush,Fattoush,"dinner,lunch",default main → lunch + dinner
+kibbeh,Kibbeh,"dinner,lunch",default main → lunch + dinner
+shawarma-chicken,Chicken shawarma,"dinner,lunch",default main → lunch + dinner
+shawarma-beef,Beef shawarma,"dinner,lunch",default main → lunch + dinner
+manakish-zaatar,Manakish (za'atar),"dinner,lunch",default main → lunch + dinner
+kafta-kebab,Kafta kebab,"dinner,lunch",default main → lunch + dinner
+fatteh,Fatteh,"dinner,lunch",default main → lunch + dinner
+falafel-plate,Falafel plate,"dinner,lunch",default main → lunch + dinner
+kabab-koobideh,Kabab koobideh,"dinner,lunch",default main → lunch + dinner
+ghormeh-sabzi,Ghormeh sabzi,"dinner,lunch",default main → lunch + dinner
+fesenjan,Fesenjan,"dinner,lunch",default main → lunch + dinner
+tahdig-saffron,Saffron tahdig,"dinner,lunch",default main → lunch + dinner
+ash-reshteh,Ash reshteh,"dinner,lunch",default main → lunch + dinner
+adana-kebab,Adana kebab,"dinner,lunch",default main → lunch + dinner
+doner-kebab,Döner kebab,"dinner,lunch",default main → lunch + dinner
+iskender-kebab,İskender kebab,"dinner,lunch",default main → lunch + dinner
+dolma-stuffed-grape-leaves,Dolma (stuffed grape leaves),"dinner,lunch",default main → lunch + dinner
+borek-cheese,Cheese börek,"dinner,lunch",default main → lunch + dinner
+lahmacun,Lahmacun,"dinner,lunch",default main → lunch + dinner
+kunefe,Künefe,"dinner,lunch",default main → lunch + dinner
+chicken-tagine,Chicken tagine (preserved lemon),"dinner,lunch",default main → lunch + dinner
+lamb-tagine,Lamb tagine (prune & almond),"dinner,lunch",default main → lunch + dinner
+moroccan-couscous,Moroccan couscous,"dinner,lunch",default main → lunch + dinner
+harira,Harira,"dinner,lunch",default main → lunch + dinner
+ful-medames,Ful medames,"dinner,lunch",default main → lunch + dinner
+koshari,Koshari,"dinner,lunch",default main → lunch + dinner
+brik,Brik,"dinner,lunch",default main → lunch + dinner
+shakshuka,Shakshuka,"breakfast,lunch",breakfast; also lunch
+bstilla,B'stilla,"dinner,lunch",default main → lunch + dinner
+mloukhia,Mloukhia,"dinner,lunch",default main → lunch + dinner
+meze-turkish,Turkish meze plate,"dinner,lunch",default main → lunch + dinner
+jollof-rice,Jollof rice,"dinner,lunch",default main → lunch + dinner
+egusi-soup,Egusi soup,"dinner,lunch",default main → lunch + dinner
+suya-skewers,Suya skewers,"dinner,lunch",default main → lunch + dinner
+fufu-and-stew,Fufu and palm-nut stew,"dinner,lunch",default main → lunch + dinner
+peanut-stew,West African peanut stew,"dinner,lunch",default main → lunch + dinner
+waakye,Waakye,"dinner,lunch",default main → lunch + dinner
+thieboudienne,Thieboudienne,"dinner,lunch",default main → lunch + dinner
+injera-doro-wat,Injera with doro wat,"dinner,lunch",default main → lunch + dinner
+injera-misir-wat,Injera with misir wat,"dinner,lunch",default main → lunch + dinner
+injera-alicha,Injera with alicha,"dinner,lunch",default main → lunch + dinner
+ugali-sukuma-wiki,Ugali with sukuma wiki,"dinner,lunch",default main → lunch + dinner
+pilau-east-african,East African pilau,"dinner,lunch",default main → lunch + dinner
+bobotie,Bobotie,"dinner,lunch",default main → lunch + dinner
+bunny-chow,Bunny chow,"dinner,lunch",default main → lunch + dinner
+pap-chakalaka,Pap and chakalaka,"dinner,lunch",default main → lunch + dinner
+biltong-plate,Biltong plate,snack,strict snack
+tacos-al-pastor,Tacos al pastor,"dinner,lunch",default main → lunch + dinner
+tacos-carnitas,Tacos carnitas,"dinner,lunch",default main → lunch + dinner
+tacos-fish,Baja fish tacos,"dinner,lunch",default main → lunch + dinner
+tacos-lengua,Tacos de lengua,"dinner,lunch",default main → lunch + dinner
+tacos-barbacoa,Tacos de barbacoa,"dinner,lunch",default main → lunch + dinner
+enchiladas-rojas,Enchiladas rojas,"dinner,lunch",default main → lunch + dinner
+mole-poblano-chicken,Mole poblano with chicken,"dinner,lunch",default main → lunch + dinner
+tamales,Tamales,"dinner,lunch",default main → lunch + dinner
+chilaquiles,Chilaquiles,"dinner,lunch",default main → lunch + dinner
+pozole-rojo,Pozole rojo,"dinner,lunch",default main → lunch + dinner
+sopes,Sopes,"dinner,lunch",default main → lunch + dinner
+huevos-rancheros,Huevos rancheros,"breakfast,lunch",brunch → breakfast + lunch
+feijoada,Feijoada,"dinner,lunch",default main → lunch + dinner
+moqueca,Moqueca,"dinner,lunch",default main → lunch + dinner
+churrasco-plate,Churrasco plate,"dinner,lunch",default main → lunch + dinner
+pao-de-queijo,Pão de queijo,"dinner,lunch",default main → lunch + dinner
+acaraje,Acarajé,"dinner,lunch",default main → lunch + dinner
+vatapa,Vatapa,"dinner,lunch",default main → lunch + dinner
+ceviche-peruvian,Peruvian ceviche,"dinner,lunch",default main → lunch + dinner
+lomo-saltado,Lomo saltado,"dinner,lunch",default main → lunch + dinner
+aji-de-gallina,Ají de gallina,"dinner,lunch",default main → lunch + dinner
+anticuchos,Anticuchos,"dinner,lunch",default main → lunch + dinner
+papa-huancaina,Papa a la huancaína,"dinner,lunch",default main → lunch + dinner
+asado-plate,Asado plate,"dinner,lunch",default main → lunch + dinner
+milanesa,Milanesa,"dinner,lunch",default main → lunch + dinner
+empanadas-argentine,Empanadas argentinas,"dinner,lunch",default main → lunch + dinner
+chimichurri-steak,Chimichurri grilled steak,"dinner,lunch",default main → lunch + dinner
+jerk-chicken,Jerk chicken,"dinner,lunch",default main → lunch + dinner
+ackee-saltfish,Ackee and saltfish,"dinner,lunch",default main → lunch + dinner
+ropa-vieja,Ropa vieja,"dinner,lunch",default main → lunch + dinner
+jamaican-oxtail,Jamaican oxtail,"dinner,lunch",default main → lunch + dinner
+callaloo,Callaloo,"dinner,lunch",default main → lunch + dinner
+caribbean-roti,Caribbean curry roti,"dinner,lunch",default main → lunch + dinner
+cuban-sandwich,Cuban sandwich,"dinner,lunch",default main → lunch + dinner
+mofongo,Mofongo,"dinner,lunch",default main → lunch + dinner
+arepas,Arepas,"dinner,lunch",default main → lunch + dinner
+pupusas,Pupusas,"dinner,lunch",default main → lunch + dinner
+gallo-pinto,Gallo pinto,breakfast,breakfast
+baleadas,Baleadas,"dinner,lunch",default main → lunch + dinner
+haitian-griot,Haitian griot,"dinner,lunch",default main → lunch + dinner
+tostones,Tostones,"dinner,lunch",default main → lunch + dinner
+arroz-con-pollo,Arroz con pollo,"dinner,lunch",default main → lunch + dinner
+charcuterie-board,Charcuterie board,"lunch,snack",tapas → snack + lunch
+antipasto-platter,Antipasto platter,"lunch,snack",tapas → snack + lunch
+popcorn-buttered,Buttered popcorn,snack,strict snack
+popcorn-caramel,Caramel popcorn,snack,strict snack
+chips-and-salsa,Chips & salsa,snack,strict snack
+chips-and-guacamole,Chips & guacamole,"dinner,lunch",default main → lunch + dinner
+chips-and-queso,Chips & queso,snack,strict snack
+nut-mix-roasted,Roasted nut mix,"dinner,lunch",default main → lunch + dinner
+trail-mix,Trail mix,snack,strict snack
+crudite-platter,Crudité platter,snack,strict snack
+fruit-platter,Fruit platter,snack,strict snack
+snack-board-mediterranean,Mediterranean snack board,snack,strict snack
+pretzels-mustard,Pretzels with mustard,snack,strict snack
+chocolate-cake-slice,Chocolate cake slice,dessert,dessert
+carrot-cake-slice,Carrot cake with cream cheese frosting,dessert,dessert
+cheesecake-plain,New York cheesecake,dessert,dessert
+cheesecake-strawberry,Strawberry cheesecake,dessert,dessert
+tres-leches-cake,Tres leches cake,dessert,dessert
+red-velvet-cake,Red velvet cake,dessert,dessert
+apple-pie,Apple pie,dessert,dessert
+pumpkin-pie,Pumpkin pie,dessert,dessert
+pecan-pie,Pecan pie,dessert,dessert
+key-lime-pie,Key lime pie,dessert,dessert
+ice-cream-sundae,Ice cream sundae,dessert,dessert
+tiramisu,Tiramisu,dessert,dessert
+halwa-semolina,Suji halwa,"dinner,lunch",default main → lunch + dinner
+mochi-ice-cream,Mochi ice cream,dessert,dessert
+churros-chocolate,Churros with chocolate,dessert,dessert
+creme-brulee,Crème brûlée,dessert,dessert
+panna-cotta,Panna cotta,dessert,dessert
+crepe-suzette,Crêpes Suzette,"dinner,lunch",default main → lunch + dinner
+bread-pudding,Bread pudding,dessert,dessert
+chocolate-fondue,Chocolate fondue,"dinner,lunch",default main → lunch + dinner
+affogato,Affogato,dessert,dessert
+green-smoothie,Green smoothie,snack,drink → snack
+protein-smoothie,Protein smoothie,snack,drink → snack
+vanilla-latte,Vanilla latte,snack,drink → snack
+masala-chai-latte,Masala chai latte,snack,drink → snack
+matcha-latte,Matcha latte,snack,drink → snack
+boba-milk-tea,Boba milk tea,snack,drink → snack
+sweet-lassi,Sweet lassi,snack,drink → snack
+mango-lassi,Mango lassi,snack,drink → snack
+horchata-mexican,Mexican horchata,snack,drink → snack
+agua-fresca-watermelon,Watermelon agua fresca,"dinner,lunch",default main → lunch + dinner
+hot-chocolate,Hot chocolate,snack,drink → snack
+turkish-coffee,Turkish coffee,"dinner,lunch",default main → lunch + dinner
+continental-breakfast,Continental breakfast,breakfast,breakfast
+afternoon-tea-spread,Afternoon tea spread,"lunch,snack",tapas → snack + lunch
+brunch-platter,Brunch platter,"breakfast,lunch",brunch → breakfast + lunch
+kids-lunchbox,Kids' lunchbox,"dinner,lunch",default main → lunch + dinner
+bistro-plate,Bistro plate,"dinner,lunch",default main → lunch + dinner
+japanese-breakfast,Japanese breakfast,breakfast,breakfast
+dim-sum-brunch,Dim sum brunch,"lunch,snack",tapas → snack + lunch
+indian-breakfast,South Indian breakfast,breakfast,breakfast

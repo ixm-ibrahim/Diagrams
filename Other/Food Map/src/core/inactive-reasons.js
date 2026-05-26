@@ -29,6 +29,12 @@ export function inactiveReasons(ingredient, {
   // the user sees in the table / detail panel.
   nutrientScale = 1,
   nutrientUnit = '100g',
+  // Batch 14: per-unit default-thresholds map. When supplied, nutrients
+  // whose threshold equals the default are SKIPPED in the reasons list
+  // — they aren't contributing to the filter (the filter pipeline
+  // ignores at-default slots), so reporting "Fat above max 100g" for
+  // a slot the user never touched is misleading.
+  nutrientDefaults = null,
 } = {}) {
   if (!ingredient) return [];
   const reasons = [];
@@ -65,6 +71,15 @@ export function inactiveReasons(ingredient, {
     for (const n of NUTRIENT_FIELDS) {
       const t = thresholds[n];
       if (!t) continue;
+      // Batch 14: skip nutrients still at their default (slider bar
+      // edge). Those aren't filtering; reporting them as "out of range"
+      // confuses the user when they only moved a different nutrient.
+      const d = nutrientDefaults && nutrientDefaults[n];
+      if (d
+          && Math.abs(t.min - d.min) < 1e-6
+          && Math.abs(t.max - d.max) < 1e-6) {
+        continue;
+      }
       const rawV = ingredient[n];
       if (typeof rawV !== 'number') continue;
       const v = rawV * nutrientScale;

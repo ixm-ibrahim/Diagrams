@@ -1,0 +1,175 @@
+kind,id,name,pattern,category
+applied,ackee-saltfish,Ackee and saltfish,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,ackee-saltfish,Ackee and saltfish,\b(buttery|butter[- ]?fried|butter[- ]?braised|brown(ed)? butter)\b,Cream & butter
+applied,adana-kebab,Adana kebab,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,aji-de-gallina,Ají de gallina,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,anticuchos,Anticuchos,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,asado-plate,Asado plate,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,ash-reshteh,Ash reshteh,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,bbq-plate,BBQ plate,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,baba-ganoush,Baba ganoush,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,bangers-and-mash,Bangers and mash,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,bistro-plate,Bistro plate,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,bouillabaisse,Bouillabaisse,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,brik,Brik,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,brunch-platter,Brunch platter,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,buffalo-wings,Buffalo wings,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,bulgogi-plate,Bulgogi plate,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,bun-bo-hue,Bun bo Hue,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,butter-chicken,Butter chicken,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,bun-cha,Bún chả,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,bun-cha,Bún chả,\b(soy sauce|tamari|fish sauce|oyster sauce|hoisin)\b,Sauces
+applied,callaloo,Callaloo,\b(garlic|garlicky)\b,Other vegetables
+applied,chapli-kebab,Chapli kebab,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,borek-cheese,Cheese börek,\b(buttery|butter[- ]?fried|butter[- ]?braised|brown(ed)? butter)\b,Cream & butter
+applied,cheeseburger,Cheeseburger,\b(buttery|butter[- ]?fried|butter[- ]?braised|brown(ed)? butter)\b,Cream & butter
+applied,chicken-rice-bowl,Chicken & rice bowl,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,chicken-rice-bowl,Chicken & rice bowl,\b(jasmine rice|basmati rice|long[- ]?grain rice|white rice|fluffy rice)\b,Refined grains
+applied,chicken-and-waffles,Chicken and waffles,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,shawarma-chicken,Chicken shawarma,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,shawarma-chicken,Chicken shawarma,\b(garlic|garlicky)\b,Other vegetables
+applied,chicken-tagine,Chicken tagine (preserved lemon),\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,chimichurri-steak,Chimichurri grilled steak,\b(garlic|garlicky)\b,Other vegetables
+applied,chips-and-guacamole,Chips & guacamole,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,chips-and-queso,Chips & queso,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,chips-and-salsa,Chips & salsa,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,chips-and-salsa,Chips & salsa,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,churrasco-plate,Churrasco plate,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,churros-chocolate,Churros with chocolate,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,congee-rice,Congee,\b(olive oil|sesame oil|coconut oil|vegetable oil|peanut oil|canola oil|chili oil|truffle oil|drizzle of oil|drizzled with oil|splash of oil)\b,Oils
+applied,crudite-platter,Crudité platter,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,currywurst,Currywurst,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,com-tam,Cơm tấm,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,doner-kebab,Döner kebab,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,doner-kebab,Döner kebab,\b(garlic|garlicky)\b,Other vegetables
+applied,empanadas-argentine,Empanadas argentinas,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,fatteh,Fatteh,\b(buttery|butter[- ]?fried|butter[- ]?braised|brown(ed)? butter)\b,Cream & butter
+applied,fatteh,Fatteh,\b(garlic|garlicky)\b,Other vegetables
+applied,fruit-and-nuts,Fruit & nuts,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,ful-medames,Ful medames,\b(garlic|garlicky)\b,Other vegetables
+applied,full-english-breakfast,Full English breakfast,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,goulash,Goulash,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,goulash,Goulash,\b(curry|masala|garam masala|curry powder|chili powder|cayenne|paprika|cumin|coriander|turmeric)\b,Ground spices
+applied,green-curry-chicken,Green curry chicken,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,green-curry-chicken,Green curry chicken,\b(curry|masala|garam masala|curry powder|chili powder|cayenne|paprika|cumin|coriander|turmeric)\b,Ground spices
+applied,haitian-griot,Haitian griot,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,japanese-breakfast,Japanese breakfast,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,japchae,Japchae,\b(olive oil|sesame oil|coconut oil|vegetable oil|peanut oil|canola oil|chili oil|truffle oil|drizzle of oil|drizzled with oil|splash of oil)\b,Oils
+applied,jiaozi-pork-cabbage,Jiaozi (pork & cabbage),\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,kabab-koobideh,Kabab koobideh,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,donburi-katsudon,Katsudon,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,key-lime-pie,Key lime pie,\b(buttery|butter[- ]?fried|butter[- ]?braised|brown(ed)? butter)\b,Cream & butter
+applied,khao-soi,Khao soi,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,khao-soi,Khao soi,\b(curry|masala|garam masala|curry powder|chili powder|cayenne|paprika|cumin|coriander|turmeric)\b,Ground spices
+applied,korean-bbq,Korean BBQ platter,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,kottu-roti,Kottu roti,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,lahmacun,Lahmacun,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,massaman-curry,Massaman curry,\b(curry|masala|garam masala|curry powder|chili powder|cayenne|paprika|cumin|coriander|turmeric)\b,Ground spices
+applied,snack-board-mediterranean,Mediterranean snack board,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,mee-goreng,Mee goreng,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,milanesa,Milanesa,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,mochi-ice-cream,Mochi ice cream,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,mofongo,Mofongo,\b(garlic|garlicky)\b,Other vegetables
+applied,nihari,Nihari,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,nihari,Nihari,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,oatmeal-berries,Oatmeal with berries,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,osso-buco,Osso buco,\b(crusty bread|baguette|focaccia|naan|pita|tortilla|toast points?|served with bread|on toast|sandwich|wrap)\b,Bread & rolls
+applied,pakistani-biryani-mutton,Pakistani mutton biryani,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,pakistani-biryani-mutton,Pakistani mutton biryani,\b(curry|masala|garam masala|curry powder|chili powder|cayenne|paprika|cumin|coriander|turmeric)\b,Ground spices
+applied,papa-huancaina,Papa a la huancaína,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,patatas-bravas,Patatas bravas,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,patatas-bravas,Patatas bravas,\b(garlic|garlicky)\b,Other vegetables
+applied,pb-sandwich,Peanut butter sandwich,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,pho-bo,Pho bo,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,pho-ga,Pho ga,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,pierogi-potato-cheese,Pierogi (potato-cheese),\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,pozole-rojo,Pozole rojo,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,red-curry-chicken,Red curry chicken,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,red-curry-chicken,Red curry chicken,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,red-curry-chicken,Red curry chicken,\b(curry|masala|garam masala|curry powder|chili powder|cayenne|paprika|cumin|coriander|turmeric)\b,Ground spices
+applied,nicoise-salad,Salade niçoise,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,salmon-plate,Salmon plate,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,salt-pepper-shrimp,Salt-and-pepper shrimp,\b(garlic|garlicky)\b,Other vegetables
+applied,samosa-chaat,Samosa chaat,\b(curry|masala|garam masala|curry powder|chili powder|cayenne|paprika|cumin|coriander|turmeric)\b,Ground spices
+applied,satay-plate,Satay plate,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,satay-plate,Satay plate,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,sichuan-hot-pot,Sichuan hot pot,\b(pasta|spaghetti|noodles?|fettuccine|penne|rigatoni|linguine|lasagn[ae])\b,Refined grains
+applied,som-tam,Som tam (green papaya salad),\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,souvlaki-plate,Souvlaki plate,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,summer-rolls,Summer rolls,\b(soy sauce|tamari|fish sauce|oyster sauce|hoisin)\b,Sauces
+applied,sundubu-jjigae,Sundubu jjigae,\b(olive oil|sesame oil|coconut oil|vegetable oil|peanut oil|canola oil|chili oil|truffle oil|drizzle of oil|drizzled with oil|splash of oil)\b,Oils
+applied,suya-skewers,Suya skewers,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,sweet-and-sour-pork,Sweet-and-sour pork,\b(deep[- ]?fry|deep[- ]?fried|tempura|battered)\b,Oils
+applied,sweet-and-sour-pork,Sweet-and-sour pork,\b(deep[- ]?fry|deep[- ]?fried|tempura|battered)\b,Flours
+applied,tacos-carnitas,Tacos carnitas,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,tempura-platter,Tempura platter,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,thieboudienne,Thieboudienne,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,tonkatsu-plate,Tonkatsu plate,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,tuna-salad,Tuna salad,\b(lemon|lemon[- ]?juice|lemon[- ]?zest|lime|orange peel|orange juice)\b,Citrus
+applied,twice-cooked-pork,Twice-cooked pork,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,udon-noodles,Udon noodles,\b(deep[- ]?fry|deep[- ]?fried|tempura|battered)\b,Oils
+applied,udon-noodles,Udon noodles,\b(deep[- ]?fry|deep[- ]?fried|tempura|battered)\b,Flours
+applied,vatapa,Vatapa,\b(creamy|cream sauce|cream-based|in cream|with cream\b)\b,Cream & butter
+applied,vegan-bowl,Vegan grain bowl,\b(roasted?|grill(ed)?|seared)\b,Oils
+applied,omelet-veg-cheese,Vegetable & cheese omelet,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+applied,waakye,Waakye,\b(stir[- ]?fr(y|ied|ies)|pan[- ]?fr(y|ied|ies)|fry|fried|saut[eé]ed?)\b,Oils
+review,antipasto-platter,Antipasto platter,\b(salty|brined|cured)\b,Salt & seasonings
+review,arepas,Arepas,\b(beans|lentils|chickpeas)\b,Legumes
+review,ash-reshteh,Ash reshteh,\b(onion(s)?|shallots?)\b,Other vegetables
+review,bacalhau-com-natas,Bacalhau com natas,\b(onion(s)?|shallots?)\b,Other vegetables
+review,bangers-and-mash,Bangers and mash,\b(onion(s)?|shallots?)\b,Other vegetables
+review,rendang,Beef rendang,\b(milk)\b,Milk
+review,shawarma-beef,Beef shawarma,\b(onion(s)?|shallots?)\b,Other vegetables
+review,cassoulet,Cassoulet,\b(beans|lentils|chickpeas)\b,Legumes
+review,charcuterie-board,Charcuterie board,\b(salty|brined|cured)\b,Salt & seasonings
+review,borek-cheese,Cheese börek,\b(salty|brined|cured)\b,Salt & seasonings
+review,cheeseburger,Cheeseburger,\b(tomato(es)?)\b,Peppers & nightshades
+review,shawarma-chicken,Chicken shawarma,\b(tomato(es)?)\b,Peppers & nightshades
+review,chips-and-guacamole,Chips & guacamole,\b(onion(s)?|shallots?)\b,Other vegetables
+review,continental-breakfast,Continental breakfast,\b(yogurt|yoghurt)\b,Yogurt
+review,currywurst,Currywurst,\b(tomato(es)?)\b,Peppers & nightshades
+review,feijoada,Feijoada,\b(beans|lentils|chickpeas)\b,Legumes
+review,gallo-pinto,Gallo pinto,\b(onion(s)?|shallots?)\b,Other vegetables
+review,gravlax-plate,Gravlax plate,\b(salty|brined|cured)\b,Salt & seasonings
+review,gravlax-plate,Gravlax plate,\b(onion(s)?|shallots?)\b,Other vegetables
+review,gravlax-plate,Gravlax plate,\b(sugar|caramelized|caramelised)\b,Sugar & sweeteners
+review,huevos-rancheros,Huevos rancheros,\b(beans|lentils|chickpeas)\b,Legumes
+review,kabab-koobideh,Kabab koobideh,\b(tomato(es)?)\b,Peppers & nightshades
+review,kafta-kebab,Kafta kebab,\b(onion(s)?|shallots?)\b,Other vegetables
+review,donburi-katsudon,Katsudon,\b(onion(s)?|shallots?)\b,Other vegetables
+review,khao-soi,Khao soi,\b(onion(s)?|shallots?)\b,Other vegetables
+review,lahmacun,Lahmacun,\b(onion(s)?|shallots?)\b,Other vegetables
+review,lomo-saltado,Lomo saltado,\b(onion(s)?|shallots?)\b,Other vegetables
+review,mee-goreng,Mee goreng,\b(tomato(es)?)\b,Peppers & nightshades
+review,moqueca,Moqueca,\b(milk)\b,Milk
+review,muesli-bowl,Muesli bowl,\b(yogurt|yoghurt)\b,Yogurt
+review,nihari,Nihari,\b(onion(s)?|shallots?)\b,Other vegetables
+review,oatmeal-berries,Oatmeal with berries,\b(sugar|caramelized|caramelised)\b,Sugar & sweeteners
+review,pakistani-biryani-mutton,Pakistani mutton biryani,\b(onion(s)?|shallots?)\b,Other vegetables
+review,paneer-tikka,Paneer tikka,\b(yogurt|yoghurt)\b,Yogurt
+review,paneer-tikka,Paneer tikka,\b(onion(s)?|shallots?)\b,Other vegetables
+review,pap-chakalaka,Pap and chakalaka,\b(beans|lentils|chickpeas)\b,Legumes
+review,ceviche-peruvian,Peruvian ceviche,\b(salty|brined|cured)\b,Salt & seasonings
+review,pesto-pasta,Pesto pasta,\b(beans|lentils|chickpeas)\b,Legumes
+review,pickled-herring-plate,Pickled herring plate,\b(onion(s)?|shallots?)\b,Other vegetables
+review,pierogi-potato-cheese,Pierogi (potato-cheese),\b(onion(s)?|shallots?)\b,Other vegetables
+review,raclette-platter,Raclette platter,\b(salty|brined|cured)\b,Salt & seasonings
+review,rajma,Rajma,\b(onion(s)?|shallots?)\b,Other vegetables
+review,nicoise-salad,Salade niçoise,\b(beans|lentils|chickpeas)\b,Legumes
+review,sinigang,Sinigang,\b(tomato(es)?)\b,Peppers & nightshades
+review,smorgasbord-plate,Smörgåsbord plate,\b(salty|brined|cured)\b,Salt & seasonings
+review,som-tam,Som tam (green papaya salad),\b(sugar|caramelized|caramelised)\b,Sugar & sweeteners
+review,halwa-semolina,Suji halwa,\b(milk)\b,Milk
+review,suya-skewers,Suya skewers,\b(onion(s)?|shallots?)\b,Other vegetables
+review,sweet-and-sour-pork,Sweet-and-sour pork,\b(onion(s)?|shallots?)\b,Other vegetables
+review,tacos-carnitas,Tacos carnitas,\b(onion(s)?|shallots?)\b,Other vegetables
+review,thanksgiving-plate,Thanksgiving plate,\b(beans|lentils|chickpeas)\b,Legumes
+review,toad-in-the-hole,Toad in the hole,\b(onion(s)?|shallots?)\b,Other vegetables
+review,tom-yum-goong,Tom yum goong,\b(mushrooms?)\b,Mushrooms
+review,tortilla-espanola,Tortilla española,\b(onion(s)?|shallots?)\b,Other vegetables
+review,trail-mix,Trail mix,\b(salty|brined|cured)\b,Salt & seasonings
+review,ugali-sukuma-wiki,Ugali with sukuma wiki,\b(tomato(es)?)\b,Peppers & nightshades
+review,ugali-sukuma-wiki,Ugali with sukuma wiki,\b(onion(s)?|shallots?)\b,Other vegetables
+review,vatapa,Vatapa,\b(milk)\b,Milk
+review,omelet-veg-cheese,Vegetable & cheese omelet,\b(mushrooms?)\b,Mushrooms
+review,iskender-kebab,İskender kebab,\b(tomato(es)?)\b,Peppers & nightshades

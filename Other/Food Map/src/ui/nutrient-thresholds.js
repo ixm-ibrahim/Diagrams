@@ -96,6 +96,17 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
     for (const nutrient of NUTRIENT_FIELDS) out[nutrient] = userDefaultFor(nutrient);
     return out;
   }
+  /* Batch 12: Reset-all (and the per-row ↻ button) target the slider's
+   * actual full range — what the user can SEE as the slider envelope —
+   * not the boot-time preset default. Iron's preset default is 0–25 mg
+   * but the slider runs to 100 mg; testers expected reset to land on
+   * the visible bar's min/max, since that's the only spec the UI
+   * surfaces unambiguously. */
+  function fullSliderBounds() {
+    const out = {};
+    for (const nutrient of NUTRIENT_FIELDS) out[nutrient] = sliderBoundsFor(nutrient);
+    return out;
+  }
 
   /* Phase 40 round 11: the section edits whichever threshold set
    * matches the current nutrient unit. State has two slots:
@@ -116,6 +127,7 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
 
   const { root: section, body } = createRailSection({
     title: 'Nutrient thresholds',
+    id: 'section-thresholds',
     tooltip: 'Set min/max ranges per nutrient. Modes: Filter hides anything out of range; Highlight scales matching dots up; Score colors every dot by how close it is to your targets.',
   });
   host.appendChild(section);
@@ -140,6 +152,10 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
         `<button class="seg-btn" type="button" data-mode="${m.key}" role="tab" title="${m.tooltip}">${m.label}</button>`
       ).join('')}
     </div>
+    <button class="threshold-restore-coloring btn-link" type="button" hidden
+            title="Switch back to Filter mode so dots keep their food-group colors. Threshold values are preserved.">
+      ↻ Restore normal coloring
+    </button>
     <div class="threshold-profiles" aria-label="Nutrient profile presets">
       <button class="profile-dropdown-trigger" type="button"
               aria-haspopup="true" aria-expanded="false"
@@ -230,7 +246,9 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
       commit({ min: lo, max: hi });
     });
     resetEl.addEventListener('click', () => {
-      const d = userDefaultFor(nutrient);
+      // Batch 12: ↻ resets to the slider's full visible range, matching
+      // the Reset-all button.
+      const d = sliderBoundsFor(nutrient);
       commit({ min: d.min, max: d.max });
     });
 
@@ -239,7 +257,9 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
   }
 
   resetAll.addEventListener('click', () => {
-    setActiveThresholds(fullUserDefaults());
+    // Batch 12: Reset-all targets the slider's full visible bounds, not
+    // the boot-time preset defaults. See fullSliderBounds() above.
+    setActiveThresholds(fullSliderBounds());
   });
 
   // --- Profile presets ---
@@ -322,11 +342,24 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
       state.set({ thresholdMode: btn.dataset.mode });
     });
   }
+  /* Tester feedback: in Score mode there was no quick way to "stop
+   * coloring" without losing the threshold values — the user had to
+   * click Filter mode (counterintuitive when their threshold edits
+   * felt distinct from the gradient). The button below switches mode
+   * back to Filter (which keeps thresholds and restores default
+   * coloring) and is only visible while Score is active. */
+  const restoreBtn = body.querySelector('.threshold-restore-coloring');
+  if (restoreBtn) {
+    restoreBtn.addEventListener('click', () => {
+      state.set({ thresholdMode: 'filter' });
+    });
+  }
   function applyMode(mode) {
     for (const btn of modeBtns) {
       btn.classList.toggle('is-active', btn.dataset.mode === mode);
       btn.setAttribute('aria-selected', btn.dataset.mode === mode ? 'true' : 'false');
     }
+    if (restoreBtn) restoreBtn.hidden = mode !== 'score';
   }
   applyMode(state.get('thresholdMode') || 'filter');
   state.subscribe(s => s.thresholdMode, applyMode);
@@ -349,7 +382,9 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
       row.trackEl.style.setProperty('--lo', `${a}%`);
       row.trackEl.style.setProperty('--hi', `${b}%`);
     }
-    resetAll.disabled = isThresholdsAtDefaults(t, fullUserDefaults());
+    // Disabled iff every threshold already equals the slider's full
+    // bound — i.e., there's nothing left for Reset-all to widen.
+    resetAll.disabled = isThresholdsAtDefaults(t, fullSliderBounds());
   }
 
   refresh();
@@ -363,10 +398,16 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
    * userMeals each call (data-driven), so we just need to refresh DOM
    * here in response to userMeals changes — and bump any threshold
    * value that was pinned to the old max so the user's "no upper limit"
-   * intent rides the new bound. The defaults (Clear / Reset target)
-   * still come from getDefaultThreshold and are unaffected. */
+   * intent rides the new bound.
+   *
+   * Batch 14 fix: the slider bounds are now per-unit, so the bar must
+   * also rebuild when the user toggles 100g ↔ serving. The earlier
+   * unit-agnostic bar stayed the same width in both modes and the
+   * default handle sat mid-bar in the off-unit mode (calories+carbs in
+   * 100g, fiber/sodium/sat_fat/iron in serving). */
   applyDataDrivenBounds();
-  state.subscribe(s => s.userMeals, applyDataDrivenBounds);
+  state.subscribe(s => s.userMeals,    applyDataDrivenBounds);
+  state.subscribe(s => s.nutrientUnit, applyDataDrivenBounds);
 
   function applyDataDrivenBounds() {
     const cur = activeThresholds() || fullUserDefaults();

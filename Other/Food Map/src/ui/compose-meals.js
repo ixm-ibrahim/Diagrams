@@ -16,12 +16,14 @@
  */
 
 import { createRailSection } from './left-rail.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 export function mountComposeMealsSection(host, { state, ingredients }) {
   if (!host) return () => {};
   const { root: section, body } = createRailSection({
     title: 'Modify all meals',
     initiallyCollapsed: true,
+    id: 'section-modify-meals', // tutorial slide 12 targets this
     tooltip: 'Inject or strip a category across every meal at once. + adds it to every meal; − removes it. Affects both the 3D view and the table.',
   });
   host.appendChild(section);
@@ -147,10 +149,3 @@ export function mountComposeMeals(host, { state, ingredients }) {
   return unsubscribe;
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

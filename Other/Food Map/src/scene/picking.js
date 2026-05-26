@@ -18,23 +18,29 @@
  * touch release so a tap doesn't leave a phantom hover behind.
  *
  * Phase 40.5: a click that resolves to MULTIPLE candidate dots along the
- * ray (within RAY_CLUSTER_DIST of the front hit) opens a disambiguation
- * menu instead of selecting the front hit blindly. The menu is rendered
- * by ui/pick-menu.js — picking.js just gathers the candidate list and
- * hands it off via `onMultiHit`.
+ * ray opens a disambiguation menu instead of selecting the front hit
+ * blindly. The menu is rendered by ui/pick-menu.js — picking.js just
+ * gathers the candidate list and hands it off via `onMultiHit`.
+ *
+ * A raycast hit means the cursor is inside that dot's on-screen silhouette,
+ * so EVERY hit is "under the cursor" — including dots occluded behind a
+ * nearer one. An earlier revision kept only hits within a fixed ray-distance
+ * window of the front hit, which silently dropped occluded dots and made
+ * them unselectable from certain camera angles (the dropped dot changed as
+ * the view rotated). We now offer the full set of dots the ray passes
+ * through; the menu pages long lists, so density stays manageable.
  */
 
 import * as THREE from 'three';
 import { inactiveReasons } from '../core/inactive-reasons.js';
 import { scaleForItem } from '../core/unit.js';
+import { escapeHtml } from '../util/dom.js';
+import { pointerNDC, worldToClient } from './pointer-math.js';
 
-// Phase 40.5: hits whose ray-distance is within RAY_CLUSTER_DIST of the
-// nearest hit count as "overlapping" for disambiguation purposes. Tuned
-// so a near-coincident pair (different ingredients on top of each
-// other) triggers the menu, but two clearly-separated dots along a
-// long view ray don't both qualify.
-const RAY_CLUSTER_DIST = 0.18;
-const MAX_PICK_CANDIDATES = 8;
+// Every dot the ray passes through is offered for disambiguation (see the
+// file header). ui/pick-menu.js pages the list, so this is just a defensive
+// ceiling — a single ray realistically intersects only a handful of dots.
+const PICK_HARD_CAP = 200;
 
 export function attachPicking({
   renderer,
@@ -45,6 +51,10 @@ export function attachPicking({
   state,
   ranges = null,
   onMultiHit = null,
+  /* Batch 14: per-unit defaults so tooltip's "out of threshold range"
+   * reason matches the filter pipeline — at-default nutrients are
+   * skipped instead of triggering a misleading message. */
+  getThresholdDefaults = null,
 }) {
   const dom = renderer.domElement;
   const raycaster = new THREE.Raycaster();
@@ -62,9 +72,7 @@ export function attachPicking({
   let lastClientY = 0;
 
   function setPointer(ev) {
-    const rect = dom.getBoundingClientRect();
-    pointer.x =  ((ev.clientX - rect.left) / rect.width)  * 2 - 1;
-    pointer.y = -((ev.clientY - rect.top)  / rect.height) * 2 + 1;
+    pointerNDC(ev, dom, pointer);
     lastClientX = ev.clientX;
     lastClientY = ev.clientY;
     if (ev.pointerType) lastPointerType = ev.pointerType;
@@ -88,9 +96,12 @@ export function attachPicking({
     return -1;
   }
 
-  /* Phase 40.5: collect every instance along the ray, deduped by
-   * instanceId, with cluster filtering. Returns an array of
-   * { index, ingredient, distance } sorted near→far. */
+  /* Collect every instance the ray passes through, deduped by instanceId
+   * and kept in three.js's front-to-back distance order. No depth window:
+   * each hit is a dot whose silhouette is under the cursor, so an occluded
+   * dot behind a nearer one is still a legitimate target and must remain
+   * reachable. ui/pick-menu.js pages the list; PICK_HARD_CAP is a defensive
+   * ceiling that real rays never approach. */
   function pickAllAtPointer() {
     const points = getPoints();
     if (!points || !points.mesh) return [];
@@ -108,11 +119,9 @@ export function attachPicking({
       if (!ingredient) continue;
       seen.add(id);
       out.push({ index: id, ingredient, distance: hit.distance });
-      if (out.length >= MAX_PICK_CANDIDATES) break;
+      if (out.length >= PICK_HARD_CAP) break;
     }
-    if (out.length === 0) return out;
-    const nearest = out[0].distance;
-    return out.filter(h => (h.distance - nearest) <= RAY_CLUSTER_DIST);
+    return out;
   }
 
   function pickSprite() {
@@ -145,57 +154,58 @@ export function attachPicking({
     const points = getPoints();
     const worldPos = points && points.getInstancePosition(hoveredIndex);
     if (!worldPos) return positionTooltipAtCursor();
-    const v = worldPos.clone().project(getCamera());
-    const rect = dom.getBoundingClientRect();
-    const x = rect.left + (v.x + 1) / 2 * rect.width;
-    const y = rect.top  + (1 - (v.y + 1) / 2) * rect.height;
+    const { x, y } = worldToClient(worldPos, getCamera(), dom);
     tooltip.style.left = `${Math.round(x)}px`;
     tooltip.style.top  = `${Math.round(y - 28)}px`;
   }
 
+  /* The tooltip CONTENT (name + inactive reasons) only changes when the
+   * hovered ingredient changes, not when the cursor moves within the
+   * same sphere. Cache the last-rendered ingredient id so pointermove
+   * over a stable hover skips the inactiveReasons scan and the
+   * innerHTML rebuild entirely — only the position is updated. */
+  let _lastTooltipIngredientId = null;
   function showTooltip(ingredient) {
-    // Phase 13.5 round 2: if the sphere is currently inactive (greyed by
-    // any active filter), surface the actual reason below the name so the
-    // user doesn't have to guess. Reasons are computed against current
-    // state on every hover — no cache, but state lookups are O(1).
-    // Phase 40 round 11: read the active threshold set + apply the
-    // per-serving scale so the tooltip's "outside threshold" reason
-    // matches what the table/detail panel show.
-    const unit = state.get('nutrientUnit') || '100g';
-    const thresholds = unit === 'serving'
-      ? (state.get('thresholdsServing') || state.get('thresholds'))
-      : state.get('thresholds');
-    const scale = scaleForItem(ingredient, unit);
-    const reasons = inactiveReasons(ingredient, {
-      ingredientFilter: state.get('ingredientFilter'),
-      thresholds,
-      thresholdMode:    state.get('thresholdMode'),
-      restrictions:     state.get('restrictions') || [],
-      ranges,
-      nutrientScale: scale,
-      nutrientUnit:  unit,
-    });
+    if (ingredient.id !== _lastTooltipIngredientId) {
+      _lastTooltipIngredientId = ingredient.id;
+      // Phase 13.5 round 2: if the sphere is currently inactive (greyed
+      // by any active filter), surface the actual reason below the name
+      // so the user doesn't have to guess.
+      // Phase 40 round 11: read the active threshold set + apply the
+      // per-serving scale so the tooltip's "outside threshold" reason
+      // matches what the table/detail panel show.
+      const unit = state.get('nutrientUnit') || '100g';
+      const thresholds = unit === 'serving'
+        ? (state.get('thresholdsServing') || state.get('thresholds'))
+        : state.get('thresholds');
+      const scale = scaleForItem(ingredient, unit);
+      const reasons = inactiveReasons(ingredient, {
+        ingredientFilter: state.get('ingredientFilter'),
+        thresholds,
+        thresholdMode:    state.get('thresholdMode'),
+        restrictions:     state.get('restrictions') || [],
+        ranges,
+        nutrientScale: scale,
+        nutrientUnit:  unit,
+        nutrientDefaults: getThresholdDefaults
+          ? getThresholdDefaults(unit)
+          : null,
+      });
 
-    if (reasons.length === 0) {
-      tooltip.textContent = ingredient.name;
-    } else {
-      tooltip.innerHTML = `
-        <div class="ingredient-tooltip-name">${escapeHtml(ingredient.name)}</div>
-        <ul class="ingredient-tooltip-reasons">
-          ${reasons.map(r => `<li>${escapeHtml(r)}</li>`).join('')}
-        </ul>
-      `;
+      if (reasons.length === 0) {
+        tooltip.textContent = ingredient.name;
+      } else {
+        tooltip.innerHTML = `
+          <div class="ingredient-tooltip-name">${escapeHtml(ingredient.name)}</div>
+          <ul class="ingredient-tooltip-reasons">
+            ${reasons.map(r => `<li>${escapeHtml(r)}</li>`).join('')}
+          </ul>
+        `;
+      }
     }
     tooltip.hidden = false;
     if (lastPointerType === 'touch') positionTooltipAtSphere();
     else positionTooltipAtCursor();
-  }
-
-  function escapeHtml(s) {
-    if (s == null) return '';
-    return String(s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   function clearHover() {
@@ -204,6 +214,7 @@ export function attachPicking({
     const points = getPoints();
     if (points) points.setHover(-1);
     tooltip.hidden = true;
+    _lastTooltipIngredientId = null;
     if (hadHover && state.get('hoveredIngredientId') !== null) {
       state.set({ hoveredIngredientId: null });
     }

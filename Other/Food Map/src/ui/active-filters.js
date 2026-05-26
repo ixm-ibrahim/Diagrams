@@ -29,6 +29,7 @@
 import { NUTRIENT_FIELDS, NUTRIENT_META } from '../data/schema.js';
 import { DIETARY_RESTRICTIONS } from '../core/restrictions.js';
 import { isNutrientThresholdAtDefault } from '../core/scoring.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 const RESTRICTION_BY_KEY = new Map(DIETARY_RESTRICTIONS.map(r => [r.key, r]));
 
@@ -217,15 +218,31 @@ export function mountActiveFilters(root, {
       });
     }
 
-    /* Phase 40 round 4: global Food groups filter chip. */
+    /* Phase 40 round 4 / Batch 4: tri-state food-group filter chips
+     * (included + excluded), mirroring the category-filter pattern. */
     const gf = state.get('foodGroupFilter') || {};
+    const gfIncluded = Array.isArray(gf.included) ? gf.included : [];
     const gfExcluded = Array.isArray(gf.excluded) ? gf.excluded : [];
+    if (gfIncluded.length > 0) {
+      chips.push({
+        kind: 'food-group-included',
+        value: 'included',
+        label: `food group in (${gfIncluded.length})`,
+        clear: () => {
+          const cur = state.get('foodGroupFilter') || {};
+          state.set({ foodGroupFilter: { ...cur, included: [] } });
+        },
+      });
+    }
     if (gfExcluded.length > 0) {
       chips.push({
         kind: 'food-group-excluded',
         value: 'excluded',
-        label: `food group hidden (${gfExcluded.length})`,
-        clear: () => state.set({ foodGroupFilter: { excluded: [] } }),
+        label: `food group not (${gfExcluded.length})`,
+        clear: () => {
+          const cur = state.get('foodGroupFilter') || {};
+          state.set({ foodGroupFilter: { ...cur, excluded: [] } });
+        },
       });
     }
 
@@ -333,7 +350,10 @@ export function mountActiveFilters(root, {
       thresholdsServing: resetThresholdsServing, // each slot at its own unit defaults
       // Phase 40 round 4: clear the new global filters too.
       categoryFilter: { included: [], excluded: [] },
-      foodGroupFilter: { excluded: [] },
+      foodGroupFilter: { included: [], excluded: [] },
+      // Batch 4: reset the new food-group toggle slots too.
+      foodGroupFilterMatch: 'any',
+      foodGroupFilterScope: 'any',
       // Phase 40 round 7
       dietFilter: { included: [] },
       cuisineFilter: { included: [] },
@@ -350,6 +370,12 @@ export function mountActiveFilters(root, {
     state.set(patch);
   }
 
+  /* The chip list is rebuilt cheaply, but the resulting innerHTML +
+   * listener wiring is expensive. The 17 SLICES below subscribe broadly
+   * (e.g. nutrientUnit, colorScheme) — many mutations don't change the
+   * chip set at all. Fingerprint the inputs that affect rendering and
+   * skip the DOM rebuild when nothing changed. */
+  let _lastRenderFingerprint = null;
   function render() {
     const chips = buildChips();
     /* Phase 40 round 5: persistent "filters hide everything" warning
@@ -362,6 +388,11 @@ export function mountActiveFilters(root, {
      * empty. */
     const hideAll = state.get('filtersHideAll') === true;
     const open = hideAll ? true : (state.get('activeFiltersOpen') !== false);
+
+    const fingerprint = `${open ? 1 : 0}|${hideAll ? 1 : 0}|` +
+      chips.map(c => `${c.kind}:${c.value}:${c.label}`).join('\x1f');
+    if (fingerprint === _lastRenderFingerprint) return;
+    _lastRenderFingerprint = fingerprint;
 
     if (!open) {
       root.classList.add('is-collapsed');
@@ -481,10 +512,3 @@ export function mountActiveFilters(root, {
   for (const sel of SLICES) state.subscribe(sel, render);
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

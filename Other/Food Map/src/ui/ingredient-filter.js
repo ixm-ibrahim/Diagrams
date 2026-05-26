@@ -33,6 +33,7 @@
 import { excludeIds, includeIds } from '../core/filters.js';
 import { createRailSection } from './left-rail.js';
 import { FOOD_GROUPS } from '../data/schema.js';
+import { escapeHtml, escapeAttr, cssEscape } from '../util/dom.js';
 
 function buildTree(ingredients) {
   const byGroup = new Map(FOOD_GROUPS.map(name => [name, new Map()]));
@@ -68,6 +69,7 @@ export function mountIngredientFilter(host, { state, ingredients }) {
 
   const { root: section, body } = createRailSection({
     title: 'Filter by ingredient',
+    id: 'section-ingredient',
     tooltip: 'A 3-level tree (food group → category → ingredient). Uncheck individual items to remove them from the map and the table.',
   });
   host.appendChild(section);
@@ -104,6 +106,12 @@ export function mountIngredientFilter(host, { state, ingredients }) {
         </div>
       </div>
     </div>
+    <div class="ingredient-filter-collapse-all" hidden>
+      <button class="btn-link ingredient-collapse-all-btn" type="button"
+              title="Collapse every expanded food group and category">
+        <span aria-hidden="true">⌃</span> Collapse all
+      </button>
+    </div>
     <div class="ingredient-filter-tree" role="tree"></div>
   `;
 
@@ -112,7 +120,22 @@ export function mountIngredientFilter(host, { state, ingredients }) {
   const bulkBtn     = root.querySelector('.ingredient-filter-bulk');
   const matchGroup  = root.querySelector('.filter-match-toggle');
   const scopeGroup  = root.querySelector('.filter-scope-toggle');
+  const modesRow    = root.querySelector('.filter-modes-row');
   const treeEl      = root.querySelector('.ingredient-filter-tree');
+  const collapseAllBar = root.querySelector('.ingredient-filter-collapse-all');
+  const collapseAllBtn = root.querySelector('.ingredient-collapse-all-btn');
+
+  /* Batch 4 (item 9): at Ingredients view each item IS itself, so AND
+   * and ANY/ALL collapse — hide the toggle row to avoid offering a
+   * choice that doesn't actually change anything. Toggles stay visible
+   * at Categories + Meals view where multiple ingredients can compose
+   * an aggregate. */
+  function applyViewLevelVisibility() {
+    const level = state.get('viewLevel') || 'individual';
+    if (modesRow) modesRow.hidden = level === 'individual';
+  }
+  state.subscribe(s => s.viewLevel, applyViewLevelVisibility);
+  applyViewLevelVisibility();
 
   /* Phase 40 round 9: TWO independent toggles per section.
    *   match (AND/OR): how multiple selections combine — within-section logic
@@ -262,14 +285,36 @@ export function mountIngredientFilter(host, { state, ingredients }) {
     groupNode.disclose.addEventListener('click', () => {
       const open = groupNode.body.hasAttribute('hidden') ? true : !isDisclosed(groupNode);
       setDisclosed(groupNode, open);
+      refreshCollapseAll();
     });
     for (const catNode of groupNode.categories) {
       setDisclosed(catNode, false);
       catNode.disclose.addEventListener('click', () => {
         setDisclosed(catNode, !isDisclosed(catNode));
+        refreshCollapseAll();
       });
     }
   }
+
+  /* Section-internal "Collapse all": appears (sticky, just under the section
+   * header) only while at least one food group or category branch is open,
+   * and snaps the whole tree shut — distinct from the rail-level collapse
+   * that closes entire sections. Hidden during an active search, since search
+   * drives the open/closed state itself. */
+  function anyBranchOpen() {
+    return nodes.some(g => isDisclosed(g) || g.categories.some(c => isDisclosed(c)));
+  }
+  function refreshCollapseAll() {
+    const searching = !!searchInput.value.trim();
+    collapseAllBar.hidden = searching || !anyBranchOpen();
+  }
+  collapseAllBtn.addEventListener('click', () => {
+    for (const groupNode of nodes) {
+      for (const catNode of groupNode.categories) setDisclosed(catNode, false);
+      setDisclosed(groupNode, false);
+    }
+    refreshCollapseAll();
+  });
 
   // Checkbox click handlers — drive state mutations.
   // Native checkbox click semantics: indeterminate → checked → unchecked → checked → …
@@ -411,6 +456,7 @@ export function mountIngredientFilter(host, { state, ingredients }) {
 
     countEl.dataset.visibleCount = String(visibleLeaves);
     updateCountText();
+    refreshCollapseAll();
   }
 
   searchInput.addEventListener('input', (ev) => applySearch(ev.target.value));
@@ -435,16 +481,3 @@ function setDisclosed(node, open) {
   else      node.body.setAttribute('hidden', '');
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) {
-  return escapeHtml(s);
-}
-function cssEscape(s) {
-  if (typeof CSS !== 'undefined' && CSS.escape) return CSS.escape(String(s));
-  return String(s).replace(/(["\\])/g, '\\$1');
-}

@@ -204,16 +204,28 @@ export function aggregateMeals(ingredients, meals, composition) {
 
     const n = cats.length;
     /* Plate model: each category contributes one typical serving.
-     * Total grams = Σ servings; this is the meal aggregate's own
+     * Total grams = Σ servings, used as both the per-category weight
+     * for nutrient densities and (by default) the meal's own
      * serving_grams. Nutrients per-100g = Σ(cat[n] × cat.serving) / Σ
      * cat.serving × 100 — the gram-weighted mean, so dense categories
      * (Oils 884 kcal/100g at 14g) no longer dominate light ones
      * (Leafy greens 25 kcal/100g at 30g) the way an equal-weighted
      * mean would. group_weights / food_group_weights stay gram-
-     * weighted for the same reason. */
-    let totalGrams = 0;
-    for (const c of cats) totalGrams += (c.serving_grams || SERVING_GRAMS_DEFAULT);
-    if (!(totalGrams > 0)) totalGrams = n * SERVING_GRAMS_DEFAULT;
+     * weighted for the same reason.
+     *
+     * Batch 14: per-meal `serving_grams` overrides the plate sum when
+     * present. The plate sum was inflating soups (5 categories × ~150g
+     * → 750g per "serving" of soup, vs. a real soup bowl ~300g). The
+     * per-100g profile still uses the plate weights (those reflect the
+     * meal's actual ingredient ratios) — only the displayed-serving
+     * scaling is overridden, so detail-panel numbers match a realistic
+     * plate while the meal's plotted position is unchanged. */
+    let plateGrams = 0;
+    for (const c of cats) plateGrams += (c.serving_grams || SERVING_GRAMS_DEFAULT);
+    if (!(plateGrams > 0)) plateGrams = n * SERVING_GRAMS_DEFAULT;
+    const totalGrams = Number.isFinite(meal.serving_grams) && meal.serving_grams > 0
+      ? meal.serving_grams
+      : plateGrams;
 
     const agg = {
       id: meal.id,
@@ -221,6 +233,12 @@ export function aggregateMeals(ingredients, meals, composition) {
       category: 'Meal',
       subcategory: meal.name,
       examples: effectiveNames,
+      /* Tester-feedback Batch 2/3: specific ingredient ids the dish uses.
+       * Propagated onto the aggregate so the ingredient filter, search, and
+       * detail panel can match meals by a real held ingredient instead of by
+       * category ("bagels" no longer matches every refined-grain meal). */
+      example_ingredients: Array.isArray(meal.example_ingredients)
+        ? meal.example_ingredients.slice() : [],
       notes: meal.notes || `Combination of ${effectiveNames.join(', ')}.`,
       group_weights: [0, 0, 0],
       isCurated: meal.source !== 'corpus',
@@ -230,16 +248,27 @@ export function aggregateMeals(ingredients, meals, composition) {
       frequency: typeof meal.frequency === 'number' ? meal.frequency : 1,
       diet_compatibility: Array.isArray(meal.diet_compatibility) ? meal.diet_compatibility : [],
       cuisine: meal.cuisine || null,
+      // Batch 5b: meal-direct tags (lunch/dinner/breakfast/etc.). Lifted
+      // from the curated meal record so effectiveAggregateTags can union
+      // them with member-ingredient identity tags. Identity tags applied
+      // at the meal level are honest in a way the lift-from-ingredients
+      // model can't be — most foods aren't intrinsically "lunch" or
+      // "dinner", but a meal as composed is.
+      tags: Array.isArray(meal.tags) ? meal.tags.slice() : [],
       serving_grams: totalGrams,
     };
 
+    /* Per-100g and ratio-based fields (group_weights / food_group_weights)
+     * use plateGrams — the actual ingredient ratios — so the plotted
+     * density and color stay independent of the meal's displayed
+     * serving size. Only agg.serving_grams reflects the override. */
     for (const field of NUTRIENT_FIELDS) {
       let totalNutrient = 0;
       for (const c of cats) {
         const sg = c.serving_grams || SERVING_GRAMS_DEFAULT;
         totalNutrient += (c[field] || 0) * (sg / 100);
       }
-      agg[field] = totalNutrient / totalGrams * 100;
+      agg[field] = totalNutrient / plateGrams * 100;
     }
     for (const c of cats) {
       const sg = c.serving_grams || SERVING_GRAMS_DEFAULT;
@@ -247,11 +276,17 @@ export function aggregateMeals(ingredients, meals, composition) {
       agg.group_weights[1] += sg * c.group_weights[1];
       agg.group_weights[2] += sg * c.group_weights[2];
     }
-    agg.group_weights = agg.group_weights.map(w => w / totalGrams);
+    agg.group_weights = agg.group_weights.map(w => w / plateGrams);
     agg.food_group_weights = averageFoodGroupWeights(
       cats,
       c => (c.serving_grams || SERVING_GRAMS_DEFAULT),
     );
+
+    /* Propagate the meal's own contains tags into the aggregate so the
+     * scene-level restriction filter can pick them up (batch 14). */
+    if (Array.isArray(meal.contains) && meal.contains.length > 0) {
+      agg.contains = meal.contains.slice();
+    }
 
     result.push(agg);
   }
@@ -319,6 +354,11 @@ export function aggregateUserMeal(userMeal, ingredients) {
       category: 'Meal',
       subcategory: userMeal.name || 'Untitled meal',
       examples: userMeal.ingredient_categories.slice(),
+      // Category-shape remix carries no specific ingredients yet (Batch 4
+      // adds an ingredient-level remix); empty list = no specific-ingredient
+      // match, so the ingredient filter leaves these meals alone.
+      example_ingredients: Array.isArray(userMeal.example_ingredients)
+        ? userMeal.example_ingredients.slice() : [],
       notes: userMeal.notes
         || `Your remix · ${userMeal.ingredient_categories.join(', ')}.`,
       tags: Array.isArray(userMeal.tags) ? userMeal.tags.slice() : [],
@@ -370,6 +410,11 @@ export function aggregateUserMeal(userMeal, ingredients) {
     category: 'Meal',
     subcategory: userMeal.name || 'Untitled meal',
     examples: exampleNames,
+    // Ingredient-shape user meal already names its exact ingredients, so the
+    // specific-ingredient filter/search can match it directly.
+    example_ingredients: userMeal.ingredients
+      .map(i => i.ingredientId)
+      .filter(id => ingredientById.has(id)),
     notes: userMeal.notes
       || `Your meal · ${totalGrams}g across ${ingredientCount} ingredient${ingredientCount === 1 ? '' : 's'}.`,
     tags: Array.isArray(userMeal.tags) ? userMeal.tags.slice() : [],
@@ -407,6 +452,54 @@ export function aggregateUserMeal(userMeal, ingredients) {
     f => f._g,
   );
 
+  return agg;
+}
+
+/**
+ * Tester-feedback Batch 4: re-aggregate an existing meal aggregate from an
+ * explicit list of specific ingredient ids (the ingredient-level Remix). The
+ * dot recomputes as a gram-weighted blend of those ingredients (each at its
+ * own serving size) — the same plate model aggregateUserMeal uses — while
+ * keeping the meal's identity fields (id, name, notes, source, tags, …) from
+ * the base aggregate so selection and labelling stay put as the dot moves.
+ *
+ * Returns the base aggregate unchanged when no ids resolve, so an empty draft
+ * never blanks the dot.
+ */
+export function aggregateIngredientDraft(baseAgg, ingredients, ingredientIds) {
+  const byId = new Map(ingredients.map(f => [f.id, f]));
+  const items = (ingredientIds || []).map(id => byId.get(id)).filter(Boolean);
+  if (items.length === 0) return baseAgg;
+
+  let totalGrams = 0;
+  for (const f of items) totalGrams += (f.serving_grams || SERVING_GRAMS_DEFAULT);
+  if (!(totalGrams > 0)) totalGrams = items.length * SERVING_GRAMS_DEFAULT;
+
+  const agg = {
+    ...baseAgg,
+    examples: items.map(f => f.name),
+    example_ingredients: items.map(f => f.id),
+    group_weights: [0, 0, 0],
+    serving_grams: totalGrams,
+  };
+  for (const field of NUTRIENT_FIELDS) {
+    let total = 0;
+    for (const f of items) {
+      const sg = f.serving_grams || SERVING_GRAMS_DEFAULT;
+      total += (f[field] || 0) * (sg / 100);
+    }
+    agg[field] = total / totalGrams * 100;
+  }
+  for (const f of items) {
+    const sg = f.serving_grams || SERVING_GRAMS_DEFAULT;
+    agg.group_weights[0] += sg * f.group_weights[0];
+    agg.group_weights[1] += sg * f.group_weights[1];
+    agg.group_weights[2] += sg * f.group_weights[2];
+  }
+  agg.group_weights = agg.group_weights.map(w => w / totalGrams);
+  agg.food_group_weights = averageFoodGroupWeights(
+    items, f => (f.serving_grams || SERVING_GRAMS_DEFAULT),
+  );
   return agg;
 }
 

@@ -31,7 +31,7 @@ export const AXIS_LEN = 1.0;
 const TICK_FRACTIONS = [0.25, 0.5, 0.75, 1.0];
 const TICK_HALF_LEN = 0.018;
 
-const AXIS_COLOR_VARS = ['--color-axis-x', '--color-axis-y', '--color-axis-z'];
+export const AXIS_COLOR_VARS = ['--color-axis-x', '--color-axis-y', '--color-axis-z'];
 export const AXIS_DIRS = [
   new THREE.Vector3(1, 0, 0),
   new THREE.Vector3(0, 1, 0),

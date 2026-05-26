@@ -1,16 +1,25 @@
 /* Phase 40.5: ray-disambiguation floating menu.
  *
  * Opens at the click coordinates whenever a single click resolves to
- * more than one dot along the ray (within RAY_CLUSTER_DIST in
- * picking.js). Each row previews its dot via state.hoveredIngredientId
- * on hover, and commits state.selectedIngredientId on click.
+ * more than one dot along the ray (picking.js returns every dot the ray
+ * passes through, front-to-back). Each row previews its dot via
+ * state.hoveredIngredientId on hover, and commits state.selectedIngredientId
+ * on click.
+ *
+ * Tester feedback: the menu used to silently cap at 8 candidates even
+ * when more sat under the click. picking.js now returns the full
+ * cluster; this module pages the display with PAGE_SIZE-row chunks
+ * and a footer that exposes "Show more" + "Show all" — same
+ * progressive-disclosure pattern as ui/search.js.
  *
  * Click outside / Escape dismisses without committing.
  */
 
 import { FOOD_GROUP_COLORS } from '../data/schema.js';
+import { escapeHtml } from '../util/dom.js';
 
 const VIEWPORT_MARGIN = 12;
+const PAGE_SIZE = 8;
 
 export function attachPickMenu({ state }) {
   const menu = document.createElement('div');
@@ -20,12 +29,15 @@ export function attachPickMenu({ state }) {
   document.body.appendChild(menu);
 
   let activeCandidates = [];
+  let displayLimit = PAGE_SIZE;
+  let lastAnchor = { clientX: 0, clientY: 0 };
 
   function close() {
     if (menu.hidden) return;
     menu.hidden = true;
     menu.innerHTML = '';
     activeCandidates = [];
+    displayLimit = PAGE_SIZE;
     // Clear any preview hover this menu left behind.
     if (state.get('hoveredIngredientId') !== null) {
       state.set({ hoveredIngredientId: null });
@@ -42,10 +54,13 @@ export function attachPickMenu({ state }) {
     if (ev.key === 'Escape') close();
   }
 
-  function open(candidates, { clientX, clientY }) {
-    if (!Array.isArray(candidates) || candidates.length <= 1) return;
-    activeCandidates = candidates;
-    menu.innerHTML = candidates.map((c, i) => {
+  /* Render the current `activeCandidates` slice (0..displayLimit) plus
+   * a progressive-disclosure footer when more candidates remain. Called
+   * on open() and again whenever the user clicks Show more / Show all. */
+  function renderMenu() {
+    const total = activeCandidates.length;
+    const shown = Math.min(displayLimit, total);
+    const rowsHtml = activeCandidates.slice(0, shown).map((c, i) => {
       const ing = c.ingredient;
       const swatch = swatchCss(ing);
       const subtitle = subtitleFor(ing);
@@ -64,22 +79,57 @@ export function attachPickMenu({ state }) {
       `;
     }).join('');
 
+    let footerHtml = '';
+    if (total > shown) {
+      const remaining = total - shown;
+      const stepSize = Math.min(PAGE_SIZE, remaining);
+      // Drop the "Show more" button when one more step would expose
+      // every remaining candidate — keeps the choice clean (same rule
+      // as ui/search.js).
+      const showStepBtn = remaining > stepSize;
+      footerHtml = `<div class="pick-menu-footer">`;
+      if (showStepBtn) {
+        footerHtml += `<button class="pick-menu-more" type="button" data-action="more">
+          Show ${stepSize} more
+        </button>`;
+      }
+      footerHtml += `<button class="pick-menu-more" type="button" data-action="all">
+        Show all (${remaining}${showStepBtn ? ' more total' : ' more'})
+      </button>`;
+      footerHtml += `</div>`;
+    }
+
+    menu.innerHTML = rowsHtml + footerHtml;
+  }
+
+  /* Recompute menu position after a render (Show more / Show all
+   * changes the height; without re-anchoring, the menu can spill off
+   * the bottom of the viewport). */
+  function positionMenu() {
     menu.style.left = '0px';
     menu.style.top  = '0px';
-    menu.hidden = false;
-
-    // Position after un-hiding so we can measure size.
+    // Force a reflow so getBoundingClientRect returns the post-render size.
     const rect = menu.getBoundingClientRect();
     const left = Math.min(
-      Math.max(VIEWPORT_MARGIN, clientX + 6),
+      Math.max(VIEWPORT_MARGIN, lastAnchor.clientX + 6),
       window.innerWidth  - rect.width  - VIEWPORT_MARGIN,
     );
     const top = Math.min(
-      Math.max(VIEWPORT_MARGIN, clientY + 6),
+      Math.max(VIEWPORT_MARGIN, lastAnchor.clientY + 6),
       window.innerHeight - rect.height - VIEWPORT_MARGIN,
     );
     menu.style.left = `${Math.round(left)}px`;
     menu.style.top  = `${Math.round(top)}px`;
+  }
+
+  function open(candidates, { clientX, clientY }) {
+    if (!Array.isArray(candidates) || candidates.length <= 1) return;
+    activeCandidates = candidates;
+    displayLimit = PAGE_SIZE;
+    lastAnchor = { clientX, clientY };
+    renderMenu();
+    menu.hidden = false;
+    positionMenu();
 
     document.addEventListener('pointerdown', onOutside, true);
     document.addEventListener('keydown', onKey);
@@ -105,6 +155,18 @@ export function attachPickMenu({ state }) {
   });
 
   menu.addEventListener('click', (ev) => {
+    const more = ev.target.closest('.pick-menu-more');
+    if (more) {
+      const action = more.dataset.action;
+      if (action === 'more') {
+        displayLimit = Math.min(activeCandidates.length, displayLimit + PAGE_SIZE);
+      } else {
+        displayLimit = activeCandidates.length;
+      }
+      renderMenu();
+      positionMenu();
+      return;
+    }
     const row = ev.target.closest('.pick-menu-row');
     if (!row) return;
     const idx = +row.dataset.index;
@@ -137,9 +199,3 @@ function subtitleFor(ing) {
   return parts.join(' · ');
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}

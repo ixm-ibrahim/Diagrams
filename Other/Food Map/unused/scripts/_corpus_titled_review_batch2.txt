@@ -1,0 +1,1200 @@
+  1. freq=  541  id=corpus-titled-pumpkin-cake
+     name: 'Pumpkin Cake'
+     ingredient_categories: ['Eggs', 'Starchy vegetables', 'Sugar & sweeteners', 'Ground spices', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Oils']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+  2. freq=  537  id=corpus-titled-frozen-fruit-salad
+     name: 'Frozen Fruit Salad'
+     ingredient_categories: ['Tropical fruits', 'Temperate fruits', 'Sugar & sweeteners', 'Citrus', 'Fresh cheese', 'Candy & desserts', 'Nuts', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+  3. freq=  532  id=corpus-titled-scalloped-corn
+     name: 'Scalloped Corn'
+     ingredient_categories: ['Eggs', 'Starchy vegetables', 'Milk', 'Cream & butter', 'Salt & seasonings', 'Baked snacks & pastries', 'Other vegetables', 'Peppers & nightshades']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+  4. freq=  529  id=corpus-titled-marinated-carrots
+     name: 'Marinated Carrots'
+     ingredient_categories: ['Peppers & nightshades', 'Starchy vegetables', 'Other vegetables', 'Dressings & dips', 'Sugar & sweeteners', 'Oils', 'Leafy greens', 'Salt & seasonings', 'Sauces']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+  5. freq=  527  id=corpus-titled-meatloaf
+     name: 'Meatloaf'
+     ingredient_categories: ['Eggs', 'Red meat', 'Other vegetables', 'Sauces', 'Peppers & nightshades', 'Salt & seasonings', 'Bread & rolls', 'Milk', 'Fresh herbs']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         280
+
+  6. freq=  525  id=corpus-titled-russian-tea
+     name: 'Russian Tea'
+     ingredient_categories: ['Whole spices', 'Sugar & sweeteners', 'Ground spices', 'Coffee & tea', 'Citrus']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+  7. freq=  523  id=corpus-titled-yeast-rolls
+     name: 'Yeast Rolls'
+     ingredient_categories: ['Baking ingredients', 'Sugar & sweeteners', 'Flours', 'Salt & seasonings', 'Eggs', 'Margarine & shortening', 'Milk']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+  8. freq=  522  id=corpus-titled-chocolate-fudge
+     name: 'Chocolate Fudge'
+     ingredient_categories: ['Candy & desserts', 'Milk', 'Sugar & sweeteners', 'Extracts & essences', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         260
+
+  9. freq=  521  id=corpus-titled-cole-slaw
+     name: 'Cole Slaw'
+     ingredient_categories: ['Leafy greens', 'Sugar & sweeteners', 'Dressings & dips', 'Salt & seasonings', 'Other vegetables', 'Peppers & nightshades', 'Starchy vegetables', 'Extracts & essences']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 10. freq=  516  id=corpus-titled-cucumber-salad
+     name: 'Cucumber Salad'
+     ingredient_categories: ['Other vegetables', 'Salt & seasonings', 'Dressings & dips', 'Sugar & sweeteners', 'Peppers & nightshades']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 11. freq=  513  id=corpus-titled-chicken
+     name: 'Chicken'
+     ingredient_categories: ['Poultry', 'Other vegetables', 'Salt & seasonings', 'Peppers & nightshades']
+     diet_compatibility:    ['keto', 'paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+ 12. freq=  511  id=corpus-titled-party-punch
+     name: 'Party Punch'
+     ingredient_categories: ['Tropical fruits', 'Citrus', 'Pickled vegetables', 'Sugar & sweeteners', 'Juices']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 13. freq=  508  id=corpus-titled-pineapple-cake
+     name: 'Pineapple Cake'
+     ingredient_categories: ['Tropical fruits', 'Sugar & sweeteners', 'Eggs', 'Flours', 'Baking ingredients', 'Extracts & essences', 'Prepared mixes']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 14. freq=  508  id=corpus-titled-dinner-tonight
+     name: 'Dinner Tonight'
+     ingredient_categories: ['Other vegetables', 'Salt & seasonings', 'Oils', 'Peppers & nightshades', 'Fresh herbs']
+     diet_compatibility:    ['keto', 'paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+ 15. freq=  507  id=corpus-titled-dill-dip
+     name: 'Dill Dip'
+     ingredient_categories: ['Fresh herbs', 'Fermented dairy', 'Other vegetables', 'Extracts & essences', 'Salt & seasonings']
+     diet_compatibility:    ['keto', 'mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+ 16. freq=  507  id=corpus-titled-quiche
+     name: 'Quiche'
+     ingredient_categories: ['Eggs', 'Aged cheese', 'Milk', 'Processed meat', 'Salt & seasonings', 'Other vegetables', 'Peppers & nightshades', 'Baked snacks & pastries']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+ 17. freq=  502  id=corpus-titled-corn-fritters
+     name: 'Corn Fritters'
+     ingredient_categories: ['Eggs', 'Starchy vegetables', 'Flours', 'Salt & seasonings', 'Baking ingredients', 'Milk', 'Sugar & sweeteners', 'Oils']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 18. freq=  496  id=corpus-titled-jello-salad
+     name: 'Jello Salad'
+     ingredient_categories: ['Tropical fruits', 'Fresh cheese', 'Citrus', 'Candy & desserts']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 19. freq=  496  id=corpus-titled-lemon-bars
+     name: 'Lemon Bars'
+     ingredient_categories: ['Sugar & sweeteners', 'Citrus', 'Eggs', 'Flours', 'Cream & butter', 'Baking ingredients']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 20. freq=  491  id=corpus-titled-seven-layer-salad
+     name: 'Seven Layer Salad'
+     ingredient_categories: ['Other vegetables', 'Legumes', 'Processed meat', 'Leafy greens', 'Aged cheese', 'Extracts & essences', 'Peppers & nightshades', 'Sugar & sweeteners']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 21. freq=  489  id=corpus-titled-eggplant-casserole
+     name: 'Eggplant Casserole'
+     ingredient_categories: ['Peppers & nightshades', 'Other vegetables', 'Salt & seasonings', 'Aged cheese', 'Eggs', 'Bread & rolls', 'Milk', 'Cream & butter']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+ 22. freq=  489  id=corpus-titled-salmon-loaf
+     name: 'Salmon Loaf'
+     ingredient_categories: ['Oily fish', 'Eggs', 'Other vegetables', 'Bread & rolls', 'Salt & seasonings', 'Milk', 'Citrus', 'Peppers & nightshades', 'Cream & butter']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 23. freq=  488  id=corpus-titled-pot-roast
+     name: 'Pot Roast'
+     ingredient_categories: ['Other vegetables', 'Red meat', 'Starchy vegetables', 'Salt & seasonings', 'Peppers & nightshades', 'Oils']
+     diet_compatibility:    ['paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 24. freq=  488  id=corpus-titled-cream-of-broccoli-soup
+     name: 'Cream Of Broccoli Soup'
+     ingredient_categories: ['Cruciferous vegetables', 'Other vegetables', 'Poultry', 'Milk', 'Cream & butter', 'Flours', 'Salt & seasonings', 'Peppers & nightshades', 'Prepared soups & broths']
+     diet_compatibility:    ['keto', 'mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+ 25. freq=  487  id=corpus-titled-sweet-and-sour-chicken
+     name: 'Sweet And Sour Chicken'
+     ingredient_categories: ['Poultry', 'Dressings & dips', 'Other vegetables', 'Tropical fruits', 'Sauces', 'Sugar & sweeteners', 'Refined grains', 'Peppers & nightshades', 'Oils', 'Dried fruits']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 26. freq=  487  id=corpus-titled-granola
+     name: 'Granola'
+     ingredient_categories: ['Sugar & sweeteners', 'Whole grains', 'Oils', 'Nuts', 'Tropical fruits', 'Seeds', 'Extracts & essences', 'Ground spices', 'Dried fruits', 'Salt & seasonings']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['breakfast']
+     contains:              []
+     serving_grams:         260
+
+ 27. freq=  485  id=corpus-titled-layered-salad
+     name: 'Layered Salad'
+     ingredient_categories: ['Other vegetables', 'Legumes', 'Processed meat', 'Leafy greens', 'Aged cheese', 'Extracts & essences', 'Peppers & nightshades', 'Sugar & sweeteners', 'Eggs']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 28. freq=  485  id=corpus-titled-rice-casserole
+     name: 'Rice Casserole'
+     ingredient_categories: ['Refined grains', 'Other vegetables', 'Mushrooms', 'Red meat', 'Margarine & shortening', 'Cream & butter']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+ 29. freq=  483  id=corpus-titled-puppy-chow
+     name: 'Puppy Chow'
+     ingredient_categories: ['Candy & desserts', 'Sugar & sweeteners', 'Nut butters', 'Refined grains', 'Margarine & shortening', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 30. freq=  479  id=corpus-titled-jambalaya
+     name: 'Jambalaya'
+     ingredient_categories: ['Other vegetables', 'Peppers & nightshades', 'Refined grains', 'Processed meat', 'Poultry', 'Fresh herbs', 'Shellfish', 'Salt & seasonings', 'Oils', 'Ground spices']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+ 31. freq=  479  id=corpus-titled-broccoli-soup
+     name: 'Broccoli Soup'
+     ingredient_categories: ['Cruciferous vegetables', 'Other vegetables', 'Milk', 'Poultry', 'Salt & seasonings', 'Cream & butter', 'Flours', 'Peppers & nightshades', 'Prepared soups & broths']
+     diet_compatibility:    ['keto', 'mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+ 32. freq=  477  id=corpus-titled-hot-chocolate-mix
+     name: 'Hot Chocolate Mix'
+     ingredient_categories: ['Sugar & sweeteners', 'Milk', 'Coffee & tea', 'Candy & desserts']
+     diet_compatibility:    []
+     tags:                  ['snack']
+     contains:              []
+     serving_grams:         260
+
+ 33. freq=  476  id=corpus-titled-calico-beans
+     name: 'Calico Beans'
+     ingredient_categories: ['Other vegetables', 'Sugar & sweeteners', 'Red meat', 'Sauces', 'Legumes', 'Processed meat', 'Dressings & dips', 'Leafy greens', 'Salt & seasonings']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 34. freq=  474  id=corpus-titled-cauliflower-salad
+     name: 'Cauliflower Salad'
+     ingredient_categories: ['Cruciferous vegetables', 'Other vegetables', 'Extracts & essences', 'Processed meat', 'Aged cheese', 'Sugar & sweeteners', 'Leafy greens', 'Dressings & dips']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 35. freq=  474  id=corpus-titled-gingerbread
+     name: 'Gingerbread'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Eggs', 'Baking ingredients', 'Ground spices', 'Pickled vegetables', 'Salt & seasonings', 'Whole spices', 'Margarine & shortening', 'Cream & butter', 'Milk']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 36. freq=  473  id=corpus-titled-fruit-cake
+     name: 'Fruit Cake'
+     ingredient_categories: ['Dried fruits', 'Flours', 'Temperate fruits', 'Eggs', 'Sugar & sweeteners', 'Nuts', 'Tropical fruits', 'Baking ingredients', 'Cream & butter', 'Ground spices', 'Salt & seasonings', 'Extracts & essences']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 37. freq=  472  id=corpus-titled-irish-soda-bread
+     name: 'Irish Soda Bread'
+     ingredient_categories: ['Baking ingredients', 'Flours', 'Milk', 'Salt & seasonings', 'Sugar & sweeteners', 'Dried fruits', 'Eggs', 'Cream & butter', 'Ground spices']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 38. freq=  471  id=corpus-titled-clam-chowder
+     name: 'Clam Chowder'
+     ingredient_categories: ['Other vegetables', 'Starchy vegetables', 'Shellfish', 'Cream & butter', 'Salt & seasonings', 'Milk', 'Peppers & nightshades', 'Processed meat', 'Flours', 'Prepared soups & broths']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+ 39. freq=  471  id=corpus-titled-red-beans-and-rice
+     name: 'Red Beans And Rice'
+     ingredient_categories: ['Other vegetables', 'Peppers & nightshades', 'Processed meat', 'Refined grains', 'Salt & seasonings', 'Fresh herbs', 'Dried herbs', 'Legumes', 'Ground spices', 'Sauces']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 40. freq=  465  id=corpus-titled-fresh-strawberry-pie
+     name: 'Fresh Strawberry Pie'
+     ingredient_categories: ['Berries', 'Sugar & sweeteners', 'Refined grains', 'Baked snacks & pastries']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 41. freq=  465  id=corpus-titled-pizza
+     name: 'Pizza'
+     ingredient_categories: ['Fresh cheese', 'Peppers & nightshades', 'Processed meat', 'Other vegetables', 'Sauces', 'Salt & seasonings', 'Flours', 'Oils', 'Baking ingredients', 'Red meat', 'Aged cheese', 'Bread & rolls']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+ 42. freq=  464  id=corpus-titled-enchiladas
+     name: 'Enchiladas'
+     ingredient_categories: ['Other vegetables', 'Bread & rolls', 'Aged cheese', 'Peppers & nightshades', 'Red meat', 'Sauces', 'Ground spices']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 43. freq=  464  id=corpus-titled-lemon-squares
+     name: 'Lemon Squares'
+     ingredient_categories: ['Sugar & sweeteners', 'Citrus', 'Eggs', 'Flours', 'Cream & butter', 'Baking ingredients', 'Salt & seasonings', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 44. freq=  463  id=corpus-titled-broccoli-and-rice-casserole
+     name: 'Broccoli And Rice Casserole'
+     ingredient_categories: ['Refined grains', 'Cruciferous vegetables', 'Other vegetables', 'Mushrooms', 'Poultry', 'Margarine & shortening', 'Cream & butter']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+ 45. freq=  462  id=corpus-titled-coconut-cream-pie
+     name: 'Coconut Cream Pie'
+     ingredient_categories: ['Tropical fruits', 'Milk', 'Sugar & sweeteners', 'Eggs', 'Extracts & essences', 'Cream & butter', 'Salt & seasonings', 'Flours', 'Refined grains', 'Baked snacks & pastries']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 46. freq=  461  id=corpus-titled-spaghetti-pie
+     name: 'Spaghetti Pie'
+     ingredient_categories: ['Aged cheese', 'Fresh cheese', 'Eggs', 'Red meat', 'Other vegetables', 'Peppers & nightshades', 'Refined grains', 'Cream & butter', 'Fresh herbs', 'Sauces', 'Sugar & sweeteners']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+ 47. freq=  451  id=corpus-titled-hummingbird-cake
+     name: 'Hummingbird Cake'
+     ingredient_categories: ['Tropical fruits', 'Sugar & sweeteners', 'Eggs', 'Flours', 'Baking ingredients', 'Ground spices', 'Oils', 'Salt & seasonings', 'Extracts & essences', 'Nuts']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 48. freq=  449  id=corpus-titled-orange-salad
+     name: 'Orange Salad'
+     ingredient_categories: ['Citrus', 'Tropical fruits', 'Fresh cheese']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 49. freq=  449  id=corpus-titled-mississippi-mud-cake
+     name: 'Mississippi Mud Cake'
+     ingredient_categories: ['Candy & desserts', 'Sugar & sweeteners', 'Eggs', 'Flours', 'Extracts & essences', 'Margarine & shortening', 'Cream & butter', 'Salt & seasonings', 'Nuts', 'Tropical fruits']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 50. freq=  443  id=corpus-titled-crab-cakes
+     name: 'Crab Cakes'
+     ingredient_categories: ['Shellfish', 'Eggs', 'Bread & rolls', 'Extracts & essences', 'Leafy greens', 'Sauces', 'Salt & seasonings', 'Other vegetables', 'Peppers & nightshades', 'Fresh herbs', 'Cream & butter', 'Citrus']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+ 51. freq=  433  id=corpus-titled-blueberry-salad
+     name: 'Blueberry Salad'
+     ingredient_categories: ['Berries', 'Tropical fruits', 'Fresh cheese', 'Sugar & sweeteners', 'Fermented dairy', 'Extracts & essences', 'Temperate fruits', 'Nuts']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 52. freq=  431  id=corpus-titled-potato-chip-cookies
+     name: 'Potato Chip Cookies'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Starchy vegetables', 'Extracts & essences', 'Margarine & shortening', 'Cream & butter', 'Eggs', 'Nuts']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         60
+
+ 53. freq=  426  id=corpus-titled-pistachio-salad
+     name: 'Pistachio Salad'
+     ingredient_categories: ['Tropical fruits', 'Nuts', 'Candy & desserts']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 54. freq=  426  id=corpus-titled-tea-cakes
+     name: 'Tea Cakes'
+     ingredient_categories: ['Sugar & sweeteners', 'Eggs', 'Flours', 'Extracts & essences', 'Baking ingredients', 'Margarine & shortening', 'Cream & butter', 'Milk', 'Salt & seasonings']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+ 55. freq=  425  id=corpus-titled-baked-corn
+     name: 'Baked Corn'
+     ingredient_categories: ['Starchy vegetables', 'Eggs', 'Milk', 'Cream & butter', 'Sugar & sweeteners', 'Salt & seasonings', 'Flours', 'Peppers & nightshades']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 56. freq=  423  id=corpus-titled-fried-green-tomatoes
+     name: 'Fried Green Tomatoes'
+     ingredient_categories: ['Peppers & nightshades', 'Salt & seasonings', 'Flours', 'Oils', 'Eggs', 'Milk']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 57. freq=  422  id=corpus-titled-brunswick-stew
+     name: 'Brunswick Stew'
+     ingredient_categories: ['Peppers & nightshades', 'Starchy vegetables', 'Other vegetables', 'Poultry', 'Red meat', 'Sauces', 'Salt & seasonings']
+     diet_compatibility:    ['paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 58. freq=  422  id=corpus-titled-chicken-noodle-soup
+     name: 'Chicken Noodle Soup'
+     ingredient_categories: ['Poultry', 'Other vegetables', 'Starchy vegetables', 'Salt & seasonings', 'Eggs', 'Fresh herbs', 'Peppers & nightshades', 'Prepared soups & broths']
+     diet_compatibility:    ['paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+ 59. freq=  422  id=corpus-titled-vegetable-salad
+     name: 'Vegetable Salad'
+     ingredient_categories: ['Other vegetables', 'Peppers & nightshades', 'Dressings & dips', 'Legumes', 'Starchy vegetables', 'Sugar & sweeteners', 'Oils', 'Salt & seasonings']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 60. freq=  420  id=corpus-titled-divinity
+     name: 'Divinity'
+     ingredient_categories: ['Sugar & sweeteners', 'Eggs', 'Extracts & essences', 'Salt & seasonings']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+ 61. freq=  418  id=corpus-titled-cabbage-rolls
+     name: 'Cabbage Rolls'
+     ingredient_categories: ['Other vegetables', 'Red meat', 'Leafy greens', 'Peppers & nightshades', 'Refined grains', 'Salt & seasonings', 'Eggs']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 62. freq=  415  id=corpus-titled-pineapple-upside-down-cake
+     name: 'Pineapple Upside-Down Cake'
+     ingredient_categories: ['Sugar & sweeteners', 'Tropical fruits', 'Cream & butter', 'Eggs', 'Temperate fruits', 'Flours', 'Baking ingredients', 'Prepared mixes', 'Salt & seasonings', 'Margarine & shortening', 'Extracts & essences']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 63. freq=  412  id=corpus-titled-italian-cream-cake
+     name: 'Italian Cream Cake'
+     ingredient_categories: ['Eggs', 'Sugar & sweeteners', 'Milk', 'Flours', 'Baking ingredients', 'Extracts & essences', 'Margarine & shortening', 'Tropical fruits', 'Nuts', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 64. freq=  411  id=corpus-titled-pea-salad
+     name: 'Pea Salad'
+     ingredient_categories: ['Legumes', 'Other vegetables', 'Extracts & essences', 'Peppers & nightshades', 'Eggs', 'Aged cheese', 'Salt & seasonings']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 65. freq=  410  id=corpus-titled-cheese-dip
+     name: 'Cheese Dip'
+     ingredient_categories: ['Processed cheese', 'Peppers & nightshades', 'Other vegetables', 'Sauces']
+     diet_compatibility:    ['keto', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+ 66. freq=  410  id=corpus-titled-sweet-and-sour-meatballs
+     name: 'Sweet And Sour Meatballs'
+     ingredient_categories: ['Red meat', 'Sauces', 'Other vegetables', 'Eggs', 'Salt & seasonings', 'Bread & rolls', 'Peppers & nightshades', 'Sugar & sweeteners', 'Dressings & dips']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 67. freq=  409  id=corpus-titled-vanilla-ice-cream
+     name: 'Vanilla Ice Cream'
+     ingredient_categories: ['Sugar & sweeteners', 'Milk', 'Extracts & essences', 'Eggs', 'Cream & butter', 'Salt & seasonings']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+ 68. freq=  408  id=corpus-titled-poppy-seed-cake
+     name: 'Poppy Seed Cake'
+     ingredient_categories: ['Eggs', 'Seeds', 'Oils', 'Sugar & sweeteners', 'Prepared mixes', 'Extracts & essences', 'Cream & butter', 'Fermented dairy', 'Flours', 'Baking ingredients']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 69. freq=  407  id=corpus-titled-popcorn-balls
+     name: 'Popcorn Balls'
+     ingredient_categories: ['Sugar & sweeteners', 'Cream & butter', 'Salt & seasonings', 'Starchy vegetables', 'Extracts & essences', 'Whole grains']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['snack']
+     contains:              []
+     serving_grams:         60
+
+ 70. freq=  407  id=corpus-titled-cheese-straws
+     name: 'Cheese Straws'
+     ingredient_categories: ['Flours', 'Aged cheese', 'Salt & seasonings', 'Cream & butter', 'Ground spices', 'Peppers & nightshades', 'Margarine & shortening']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 71. freq=  407  id=corpus-titled-pumpkin-cookies
+     name: 'Pumpkin Cookies'
+     ingredient_categories: ['Sugar & sweeteners', 'Starchy vegetables', 'Flours', 'Baking ingredients', 'Ground spices', 'Salt & seasonings', 'Eggs', 'Extracts & essences', 'Margarine & shortening', 'Dried fruits']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+ 72. freq=  407  id=corpus-titled-veg-all-casserole
+     name: 'Veg-All Casserole'
+     ingredient_categories: ['Other vegetables', 'Extracts & essences', 'Aged cheese', 'Baked snacks & pastries', 'Shellfish', 'Margarine & shortening']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+ 73. freq=  405  id=corpus-titled-refrigerator-rolls
+     name: 'Refrigerator Rolls'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Eggs', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 74. freq=  403  id=corpus-titled-baked-chicken
+     name: 'Baked Chicken'
+     ingredient_categories: ['Poultry', 'Other vegetables', 'Salt & seasonings']
+     diet_compatibility:    ['keto', 'paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         330
+
+ 75. freq=  400  id=corpus-titled-cherry-salad
+     name: 'Cherry Salad'
+     ingredient_categories: ['Temperate fruits', 'Tropical fruits', 'Milk', 'Nuts']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 76. freq=  399  id=corpus-titled-cherry-delight
+     name: 'Cherry Delight'
+     ingredient_categories: ['Temperate fruits', 'Sugar & sweeteners', 'Fresh cheese', 'Baked snacks & pastries', 'Cream & butter', 'Milk', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 77. freq=  399  id=corpus-titled-orange-julius
+     name: 'Orange Julius'
+     ingredient_categories: ['Citrus', 'Milk', 'Sugar & sweeteners', 'Extracts & essences']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+ 78. freq=  398  id=corpus-titled-spiced-tea
+     name: 'Spiced Tea'
+     ingredient_categories: ['Whole spices', 'Sugar & sweeteners', 'Ground spices', 'Coffee & tea', 'Citrus', 'Juices']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 79. freq=  398  id=corpus-titled-refrigerator-pickles
+     name: 'Refrigerator Pickles'
+     ingredient_categories: ['Other vegetables', 'Dressings & dips', 'Sugar & sweeteners', 'Salt & seasonings', 'Peppers & nightshades', 'Ground spices']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 80. freq=  397  id=corpus-titled-molasses-cookies
+     name: 'Molasses Cookies'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Baking ingredients', 'Eggs', 'Ground spices', 'Salt & seasonings', 'Pickled vegetables', 'Margarine & shortening', 'Whole spices']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+ 81. freq=  395  id=corpus-titled-bean-salad
+     name: 'Bean Salad'
+     ingredient_categories: ['Other vegetables', 'Legumes', 'Dressings & dips', 'Peppers & nightshades', 'Sugar & sweeteners', 'Oils', 'Salt & seasonings']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 82. freq=  394  id=corpus-titled-lemon-meringue-pie
+     name: 'Lemon Meringue Pie'
+     ingredient_categories: ['Eggs', 'Citrus', 'Sugar & sweeteners', 'Refined grains', 'Cream & butter', 'Salt & seasonings', 'Baked snacks & pastries', 'Baking ingredients']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 83. freq=  391  id=corpus-titled-million-dollar-pie
+     name: 'Million Dollar Pie'
+     ingredient_categories: ['Tropical fruits', 'Milk', 'Citrus', 'Nuts', 'Baked snacks & pastries']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 84. freq=  391  id=corpus-titled-impossible-pie
+     name: 'Impossible Pie'
+     ingredient_categories: ['Eggs', 'Milk', 'Sugar & sweeteners', 'Tropical fruits', 'Extracts & essences', 'Flours', 'Margarine & shortening', 'Cream & butter', 'Salt & seasonings']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 85. freq=  389  id=corpus-titled-poppy-seed-bread
+     name: 'Poppy Seed Bread'
+     ingredient_categories: ['Eggs', 'Seeds', 'Oils', 'Sugar & sweeteners', 'Flours', 'Milk', 'Extracts & essences', 'Baking ingredients', 'Salt & seasonings', 'Cream & butter']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         90
+
+ 86. freq=  387  id=corpus-titled-chocolate-delight
+     name: 'Chocolate Delight'
+     ingredient_categories: ['Flours', 'Candy & desserts', 'Sugar & sweeteners', 'Fresh cheese', 'Milk', 'Margarine & shortening', 'Nuts', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 87. freq=  387  id=corpus-titled-sweet-potato-souffle
+     name: 'Sweet Potato Souffle'
+     ingredient_categories: ['Starchy vegetables', 'Sugar & sweeteners', 'Eggs', 'Milk', 'Extracts & essences', 'Cream & butter', 'Salt & seasonings', 'Ground spices', 'Margarine & shortening', 'Nuts']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 88. freq=  386  id=corpus-titled-hot-crab-dip
+     name: 'Hot Crab Dip'
+     ingredient_categories: ['Shellfish', 'Fresh cheese', 'Other vegetables', 'Sauces', 'Extracts & essences', 'Citrus', 'Salt & seasonings', 'Aged cheese']
+     diet_compatibility:    ['keto', 'mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 89. freq=  379  id=corpus-titled-tamale-pie
+     name: 'Tamale Pie'
+     ingredient_categories: ['Peppers & nightshades', 'Other vegetables', 'Starchy vegetables', 'Red meat', 'Ground spices', 'Salt & seasonings', 'Pickled vegetables', 'Aged cheese', 'Flours']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 90. freq=  379  id=corpus-titled-hamburger-pie
+     name: 'Hamburger Pie'
+     ingredient_categories: ['Red meat', 'Other vegetables', 'Peppers & nightshades', 'Starchy vegetables', 'Salt & seasonings', 'Aged cheese', 'Eggs', 'Milk']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+ 91. freq=  377  id=corpus-titled-taco-pie
+     name: 'Taco Pie'
+     ingredient_categories: ['Red meat', 'Aged cheese', 'Other vegetables', 'Peppers & nightshades', 'Baked snacks & pastries', 'Spice blends', 'Fermented dairy', 'Bread & rolls', 'Sauces']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         240
+
+ 92. freq=  373  id=corpus-titled-waldorf-salad
+     name: 'Waldorf Salad'
+     ingredient_categories: ['Temperate fruits', 'Other vegetables', 'Nuts', 'Extracts & essences', 'Citrus', 'Sugar & sweeteners', 'Dried fruits']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+ 93. freq=  372  id=corpus-titled-oven-fried-chicken
+     name: 'Oven Fried Chicken'
+     ingredient_categories: ['Poultry', 'Salt & seasonings', 'Peppers & nightshades', 'Ground spices', 'Flours', 'Cream & butter']
+     diet_compatibility:    ['keto', 'mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         330
+
+ 94. freq=  372  id=corpus-titled-pumpkin-roll
+     name: 'Pumpkin Roll'
+     ingredient_categories: ['Sugar & sweeteners', 'Eggs', 'Starchy vegetables', 'Flours', 'Baking ingredients', 'Ground spices', 'Salt & seasonings', 'Citrus', 'Pickled vegetables', 'Extracts & essences', 'Fresh cheese']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 95. freq=  368  id=corpus-titled-copper-pennies
+     name: 'Copper Pennies'
+     ingredient_categories: ['Peppers & nightshades', 'Starchy vegetables', 'Other vegetables', 'Dressings & dips', 'Sugar & sweeteners', 'Oils', 'Sauces', 'Leafy greens', 'Salt & seasonings']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 96. freq=  365  id=corpus-titled-tuna-noodle-casserole
+     name: 'Tuna Noodle Casserole'
+     ingredient_categories: ['Oily fish', 'Milk', 'Other vegetables', 'Mushrooms', 'Aged cheese', 'Peppers & nightshades', 'Salt & seasonings', 'Eggs', 'Legumes']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 97. freq=  364  id=corpus-titled-salad-dressing
+     name: 'Salad Dressing'
+     ingredient_categories: ['Dressings & dips', 'Sugar & sweeteners', 'Salt & seasonings', 'Oils', 'Other vegetables', 'Leafy greens', 'Peppers & nightshades', 'Sauces']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 98. freq=  363  id=corpus-titled-cheesy-potatoes
+     name: 'Cheesy Potatoes'
+     ingredient_categories: ['Starchy vegetables', 'Aged cheese', 'Other vegetables', 'Fermented dairy', 'Cream & butter', 'Salt & seasonings', 'Poultry']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+ 99. freq=  362  id=corpus-titled-chocolate-eclair-cake
+     name: 'Chocolate Eclair Cake'
+     ingredient_categories: ['Milk', 'Baked snacks & pastries', 'Candy & desserts', 'Sugar & sweeteners']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+100. freq=  362  id=corpus-titled-poppy-seed-chicken
+     name: 'Poppy Seed Chicken'
+     ingredient_categories: ['Poultry', 'Fermented dairy', 'Seeds', 'Baked snacks & pastries', 'Margarine & shortening', 'Cream & butter']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+101. freq=  362  id=corpus-titled-chocolate-chip-cake
+     name: 'Chocolate Chip Cake'
+     ingredient_categories: ['Candy & desserts', 'Eggs', 'Oils', 'Prepared mixes', 'Sugar & sweeteners', 'Fermented dairy', 'Extracts & essences', 'Flours']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+102. freq=  361  id=corpus-titled-monster-cookies
+     name: 'Monster Cookies'
+     ingredient_categories: ['Sugar & sweeteners', 'Eggs', 'Baking ingredients', 'Candy & desserts', 'Extracts & essences', 'Whole grains', 'Nut butters', 'Cream & butter', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+103. freq=  361  id=corpus-titled-buttermilk-biscuits
+     name: 'Buttermilk Biscuits'
+     ingredient_categories: ['Milk', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Margarine & shortening', 'Cream & butter', 'Sugar & sweeteners']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+104. freq=  358  id=corpus-titled-cornbread-salad
+     name: 'Cornbread Salad'
+     ingredient_categories: ['Peppers & nightshades', 'Other vegetables', 'Extracts & essences', 'Processed meat', 'Bread & rolls']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+105. freq=  357  id=corpus-titled-salisbury-steak
+     name: 'Salisbury Steak'
+     ingredient_categories: ['Red meat', 'Other vegetables', 'Eggs', 'Mushrooms', 'Salt & seasonings', 'Bread & rolls', 'Peppers & nightshades', 'Sauces']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+106. freq=  356  id=corpus-titled-fudge-pie
+     name: 'Fudge Pie'
+     ingredient_categories: ['Candy & desserts', 'Eggs', 'Sugar & sweeteners', 'Extracts & essences', 'Flours', 'Cream & butter', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+107. freq=  354  id=corpus-titled-chocolate-mousse
+     name: 'Chocolate Mousse'
+     ingredient_categories: ['Candy & desserts', 'Cream & butter', 'Sugar & sweeteners', 'Eggs', 'Extracts & essences']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         260
+
+108. freq=  354  id=corpus-titled-mexican-lasagna
+     name: 'Mexican Lasagna'
+     ingredient_categories: ['Other vegetables', 'Red meat', 'Aged cheese', 'Peppers & nightshades', 'Bread & rolls', 'Sauces', 'Ground spices', 'Fresh cheese', 'Fermented dairy']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+109. freq=  354  id=corpus-titled-hamburger-soup
+     name: 'Hamburger Soup'
+     ingredient_categories: ['Red meat', 'Other vegetables', 'Peppers & nightshades', 'Starchy vegetables', 'Salt & seasonings', 'Fresh herbs', 'Prepared soups & broths']
+     diet_compatibility:    ['paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+110. freq=  354  id=corpus-titled-chocolate-sheet-cake
+     name: 'Chocolate Sheet Cake'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Eggs', 'Candy & desserts', 'Milk', 'Baking ingredients', 'Extracts & essences', 'Margarine & shortening', 'Salt & seasonings', 'Ground spices', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+111. freq=  353  id=corpus-titled-carrot-salad
+     name: 'Carrot Salad'
+     ingredient_categories: ['Starchy vegetables', 'Sugar & sweeteners', 'Other vegetables', 'Dressings & dips', 'Oils', 'Peppers & nightshades', 'Salt & seasonings', 'Tropical fruits', 'Dried fruits', 'Leafy greens']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+112. freq=  352  id=corpus-titled-salmon-patties
+     name: 'Salmon Patties'
+     ingredient_categories: ['Oily fish', 'Eggs', 'Other vegetables', 'Salt & seasonings', 'Flours', 'Peppers & nightshades', 'Baked snacks & pastries']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+113. freq=  351  id=corpus-titled-corn-salad
+     name: 'Corn Salad'
+     ingredient_categories: ['Other vegetables', 'Peppers & nightshades', 'Starchy vegetables', 'Dressings & dips', 'Salt & seasonings', 'Extracts & essences']
+     diet_compatibility:    ['paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+
+114. freq=  350  id=corpus-titled-tortilla-soup
+     name: 'Tortilla Soup'
+     ingredient_categories: ['Other vegetables', 'Peppers & nightshades', 'Poultry', 'Ground spices', 'Oils', 'Fresh herbs', 'Bread & rolls', 'Salt & seasonings', 'Aged cheese', 'Starchy vegetables', 'Baked snacks & pastries', 'Prepared soups & broths']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+115. freq=  350  id=corpus-titled-lentil-soup
+     name: 'Lentil Soup'
+     ingredient_categories: ['Other vegetables', 'Legumes', 'Starchy vegetables', 'Peppers & nightshades', 'Salt & seasonings', 'Fresh herbs', 'Oils', 'Dried herbs', 'Processed meat', 'Prepared soups & broths']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+116. freq=  348  id=corpus-titled-broccoli-cheese-soup
+     name: 'Broccoli Cheese Soup'
+     ingredient_categories: ['Cruciferous vegetables', 'Other vegetables', 'Poultry', 'Milk', 'Processed cheese', 'Cream & butter', 'Flours', 'Salt & seasonings', 'Peppers & nightshades', 'Aged cheese', 'Prepared soups & broths']
+     diet_compatibility:    ['keto']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+117. freq=  345  id=corpus-titled-buckeyes
+     name: 'Buckeyes'
+     ingredient_categories: ['Sugar & sweeteners', 'Candy & desserts', 'Nut butters', 'Cream & butter', 'Margarine & shortening', 'Extracts & essences']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+118. freq=  345  id=corpus-titled-chocolate-oatmeal-cookies
+     name: 'Chocolate Oatmeal Cookies'
+     ingredient_categories: ['Sugar & sweeteners', 'Candy & desserts', 'Whole grains', 'Milk', 'Extracts & essences', 'Nut butters', 'Cream & butter', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         320
+
+119. freq=  343  id=corpus-titled-prune-cake
+     name: 'Prune Cake'
+     ingredient_categories: ['Flours', 'Sugar & sweeteners', 'Eggs', 'Ground spices', 'Dried fruits', 'Oils', 'Baking ingredients', 'Milk', 'Whole spices', 'Salt & seasonings', 'Extracts & essences', 'Nuts']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+120. freq=  342  id=corpus-titled-chicken-broccoli-casserole
+     name: 'Chicken Broccoli Casserole'
+     ingredient_categories: ['Poultry', 'Cruciferous vegetables', 'Aged cheese', 'Extracts & essences', 'Bread & rolls', 'Citrus', 'Mushrooms']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+121. freq=  342  id=corpus-titled-hash-brown-potato-casserole
+     name: 'Hash Brown Potato Casserole'
+     ingredient_categories: ['Starchy vegetables', 'Fermented dairy', 'Other vegetables', 'Aged cheese', 'Poultry', 'Salt & seasonings', 'Margarine & shortening', 'Cream & butter', 'Peppers & nightshades']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['breakfast']
+     contains:              []
+     serving_grams:         360
+
+122. freq=  342  id=corpus-titled-cobbler
+     name: 'Cobbler'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Milk', 'Cream & butter', 'Baking ingredients', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+123. freq=  340  id=corpus-titled-ham-loaf
+     name: 'Ham Loaf'
+     ingredient_categories: ['Processed meat', 'Eggs', 'Milk', 'Red meat', 'Peppers & nightshades', 'Sugar & sweeteners', 'Bread & rolls', 'Leafy greens', 'Baked snacks & pastries', 'Dressings & dips']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              ['pork']
+     serving_grams:         320
+
+124. freq=  339  id=corpus-titled-black-bean-soup
+     name: 'Black Bean Soup'
+     ingredient_categories: ['Other vegetables', 'Peppers & nightshades', 'Ground spices', 'Fresh herbs', 'Salt & seasonings', 'Oils', 'Poultry', 'Starchy vegetables', 'Processed meat', 'Prepared soups & broths']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+125. freq=  339  id=corpus-titled-dill-pickles
+     name: 'Dill Pickles'
+     ingredient_categories: ['Dressings & dips', 'Salt & seasonings', 'Other vegetables', 'Fresh herbs']
+     diet_compatibility:    ['keto', 'paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+126. freq=  339  id=corpus-titled-gingersnaps
+     name: 'Gingersnaps'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Baking ingredients', 'Eggs', 'Ground spices', 'Salt & seasonings', 'Pickled vegetables', 'Margarine & shortening', 'Whole spices']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+127. freq=  338  id=corpus-titled-beer-bread
+     name: 'Beer Bread'
+     ingredient_categories: ['Sugar & sweeteners', 'Flours', 'Alcoholic beverages']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+128. freq=  338  id=corpus-titled-texas-sheet-cake
+     name: 'Texas Sheet Cake'
+     ingredient_categories: ['Flours', 'Sugar & sweeteners', 'Candy & desserts', 'Eggs', 'Baking ingredients', 'Margarine & shortening', 'Salt & seasonings', 'Extracts & essences', 'Milk', 'Fermented dairy']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+129. freq=  337  id=corpus-titled-cream-puffs
+     name: 'Cream Puffs'
+     ingredient_categories: ['Eggs', 'Flours', 'Cream & butter', 'Salt & seasonings', 'Margarine & shortening']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+130. freq=  336  id=corpus-titled-harvard-beets
+     name: 'Harvard Beets'
+     ingredient_categories: ['Sugar & sweeteners', 'Dressings & dips', 'Starchy vegetables', 'Refined grains', 'Salt & seasonings', 'Cream & butter']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+131. freq=  336  id=corpus-titled-stuffed-green-peppers
+     name: 'Stuffed Green Peppers'
+     ingredient_categories: ['Peppers & nightshades', 'Other vegetables', 'Red meat', 'Salt & seasonings', 'Refined grains', 'Sauces']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+132. freq=  335  id=corpus-titled-death-by-chocolate
+     name: 'Death By Chocolate'
+     ingredient_categories: ['Candy & desserts', 'Prepared mixes', 'Alcoholic beverages']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+133. freq=  335  id=corpus-titled-pickled-beets
+     name: 'Pickled Beets'
+     ingredient_categories: ['Dressings & dips', 'Sugar & sweeteners', 'Starchy vegetables', 'Whole spices', 'Salt & seasonings', 'Ground spices']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+134. freq=  335  id=corpus-titled-wassail
+     name: 'Wassail'
+     ingredient_categories: ['Citrus', 'Whole spices', 'Temperate fruits', 'Sugar & sweeteners', 'Ground spices', 'Tropical fruits']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+135. freq=  334  id=corpus-titled-japanese-fruit-pie
+     name: 'Japanese Fruit Pie'
+     ingredient_categories: ['Eggs', 'Sugar & sweeteners', 'Tropical fruits', 'Dried fruits', 'Dressings & dips', 'Nuts', 'Margarine & shortening', 'Cream & butter', 'Extracts & essences']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+136. freq=  332  id=corpus-titled-broccoli-rice-casserole
+     name: 'Broccoli Rice Casserole'
+     ingredient_categories: ['Cruciferous vegetables', 'Refined grains', 'Other vegetables', 'Mushrooms', 'Cream & butter', 'Milk', 'Poultry', 'Margarine & shortening']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+137. freq=  332  id=corpus-titled-strawberry-delight
+     name: 'Strawberry Delight'
+     ingredient_categories: ['Berries', 'Sugar & sweeteners', 'Cream & butter', 'Prepared mixes', 'Fresh cheese']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+138. freq=  330  id=corpus-titled-peach-pie
+     name: 'Peach Pie'
+     ingredient_categories: ['Temperate fruits', 'Sugar & sweeteners', 'Flours', 'Cream & butter', 'Milk']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+139. freq=  330  id=corpus-titled-cheese-soup
+     name: 'Cheese Soup'
+     ingredient_categories: ['Other vegetables', 'Poultry', 'Starchy vegetables', 'Processed cheese', 'Milk', 'Flours', 'Cream & butter', 'Prepared soups & broths']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+140. freq=  329  id=corpus-titled-cheese-balls
+     name: 'Cheese Balls'
+     ingredient_categories: ['Fresh cheese', 'Aged cheese', 'Other vegetables', 'Sauces', 'Nuts', 'Peppers & nightshades']
+     diet_compatibility:    ['keto', 'mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+141. freq=  329  id=corpus-titled-parmesan-chicken
+     name: 'Parmesan Chicken'
+     ingredient_categories: ['Aged cheese', 'Poultry', 'Bread & rolls', 'Fresh herbs', 'Salt & seasonings', 'Cream & butter', 'Peppers & nightshades']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+142. freq=  328  id=corpus-titled-cheese-biscuits
+     name: 'Cheese Biscuits'
+     ingredient_categories: ['Aged cheese', 'Flours', 'Margarine & shortening', 'Salt & seasonings', 'Milk', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         320
+
+143. freq=  326  id=corpus-titled-chicken-curry
+     name: 'Chicken Curry'
+     ingredient_categories: ['Poultry', 'Other vegetables', 'Spice blends', 'Peppers & nightshades', 'Salt & seasonings', 'Oils', 'Ground spices']
+     diet_compatibility:    ['keto', 'paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         360
+
+144. freq=  326  id=corpus-titled-sour-cream-coffee-cake
+     name: 'Sour Cream Coffee Cake'
+     ingredient_categories: ['Sugar & sweeteners', 'Eggs', 'Fermented dairy', 'Flours', 'Baking ingredients', 'Extracts & essences', 'Ground spices', 'Cream & butter', 'Salt & seasonings', 'Nuts']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+145. freq=  326  id=corpus-titled-chicken-soup
+     name: 'Chicken Soup'
+     ingredient_categories: ['Poultry', 'Other vegetables', 'Starchy vegetables', 'Salt & seasonings', 'Peppers & nightshades', 'Fresh herbs', 'Prepared soups & broths']
+     diet_compatibility:    ['paleo', 'mediterranean', 'whole30', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+146. freq=  325  id=corpus-titled-wacky-cake
+     name: 'Wacky Cake'
+     ingredient_categories: ['Flours', 'Sugar & sweeteners', 'Candy & desserts', 'Baking ingredients', 'Dressings & dips', 'Extracts & essences', 'Salt & seasonings', 'Oils']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+147. freq=  324  id=corpus-titled-coconut-pound-cake
+     name: 'Coconut Pound Cake'
+     ingredient_categories: ['Eggs', 'Sugar & sweeteners', 'Flours', 'Tropical fruits', 'Milk', 'Margarine & shortening', 'Baking ingredients', 'Salt & seasonings', 'Extracts & essences', 'Cream & butter']
+     diet_compatibility:    []
+     tags:                  ['dessert']
+     contains:              []
+     serving_grams:         140
+
+148. freq=  322  id=corpus-titled-pralines
+     name: 'Pralines'
+     ingredient_categories: ['Sugar & sweeteners', 'Nuts', 'Cream & butter', 'Milk', 'Extracts & essences']
+     diet_compatibility:    ['mediterranean']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         260
+
+149. freq=  321  id=corpus-titled-chicken-tortilla-soup
+     name: 'Chicken Tortilla Soup'
+     ingredient_categories: ['Poultry', 'Other vegetables', 'Peppers & nightshades', 'Ground spices', 'Fresh herbs', 'Starchy vegetables', 'Oils', 'Salt & seasonings', 'Bread & rolls', 'Sauces', 'Aged cheese', 'Baked snacks & pastries', 'Prepared soups & broths']
+     diet_compatibility:    ['lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         350
+
+150. freq=  319  id=corpus-titled-shrimp-salad
+     name: 'Shrimp Salad'
+     ingredient_categories: ['Shellfish', 'Other vegetables', 'Extracts & essences', 'Peppers & nightshades', 'Salt & seasonings', 'Citrus', 'Eggs', 'Refined grains']
+     diet_compatibility:    ['mediterranean', 'lowfodmap']
+     tags:                  ['dinner', 'lunch']
+     contains:              []
+     serving_grams:         230
+

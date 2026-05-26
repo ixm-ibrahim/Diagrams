@@ -27,13 +27,14 @@
 import {
   NUTRIENT_FIELDS, NUTRIENT_META,
   FOOD_GROUPS_BY_HUE, FOOD_GROUP_COLORS,
+  GROUP_WEIGHT_LABELS,
   servingGramsFor,
 } from '../data/schema.js';
 import { inactiveReasons } from '../core/inactive-reasons.js';
 import { scaleForItem } from '../core/unit.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
-const GROUP_LABELS = ['Animal', 'Plant', 'Dairy'];
-const GROUP_VARS   = ['--color-animal', '--color-plant', '--color-dairy'];
+const GROUP_VARS = ['--color-animal', '--color-plant', '--color-dairy'];
 const DRAG_DISMISS_PX = 80;
 const REMIX_SUGGEST_CAP = 8;
 
@@ -64,7 +65,7 @@ function colorBlockEntries(ingredient, scheme) {
   const gw = ingredient.group_weights || [0, 0, 0];
   return {
     title: 'Color group',
-    entries: GROUP_LABELS.map((name, i) => ({
+    entries: GROUP_WEIGHT_LABELS.map((name, i) => ({
       name,
       weight: gw[i] || 0,
       css: `var(${GROUP_VARS[i]})`,
@@ -110,7 +111,21 @@ export function mountDetailPanel(root, {
   getCurrentIngredients,
   ranges = null,
   getAllCategories = () => [],
+  /* Batch 4: full ingredient list for the ingredient-level Remix —
+   * autocomplete suggestions + id→name chip labels. */
+  getAllIngredients = () => [],
   getRawMeal = () => null,
+  /* Tester feedback: when the user selects a dot or row and then
+   * adjusts a filter that would hide it, the dot stays visible as a
+   * dimmed ghost (see scene/points.js) and this panel shows a banner
+   * explaining it's filtered out. The hidden-id getter is supplied by
+   * main.js; if not wired, the banner simply never fires. */
+  getHiddenSet = () => null,
+  /* Batch 14: per-unit threshold defaults. inactiveReasons uses these
+   * to skip nutrients still at the bar's edge from the "out of range"
+   * list — same logic the filter pipeline uses to decide which
+   * nutrients are actually active. */
+  getThresholdDefaults = () => null,
 }) {
   if (!root) return;
 
@@ -139,6 +154,12 @@ export function mountDetailPanel(root, {
   const grab = root.querySelector('.detail-grab');
   const collapseBtn = root.querySelector('.rail-collapse');
   const expandBtn   = root.querySelector('.rail-expand');
+
+  // Batch 4: ingredient lookups for the ingredient-level Remix. Built once —
+  // the ingredient dataset is immutable at runtime.
+  const allIngredientsList = getAllIngredients() || [];
+  const ingredientNameById = new Map(allIngredientsList.map(f => [f.id, f.name]));
+  const nameOf = (id) => ingredientNameById.get(id) || id;
 
   function clearSelection() {
     if (state.get('selectedIngredientId') !== null) state.set({ selectedIngredientId: null });
@@ -198,7 +219,16 @@ export function mountDetailPanel(root, {
       ranges,
       nutrientScale: scale,
       nutrientUnit:  unit,
+      nutrientDefaults: getThresholdDefaults
+        ? getThresholdDefaults(unit)
+        : null,
     });
+  }
+
+  function isCurrentlyFilteredOut(ingredient) {
+    if (!ingredient) return false;
+    const hidden = typeof getHiddenSet === 'function' ? getHiddenSet() : null;
+    return !!(hidden && hidden.has(ingredient.id));
   }
 
   function showFood(ingredient) {
@@ -207,14 +237,22 @@ export function mountDetailPanel(root, {
     const remix  = isRemixable(ingredient)
       ? buildRemixView(ingredient, state, getRawMeal)
       : null;
-    body.innerHTML = renderIngredientHtml(ingredient, currentReasons(ingredient), scheme, remix, unit);
+    const filteredOut = isCurrentlyFilteredOut(ingredient);
+    body.innerHTML = renderIngredientHtml(
+      ingredient,
+      currentReasons(ingredient),
+      scheme, remix, unit,
+      filteredOut, nameOf,
+    );
     body.scrollTop = 0;
     closeBtn.hidden = false;
     root.classList.add('is-open');
     if (state.get('rightRailOpen') === false) {
       state.set({ rightRailOpen: true });
     }
-    if (remix) attachRemixHandlers(body, ingredient, state, getAllCategories, getRawMeal);
+    if (remix) attachRemixHandlers(body, ingredient, state, {
+      getAllCategories, getRawMeal, allIngredientsList, nameOf,
+    });
   }
   function showEmpty() {
     body.innerHTML = renderEmptyHtml();
@@ -239,43 +277,89 @@ export function mountDetailPanel(root, {
   }
   state.subscribe(s => s.ingredientFilter, rerenderIfSelected);
   state.subscribe(s => s.thresholds,       rerenderIfSelected);
+  state.subscribe(s => s.thresholdsServing,rerenderIfSelected);
   state.subscribe(s => s.thresholdMode,    rerenderIfSelected);
   state.subscribe(s => s.restrictions,     rerenderIfSelected);
   state.subscribe(s => s.colorScheme,      rerenderIfSelected);
   state.subscribe(s => s.nutrientUnit,     rerenderIfSelected);  // Phase 40 round 7
+  /* Tester feedback (filtered-out banner): the banner needs to update
+   * whenever ANY filter could have flipped the selected item in or out
+   * of the hidden set. Adding the slices that didn't already subscribe.
+   * The cost is one banner-class repaint per filter mutation while a
+   * selection is open — cheap enough to not warrant a smarter check. */
+  state.subscribe(s => s.tagFilter,             rerenderIfSelected);
+  state.subscribe(s => s.tagFilterMatch,        rerenderIfSelected);
+  state.subscribe(s => s.tagFilterScope,        rerenderIfSelected);
+  state.subscribe(s => s.categoryFilter,        rerenderIfSelected);
+  state.subscribe(s => s.categoryFilterMatch,   rerenderIfSelected);
+  state.subscribe(s => s.categoryFilterScope,   rerenderIfSelected);
+  state.subscribe(s => s.foodGroupFilter,       rerenderIfSelected);
+  state.subscribe(s => s.foodGroupFilterMatch,  rerenderIfSelected);
+  state.subscribe(s => s.foodGroupFilterScope,  rerenderIfSelected);
+  state.subscribe(s => s.dietFilter,            rerenderIfSelected);
+  state.subscribe(s => s.cuisineFilter,         rerenderIfSelected);
+  state.subscribe(s => s.dietCuisineFilterMatch,rerenderIfSelected);
+  state.subscribe(s => s.dietCuisineFilterScope,rerenderIfSelected);
+  state.subscribe(s => s.ingredientFilterMatch, rerenderIfSelected);
+  state.subscribe(s => s.ingredientFilterScope, rerenderIfSelected);
+  state.subscribe(s => s.legendHidden,          rerenderIfSelected);
   // Phase 37: when the draft changes (− / + / Reset), repaint the
   // Remix section so the chips reflect current state. Repaint also
   // refreshes the nutrient / color block since the underlying
   // aggregate has shifted.
   state.subscribe(s => s.mealDraft,        rerenderIfSelected);
+  // Batch 4: toggling the Remix axis (category ⇄ ingredient) repaints the
+  // section so it shows the right chips + add control.
+  state.subscribe(s => s.remixMode,        rerenderIfSelected);
 
   showEmpty();
 }
 
 /* --- Phase 37 Remix builder + handlers --- */
 
+/* Batch 4: the Remix view is mode-aware. One section, toggled between editing
+ * the meal's broad `ingredient_categories` (category mode) and its specific
+ * `example_ingredients` (ingredient mode). The active mode decides what the
+ * chips, the add-control, and Save operate on; the draft carries either a
+ * `categories` list or an `ingredients` (id) list to match. */
 function buildRemixView(item, state, getRawMeal) {
+  const mode  = state.get('remixMode') || 'ingredient';
+  const draft = state.get('mealDraft');
+  const draftMatches = draft && draft.mealId === item.id;
+
+  if (mode === 'ingredient') {
+    const original = originalIngredientsFor(item, getRawMeal);
+    const hasDraft = draftMatches && Array.isArray(draft.ingredients);
+    const active = hasDraft ? draft.ingredients.slice() : original.slice();
+    return { mode, active, original, isDirty: hasDraft && !sameMembers(active, original), mealId: item.id };
+  }
   const original = originalCategoriesFor(item, getRawMeal);
-  const draft    = state.get('mealDraft');
-  const draftMatches = draft && draft.mealId === item.id && Array.isArray(draft.categories);
-  const active = draftMatches ? draft.categories.slice() : original.slice();
-  const isDirty = draftMatches && !sameCategorySet(active, original);
-  return {
-    active,
-    original,
-    isDirty,
-    mealId: item.id,
-  };
+  const hasDraft = draftMatches && Array.isArray(draft.categories);
+  const active = hasDraft ? draft.categories.slice() : original.slice();
+  return { mode, active, original, isDirty: hasDraft && !sameMembers(active, original), mealId: item.id };
 }
 
-function sameCategorySet(a, b) {
+/* Pre-draft specific ingredient ids for a meal — read from the raw record so
+ * it reflects the meal as authored, not the (possibly drafted) aggregate. */
+function originalIngredientsFor(item, getRawMeal) {
+  const raw = getRawMeal && getRawMeal(item.id);
+  if (raw && Array.isArray(raw.example_ingredients)) return raw.example_ingredients.slice();
+  if (raw && Array.isArray(raw.ingredients)) {
+    return raw.ingredients.map(i => i.ingredientId).filter(Boolean);
+  }
+  return Array.isArray(item.example_ingredients) ? item.example_ingredients.slice() : [];
+}
+
+function sameMembers(a, b) {
   if (a.length !== b.length) return false;
   const sa = new Set(a);
   for (const x of b) if (!sa.has(x)) return false;
   return true;
 }
 
-function attachRemixHandlers(body, item, state, getAllCategories, getRawMeal) {
+function attachRemixHandlers(body, item, state, {
+  getAllCategories, getRawMeal, allIngredientsList = [], nameOf = (x) => x,
+}) {
   const section = body.querySelector('.detail-remix');
   if (!section) return;
   const chipsEl   = section.querySelector('.remix-chips');
@@ -283,19 +367,33 @@ function attachRemixHandlers(body, item, state, getAllCategories, getRawMeal) {
   const suggEl    = section.querySelector('.remix-add-suggestions');
   const resetBtn  = section.querySelector('.remix-reset');
   const saveBtn   = section.querySelector('.remix-save');
+  const modeGroup = section.querySelector('.remix-mode-toggle');
 
-  function setDraft(nextCategories) {
-    state.set({
-      mealDraft: { mealId: item.id, categories: nextCategories.slice() },
-    });
+  const mode = state.get('remixMode') || 'ingredient';
+  const ingById = new Map(allIngredientsList.map(f => [f.id, f]));
+
+  // Switching the Remix axis clears any in-flight draft so each mode starts
+  // from the meal's original list (the two drafts aren't interchangeable).
+  modeGroup?.addEventListener('click', (ev) => {
+    const btn = ev.target.closest('[data-mode]');
+    if (!btn || btn.dataset.mode === mode) return;
+    state.set({ remixMode: btn.dataset.mode, mealDraft: null });
+  });
+
+  function setDraft(nextMembers) {
+    const key = mode === 'ingredient' ? 'ingredients' : 'categories';
+    state.set({ mealDraft: { mealId: item.id, [key]: nextMembers.slice() } });
   }
 
   function currentActive() {
     const draft = state.get('mealDraft');
-    if (draft && draft.mealId === item.id && Array.isArray(draft.categories)) {
-      return draft.categories.slice();
+    if (draft && draft.mealId === item.id) {
+      if (mode === 'ingredient' && Array.isArray(draft.ingredients)) return draft.ingredients.slice();
+      if (mode === 'category'  && Array.isArray(draft.categories))  return draft.categories.slice();
     }
-    return originalCategoriesFor(item, getRawMeal);
+    return mode === 'ingredient'
+      ? originalIngredientsFor(item, getRawMeal)
+      : originalCategoriesFor(item, getRawMeal);
   }
 
   chipsEl.addEventListener('click', (ev) => {
@@ -303,25 +401,28 @@ function attachRemixHandlers(body, item, state, getAllCategories, getRawMeal) {
     if (!btn) return;
     const value = btn.closest('.remix-chip')?.dataset.value;
     if (!value) return;
-    const active = currentActive().filter(c => c !== value);
-    setDraft(active);
+    setDraft(currentActive().filter(c => c !== value));
   });
 
   inputEl.addEventListener('input', () => {
     const q = inputEl.value.trim().toLowerCase();
     if (!q) { suggEl.hidden = true; suggEl.innerHTML = ''; return; }
-    const allCats = getAllCategories() || [];
     const active = new Set(currentActive());
-    const matches = allCats
-      .filter(c => !active.has(c) && c.toLowerCase().includes(q))
-      .slice(0, REMIX_SUGGEST_CAP);
-    if (matches.length === 0) {
-      suggEl.hidden = true;
-      suggEl.innerHTML = '';
-      return;
+    let options; // [{ value, label }]
+    if (mode === 'ingredient') {
+      options = allIngredientsList
+        .filter(f => !active.has(f.id) && f.name.toLowerCase().includes(q))
+        .slice(0, REMIX_SUGGEST_CAP)
+        .map(f => ({ value: f.id, label: f.name }));
+    } else {
+      options = (getAllCategories() || [])
+        .filter(c => !active.has(c) && c.toLowerCase().includes(q))
+        .slice(0, REMIX_SUGGEST_CAP)
+        .map(c => ({ value: c, label: c }));
     }
-    suggEl.innerHTML = matches.map(c =>
-      `<button class="remix-add-option" type="button" role="option" data-value="${escapeAttr(c)}">${escapeHtml(c)}</button>`
+    if (options.length === 0) { suggEl.hidden = true; suggEl.innerHTML = ''; return; }
+    suggEl.innerHTML = options.map(o =>
+      `<button class="remix-add-option" type="button" role="option" data-value="${escapeAttr(o.value)}">${escapeHtml(o.label)}</button>`
     ).join('');
     suggEl.hidden = false;
   });
@@ -331,9 +432,7 @@ function attachRemixHandlers(body, item, state, getAllCategories, getRawMeal) {
     if (!btn) return;
     const value = btn.dataset.value;
     const active = currentActive();
-    if (!active.includes(value)) {
-      setDraft([...active, value]);
-    }
+    if (!active.includes(value)) setDraft([...active, value]);
     inputEl.value = '';
     suggEl.hidden = true;
     suggEl.innerHTML = '';
@@ -349,26 +448,34 @@ function attachRemixHandlers(body, item, state, getAllCategories, getRawMeal) {
 
   saveBtn?.addEventListener('click', () => {
     const active = currentActive();
+    const noun = mode === 'ingredient' ? 'ingredient' : 'category';
     if (active.length === 0) {
-      window.alert('A meal needs at least one category.');
+      window.alert(`A meal needs at least one ${noun}.`);
       return;
     }
     const defaultName = `${item.name} (remix)`;
     const name = window.prompt('Save remix as:', defaultName);
     if (name == null) return; // user cancelled
     const trimmed = String(name).trim() || defaultName;
-    const id = `usercat-${item.id}-${Date.now().toString(36)}`;
     const meals = state.get('userMeals') || [];
+    let entry;
+    if (mode === 'ingredient') {
+      // Ingredient-shape user meal: each specific ingredient at its own
+      // typical serving, matching the live-dot plate model.
+      const ingredientsList = active.map(id => ({
+        ingredientId: id,
+        grams: (ingById.get(id)?.serving_grams) || 100,
+      }));
+      entry = { id: `useting-${item.id}-${Date.now().toString(36)}`, name: trimmed, ingredients: ingredientsList };
+    } else {
+      entry = { id: `usercat-${item.id}-${Date.now().toString(36)}`, name: trimmed, ingredient_categories: active.slice() };
+    }
     state.set({
-      userMeals: [...meals, {
-        id,
-        name: trimmed,
-        ingredient_categories: active.slice(),
-      }],
-      // Clear the draft and jump selection to the new user meal so the
-      // user immediately sees their save persist as a new dot.
+      userMeals: [...meals, entry],
+      // Clear the draft and jump selection to the new user meal so the user
+      // immediately sees their save persist as a new dot.
       mealDraft: null,
-      selectedIngredientId: id,
+      selectedIngredientId: entry.id,
     });
   });
 }
@@ -381,7 +488,7 @@ function renderEmptyHtml() {
   `;
 }
 
-function renderIngredientHtml(ingredient, reasons = [], scheme = 'rgb', remix = null, unit = '100g') {
+function renderIngredientHtml(ingredient, reasons = [], scheme = 'rgb', remix = null, unit = '100g', filteredOut = false, nameOf = (x) => x) {
   const block = colorBlockEntries(ingredient, scheme);
   const groupRows = block.entries.map(e => {
     const p = Math.round(e.weight * 100);
@@ -484,6 +591,29 @@ function renderIngredientHtml(ingredient, reasons = [], scheme = 'rgb', remix = 
         `<li class="detail-tag-chip">${escapeHtml(t)}</li>`).join('')}</ul>`
     : '';
 
+  /* Tester feedback: when the selected item is filtered out of the
+   * current view, surface a banner right under the header so it's the
+   * first thing the user sees — the dot is still visible (rendered as
+   * a dimmed ghost in scene/points.js) so the panel needs to explain
+   * why the dot stopped looking normal. Reasons reuse the same
+   * inactiveReasons output that used to live in a bottom-of-panel
+   * "Why this is greyed out" section. */
+  const filteredBanner = filteredOut ? `
+    <section class="detail-section detail-filtered-out">
+      <header class="detail-filtered-head">
+        <span class="detail-filtered-icon" aria-hidden="true">⚠</span>
+        <strong>Filtered out of the current view</strong>
+      </header>
+      <p class="detail-filtered-blurb muted">
+        This item doesn't pass your active filters or thresholds.
+        Adjust them — or clear your selection — to remove the ghost dot.
+      </p>
+      ${reasons.length > 0 ? `
+        <ul class="detail-filtered-reasons">
+          ${reasons.map(r => `<li>${escapeHtml(r)}</li>`).join('')}
+        </ul>` : ''}
+    </section>` : '';
+
   return `
     <header class="detail-header">
       <h2 class="detail-name">${escapeHtml(ingredient.name)}${formChip}${draftBadge}</h2>
@@ -491,6 +621,8 @@ function renderIngredientHtml(ingredient, reasons = [], scheme = 'rgb', remix = 
       ${mealBlurb}
       ${tagChips}
     </header>
+
+    ${filteredBanner}
 
     <section class="detail-section">
       <h3 class="detail-section-title">${escapeHtml(block.title)}</h3>
@@ -507,7 +639,7 @@ function renderIngredientHtml(ingredient, reasons = [], scheme = 'rgb', remix = 
       </table>
     </section>
 
-    ${remix ? renderRemixHtml(remix) : ''}
+    ${remix ? renderRemixHtml(remix, nameOf) : ''}
 
     ${ingredient.examples && ingredient.examples.length ? `
     <section class="detail-section">
@@ -521,7 +653,7 @@ function renderIngredientHtml(ingredient, reasons = [], scheme = 'rgb', remix = 
       <p class="detail-notes">${escapeHtml(ingredient.notes)}</p>
     </section>` : ''}
 
-    ${reasons.length > 0 ? `
+    ${(!filteredOut && reasons.length > 0) ? `
     <section class="detail-section detail-reasons">
       <h3 class="detail-section-title">Why this is greyed out</h3>
       <ul class="detail-reasons-list">
@@ -531,13 +663,26 @@ function renderIngredientHtml(ingredient, reasons = [], scheme = 'rgb', remix = 
   `;
 }
 
-function renderRemixHtml(remix) {
-  const chips = remix.active.map(c => `
-    <span class="remix-chip" data-value="${escapeAttr(c)}">
-      <span class="remix-chip-label">${escapeHtml(c)}</span>
+function renderRemixHtml(remix, nameOf = (x) => x) {
+  const isIng = remix.mode === 'ingredient';
+  const labelFor = (v) => (isIng ? nameOf(v) : v);
+  const noun = isIng ? 'ingredient' : 'category';
+
+  const chips = remix.active.map(v => `
+    <span class="remix-chip" data-value="${escapeAttr(v)}">
+      <span class="remix-chip-label">${escapeHtml(labelFor(v))}</span>
       <button class="remix-chip-remove" type="button"
-              aria-label="Remove ${escapeHtml(c)}" title="Remove">×</button>
+              aria-label="Remove ${escapeHtml(labelFor(v))}" title="Remove">×</button>
     </span>`).join('');
+
+  /* One section, two axes. The toggle picks whether the chips below edit the
+   * meal's specific ingredients or its broad categories; the dot recomputes
+   * live either way. */
+  const modeToggle = `
+    <div class="remix-mode-toggle seg-group" role="group" aria-label="Remix by ingredient or category">
+      <button type="button" class="seg-btn seg-btn-sm${isIng ? ' is-active' : ''}" data-mode="ingredient">Ingredients</button>
+      <button type="button" class="seg-btn seg-btn-sm${!isIng ? ' is-active' : ''}" data-mode="category">Categories</button>
+    </div>`;
 
   return `
     <section class="detail-section detail-remix">
@@ -547,22 +692,25 @@ function renderRemixHtml(remix) {
           ? `<button class="remix-reset btn-link" type="button" title="Revert to original">Reset</button>`
           : ''}
       </header>
+      ${modeToggle}
       <p class="remix-blurb muted">
-        Edit this meal's category set. The dot shifts live; save your version to keep it.
+        ${isIng
+          ? "Swap the specific ingredients this meal uses. The dot shifts live; save your version to keep it."
+          : "Swap this meal's broad category set. The dot shifts live; save your version to keep it."}
       </p>
       <div class="remix-chips" role="list">
-        ${chips || '<span class="muted">(no categories — add one below)</span>'}
+        ${chips || `<span class="muted">(no ${noun}s — add one below)</span>`}
       </div>
       <div class="remix-add-wrapper">
         <input class="input remix-add-input" type="text"
-               placeholder="Add a category…" autocomplete="off"
-               aria-label="Add a category">
+               placeholder="Add ${isIng ? 'an ingredient' : 'a category'}…" autocomplete="off"
+               aria-label="Add ${isIng ? 'an ingredient' : 'a category'}">
         <div class="remix-add-suggestions" hidden role="listbox"></div>
       </div>
       <div class="remix-actions">
         <button class="btn remix-save" type="button"
                 ${remix.isDirty ? '' : 'disabled'}
-                title="${remix.isDirty ? 'Save remix as a new user meal' : 'Edit categories above to enable'}">
+                title="${remix.isDirty ? 'Save remix as a new user meal' : `Edit ${noun}s above to enable`}">
           Save as new meal
         </button>
       </div>
@@ -577,13 +725,3 @@ function pct(w) {
 /* Phase 40 round 8: wireUnitToggle removed — the toggle moved to the
  * header (src/ui/unit-toggle.js) so it's visible across views. */
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

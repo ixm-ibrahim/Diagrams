@@ -30,6 +30,7 @@
 
 import { NUTRIENT_META, NUTRIENT_FIELDS } from '../data/schema.js';
 import { panStep } from '../scene/axis-drag.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 // How aggressively pan/zoom drag respond to mouse delta. Tuned so a
 // natural hand movement (~150 px) traverses a useful amount of range.
@@ -119,7 +120,7 @@ export function mountAxisControls(root, { state, openAxisPicker, getAxisDefault,
       <div class="axis-controls-footer">
         <button type="button" class="btn axis-controls-fit" data-action="fit-visible"
                 title="Zoom each axis to fit the currently-visible dots — handy for inspecting a cluster after applying filters">
-          <span aria-hidden="true">⤢</span> Fit visible
+          <span aria-hidden="true">⤢</span> Zoom to fit
         </button>
         <button type="button" class="btn axis-controls-capture" data-action="capture-thresholds"
                 title="Copies each axis's current min/max into the nutrient thresholds filter">
@@ -168,9 +169,19 @@ export function mountAxisControls(root, { state, openAxisPicker, getAxisDefault,
     const nutrient = sz.nutrient || 'fat';
     const constraint = sz.constraint || { min: 0, max: 100 };
     const meta = NUTRIENT_META[nutrient] || { label: nutrient, format: v => `${v}` };
-    const nutrientOptions = NUTRIENT_FIELDS.map(n =>
-      `<option value="${escapeAttr(n)}" ${n === nutrient ? 'selected' : ''}>${escapeHtml(NUTRIENT_META[n].label)}</option>`
-    ).join('');
+    // Tester feedback: the Size axis should disable nutrients already
+    // assigned to X/Y/Z, matching the behavior of the X/Y/Z picker
+    // (which excludes from each other). The Size axis's CURRENT nutrient
+    // is exempt — staying on the same value is fine.
+    const xyzAxes = state.get('axes') || [];
+    const usedByXYZ = new Set(xyzAxes.map(a => a && a.nutrient).filter(Boolean));
+    const nutrientOptions = NUTRIENT_FIELDS.map(n => {
+      const inUse = usedByXYZ.has(n) && n !== nutrient;
+      const sel = n === nutrient ? ' selected' : '';
+      const dis = inUse ? ' disabled' : '';
+      const suffix = inUse ? ' — in use' : '';
+      return `<option value="${escapeAttr(n)}"${sel}${dis}>${escapeHtml(NUTRIENT_META[n].label)}${suffix}</option>`;
+    }).join('');
     return `
       ${blurb}
       <div class="axis-row axis-row-size" data-axis="size">
@@ -798,10 +809,3 @@ export function mountAxisControls(root, { state, openAxisPicker, getAxisDefault,
   state.subscribe(s => s.hiddenAxisIndex, applyHiddenAxisClass);
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

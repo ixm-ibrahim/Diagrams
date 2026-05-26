@@ -114,6 +114,31 @@
     </div>
   </div>
 
+  <!-- file:// guard. Browsers refuse to load ES modules and fetch() JSON
+       from the file:// protocol (cross-origin security), so opening this
+       page by double-clicking it would silently hang on "Loading food
+       data…" forever — the module entry point never even executes. This
+       classic (non-module) script runs during parsing and replaces the
+       overlay text with an actionable message. Served over http(s) — a
+       local server or GitHub Pages — this branch is skipped entirely. -->
+  <script>
+    if (location.protocol === 'file:') {
+      var msg = document.getElementById('boot-message');
+      if (msg) {
+        msg.innerHTML =
+          'This page must be served over <strong>http(s)</strong>, not opened ' +
+          'directly from disk.<br><br>' +
+          'Run a local server from this folder:<br>' +
+          '<code style="display:inline-block;margin:.4em 0;padding:.2em .5em;' +
+          'border-radius:4px;background:rgba(127,127,127,.18)">python dev_server.py</code>' +
+          '<br>then open <code>http://localhost:8000</code> — or just visit the ' +
+          'hosted GitHub&nbsp;Pages URL.';
+      }
+      var sp = document.querySelector('.boot-spinner');
+      if (sp) sp.style.display = 'none';
+    }
+  </script>
+
   <script type="importmap">
   {
     "imports": {

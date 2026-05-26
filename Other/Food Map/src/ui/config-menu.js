@@ -89,6 +89,13 @@ async function handleExport(state) {
 function handleReset() {
   if (!window.confirm('Clear all saved settings and reset to defaults? This reloads the page.')) return;
   clearPersisted();
+  /* Batch 9.2 (revised): a true "Reset to defaults" should return the
+   * user to the first-run experience, which includes the guided tour.
+   * Clearing `foodMap.tutorialSeen` here means maybeAutoStart() will
+   * fire the tour on the next page load (the persisted-config
+   * grandfather check also fails because clearPersisted just dropped
+   * foodMap.state.v1). */
+  try { localStorage.removeItem('foodMap.tutorialSeen'); } catch { /* ignore */ }
   window.location.reload();
 }
 

@@ -12,6 +12,7 @@
 
 import { createRailSection } from './left-rail.js';
 import { DIETARY_RESTRICTIONS, groupedRestrictions } from '../core/restrictions.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 export function mountRestrictions(host, { state }) {
   if (!host) return;
@@ -93,10 +94,3 @@ export function mountRestrictions(host, { state }) {
   state.subscribe(s => s.restrictions, refreshChecks);
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

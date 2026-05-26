@@ -13,6 +13,7 @@
  */
 
 import { createRailSection } from './left-rail.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 export function mountCategoryFilter(host, { state, ingredients }) {
   if (!host) return;
@@ -64,8 +65,21 @@ export function mountCategoryFilter(host, { state, ingredients }) {
   const bulkBtn    = body.querySelector('.category-filter-bulk');
   const matchGroup = body.querySelector('.filter-match-toggle');
   const scopeGroup = body.querySelector('.filter-scope-toggle');
+  const modesRow   = body.querySelector('.filter-modes-row');
   const summary    = body.querySelector('.category-filter-summary');
   const listEl     = body.querySelector('.category-filter-list');
+
+  /* Batch 4 (item 9): hide AND/OR + ANY/ALL toggles at Ingredients
+   * and Categories views — each individual item / each category
+   * aggregate has exactly one category, so the toggles collapse to a
+   * single answer. Only Meals view actually composes multiple
+   * categories per item, so that's where the toggles are meaningful. */
+  function applyViewLevelVisibility() {
+    const level = state.get('viewLevel') || 'individual';
+    if (modesRow) modesRow.hidden = level !== 'meal';
+  }
+  state.subscribe(s => s.viewLevel, applyViewLevelVisibility);
+  applyViewLevelVisibility();
 
   /* Phase 40 round 9: AND/OR (match) + ANY/ALL (scope) toggles. */
   function refreshToggles() {
@@ -188,10 +202,3 @@ export function mountCategoryFilter(host, { state, ingredients }) {
   state.subscribe(s => s.categoryFilter, paint);
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

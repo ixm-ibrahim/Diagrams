@@ -1,0 +1,307 @@
+# serving-audit review — curated [300:450] of 587
+# columns: idx | id | name | cuisine | serv_g | plate_g | cal100 | calSrv | carbSrv | protSrv | fatSrv
+#   then your estimate: EST_serv_g | EST_calSrv | EST_cal100 | CLASS(none/serving/density/both/mystery) | SOURCE/NOTE
+# cats listed on the following line for each meal.
+
+[300] carrot-cake-slice | Carrot cake with cream cheese frosting | American | serv=140 plate=476 | cal100=206.8 calSrv=289.5 carbSrv=29.3 protSrv=8.0 fatSrv=16.8
+      cats: ['Flours', 'Sugar & sweeteners', 'Eggs', 'Baking ingredients', 'Starchy vegetables', 'Ground spices', 'Oils', 'Extracts & essences', 'Fresh cheese', 'Cream & butter', 'Salt & seasonings', 'Nuts', 'Tropical fruits']
+[301] apple-pie | Apple pie | American | serv=140 plate=190 | cal100=149.5 calSrv=209.3 carbSrv=32.9 protSrv=3.3 fatSrv=8.2
+      cats: ['Temperate fruits', 'Sugar & sweeteners', 'Ground spices', 'Flours', 'Cream & butter', 'Salt & seasonings']
+[302] pumpkin-pie | Pumpkin pie | American | serv=130 plate=452 | cal100=149.4 calSrv=194.2 carbSrv=26.1 protSrv=9.0 fatSrv=6.4
+      cats: ['Starchy vegetables', 'Eggs', 'Sugar & sweeteners', 'Milk', 'Ground spices', 'Salt & seasonings', 'Pickled vegetables', 'Whole spices']
+[303] pecan-pie | Pecan pie | American-Southern | serv=120 plate=99 | cal100=325.6 calSrv=390.8 carbSrv=13.3 protSrv=12.1 fatSrv=33.3
+      cats: ['Sugar & sweeteners', 'Eggs', 'Nuts', 'Extracts & essences', 'Cream & butter', 'Salt & seasonings']
+[304] key-lime-pie | Key lime pie | American-Floridian | serv=130 plate=478 | cal100=171.0 calSrv=222.3 carbSrv=26.2 protSrv=8.9 fatSrv=9.6
+      cats: ['Milk', 'Citrus', 'Baked snacks & pastries', 'Eggs', 'Sugar & sweeteners', 'Cream & butter']
+[305] ice-cream-sundae | Ice cream sundae | American | serv=180 plate=167 | cal100=331.7 calSrv=597.0 carbSrv=63.5 protSrv=8.6 fatSrv=36.8
+      cats: ['Frozen dairy', 'Candy & desserts', 'Cream & butter', 'Nuts']
+[306] tiramisu | Tiramisu | Italian | serv=150 plate=593 | cal100=164.6 calSrv=246.9 carbSrv=20.1 protSrv=5.7 fatSrv=10.2
+      cats: ['Coffee & tea', 'Sugar & sweeteners', 'Candy & desserts', 'Fresh cheese', 'Eggs', 'Baked snacks & pastries', 'Alcoholic beverages', 'Cream & butter']
+[307] halwa-semolina | Suji halwa | Indian | serv=120 plate=91 | cal100=378.8 calSrv=454.6 carbSrv=41.6 protSrv=8.8 fatSrv=29.8
+      cats: ['Refined grains', 'Cream & butter', 'Sugar & sweeteners', 'Nuts']
+[308] mochi-ice-cream | Mochi ice cream | Japanese-American | serv=80 plate=135 | cal100=271.0 calSrv=216.8 carbSrv=28.8 protSrv=3.6 fatSrv=10.0
+      cats: ['Flours', 'Frozen dairy', 'Sugar & sweeteners', 'Extracts & essences', 'Cream & butter']
+[309] churros-chocolate | Churros with chocolate | Spanish | serv=150 plate=338 | cal100=264.0 calSrv=395.9 carbSrv=48.4 protSrv=11.8 fatSrv=17.9
+      cats: ['Baked snacks & pastries', 'Sugar & sweeteners', 'Candy & desserts', 'Milk', 'Oils']
+[310] crepe-suzette | Crêpes Suzette | French | serv=180 plate=618 | cal100=165.9 calSrv=298.7 carbSrv=30.7 protSrv=9.6 fatSrv=9.1
+      cats: ['Flours', 'Eggs', 'Milk', 'Sugar & sweeteners', 'Citrus', 'Cream & butter', 'Alcoholic beverages']
+[311] bread-pudding | Bread pudding | American | serv=170 plate=407 | cal100=220.4 calSrv=374.6 carbSrv=47.8 protSrv=14.4 fatSrv=14.4
+      cats: ['Eggs', 'Sugar & sweeteners', 'Milk', 'Bread & rolls', 'Extracts & essences', 'Ground spices', 'Dried fruits', 'Cream & butter', 'Salt & seasonings']
+[312] chocolate-fondue | Chocolate fondue | Swiss | serv=150 plate=54 | cal100=462.0 calSrv=692.9 carbSrv=80.2 protSrv=6.1 fatSrv=40.7
+      cats: ['Candy & desserts', 'Cream & butter']
+[313] affogato | Affogato | Italian | serv=130 plate=294 | cal100=99.5 calSrv=129.3 carbSrv=15.4 protSrv=1.6 fatSrv=7.0
+      cats: ['Coffee & tea', 'Cream & butter', 'Candy & desserts']
+[314] green-smoothie | Green smoothie | American | serv=350 plate=310 | cal100=65.6 calSrv=229.4 carbSrv=52.0 protSrv=4.0 fatSrv=3.2
+      cats: ['Tropical fruits', 'Leafy greens', 'Temperate fruits']
+[315] protein-smoothie | Protein smoothie | American | serv=400 plate=440 | cal100=185.5 calSrv=742.1 carbSrv=75.7 protSrv=31.6 fatSrv=37.9
+      cats: ['Milk', 'Berries', 'Nut butters', 'Seeds']
+[316] masala-chai-latte | Masala chai latte | Indian | serv=300 plate=485 | cal100=97.2 calSrv=291.7 carbSrv=37.9 protSrv=14.4 fatSrv=9.4
+      cats: ['Coffee & tea', 'Milk', 'Whole spices', 'Sugar & sweeteners']
+[317] boba-milk-tea | Boba milk tea | Taiwanese | serv=450 plate=529 | cal100=109.9 calSrv=494.6 carbSrv=69.9 protSrv=22.5 fatSrv=14.0
+      cats: ['Coffee & tea', 'Milk', 'Refined grains', 'Sugar & sweeteners']
+[318] sweet-lassi | Sweet lassi | Indian | serv=300 plate=415 | cal100=134.6 calSrv=403.7 carbSrv=49.3 protSrv=23.7 fatSrv=12.9
+      cats: ['Yogurt', 'Milk', 'Sugar & sweeteners', 'Whole spices']
+[319] mango-lassi | Mango lassi | Indian | serv=300 plate=554 | cal100=120.9 calSrv=362.8 carbSrv=50.5 protSrv=18.6 fatSrv=10.6
+      cats: ['Yogurt', 'Tropical fruits', 'Milk', 'Sugar & sweeteners']
+[320] horchata-mexican | Mexican horchata | Mexican | serv=300 plate=290 | cal100=186.7 calSrv=560.1 carbSrv=79.4 protSrv=26.0 fatSrv=15.8
+      cats: ['Refined grains', 'Milk', 'Sugar & sweeteners', 'Ground spices']
+[321] agua-fresca-watermelon | Watermelon agua fresca | Mexican | serv=350 plate=274 | cal100=53.8 calSrv=188.3 carbSrv=47.4 protSrv=2.8 fatSrv=1.6
+      cats: ['Temperate fruits', 'Citrus', 'Sugar & sweeteners']
+[322] hot-chocolate | Hot chocolate | Cross-cultural | serv=280 plate=284 | cal100=210.2 calSrv=588.7 carbSrv=82.1 protSrv=23.3 fatSrv=19.8
+      cats: ['Milk', 'Candy & desserts', 'Sugar & sweeteners']
+[323] turkish-coffee | Turkish coffee | Turkish | serv=80 plate=245 | cal100=23.6 calSrv=18.8 carbSrv=3.1 protSrv=0.5 fatSrv=0.5
+      cats: ['Coffee & tea', 'Sugar & sweeteners', 'Whole spices']
+[324] continental-breakfast | Continental breakfast | European | serv=320 plate=314 | cal100=112.9 calSrv=361.1 carbSrv=44.1 protSrv=5.3 fatSrv=18.1
+      cats: ['Baked snacks & pastries', 'Coffee & tea', 'Jams & preserves', 'Cream & butter']
+[325] afternoon-tea-spread | Afternoon tea spread | British | serv=280 plate=314 | cal100=112.9 calSrv=316.0 carbSrv=38.6 protSrv=4.6 fatSrv=15.9
+      cats: ['Baked snacks & pastries', 'Coffee & tea', 'Cream & butter', 'Jams & preserves']
+[326] brunch-platter | Brunch platter | American | serv=450 plate=430 | cal100=134.3 calSrv=604.2 carbSrv=70.1 protSrv=25.3 fatSrv=26.6
+      cats: ['Eggs', 'Processed meat', 'Bread & rolls', 'Temperate fruits', 'Citrus']
+[327] kids-lunchbox | Kids' lunchbox | American | serv=280 plate=278 | cal100=193.4 calSrv=541.5 carbSrv=52.4 protSrv=23.2 fatSrv=27.2
+      cats: ['Bread & rolls', 'Processed meat', 'Aged cheese', 'Temperate fruits']
+[328] bistro-plate | Bistro plate | French | serv=320 plate=208 | cal100=313.4 calSrv=1003.0 carbSrv=94.2 protSrv=39.0 fatSrv=52.1
+      cats: ['Aged cheese', 'Processed meat', 'Pickled vegetables', 'Baked snacks & pastries', 'Bread & rolls']
+[329] japanese-breakfast | Japanese breakfast | Japanese | serv=320 plate=244 | cal100=247.5 calSrv=791.9 carbSrv=45.7 protSrv=61.8 fatSrv=41.4
+      cats: ['Refined grains', 'Oily fish', 'Soy products', 'Pastes & ferments', 'Oils']
+[330] dim-sum-brunch | Dim sum brunch | Chinese-Cantonese | serv=400 plate=410 | cal100=78.9 calSrv=315.7 carbSrv=39.8 protSrv=24.1 fatSrv=6.2
+      cats: ['Bread & rolls', 'Shellfish', 'Coffee & tea', 'Leafy greens']
+[331] indian-breakfast | South Indian breakfast | Indian-South | serv=350 plate=430 | cal100=82.6 calSrv=289.0 carbSrv=46.8 protSrv=14.0 fatSrv=5.5
+      cats: ['Whole grains', 'Legumes', 'Pastes & ferments', 'Coffee & tea']
+[332] bengali-hilsa-curry | Hilsa curry (shorshe ilish) | Bangladeshi | serv=320 plate=201 | cal100=150.7 calSrv=482.2 carbSrv=17.4 protSrv=35.0 fatSrv=30.7
+      cats: ['Freshwater fish', 'Pastes & ferments', 'Peppers & nightshades', 'Oils', 'Ground spices', 'Salt & seasonings']
+[333] bengali-cholar-dal | Cholar dal (Bengali chana dal) | Bangladeshi | serv=300 plate=316 | cal100=149.0 calSrv=447.0 carbSrv=72.3 protSrv=13.9 fatSrv=14.3
+      cats: ['Legumes', 'Cream & butter', 'Whole spices', 'Ground spices', 'Dried fruits', 'Citrus']
+[334] bengali-mishti-doi | Mishti doi | Bangladeshi | serv=140 plate=414 | cal100=134.1 calSrv=187.7 carbSrv=22.9 protSrv=11.0 fatSrv=6.0
+      cats: ['Yogurt', 'Milk', 'Sugar & sweeteners']
+[335] bengali-roshogolla | Roshogolla | Bangladeshi | serv=120 plate=61 | cal100=262.4 calSrv=314.9 carbSrv=10.6 protSrv=17.1 fatSrv=22.5
+      cats: ['Fresh cheese', 'Sugar & sweeteners', 'Extracts & essences']
+[336] bengali-bhuna-khichuri | Bhuna khichuri | Bangladeshi | serv=400 plate=276 | cal100=176.3 calSrv=705.0 carbSrv=92.2 protSrv=25.3 fatSrv=28.0
+      cats: ['Refined grains', 'Legumes', 'Oils', 'Ground spices', 'Whole spices', 'Other vegetables']
+[337] chicken-karahi | Chicken karahi | Pakistani | serv=380 plate=189 | cal100=183.8 calSrv=698.6 carbSrv=16.6 protSrv=48.0 fatSrv=49.8
+      cats: ['Poultry', 'Peppers & nightshades', 'Ground spices', 'Fresh herbs', 'Salt & seasonings', 'Oils']
+[338] beef-nihari-pakistani | Beef nihari (Pakistani) | Pakistani | serv=400 plate=286 | cal100=195.9 calSrv=783.4 carbSrv=65.8 protSrv=39.5 fatSrv=41.7
+      cats: ['Red meat', 'Ground spices', 'Spice blends', 'Bread & rolls', 'Oils', 'Citrus']
+[339] seekh-kebab-pakistani | Seekh kebab | Pakistani | serv=300 plate=314 | cal100=144.4 calSrv=433.1 carbSrv=45.6 protSrv=29.1 fatSrv=15.4
+      cats: ['Red meat', 'Fresh herbs', 'Ground spices', 'Peppers & nightshades', 'Bread & rolls', 'Other vegetables']
+[340] kabuli-pulao | Kabuli pulao | Pakistani-Pashtun | serv=420 plate=298 | cal100=252.6 calSrv=1060.7 carbSrv=91.4 protSrv=44.2 fatSrv=61.0
+      cats: ['Refined grains', 'Red meat', 'Dried fruits', 'Nuts', 'Whole spices', 'Oils', 'Other vegetables']
+[341] mantu-dumplings | Mantu | Pakistani-Pashtun | serv=320 plate=397 | cal100=138.1 calSrv=441.9 carbSrv=42.8 protSrv=32.1 fatSrv=15.8
+      cats: ['Bread & rolls', 'Red meat', 'Yogurt', 'Other vegetables', 'Ground spices', 'Salt & seasonings']
+[342] tunisian-couscous | Tunisian couscous | Tunisian | serv=400 plate=445 | cal100=161.4 calSrv=645.8 carbSrv=63.1 protSrv=36.7 fatSrv=28.5
+      cats: ['Refined grains', 'Red meat', 'Other vegetables', 'Legumes', 'Peppers & nightshades', 'Ground spices', 'Oils']
+[343] lablabi-tunisian | Lablabi | Tunisian | serv=350 plate=465 | cal100=145.8 calSrv=510.3 carbSrv=65.1 protSrv=19.9 fatSrv=20.8
+      cats: ['Legumes', 'Bread & rolls', 'Oils', 'Eggs', 'Ground spices', 'Citrus', 'Peppers & nightshades']
+[344] pastilla-moroccan | Pastilla (b'stilla) | North African | serv=280 plate=209 | cal100=289.5 calSrv=810.5 carbSrv=50.1 protSrv=46.9 fatSrv=48.0
+      cats: ['Poultry', 'Baked snacks & pastries', 'Nuts', 'Eggs', 'Ground spices', 'Sugar & sweeteners', 'Whole spices']
+[345] couscous-royale-north-african | Couscous royale | North African | serv=450 plate=571 | cal100=168.6 calSrv=758.5 carbSrv=56.6 protSrv=57.8 fatSrv=33.6
+      cats: ['Refined grains', 'Red meat', 'Poultry', 'Processed meat', 'Other vegetables', 'Legumes', 'Peppers & nightshades', 'Ground spices']
+[346] jollof-rice-ghanaian | Ghanaian jollof rice | Ghanaian | serv=400 plate=316 | cal100=157.7 calSrv=630.8 carbSrv=48.1 protSrv=36.7 fatSrv=33.4
+      cats: ['Refined grains', 'Peppers & nightshades', 'Other vegetables', 'Poultry', 'Oils', 'Ground spices', 'Salt & seasonings']
+[347] kelewele-ghanaian | Kelewele | Ghanaian | serv=180 plate=241 | cal100=113.8 calSrv=204.8 carbSrv=25.1 protSrv=2.5 fatSrv=12.1
+      cats: ['Tropical fruits', 'Ground spices', 'Oils', 'Peppers & nightshades', 'Salt & seasonings']
+[348] red-red-ghanaian | Red red (bean stew) | Ghanaian | serv=350 plate=315 | cal100=127.9 calSrv=447.7 carbSrv=54.2 protSrv=17.2 fatSrv=20.3
+      cats: ['Legumes', 'Peppers & nightshades', 'Other vegetables', 'Oils', 'Ground spices']
+[349] yassa-poulet | Yassa poulet | Senegalese | serv=400 plate=389 | cal100=139.1 calSrv=556.3 carbSrv=49.2 protSrv=29.6 fatSrv=28.5
+      cats: ['Poultry', 'Citrus', 'Other vegetables', 'Pickled vegetables', 'Oils', 'Refined grains']
+[350] mafe-senegalese | Mafé | Senegalese | serv=400 plate=457 | cal100=154.5 calSrv=617.8 carbSrv=68.4 protSrv=31.6 fatSrv=25.9
+      cats: ['Red meat', 'Nut butters', 'Other vegetables', 'Starchy vegetables', 'Peppers & nightshades', 'Refined grains']
+[351] pepper-soup-nigerian | Nigerian pepper soup | West African-Nigerian | serv=350 plate=419 | cal100=99.2 calSrv=347.1 carbSrv=22.0 protSrv=27.4 fatSrv=16.6
+      cats: ['Red meat', 'Peppers & nightshades', 'Fresh herbs', 'Ground spices', 'Prepared soups & broths']
+[352] suya-skewers-nigerian | Suya (yaji-rubbed beef) | West African-Nigerian | serv=280 plate=214 | cal100=237.0 calSrv=663.7 carbSrv=19.6 protSrv=35.0 fatSrv=51.6
+      cats: ['Red meat', 'Nuts', 'Ground spices', 'Spice blends', 'Peppers & nightshades', 'Oils']
+[353] nyama-choma | Nyama choma | Kenyan | serv=350 plate=256 | cal100=107.6 calSrv=376.6 carbSrv=21.8 protSrv=34.7 fatSrv=17.5
+      cats: ['Red meat', 'Salt & seasonings', 'Other vegetables', 'Peppers & nightshades']
+[354] kenyan-pilau | Kenyan pilau | Kenyan | serv=400 plate=231 | cal100=210.2 calSrv=840.7 carbSrv=54.4 protSrv=47.5 fatSrv=48.5
+      cats: ['Refined grains', 'Red meat', 'Other vegetables', 'Whole spices', 'Ground spices', 'Oils']
+[355] chapati-kenyan | Kenyan chapati | Kenyan | serv=100 plate=45 | cal100=522.2 calSrv=522.2 carbSrv=48.3 protSrv=6.9 fatSrv=34.8
+      cats: ['Flours', 'Oils', 'Salt & seasonings']
+[356] pelau-trinidadian | Pelau | Trinidadian | serv=420 plate=448 | cal100=158.5 calSrv=665.6 carbSrv=68.2 protSrv=38.3 fatSrv=27.9
+      cats: ['Refined grains', 'Poultry', 'Legumes', 'Other vegetables', 'Peppers & nightshades', 'Sugar & sweeteners', 'Oils']
+[357] doubles-trinidadian | Doubles | Trinidadian | serv=200 plate=301 | cal100=147.5 calSrv=295.0 carbSrv=50.7 protSrv=13.0 fatSrv=5.2
+      cats: ['Legumes', 'Bread & rolls', 'Ground spices', 'Sauces', 'Peppers & nightshades']
+[358] pernil-puerto-rican | Pernil | Puerto Rican | serv=380 plate=305 | cal100=99.7 calSrv=378.7 carbSrv=31.2 protSrv=31.4 fatSrv=16.0
+      cats: ['Red meat', 'Citrus', 'Fresh herbs', 'Ground spices', 'Salt & seasonings', 'Other vegetables']
+[359] arroz-con-gandules | Arroz con gandules | Puerto Rican | serv=380 plate=417 | cal100=167.1 calSrv=635.0 carbSrv=65.3 protSrv=26.7 fatSrv=31.2
+      cats: ['Refined grains', 'Legumes', 'Processed meat', 'Other vegetables', 'Peppers & nightshades', 'Oils', 'Fresh herbs']
+[360] casado-costa-rican | Casado | Costa Rican | serv=450 plate=660 | cal100=135.5 calSrv=609.9 carbSrv=82.2 protSrv=34.1 fatSrv=17.4
+      cats: ['Refined grains', 'Legumes', 'Eggs', 'Other vegetables', 'Starchy vegetables', 'Tropical fruits', 'Red meat']
+[361] soup-joumou-haitian | Soup joumou | Haitian | serv=400 plate=718 | cal100=100.6 calSrv=402.3 carbSrv=53.2 protSrv=22.2 fatSrv=12.1
+      cats: ['Starchy vegetables', 'Red meat', 'Other vegetables', 'Prepared soups & broths', 'Refined grains', 'Citrus', 'Fresh herbs']
+[362] moros-y-cristianos | Moros y cristianos | Cuban | serv=380 plate=417 | cal100=167.1 calSrv=635.0 carbSrv=65.3 protSrv=26.7 fatSrv=31.2
+      cats: ['Refined grains', 'Legumes', 'Processed meat', 'Peppers & nightshades', 'Other vegetables', 'Oils', 'Fresh herbs']
+[363] yuca-con-mojo | Yuca con mojo | Cuban | serv=250 plate=358 | cal100=99.2 calSrv=248.1 carbSrv=39.1 protSrv=3.8 fatSrv=10.5
+      cats: ['Starchy vegetables', 'Oils', 'Citrus', 'Other vegetables', 'Fresh herbs', 'Salt & seasonings']
+[364] bigos-polish | Bigos (hunter's stew) | Polish | serv=400 plate=327 | cal100=145.5 calSrv=582.1 carbSrv=22.2 protSrv=44.9 fatSrv=35.5
+      cats: ['Pickled vegetables', 'Processed meat', 'Red meat', 'Other vegetables', 'Mushrooms', 'Whole spices', 'Salt & seasonings']
+[365] kotlet-schabowy | Kotlet schabowy | Polish | serv=380 plate=359 | cal100=206.6 calSrv=785.2 carbSrv=69.3 protSrv=38.3 fatSrv=39.5
+      cats: ['Red meat', 'Eggs', 'Bread & rolls', 'Oils', 'Starchy vegetables', 'Pickled vegetables']
+[366] zurek-polish | Żurek | Polish | serv=350 plate=493 | cal100=133.3 calSrv=466.6 carbSrv=37.4 protSrv=20.5 fatSrv=26.3
+      cats: ['Prepared soups & broths', 'Processed meat', 'Eggs', 'Starchy vegetables', 'Cream & butter', 'Salt & seasonings', 'Fresh herbs']
+[367] chicken-paprikash | Chicken paprikash | Hungarian | serv=400 plate=485 | cal100=129.3 calSrv=517.0 carbSrv=40.7 protSrv=33.2 fatSrv=24.9
+      cats: ['Poultry', 'Ground spices', 'Cream & butter', 'Fermented dairy', 'Refined grains', 'Peppers & nightshades', 'Other vegetables']
+[368] lecso-hungarian | Lecsó | Hungarian | serv=300 plate=290 | cal100=161.5 calSrv=484.4 carbSrv=19.4 protSrv=21.3 fatSrv=36.9
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Ground spices', 'Oils', 'Eggs', 'Processed meat']
+[369] beef-stroganoff-russian | Beef stroganoff | Russian | serv=400 plate=472 | cal100=134.6 calSrv=538.4 carbSrv=39.7 protSrv=34.4 fatSrv=27.1
+      cats: ['Red meat', 'Mushrooms', 'Fermented dairy', 'Refined grains', 'Cream & butter', 'Other vegetables', 'Fresh herbs']
+[370] pelmeni-russian | Pelmeni | Russian | serv=320 plate=328 | cal100=191.9 calSrv=614.1 carbSrv=41.5 protSrv=37.4 fatSrv=32.5
+      cats: ['Bread & rolls', 'Red meat', 'Fermented dairy', 'Cream & butter', 'Fresh herbs', 'Salt & seasonings']
+[371] olivier-salad-russian | Olivier salad | Russian | serv=250 plate=406 | cal100=132.3 calSrv=330.7 carbSrv=28.6 protSrv=20.9 fatSrv=15.0
+      cats: ['Other vegetables', 'Eggs', 'Poultry', 'Pickled vegetables', 'Starchy vegetables', 'Dressings & dips', 'Salt & seasonings']
+[372] borscht-ukrainian | Ukrainian borscht | Eastern European | serv=350 plate=599 | cal100=101.6 calSrv=355.7 carbSrv=39.2 protSrv=22.5 fatSrv=13.2
+      cats: ['Starchy vegetables', 'Other vegetables', 'Salt & seasonings', 'Red meat', 'Fermented dairy', 'Fresh herbs', 'Citrus']
+[373] goulash-soup-hungarian | Hungarian gulyás | Hungarian | serv=400 plate=640 | cal100=111.0 calSrv=443.9 carbSrv=41.4 protSrv=23.0 fatSrv=21.5
+      cats: ['Red meat', 'Starchy vegetables', 'Peppers & nightshades', 'Other vegetables', 'Ground spices', 'Oils', 'Prepared soups & broths']
+[374] janssons-frestelse | Jansson's frestelse | Swedish | serv=350 plate=575 | cal100=162.7 calSrv=569.6 carbSrv=75.3 protSrv=26.7 fatSrv=18.7
+      cats: ['Starchy vegetables', 'Canned & cured fish', 'Cream & butter', 'Milk', 'Other vegetables', 'Bread & rolls', 'Salt & seasonings']
+[375] kottbullar-with-lingonberry | Köttbullar | Swedish | serv=380 plate=739 | cal100=161.6 calSrv=614.2 carbSrv=70.6 protSrv=31.1 fatSrv=23.5
+      cats: ['Red meat', 'Eggs', 'Bread & rolls', 'Milk', 'Cream & butter', 'Berries', 'Sauces', 'Starchy vegetables']
+[376] smorrebrod-open-sandwich | Smørrebrød | Danish | serv=200 plate=292 | cal100=171.4 calSrv=342.9 carbSrv=30.2 protSrv=18.5 fatSrv=16.7
+      cats: ['Bread & rolls', 'Canned & cured fish', 'Eggs', 'Other vegetables', 'Cream & butter', 'Pickled vegetables', 'Fresh herbs']
+[377] frikadeller-danish | Frikadeller | Danish | serv=380 plate=654 | cal100=172.4 calSrv=655.0 carbSrv=71.9 protSrv=34.6 fatSrv=25.8
+      cats: ['Red meat', 'Eggs', 'Bread & rolls', 'Milk', 'Cream & butter', 'Starchy vegetables', 'Other vegetables']
+[378] gravadlax-platter | Gravlax with dill mustard | Scandinavian | serv=220 plate=287 | cal100=152.8 calSrv=336.1 carbSrv=40.5 protSrv=15.6 fatSrv=13.4
+      cats: ['Canned & cured fish', 'Bread & rolls', 'Sauces', 'Fresh herbs', 'Cream & butter', 'Citrus']
+[379] sauerkraut-and-wurst | Sauerkraut and bratwurst | German | serv=400 plate=242 | cal100=154.4 calSrv=617.6 carbSrv=68.9 protSrv=23.6 fatSrv=28.8
+      cats: ['Pickled vegetables', 'Processed meat', 'Starchy vegetables', 'Sauces', 'Salt & seasonings', 'Whole spices']
+[380] konigsberger-klopse | Königsberger Klopse | German | serv=380 plate=659 | cal100=140.6 calSrv=534.1 carbSrv=53.0 protSrv=28.1 fatSrv=24.0
+      cats: ['Red meat', 'Eggs', 'Bread & rolls', 'Pickled vegetables', 'Cream & butter', 'Fermented dairy', 'Starchy vegetables', 'Citrus']
+[381] tafelspitz-austrian | Tafelspitz | Austrian | serv=400 plate=343 | cal100=142.4 calSrv=569.6 carbSrv=54.4 protSrv=32.1 fatSrv=25.6
+      cats: ['Red meat', 'Other vegetables', 'Starchy vegetables', 'Fresh herbs', 'Sauces', 'Cream & butter', 'Salt & seasonings']
+[382] caldo-verde | Caldo verde | Portuguese | serv=350 plate=470 | cal100=132.3 calSrv=463.0 carbSrv=39.3 protSrv=16.8 fatSrv=27.1
+      cats: ['Leafy greens', 'Starchy vegetables', 'Processed meat', 'Oils', 'Prepared soups & broths', 'Salt & seasonings']
+[383] piri-piri-chicken | Piri-piri chicken | Portuguese | serv=380 plate=316 | cal100=126.9 calSrv=482.1 carbSrv=27.6 protSrv=30.0 fatSrv=30.1
+      cats: ['Poultry', 'Peppers & nightshades', 'Citrus', 'Oils', 'Ground spices', 'Salt & seasonings']
+[384] gambas-al-ajillo | Gambas al ajillo | Spanish | serv=220 plate=372 | cal100=130.8 calSrv=287.8 carbSrv=33.2 protSrv=15.0 fatSrv=11.7
+      cats: ['Shellfish', 'Oils', 'Peppers & nightshades', 'Fresh herbs', 'Bread & rolls', 'Citrus']
+[385] pulpo-a-la-gallega | Pulpo a la gallega | Spanish | serv=300 plate=226 | cal100=159.3 calSrv=478.0 carbSrv=46.3 protSrv=26.6 fatSrv=21.5
+      cats: ['Shellfish', 'Starchy vegetables', 'Oils', 'Ground spices', 'Salt & seasonings']
+[386] albondigas-spanish | Albóndigas | Spanish | serv=300 plate=308 | cal100=171.9 calSrv=515.6 carbSrv=43.5 protSrv=35.3 fatSrv=22.1
+      cats: ['Red meat', 'Bread & rolls', 'Eggs', 'Sauces', 'Peppers & nightshades', 'Fresh herbs']
+[387] gyros-plate | Gyros plate | Greek | serv=350 plate=416 | cal100=135.0 calSrv=472.3 carbSrv=50.5 protSrv=26.0 fatSrv=19.5
+      cats: ['Red meat', 'Bread & rolls', 'Other vegetables', 'Dressings & dips', 'Pickled vegetables', 'Citrus', 'Salt & seasonings']
+[388] pastitsio-greek | Pastitsio | Greek | serv=380 plate=548 | cal100=188.5 calSrv=716.5 carbSrv=57.3 protSrv=43.1 fatSrv=35.0
+      cats: ['Refined grains', 'Red meat', 'Aged cheese', 'Cream & butter', 'Milk', 'Eggs', 'Ground spices', 'Peppers & nightshades']
+[389] horiatiki-salad | Horiatiki (Greek village salad) | Greek | serv=280 plate=273 | cal100=134.4 calSrv=376.2 carbSrv=21.5 protSrv=12.8 fatSrv=28.3
+      cats: ['Other vegetables', 'Peppers & nightshades', 'Fresh cheese', 'Pickled vegetables', 'Oils', 'Fresh herbs', 'Salt & seasonings']
+[390] beef-noodle-soup-taiwan | Taiwanese beef noodle soup | Taiwanese | serv=500 plate=480 | cal100=117.5 calSrv=587.3 carbSrv=55.3 protSrv=38.9 fatSrv=23.1
+      cats: ['Refined grains', 'Red meat', 'Prepared soups & broths', 'Pastes & ferments', 'Other vegetables', 'Ground spices', 'Whole spices', 'Fresh herbs']
+[391] lu-rou-fan | Lu rou fan | Taiwanese | serv=350 plate=241 | cal100=191.3 calSrv=669.5 carbSrv=44.6 protSrv=48.6 fatSrv=32.0
+      cats: ['Refined grains', 'Red meat', 'Eggs', 'Sauces', 'Pickled vegetables', 'Whole spices']
+[392] gua-bao | Gua bao | Taiwanese | serv=220 plate=235 | cal100=249.6 calSrv=549.0 carbSrv=45.9 protSrv=29.4 fatSrv=28.4
+      cats: ['Bread & rolls', 'Red meat', 'Pickled vegetables', 'Nuts', 'Sauces', 'Fresh herbs', 'Sugar & sweeteners']
+[393] hot-and-sour-soup | Hot and sour soup | Chinese | serv=350 plate=565 | cal100=98.2 calSrv=343.8 carbSrv=29.8 protSrv=26.5 fatSrv=14.5
+      cats: ['Prepared soups & broths', 'Soy products', 'Mushrooms', 'Eggs', 'Sauces', 'Other vegetables']
+[394] mongolian-beef-chinese | Mongolian beef | Chinese-American | serv=350 plate=263 | cal100=198.8 calSrv=695.7 carbSrv=51.8 protSrv=37.5 fatSrv=37.9
+      cats: ['Red meat', 'Other vegetables', 'Sauces', 'Refined grains', 'Sugar & sweeteners', 'Oils']
+[395] bo-luc-lac | Bò lúc lắc (shaking beef) | Vietnamese | serv=320 plate=303 | cal100=143.1 calSrv=457.8 carbSrv=23.2 protSrv=28.0 fatSrv=29.1
+      cats: ['Red meat', 'Other vegetables', 'Sauces', 'Oils', 'Peppers & nightshades', 'Fresh herbs', 'Salt & seasonings']
+[396] canh-chua-vietnamese | Canh chua | Vietnamese | serv=400 plate=643 | cal100=72.3 calSrv=289.1 carbSrv=37.5 protSrv=21.2 fatSrv=7.1
+      cats: ['White fish', 'Tropical fruits', 'Other vegetables', 'Prepared soups & broths', 'Fresh herbs', 'Peppers & nightshades']
+[397] uttapam-south-indian | Uttapam | Indian-South | serv=220 plate=390 | cal100=133.1 calSrv=292.9 carbSrv=39.8 protSrv=10.9 fatSrv=11.3
+      cats: ['Whole grains', 'Legumes', 'Peppers & nightshades', 'Other vegetables', 'Ground spices', 'Oils', 'Sauces']
+[398] avial-south-indian | Avial | Indian-South | serv=300 plate=545 | cal100=79.8 calSrv=239.4 carbSrv=31.0 protSrv=10.9 fatSrv=8.6
+      cats: ['Other vegetables', 'Yogurt', 'Plant milks', 'Whole spices', 'Ground spices', 'Fresh herbs', 'Refined grains']
+[399] chettinad-chicken | Chettinad chicken curry | Indian-South | serv=400 plate=429 | cal100=115.1 calSrv=460.3 carbSrv=19.0 protSrv=25.4 fatSrv=32.4
+      cats: ['Poultry', 'Whole spices', 'Ground spices', 'Plant milks', 'Peppers & nightshades', 'Fresh herbs', 'Oils']
+[400] puttu-kadala | Puttu and kadala curry | Indian-South | serv=350 plate=502 | cal100=95.0 calSrv=332.6 carbSrv=48.7 protSrv=14.0 fatSrv=10.4
+      cats: ['Whole grains', 'Plant milks', 'Legumes', 'Ground spices', 'Whole spices', 'Other vegetables']
+[401] parippu-curry | Parippu (Sri Lankan dal) | Sri Lankan | serv=300 plate=471 | cal100=109.7 calSrv=329.0 carbSrv=34.2 protSrv=11.0 fatSrv=17.7
+      cats: ['Legumes', 'Plant milks', 'Ground spices', 'Whole spices', 'Other vegetables', 'Oils']
+[402] lamprais-sri-lankan | Lamprais | Sri Lankan | serv=400 plate=410 | cal100=188.5 calSrv=753.9 carbSrv=62.2 protSrv=44.8 fatSrv=36.6
+      cats: ['Refined grains', 'Red meat', 'Legumes', 'Other vegetables', 'Ground spices', 'Eggs', 'Oils']
+[403] molokhia-egyptian | Molokhia | Egyptian | serv=400 plate=420 | cal100=144.9 calSrv=579.5 carbSrv=39.6 protSrv=33.7 fatSrv=31.5
+      cats: ['Leafy greens', 'Poultry', 'Prepared soups & broths', 'Whole spices', 'Oils', 'Refined grains']
+[404] hawawshi-egyptian | Hawawshi | Egyptian | serv=300 plate=314 | cal100=144.4 calSrv=433.1 carbSrv=45.6 protSrv=29.1 fatSrv=15.4
+      cats: ['Bread & rolls', 'Red meat', 'Other vegetables', 'Peppers & nightshades', 'Fresh herbs', 'Ground spices']
+[405] injera-tibs | Injera with beef tibs | Ethiopian | serv=400 plate=325 | cal100=176.7 calSrv=706.6 carbSrv=58.1 protSrv=37.4 fatSrv=37.0
+      cats: ['Bread & rolls', 'Red meat', 'Peppers & nightshades', 'Spice blends', 'Other vegetables', 'Oils']
+[406] shiro-ethiopian | Shiro wat | Ethiopian | serv=300 plate=370 | cal100=155.4 calSrv=466.3 carbSrv=64.4 protSrv=16.6 fatSrv=17.4
+      cats: ['Legumes', 'Spice blends', 'Oils', 'Peppers & nightshades', 'Other vegetables', 'Bread & rolls']
+[407] boerewors-roll | Boerewors roll | South African | serv=300 plate=310 | cal100=148.2 calSrv=444.5 carbSrv=52.0 protSrv=19.1 fatSrv=18.7
+      cats: ['Processed meat', 'Bread & rolls', 'Other vegetables', 'Sauces', 'Peppers & nightshades']
+[408] bobotie-south-african | Bobotie variations | South African | serv=350 plate=472 | cal100=213.9 calSrv=748.6 carbSrv=82.7 protSrv=41.8 fatSrv=28.3
+      cats: ['Red meat', 'Eggs', 'Dried fruits', 'Ground spices', 'Spice blends', 'Bread & rolls', 'Milk']
+[409] moqueca-baiana-brazilian | Moqueca baiana | Brazilian-Bahian | serv=400 plate=642 | cal100=77.4 calSrv=309.8 carbSrv=26.8 protSrv=17.2 fatSrv=16.5
+      cats: ['White fish', 'Plant milks', 'Peppers & nightshades', 'Other vegetables', 'Oils', 'Fresh herbs', 'Citrus']
+[410] coxinha-brazilian | Coxinha | Brazilian | serv=150 plate=194 | cal100=301.8 calSrv=452.7 carbSrv=17.6 protSrv=24.8 fatSrv=31.4
+      cats: ['Poultry', 'Flours', 'Eggs', 'Oils', 'Cream & butter', 'Salt & seasonings']
+[411] pao-de-acai | Açaí bowl (Brazilian) | Brazilian | serv=400 plate=357 | cal100=119.9 calSrv=479.5 carbSrv=76.8 protSrv=10.5 fatSrv=18.6
+      cats: ['Berries', 'Tropical fruits', 'Whole grains', 'Nuts', 'Sugar & sweeteners']
+[412] beef-nachos-texmex | Beef nachos | Tex-Mex | serv=320 plate=401 | cal100=184.5 calSrv=590.4 carbSrv=57.6 protSrv=36.1 fatSrv=24.4
+      cats: ['Baked snacks & pastries', 'Red meat', 'Processed cheese', 'Legumes', 'Peppers & nightshades', 'Sauces', 'Fresh herbs']
+[413] shrimp-and-grits | Shrimp and grits | American-Southern | serv=350 plate=397 | cal100=156.0 calSrv=546.1 carbSrv=33.0 protSrv=36.3 fatSrv=30.7
+      cats: ['Whole grains', 'Shellfish', 'Processed meat', 'Cream & butter', 'Aged cheese', 'Other vegetables', 'Peppers & nightshades']
+[414] fried-chicken-southern | Southern fried chicken | American-Southern | serv=320 plate=421 | cal100=219.6 calSrv=702.8 carbSrv=56.7 protSrv=40.7 fatSrv=35.0
+      cats: ['Poultry', 'Flours', 'Eggs', 'Oils', 'Spice blends', 'Milk', 'Salt & seasonings']
+[415] abgoosht-iranian | Abgoosht (dizi) | Iranian | serv=400 plate=801 | cal100=101.5 calSrv=406.2 carbSrv=53.2 protSrv=24.2 fatSrv=11.9
+      cats: ['Red meat', 'Legumes', 'Starchy vegetables', 'Other vegetables', 'Ground spices', 'Prepared soups & broths', 'Citrus']
+[416] joojeh-kabab | Joojeh kabab | Iranian | serv=400 plate=446 | cal100=126.8 calSrv=507.0 carbSrv=45.2 protSrv=34.1 fatSrv=21.8
+      cats: ['Poultry', 'Yogurt', 'Citrus', 'Ground spices', 'Refined grains', 'Cream & butter', 'Salt & seasonings']
+[417] fabada-asturiana | Fabada asturiana | Spanish | serv=400 plate=286 | cal100=249.8 calSrv=999.1 carbSrv=48.1 protSrv=62.3 fatSrv=62.1
+      cats: ['Legumes', 'Processed meat', 'Red meat', 'Ground spices', 'Oils', 'Salt & seasonings']
+[418] migas-spanish | Migas extremeñas | Spanish | serv=280 plate=344 | cal100=185.4 calSrv=519.0 carbSrv=39.8 protSrv=20.7 fatSrv=31.6
+      cats: ['Bread & rolls', 'Processed meat', 'Eggs', 'Peppers & nightshades', 'Oils', 'Other vegetables']
+[419] cocido-madrileno | Cocido madrileño | Spanish | serv=450 plate=525 | cal100=166.5 calSrv=749.4 carbSrv=82.0 protSrv=44.6 fatSrv=27.7
+      cats: ['Legumes', 'Red meat', 'Processed meat', 'Other vegetables', 'Starchy vegetables', 'Refined grains']
+[420] pisto-manchego | Pisto manchego | Spanish | serv=320 plate=235 | cal100=120.6 calSrv=386.0 carbSrv=22.7 protSrv=13.7 fatSrv=28.4
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Oils', 'Eggs', 'Salt & seasonings']
+[421] croquetas-de-jamon | Croquetas de jamón | Spanish | serv=150 plate=444 | cal100=245.5 calSrv=368.3 carbSrv=35.9 protSrv=15.8 fatSrv=18.1
+      cats: ['Flours', 'Milk', 'Processed meat', 'Eggs', 'Bread & rolls', 'Oils']
+[422] escalivada | Escalivada | Spanish | serv=250 plate=240 | cal100=153.7 calSrv=384.2 carbSrv=48.6 protSrv=8.6 fatSrv=18.6
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Oils', 'Salt & seasonings', 'Bread & rolls']
+[423] rabo-de-toro | Rabo de toro | Spanish | serv=400 plate=460 | cal100=167.6 calSrv=670.4 carbSrv=46.8 protSrv=23.2 fatSrv=23.9
+      cats: ['Red meat', 'Other vegetables', 'Alcoholic beverages', 'Whole spices', 'Starchy vegetables', 'Oils']
+[424] bacalhau-a-bras | Bacalhau à brás | Portuguese | serv=350 plate=359 | cal100=140.7 calSrv=492.3 carbSrv=43.1 protSrv=23.5 fatSrv=26.3
+      cats: ['Canned & cured fish', 'Starchy vegetables', 'Eggs', 'Other vegetables', 'Oils', 'Pickled vegetables']
+[425] francesinha | Francesinha | Portuguese | serv=450 plate=303 | cal100=257.2 calSrv=1157.2 carbSrv=58.5 protSrv=76.8 fatSrv=67.0
+      cats: ['Bread & rolls', 'Red meat', 'Processed meat', 'Aged cheese', 'Sauces', 'Eggs']
+[426] cataplana-portuguesa | Cataplana de marisco | Portuguese | serv=400 plate=504 | cal100=131.8 calSrv=527.1 carbSrv=25.0 protSrv=32.6 fatSrv=14.9
+      cats: ['Shellfish', 'White fish', 'Peppers & nightshades', 'Other vegetables', 'Alcoholic beverages', 'Oils']
+[427] arroz-de-marisco | Arroz de marisco | Portuguese | serv=450 plate=399 | cal100=127.6 calSrv=574.1 carbSrv=45.2 protSrv=49.8 fatSrv=22.0
+      cats: ['Refined grains', 'Shellfish', 'White fish', 'Peppers & nightshades', 'Other vegetables', 'Oils']
+[428] sardinhas-assadas | Sardinhas assadas | Portuguese | serv=280 plate=325 | cal100=158.9 calSrv=444.9 carbSrv=40.2 protSrv=25.0 fatSrv=21.2
+      cats: ['Oily fish', 'Bread & rolls', 'Peppers & nightshades', 'Other vegetables', 'Oils', 'Salt & seasonings']
+[429] pastel-de-nata | Pastel de nata | Portuguese | serv=80 plate=378 | cal100=231.0 calSrv=184.8 carbSrv=21.8 protSrv=7.3 fatSrv=7.7
+      cats: ['Baked snacks & pastries', 'Eggs', 'Sugar & sweeteners', 'Milk', 'Flours', 'Cream & butter']
+[430] caldeirada-portuguesa | Caldeirada de peixe | Portuguese | serv=380 plate=479 | cal100=110.5 calSrv=420.1 carbSrv=39.8 protSrv=34.2 fatSrv=14.7
+      cats: ['White fish', 'Shellfish', 'Starchy vegetables', 'Peppers & nightshades', 'Other vegetables', 'Oils']
+[431] avgolemono-soup | Avgolemono soup | Greek | serv=350 plate=556 | cal100=110.9 calSrv=388.2 carbSrv=34.9 protSrv=26.6 fatSrv=16.0
+      cats: ['Refined grains', 'Poultry', 'Eggs', 'Citrus', 'Prepared soups & broths', 'Salt & seasonings']
+[432] dolmades | Dolmades (stuffed grape leaves) | Greek | serv=220 plate=252 | cal100=129.2 calSrv=284.2 carbSrv=35.8 protSrv=5.0 fatSrv=15.1
+      cats: ['Leafy greens', 'Refined grains', 'Fresh herbs', 'Citrus', 'Oils', 'Pickled vegetables']
+[433] saganaki | Saganaki | Greek | serv=180 plate=203 | cal100=194.0 calSrv=349.3 carbSrv=33.4 protSrv=9.7 fatSrv=21.4
+      cats: ['Aged cheese', 'Flours', 'Oils', 'Citrus', 'Salt & seasonings']
+[434] keftedes | Keftedes | Greek | serv=300 plate=293 | cal100=214.4 calSrv=643.1 carbSrv=41.7 protSrv=36.3 fatSrv=36.7
+      cats: ['Red meat', 'Bread & rolls', 'Eggs', 'Fresh herbs', 'Salt & seasonings', 'Oils', 'Other vegetables']
+[435] fasolada | Fasolada | Greek | serv=350 plate=318 | cal100=126.5 calSrv=442.7 carbSrv=53.5 protSrv=17.1 fatSrv=20.0
+      cats: ['Legumes', 'Other vegetables', 'Peppers & nightshades', 'Oils', 'Fresh herbs', 'Salt & seasonings']
+[436] shchi-russian | Shchi (cabbage soup) | Russian | serv=350 plate=498 | cal100=112.7 calSrv=394.3 carbSrv=37.5 protSrv=26.8 fatSrv=15.7
+      cats: ['Leafy greens', 'Other vegetables', 'Red meat', 'Starchy vegetables', 'Fermented dairy', 'Fresh herbs']
+[437] vinaigrette-russian | Vinegret | Russian | serv=250 plate=385 | cal100=136.0 calSrv=339.9 carbSrv=48.7 protSrv=10.7 fatSrv=12.7
+      cats: ['Starchy vegetables', 'Other vegetables', 'Pickled vegetables', 'Legumes', 'Oils', 'Salt & seasonings']
+[438] syrniki | Syrniki | Russian | serv=200 plate=293 | cal100=173.3 calSrv=346.7 carbSrv=30.5 protSrv=14.0 fatSrv=19.6
+      cats: ['Fresh cheese', 'Eggs', 'Flours', 'Sugar & sweeteners', 'Cream & butter', 'Berries']
+[439] medovik-cake | Medovik (honey cake) | Russian | serv=150 plate=288 | cal100=181.9 calSrv=272.9 carbSrv=25.1 protSrv=11.2 fatSrv=14.3
+      cats: ['Flours', 'Eggs', 'Sugar & sweeteners', 'Cream & butter', 'Fermented dairy', 'Jams & preserves']
+[440] beef-tongue-salad-russian | Tongue salad with horseradish | Russian | serv=220 plate=218 | cal100=185.8 calSrv=408.7 carbSrv=16.2 protSrv=25.1 fatSrv=27.7
+      cats: ['Organ meats', 'Other vegetables', 'Fresh herbs', 'Sauces', 'Oils', 'Salt & seasonings']
+[441] golabki-polish | Gołąbki | Polish | serv=350 plate=276 | cal100=143.5 calSrv=502.4 carbSrv=47.3 protSrv=36.7 fatSrv=18.5
+      cats: ['Leafy greens', 'Refined grains', 'Red meat', 'Other vegetables', 'Sauces', 'Salt & seasonings']
+[442] mizeria-cucumber-salad | Mizeria | Polish | serv=150 plate=263 | cal100=86.9 calSrv=130.3 carbSrv=13.4 protSrv=7.5 fatSrv=5.6
+      cats: ['Other vegetables', 'Fermented dairy', 'Sugar & sweeteners', 'Fresh herbs', 'Salt & seasonings']
+[443] makowiec | Makowiec | Polish | serv=130 plate=166 | cal100=336.5 calSrv=437.4 carbSrv=46.1 protSrv=13.6 fatSrv=24.1
+      cats: ['Flours', 'Seeds', 'Eggs', 'Sugar & sweeteners', 'Dried fruits', 'Cream & butter']
+[444] placki-ziemniaczane | Placki ziemniaczane | Polish | serv=220 plate=390 | cal100=161.5 calSrv=355.3 carbSrv=36.7 protSrv=13.1 fatSrv=17.9
+      cats: ['Starchy vegetables', 'Eggs', 'Flours', 'Oils', 'Fermented dairy', 'Salt & seasonings']
+[445] sernik-polish | Sernik | Polish | serv=140 plate=193 | cal100=313.2 calSrv=438.5 carbSrv=38.9 protSrv=15.7 fatSrv=24.8
+      cats: ['Fresh cheese', 'Eggs', 'Sugar & sweeteners', 'Flours', 'Cream & butter', 'Baked snacks & pastries']
+[446] halaszle-hungarian | Halászlé | Hungarian | serv=400 plate=515 | cal100=95.8 calSrv=383.2 carbSrv=26.9 protSrv=24.9 fatSrv=20.1
+      cats: ['Freshwater fish', 'Peppers & nightshades', 'Other vegetables', 'Ground spices', 'Prepared soups & broths', 'Oils']
+[447] langos | Lángos | Hungarian | serv=220 plate=328 | cal100=168.5 calSrv=370.7 carbSrv=28.4 protSrv=15.2 fatSrv=22.5
+      cats: ['Flours', 'Oils', 'Aged cheese', 'Fermented dairy', 'Other vegetables', 'Salt & seasonings']
+[448] toltott-kaposzta | Töltött káposzta | Hungarian | serv=380 plate=246 | cal100=225.8 calSrv=858.1 carbSrv=48.9 protSrv=57.4 fatSrv=47.1
+      cats: ['Pickled vegetables', 'Red meat', 'Refined grains', 'Processed meat', 'Sauces', 'Ground spices']
+[449] paprikas-krumpli | Paprikás krumpli | Hungarian | serv=350 plate=283 | cal100=168.5 calSrv=589.7 carbSrv=51.2 protSrv=18.1 fatSrv=36.6
+      cats: ['Starchy vegetables', 'Processed meat', 'Peppers & nightshades', 'Ground spices', 'Oils', 'Fresh herbs']
+
+# end — 150 meals

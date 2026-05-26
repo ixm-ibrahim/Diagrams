@@ -818,6 +818,11 @@
   gap: var(--space-1);
   margin: var(--space-2) 0;
 }
+/* Class+attribute selector wins over the bare class above, restoring
+ * `hidden`-attribute semantics. Without this, `modesRow.hidden = true`
+ * from applyViewLevelVisibility() is silently overridden by the
+ * `display: flex` on the same element. */
+.filter-modes-row[hidden] { display: none; }
 .filter-mode-pair {
   display: flex;
   align-items: center;
@@ -1454,6 +1459,50 @@
   padding: 0;
 }
 
+/* Batch 8: sticky "Collapse all" button. Sits as the first child of
+ * .rail-sections so it pins to the top of the rail's scroll viewport
+ * once .rail-chrome scrolls away. Ghost-button styling matches the
+ * existing .rail-collapse pattern — transparent at rest (visually
+ * quiet), surface fill on hover/focus. Uses var(--color-surface) for
+ * the hover background so when the button is sticky-stuck over a
+ * scrolled section header, the underlying text doesn't bleed through. */
+.rail-collapse-all {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 4px var(--space-3);
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background var(--duration-fast, 0.15s) var(--ease-out, ease),
+              color      var(--duration-fast, 0.15s) var(--ease-out, ease);
+}
+.rail-collapse-all:hover,
+.rail-collapse-all:focus-visible {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+/* Batch 10: keep the button's layout slot reserved (so sections don't
+ * shift when the button toggles) but make it invisible + non-interactive.
+ * Overriding the `hidden` attribute's implicit display:none on purpose. */
+.rail-collapse-all[hidden] {
+  display: flex;
+  visibility: hidden;
+  pointer-events: none;
+}
+.rail-collapse-all-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
 /* --- Phase 11 polish: rail resize handles (desktop-only) --- */
 
 .rail-resize {
@@ -1886,6 +1935,49 @@ body.axis-drag-locked * {
   margin-top: 4px;
 }
 
+/* --- Detail panel: filtered-out banner --- */
+/* Tester feedback: when the selected item is currently filtered out
+ * of the view, the panel shows this banner at the top instead of the
+ * bottom "Why this is greyed out" block.
+ *
+ * Batch 11: switched to the danger palette per tester feedback — the
+ * old yellow/accent banner blended into the rail and was easy to miss.
+ * Red border + tinted background reads unmistakably as "this item is
+ * being hidden by your filters". */
+.detail-filtered-out {
+  border: 1px solid var(--color-danger);
+  border-left-width: 4px;
+  border-radius: var(--radius-md, 8px);
+  background: color-mix(in srgb, var(--color-danger) 12%, var(--color-surface-2));
+  padding: var(--space-3);
+}
+.detail-filtered-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+.detail-filtered-icon {
+  font-size: 1.1em;
+  color: var(--color-danger);
+}
+.detail-filtered-blurb {
+  margin: 6px 0 0 0;
+  font-size: var(--font-size-xs);
+  line-height: 1.45;
+}
+.detail-filtered-reasons {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+.detail-filtered-reasons li + li {
+  margin-top: 3px;
+}
+
 /* --- Dietary restrictions (Phase 13.5) --- */
 
 .restrictions {
@@ -2027,6 +2119,26 @@ body.axis-drag-locked * {
   white-space: nowrap;
 }
 
+/* Section-internal "Collapse all" — sticky just below the rail-level
+ * collapse-all (top: 28px clears it), shown only while a branch is open.
+ * Opaque rail-surface background so scrolled tree rows don't bleed through. */
+.ingredient-filter-collapse-all {
+  position: sticky;
+  top: 28px;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0;
+  margin: 0 0 2px;
+  background: var(--color-surface);
+}
+.ingredient-filter-collapse-all[hidden] { display: none; }
+.ingredient-collapse-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .ingredient-filter-tree {
   display: flex;
   flex-direction: column;
@@ -2162,6 +2274,12 @@ body.axis-drag-locked * {
 
 .threshold-modes .seg-btn {
   flex: 1 1 auto;
+}
+
+.threshold-restore-coloring {
+  align-self: flex-start;
+  margin-top: calc(var(--space-1) * -1);
+  font-size: var(--font-size-xs);
 }
 
 .threshold-profiles {
@@ -2641,6 +2759,16 @@ body.axis-drag-locked * {
 
 .data-table tbody tr {
   cursor: pointer;
+  /* Perf: the meal view renders ~3,600 rows. content-visibility lets the
+   * browser skip layout/paint for rows scrolled out of view, which is what
+   * made switching INTO the table (and repainting over it when an overlay
+   * like the Columns menu opens) feel laggy. Safe here only because the
+   * table is `table-layout: fixed` with explicit per-column widths, so a
+   * skipped row's content can't affect column sizing. contain-intrinsic-size
+   * is the assumed row height used for the scrollbar before a row renders
+   * (~37px: 8px×2 padding + 14px line + 1px border). */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 37px;
 }
 
 .data-table tbody tr:hover {
@@ -2655,6 +2783,20 @@ body.axis-drag-locked * {
 
 .data-table tbody tr.is-scored:hover {
   filter: brightness(1.08);
+}
+
+/* Tester feedback: the selected row is exempted from the hidden
+ * filter so the user can still see what they had picked when a new
+ * filter tightening would otherwise eliminate it. We dim it via
+ * opacity + desaturate so it reads as a "ghost row" — the .is-selected
+ * outline still wins so the selection is unambiguous. */
+.data-table tbody tr.is-filtered-out {
+  opacity: 0.45;
+  filter: grayscale(0.7);
+}
+.data-table tbody tr.is-filtered-out:hover {
+  opacity: 0.7;
+  filter: grayscale(0.5);
 }
 
 .composite-cell {
@@ -3037,6 +3179,30 @@ body.axis-drag-locked * {
   text-decoration: underline;
 }
 .btn-link:hover { color: var(--color-accent-hover); }
+
+/* Batch 4: Remix axis toggle (Ingredients ⇄ Categories). Mirrors the
+ * left-rail filter toggles' compact sizing; the .seg-group wrapper supplies
+ * the border + rounding. */
+.remix-mode-toggle {
+  display: inline-flex;
+  margin: var(--space-1) 0 var(--space-2);
+}
+.remix-mode-toggle .seg-btn {
+  border-radius: 0;
+  border: 0;
+  border-right: 1px solid var(--color-border);
+  min-height: 24px;
+  padding: 2px 10px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+.remix-mode-toggle .seg-btn:last-child { border-right: 0; }
+.remix-mode-toggle .seg-btn.is-active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
 
 .remix-blurb {
   font-size: var(--font-size-xs);
@@ -4010,8 +4176,10 @@ body.axis-drag-locked * {
   min-width: 200px;
   max-width: 280px;
   min-height: 36px;
-  /* Phase 40 round 2: leave room for the larger custom clear button. */
-  padding-right: 36px;
+  /* Phase 40 round 2: leave room for the larger custom clear button.
+   * Batch 7: extra room on the right when the spinner is visible — it
+   * stacks next to the clear button at right: 32px. */
+  padding-right: 60px;
 }
 
 /* Phase 40 round 2: hide the native (small, finicky) clear button. The
@@ -4045,6 +4213,36 @@ body.axis-drag-locked * {
   color: var(--color-text);
 }
 .search-clear[hidden] { display: none; }
+
+/* Batch 7: inline spinner visible while the search input is debouncing
+ * a keystroke or running its substring scan. Sits just left of the
+ * clear button so the two don't overlap. Reuses the boot/loading
+ * spinner keyframes — same animation, smaller size to fit inside the
+ * input. */
+.search-spinner {
+  position: absolute;
+  right: 32px;
+  /* `top: calc(...)` for centering — using transform: translateY(-50%)
+   * would be clobbered by the boot-spin keyframe's transform: rotate. */
+  top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border, #2a2e36);
+  border-top-color: var(--color-accent, #6aa9ff);
+  animation: boot-spin 0.9s linear infinite;
+  pointer-events: none;
+}
+.search-spinner[hidden] { display: none; }
+
+/* Batch 7: hint shown above the result rows when the includes-scan
+ * was capped at MAX_SCAN. Visual rhythm matches the empty-state line. */
+.search-cap-notice {
+  padding: 6px 10px 4px;
+  font-size: var(--font-size-xs, 11px);
+  border-bottom: 1px solid var(--color-border);
+  margin: 0 0 4px;
+}
 
 .search-dropdown {
   position: fixed;
@@ -4149,6 +4347,11 @@ body.axis-drag-locked * {
   z-index: var(--z-overlay);
   min-width: 220px;
   max-width: min(320px, calc(100vw - 16px));
+  /* Tester feedback: Show all can produce a long list. Cap height and
+   * scroll inside so the menu always fits the viewport without the
+   * positioning math fighting an oversized rect. */
+  max-height: min(70vh, 560px);
+  overflow-y: auto;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -4206,6 +4409,32 @@ body.axis-drag-locked * {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* Tester feedback: pick-menu now pages with Show more / Show all when
+ * the cluster has more candidates than fit in one page. Footer mirrors
+ * the search dropdown's footer styling so the two read consistently. */
+.pick-menu-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-1);
+}
+.pick-menu-more {
+  background: transparent;
+  border: 0;
+  padding: 6px var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--radius-sm, 4px);
+}
+.pick-menu-more:hover {
+  background: var(--color-surface-2);
+  color: var(--color-accent-hover);
 }
 
 /* --- Phase 40.6: Size axis row in axis-controls --- */
@@ -4302,6 +4531,47 @@ body.axis-drag-locked * {
               width 180ms var(--ease-out), height 180ms var(--ease-out);
 }
 :root[data-theme="light"] .tutorial-dim { background: rgba(20, 23, 28, 0.45); }
+
+/* Batch 9.5: when a slide opts into canvas interactivity, the dim
+ * panels stop swallowing pointer events. The ring + card still sit on
+ * top, but the user can click 3D dots underneath the dimmed regions.
+ * The ring and card hold their own `pointer-events: auto`. */
+.tutorial.is-canvas-interactive .tutorial-dim { pointer-events: none; }
+
+/* Batch 9.3: per-slide callout dots. Anchored absolute against the
+ * tutorial root (which fills the viewport). Tiny pulsing dot with a
+ * concentric ring — visually distinct from the spotlight ring so the
+ * user reads them as "look here too" not "the main target". */
+.tutorial-callout {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow:
+    0 0 0 4px rgba(0, 0, 0, 0.35),
+    0 0 0 6px var(--color-focus-ring);
+  pointer-events: none;
+  z-index: 1;
+  animation: tutorial-callout-pulse 1.4s ease-in-out infinite;
+}
+.tutorial-callout[hidden] { display: none; }
+@keyframes tutorial-callout-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 4px rgba(0, 0, 0, 0.35),
+      0 0 0 6px var(--color-focus-ring),
+      0 0 0 10px transparent;
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow:
+      0 0 0 4px rgba(0, 0, 0, 0.35),
+      0 0 0 8px var(--color-focus-ring),
+      0 0 14px 4px var(--color-focus-ring);
+  }
+}
 
 .tutorial-ring {
   position: absolute;
@@ -4446,6 +4716,77 @@ body.axis-drag-locked * {
   transform: scale(1.4);
 }
 
+/* Batch 5: per-slide interactive checklist. Steps gate sequentially —
+ * completed = struck through with a filled check, active = accent ring, locked
+ * = dimmed. */
+.tutorial-tasks {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tutorial-tasks[hidden] { display: none; }
+.tutorial-task {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  line-height: 1.35;
+}
+.tutorial-task-mark {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.tutorial-task.is-active .tutorial-task-mark {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.tutorial-task.is-done .tutorial-task-mark {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+.tutorial-task.is-locked { opacity: 0.45; }
+.tutorial-task.is-active .tutorial-task-label {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+.tutorial-task.is-done .tutorial-task-label {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+/* Round 3: transient toast when a slide auto-adjusts app state. */
+.tutorial-toast {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10001;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 8px 14px;
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-pill, 999px);
+  box-shadow: var(--shadow-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease-out, ease);
+}
+.tutorial-toast.is-leaving { opacity: 0; }
+
 .tutorial-actions {
   display: flex;
   align-items: center;
@@ -4480,6 +4821,7 @@ body.axis-drag-locked * {
 
 @media (prefers-reduced-motion: reduce) {
   .tutorial-ring { animation: none; }
+  .tutorial-callout { animation: none; }
   .tutorial-dim, .tutorial-ring, .tutorial-card {
     transition: none;
   }

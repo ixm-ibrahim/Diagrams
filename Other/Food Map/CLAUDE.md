@@ -75,6 +75,8 @@ food-map/
 
 **Dataset (Phase 32 final).** 1,362 ingredients across 12 food groups / 66 categories / 368 subcategories. 333 curated meals across 86 cuisine tags. 100 % coverage of the RecipeNLG corpus's category vocabulary. Full breakdown + skipped-scope notes in `docs/data-coverage.md`. Validate anytime with `python scripts/validate_full_dataset.py`.
 
+**Meal `example_ingredients` (tester-feedback Batch 2).** Every meal (`meals.json`, `compositional-meals.json`, `corpus-titled-meals.json`) carries `example_ingredients`: a list of specific ingredient **ids** — the actual ingredients a dish uses, so meals can be filtered/searched by a real held ingredient instead of by category (fixes "searching 'bagels' returns every refined-grain meal"). One+ id per meal category, drawn from that category's members via name/notes/NER evidence (`scripts/gen_meal_example_ingredients.py`, evidence from `unused/docs/corpus-titles.tsv`), plus occasional name-"hero" ids whose category sits outside the meal's list (e.g. banana in "Banana bread"). Every id resolves to a real ingredient. Validate with `python scripts/validate_meal_example_ingredients.py`. The right-rail **Remix** section toggles between editing a meal's broad `ingredient_categories` and its specific `example_ingredients` (`state.remixMode`); both move the dot live via `state.mealDraft` (which carries a `categories` OR `ingredients` list) and save to a category- or ingredient-shape `userMeals` entry.
+
 **No comments that narrate the obvious.** Comment WHY when a constraint, invariant, or workaround isn't visible in the code. Don't comment WHAT — the names already say that. Skip comments referencing the current task or PR.
 
 ## Produce complete files, not diffs

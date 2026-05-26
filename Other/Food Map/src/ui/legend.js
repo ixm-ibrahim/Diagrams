@@ -11,6 +11,7 @@
  */
 
 import { FOOD_GROUPS_BY_HUE, FOOD_GROUP_COLORS } from '../data/schema.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 const RGB_PRIMARIES = [
   { key: 'animal', label: 'Animal', css: 'rgb(255, 0, 0)' },
@@ -65,7 +66,7 @@ export function mountLegend(root, { state } = {}) {
 
   function render() {
     if (!isOpen()) { renderCollapsed(root, open); return; }
-    if (mode() === 'score') { renderScore(root, close); return; }
+    if (mode() === 'score') { renderScore(root, close, state); return; }
     if (scheme() === 'food_group') {
       renderFoodGroups(root, close, setScheme, hiddenSet(), toggleHidden, setAllHidden);
     } else {
@@ -75,7 +76,19 @@ export function mountLegend(root, { state } = {}) {
 
   render();
   if (state) {
-    state.subscribe(s => s.thresholdMode, render);
+    /* Batch 10: entering score mode auto-expands the legend if it was
+     * collapsed — the gradient + restore-coloring button only make
+     * sense when the user can see them. Only fires on the transition
+     * INTO score (not on every render) so a user who explicitly
+     * collapses the legend while in score mode isn't fought. */
+    let lastMode = mode();
+    state.subscribe(s => s.thresholdMode, (next) => {
+      if (next === 'score' && lastMode !== 'score' && !isOpen()) {
+        open();
+      }
+      lastMode = next;
+      render();
+    });
     state.subscribe(s => s.colorScheme,   render);
     state.subscribe(s => s.legendOpen,    render);
     state.subscribe(s => s.legendHidden,  render);
@@ -218,7 +231,7 @@ function wireBulkToggle(root, allKeys, setAllHidden) {
   });
 }
 
-function renderScore(root, onClose) {
+function renderScore(root, onClose, state) {
   root.classList.remove('legend-collapsed');
   root.innerHTML = `
     <div class="legend-header">
@@ -231,8 +244,20 @@ function renderScore(root, onClose) {
       <span class="muted">Far</span>
     </div>
     <p class="legend-note muted">Score = RMS distance from each nutrient's target.</p>
+    <button class="threshold-restore-coloring btn-link" type="button"
+            title="Switch back to Filter mode so dots keep their food-group colors. Threshold values are preserved.">
+      ↻ Restore normal coloring
+    </button>
   `;
   root.querySelector('.legend-close').addEventListener('click', onClose);
+  /* Batch 10: mirrors the same button in nutrient-thresholds.js — gives
+   * the user a one-click out from Score mode without having to scroll
+   * the rail to find the Filter tab. State guard kept defensive for
+   * the legend's no-state code path (used in tests / standalone). */
+  const restore = root.querySelector('.threshold-restore-coloring');
+  if (restore && state) {
+    restore.addEventListener('click', () => state.set({ thresholdMode: 'filter' }));
+  }
 }
 
 function renderCollapsed(root, onExpand) {
@@ -241,10 +266,3 @@ function renderCollapsed(root, onExpand) {
   root.querySelector('.legend-expand').addEventListener('click', onExpand);
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

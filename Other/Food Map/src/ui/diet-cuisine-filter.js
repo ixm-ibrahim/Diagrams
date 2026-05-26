@@ -19,6 +19,7 @@
 
 import { createRailSection } from './left-rail.js';
 import { DIETS } from '../data/schema.js';
+import { escapeHtml, escapeAttr } from '../util/dom.js';
 
 export function mountDietCuisineFilter(host, { state, meals = [] }) {
   if (!host) return;
@@ -42,15 +43,16 @@ export function mountDietCuisineFilter(host, { state, meals = [] }) {
   body.classList.add('diet-cuisine-filter');
   body.innerHTML = `
     <p class="diet-cuisine-help muted">
-      Affects the Meals view only. Diet matches via the meal's
-      compatibility tags; Cuisine is an exact name match.
+      Affects the Meals view only. Diets and cuisines are treated as
+      one flat selection — AND/OR + ANY/ALL apply to every selected
+      item regardless of which list it came from.
     </p>
     <div class="filter-modes-row">
       <div class="filter-mode-pair">
         <span class="filter-mode-label muted">Allow extras:</span>
         <div class="filter-scope-toggle seg-group" role="group"
-             aria-label="ANY (other diets/cuisines allowed) vs ALL (only the selected)"
-             title="ANY — meal's diet_compatibility / cuisine can include others. ALL — meal's properties must be a subset of your selection.">
+             aria-label="ANY (extras allowed) vs ALL (only the selected)"
+             title="ANY — meal's diet_compatibility / cuisine can include items outside your selection. ALL — every diet / cuisine the meal carries must be in your selection (no extras).">
           <button type="button" class="seg-btn seg-btn-sm" data-scope="any">ANY</button>
           <button type="button" class="seg-btn seg-btn-sm" data-scope="all">ALL</button>
         </div>
@@ -58,8 +60,8 @@ export function mountDietCuisineFilter(host, { state, meals = [] }) {
       <div class="filter-mode-pair">
         <span class="filter-mode-label muted">Combine:</span>
         <div class="filter-match-toggle seg-group" role="group"
-             aria-label="Combine diet and cuisine with OR (either) vs AND (both)"
-             title="OR — meal passes if it matches the diet OR the cuisine. AND — meal must match BOTH (default).">
+             aria-label="OR (at least one selected item present) vs AND (every selected item present)"
+             title="OR — meal carries at least one selected diet or cuisine. AND — meal carries every selected diet and the selected cuisine.">
           <button type="button" class="seg-btn seg-btn-sm" data-match="any">OR</button>
           <button type="button" class="seg-btn seg-btn-sm" data-match="all">AND</button>
         </div>
@@ -107,6 +109,20 @@ export function mountDietCuisineFilter(host, { state, meals = [] }) {
   const cuisineListEl = body.querySelector('.diet-cuisine-list-cuisine');
   const matchGroup = body.querySelector('.filter-match-toggle');
   const scopeGroup = body.querySelector('.filter-scope-toggle');
+  const modesRow   = body.querySelector('.filter-modes-row');
+
+  /* Batch 14 follow-up: hide the ENTIRE section outside meals view.
+   * Ingredients carry no diet/cuisine fields (0/1362 in the dataset),
+   * and the categories view aggregates from ingredients, so neither
+   * view can meaningfully apply this filter. Showing an empty,
+   * inactive section just adds rail clutter and confuses users.
+   * (The earlier Batch 4 behavior only hid the AND/OR row.) */
+  function applyViewLevelVisibility() {
+    const level = state.get('viewLevel') || 'individual';
+    section.hidden = level !== 'meal';
+  }
+  state.subscribe(s => s.viewLevel, applyViewLevelVisibility);
+  applyViewLevelVisibility();
 
   function refreshToggles() {
     const matchCur = state.get('dietCuisineFilterMatch') || 'all';
@@ -190,10 +206,3 @@ export function mountDietCuisineFilter(host, { state, meals = [] }) {
   state.subscribe(s => s.cuisineFilter, refresh);
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }

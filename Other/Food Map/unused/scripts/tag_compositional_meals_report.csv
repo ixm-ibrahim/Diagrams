@@ -1,0 +1,697 @@
+id,name,tags,rule
+corpus-sliced-apples,Sliced apples,"dinner,lunch",default main → lunch + dinner
+corpus-pancakes,Pancakes (with milk),breakfast,breakfast
+corpus-compound-butter,Compound butter,"dinner,lunch",default main → lunch + dinner
+corpus-poached-pears,Poached pears,"dinner,lunch",default main → lunch + dinner
+corpus-b-chamel-base,Béchamel base,"dinner,lunch",default main → lunch + dinner
+corpus-glass-of-milk,Glass of milk,"dinner,lunch",default main → lunch + dinner
+corpus-fruit-nut-platter,Fruit & nut platter,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-apples,Buttered apples,"dinner,lunch",default main → lunch + dinner
+corpus-mixed-fruit-salad,Mixed fruit salad,"dinner,lunch",default main → lunch + dinner
+corpus-berry-peach-bowl,Berry & peach bowl,"dinner,lunch",default main → lunch + dinner
+corpus-pastry-dough,Pastry dough,"dinner,lunch",default main → lunch + dinner
+corpus-almond-cookies,Almond cookies (buttery),dessert,dessert
+corpus-buttered-nuts,Buttered nuts,"dinner,lunch",default main → lunch + dinner
+corpus-ricotta-with-fruit,Ricotta with fruit,"dinner,lunch",default main → lunch + dinner
+corpus-nut-cake,Nut cake,dessert,dessert
+corpus-mixed-berries,Mixed berries,"dinner,lunch",default main → lunch + dinner
+corpus-waldorf-style-salad,Waldorf-style salad,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-butter-saut,Apple-walnut butter sauté,"dinner,lunch",default main → lunch + dinner
+corpus-roasted-vegetables,Roasted vegetables,"dinner,lunch",default main → lunch + dinner
+corpus-pound-cake,Pound cake,dessert,dessert
+corpus-shortbread-cookies,Shortbread cookies,dessert,dessert
+corpus-pie-crust,Pie crust,dessert,dessert
+corpus-saut-ed-vegetables,Sautéed vegetables,"dinner,lunch",default main → lunch + dinner
+corpus-steamed-vegetable-medley,Steamed vegetable medley,"dinner,lunch",default main → lunch + dinner
+corpus-sangria,Sangria,snack,drink → snack
+corpus-mulled-apple-wine,Mulled apple wine,"dinner,lunch",default main → lunch + dinner
+corpus-beef-vegetables,Beef & vegetables,"dinner,lunch",default main → lunch + dinner
+corpus-glass-of-wine,Glass of wine,"dinner,lunch",default main → lunch + dinner
+corpus-apple-pancakes-5,Apple pancakes (with milk),breakfast,breakfast
+corpus-apple-walnut-muffin,Apple-walnut muffin,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-cookies,Peanut butter cookies (buttery),dessert,dessert
+corpus-fruit-clafoutis,Fruit clafoutis,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-nut-sauce,Creamy nut sauce,"dinner,lunch",default main → lunch + dinner
+corpus-b-chamel-2,Béchamel (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-mixed-nuts,Mixed nuts,"dinner,lunch",default main → lunch + dinner
+corpus-berry-sangria,Berry sangria,snack,drink → snack
+corpus-nutty-buttered-milk-bread,Nutty buttered milk bread,"dinner,lunch",default main → lunch + dinner
+corpus-nut-shortbread,Nut shortbread (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-roasted-root-medley,Roasted root medley,"dinner,lunch",default main → lunch + dinner
+corpus-strawberry-apple-compote,Strawberry-apple compote,"dinner,lunch",default main → lunch + dinner
+corpus-potato-pancakes,Potato pancakes,breakfast,breakfast
+corpus-cheesecake,Cheesecake,dessert,dessert
+corpus-cheese-charcuterie,Cheese & charcuterie,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-oatmeal,"Peanut butter oatmeal (buttery, with milk)",breakfast,breakfast
+corpus-yogurt-flatbread,Yogurt flatbread,"dinner,lunch",default main → lunch + dinner
+corpus-greens-potato-salad,Greens & potato salad,"dinner,lunch",default main → lunch + dinner
+corpus-sweet-potato-fritter,Sweet-potato fritter,"dinner,lunch",default main → lunch + dinner
+corpus-apple-egg-pancake,Apple-egg pancake,breakfast,breakfast
+corpus-whole-wheat-apple-crisp,Whole-wheat apple crisp,"dinner,lunch",default main → lunch + dinner
+corpus-pancake-batter,Pancake batter,breakfast,breakfast
+corpus-cheesy-roasted-veg,Cheesy roasted veg,"dinner,lunch",default main → lunch + dinner
+corpus-apple-turnover,Apple turnover,"dinner,lunch",default main → lunch + dinner
+corpus-sour-cream-pound-cake,Sour cream pound cake,dessert,dessert
+corpus-peanut-milk-oats,Peanut milk oats,"dinner,lunch",default main → lunch + dinner
+corpus-apple-pecan-cake,Apple-pecan cake,dessert,dessert
+corpus-nutty-buttered-eggs,Nutty buttered eggs,"dinner,lunch",default main → lunch + dinner
+corpus-fruit-smoothie,Fruit smoothie,snack,drink → snack
+corpus-apple-milkshake,Apple milkshake,snack,drink → snack
+corpus-apple-egg-butter-dessert,Apple-egg butter dessert,dessert,dessert
+corpus-yorkshire-pudding,Yorkshire pudding,"dinner,lunch",default main → lunch + dinner
+corpus-egg-with-milk,Egg with milk,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-oatmeal-2,Peanut butter oatmeal,breakfast,breakfast
+corpus-whole-wheat-cookies,Whole-wheat cookies,dessert,dessert
+corpus-ricotta-plate,Ricotta plate,"dinner,lunch",default main → lunch + dinner
+corpus-beef-brown-rice,Beef & brown rice,"dinner,lunch",default main → lunch + dinner
+corpus-strawberries-with-cream,Strawberries with cream,"dinner,lunch",default main → lunch + dinner
+corpus-whipped-peanut-butter,Whipped peanut butter,"dinner,lunch",default main → lunch + dinner
+corpus-beef-beans,Beef & beans,"dinner,lunch",default main → lunch + dinner
+corpus-berry-nut-fruit-bowl,Berry-nut fruit bowl,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-vegetables,Buttered vegetables,"dinner,lunch",default main → lunch + dinner
+corpus-beef-stir-fry,Beef stir-fry,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-stewed-greens,Bacon-stewed greens,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-bread,Buttered bread,"dinner,lunch",default main → lunch + dinner
+corpus-garlic-bread,Garlic bread,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-vegetables,Chicken & vegetables,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-with-apples,Chicken with apples (with vegetables),"dinner,lunch",default main → lunch + dinner
+corpus-buttered-nut-bread,Buttered nut bread,"dinner,lunch",default main → lunch + dinner
+corpus-fruit-cobbler,Fruit cobbler,dessert,dessert
+corpus-creamy-cheese-spread,Creamy cheese spread,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-rum,Buttered rum,"dinner,lunch",default main → lunch + dinner
+corpus-cooked-lentils,Cooked lentils,"dinner,lunch",default main → lunch + dinner
+corpus-beef-greens-salad,Beef & greens salad,"dinner,lunch",default main → lunch + dinner
+corpus-carbonara,"Carbonara (with cheddar, with greens, with bacon)","dinner,lunch",default main → lunch + dinner
+corpus-nutty-milk-bread,Nutty milk bread,"dinner,lunch",default main → lunch + dinner
+corpus-cr-pes-2,"Crêpes (buttery, with milk)","dinner,lunch",default main → lunch + dinner
+corpus-cake,Cake,dessert,dessert
+corpus-vegetable-fritters,Vegetable fritters,dessert,dessert
+corpus-zucchini-pancakes,Zucchini pancakes,breakfast,breakfast
+corpus-oat-cookies-2,Oat cookies,dessert,dessert
+corpus-coffee,Coffee,"dinner,lunch",default main → lunch + dinner
+corpus-apple-milk-toast,Apple milk toast,"dinner,lunch",default main → lunch + dinner
+corpus-sliced-bread,Sliced bread,"dinner,lunch",default main → lunch + dinner
+corpus-berry-cheese-toast,Berry cheese toast,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-peanut-sauce,Creamy peanut sauce,"dinner,lunch",default main → lunch + dinner
+corpus-cr-pes-4,Crêpes,"dinner,lunch",default main → lunch + dinner
+corpus-pasta-dough,Pasta dough,"dinner,lunch",default main → lunch + dinner
+corpus-egg-noodles,Egg noodles,"dinner,lunch",default main → lunch + dinner
+corpus-beef-with-ricotta,Beef with ricotta,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-veg-potatoes,Buttered veg & potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-apple-potato-bake,Apple potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-french-custard,French custard,dessert,dessert
+corpus-cheese-nut-plate,Cheese & nut plate,"dinner,lunch",default main → lunch + dinner
+corpus-berry-fruit-veg-salad,Berry fruit-veg salad,"dinner,lunch",default main → lunch + dinner
+corpus-egg-cheese-sandwich,Egg & cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-nut-meringue,Nut meringue,dessert,dessert
+corpus-buttered-brown-rice,Buttered brown rice,"dinner,lunch",default main → lunch + dinner
+corpus-irish-coffee,Irish coffee,"dinner,lunch",default main → lunch + dinner
+corpus-caprese-with-veg,Caprese with veg,"dinner,lunch",default main → lunch + dinner
+corpus-sweet-potato-nut-bread,Sweet potato nut bread,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-with-ricotta,Bacon with ricotta,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-potato-gratin,Cheesy potato gratin (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-apple-dumplings,Apple dumplings,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-beef-salad,Bacon-beef salad,"dinner,lunch",default main → lunch + dinner
+corpus-bread-pudding-base,Bread pudding base,dessert,dessert
+corpus-egg-with-potato,Egg with potato,"dinner,lunch",default main → lunch + dinner
+corpus-ricotta-with-apple,Ricotta with apple,"dinner,lunch",default main → lunch + dinner
+corpus-lentil-meat-salad-with-greens,Lentil-meat salad with greens,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-milkshake,Peanut butter milkshake,snack,drink → snack
+corpus-berry-pancakes,"Berry pancakes (buttery, with milk)",breakfast,breakfast
+corpus-egg-cheese-apple-sandwich,Egg-cheese-apple sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-broccoli-grain-bowl,Broccoli grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-coffee-with-cream,Coffee with cream,"dinner,lunch",default main → lunch + dinner
+corpus-mixed-meat-butter-braise,Mixed meat butter braise,"dinner,lunch",default main → lunch + dinner
+corpus-apple-juice-with-fruit,Apple juice with fruit,snack,drink → snack
+corpus-berry-nut-apple-crisp,Berry-nut apple crisp,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-sweet-potato,Peanut sweet potato,"dinner,lunch",default main → lunch + dinner
+corpus-pecan-zucchini-bread,Pecan-zucchini bread,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-pasta,Cheesy pasta,"dinner,lunch",default main → lunch + dinner
+corpus-ricotta-with-berry,Ricotta with berry,"dinner,lunch",default main → lunch + dinner
+corpus-fruit-punch,Fruit punch,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-stuffed-french-toast,Cheese-stuffed French toast,breakfast,breakfast
+corpus-whole-wheat-nut-cookies,Whole-wheat nut cookies,dessert,dessert
+corpus-buttered-chicken-veg,Buttered chicken & veg,"dinner,lunch",default main → lunch + dinner
+corpus-cooked-pasta,Cooked pasta,"dinner,lunch",default main → lunch + dinner
+corpus-tossed-salad,Tossed salad,"dinner,lunch",default main → lunch + dinner
+corpus-garden-salad,Garden salad,"dinner,lunch",default main → lunch + dinner
+corpus-saut-ed-greens-with-veg,Sautéed greens with veg,"dinner,lunch",default main → lunch + dinner
+corpus-two-cheese-veg-bake,Two-cheese veg bake,"dinner,lunch",default main → lunch + dinner
+corpus-ricotta-with-apple-2,Ricotta with apple (with vegetables),"dinner,lunch",default main → lunch + dinner
+corpus-omelet,Omelet (with milk),breakfast,breakfast
+corpus-berry-ricotta-with-fruit,Berry ricotta with fruit,"dinner,lunch",default main → lunch + dinner
+corpus-shrimp-with-feta,Shrimp with feta (with vegetables),"dinner,lunch",default main → lunch + dinner
+corpus-buttered-mashed-potatoes,Buttered mashed potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cinnamon-roll,Apple cinnamon roll,breakfast,breakfast
+corpus-hollandaise-sauce,Hollandaise sauce,"dinner,lunch",default main → lunch + dinner
+corpus-egg-yolk-butter-sauce,Egg yolk butter sauce,"dinner,lunch",default main → lunch + dinner
+corpus-apple-with-milk,Apple with milk,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-chicken-potato-bake,Cheesy chicken potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cream-cheese-spread,Apple cream cheese spread,"dinner,lunch",default main → lunch + dinner
+corpus-potato-custard,Potato custard,dessert,dessert
+corpus-pecan-pancakes,Pecan pancakes,breakfast,breakfast
+corpus-oat-nut-cookies,Oat-nut cookies,dessert,dessert
+corpus-buttered-beans,Buttered beans,"dinner,lunch",default main → lunch + dinner
+corpus-spritzer-with-fruit,Spritzer with fruit,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-potatoes,Chicken & potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-b-chamel,Béchamel,"dinner,lunch",default main → lunch + dinner
+corpus-apple-yogurt,Apple yogurt,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cream-sauce,Apple cream sauce,"dinner,lunch",default main → lunch + dinner
+corpus-berry-smoothie-with-fruit,Berry smoothie with fruit,snack,drink → snack
+corpus-apple-mimosa,Apple mimosa,"dinner,lunch",default main → lunch + dinner
+corpus-beef-with-apples,Beef with apples (with vegetables),"dinner,lunch",default main → lunch + dinner
+corpus-apple-with-bread,Apple with bread,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-greens-soup,Creamy greens soup,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-omelet,Cheese omelet,breakfast,breakfast
+corpus-sweet-potato-raisin-bread,Sweet potato raisin bread,"dinner,lunch",default main → lunch + dinner
+corpus-berry-crepes,Berry crepes,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-milk-bread,Apple-walnut milk bread,"dinner,lunch",default main → lunch + dinner
+corpus-shortcrust-pastry,Shortcrust pastry,"dinner,lunch",default main → lunch + dinner
+corpus-roux,Roux,"dinner,lunch",default main → lunch + dinner
+corpus-apple-brandy-butter,Apple-brandy butter,"dinner,lunch",default main → lunch + dinner
+corpus-apple-french-toast,Apple French toast,breakfast,breakfast
+corpus-pickled-bean-potato-salad,Pickled bean potato salad,"dinner,lunch",default main → lunch + dinner
+corpus-nutty-stuffed-bread,Nutty stuffed bread,"dinner,lunch",default main → lunch + dinner
+corpus-cream-cheese-sauce,Cream cheese sauce,"dinner,lunch",default main → lunch + dinner
+corpus-toast-with-juice-milk,Toast with juice & milk,snack,drink → snack
+corpus-cheesy-veg-melt,Cheesy veg melt,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-hash,Bacon hash,"dinner,lunch",default main → lunch + dinner
+corpus-nutty-custard,Nutty custard,dessert,dessert
+corpus-cheesy-mashed-potatoes,Cheesy mashed potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-date-walnut-butter-cake,Date-walnut butter cake,dessert,dessert
+corpus-berry-cocktail,Berry cocktail,snack,drink → snack
+corpus-peanut-butter-spread,Peanut butter spread,"dinner,lunch",default main → lunch + dinner
+corpus-almond-butter,Almond butter,"dinner,lunch",default main → lunch + dinner
+corpus-apple-raisin-muffins,Apple-raisin muffins,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-pancakes,Yogurt pancakes,breakfast,breakfast
+corpus-sour-cream-loaf,Sour cream loaf,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-oat-squares,Peanut butter oat squares,"dinner,lunch",default main → lunch + dinner
+corpus-cream-cheese-nut-spread,Cream cheese nut spread,"dinner,lunch",default main → lunch + dinner
+corpus-berry-apple-yogurt-parfait,Berry-apple yogurt parfait,breakfast,breakfast
+corpus-chicken-with-raisin-veg,Chicken with raisin & veg,"dinner,lunch",default main → lunch + dinner
+corpus-paneer-in-milk,Paneer in milk,"dinner,lunch",default main → lunch + dinner
+corpus-iced-tea-with-juice,Iced tea with juice,snack,drink → snack
+corpus-egg-with-peanut-butter,Egg with peanut butter,"dinner,lunch",default main → lunch + dinner
+corpus-seafood-liver-casserole,Seafood-liver casserole,"dinner,lunch",default main → lunch + dinner
+corpus-broccoli-whole-grain-bake,Broccoli whole-grain bake,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-eggs,Peanut butter eggs,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-saut-ed-veg,Cheesy sautéed veg,"dinner,lunch",default main → lunch + dinner
+corpus-apple-spiced-tea,Apple-spiced tea,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-milk-grain-bowl,Chicken milk grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-fried-eggs,Fried eggs,breakfast,breakfast
+corpus-chicken-grain-bowl-in-butter,Chicken grain bowl in butter,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-apple-milk-toast,Cheese-apple milk toast,"dinner,lunch",default main → lunch + dinner
+corpus-apple-nut-sangria,Apple-nut sangria,snack,drink → snack
+corpus-beef-egg-grain-bowl,Beef & egg grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-french-toast,French toast,breakfast,breakfast
+corpus-fruity-green-salad,Fruity green salad,"dinner,lunch",default main → lunch + dinner
+corpus-beef-potato-cheese-bake,Beef potato cheese bake,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-cake,Apple-walnut cake,dessert,dessert
+corpus-bacon-raisin-broccoli-salad,Bacon raisin broccoli salad,"dinner,lunch",default main → lunch + dinner
+corpus-sweet-potato-muffins,Sweet potato muffins,"dinner,lunch",default main → lunch + dinner
+corpus-beef-stir-fry-with-rice,Beef stir-fry with rice,"dinner,lunch",default main → lunch + dinner
+corpus-beef-in-butter-sauce,Beef in butter sauce,"dinner,lunch",default main → lunch + dinner
+corpus-spiced-vegetable-curry,Spiced vegetable curry,"dinner,lunch",default main → lunch + dinner
+corpus-apple-raisin-compote,Apple & raisin compote,"dinner,lunch",default main → lunch + dinner
+corpus-berry-vegetable-salad,Berry & vegetable salad,"dinner,lunch",default main → lunch + dinner
+corpus-nutty-cheese-pancakes,Nutty cheese pancakes,breakfast,breakfast
+corpus-shrimp-apple-cheese-salad,Shrimp apple cheese salad,"dinner,lunch",default main → lunch + dinner
+corpus-beef-grain-butter-bowl,Beef grain butter bowl,"dinner,lunch",default main → lunch + dinner
+corpus-carrot-raisin-cake,Carrot-raisin cake,dessert,dessert
+corpus-pecan-biscotti,Pecan biscotti,dessert,dessert
+corpus-potato-strata,Potato strata,"dinner,lunch",default main → lunch + dinner
+corpus-apple-egg-pasta,Apple egg pasta,"dinner,lunch",default main → lunch + dinner
+corpus-berry-toast,Berry toast,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-sandwich,Cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-nut-horchata,Nut horchata,snack,drink → snack
+corpus-almond-milk,Almond milk,"dinner,lunch",default main → lunch + dinner
+corpus-coffee-cake,Coffee cake,dessert,dessert
+corpus-beef-stew,Beef stew,"dinner,lunch",default main → lunch + dinner
+corpus-pot-roast-with-potatoes,Pot roast with potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-shrimp-with-feta-2,Shrimp with feta,"dinner,lunch",default main → lunch + dinner
+corpus-raisin-pound-cake,Raisin pound cake,dessert,dessert
+corpus-raisin-bread-pudding,Raisin bread pudding (buttery),dessert,dessert
+corpus-black-beans,Black beans,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-spinach-salad,Bacon & spinach salad,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-on-bread,Peanut butter on bread,"dinner,lunch",default main → lunch + dinner
+corpus-berry-shortcake,Berry shortcake,"dinner,lunch",default main → lunch + dinner
+corpus-apple-pancake-batter,Apple pancake batter,breakfast,breakfast
+corpus-ham-cheese-on-bread,Ham & cheese on bread,"dinner,lunch",default main → lunch + dinner
+corpus-beef-bean-stew,Beef bean stew,"dinner,lunch",default main → lunch + dinner
+corpus-veggie-omelet-with-cheese,Veggie omelet with cheese,breakfast,breakfast
+corpus-vegetable-batter,Vegetable batter,"dinner,lunch",default main → lunch + dinner
+corpus-ham-sandwich,Ham sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-beer-with-nuts-bread,Beer with nuts & bread,"dinner,lunch",default main → lunch + dinner
+corpus-berry-pancakes-3,Berry pancakes,breakfast,breakfast
+corpus-apple-cheese-milk,Apple cheese milk,"dinner,lunch",default main → lunch + dinner
+corpus-apple-grain-bowl,Apple grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-berry-meringue,Berry meringue,dessert,dessert
+corpus-dinner-rolls,Dinner rolls,"dinner,lunch",default main → lunch + dinner
+corpus-apple-bread-roll,Apple bread roll,"dinner,lunch",default main → lunch + dinner
+corpus-shrimp-apple-salad,Shrimp-apple salad,"dinner,lunch",default main → lunch + dinner
+corpus-butter-chicken-with-potatoes,Butter chicken with potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-berry-apple-cobbler,Berry-apple cobbler,dessert,dessert
+corpus-apple-pasta,Apple pasta,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-apple-french-toast,Cheesy apple French toast,breakfast,breakfast
+corpus-cheese-veg-sandwich,Cheese veg sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-cheese-broccoli,Bacon-cheese broccoli,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-with-buttered,Yogurt with buttered,"dinner,lunch",default main → lunch + dinner
+corpus-sour-cream-apple-muffins,Sour cream apple muffins,"dinner,lunch",default main → lunch + dinner
+corpus-butter-roasted-chicken,Butter-roasted chicken,"dinner,lunch",default main → lunch + dinner
+corpus-fruit-muffins,Fruit muffins,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-nut-pasta,Cheesy nut pasta,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-cake,Peanut butter cake,dessert,dessert
+corpus-roast-chicken,Roast chicken,"dinner,lunch",default main → lunch + dinner
+corpus-grilled-chicken-breast,Grilled chicken breast,"dinner,lunch",default main → lunch + dinner
+corpus-roast-turkey,Roast turkey,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-wrapped-meatloaf,Bacon-wrapped meatloaf,"dinner,lunch",default main → lunch + dinner
+corpus-potato-with-vegetable,Potato with vegetable,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-pasta-with-veg,Buttered pasta with veg,"dinner,lunch",default main → lunch + dinner
+corpus-apple-egg-toast,Apple egg toast,"dinner,lunch",default main → lunch + dinner
+corpus-nut-shortbread-4,Nut shortbread,"dinner,lunch",default main → lunch + dinner
+corpus-bean-vegetable-stew,Bean & vegetable stew,"dinner,lunch",default main → lunch + dinner
+corpus-lentil-salad,Lentil salad,"dinner,lunch",default main → lunch + dinner
+corpus-beef-egg-fried-rice,Beef egg fried rice,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-pastry,Cheese pastry,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-sweet-potato-bread,Apple-walnut sweet-potato bread,"dinner,lunch",default main → lunch + dinner
+corpus-date-nut-sweet-potato-bread,Date-nut sweet potato bread,"dinner,lunch",default main → lunch + dinner
+corpus-berry-nut-fruit-veg-salad,Berry-nut fruit-veg salad,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-apple-sandwich,Cheese-apple sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-beef-fritters,Beef fritters,dessert,dessert
+corpus-beef-cheese-bowl,Beef cheese bowl,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cheese-tart,Apple-cheese tart,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-pasta-3,Chicken pasta,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-parmesan,Chicken parmesan,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-ham-roll,Cheese & ham roll,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-melt,Beef cheese melt,"dinner,lunch",default main → lunch + dinner
+corpus-vegetable-fried-rice,Vegetable fried rice,"dinner,lunch",default main → lunch + dinner
+corpus-pasta-primavera,Pasta primavera,"dinner,lunch",default main → lunch + dinner
+corpus-potato-custard-3,Potato custard (with milk),dessert,dessert
+corpus-latte,Latte,snack,drink → snack
+corpus-beef-cheesy-potatoes,Beef cheesy potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-bloody-mary,Bloody Mary,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-sandwich,Chicken sandwich (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-mimosa,Mimosa,"dinner,lunch",default main → lunch + dinner
+corpus-whole-wheat-pastry,Whole-wheat pastry,"dinner,lunch",default main → lunch + dinner
+corpus-berry-ricotta-dessert,Berry-ricotta dessert,dessert,dessert
+corpus-potato-gratin,Potato gratin,"dinner,lunch",default main → lunch + dinner
+corpus-date-walnut-apple-cake,Date-walnut apple cake,dessert,dessert
+corpus-nutty-french-toast-filling,Nutty French toast filling,breakfast,breakfast
+corpus-lentil-peanut-stew,Lentil-peanut stew,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-cheese-veg-bake,Bacon-cheese veg bake,"dinner,lunch",default main → lunch + dinner
+corpus-berry-cheese-plate,Berry & cheese plate,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-with-apples,Yogurt with apples,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-brown-rice-bowl,Chicken brown-rice bowl,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-cheese-milk-toast,Peanut-cheese milk toast,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-pastry-2,Cheese pastry (with ricotta),"dinner,lunch",default main → lunch + dinner
+corpus-loaded-broccoli-salad,Loaded broccoli salad,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-apple-cake,Yogurt apple cake,dessert,dessert
+corpus-bacon,Bacon,"dinner,lunch",default main → lunch + dinner
+corpus-ham-slices,Ham slices,"dinner,lunch",default main → lunch + dinner
+corpus-breakfast-sausage,Breakfast sausage,breakfast,breakfast
+corpus-salmon-with-apple-veg,Salmon with apple-veg,"dinner,lunch",default main → lunch + dinner
+corpus-whole-grain-veg-bowl,Whole-grain veg bowl,"dinner,lunch",default main → lunch + dinner
+corpus-berry-apple-pancakes,Berry apple pancakes,breakfast,breakfast
+corpus-lentil-flour-cake,Lentil-flour cake,dessert,dessert
+corpus-apple-butter-saut,Apple butter sauté,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-sweet-potato-with-apple,Buttered sweet potato with apple,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-sandwich,Beef cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-wrapped-apple,Bacon-wrapped apple,"dinner,lunch",default main → lunch + dinner
+corpus-bean-apple-salad,Bean & apple salad (with vegetables),"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-cheese-milk,Apple-walnut cheese milk,"dinner,lunch",default main → lunch + dinner
+corpus-raisin-bread,Raisin bread,"dinner,lunch",default main → lunch + dinner
+corpus-apple-flatbread,Apple flatbread,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-pasta-bake,Chicken cheese pasta bake,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-pasta,Buttered pasta,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-pancakes,Cheese pancakes,breakfast,breakfast
+corpus-eggnog,Eggnog,snack,drink → snack
+corpus-cheesy-pasta-bake,Cheesy pasta bake,"dinner,lunch",default main → lunch + dinner
+corpus-berry-nut-ricotta-plate,Berry-nut ricotta plate,"dinner,lunch",default main → lunch + dinner
+corpus-berry-pecan-muffins,Berry-pecan muffins,"dinner,lunch",default main → lunch + dinner
+corpus-bean-burrito-filling,Bean burrito filling,"dinner,lunch",default main → lunch + dinner
+corpus-ricotta-cake,Ricotta cake,dessert,dessert
+corpus-date-walnut-apple-sweet-potato-cake,Date-walnut apple sweet-potato cake,dessert,dessert
+corpus-whole-wheat-raisin-bread,Whole-wheat raisin bread,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-cheese-sandwich,Peanut-cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-whole-wheat-bread,Whole-wheat bread,"dinner,lunch",default main → lunch + dinner
+corpus-apple-sweet-potato-bake,Apple sweet-potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-pasta,"Beef cheese pasta (with cheddar, with vegetables)","dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-sandwich,Chicken cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-grilled-cheese-with-veg,Grilled cheese with veg,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-apple-toast,Cheese-apple toast,"dinner,lunch",default main → lunch + dinner
+corpus-nutty-apple-bread,Nutty apple bread,"dinner,lunch",default main → lunch + dinner
+corpus-broccoli-veg-medley,Broccoli-veg medley,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-sandwich-with-veg,Chicken sandwich with veg,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-potato-gratin-4,Cheesy potato gratin,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-sandwich-2,Chicken sandwich (with vegetables),"dinner,lunch",default main → lunch + dinner
+corpus-sweet-potato-apple-bread,Sweet-potato apple bread,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cheese-bread,Apple cheese bread,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-raisin-cake,Apple-walnut-raisin cake,dessert,dessert
+corpus-apple-walnut-cheese-spread,Apple-walnut cheese spread,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-grain-bowl,Buttered grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-sandwich-2,Chicken-cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-rice-beans-2,Rice & beans (with whole grain),"dinner,lunch",default main → lunch + dinner
+corpus-cheese-souffl,Cheese soufflé,"dinner,lunch",default main → lunch + dinner
+corpus-mixed-meat-potato-bake,Mixed meat potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-mashed-potatoes,Mashed potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-baked-sweet-potato,Baked sweet potato,"dinner,lunch",default main → lunch + dinner
+corpus-liver-with-apple,Liver with apple,"dinner,lunch",default main → lunch + dinner
+corpus-berry-apple-muffins,Berry-apple muffins,"dinner,lunch",default main → lunch + dinner
+corpus-apple-french-toast-2,Apple French toast (with milk),breakfast,breakfast
+corpus-apple-dutch-baby,Apple Dutch baby,"dinner,lunch",default main → lunch + dinner
+corpus-veg-sandwich,Veg sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-whole-wheat-muffins,Yogurt whole-wheat muffins,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-apple-potato-bake,Chicken apple potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-berry-pecan-cake,Berry-pecan cake,dessert,dessert
+corpus-roast-beef,Roast beef,"dinner,lunch",default main → lunch + dinner
+corpus-grilled-steak,Grilled steak,"dinner,lunch",default main → lunch + dinner
+corpus-ground-beef-skillet,Ground beef skillet,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cheese-salad,Apple cheese salad,"dinner,lunch",default main → lunch + dinner
+corpus-egg-with-oat,Egg with oat,"dinner,lunch",default main → lunch + dinner
+corpus-mixed-meat-grain-bowl,Mixed meat grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-buttered-eggs,Apple-walnut buttered eggs,"dinner,lunch",default main → lunch + dinner
+corpus-sour-cream-nut-muffins,Sour cream nut muffins,"dinner,lunch",default main → lunch + dinner
+corpus-pasta-with-cheese-veg,Pasta with cheese & veg,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-sandwich-3,Chicken sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-berry-juice-spritzer,Berry juice spritzer,snack,drink → snack
+corpus-ham-potato-fritters,Ham potato fritters,"dinner,lunch",default main → lunch + dinner
+corpus-caf-au-lait-2,Café au lait,"dinner,lunch",default main → lunch + dinner
+corpus-apple-raisin-butter-cake,Apple-raisin butter cake,dessert,dessert
+corpus-beef-potato-pie,Beef potato pie,dessert,dessert
+corpus-broccoli-cheese-omelet,Broccoli cheese omelet,breakfast,breakfast
+corpus-sunflower-seed-salad,Sunflower-seed salad,"dinner,lunch",default main → lunch + dinner
+corpus-loaded-broccoli-salad-2,"Loaded broccoli salad (with cheddar, with greens)","dinner,lunch",default main → lunch + dinner
+corpus-creamed-chicken-veg,Creamed chicken & veg,"dinner,lunch",default main → lunch + dinner
+corpus-walnut-apple-pancakes,Walnut-apple pancakes,breakfast,breakfast
+corpus-apple-spinach-salad,Apple-spinach salad,"dinner,lunch",default main → lunch + dinner
+corpus-egg-greens-potato-hash,Egg-greens potato hash,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-french-toast,Apple-walnut French toast,breakfast,breakfast
+corpus-nutty-potato-bread,Nutty potato bread,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-pasta,Bacon pasta,"dinner,lunch",default main → lunch + dinner
+corpus-cheesecake-with-nut-crust,Cheesecake with nut crust,dessert,dessert
+corpus-apple-zucchini-bread,Apple-zucchini bread,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-parm-pasta,Chicken parm pasta,"dinner,lunch",default main → lunch + dinner
+corpus-mixed-meat-skillet,Mixed meat skillet,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cheesecake,Apple cheesecake,dessert,dessert
+corpus-carrot-walnut-raisin-cake,Carrot-walnut-raisin cake,dessert,dessert
+corpus-apple-butter-chicken,Apple butter chicken,"dinner,lunch",default main → lunch + dinner
+corpus-vegetable-with-buttered,Vegetable with buttered,"dinner,lunch",default main → lunch + dinner
+corpus-liver-casserole-with-cheese,Liver casserole with cheese,"dinner,lunch",default main → lunch + dinner
+corpus-lentil-apple-cake,Lentil-apple cake,dessert,dessert
+corpus-nutty-bread-pudding,Nutty bread pudding,dessert,dessert
+corpus-mixed-milk-drink,Mixed milk drink,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-lentil-dal,Creamy lentil dal,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-mashed-potatoes,Creamy mashed potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-ham-melt,Cheese & ham melt,"dinner,lunch",default main → lunch + dinner
+corpus-apple-oat-flatbread,Apple-oat flatbread,"dinner,lunch",default main → lunch + dinner
+corpus-spinach-omelet,Spinach omelet,breakfast,breakfast
+corpus-scrambled-eggs,Scrambled eggs,breakfast,breakfast
+corpus-creamy-pasta-carbonara,Creamy pasta carbonara,"dinner,lunch",default main → lunch + dinner
+corpus-beef-pot-pie,Beef pot pie,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-bowl,Yogurt bowl,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-broccoli-grain-bowl,Chicken broccoli grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-veg-quiche,Cheese & veg quiche,"dinner,lunch",default main → lunch + dinner
+corpus-baked-mac-cheese,Baked mac & cheese,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-stuffed-bread,Cheese-stuffed bread,"dinner,lunch",default main → lunch + dinner
+corpus-veg-green-omelet,Veg & green omelet,breakfast,breakfast
+corpus-ricotta-apple-tart,Ricotta apple tart,dessert,dessert
+corpus-prosciutto-mozzarella,Prosciutto & mozzarella,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-pot-pie,Chicken pot pie,"dinner,lunch",default main → lunch + dinner
+corpus-cacio-e-pepe,Cacio e pepe,"dinner,lunch",default main → lunch + dinner
+corpus-beef-carbonara,Beef carbonara,"dinner,lunch",default main → lunch + dinner
+corpus-pasta-salad-with-greens,Pasta salad with greens,"dinner,lunch",default main → lunch + dinner
+corpus-shrimp-stir-fry,Shrimp stir-fry,"dinner,lunch",default main → lunch + dinner
+corpus-ham-mac-cheese,Ham mac & cheese,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-pasta-in-butter,Chicken pasta in butter,"dinner,lunch",default main → lunch + dinner
+corpus-berry-fruit-punch,Berry fruit punch,"dinner,lunch",default main → lunch + dinner
+corpus-berry-biscuit-shortcake,Berry biscuit shortcake,"dinner,lunch",default main → lunch + dinner
+corpus-pickled-bean-salad,Pickled bean salad,"dinner,lunch",default main → lunch + dinner
+corpus-loaded-bean-cheese-salad,Loaded bean cheese salad,"dinner,lunch",default main → lunch + dinner
+corpus-raisin-oat-cookies,Raisin oat cookies,dessert,dessert
+corpus-beef-grain-bowl-with-greens,Beef grain bowl with greens,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-with-apples-7,Chicken with apples,"dinner,lunch",default main → lunch + dinner
+corpus-apple-custard,Apple custard,dessert,dessert
+corpus-beef-lasagna,"Beef lasagna (egg-based, with vegetables)","dinner,lunch",default main → lunch + dinner
+corpus-peanut-oat-butter-cookies,Peanut-oat butter cookies,dessert,dessert
+corpus-steamed-shrimp,Steamed shrimp,"dinner,lunch",default main → lunch + dinner
+corpus-saut-ed-greens-with-butter,Sautéed greens with butter,"dinner,lunch",default main → lunch + dinner
+corpus-apple-raisin-veg-salad,Apple-raisin veg salad,"dinner,lunch",default main → lunch + dinner
+corpus-beef-potato-butter-braise,Beef potato butter braise,"dinner,lunch",default main → lunch + dinner
+corpus-beans-bacon,Beans & bacon,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-with-egg,Bacon with egg,"dinner,lunch",default main → lunch + dinner
+corpus-coffee-walnut-cake,Coffee walnut cake,dessert,dessert
+corpus-beef-grain-potato-bowl,Beef grain potato bowl,"dinner,lunch",default main → lunch + dinner
+corpus-nutty-french-toast,Nutty French toast,breakfast,breakfast
+corpus-american-cheese-veg-sandwich,American-cheese veg sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-beef-bourguignon-with-potatoes,Beef bourguignon with potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-pasta,"Chicken cheese pasta (with vegetables, with American cheese)","dinner,lunch",default main → lunch + dinner
+corpus-american-cheese-with-broccoli,American cheese with broccoli (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-loaded-meat-cheese-melt,Loaded meat-cheese melt,"dinner,lunch",default main → lunch + dinner
+corpus-berry-nut-snack-mix,Berry-nut snack mix,snack,strict snack
+corpus-cheese-toast-with-milk,Cheese toast with milk,"dinner,lunch",default main → lunch + dinner
+corpus-wine-braised-with-soda,Wine-braised with soda,"dinner,lunch",default main → lunch + dinner
+corpus-apple-zucchini-walnut-bread,Apple-zucchini-walnut bread,"dinner,lunch",default main → lunch + dinner
+corpus-nutty-egg-toast,Nutty egg toast,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-egg-salad,Apple-walnut egg salad,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-cheese-spread,Peanut cheese spread,"dinner,lunch",default main → lunch + dinner
+corpus-beef-with-apples-7,Beef with apples,"dinner,lunch",default main → lunch + dinner
+corpus-veg-potato-fritters,Veg & potato fritters,"dinner,lunch",default main → lunch + dinner
+corpus-milk-stewed-vegetables,Milk-stewed vegetables,"dinner,lunch",default main → lunch + dinner
+corpus-white-fish-with-apple-veg,White fish with apple-veg,"dinner,lunch",default main → lunch + dinner
+corpus-lentil-grain-butter-bowl,Lentil-grain butter bowl,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-raisin-cake,Yogurt raisin cake,dessert,dessert
+corpus-berry-apple-cheese-toast,Berry-apple cheese toast (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-veggie-omelet,Veggie omelet,breakfast,breakfast
+corpus-bacon-mac-cheese,Bacon mac & cheese,"dinner,lunch",default main → lunch + dinner
+corpus-apple-date-nut-mix,Apple date nut mix,"dinner,lunch",default main → lunch + dinner
+corpus-beef-pasta-with-greens-eggs,Beef pasta with greens & eggs,"dinner,lunch",default main → lunch + dinner
+corpus-seeded-vegetable-salad,Seeded vegetable salad,"dinner,lunch",default main → lunch + dinner
+corpus-apple-bread-pudding,Apple bread pudding,dessert,dessert
+corpus-creamy-peanut-cheese,Creamy peanut cheese,"dinner,lunch",default main → lunch + dinner
+corpus-beef-curry,Beef curry,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-fondue-base,Cheese fondue base,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-melt,Chicken cheese melt,"dinner,lunch",default main → lunch + dinner
+corpus-beef-lasagna-2,Beef lasagna,"dinner,lunch",default main → lunch + dinner
+corpus-beef-lentil-green-salad,Beef-lentil green salad,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-biscuit,Cheese biscuit,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-egg-toast,Apple-walnut egg toast,"dinner,lunch",default main → lunch + dinner
+corpus-dried-fruit-mix,Dried fruit mix,"dinner,lunch",default main → lunch + dinner
+corpus-american-cheese-with-broccoli-2,American cheese with broccoli,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-with-cheese-sauce,Chicken with cheese sauce,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cheese-veg-salad,Apple cheese veg salad,"dinner,lunch",default main → lunch + dinner
+corpus-bean-stuffed-bread,Bean-stuffed bread,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-b-chamel-pasta,Cheese béchamel pasta,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-ham-potato-bake,Cheesy ham potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cheese-pancakes,Apple cheese pancakes,breakfast,breakfast
+corpus-white-wine-clams,White wine clams,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-grain-bowl,Bacon grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-ham-pasta-bake,Ham pasta bake,"dinner,lunch",default main → lunch + dinner
+corpus-berry-apple-walnut-cake,Berry apple-walnut cake,dessert,dessert
+corpus-milky-yogurt-drink,Milky yogurt drink,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-butter-oat-cookies,Peanut butter oat cookies,dessert,dessert
+corpus-apple-nut-bread,Apple-nut bread,"dinner,lunch",default main → lunch + dinner
+corpus-roast-beef-sub,Roast beef sub,"dinner,lunch",default main → lunch + dinner
+corpus-fruit-nut-bread,Fruit & nut bread,"dinner,lunch",default main → lunch + dinner
+corpus-saut-ed-greens,Sautéed greens,"dinner,lunch",default main → lunch + dinner
+corpus-green-salad,Green salad,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-oatmeal,Creamy oatmeal,breakfast,breakfast
+corpus-apple-cheese-pasta,Apple cheese pasta,"dinner,lunch",default main → lunch + dinner
+corpus-bean-nut-salad,Bean & nut salad,"dinner,lunch",default main → lunch + dinner
+corpus-sour-cream-apple-nut-muffins,Sour cream apple-nut muffins,"dinner,lunch",default main → lunch + dinner
+corpus-seeded-chicken-sandwich,Seeded chicken sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-walnut-with-milk,Walnut with milk,"dinner,lunch",default main → lunch + dinner
+corpus-apple-bread,Apple bread,"dinner,lunch",default main → lunch + dinner
+corpus-fruit-toast,Fruit toast,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-buttered-potatoes,Cheesy buttered potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-apple-yogurt-smoothie,Apple yogurt smoothie,snack,drink → snack
+corpus-beef-bean-curry-with-potatoes,Beef-bean curry with potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-nut-crust-cheesecake,Nut-crust cheesecake,dessert,dessert
+corpus-beef-pasta-bake,Beef pasta bake (with cheddar),"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-chicken-potatoes,Cheesy chicken potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-loaded-sub-sandwich,Loaded sub sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-veg-stuffed-bread,Veg-stuffed bread,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-scrambled-eggs,Cheesy scrambled eggs,breakfast,breakfast
+corpus-apple-buttered-oatmeal,Apple buttered oatmeal,breakfast,breakfast
+corpus-african-peanut-stew,African peanut stew,"dinner,lunch",default main → lunch + dinner
+corpus-berry-yogurt,Berry yogurt,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-nut-salad,Cheese & nut salad,"dinner,lunch",default main → lunch + dinner
+corpus-apple-peanut-salad,Apple-peanut salad,"dinner,lunch",default main → lunch + dinner
+corpus-liver-p-t-with-cheese,Liver pâté with cheese,"dinner,lunch",default main → lunch + dinner
+corpus-two-cheese-plate,Two-cheese plate,"dinner,lunch",default main → lunch + dinner
+corpus-breaded-chicken,Breaded chicken,"dinner,lunch",default main → lunch + dinner
+corpus-sour-cream-butter-dip,Sour cream butter dip,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-shortcake,Apple-walnut shortcake,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-grain-bowl,Chicken grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-spiced-apple-veg,Spiced apple veg,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-nut-muffins,Yogurt nut muffins,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-with-bacon,Chicken with bacon,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-grain-bake,Chicken cheese grain bake,"dinner,lunch",default main → lunch + dinner
+corpus-loaded-ham-cheese-bake,Loaded ham cheese bake,"dinner,lunch",default main → lunch + dinner
+corpus-beef-stew-with-greens,Beef stew with greens,"dinner,lunch",default main → lunch + dinner
+corpus-pickle-salad,Pickle salad,"dinner,lunch",default main → lunch + dinner
+corpus-apple-bourbon-custard,Apple-bourbon custard,dessert,dessert
+corpus-raisin-oatmeal,Raisin oatmeal,breakfast,breakfast
+corpus-berry-curd,Berry curd,"dinner,lunch",default main → lunch + dinner
+corpus-whole-wheat-pancakes-5,"Whole-wheat pancakes (buttery, with milk)",breakfast,breakfast
+corpus-cream-cheese-veg-dip,Cream cheese veg dip,"dinner,lunch",default main → lunch + dinner
+corpus-juice-milk-drink,Juice-milk drink,snack,drink → snack
+corpus-bean-potato-stew,Bean potato stew,"dinner,lunch",default main → lunch + dinner
+corpus-spiked-hot-cocoa,Spiked hot cocoa,snack,drink → snack
+corpus-coffee-custard,Coffee custard,dessert,dessert
+corpus-cheesy-potato-gratin-8,"Cheesy potato gratin (buttery, flour-based, with milk)","dinner,lunch",default main → lunch + dinner
+corpus-date-nut-snack,Date & nut snack,snack,strict snack
+corpus-loaded-cheesy-beef-bake,Loaded cheesy beef bake,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-fritters,Chicken fritters,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-broccoli-grain-bowl-3,Chicken broccoli grain bowl (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-cheese-pasta,Cheese pasta,"dinner,lunch",default main → lunch + dinner
+corpus-beef-apple-salad,Beef-apple salad,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-pasta-4,Beef cheese pasta,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-roll,Beef cheese roll,"dinner,lunch",default main → lunch + dinner
+corpus-apple-with-peanut-butter,Apple with peanut butter,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-grain-bowl,Chicken cheese grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-brown-rice,Brown rice,"dinner,lunch",default main → lunch + dinner
+corpus-oatmeal,Oatmeal,breakfast,breakfast
+corpus-cooked-quinoa,Cooked quinoa,"dinner,lunch",default main → lunch + dinner
+corpus-beef-soup,Beef soup,"dinner,lunch",default main → lunch + dinner
+corpus-apple-spinach-butter-saut,Apple-spinach butter sauté,"dinner,lunch",default main → lunch + dinner
+corpus-apple-walnut-cheese-pancakes,Apple-walnut cheese pancakes,breakfast,breakfast
+corpus-yogurt-berry-cake,Yogurt berry cake,dessert,dessert
+corpus-berry-cheesecake-with-nuts,Berry cheesecake with nuts,dessert,dessert
+corpus-ricotta-with-american-cheese,Ricotta with American cheese,"dinner,lunch",default main → lunch + dinner
+corpus-pan-seared-liver,Pan-seared liver,"dinner,lunch",default main → lunch + dinner
+corpus-chopped-liver,Chopped liver,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-potato-veg-bake,Cheesy potato veg bake,"dinner,lunch",default main → lunch + dinner
+corpus-boozy-nut-spread,Boozy nut spread,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-potato-gratin-9,"Cheesy potato gratin (buttery, with ricotta)","dinner,lunch",default main → lunch + dinner
+corpus-apple-pasta-with-butter,Apple pasta with butter,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-apple-nut-muffins,Yogurt apple-nut muffins,"dinner,lunch",default main → lunch + dinner
+corpus-veggie-potato-hash,Veggie potato hash,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-cheese-potato-bake,Chicken cheese potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-fried-rice,Chicken fried rice,"dinner,lunch",default main → lunch + dinner
+corpus-ham-cheese-sandwich,Ham & cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-coffee-cake-with-cream,Coffee cake with cream,dessert,dessert
+corpus-chicken-cordon-bleu,Chicken cordon bleu,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-quiche,Bacon quiche,"dinner,lunch",default main → lunch + dinner
+corpus-steak-egg-sandwich,Steak-egg sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-apple-wine-veg-salad,Apple-wine veg salad,"dinner,lunch",default main → lunch + dinner
+corpus-beer-beef-potato-stew,Beer-beef potato stew,"dinner,lunch",default main → lunch + dinner
+corpus-wine-braised-chicken,Wine-braised chicken,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-nut-apple-dessert,Creamy nut-apple dessert,dessert,dessert
+corpus-steak-with-parmesan,Steak with parmesan,"dinner,lunch",default main → lunch + dinner
+corpus-sesame-crackers,Sesame crackers,"dinner,lunch",default main → lunch + dinner
+corpus-berry-buttered-toast,Berry buttered toast,"dinner,lunch",default main → lunch + dinner
+corpus-apple-oatmeal,Apple oatmeal,breakfast,breakfast
+corpus-cheese-greens-sandwich,Cheese-greens sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-egg-veg-bowl,Chicken & egg veg bowl,"dinner,lunch",default main → lunch + dinner
+corpus-bean-potato-bacon-stew,Bean potato bacon stew,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-buttered-veg,Bacon-buttered veg,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-potatoes,Bacon potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-pasta-with-bacon,Pasta with bacon,"dinner,lunch",default main → lunch + dinner
+corpus-sour-cream-raisin-cake,Sour cream raisin cake,dessert,dessert
+corpus-chicken-with-ricotta,Chicken with ricotta,"dinner,lunch",default main → lunch + dinner
+corpus-bean-potato-stew-2,Bean & potato stew,"dinner,lunch",default main → lunch + dinner
+corpus-berry-apple-cheese-toast-2,Berry-apple cheese toast,"dinner,lunch",default main → lunch + dinner
+corpus-liver-with-berry-fruit-sauce,Liver with berry-fruit sauce,"dinner,lunch",default main → lunch + dinner
+corpus-peanut-lentil-bake,Peanut-lentil bake,"dinner,lunch",default main → lunch + dinner
+corpus-cheesesteak,Cheesesteak,"dinner,lunch",default main → lunch + dinner
+corpus-apple-cheese-omelet,Apple cheese omelet,breakfast,breakfast
+corpus-bean-with-peanut-butter,Bean with peanut butter,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-apple-nut-salad,Chicken apple-nut salad,"dinner,lunch",default main → lunch + dinner
+corpus-french-toast-with-nuts,French toast with nuts,breakfast,breakfast
+corpus-chicken-cheese-pasta-2,Chicken cheese pasta,"dinner,lunch",default main → lunch + dinner
+corpus-berry-apple-curd,Berry-apple curd,"dinner,lunch",default main → lunch + dinner
+corpus-drunken-shrimp-risotto,Drunken shrimp risotto,"dinner,lunch",default main → lunch + dinner
+corpus-steak-eggs,Steak & eggs,"dinner,lunch",default main → lunch + dinner
+corpus-bacon-with-ricotta-3,Bacon with ricotta (with pasta),"dinner,lunch",default main → lunch + dinner
+corpus-buttery-nut-potato-bake,Buttery nut potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-steak-salad,Steak salad,"dinner,lunch",default main → lunch + dinner
+corpus-strawberry-cream-sauce,Strawberry cream sauce,"dinner,lunch",default main → lunch + dinner
+corpus-apple-pasta-dessert,Apple pasta dessert,dessert,dessert
+corpus-cheese-veg-sandwich-3,Cheese-veg sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-glass-of-juice,Glass of juice,snack,drink → snack
+corpus-bacon-broccoli,Bacon broccoli,"dinner,lunch",default main → lunch + dinner
+corpus-veg-stuffed-pastry,Veg-stuffed pastry,"dinner,lunch",default main → lunch + dinner
+corpus-potato-bread,Potato bread,"dinner,lunch",default main → lunch + dinner
+corpus-potato-cheese-gratin,Potato-cheese gratin,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-bacon-potato-bake,Cheesy bacon potato bake (buttery),"dinner,lunch",default main → lunch + dinner
+corpus-loaded-carbonara,Loaded carbonara,"dinner,lunch",default main → lunch + dinner
+corpus-bread-potato-strata,Bread & potato strata,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-chicken-potato-bake,Creamy chicken potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-french-toast-with-batter,French toast with batter,breakfast,breakfast
+corpus-beef-sandwich,Beef sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-date-walnut-cake,Date-walnut cake,dessert,dessert
+corpus-beef-pasta-bake-3,Beef pasta bake,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheesy-pasta,Beef cheesy pasta,"dinner,lunch",default main → lunch + dinner
+corpus-buttered-bread-with-milk,Buttered bread with milk,"dinner,lunch",default main → lunch + dinner
+corpus-beer-pretzels,Beer & pretzels,snack,strict snack
+corpus-raisin-apple-compote,Raisin apple compote,"dinner,lunch",default main → lunch + dinner
+corpus-shrimp-scampi,Shrimp scampi,"dinner,lunch",default main → lunch + dinner
+corpus-carrot-raisin-apple-cake,Carrot-raisin-apple cake,dessert,dessert
+corpus-chicken-with-feta,Chicken with feta,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-bowl-3,Yogurt bowl (with yogurt),"dinner,lunch",default main → lunch + dinner
+corpus-bean-apple-salad-3,Bean & apple salad,"dinner,lunch",default main → lunch + dinner
+corpus-apple-creamy-pasta-bake,Apple-creamy pasta bake,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-green-salad,Cheese green salad,"dinner,lunch",default main → lunch + dinner
+corpus-beef-potato-milk-stew,Beef potato milk stew,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-veg-tart,Cheese-veg tart,"dinner,lunch",default main → lunch + dinner
+corpus-apple-egg-fried-rice,Apple egg fried rice,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-bake,Beef cheese bake,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-bacon-potato-bake-2,Cheesy bacon potato bake,"dinner,lunch",default main → lunch + dinner
+corpus-date-nut-granola,Date-nut granola,breakfast,breakfast
+corpus-beer-batter,Beer batter,"dinner,lunch",default main → lunch + dinner
+corpus-beer-battered-chicken,Beer-battered chicken,"dinner,lunch",default main → lunch + dinner
+corpus-creamy-oat-nut-porridge,Creamy oat nut porridge,breakfast,breakfast
+corpus-creamy-veg-casserole,Creamy veg casserole,"dinner,lunch",default main → lunch + dinner
+corpus-apple-with-walnut,Apple with walnut,"dinner,lunch",default main → lunch + dinner
+corpus-b-chamel-oat-bake,Béchamel oat bake,"dinner,lunch",default main → lunch + dinner
+corpus-steak-potatoes,Steak & potatoes,"dinner,lunch",default main → lunch + dinner
+corpus-three-cheese-pasta,Three-cheese pasta,"dinner,lunch",default main → lunch + dinner
+corpus-berry-walnut-apple-bread,Berry-walnut apple bread,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-grain-bowl,Cheesy grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-chicken-apple-pasta,Chicken apple pasta,"dinner,lunch",default main → lunch + dinner
+corpus-strawberry-milk,Strawberry milk,"dinner,lunch",default main → lunch + dinner
+corpus-mac-cheese,Mac & cheese,"dinner,lunch",default main → lunch + dinner
+corpus-loaded-green-sandwich,Loaded green sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-sandwich-2,Beef-cheese sandwich,"dinner,lunch",default main → lunch + dinner
+corpus-triple-cheese-veg-bake,Triple-cheese veg bake,"dinner,lunch",default main → lunch + dinner
+corpus-white-russian,White Russian,"dinner,lunch",default main → lunch + dinner
+corpus-three-cheese-toast,Three-cheese toast,"dinner,lunch",default main → lunch + dinner
+corpus-berry-scones,Berry scones,"dinner,lunch",default main → lunch + dinner
+corpus-apple-almond-milk-drink,Apple almond-milk drink,"dinner,lunch",default main → lunch + dinner
+corpus-berry-yogurt-smoothie,Berry yogurt smoothie,snack,drink → snack
+corpus-cheese-stuffed-beef,Cheese-stuffed beef,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-chicken,Cheesy chicken,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-nut-veg-plate,Cheese-nut veg plate,"dinner,lunch",default main → lunch + dinner
+corpus-spiked-custard,Spiked custard,dessert,dessert
+corpus-veggie-cheese-strata,Veggie cheese strata,"dinner,lunch",default main → lunch + dinner
+corpus-berry-cheese-french-toast,Berry-cheese French toast,breakfast,breakfast
+corpus-date-nut-whole-wheat-cake,Date-nut whole-wheat cake,dessert,dessert
+corpus-potato-pastry,Potato pastry,"dinner,lunch",default main → lunch + dinner
+corpus-sour-cream-apple-walnut-raisin-cake,Sour cream apple-walnut-raisin cake,dessert,dessert
+corpus-salmon-fruit-cheese-salad,Salmon fruit-cheese salad,"dinner,lunch",default main → lunch + dinner
+corpus-curry-pasta,Curry pasta,"dinner,lunch",default main → lunch + dinner
+corpus-date-nut-granola-bars,Date-nut granola bars,snack,strict snack
+corpus-raisin-scones,Raisin scones,"dinner,lunch",default main → lunch + dinner
+corpus-oatmeal-with-milk,Oatmeal with milk,breakfast,breakfast
+corpus-beef-sesame-stir-fry,Beef sesame stir-fry,"dinner,lunch",default main → lunch + dinner
+corpus-ham-cheese-sub,Ham & cheese sub,"dinner,lunch",default main → lunch + dinner
+corpus-apple-nut-veg-salad,Apple-nut veg salad,"dinner,lunch",default main → lunch + dinner
+corpus-beef-cheese-grain-bowl,Beef cheese grain bowl,"dinner,lunch",default main → lunch + dinner
+corpus-meat-lasagna,Meat lasagna,"dinner,lunch",default main → lunch + dinner
+corpus-cheesy-bean-dip,Cheesy bean dip,"dinner,lunch",default main → lunch + dinner
+corpus-apple-broccoli-slaw,Apple-broccoli slaw,"dinner,lunch",default main → lunch + dinner
+corpus-yogurt-dressed-veg,Yogurt-dressed veg,"dinner,lunch",default main → lunch + dinner
+corpus-berry-almond-smoothie,Berry-almond smoothie,snack,drink → snack
+corpus-nutty-cheese-eggs,Nutty cheese eggs,"dinner,lunch",default main → lunch + dinner
+corpus-coffee-cream-cake,Coffee cream cake,dessert,dessert
+corpus-raisin-oat-bread,Raisin oat bread,"dinner,lunch",default main → lunch + dinner
+corpus-berry-dried-fruit-mix,Berry & dried-fruit mix,"dinner,lunch",default main → lunch + dinner
+corpus-beef-pasta-gratin,Beef pasta gratin,"dinner,lunch",default main → lunch + dinner
+corpus-date-pecan-bread-pudding,Date-pecan bread pudding,dessert,dessert
+corpus-cheese-crackers,Cheese crackers,"dinner,lunch",default main → lunch + dinner
+corpus-nut-bread,Nut bread,"dinner,lunch",default main → lunch + dinner
+corpus-toasted-nut-crostini,Toasted nut crostini,"dinner,lunch",default main → lunch + dinner
+corpus-sliced-cheddar,Sliced cheddar,"dinner,lunch",default main → lunch + dinner
+corpus-sweet-potato-cake,Sweet potato cake,dessert,dessert
+corpus-grilled-cheese,Grilled cheese,"dinner,lunch",default main → lunch + dinner
+corpus-cheese-on-toast,Cheese on toast,"dinner,lunch",default main → lunch + dinner

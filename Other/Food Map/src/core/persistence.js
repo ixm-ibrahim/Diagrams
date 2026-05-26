@@ -77,8 +77,11 @@ export const PERSISTABLE_KEYS = [
   'categoryFilterScope',    // Phase 40 round 9
   'tagFilterScope',         // Phase 40 round 9
   'dietCuisineFilterScope', // Phase 40 round 9
+  'foodGroupFilterMatch',   // Batch 4
+  'foodGroupFilterScope',   // Batch 4
   'zoomAnchor',             // axis-controls Zoom button anchor: 'left' | 'center' | 'right'
   'nutrientProfileMode',    // tester feedback: 'narrowest' | 'widest' combine rule for profile-apply buttons
+  'remixMode',              // tester-feedback Batch 4: 'category' | 'ingredient' remix toggle
 ];
 
 export function snapshotPersistable(state) {
@@ -183,7 +186,11 @@ function migrateHydrated(key, value) {
     };
   }
   if (key === 'foodGroupFilter' && value && typeof value === 'object') {
+    /* Batch 4: filter shape grew from `{excluded}` to `{included,
+     * excluded}` (matches categoryFilter). Read both fields when
+     * present, default missing to empty so older saves still load. */
     return {
+      included: Array.isArray(value.included) ? value.included : [],
       excluded: Array.isArray(value.excluded) ? value.excluded : [],
     };
   }

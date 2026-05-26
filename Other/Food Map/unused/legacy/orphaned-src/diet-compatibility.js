@@ -69,17 +69,28 @@ export function computeDietCompatibility(meal, categoryAggregates) {
   return result;
 }
 
-/* Equal-weighted mean of category aggregates' per-100g values — matches
- * aggregateMeals' nutrient pipeline so the rules see the same numbers the
- * meal sphere is plotted at. Returns null if no category resolves. */
+/* Batch 14: gram-weighted plate mean — matches the math in
+ * aggregateMeals (src/core/aggregations.js) where each category
+ * contributes one serving by its `serving_grams`. The earlier
+ * equal-weighted mean diverged: a Soup + Cream meal under the plate
+ * model is mostly soup (245g) lightly enriched with cream (14g), but
+ * under equal-weighted averaging the cream's high-fat numbers counted
+ * 50%. high_protein judgments now see the same numbers the meal is
+ * plotted at. Returns null if no category resolves. */
 function aggregateMealNutrients(categories, aggByName) {
   const resolved = categories.map(c => aggByName.get(c)).filter(Boolean);
   if (resolved.length === 0) return null;
+  let totalGrams = 0;
+  for (const c of resolved) totalGrams += (c.serving_grams || 100);
+  if (!(totalGrams > 0)) totalGrams = resolved.length * 100;
   const out = {};
   for (const field of NUTRIENT_FIELDS) {
-    let sum = 0;
-    for (const c of resolved) sum += (c[field] || 0);
-    out[field] = sum / resolved.length;
+    let totalNutrient = 0;
+    for (const c of resolved) {
+      const sg = c.serving_grams || 100;
+      totalNutrient += (c[field] || 0) * (sg / 100);
+    }
+    out[field] = totalNutrient / totalGrams * 100;
   }
   return out;
 }

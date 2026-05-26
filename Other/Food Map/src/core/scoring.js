@@ -75,17 +75,41 @@ export function distanceFromTargets(ingredient, thresholds, ranges, scale = 1) {
  * Map every ingredient to a [0, 1] score where 0 = closest-to-targets among
  * the current dataset, 1 = furthest. Per-ingredient coloring in points.js
  * then maps these scores to the green→red gradient.
+ *
+ * `visiblePredicate(ingredient) => bool`, when supplied, restricts the
+ * renormalization basis to items the user can actually see — hidden items'
+ * distances are kept (so the scoreMap still has entries for them) but they
+ * don't drag the min/max. Without this, filters that hide the worst items
+ * compress the visible items into the green end and the table view (which
+ * always renormalizes over its visible rows) shows red where the 3D scene
+ * does not. Reported by tester.
  */
-export function computeScores(ingredients, thresholds, ranges, getScale = null) {
+export function computeScores(ingredients, thresholds, ranges, getScale = null, visiblePredicate = null) {
   const distances = ingredients.map(f =>
     distanceFromTargets(f, thresholds, ranges, getScale ? (getScale(f) || 1) : 1)
   );
   let minD = Infinity, maxD = -Infinity;
-  for (const d of distances) { if (d < minD) minD = d; if (d > maxD) maxD = d; }
+  if (typeof visiblePredicate === 'function') {
+    for (let i = 0; i < ingredients.length; i++) {
+      if (!visiblePredicate(ingredients[i])) continue;
+      const d = distances[i];
+      if (d < minD) minD = d;
+      if (d > maxD) maxD = d;
+    }
+  }
+  // Fallback: if the predicate matched nothing (or wasn't supplied), span
+  // the whole dataset so we still produce a usable gradient.
+  if (!Number.isFinite(minD) || !Number.isFinite(maxD)) {
+    minD = Infinity; maxD = -Infinity;
+    for (const d of distances) { if (d < minD) minD = d; if (d > maxD) maxD = d; }
+  }
   const spread = Math.max(1e-6, maxD - minD);
   const scores = new Map();
   for (let i = 0; i < ingredients.length; i++) {
-    scores.set(ingredients[i].id, (distances[i] - minD) / spread);
+    const t = (distances[i] - minD) / spread;
+    // Clamp so hidden items beyond the visible envelope don't produce
+    // out-of-range scoreMap values (a t=1.3 would render past pure red).
+    scores.set(ingredients[i].id, t < 0 ? 0 : t > 1 ? 1 : t);
   }
   return scores;
 }

@@ -31,7 +31,7 @@ import {
   NUTRIENT_TAG_RULES, NUTRIENT_TAG_KEYS, TAGS,
 } from './data/schema.js';
 import { makeScaleGetter } from './core/unit.js';
-import { aggregateByCategory, aggregateAllMeals, aggregateUserMeal } from './core/aggregations.js';
+import { aggregateByCategory, aggregateAllMeals, aggregateUserMeal, aggregateIngredientDraft } from './core/aggregations.js';
 import { createScene, readCssColor } from './scene/setup.js';
 import { attachControls } from './scene/controls.js';
 import { buildAxes, disposeAxes } from './scene/axes.js';
@@ -69,9 +69,16 @@ import {
   isThresholdsAtDefaults,
 } from './core/scoring.js';
 import { hydratePatch, attachAutoSave } from './core/persistence.js';
-import { passingIngredientIds } from './core/restrictions.js';
+import { passingIngredientIds, excludedTagsFor } from './core/restrictions.js';
 import { mountRestrictions } from './ui/restrictions.js';
 import { mountTagFilter } from './ui/tag-filter.js';
+import { isAggregateView, isIndividualView } from './core/view-levels.js';
+import { loadJson, loadJsonSafe, loadArraySafe } from './util/load.js';
+import { showBootError, hideBootOverlay, wireBootResetButton } from './boot-error.js';
+import {
+  defaultConstraintFor, defaultConstraintForServing,
+  AXIS_CONSTRAINT_DEFAULTS, AXIS_CONSTRAINT_DEFAULTS_SERVING,
+} from './core/nutrient-defaults.js';
 
 const SNAP_POSITIONS = {
   x:    new THREE.Vector3(3.5, 0.5, 0.5),
@@ -79,93 +86,6 @@ const SNAP_POSITIONS = {
   z:    new THREE.Vector3(0.5, 0.5, 3.5),
   free: new THREE.Vector3(2.4, 1.9, 2.4),
 };
-
-// Phase 13.5 round 5: round-number axis defaults for every nutrient so
-// quartile tick labels read cleanly. Every default max is at or above
-// the dataset max so no ingredient sits outside the axis cube on first
-// paint. Threshold defaults track these too.
-const AXIS_CONSTRAINT_DEFAULTS = {
-  calories:      { min: 0, max: 1000  }, // dataset max 902
-  carbs:         { min: 0, max: 100   }, // dataset max 100
-  protein:       { min: 0, max: 110   }, // ingredients max 86; meals can reach ~107 (cheeseburger soup)
-  fiber:         { min: 0, max: 100   }, // dataset max 78
-  fat:           { min: 0, max: 100   }, // dataset max 100
-  sodium:        { min: 0, max: 40000 }, // dataset max 38758 (salt-table after Phase 15)
-  sugar:         { min: 0, max: 100   }, // dataset max 100
-  saturated_fat: { min: 0, max: 100   }, // dataset max 82.5
-};
-
-/* Phase 40 round 13: per-serving axis defaults. Multi-category meals
- * scale by ~3.5× (350g serving / 100g), so a meal at 280 cal/100g
- * becomes 980 cal/serving. The 0-1000 cal per-100g default would push
- * many meals off the right edge of the cube; wider ranges keep them
- * inside. Calibrated to comfortably hold a typical meal's per-serving
- * values without crowding ingredients (whose per-serving values are
- * mostly smaller than per-100g due to small servings on dense items). */
-const AXIS_CONSTRAINT_DEFAULTS_SERVING = {
-  calories:      { min: 0, max: 2000  },
-  carbs:         { min: 0, max: 200   },
-  protein:       { min: 0, max: 110   }, // ingredients max 86; meals can reach ~107 (cheeseburger soup)
-  fiber:         { min: 0, max: 50    },
-  fat:           { min: 0, max: 100   },
-  sodium:        { min: 0, max: 5000  },
-  sugar:         { min: 0, max: 100   },
-  saturated_fat: { min: 0, max: 50    },
-};
-
-function defaultConstraintFor(nutrient, ranges) {
-  const fallback = { min: ranges[nutrient].min, max: ranges[nutrient].max };
-  const preset = AXIS_CONSTRAINT_DEFAULTS[nutrient];
-  if (!preset) return fallback;
-  return {
-    min: Math.min(preset.min, fallback.min),
-    max: Math.max(preset.max, fallback.max),
-  };
-}
-
-/* Per-serving variant. Tester feedback: hitting Clear in per-serving
- * mode used to send fiber to 78 (the per-100g dataset envelope) and
- * sodium to ~38758 (salt's per-100g value). Both happened because the
- * old code widened the per-serving preset by the per-100g dataset
- * envelope — which is unit-incompatible. The per-serving presets are
- * deliberate (50g fiber/serving, 5000mg sodium/serving, etc.), so we
- * trust them directly. The fallback only fires for nutrients with no
- * preset configured — defensive only; every nutrient in
- * AXIS_CONSTRAINT_DEFAULTS_SERVING has one. */
-function defaultConstraintForServing(nutrient, ranges) {
-  const preset = AXIS_CONSTRAINT_DEFAULTS_SERVING[nutrient];
-  if (preset) return { min: preset.min, max: preset.max };
-  const r = ranges[nutrient];
-  return r ? { min: r.min, max: r.max } : { min: 0, max: 1 };
-}
-
-async function loadJson(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(`${path} fetch failed: ${res.status}`);
-  return res.json();
-}
-
-function loadJsonSafe(key, fallback) {
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    const parsed = JSON.parse(raw);
-    return (parsed && typeof parsed === 'object') ? { ...fallback, ...parsed } : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-function loadArraySafe(key, fallback) {
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : fallback;
-  } catch {
-    return fallback;
-  }
-}
 
 function buildFloorGrid(scene) {
   // Slightly larger than the unit cube + a small y-offset so the grid
@@ -250,6 +170,25 @@ async function boot() {
     for (const ing of ingredients) {
       ing.tags = effectiveTags(ing);
     }
+    /* Boot-time indexes: ingredients grouped by category and food_group.
+     * The category/food-group filter helpers were scanning all 1,362
+     * ingredients per call; with these maps they iterate only the
+     * categories (~66) or food groups (12) that actually matter. The
+     * dataset is immutable at runtime so these maps never need rebuilding. */
+    const ingredientsByCategory = new Map();
+    const ingredientsByFoodGroup = new Map();
+    for (const ing of ingredients) {
+      if (ing.category) {
+        let list = ingredientsByCategory.get(ing.category);
+        if (!list) { list = []; ingredientsByCategory.set(ing.category, list); }
+        list.push(ing);
+      }
+      if (ing.food_group) {
+        let list = ingredientsByFoodGroup.get(ing.food_group);
+        if (!list) { list = []; ingredientsByFoodGroup.set(ing.food_group, list); }
+        list.push(ing);
+      }
+    }
     /* Phase 40 round 7: raw-meal lookup built early so the Diet +
      * Cuisine filter can resolve meal aggregates back to their source
      * entries during the very first applyFilterToScene that runs
@@ -306,33 +245,46 @@ async function boot() {
     const compositeWeights = loadJsonSafe(LS_TABLE_WEIGHTS, defaultCompositeWeights);
     const userMeals        = loadArraySafe(LS_USER_MEALS, []);
 
-    // Phase 13.5 round 5: default thresholds match the axis constraint
-    // defaults so a fresh load has matching round-number windows on the
-    // sliders and the axes.
     const defaultConstraintServing = (nutrient) => defaultConstraintForServing(nutrient, ranges);
+    /* Batch 14 fix: the slider bar size per unit IS the threshold default.
+     *
+     * Earlier the slider bar was unit-agnostic (max of envelope + 100g
+     * default + serving default) but the initial threshold value was the
+     * per-unit preset — narrower than the bar. The handle started at the
+     * bar's midpoint in many nutrients (calories+carbs in 100g, fiber/
+     * sodium/saturated_fat/iron in serving), which violated the user's
+     * mental model that "the default IS at the slider edges". Now the
+     * slider resizes per unit, and the handle is always at the bar's
+     * edges on boot.
+     *
+     * defaultThresholdsMap / defaultThresholdsMapServing back this:
+     * isThresholdsAtDefaults uses them, so the filter is dormant when
+     * the user hasn't moved any handle off its bar edge.
+     *
+     * `var` declaration so the function is hoisted out of the try block
+     * — mountNutrientThresholds (post-try) closes over it. A plain
+     * `function` declaration would be block-scoped in strict mode and
+     * unreachable from the outer code. */
+    var sliderBaselineFor = function (nutrient, unit) {
+      if (unit === 'serving') {
+        const b = defaultConstraintForServing(nutrient, ranges);
+        return { min: b.min, max: b.max };
+      }
+      const r = ranges[nutrient];
+      const a = defaultConstraintFor(nutrient, ranges);
+      return { min: Math.min(r.min, a.min), max: Math.max(r.max, a.max) };
+    };
     const initialThresholds = {};
-    for (const nutrient of NUTRIENT_FIELDS) initialThresholds[nutrient] = defaultConstraint(nutrient);
-    /* Per-serving threshold set seeds to the per-serving defaults
-     * (AXIS_CONSTRAINT_DEFAULTS_SERVING). Round 11 originally reused
-     * the per-100g defaults here, which meant the per-serving slot
-     * loaded with calorie max = 1000 (per-100g convention) even though
-     * round 13 set the per-serving AXIS default to 2000. Two slots
-     * that were supposed to be unit-appropriate had drifted; now they
-     * match. */
     const initialThresholdsServing = {};
-    for (const nutrient of NUTRIENT_FIELDS) initialThresholdsServing[nutrient] = defaultConstraintServing(nutrient);
-    /* Bug-fix (per-serving meal dots disappearing): build the per-unit
-     * defaults map up front so the filter code can treat "thresholds at
-     * user-defaults" as "no filter active". Previously the threshold
-     * filter only treated the dataset envelope as baseline, so the
-     * per-serving sodium default (0-5000) hid ~28 soup/cake meals whose
-     * per-serving sodium/sugar exceed the user-default window — even
-     * after a settings reset. The map is later reused by mountActiveFilters. */
     var defaultThresholdsMap = {};
     var defaultThresholdsMapServing = {};
     for (const nutrient of NUTRIENT_FIELDS) {
-      defaultThresholdsMap[nutrient]        = defaultConstraint(nutrient);
-      defaultThresholdsMapServing[nutrient] = defaultConstraintServing(nutrient);
+      const b100g = sliderBaselineFor(nutrient, '100g');
+      const bServ = sliderBaselineFor(nutrient, 'serving');
+      initialThresholds[nutrient]         = { ...b100g };
+      initialThresholdsServing[nutrient]  = { ...bServ };
+      defaultThresholdsMap[nutrient]      = { ...b100g };
+      defaultThresholdsMapServing[nutrient] = { ...bServ };
     }
     state.set({
       ingredients,
@@ -492,6 +444,18 @@ async function boot() {
         userMealsForAgg,
         composition,
       );
+      /* Batch 4 ingredient-level remix: when the draft carries an explicit
+       * ingredient id list, recompute just that meal's dot from those specific
+       * ingredients (gram-weighted) instead of its category means. Done after
+       * aggregation since the meal aggregates by category by default. */
+      if (draft && draft.mealId && Array.isArray(draft.ingredients)) {
+        for (let i = 0; i < all.length; i++) {
+          if (all[i].id === draft.mealId) {
+            all[i] = aggregateIngredientDraft(all[i], ingredients, draft.ingredients);
+            break;
+          }
+        }
+      }
       const f = state.get('mealFilters');
       const restrictions = state.get('restrictions') || [];
       if (isMealFiltersEmpty(f) && restrictions.length === 0) return all;
@@ -502,6 +466,16 @@ async function boot() {
 
   function filterMealsByMealFilters(aggregates, ingredients, curatedMeals, userMeals, filters, restrictions = []) {
     const ingredientById = new Map(ingredients.map(ingredient => [ingredient.id, ingredient]));
+    // category -> [ingredient]; the category-shape restriction check below needs
+    // to know whether a referenced category is ENTIRELY restricted (no in-category
+    // substitution would make the meal acceptable).
+    const ingredientsByCategory = new Map();
+    for (const ing of ingredients) {
+      if (!ing.category) continue;
+      let list = ingredientsByCategory.get(ing.category);
+      if (!list) { list = []; ingredientsByCategory.set(ing.category, list); }
+      list.push(ing);
+    }
     const curatedById = new Map(curatedMeals.map(m => [m.id, m]));
     const userById = new Map(userMeals.map(m => [m.id, m]));
     const ingredientIds         = filters.ingredientIds         || [];
@@ -611,16 +585,52 @@ async function boot() {
         }
       }
       if (restrictedAllowed) {
+        /* Batch 14: meal-level `contains` tags trump the category check.
+         * 'Sweet-and-sour pork' / 'Pasta carbonara' / 'Bangers and mash'
+         * etc. carry `contains: ["pork"]` because the category 'Red meat'
+         * (or 'Processed meat') alone can't distinguish pork from beef
+         * options. If ANY active restriction excludes any of the meal's
+         * own contains tags, hide. */
+        const mealContains = Array.isArray(raw.contains) ? raw.contains : [];
+        if (mealContains.length > 0) {
+          const excludedTags = excludedTagsFor(restrictions);
+          for (const t of mealContains) {
+            if (excludedTags.has(t)) return false;
+          }
+        }
         if (!useCategoryShape) {
+          /* Ingredient-shape: every named ingredient must pass. */
           const hit = (raw.ingredients || []).some(ing => {
             const f = ingredientById.get(ing.ingredientId);
             return f && !restrictedAllowed.has(f.id);
           });
           if (hit) return false;
         } else {
-          const cats = new Set(raw.ingredient_categories || []);
-          for (const ing of ingredients) {
-            if (cats.has(ing.category) && !restrictedAllowed.has(ing.id)) return false;
+          /* Batch 13: category-shape meals are slot-templates — a
+           * referenced category like 'Red meat' is a slot the meal
+           * fills with SOME ingredient from that category, not a
+           * commitment to every member. The previous logic ("any
+           * restricted ingredient in any referenced category → hide")
+           * hid 49% of meals under halal: Burger, Steak dinner, Cobb
+           * salad, etc. all share 'Red meat' with pork variants and
+           * got incorrectly excluded even though they can clearly be
+           * made with beef.
+           *
+           * New rule: a meal is incompatible only if some referenced
+           * category is ENTIRELY restricted — no in-category
+           * substitution would make it acceptable. 'Alcoholic
+           * beverages' (33/33 restricted under halal) still hides the
+           * meal. 'Red meat' (9/39) does not.
+           *
+           * Strict restrictions (vegetarian, vegan, etc.) still hide
+           * meat-bearing meals correctly because every member of
+           * 'Red meat' / 'White meat' / 'Seafood' carries the 'meat'
+           * or 'fish' tag — the entire category is restricted. */
+          for (const cat of raw.ingredient_categories || []) {
+            const list = ingredientsByCategory.get(cat);
+            if (!list || list.length === 0) continue;
+            const anyAllowed = list.some(f => restrictedAllowed.has(f.id));
+            if (!anyAllowed) return false;
           }
         }
       }
@@ -699,7 +709,7 @@ async function boot() {
   const mealsHandle = buildMeals(scn.scene, ingredients, state.get('axes'), ranges);
   function refreshMeals() {
     mealsHandle.update(state.get('userMeals') || []);
-    mealsHandle.setVisible(state.get('viewLevel') === 'individual');
+    mealsHandle.setVisible(isIndividualView(state.get('viewLevel')));
   }
   refreshMeals();
 
@@ -825,7 +835,7 @@ async function boot() {
   function translateSetToCurrent(ingredientIdSet) {
     if (!ingredientIdSet) return null;
     const level = state.get('viewLevel');
-    if (level === 'individual') return ingredientIdSet;
+    if (isIndividualView(level)) return ingredientIdSet;
     // Phase 13.5 round 9: category view aggregates by the user-selected
     // field (food_group / category / subcategory). To translate an
     // ingredient-id set into the aggregate-id set, look up each
@@ -861,48 +871,66 @@ async function boot() {
     return out;
   }
 
-  function applyFilterToScene() {
-    const filter        = state.get('ingredientFilter');
-    const mode          = state.get('thresholdMode') || 'filter';
-    const level         = state.get('viewLevel');
-    const restrictions  = state.get('restrictions') || [];
-
-    /* Phase 40 round 11: active thresholds + per-ingredient scale chosen
-     * by the current nutrientUnit. Per-serving mode tests SCALED values
-     * against the per-serving threshold set. */
-    const thresholds = activeThresholds();
-    const getNutrientScale = nutrientScaleGetter();
+  /* Shared first-pass of the filter pipeline: reads all filter inputs
+   * and builds the six ingredient-id "passing" sets that both the 3D
+   * scene (applyFilterToScene) and the table view (tableHiddenSet) need.
+   * Previously these two functions independently rebuilt all six sets
+   * on every filter change — same work, twice. Centralizing here cuts
+   * the per-mutation cost in half and ensures the two surfaces never
+   * drift in their filter semantics.
+   *
+   * Phase 40 round 8 note: at aggregate views, tagActive is null — the
+   * aggregate-direct tag pass below handles tags honestly using the
+   * aggregate's own per-100g values rather than lifting "any member
+   * carries the tag".
+   *
+   * Phase 40 round 11 note: thresholds are read from whichever set
+   * matches the active nutrientUnit, and ingredient values are scaled
+   * accordingly via getNutrientScale. */
+  function computeAllFilterSets() {
+    const level             = state.get('viewLevel');
+    const isAggregate       = isAggregateView(level);
+    const filter            = state.get('ingredientFilter');
+    const thresholds        = activeThresholds();
+    const restrictions      = state.get('restrictions') || [];
+    const tagFilter         = state.get('tagFilter');
+    const categoryFilter    = state.get('categoryFilter');
+    const foodGroupFilter   = state.get('foodGroupFilter');
+    const getNutrientScale  = nutrientScaleGetter();
 
     const ingredientActive = isFilterEmpty(filter) ? null : computeActiveSet(ingredients, filter);
-    const thresholdActive = !thresholdsActAsFilter(thresholds)
-      ? null
-      : thresholdActiveSet(ingredients, thresholds, getNutrientScale);
+    /* Batch 14: only enforce nutrient thresholds that the user has
+     * actually moved off the bar edge. Some items legitimately exceed
+     * the per-unit baseline (e.g. nut butters at ~50 g fat / serving
+     * blow past the serving-fat default 100 g when one drag activates
+     * the global threshold filter). Filtering only on the user's
+     * actually-moved nutrients matches their mental model: "I dragged
+     * calories, so calories should narrow — fat shouldn't kick in." */
+    const effectiveThresholds = activeThresholdSlots(thresholds);
+    const thresholdActive  = !effectiveThresholds
+      ? null : thresholdActiveSet(ingredients, effectiveThresholds, getNutrientScale);
     const restrictionActive = passingIngredientIds(ingredients, restrictions);
-    const tagFilter = state.get('tagFilter');
-    /* Phase 40 round 8: at aggregate views, the tag filter tests the
-     * aggregate's own values (for nutrient tags) instead of just
-     * lifting "any member has the tag" — a tester correctly noticed
-     * that a meal with 1.1g/100g of fiber was matching the
-     * 'high-fiber' tag because one of its ingredients was high-fiber.
-     * The aggregate-direct test is honest: a "high-fiber meal" should
-     * have ≥6g fiber per 100g aggregate, period.
-     *
-     * Identity tags (breakfast/snack/etc.) don't have a numeric
-     * definition, so they still lift from member ingredients — but
-     * only at the aggregate-level pass below. tagActive (used for the
-     * ingredient-passing intersection) is skipped at aggregate views
-     * so the lift doesn't double-fire. */
-    const isAggregateView = state.get('viewLevel') !== 'individual';
-    const tagActive = (isTagFilterEmpty(tagFilter) || isAggregateView)
-      ? null
-      : tagActiveSet(ingredients, tagFilter, state.get('tagFilterMatch') || 'any');
+    const tagActive = (isTagFilterEmpty(tagFilter) || isAggregate)
+      ? null : tagActiveSet(ingredients, tagFilter, state.get('tagFilterMatch') || 'any');
+    const categoryActive  = categoryFilterPassingIngredients(categoryFilter);
+    const foodGroupActive = foodGroupFilterPassingIngredients(foodGroupFilter);
 
-    // Phase 40 round 4: global Categories + Food groups filters. Both
-    // produce an ingredient-id "passing" set the same way restrictions
-    // and tag filter do, so they intersect cleanly into the universal
-    // active set.
-    const categoryActive  = categoryFilterPassingIngredients(state.get('categoryFilter'));
-    const foodGroupActive = foodGroupFilterPassingIngredients(state.get('foodGroupFilter'));
+    return {
+      level, isAggregate,
+      filter, thresholds, restrictions, tagFilter, categoryFilter, foodGroupFilter,
+      getNutrientScale,
+      ingredientActive, thresholdActive, restrictionActive,
+      tagActive, categoryActive, foodGroupActive,
+    };
+  }
+
+  function applyFilterToScene() {
+    const mode = state.get('thresholdMode') || 'filter';
+    const {
+      level, ingredientActive, thresholdActive, restrictionActive,
+      tagActive, categoryActive, foodGroupActive,
+      thresholds, getNutrientScale,
+    } = computeAllFilterSets();
 
     /* Phase 40 round 3: per tester feedback, ALL filters now HIDE
      * non-matching dots rather than greying them. Build a single
@@ -916,8 +944,14 @@ async function boot() {
      * tint reflecting their distance from the midpoint. So we
      * always include thresholdActive in the passing-set
      * combination, regardless of mode. */
+    /* Batch 3: at meal view the ingredient filter is handled separately by
+     * ingredientMealHidden (matches each meal's specific example_ingredients,
+     * not its categories), so it's dropped from the category-based combine /
+     * translateHiddenToCurrent path here. Category + individual views keep the
+     * member-based behavior. */
+    const ingredientActiveForCombine = level === 'meal' ? null : ingredientActive;
     const passingActiveCombined = combinePassingSets([
-      ingredientActive,
+      ingredientActiveForCombine,
       restrictionActive,
       tagActive,
       categoryActive,
@@ -939,20 +973,8 @@ async function boot() {
      * right space and the filter actually fires. */
     const colorFilteredIds = computeColorFilteredSet();
 
-    /* Tester feedback: Score mode used to color only when the user
-     * was at the individual view-level — at Categories / Meals view
-     * the dots stayed in their food-group colors. Now we compute
-     * scores against currentDataset directly so the gradient applies
-     * at every view level. Aggregate items have the same nutrient
-     * shape as ingredients, so distanceFromTargets works on them. */
-    let scoreMap = null;
-    if (mode === 'score') {
-      scoreMap = computeScores(currentDataset, thresholds, ranges, getNutrientScale);
-    }
-
     // activeSet is now null — there's no greying treatment anymore.
     pointsHandle.setActiveSet(null);
-    pointsHandle.setScoreMap(scoreMap);
 
     /* Phase 40 round 3: match-all override for aggregate views. When
      * ingredientFilterMatch === 'all' and viewLevel is meal/category,
@@ -971,6 +993,12 @@ async function boot() {
     if (matchAllHidden && matchAllHidden.size > 0) {
       if (!hiddenInCurrent) hiddenInCurrent = new Set();
       for (const id of matchAllHidden) hiddenInCurrent.add(id);
+    }
+    /* Batch 3: meal-level ingredient filter via specific example_ingredients. */
+    const ingMealHidden = ingredientMealHidden(level);
+    if (ingMealHidden && ingMealHidden.size > 0) {
+      if (!hiddenInCurrent) hiddenInCurrent = new Set();
+      for (const id of ingMealHidden) hiddenInCurrent.add(id);
     }
     /* Phase 40 round 4: same idea for categoryFilter — when match-all
      * is on, EVERY included category must appear in the aggregate. */
@@ -1003,15 +1031,44 @@ async function boot() {
       if (!hiddenInCurrent) hiddenInCurrent = new Set();
       for (const id of aggTagHidden) hiddenInCurrent.add(id);
     }
+    /* Batch 4: aggregate-level food-group filter (stricter exclude +
+     * AND/OR match) layered on top of the soft ingredient-level path. */
+    const fgAggHidden = aggregateFoodGroupHidden(level);
+    if (fgAggHidden && fgAggHidden.size > 0) {
+      if (!hiddenInCurrent) hiddenInCurrent = new Set();
+      for (const id of fgAggHidden) hiddenInCurrent.add(id);
+    }
     /* Phase 40 round 9: SCOPE='all' hides — extras-not-allowed mode
      * per filter section. Composes with the inner AND/OR match logic. */
-    for (const scopeFn of [ingredientScopeHidden, categoryScopeHidden, tagScopeHidden, dietCuisineScopeHidden]) {
+    for (const scopeFn of [
+      ingredientScopeHidden, categoryScopeHidden, tagScopeHidden,
+      dietCuisineScopeHidden, foodGroupScopeHidden,
+    ]) {
       const h = scopeFn(level);
       if (h && h.size > 0) {
         if (!hiddenInCurrent) hiddenInCurrent = new Set();
         for (const id of h) hiddenInCurrent.add(id);
       }
     }
+
+    /* Tester feedback: Score mode renormalizes the green→red gradient.
+     * Previously this used the full currentDataset as the basis, so when
+     * a filter hid the worst items (low protein, high sodium, etc.) the
+     * surviving dots collapsed into the green end of the gradient — no
+     * red visible in 3D even though the table view (which renormalizes
+     * over its visible rows) showed red. The fix: pass a predicate so
+     * computeScores only uses items the user can actually see when
+     * computing min/max. Score is computed after hiddenInCurrent is
+     * finalized for this reason. */
+    let scoreMap = null;
+    if (mode === 'score') {
+      const visiblePredicate = (hiddenInCurrent && hiddenInCurrent.size > 0)
+        ? (item) => !hiddenInCurrent.has(item.id)
+        : null;
+      scoreMap = computeScores(currentDataset, thresholds, ranges, getNutrientScale, visiblePredicate);
+    }
+    pointsHandle.setScoreMap(scoreMap);
+
     pointsHandle.setHiddenSet(hiddenInCurrent);
 
     // Phase 11 / 40 round 5: empty-filter detection. The overlay below
@@ -1071,7 +1128,7 @@ async function boot() {
     const included = Array.isArray(cf.included) ? cf.included : [];
     if (included.length === 0) return null;
     const level = state.get('viewLevel');
-    if (level === 'individual') return null;
+    if (isIndividualView(level)) return null;
     const reqSet = new Set(included);
     const toHide = new Set();
     if (level === 'category') {
@@ -1097,7 +1154,7 @@ async function boot() {
     const match = state.get('ingredientFilterMatch') || 'any';
     if (match !== 'all' || !ingredientActive) return null;
     const level = state.get('viewLevel');
-    if (level === 'individual') return null;
+    if (isIndividualView(level)) return null;
 
     const requiredCats = new Set();
     for (const f of ingredients) {
@@ -1115,17 +1172,56 @@ async function boot() {
       for (const agg of currentDataset) {
         if (required == null || agg.name !== required) toHide.add(agg.id);
       }
-    } else if (level === 'meal') {
-      for (const meal of currentDataset) {
-        const mealCats = new Set(meal.examples || []);
-        let allPresent = true;
-        for (const req of requiredCats) {
-          if (!mealCats.has(req)) { allPresent = false; break; }
-        }
-        if (!allPresent) toHide.add(meal.id);
-      }
     }
+    // Batch 3: meal view's match-all is handled by ingredientMealHidden using
+    // each meal's specific example_ingredients, not its categories.
     return toHide;
+  }
+
+  /* Tester-feedback Batch 3: the meal-level ingredient filter, keyed off each
+   * meal's specific `example_ingredients` (the actual ingredients it uses)
+   * rather than its categories — so "show meals that use bagels" returns only
+   * meals that actually list a bagel, not every refined-grain meal. The
+   * existing toggles carry over, with "selected" = the checked (non-excluded)
+   * ingredients:
+   *   match OR  — meal must contain at least one selected ingredient
+   *   match AND — meal must contain every selected ingredient
+   *   scope ALL — meal must contain ONLY selected ingredients (no extras),
+   *               which is the "what can I make with just what I have" case
+   * Meals with an empty example_ingredients list (e.g. a category-shape user
+   * remix) are never constrained here. Category + individual views keep their
+   * existing member/category-based semantics elsewhere. */
+  function ingredientMealHidden(level) {
+    if (level !== 'meal') return null;
+    const filter = state.get('ingredientFilter');
+    if (isFilterEmpty(filter)) return null;
+    const selected = computeActiveSet(ingredients, filter);
+    const match = state.get('ingredientFilterMatch') || 'any';
+    const scope = state.get('ingredientFilterScope') || 'any';
+    const out = new Set();
+    for (const meal of (currentDataset || [])) {
+      const E = meal.example_ingredients;
+      if (!Array.isArray(E) || E.length === 0) continue;
+      let pass;
+      if (match === 'all') {
+        // Every selected ingredient must be present. Impossible the moment the
+        // selection outnumbers the meal's short ingredient list — bail early.
+        if (selected.size > E.length) {
+          pass = false;
+        } else {
+          pass = true;
+          for (const s of selected) { if (!E.includes(s)) { pass = false; break; } }
+        }
+      } else {
+        pass = false;
+        for (const id of E) { if (selected.has(id)) { pass = true; break; } }
+      }
+      if (pass && scope === 'all') {
+        for (const id of E) { if (!selected.has(id)) { pass = false; break; } }
+      }
+      if (!pass) out.add(meal.id);
+    }
+    return out.size > 0 ? out : null;
   }
 
   /* Intersect every non-null "passing" set into one. Returns null when
@@ -1145,30 +1241,148 @@ async function boot() {
     const included = Array.isArray(cf.included) ? cf.included : [];
     const excluded = Array.isArray(cf.excluded) ? cf.excluded : [];
     if (included.length === 0 && excluded.length === 0) return null;
-    const incSet = new Set(included);
     const excSet = new Set(excluded);
     const out = new Set();
-    for (const f of ingredients) {
-      if (excSet.has(f.category)) continue;
-      if (incSet.size > 0 && !incSet.has(f.category)) continue;
-      out.add(f.id);
+    if (included.length > 0) {
+      // Iterate only the included categories' ingredient lists.
+      for (const cat of included) {
+        if (excSet.has(cat)) continue;
+        const list = ingredientsByCategory.get(cat);
+        if (!list) continue;
+        for (const f of list) out.add(f.id);
+      }
+    } else {
+      // Include everything except the excluded categories.
+      for (const [cat, list] of ingredientsByCategory) {
+        if (excSet.has(cat)) continue;
+        for (const f of list) out.add(f.id);
+      }
     }
     return out;
   }
 
-  /* Phase 40 round 4: global Food groups filter (inverse-checkbox).
-   * Returns ingredient ids whose food_group is NOT in excluded. */
+  /* Phase 40 round 4 / Batch 4: global Food groups filter is now tri-
+   * state (included + excluded), matching the categories filter.
+   * Returns the set of ingredient ids that pass the include AND exclude
+   * checks. Empty filter → null = no constraint.
+   *
+   * The aggregate-level AND/OR + ANY/ALL semantics live in
+   * aggregateFoodGroupHidden / foodGroupScopeHidden below — this
+   * function only enforces the ingredient-level membership check, which
+   * the shared translateHiddenToCurrent then lifts to aggregates with
+   * the historical "every member hidden" semantic. The new aggregate-
+   * level functions add the stricter hides on top. */
   function foodGroupFilterPassingIngredients(gf) {
     if (!gf) return null;
-    const excluded = Array.isArray(gf.excluded) ? gf.excluded : [];
-    if (excluded.length === 0) return null;
-    const excSet = new Set(excluded);
+    const inc = Array.isArray(gf.included) ? gf.included : [];
+    const exc = Array.isArray(gf.excluded) ? gf.excluded : [];
+    if (inc.length === 0 && exc.length === 0) return null;
+    const incSet = new Set(inc);
+    const excSet = new Set(exc);
     const out = new Set();
-    for (const f of ingredients) {
-      if (excSet.has(f.food_group)) continue;
-      out.add(f.id);
+    for (const [group, list] of ingredientsByFoodGroup) {
+      if (excSet.has(group)) continue;
+      if (incSet.size > 0 && !incSet.has(group)) continue;
+      for (const f of list) out.add(f.id);
     }
     return out;
+  }
+
+  /* Batch 4: aggregate-level food-group filter for Meals and Categories
+   * views. Tester feedback wanted the filter to compose like the diet+
+   * cuisine and category filters — AND/OR for "which selected groups
+   * must be present" and ANY/ALL for "extras allowed vs subset only".
+   *
+   * Excluded is stricter here than the soft translateHiddenToCurrent
+   * path: if a meal references ANY excluded food_group it's hidden.
+   * That matches user intuition ("I don't want Dairy in any of my
+   * meals") even if the meal also contains permitted groups. */
+  function aggregateFoodGroupHidden(level) {
+    if (isIndividualView(level)) return null;
+    const gf = state.get('foodGroupFilter') || {};
+    const inc = Array.isArray(gf.included) ? gf.included : [];
+    const exc = Array.isArray(gf.excluded) ? gf.excluded : [];
+    if (inc.length === 0 && exc.length === 0) return null;
+    const incArr = inc;
+    const incSet = new Set(inc);
+    const excSet = new Set(exc);
+    const match = state.get('foodGroupFilterMatch') || 'any';
+
+    function aggGroups(agg) {
+      if (level === 'meal') {
+        const cats = agg.examples || [];
+        const groups = new Set();
+        for (const cat of cats) {
+          const cg = foodGroupsByCategory.get(cat);
+          if (cg) for (const g of cg) groups.add(g);
+        }
+        return groups;
+      }
+      // category view: aggregate-name → food_groups (typically one).
+      const cg = foodGroupsByCategory.get(agg.name);
+      return cg || new Set();
+    }
+
+    const out = new Set();
+    for (const agg of (currentDataset || [])) {
+      const groups = aggGroups(agg);
+      // Excluded: ANY excluded group in the aggregate → hide.
+      if (excSet.size > 0) {
+        let hit = false;
+        for (const g of groups) if (excSet.has(g)) { hit = true; break; }
+        if (hit) { out.add(agg.id); continue; }
+      }
+      // Included: AND requires every selected group present; OR (default)
+      // requires at least one.
+      if (incSet.size > 0) {
+        let pass;
+        if (match === 'all') {
+          pass = incArr.every(g => groups.has(g));
+        } else {
+          pass = incArr.some(g => groups.has(g));
+        }
+        if (!pass) out.add(agg.id);
+      }
+    }
+    return out.size > 0 ? out : null;
+  }
+
+  /* Batch 4: scope='all' (subset) constraint for the food-group filter.
+   * An aggregate passes only when every food_group it references is in
+   * the included set. Composes with the inner match (AND/OR) logic via
+   * union of hide sets. */
+  function foodGroupScopeHidden(level) {
+    if (isIndividualView(level)) return null;
+    if ((state.get('foodGroupFilterScope') || 'any') !== 'all') return null;
+    const gf = state.get('foodGroupFilter') || {};
+    const inc = Array.isArray(gf.included) ? gf.included : [];
+    if (inc.length === 0) return null;
+    const incSet = new Set(inc);
+
+    function aggGroups(agg) {
+      if (level === 'meal') {
+        const cats = agg.examples || [];
+        const groups = new Set();
+        for (const cat of cats) {
+          const cg = foodGroupsByCategory.get(cat);
+          if (cg) for (const g of cg) groups.add(g);
+        }
+        return groups;
+      }
+      const cg = foodGroupsByCategory.get(agg.name);
+      return cg || new Set();
+    }
+
+    const out = new Set();
+    for (const agg of (currentDataset || [])) {
+      const groups = aggGroups(agg);
+      let pass = true;
+      for (const g of groups) {
+        if (!incSet.has(g)) { pass = false; break; }
+      }
+      if (!pass) out.add(agg.id);
+    }
+    return out.size > 0 ? out : null;
   }
 
   /* Phase 40 round 9: SCOPE = 'all' helpers. An item passes the scope
@@ -1182,7 +1396,11 @@ async function boot() {
 
   function ingredientScopeHidden(level) {
     if ((state.get('ingredientFilterScope') || 'any') !== 'all') return null;
-    if (level === 'individual') return null; // each ingredient is itself
+    if (isIndividualView(level)) return null; // each ingredient is itself
+    // Batch 3: meal scope='all' (no extras) is handled inside
+    // ingredientMealHidden against example_ingredients; this category-based
+    // path now only applies to the Categories view.
+    if (level === 'meal') return null;
     const filter = state.get('ingredientFilter');
     if (isFilterEmpty(filter)) return null;
     const excluded = new Set(filter.excludedIds || []);
@@ -1228,7 +1446,7 @@ async function boot() {
     if (!Array.isArray(tagF) || tagF.length === 0) return null;
     const allowed = new Set(tagF);
     const out = new Set();
-    if (level === 'individual') {
+    if (isIndividualView(level)) {
       for (const ing of ingredients) {
         const itags = ing.tags || [];
         let ok = itags.length > 0;
@@ -1252,6 +1470,24 @@ async function boot() {
     return out.size > 0 ? out : null;
   }
 
+  /* Batch 4 (revised flat-selection semantics): the user said the
+   * AND/OR shouldn't care about diet vs cuisine — selected items
+   * across both sub-filters form one flat set. ANY/ALL (scope) still
+   * applies per-sub-set when that sub-set is non-empty (selecting only
+   * a diet shouldn't suddenly forbid all cuisines). Concretely:
+   *
+   *   ALL/AND — meal contains EVERY selected attribute AND has no
+   *             extras within sub-sets the user has restricted.
+   *   ALL/OR  — meal contains AT LEAST ONE selected attribute AND has
+   *             no extras within restricted sub-sets.
+   *   ANY/AND — meal contains every selected attribute; extras allowed.
+   *   ANY/OR  — meal contains at least one selected attribute; extras
+   *             allowed.
+   *
+   * The "no extras" subset constraint lives in dietCuisineScopeHidden
+   * (this function) and the AND/OR match lives in mealDietCuisineHidden
+   * — they layer via union of hide sets, same pattern as every other
+   * filter pair in this file. */
   function dietCuisineScopeHidden(level) {
     if (level !== 'meal') return null;
     if ((state.get('dietCuisineFilterScope') || 'any') !== 'all') return null;
@@ -1264,21 +1500,23 @@ async function boot() {
     for (const meal of (currentDataset || [])) {
       const raw = getRawMealForFilter(meal.id);
       if (!raw) continue;
-      // Diet: meal.diet_compatibility must be a subset of allowed diets
-      // (only fires when the user has restricted diets).
+      let bad = false;
+      // Diets sub-set: when the user has restricted diets, the meal's
+      // diet_compatibility must be a subset of the allowed list.
       if (dietInc.length > 0) {
         const dc = Array.isArray(raw.diet_compatibility) ? raw.diet_compatibility : [];
         for (const d of dc) {
-          if (!allowedDiets.has(d)) { out.add(meal.id); break; }
+          if (!allowedDiets.has(d)) { bad = true; break; }
         }
-        if (out.has(meal.id)) continue;
       }
-      // Cuisine: a meal has one cuisine string, so "subset" is the
-      // same as "in the allowed set". Already enforced by the default
-      // hide pass; no-op here.
-      if (cuisineInc.length > 0 && !allowedCuisines.has(raw.cuisine || '')) {
-        out.add(meal.id);
+      // Cuisine sub-set: a meal has one cuisine. When the user has
+      // restricted cuisines, the meal's cuisine must be in the list.
+      // Empty meal.cuisine passes (treated as "no cuisine claim").
+      if (!bad && cuisineInc.length > 0) {
+        const c = raw.cuisine || '';
+        if (c && !allowedCuisines.has(c)) bad = true;
       }
+      if (bad) out.add(meal.id);
     }
     return out.size > 0 ? out : null;
   }
@@ -1290,7 +1528,7 @@ async function boot() {
    * AND/OR semantic. Only fires when at least one tag is selected
    * AND we're not in the individual view. */
   function aggregateLevelTagHidden(level) {
-    if (level === 'individual') return null;
+    if (isIndividualView(level)) return null;
     const tagFilter = state.get('tagFilter');
     if (!Array.isArray(tagFilter) || tagFilter.length === 0) return null;
     const matchMode = state.get('tagFilterMatch') || 'any';
@@ -1317,13 +1555,26 @@ async function boot() {
    * "high-fiber" on a Meals aggregate means meal.fiber ≥ 6, not "one
    * ingredient is high-fiber"). Identity tags come from any member
    * ingredient — they don't have a numeric definition so the lift is
-   * the honest answer. */
+   * the honest answer.
+   *
+   * Batch 5b: meals also carry direct identity tags on the meal itself
+   * (lunch/dinner/breakfast — meal-as-composed tags that don't fall out
+   * of any one ingredient). Those merge in alongside the lifted member
+   * tags so "Filter by tag → lunch" surfaces the curated lunch meals. */
   function effectiveAggregateTags(agg, level, identityTagSet) {
     const tags = [];
     for (const t of NUTRIENT_TAG_KEYS) {
       if (NUTRIENT_TAG_RULES[t](agg)) tags.push(t);
     }
     const memberTags = new Set();
+    // Meal-direct identity tags (Batch 5b). Drop nutrient tags here — those
+    // are recomputed from agg's own values above and we don't want stored
+    // values to outvote the numeric definitions.
+    if (Array.isArray(agg.tags)) {
+      for (const t of agg.tags) {
+        if (identityTagSet.has(t)) memberTags.add(t);
+      }
+    }
     if (level === 'category') {
       // category aggregates are derived by aggregating ingredients
       // whose `category` (or categoryGroupBy field) equals agg.name.
@@ -1350,11 +1601,21 @@ async function boot() {
     return tags;
   }
 
-  /* Phase 40 round 7: meal-only Diet + Cuisine hide. Only runs at
-   * the Meals view-level. A meal is hidden iff it fails the diet
-   * include filter (no overlap with selected diet keys) OR fails the
-   * cuisine include filter (cuisine not in selected list). Both
-   * filters are independent OR semantics within their slot. */
+  /* Batch 4 (revised): meal-only Diet + Cuisine match. Treats selected
+   * diets ∪ cuisines as a single flat selection — the AND/OR toggle
+   * controls how many of those flat selections the meal must satisfy:
+   *   match='all' (AND) — every selected item present in the meal's
+   *                       attributes (diet_compatibility ∪ {cuisine})
+   *   match='any' (OR)  — at least one selected item present
+   *
+   * A meal carries multiple diets but only one cuisine, so AND with
+   * multiple selected cuisines is unsatisfiable (correctly returning
+   * "no meals"). The user's example (one diet + one cuisine selected)
+   * works naturally — AND means meal has both, OR means at least one.
+   *
+   * The ANY/ALL (scope) constraint that says "no extras" lives in
+   * dietCuisineScopeHidden — see the comment block there for the
+   * full ANY+AND / ALL+OR / etc. truth table. */
   function mealDietCuisineHidden(level) {
     if (level !== 'meal') return null;
     const dietInc    = ((state.get('dietFilter')    || {}).included) || [];
@@ -1362,27 +1623,28 @@ async function boot() {
     if (dietInc.length === 0 && cuisineInc.length === 0) return null;
     const dietSet    = new Set(dietInc);
     const cuisineSet = new Set(cuisineInc);
-    /* Phase 40 round 8: dietCuisineFilterMatch controls how the two
-     * sub-filters combine when BOTH are populated. 'all' (default) =
-     * meal must satisfy both. 'any' = meal must satisfy at least one.
-     * When only one sub-filter is active the mode is moot. */
-    const combine = state.get('dietCuisineFilterMatch') || 'all';
+    const match = state.get('dietCuisineFilterMatch') || 'all';
+
     const out = new Set();
     for (const meal of (currentDataset || [])) {
       const raw = getRawMealForFilter(meal.id);
       if (!raw) continue;
-      const dietActive    = dietInc.length > 0;
-      const cuisineActive = cuisineInc.length > 0;
-      const dietPass = !dietActive ||
-        (Array.isArray(raw.diet_compatibility) &&
-          raw.diet_compatibility.some(d => dietSet.has(d)));
-      const cuisinePass = !cuisineActive ||
-        cuisineSet.has(raw.cuisine || '');
+      const mealDiets = Array.isArray(raw.diet_compatibility) ? raw.diet_compatibility : [];
+      const mealCuisine = raw.cuisine || '';
+      const mealDietSet = new Set(mealDiets);
+
+      // Flat AND/OR over the union of selected diets and cuisines.
+      // A selected diet matches if it's in mealDiets; a selected cuisine
+      // matches if it equals mealCuisine.
       let pass;
-      if (dietActive && cuisineActive && combine === 'any') {
-        pass = dietPass || cuisinePass;
+      if (match === 'all') {
+        const allDietsMatch    = dietInc.every(d => mealDietSet.has(d));
+        const allCuisinesMatch = cuisineInc.every(c => c === mealCuisine);
+        pass = allDietsMatch && allCuisinesMatch;
       } else {
-        pass = dietPass && cuisinePass;
+        const anyDiet    = dietInc.some(d => mealDietSet.has(d));
+        const anyCuisine = cuisineInc.some(c => c === mealCuisine);
+        pass = anyDiet || anyCuisine;
       }
       if (!pass) out.add(meal.id);
     }
@@ -1400,17 +1662,22 @@ async function boot() {
 
   /* Phase 40 round 4 + round 11: aggregate-level threshold check.
    * Tests aggregate's own per-100g values, scaled by the aggregate's
-   * serving size when nutrientUnit === 'serving'. */
+   * serving size when nutrientUnit === 'serving'.
+   *
+   * Batch 14: only enforce nutrients the user has moved off the bar
+   * edge (activeThresholdSlots strips defaults). Same logic as the
+   * ingredient pipeline. */
   function aggregateLevelThresholdHidden(thresholds, level) {
     if (!thresholds) return null;
-    if (level === 'individual') return null;
-    if (!thresholdsActAsFilter(thresholds)) return null;
+    if (isIndividualView(level)) return null;
+    const effective = activeThresholdSlots(thresholds);
+    if (!effective) return null;
     const getScale = nutrientScaleGetter();
     const out = new Set();
     for (const agg of (currentDataset || [])) {
       const scale = getScale(agg) || 1;
       for (const n of NUTRIENT_FIELDS) {
-        const t = thresholds[n];
+        const t = effective[n];
         if (!t) continue;
         const v = (agg[n] || 0) * scale;
         if (!Number.isFinite(v)) continue;
@@ -1434,6 +1701,31 @@ async function boot() {
     const defaults = unit === 'serving' ? defaultThresholdsMapServing : defaultThresholdsMap;
     if (isThresholdsAtDefaults(thresholds, defaults)) return false;
     return true;
+  }
+
+  /* Batch 14: return a thresholds-shaped map containing ONLY nutrients
+   * the user has moved off the bar edge. At-default nutrients are
+   * dropped, so isWithinThresholds short-circuits past them — moving
+   * a single handle no longer kicks every other nutrient's default
+   * range into the filter. Returns null when no nutrient is off-default
+   * (caller uses that to skip filtering entirely). */
+  function activeThresholdSlots(thresholds) {
+    if (!thresholds) return null;
+    const unit = state.get('nutrientUnit') || '100g';
+    const defaults = unit === 'serving' ? defaultThresholdsMapServing : defaultThresholdsMap;
+    const out = {};
+    let any = false;
+    for (const nutrient of NUTRIENT_FIELDS) {
+      const t = thresholds[nutrient];
+      const d = defaults && defaults[nutrient];
+      if (!t) continue;
+      if (d && Math.abs(t.min - d.min) < 1e-6 && Math.abs(t.max - d.max) < 1e-6) {
+        continue; // at default for this nutrient — no filter contribution
+      }
+      out[nutrient] = t;
+      any = true;
+    }
+    return any ? out : null;
   }
 
   /* Phase 40 round 11: return the active threshold set based on the
@@ -1463,7 +1755,7 @@ async function boot() {
   function translateHiddenToCurrent(hiddenIngredientIds) {
     if (!hiddenIngredientIds || hiddenIngredientIds.size === 0) return null;
     const level = state.get('viewLevel');
-    if (level === 'individual') return hiddenIngredientIds;
+    if (isIndividualView(level)) return hiddenIngredientIds;
     const out = new Set();
     if (level === 'category') {
       const groupBy = state.get('categoryGroupBy') || 'category';
@@ -1509,25 +1801,46 @@ async function boot() {
     return out;
   }
 
-  state.subscribe(s => s.ingredientFilter,      applyFilterToScene);
-  state.subscribe(s => s.ingredientFilterMatch, applyFilterToScene); // Phase 40 round 3
-  state.subscribe(s => s.thresholds,            applyFilterToScene);
-  state.subscribe(s => s.thresholdsServing,     applyFilterToScene); // Phase 40 round 11
-  state.subscribe(s => s.nutrientUnit,          applyFilterToScene); // Phase 40 round 11 — unit drives which set is active + scale
-  state.subscribe(s => s.thresholdMode,         applyFilterToScene);
-  state.subscribe(s => s.restrictions,          applyFilterToScene);
-  state.subscribe(s => s.tagFilter,             applyFilterToScene);  // Phase 26
-  state.subscribe(s => s.tagFilterMatch,        applyFilterToScene);  // Phase 40 round 6
-  state.subscribe(s => s.categoryFilter,        applyFilterToScene);  // Phase 40 round 4
-  state.subscribe(s => s.categoryFilterMatch,   applyFilterToScene);  // Phase 40 round 6
-  state.subscribe(s => s.foodGroupFilter,       applyFilterToScene);  // Phase 40 round 4
-  state.subscribe(s => s.dietFilter,            applyFilterToScene);  // Phase 40 round 7
-  state.subscribe(s => s.cuisineFilter,         applyFilterToScene);  // Phase 40 round 7
-  state.subscribe(s => s.dietCuisineFilterMatch,applyFilterToScene);  // Phase 40 round 8
-  state.subscribe(s => s.ingredientFilterScope, applyFilterToScene);  // Phase 40 round 9
-  state.subscribe(s => s.categoryFilterScope,   applyFilterToScene);  // Phase 40 round 9
-  state.subscribe(s => s.tagFilterScope,        applyFilterToScene);  // Phase 40 round 9
-  state.subscribe(s => s.dietCuisineFilterScope,applyFilterToScene);  // Phase 40 round 9
+  /* Coalesce filter-pipeline re-runs. 19 separate state slices below
+   * each subscribe to "re-run the pipeline when this slice changes".
+   * A single state.set({ keyA: x, keyB: y }) fires both subscribers
+   * synchronously inside one notify pass — each would otherwise call
+   * applyFilterToScene end-to-end. Routing the subscribers through a
+   * microtask-scheduled wrapper collapses any number of mutations in
+   * one tick to a single pipeline pass. The direct synchronous calls
+   * inside scene-rebuild handlers (viewLevel, categoryGroupBy, etc.)
+   * stay direct — they need to populate a freshly-built pointsHandle
+   * without a microtask gap that would render an unfiltered frame. */
+  let _applyFilterPending = false;
+  function scheduleApplyFilterToScene() {
+    if (_applyFilterPending) return;
+    _applyFilterPending = true;
+    queueMicrotask(() => {
+      _applyFilterPending = false;
+      applyFilterToScene();
+    });
+  }
+  state.subscribe(s => s.ingredientFilter,      scheduleApplyFilterToScene);
+  state.subscribe(s => s.ingredientFilterMatch, scheduleApplyFilterToScene); // Phase 40 round 3
+  state.subscribe(s => s.thresholds,            scheduleApplyFilterToScene);
+  state.subscribe(s => s.thresholdsServing,     scheduleApplyFilterToScene); // Phase 40 round 11
+  state.subscribe(s => s.nutrientUnit,          scheduleApplyFilterToScene); // Phase 40 round 11 — unit drives which set is active + scale
+  state.subscribe(s => s.thresholdMode,         scheduleApplyFilterToScene);
+  state.subscribe(s => s.restrictions,          scheduleApplyFilterToScene);
+  state.subscribe(s => s.tagFilter,             scheduleApplyFilterToScene);  // Phase 26
+  state.subscribe(s => s.tagFilterMatch,        scheduleApplyFilterToScene);  // Phase 40 round 6
+  state.subscribe(s => s.categoryFilter,        scheduleApplyFilterToScene);  // Phase 40 round 4
+  state.subscribe(s => s.categoryFilterMatch,   scheduleApplyFilterToScene);  // Phase 40 round 6
+  state.subscribe(s => s.foodGroupFilter,       scheduleApplyFilterToScene);  // Phase 40 round 4
+  state.subscribe(s => s.foodGroupFilterMatch,  scheduleApplyFilterToScene);  // Batch 4
+  state.subscribe(s => s.foodGroupFilterScope,  scheduleApplyFilterToScene);  // Batch 4
+  state.subscribe(s => s.dietFilter,            scheduleApplyFilterToScene);  // Phase 40 round 7
+  state.subscribe(s => s.cuisineFilter,         scheduleApplyFilterToScene);  // Phase 40 round 7
+  state.subscribe(s => s.dietCuisineFilterMatch,scheduleApplyFilterToScene);  // Phase 40 round 8
+  state.subscribe(s => s.ingredientFilterScope, scheduleApplyFilterToScene);  // Phase 40 round 9
+  state.subscribe(s => s.categoryFilterScope,   scheduleApplyFilterToScene);  // Phase 40 round 9
+  state.subscribe(s => s.tagFilterScope,        scheduleApplyFilterToScene);  // Phase 40 round 9
+  state.subscribe(s => s.dietCuisineFilterScope,scheduleApplyFilterToScene);  // Phase 40 round 9
 
   // --- Phase 8 table view: shared active-set, view-switch, localStorage ---
 
@@ -1543,26 +1856,17 @@ async function boot() {
    * table stays consistent with the 3D view (every filter hides; no
    * greying anywhere). */
   function tableHiddenSet() {
-    const filter        = state.get('ingredientFilter');
-    const thresholds    = activeThresholds();
-    const restrictions  = state.get('restrictions') || [];
-    const tagF          = state.get('tagFilter');
-    const level         = state.get('viewLevel');
-    const isAggregateView = level !== 'individual';
-    const getNutrientScale = nutrientScaleGetter();
-    const ingredientActive = isFilterEmpty(filter) ? null : computeActiveSet(ingredients, filter);
-    const thresholdActive  = !thresholdsActAsFilter(thresholds)
-      ? null : thresholdActiveSet(ingredients, thresholds, getNutrientScale);
-    const restrictionActive = passingIngredientIds(ingredients, restrictions);
-    // Phase 40 round 8: skip tagActive lift at aggregate views — we
-    // do an aggregate-direct pass below for honest "high-fiber" etc.
-    const tagActive = (isTagFilterEmpty(tagF) || isAggregateView)
-      ? null : tagActiveSet(ingredients, tagF, state.get('tagFilterMatch') || 'any');
-    const categoryActive  = categoryFilterPassingIngredients(state.get('categoryFilter'));
-    const foodGroupActive = foodGroupFilterPassingIngredients(state.get('foodGroupFilter'));
+    const {
+      level, ingredientActive, thresholdActive, restrictionActive,
+      tagActive, categoryActive, foodGroupActive,
+      thresholds, categoryFilter,
+    } = computeAllFilterSets();
 
+    // Batch 3: meal-level ingredient filter handled by ingredientMealHidden
+    // (specific example_ingredients), so drop it from the category-based path.
+    const ingredientActiveForCombine = level === 'meal' ? null : ingredientActive;
     const passing = combinePassingSets([
-      ingredientActive, thresholdActive, restrictionActive,
+      ingredientActiveForCombine, thresholdActive, restrictionActive,
       tagActive, categoryActive, foodGroupActive,
     ]);
 
@@ -1587,32 +1891,47 @@ async function boot() {
       if (!inCurrent) inCurrent = new Set();
       for (const id of matchAllHidden) inCurrent.add(id);
     }
-    const categoryMatchAllHidden = computeCategoryMatchAllHidden(state.get('categoryFilter'));
+    // Batch 3: meal-level ingredient filter via specific example_ingredients.
+    const ingMealHidden = ingredientMealHidden(level);
+    if (ingMealHidden && ingMealHidden.size > 0) {
+      if (!inCurrent) inCurrent = new Set();
+      for (const id of ingMealHidden) inCurrent.add(id);
+    }
+    const categoryMatchAllHidden = computeCategoryMatchAllHidden(categoryFilter);
     if (categoryMatchAllHidden && categoryMatchAllHidden.size > 0) {
       if (!inCurrent) inCurrent = new Set();
       for (const id of categoryMatchAllHidden) inCurrent.add(id);
     }
     // Aggregate-level threshold filter.
-    const aggThresholdHidden = aggregateLevelThresholdHidden(thresholds, state.get('viewLevel'));
+    const aggThresholdHidden = aggregateLevelThresholdHidden(thresholds, level);
     if (aggThresholdHidden && aggThresholdHidden.size > 0) {
       if (!inCurrent) inCurrent = new Set();
       for (const id of aggThresholdHidden) inCurrent.add(id);
     }
     // Phase 40 round 7: diet + cuisine (meal-only).
-    const dietCuisineHidden = mealDietCuisineHidden(state.get('viewLevel'));
+    const dietCuisineHidden = mealDietCuisineHidden(level);
     if (dietCuisineHidden && dietCuisineHidden.size > 0) {
       if (!inCurrent) inCurrent = new Set();
       for (const id of dietCuisineHidden) inCurrent.add(id);
     }
     // Phase 40 round 8: tag filter aggregate-direct test.
-    const aggTagHidden = aggregateLevelTagHidden(state.get('viewLevel'));
+    const aggTagHidden = aggregateLevelTagHidden(level);
     if (aggTagHidden && aggTagHidden.size > 0) {
       if (!inCurrent) inCurrent = new Set();
       for (const id of aggTagHidden) inCurrent.add(id);
     }
-    // Phase 40 round 9: scope='all' hides.
-    for (const scopeFn of [ingredientScopeHidden, categoryScopeHidden, tagScopeHidden, dietCuisineScopeHidden]) {
-      const h = scopeFn(state.get('viewLevel'));
+    // Batch 4: aggregate-level food-group filter (mirrors the scene path).
+    const fgAggHidden = aggregateFoodGroupHidden(level);
+    if (fgAggHidden && fgAggHidden.size > 0) {
+      if (!inCurrent) inCurrent = new Set();
+      for (const id of fgAggHidden) inCurrent.add(id);
+    }
+    // Phase 40 round 9 / Batch 4: scope='all' hides — extras-not-allowed.
+    for (const scopeFn of [
+      ingredientScopeHidden, categoryScopeHidden, tagScopeHidden,
+      dietCuisineScopeHidden, foodGroupScopeHidden,
+    ]) {
+      const h = scopeFn(level);
       if (h && h.size > 0) {
         if (!inCurrent) inCurrent = new Set();
         for (const id of h) inCurrent.add(id);
@@ -1876,6 +2195,10 @@ async function boot() {
     state,
     ranges,
     onMultiHit: (candidates, anchor) => pickMenu.open(candidates, anchor),
+    /* Batch 14: per-unit defaults so the hover tooltip's threshold
+     * reasons skip at-default nutrients, matching the filter pipeline. */
+    getThresholdDefaults: (unit) =>
+      unit === 'serving' ? defaultThresholdsMapServing : defaultThresholdsMap,
   });
 
   // Phase 13.75: drag an axis line to pan its min/max window. The
@@ -1911,7 +2234,21 @@ async function boot() {
     getCurrentIngredients: () => currentDataset,
     ranges,
     getAllCategories: () => allCategoriesSorted,
+    // Batch 4: the ingredient-level Remix needs the raw ingredient list for
+    // its add-ingredient autocomplete and id→name chip labels.
+    getAllIngredients: () => ingredients,
     getRawMeal,
+    /* Tester feedback: when the selected item is filtered out, the
+     * detail panel should say so with a banner. The hidden-id set is
+     * already computed for the table view; reuse it so the banner
+     * fires whenever the same set hides the selected item. */
+    getHiddenSet: () => tableHiddenSet(),
+    /* Batch 14: per-unit defaults so inactiveReasons can skip nutrients
+     * still at the bar's edge. Without this, the banner reports
+     * "Fat above max 100g" for items that exceed the default-bar even
+     * when the user only touched a different nutrient. */
+    getThresholdDefaults: (unit) =>
+      unit === 'serving' ? defaultThresholdsMapServing : defaultThresholdsMap,
   });
 
   // Boot the left rail open on desktop, closed (drawer) on mobile so the
@@ -1921,75 +2258,70 @@ async function boot() {
   }
 
   const leftRail = mountLeftRail(document.getElementById('rail-left'), { state });
-  /* Left-rail order. Tester feedback put Nutrient thresholds at the
-   * top — it's the slider users tweak most often per session, so it
-   * earns the prime real estate.
+  /* Left-rail order. Tester feedback (batch 10) elevated Dietary
+   * restrictions to the top — it's the most identity-anchored filter
+   * (allergies / lifestyle), so framing the rest of the rail with it
+   * already locked in matches how users actually shop the panel.
    *
-   *   GROUP 1 — "Numeric lens" (the dial users adjust most)
-   *     1. Nutrient thresholds        (numeric range sliders)
+   *   GROUP 1 — "What can you eat?" (identity-anchored)
+   *     1. Dietary restrictions       (ingredient-level: what you AVOID)
    *
-   *   GROUP 2 — "What kind of food?" (lifestyle / dietary preferences)
-   *     2. Dietary restrictions       (ingredient-level: what you AVOID)
+   *   GROUP 2 — "Numeric lens" (the dial users adjust most)
+   *     2. Nutrient thresholds        (numeric range sliders)
+   *
+   *   GROUP 3 — "What kind of food?" (preferences)
    *     3. Filter by diet & cuisine   (meal-level: what you PREFER)
    *
-   *   GROUP 3 — "Drill into content" (taxonomy + attributes)
+   *   GROUP 4 — "Drill into content" (taxonomy + attributes)
    *     4. Filter by food group       (broadest taxonomy)
    *     5. Filter by category
    *     6. Filter by ingredient       (narrowest taxonomy)
    *     7. Filter by tag              (cross-cutting attribute)
    *
-   *   GROUP 4 — "Work with meals" (meal-only operations)
+   *   GROUP 5 — "Work with meals" (meal-only operations)
    *     8. Modify all meals           (global composition overlay)
    *     9. Your meals                 (user-meal editor)
    */
+  mountRestrictions(leftRail.getContentEl(), { state });
   mountNutrientThresholds(leftRail.getContentEl(), {
     state, ranges,
-    /* Unit-aware default. The slider's "reset to default" and the
-     * "is this at default?" check below both go through here, so when
-     * the user is in per-serving mode they reset to the per-serving
-     * default (not the per-100g one). */
+    /* Batch 14 fix: per-unit slider baseline IS the default. Match this
+     * to initialThresholds / defaultThresholdsMap above so the per-row
+     * ↻ fallback target (when Batch 12's slider-bounds path can't be
+     * reached) stays consistent. */
     getDefaultThreshold: (nutrient) =>
-      (state.get('nutrientUnit') || '100g') === 'serving'
-        ? defaultConstraintForServing(nutrient, ranges)
-        : defaultConstraintFor(nutrient, ranges),
-    /* Tester feedback: slider bounds need two properties.
-     *   1. Stable across unit toggles + profile picks — start from the
-     *      widest of (dataset envelope, per-100g default, per-serving
-     *      default).
-     *   2. Stretch to fit user meals — if a user-created meal has a
-     *      nutrient value beyond that baseline, grow to include it (with
-     *      a little headroom). When the meal is deleted, the baseline
-     *      reasserts. The "default" the slider resets to (getDefaultThreshold)
-     *      is unaffected by this. */
+      sliderBaselineFor(nutrient, state.get('nutrientUnit') || '100g'),
+    /* Slider bounds = per-unit baseline (matches the default position
+     * of the threshold handles) PLUS expansion to fit user meals that
+     * exceed the baseline. The expansion uses the current unit's
+     * gram-scaled value so a user meal contributing 60 g fiber/serving
+     * pushes the per-serving slider up but the per-100g slider stays
+     * sized to the per-100g envelope. */
     getSliderBounds: (nutrient) => {
-      const r = ranges[nutrient];
-      const a = defaultConstraintFor(nutrient, ranges);
-      const b = defaultConstraintForServing(nutrient, ranges);
-      const baselineMin = Math.min(r.min, a.min, b.min);
-      const baselineMax = Math.max(r.max, a.max, b.max);
+      const unit = state.get('nutrientUnit') || '100g';
+      const base = sliderBaselineFor(nutrient, unit);
       let maxFromUserMeals = -Infinity;
       const userMeals = state.get('userMeals') || [];
       for (const meal of userMeals) {
         const agg = aggregateUserMeal(meal, ingredients);
         if (!agg) continue;
         const v100g = +agg[nutrient];
-        if (Number.isFinite(v100g) && v100g > maxFromUserMeals) maxFromUserMeals = v100g;
+        if (!Number.isFinite(v100g)) continue;
         const sg = +agg.serving_grams || 100;
-        const vServing = v100g * (sg / 100);
-        if (Number.isFinite(vServing) && vServing > maxFromUserMeals) maxFromUserMeals = vServing;
+        const val = unit === 'serving' ? v100g * (sg / 100) : v100g;
+        if (val > maxFromUserMeals) maxFromUserMeals = val;
       }
-      let max = baselineMax;
-      if (maxFromUserMeals > baselineMax) {
+      let max = base.max;
+      if (maxFromUserMeals > base.max) {
         // 5% headroom, rounded up to a tidy number so the track-fill math
         // doesn't produce odd partial-pixel positions.
         const padded = maxFromUserMeals * 1.05;
         const step = padded > 500 ? 50 : padded > 100 ? 10 : 1;
         max = Math.ceil(padded / step) * step;
       }
-      return { min: baselineMin, max };
+      return { min: base.min, max };
     },
   });
-  mountRestrictions(leftRail.getContentEl(), { state });
   mountDietCuisineFilter(leftRail.getContentEl(), {
     state,
     meals: [...meals, ...compositionalMeals, ...corpusTitledMeals],
@@ -2030,19 +2362,36 @@ async function boot() {
   // items don't show up in results.
   const searchSlot = document.getElementById('search-slot');
   if (searchSlot) {
+    // Batch 3: id -> name lookup so the search box can match a meal by the
+    // specific ingredients it uses (typing "bagel" surfaces bagel meals).
+    const ingredientNameById = new Map(ingredients.map(f => [f.id, f.name]));
     mountSearch(searchSlot, {
       state,
       getCurrentIngredients: () => currentDataset,
-      isHidden: (id) => {
+      getIngredientName: (id) => ingredientNameById.get(id) || '',
+      /* Batch 7: return the FULL hidden-id set once per open() call so
+       * search.js can do O(1) `.has()` lookups in the per-item loop.
+       * The previous `isHidden(id)` shape re-ran the entire filter
+       * pipeline per item (N × heavy ≈ a visible hang per keystroke).
+       *
+       * Semantics preserved from the old code: search only hides items
+       * blocked by DIETARY RESTRICTIONS (Phase 40.1's hidden set). Other
+       * filters (thresholds, food groups, categories, etc.) DON'T hide
+       * search rows — the user expects to be able to search the whole
+       * dataset, with restricted (allergen / ethical) items excluded. */
+      getHiddenIds: () => {
         const restrictions = state.get('restrictions') || [];
-        if (restrictions.length === 0) return false;
-        // At individual view, lift restrictions back to ingredient ids.
-        if (state.get('viewLevel') === 'individual') {
+        if (restrictions.length === 0) return null;
+        if (isIndividualView(state.get('viewLevel'))) {
           const allowed = passingIngredientIds(ingredients, restrictions);
-          return !!(allowed && !allowed.has(id));
+          if (!allowed) return null;
+          const hidden = new Set();
+          for (const f of ingredients) {
+            if (!allowed.has(f.id)) hidden.add(f.id);
+          }
+          return hidden;
         }
-        const hidden = tableHiddenSet();
-        return !!(hidden && hidden.has(id));
+        return tableHiddenSet();
       },
     });
   }
@@ -2135,6 +2484,10 @@ async function boot() {
     disposeAxes(axesHandle.group);
     axesHandle = buildAxes(scn.scene, state.get('axes'), ranges);
     applyAxisLabelsVisibility();
+    // Pulse glow's blending mode + halo color depend on theme — additive
+    // disappears against a white background, so we switch to normal
+    // blending and dial the white-mix down in light mode.
+    if (pointsHandle && pointsHandle.refreshTheme) pointsHandle.refreshTheme();
   });
 
   mountShortcuts({
@@ -2157,7 +2510,35 @@ async function boot() {
 
   // First-run guided tour. Auto-fires once for new users; relaunchable
   // from the ⋯ menu via a custom event the tutorial listens for.
-  mountTutorial({ state });
+  // Batch 9: scene refs let the tutorial anchor callouts to 3D
+  // elements (axis-name sprites) by re-projecting world coords each
+  // frame. Getters not direct handles so swapping the scene rebuild
+  // (axesHandle reassigned during axis changes) stays correct.
+  mountTutorial({
+    state,
+    getCamera: () => scn.getActiveCamera(),
+    getCanvas: () => scn.renderer.domElement,
+    getAxisNameSprites: () => axesHandle && axesHandle.axisNameSprites,
+    // Tutorial polish round 3: the guided flows need to start from a clean
+    // scene so each demo is intuitive (no leftover filters/score-mode/hidden
+    // groups from a previous slide), and the held-ingredient flow needs every
+    // ingredient id to start the filter from an empty selection.
+    getAllIngredientIds: () => ingredients.map(f => f.id),
+    resetScene: () => {
+      state.set({
+        ingredientFilter: { excludedIds: [] },
+        thresholds: defaultThresholds(ranges),
+        thresholdsServing: { ...defaultThresholdsMapServing },
+        thresholdMode: 'filter',
+        legendHidden: { rgb: [], food_group: [] },
+        tagFilter: [],
+        // Clear selection + draft so a use-case flow's "click a meal" /
+        // remix steps start from a known-empty baseline.
+        selectedIngredientId: null,
+        mealDraft: null,
+      });
+    },
+  });
 
   /* Phase 40 round 5: OK dismisses the dialog WITHOUT touching any
    * filters. The persistent warning on the active-filters panel keeps
@@ -2219,6 +2600,13 @@ async function boot() {
     state.set({ hiddenAxisIndex: idx });
   }
 
+  /* Per-frame cache: in perspective mode the opacity is always 1, and
+   * in orthographic mode the dot products only change when the camera
+   * moves. Skip the per-sprite material writes when neither input has
+   * changed since the last frame. */
+  let _lastAxisLabelMode = null;
+  const _lastAxisLabelCamPos = new THREE.Vector3();
+  const _lastAxisLabelCamQuat = new THREE.Quaternion();
   function updateAxisLabelOpacity() {
     const sprites = axesHandle && axesHandle.axisNameSprites;
     if (!sprites || sprites.length !== 3) return;
@@ -2227,11 +2615,22 @@ async function boot() {
      * snap views trap it — so the fade only fires in orthographic. */
     const orthoMode = state.get('cameraMode') === 'orthographic';
     if (!orthoMode) {
+      if (_lastAxisLabelMode === 'perspective') return; // unchanged since last frame
       for (let i = 0; i < 3; i++) setAxisGroupOpacity(i, 1);
       publishHiddenAxisIndex(null);
+      _lastAxisLabelMode = 'perspective';
       return;
     }
     const cam = scn.getActiveCamera();
+    if (_lastAxisLabelMode === 'orthographic'
+        && _lastAxisLabelCamPos.equals(cam.position)
+        && _lastAxisLabelCamQuat.equals(cam.quaternion)) {
+      return; // camera hasn't moved since last computation
+    }
+    _lastAxisLabelCamPos.copy(cam.position);
+    _lastAxisLabelCamQuat.copy(cam.quaternion);
+    _lastAxisLabelMode = 'orthographic';
+
     _viewDir.copy(scn.target).sub(cam.position).normalize();
     let hidden = null;
     for (let i = 0; i < 3; i++) {
@@ -2272,55 +2671,6 @@ async function boot() {
 // error, surfaces in the overlay with a stack trace and a "clear settings
 // and reload" affordance so a stale localStorage shape doesn't soft-brick
 // the app.
-
-function showBootError(err) {
-  const overlay = document.getElementById('boot-overlay');
-  const msg     = document.getElementById('boot-message');
-  const details = document.getElementById('boot-error');
-  const stack   = document.getElementById('boot-error-stack');
-  if (!overlay) {
-    // No DOM (extremely unlikely) — fall back to console.
-    console.error('[ingredient-map] boot failed', err);
-    return;
-  }
-  overlay.hidden = false;
-  overlay.classList.remove('is-fading');
-  overlay.classList.add('has-error');
-  if (msg)     msg.textContent = 'The app failed to load.';
-  if (details) details.hidden = false;
-  if (details) details.open = true;
-  if (stack)   stack.textContent = (err && (err.stack || err.message)) || String(err);
-}
-
-function hideBootOverlay() {
-  const overlay = document.getElementById('boot-overlay');
-  if (!overlay) return;
-  overlay.classList.add('is-fading');
-  setTimeout(() => { overlay.hidden = true; }, 220);
-}
-
-function wireBootResetButton() {
-  const btn = document.getElementById('boot-error-reset');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    try {
-      // Phase 12 unified key plus the legacy per-slice keys, in case the
-      // problem is in any of them.
-      const KEYS = [
-        'foodMap.state.v1',
-        'foodMap.tableColumns',
-        'foodMap.compositeWeights',
-        'foodMap.userMeals',
-        'foodMap.theme',
-      ];
-      for (const k of KEYS) {
-        try { localStorage.removeItem(k); } catch {}
-      }
-    } finally {
-      window.location.reload();
-    }
-  });
-}
 
 async function runBoot() {
   wireBootResetButton();

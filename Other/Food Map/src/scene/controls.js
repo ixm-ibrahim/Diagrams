@@ -18,8 +18,20 @@ export function attachControls(camera, domElement) {
   controls.enablePan = false;
   controls.rotateSpeed = 0.85;
   controls.zoomSpeed = 0.9;
-  controls.minDistance = 0.6;
-  controls.maxDistance = 8;
+  // Tester feedback: zoom used to be effectively infinite, especially
+  // in orthographic mode where minDistance/maxDistance don't apply.
+  // The perspective bounds are tightened so a user can't lose the cube
+  // by scrolling, and the orthographic min/maxZoom give the same envelope.
+  // Defaults shown by SNAP_POSITIONS sit at ~3 units from the target —
+  // 1.0 keeps the closest dot inspection useful, 6 still shows the full
+  // cube comfortably.
+  controls.minDistance = 1.0;
+  controls.maxDistance = 6;
+  // Orthographic zoom: 1 = ORTHO_FRUSTUM_HEIGHT (2.4 world units shown
+  // vertically). 0.4 → 6 units (cube small but readable);
+  // 10 → 0.24 units (individual dots still pickable).
+  controls.minZoom = 0.4;
+  controls.maxZoom = 10;
 
   controls.update();
   return controls;

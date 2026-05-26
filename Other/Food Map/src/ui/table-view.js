@@ -27,13 +27,13 @@
 
 import {
   NUTRIENT_FIELDS, NUTRIENT_META, NUTRIENT_DEFAULTS,
-  FOOD_GROUPS, FOOD_GROUP_COLORS,
+  FOOD_GROUPS, FOOD_GROUP_COLORS, GROUP_WEIGHT_LABELS,
 } from '../data/schema.js';
 import { scaleForItem } from '../core/unit.js';
 import { isWithinThresholds, distanceFromTargets } from '../core/scoring.js';
 import { beginLoading } from './loading.js';
+import { escapeHtml, escapeAttr, cssEscape } from '../util/dom.js';
 
-const GROUP_LABELS = ['Animal', 'Plant', 'Dairy'];
 
 // Identity columns are ordered broadest → most refined:
 //   name → food_group → category → subcategory.
@@ -91,7 +91,7 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
 
   /* Phase 40 round 8: unit toggle moved to the header (mountUnitToggle).
    * Table just re-renders on nutrientUnit changes. */
-  state.subscribe(s => s.nutrientUnit, () => renderBody());
+  state.subscribe(s => s.nutrientUnit, () => scheduleBodyRender());
 
   // Phase 13.5 round 3: name-only search box. Filters the visible rows
   // by case-insensitive substring; composes with the existing active-set
@@ -100,7 +100,7 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
   let searchQuery = '';
   searchEl.addEventListener('input', () => {
     searchQuery = searchEl.value.trim().toLowerCase();
-    renderBody();
+    scheduleBodyRender(SLIDER_DEBOUNCE_MS);
   });
   /* Tester feedback: the placeholder used to read "Search ingredients…"
    * even after the user switched to Categories or Meals view. The text
@@ -250,7 +250,7 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
     let idx = 0;
     let max = -Infinity;
     for (let i = 0; i < 3; i++) if (w[i] > max) { max = w[i]; idx = i; }
-    return GROUP_LABELS[idx];
+    return GROUP_WEIGHT_LABELS[idx];
   }
 
   function groupBlendCss(ingredient) {
@@ -411,7 +411,7 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
     return `rgba(${Math.round(r * 255)}, ${Math.round(g * 255)}, ${Math.round(b * 255)}, 0.20)`;
   }
 
-  function buildRowHtml(ingredient, cols, weights, minScore, scoreSpread, selectedId, modeMark) {
+  function buildRowHtml(ingredient, cols, weights, minScore, scoreSpread, selectedId, modeMark, hiddenSet = null) {
     const cells = cols.map(c => {
       const align = c.align === 'right' ? ' style="text-align: right"' : '';
       if (c.id === 'name')        return `<td class="cell-name"${align} title="${escapeAttr(ingredient.name)}">
@@ -441,18 +441,80 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
     const classes = [];
     if (ingredient.id === selectedId) classes.push('is-selected');
     if (modeMark && modeMark.kind === 'score')     classes.push('is-scored');
+    // Hidden-but-kept-visible exemption (only the selected row qualifies;
+    // see renderBody). Adds a class CSS picks up to render the row dimmed
+    // so the user can tell their selection is filtered out.
+    if (hiddenSet && hiddenSet.has(ingredient.id)) classes.push('is-filtered-out');
     const classAttr = classes.length ? ` class="${classes.join(' ')}"` : '';
     const styleAttr = (modeMark && modeMark.style) ? ` style="${modeMark.style}"` : '';
     return `<tr data-id="${escapeAttr(ingredient.id)}"${classAttr}${styleAttr}>${cells}</tr>`;
   }
 
+  /* Batch 1 (tester feedback): after any re-render that can reorder
+   * rows (sort, filter, composite-weight, or unit change), keep the
+   * selected row on screen. scrollIntoView({block:'nearest'}) is a
+   * no-op when the row is already fully visible, so this only fires
+   * when the reorder actually pushed the selection out of the viewport
+   * — it never yanks the view while the user is scrolled elsewhere
+   * with no selection change (renderBody only runs on state changes,
+   * never on plain scroll). Instant (default) behavior, not smooth, so
+   * a rapid stream of updates during a slider drag can't pile up
+   * competing scroll animations. */
+  function scrollSelectedIntoViewIfNeeded() {
+    const id = state.get('selectedIngredientId');
+    if (!id) return;
+    const tr = tbodyEl.querySelector(`tr[data-id="${cssEscape(id)}"]`);
+    if (tr && typeof tr.scrollIntoView === 'function') {
+      tr.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  /* Perf: the body re-renders on ~25 state slices, and the meal view's
+   * row set is ~3,600 rows. Two coalescing strategies keep that cheap:
+   *   - scheduleBodyRender()        — rAF-coalesced; collapses a burst of
+   *     slice changes (e.g. clearing a filter touches several at once)
+   *     into one rebuild per frame.
+   *   - scheduleBodyRender(ms)      — trailing debounce for the high-rate
+   *     DRAG sources (composite-weight + threshold sliders). Without it,
+   *     every `input` tick restarted the chunked render, so the table sat
+   *     perpetually cleared mid-stream during a drag — which is what read
+   *     as "lag", especially in the Columns menu (home of the weight
+   *     sliders). The slider's own value label still updates live; only
+   *     the table waits for the drag to settle.
+   * renderBody() cancels any pending schedule so a direct render and a
+   * queued one never double-fire. */
+  let bodyRaf = 0;
+  let bodyDebounce = 0;
+  const SLIDER_DEBOUNCE_MS = 90;
+  function scheduleBodyRender(debounceMs = 0) {
+    // Tolerant of being passed straight as a state subscriber (where the
+    // first arg is the slice value, not a number) — only a positive number
+    // selects the debounce path; anything else coalesces via rAF.
+    if (typeof debounceMs === 'number' && debounceMs > 0) {
+      clearTimeout(bodyDebounce);
+      bodyDebounce = setTimeout(() => { bodyDebounce = 0; renderBody(); }, debounceMs);
+      return;
+    }
+    if (bodyRaf) return;
+    bodyRaf = requestAnimationFrame(() => { bodyRaf = 0; renderBody(); });
+  }
+
   function renderBody() {
+    if (bodyRaf) { cancelAnimationFrame(bodyRaf); bodyRaf = 0; }
+    if (bodyDebounce) { clearTimeout(bodyDebounce); bodyDebounce = 0; }
     const all = getCurrentIngredients();
     const activeSet = getActiveSet();
     const hiddenSet = typeof getHiddenSet === 'function' ? getHiddenSet() : null;
+    /* Tester feedback: when the user has a row selected and then
+     * tightens a filter that would hide it, the selected row stays
+     * visible as a dimmed ghost (parallel to the 3D ghost dot) so the
+     * detail panel's "filtered out" banner has something to point at.
+     * Other hidden rows still drop entirely. */
+    const exemptId = state.get('selectedIngredientId') || null;
     let visibleFoods = activeSet ? all.filter(f => activeSet.has(f.id)) : all.slice();
     if (hiddenSet && hiddenSet.size > 0) {
-      visibleFoods = visibleFoods.filter(f => !hiddenSet.has(f.id));
+      visibleFoods = visibleFoods.filter(f =>
+        !hiddenSet.has(f.id) || f.id === exemptId);
     }
     if (searchQuery) {
       visibleFoods = visibleFoods.filter(f => f.name.toLowerCase().includes(searchQuery));
@@ -518,8 +580,9 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
 
     if (total < CHUNK_ROW_THRESHOLD) {
       tbodyEl.innerHTML = visibleFoods
-        .map(f => buildRowHtml(f, cols, weights, minScore, scoreSpread, selectedId, modeMarks.get(f.id)))
+        .map(f => buildRowHtml(f, cols, weights, minScore, scoreSpread, selectedId, modeMarks.get(f.id), hiddenSet))
         .join('');
+      scrollSelectedIntoViewIfNeeded();
       return;
     }
 
@@ -540,7 +603,7 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
       let html = '';
       for (let k = i; k < end; k++) {
         const f = visibleFoods[k];
-        html += buildRowHtml(f, cols, weights, minScore, scoreSpread, selectedId, modeMarks.get(f.id));
+        html += buildRowHtml(f, cols, weights, minScore, scoreSpread, selectedId, modeMarks.get(f.id), hiddenSet);
       }
       tbodyEl.insertAdjacentHTML('beforeend', html);
       i = end;
@@ -550,6 +613,9 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
       } else {
         handle.finish();
         if (activeLoadingHandle === handle) activeLoadingHandle = null;
+        // Selected row may have streamed in far down the list — pull it
+        // back into view now that every chunk is laid out.
+        scrollSelectedIntoViewIfNeeded();
       }
     }
     requestAnimationFrame(step);
@@ -569,39 +635,67 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
 
   renderAll();
 
-  state.subscribe(s => s.tableColumns,     renderAll);
-  state.subscribe(s => s.compositeWeights, () => { renderHeader(); renderBody(); });
+  // tableColumns: a column toggle only changes which columns render — it
+  // does NOT need to rebuild the Columns menu itself (the checkbox the
+  // user just clicked already reflects the new state). Rebuilding it here
+  // (the old `renderAll`) destroyed and re-created every menu input on each
+  // click, resetting menu scroll/focus and doing needless work. The menu
+  // is rebuilt only when the available column SET changes (viewLevel /
+  // categoryGroupBy, below).
+  state.subscribe(s => s.tableColumns,     () => { renderHeader(); renderBody(); });
+  // compositeWeights is dragged via the menu's sliders → debounce so the
+  // table rebuilds once when the drag settles. Weights don't affect the
+  // header, so no renderHeader here.
+  state.subscribe(s => s.compositeWeights, () => scheduleBodyRender(SLIDER_DEBOUNCE_MS));
   state.subscribe(s => s.tableSort,        () => { renderHeader(); renderBody(); });
-  state.subscribe(s => s.ingredientFilter,      renderBody);
-  state.subscribe(s => s.ingredientFilterMatch, renderBody); // Phase 40 round 3
-  state.subscribe(s => s.thresholds,            renderBody);
-  state.subscribe(s => s.thresholdsServing,     renderBody); // Phase 40 round 11
-  state.subscribe(s => s.thresholdMode,         renderBody);
-  state.subscribe(s => s.restrictions,          renderBody);
-  state.subscribe(s => s.tagFilter,             renderBody);  // Phase 26
-  state.subscribe(s => s.categoryFilter,        renderBody);  // Phase 40 round 4
-  state.subscribe(s => s.foodGroupFilter,       renderBody);  // Phase 40 round 4
-  state.subscribe(s => s.dietFilter,            renderBody);  // Phase 40 round 7
-  state.subscribe(s => s.cuisineFilter,         renderBody);  // Phase 40 round 7
-  state.subscribe(s => s.dietCuisineFilterMatch,renderBody);  // Phase 40 round 8
-  state.subscribe(s => s.ingredientFilterScope, renderBody);  // Phase 40 round 9
-  state.subscribe(s => s.categoryFilterScope,   renderBody);  // Phase 40 round 9
-  state.subscribe(s => s.tagFilterScope,        renderBody);  // Phase 40 round 9
-  state.subscribe(s => s.dietCuisineFilterScope,renderBody);  // Phase 40 round 9
-  state.subscribe(s => s.legendHidden,          renderBody);  // Phase 40 round 3 — color filter is now a real filter
-  state.subscribe(s => s.colorScheme,           renderBody);  // legendHidden's effective key depends on scheme
+  state.subscribe(s => s.ingredientFilter,      scheduleBodyRender);
+  state.subscribe(s => s.ingredientFilterMatch, scheduleBodyRender); // Phase 40 round 3
+  // Threshold sliders are dragged → debounce (same rationale as weights).
+  state.subscribe(s => s.thresholds,            () => scheduleBodyRender(SLIDER_DEBOUNCE_MS));
+  state.subscribe(s => s.thresholdsServing,     () => scheduleBodyRender(SLIDER_DEBOUNCE_MS)); // Phase 40 round 11
+  state.subscribe(s => s.thresholdMode,         scheduleBodyRender);
+  state.subscribe(s => s.restrictions,          scheduleBodyRender);
+  state.subscribe(s => s.tagFilter,             scheduleBodyRender);  // Phase 26
+  state.subscribe(s => s.categoryFilter,        scheduleBodyRender);  // Phase 40 round 4
+  state.subscribe(s => s.foodGroupFilter,       scheduleBodyRender);  // Phase 40 round 4
+  state.subscribe(s => s.foodGroupFilterMatch,  scheduleBodyRender);  // Batch 4
+  state.subscribe(s => s.foodGroupFilterScope,  scheduleBodyRender);  // Batch 4
+  state.subscribe(s => s.dietFilter,            scheduleBodyRender);  // Phase 40 round 7
+  state.subscribe(s => s.cuisineFilter,         scheduleBodyRender);  // Phase 40 round 7
+  state.subscribe(s => s.dietCuisineFilterMatch,scheduleBodyRender);  // Phase 40 round 8
+  state.subscribe(s => s.ingredientFilterScope, scheduleBodyRender);  // Phase 40 round 9
+  state.subscribe(s => s.categoryFilterScope,   scheduleBodyRender);  // Phase 40 round 9
+  state.subscribe(s => s.tagFilterScope,        scheduleBodyRender);  // Phase 40 round 9
+  state.subscribe(s => s.dietCuisineFilterScope,scheduleBodyRender);  // Phase 40 round 9
+  state.subscribe(s => s.legendHidden,          scheduleBodyRender);  // Phase 40 round 3 — color filter is now a real filter
+  state.subscribe(s => s.colorScheme,           scheduleBodyRender);  // legendHidden's effective key depends on scheme
   state.subscribe(s => s.viewLevel,        renderAll);
   state.subscribe(s => s.categoryGroupBy,  renderAll); // Phase 13.5 round 7
   // Tester feedback: "Modify all meals" + user meal edits weren't
   // reaching the table. Re-render when the underlying meal dataset
   // shifts so the table tracks the 3D view.
-  state.subscribe(s => s.mealComposition,  renderBody);
-  state.subscribe(s => s.userMeals,        renderBody);
-  state.subscribe(s => s.mealDraft,        renderBody);
+  state.subscribe(s => s.mealComposition,  scheduleBodyRender);
+  state.subscribe(s => s.userMeals,        scheduleBodyRender);
+  state.subscribe(s => s.mealDraft,        scheduleBodyRender);
   state.subscribe(s => s.selectedIngredientId,   () => {
-    // Only swap the selection class — a full rebuild would jump scroll.
+    // Tester feedback: the selected row is exempted from the hidden
+    // filter (kept visible as a ghost). A selection change can add a
+    // previously-hidden row OR drop a no-longer-selected ghost row,
+    // so we have to re-run renderBody to keep the row set correct.
+    // The cheap class-swap path used to work because filters always
+    // dropped hidden rows unconditionally; that's no longer true.
+    const prevSelectedRows = tbodyEl.querySelectorAll('tr.is-selected');
     const id = state.get('selectedIngredientId');
-    tbodyEl.querySelectorAll('tr.is-selected').forEach(tr => tr.classList.remove('is-selected'));
+    const hiddenSet = typeof getHiddenSet === 'function' ? getHiddenSet() : null;
+    const wasHidden = prevSelectedRows.length > 0
+      && Array.from(prevSelectedRows).some(tr => tr.classList.contains('is-filtered-out'));
+    const willBeHidden = id && hiddenSet && hiddenSet.has(id);
+    if (wasHidden || willBeHidden) {
+      renderBody();
+    } else {
+      // Cheap path: just swap the selection class — preserves scroll.
+      prevSelectedRows.forEach(tr => tr.classList.remove('is-selected'));
+    }
     if (id) {
       const tr = tbodyEl.querySelector(`tr[data-id="${cssEscape(id)}"]`);
       if (tr) {
@@ -632,14 +726,3 @@ export function mountTableView(host, { state, getCurrentIngredients, getActiveSe
   });
 }
 
-function escapeHtml(s) {
-  if (s == null) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-function escapeAttr(s) { return escapeHtml(s); }
-function cssEscape(s) {
-  if (typeof CSS !== 'undefined' && CSS.escape) return CSS.escape(String(s));
-  return String(s).replace(/(["\\])/g, '\\$1');
-}

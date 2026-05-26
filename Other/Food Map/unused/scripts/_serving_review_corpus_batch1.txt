@@ -1,0 +1,307 @@
+# serving-audit review — corpus [0:150] of 2442
+# columns: idx | id | name | cuisine | serv_g | plate_g | cal100 | calSrv | carbSrv | protSrv | fatSrv
+#   then your estimate: EST_serv_g | EST_calSrv | EST_cal100 | CLASS(none/serving/density/both/mystery) | SOURCE/NOTE
+# cats listed on the following line for each meal.
+
+[0] corpus-titled-chicken-casserole | Chicken casserole | - | serv=360 plate=295 | cal100=143.6 calSrv=517.0 carbSrv=54.1 protSrv=37.6 fatSrv=17.1
+      cats: ['Poultry', 'Other vegetables', 'Mushrooms', 'Bread & rolls']
+[1] corpus-titled-broccoli-casserole | Broccoli casserole | American | serv=360 plate=379 | cal100=124.2 calSrv=447.1 carbSrv=39.0 protSrv=21.3 fatSrv=23.7
+      cats: ['Cruciferous vegetables', 'Other vegetables', 'Mushrooms', 'Aged cheese', 'Eggs', 'Refined grains', 'Extracts & essences', 'Cream & butter']
+[2] corpus-titled-banana-bread | Banana bread | American | serv=90 plate=267 | cal100=202.5 calSrv=182.2 carbSrv=19.7 protSrv=4.4 fatSrv=10.1
+      cats: ['Tropical fruits', 'Sugar & sweeteners', 'Eggs', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Margarine & shortening', 'Extracts & essences', 'Cream & butter']
+[3] corpus-titled-cheese-ball | Cheese ball | American | serv=60 plate=311 | cal100=159.5 calSrv=95.7 carbSrv=6.0 protSrv=4.4 fatSrv=6.5
+      cats: ['Fresh cheese', 'Other vegetables', 'Aged cheese', 'Sauces', 'Nuts', 'Peppers & nightshades']
+[4] corpus-titled-squash-casserole | Squash casserole | American | serv=360 plate=627 | cal100=183.3 calSrv=660.0 carbSrv=48.9 protSrv=33.4 fatSrv=36.9
+      cats: ['Other vegetables', 'Salt & seasonings', 'Eggs', 'Aged cheese', 'Bread & rolls', 'Margarine & shortening', 'Cream & butter', 'Peppers & nightshades', 'Fermented dairy', 'Poultry', 'Baked snacks & pastries']
+[5] corpus-titled-zucchini-bread | Zucchini bread | American | serv=90 plate=199 | cal100=206.3 calSrv=185.7 carbSrv=18.9 protSrv=5.8 fatSrv=10.2
+      cats: ['Eggs', 'Sugar & sweeteners', 'Flours', 'Other vegetables', 'Baking ingredients', 'Ground spices', 'Oils', 'Extracts & essences', 'Salt & seasonings']
+[6] corpus-titled-chili | Chili | American | serv=320 plate=387 | cal100=124.6 calSrv=398.6 carbSrv=40.3 protSrv=31.0 fatSrv=13.5
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Red meat', 'Ground spices', 'Salt & seasonings', 'Legumes']
+[7] corpus-titled-meat-loaf | Meatloaf | American | serv=320 plate=631 | cal100=155.5 calSrv=497.6 carbSrv=53.0 protSrv=30.2 fatSrv=18.6
+      cats: ['Red meat', 'Other vegetables', 'Eggs', 'Peppers & nightshades', 'Salt & seasonings', 'Sauces', 'Bread & rolls', 'Milk']
+[8] corpus-titled-baked-beans | Baked beans | American | serv=320 plate=374 | cal100=136.1 calSrv=435.4 carbSrv=23.6 protSrv=32.2 fatSrv=24.3
+      cats: ['Sugar & sweeteners', 'Other vegetables', 'Sauces', 'Red meat', 'Processed meat', 'Leafy greens', 'Peppers & nightshades']
+[9] corpus-titled-fruit-salad | Fruit salad | - | serv=230 plate=450 | cal100=93.9 calSrv=216.0 carbSrv=45.2 protSrv=3.0 fatSrv=4.7
+      cats: ['Tropical fruits', 'Temperate fruits', 'Citrus', 'Candy & desserts']
+[10] corpus-titled-pumpkin-bread | Pumpkin bread | American | serv=90 plate=238 | cal100=211.6 calSrv=190.5 carbSrv=24.6 protSrv=5.1 fatSrv=8.6
+      cats: ['Sugar & sweeteners', 'Starchy vegetables', 'Flours', 'Eggs', 'Baking ingredients', 'Ground spices', 'Salt & seasonings', 'Oils', 'Whole spices']
+[11] corpus-titled-carrot-cake | Carrot cake | American | serv=140 plate=407 | cal100=187.1 calSrv=261.9 carbSrv=33.4 protSrv=6.3 fatSrv=12.8
+      cats: ['Starchy vegetables', 'Eggs', 'Sugar & sweeteners', 'Flours', 'Ground spices', 'Baking ingredients', 'Oils', 'Salt & seasonings', 'Extracts & essences', 'Nuts', 'Tropical fruits']
+[12] corpus-titled-corn-casserole | Corn casserole | American | serv=360 plate=571 | cal100=131.9 calSrv=474.7 carbSrv=38.1 protSrv=19.2 fatSrv=28.3
+      cats: ['Starchy vegetables', 'Eggs', 'Cream & butter', 'Fermented dairy', 'Margarine & shortening', 'Other vegetables', 'Peppers & nightshades', 'Aged cheese']
+[13] corpus-titled-cranberry-salad | Cranberry salad | American | serv=230 plate=667 | cal100=78.0 calSrv=179.3 carbSrv=32.8 protSrv=3.6 fatSrv=5.9
+      cats: ['Berries', 'Tropical fruits', 'Sugar & sweeteners', 'Temperate fruits', 'Citrus', 'Nuts', 'Other vegetables']
+[14] corpus-titled-potato-casserole | Potato casserole | American | serv=360 plate=607 | cal100=140.3 calSrv=505.1 carbSrv=35.4 protSrv=27.2 fatSrv=29.0
+      cats: ['Starchy vegetables', 'Other vegetables', 'Fermented dairy', 'Aged cheese', 'Salt & seasonings', 'Poultry', 'Cream & butter', 'Margarine & shortening', 'Peppers & nightshades']
+[15] corpus-titled-chocolate-chip-cookies | Chocolate chip cookies | American | serv=60 plate=167 | cal100=357.9 calSrv=214.7 carbSrv=22.0 protSrv=4.8 fatSrv=12.4
+      cats: ['Eggs', 'Candy & desserts', 'Sugar & sweeteners', 'Flours', 'Extracts & essences', 'Baking ingredients', 'Salt & seasonings', 'Cream & butter', 'Margarine & shortening']
+[16] corpus-titled-broccoli-salad | Broccoli salad | American | serv=230 plate=301 | cal100=150.4 calSrv=346.0 carbSrv=36.7 protSrv=12.0 fatSrv=18.1
+      cats: ['Cruciferous vegetables', 'Other vegetables', 'Processed meat', 'Dressings & dips', 'Sugar & sweeteners', 'Extracts & essences', 'Dried fruits']
+[17] corpus-titled-brownies | Brownies | American | serv=60 plate=167 | cal100=357.9 calSrv=214.7 carbSrv=22.0 protSrv=4.8 fatSrv=12.4
+      cats: ['Eggs', 'Candy & desserts', 'Sugar & sweeteners', 'Flours', 'Extracts & essences', 'Salt & seasonings', 'Cream & butter', 'Margarine & shortening', 'Baking ingredients']
+[18] corpus-titled-banana-nut-bread | Banana nut bread | American | serv=90 plate=521 | cal100=195.7 calSrv=176.1 carbSrv=20.1 protSrv=6.5 fatSrv=8.3
+      cats: ['Tropical fruits', 'Eggs', 'Sugar & sweeteners', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Margarine & shortening', 'Nuts', 'Milk', 'Extracts & essences']
+[19] corpus-titled-sweet-potato-casserole | Sweet potato casserole | American | serv=360 plate=508 | cal100=213.7 calSrv=769.2 carbSrv=82.2 protSrv=26.3 fatSrv=38.9
+      cats: ['Starchy vegetables', 'Sugar & sweeteners', 'Eggs', 'Extracts & essences', 'Milk', 'Cream & butter', 'Margarine & shortening', 'Salt & seasonings', 'Nuts', 'Flours']
+[20] corpus-titled-taco-salad | Taco salad | Tex-Mex | serv=230 plate=568 | cal100=176.4 calSrv=405.7 carbSrv=44.5 protSrv=21.7 fatSrv=16.1
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Aged cheese', 'Red meat', 'Leafy greens', 'Baked snacks & pastries', 'Dressings & dips', 'Legumes', 'Bread & rolls']
+[21] corpus-titled-apple-crisp | Apple crisp | American | serv=140 plate=235 | cal100=156.6 calSrv=219.3 carbSrv=36.2 protSrv=4.3 fatSrv=7.3
+      cats: ['Sugar & sweeteners', 'Temperate fruits', 'Flours', 'Ground spices', 'Cream & butter', 'Whole grains', 'Salt & seasonings']
+[22] corpus-titled-sugar-cookies | Sugar cookies | - | serv=60 plate=127 | cal100=335.3 calSrv=201.2 carbSrv=15.5 protSrv=5.3 fatSrv=13.3
+      cats: ['Sugar & sweeteners', 'Flours', 'Eggs', 'Baking ingredients', 'Extracts & essences', 'Salt & seasonings', 'Margarine & shortening', 'Cream & butter']
+[23] corpus-titled-peanut-butter-pie | Peanut butter pie | American | serv=140 plate=371 | cal100=249.7 calSrv=349.5 carbSrv=34.6 protSrv=14.5 fatSrv=17.7
+      cats: ['Sugar & sweeteners', 'Nut butters', 'Fresh cheese', 'Baked snacks & pastries', 'Milk']
+[24] corpus-titled-peach-cobbler | Peach cobbler | American | serv=140 plate=454 | cal100=182.7 calSrv=255.7 carbSrv=31.6 protSrv=8.4 fatSrv=11.3
+      cats: ['Sugar & sweeteners', 'Temperate fruits', 'Flours', 'Milk', 'Cream & butter', 'Margarine & shortening', 'Baking ingredients']
+[25] corpus-titled-peanut-butter-fudge | Peanut butter fudge | - | serv=40 plate=332 | cal100=259.7 calSrv=103.9 carbSrv=11.2 protSrv=3.5 fatSrv=5.3
+      cats: ['Sugar & sweeteners', 'Nut butters', 'Milk', 'Extracts & essences', 'Cream & butter', 'Candy & desserts']
+[26] corpus-titled-beef-stroganoff | Beef stroganoff | Russian | serv=320 plate=540 | cal100=123.0 calSrv=393.6 carbSrv=31.9 protSrv=24.8 fatSrv=19.3
+      cats: ['Other vegetables', 'Mushrooms', 'Fermented dairy', 'Red meat', 'Salt & seasonings', 'Flours', 'Peppers & nightshades', 'Cream & butter']
+[27] corpus-titled-sausage-balls | Sausage balls | American | serv=60 plate=138 | cal100=339.2 calSrv=203.5 carbSrv=16.6 protSrv=9.0 fatSrv=11.4
+      cats: ['Processed meat', 'Aged cheese', 'Prepared mixes']
+[28] corpus-titled-corn-pudding | Corn pudding | American | serv=140 plate=464 | cal100=180.0 calSrv=252.0 carbSrv=32.9 protSrv=10.3 fatSrv=9.2
+      cats: ['Eggs', 'Starchy vegetables', 'Sugar & sweeteners', 'Milk', 'Cream & butter', 'Salt & seasonings', 'Flours']
+[29] corpus-titled-breakfast-casserole | Breakfast casserole | American | serv=360 plate=459 | cal100=210.6 calSrv=758.1 carbSrv=68.1 protSrv=40.1 fatSrv=36.2
+      cats: ['Eggs', 'Processed meat', 'Milk', 'Aged cheese', 'Bread & rolls', 'Salt & seasonings', 'Leafy greens']
+[30] corpus-titled-strawberry-pie | Strawberry pie | American | serv=140 plate=229 | cal100=162.1 calSrv=226.9 carbSrv=41.0 protSrv=5.0 fatSrv=5.3
+      cats: ['Berries', 'Sugar & sweeteners', 'Refined grains', 'Baked snacks & pastries']
+[31] corpus-titled-green-bean-casserole | Green bean casserole | American | serv=360 plate=508 | cal100=121.1 calSrv=436.0 carbSrv=51.8 protSrv=23.9 fatSrv=16.2
+      cats: ['Other vegetables', 'Mushrooms', 'Peppers & nightshades', 'Milk', 'Aged cheese']
+[32] corpus-titled-potato-soup | Potato soup | - | serv=350 plate=883 | cal100=120.2 calSrv=420.6 carbSrv=46.8 protSrv=23.3 fatSrv=16.2
+      cats: ['Starchy vegetables', 'Other vegetables', 'Milk', 'Salt & seasonings', 'Cream & butter', 'Peppers & nightshades', 'Poultry', 'Fresh herbs', 'Prepared soups & broths']
+[33] corpus-titled-dump-cake | Dump cake | American | serv=140 plate=391 | cal100=179.7 calSrv=251.6 carbSrv=31.3 protSrv=3.4 fatSrv=13.9
+      cats: ['Tropical fruits', 'Prepared mixes', 'Temperate fruits', 'Cream & butter', 'Margarine & shortening', 'Nuts']
+[34] corpus-titled-spinach-dip | Spinach dip | American | serv=60 plate=585 | cal100=92.8 calSrv=55.7 carbSrv=4.3 protSrv=3.2 fatSrv=2.9
+      cats: ['Leafy greens', 'Fermented dairy', 'Fresh cheese', 'Prepared soups & broths', 'Other vegetables']
+[35] corpus-titled-fresh-apple-cake | Fresh apple cake | American | serv=140 plate=282 | cal100=210.4 calSrv=294.6 carbSrv=29.1 protSrv=7.5 fatSrv=17.8
+      cats: ['Flours', 'Eggs', 'Sugar & sweeteners', 'Temperate fruits', 'Baking ingredients', 'Oils', 'Salt & seasonings', 'Extracts & essences', 'Ground spices', 'Nuts']
+[36] corpus-titled-banana-pudding | Banana pudding | American | serv=140 plate=516 | cal100=188.8 calSrv=264.3 carbSrv=36.8 protSrv=9.5 fatSrv=9.3
+      cats: ['Tropical fruits', 'Milk', 'Baked snacks & pastries', 'Candy & desserts', 'Extracts & essences', 'Sugar & sweeteners', 'Eggs']
+[37] corpus-titled-monkey-bread | Monkey bread | American | serv=260 plate=73 | cal100=504.3 calSrv=1311.2 carbSrv=105.9 protSrv=12.0 fatSrv=94.6
+      cats: ['Sugar & sweeteners', 'Ground spices', 'Cream & butter', 'Margarine & shortening', 'Baked snacks & pastries']
+[38] corpus-titled-potato-salad | Potato salad | American | serv=230 plate=438 | cal100=90.3 calSrv=207.7 carbSrv=29.0 protSrv=7.5 fatSrv=7.7
+      cats: ['Starchy vegetables', 'Other vegetables', 'Eggs', 'Salt & seasonings', 'Extracts & essences', 'Peppers & nightshades', 'Leafy greens', 'Dressings & dips', 'Pickled vegetables']
+[39] corpus-titled-chocolate-pie | Chocolate pie | American | serv=140 plate=381 | cal100=230.2 calSrv=322.2 carbSrv=39.0 protSrv=12.3 fatSrv=13.4
+      cats: ['Candy & desserts', 'Sugar & sweeteners', 'Eggs', 'Milk', 'Extracts & essences', 'Flours', 'Cream & butter', 'Salt & seasonings']
+[40] corpus-titled-oatmeal-cookies | Oatmeal cookies | - | serv=60 plate=199 | cal100=282.9 calSrv=169.7 carbSrv=23.1 protSrv=4.5 fatSrv=7.1
+      cats: ['Sugar & sweeteners', 'Whole grains', 'Flours', 'Eggs', 'Baking ingredients', 'Extracts & essences', 'Salt & seasonings', 'Margarine & shortening', 'Dried fruits', 'Ground spices']
+[41] corpus-titled-macaroni-and-cheese | Macaroni and cheese | American | serv=320 plate=493 | cal100=190.5 calSrv=609.6 carbSrv=67.3 protSrv=28.1 fatSrv=26.0
+      cats: ['Refined grains', 'Milk', 'Aged cheese', 'Salt & seasonings', 'Cream & butter', 'Peppers & nightshades', 'Flours', 'Eggs']
+[42] corpus-titled-fudge | Fudge | - | serv=40 plate=314 | cal100=249.2 calSrv=99.7 carbSrv=10.7 protSrv=3.0 fatSrv=5.1
+      cats: ['Candy & desserts', 'Milk', 'Sugar & sweeteners', 'Extracts & essences', 'Cream & butter', 'Margarine & shortening']
+[43] corpus-titled-shrimp-dip | Shrimp dip | - | serv=60 plate=387 | cal100=97.4 calSrv=58.4 carbSrv=5.3 protSrv=4.7 fatSrv=2.3
+      cats: ['Shellfish', 'Fresh cheese', 'Other vegetables', 'Sauces', 'Extracts & essences', 'Citrus']
+[44] corpus-titled-punch | Party punch | - | serv=240 plate=869 | cal100=48.1 calSrv=115.5 carbSrv=26.8 protSrv=1.4 fatSrv=1.2
+      cats: ['Juices', 'Tropical fruits', 'Citrus', 'Sugar & sweeteners', 'Soft drinks']
+[45] corpus-titled-spaghetti-sauce | Spaghetti meat sauce | Italian-American | serv=320 plate=277 | cal100=149.0 calSrv=476.7 carbSrv=22.6 protSrv=29.4 fatSrv=31.0
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Red meat', 'Fresh herbs', 'Salt & seasonings', 'Sugar & sweeteners', 'Oils']
+[46] corpus-titled-chicken-salad | Chicken salad | American | serv=230 plate=556 | cal100=97.3 calSrv=223.7 carbSrv=23.5 protSrv=12.7 fatSrv=10.3
+      cats: ['Poultry', 'Other vegetables', 'Extracts & essences', 'Salt & seasonings', 'Nuts', 'Temperate fruits', 'Peppers & nightshades', 'Citrus']
+[47] corpus-titled-taco-dip | Taco dip | Tex-Mex | serv=60 plate=484 | cal100=114.4 calSrv=68.6 carbSrv=4.8 protSrv=3.9 fatSrv=4.0
+      cats: ['Peppers & nightshades', 'Fermented dairy', 'Aged cheese', 'Other vegetables', 'Fresh cheese', 'Sauces', 'Spice blends', 'Pickled vegetables']
+[48] corpus-titled-chocolate-cake | Chocolate cake | - | serv=140 plate=421 | cal100=269.6 calSrv=377.4 carbSrv=37.6 protSrv=11.6 fatSrv=20.7
+      cats: ['Candy & desserts', 'Sugar & sweeteners', 'Flours', 'Eggs', 'Baking ingredients', 'Extracts & essences', 'Milk', 'Salt & seasonings', 'Margarine & shortening', 'Oils', 'Cream & butter']
+[49] corpus-titled-scalloped-potatoes | Scalloped potatoes | American | serv=320 plate=608 | cal100=150.1 calSrv=480.3 carbSrv=64.2 protSrv=19.7 fatSrv=17.4
+      cats: ['Starchy vegetables', 'Other vegetables', 'Milk', 'Salt & seasonings', 'Cream & butter', 'Peppers & nightshades', 'Aged cheese', 'Flours']
+[50] corpus-titled-banana-split-cake | Banana split cake | American | serv=140 plate=430 | cal100=183.7 calSrv=257.1 carbSrv=26.4 protSrv=5.1 fatSrv=15.7
+      cats: ['Tropical fruits', 'Baked snacks & pastries', 'Sugar & sweeteners', 'Eggs', 'Temperate fruits', 'Margarine & shortening', 'Cream & butter', 'Nuts']
+[51] corpus-titled-fruit-dip | Fruit dip | - | serv=60 plate=109 | cal100=362.1 calSrv=217.2 carbSrv=17.1 protSrv=6.0 fatSrv=14.4
+      cats: ['Fresh cheese', 'Cream & butter', 'Candy & desserts']
+[52] corpus-titled-pasta-salad | Pasta salad | American | serv=230 plate=303 | cal100=125.2 calSrv=288.1 carbSrv=33.1 protSrv=11.0 fatSrv=13.2
+      cats: ['Refined grains', 'Other vegetables', 'Peppers & nightshades', 'Dressings & dips', 'Pickled vegetables', 'Aged cheese']
+[53] corpus-titled-zucchini-casserole | Zucchini casserole | American | serv=360 plate=648 | cal100=142.0 calSrv=511.1 carbSrv=50.2 protSrv=28.2 fatSrv=22.5
+      cats: ['Other vegetables', 'Aged cheese', 'Salt & seasonings', 'Bread & rolls', 'Peppers & nightshades', 'Fermented dairy', 'Starchy vegetables', 'Cream & butter', 'Poultry']
+[54] corpus-titled-chicken-enchiladas | Chicken enchiladas | Mexican | serv=320 plate=538 | cal100=137.7 calSrv=440.7 carbSrv=38.1 protSrv=29.3 fatSrv=19.3
+      cats: ['Poultry', 'Bread & rolls', 'Peppers & nightshades', 'Other vegetables', 'Aged cheese', 'Fermented dairy', 'Sauces']
+[55] corpus-titled-vegetable-casserole | Vegetable casserole | - | serv=360 plate=294 | cal100=189.2 calSrv=681.1 carbSrv=82.1 protSrv=17.0 fatSrv=32.7
+      cats: ['Other vegetables', 'Aged cheese', 'Starchy vegetables', 'Extracts & essences', 'Baked snacks & pastries', 'Margarine & shortening']
+[56] corpus-titled-sweet-potato-pie | Sweet potato pie | Southern | serv=140 plate=437 | cal100=167.1 calSrv=233.9 carbSrv=28.2 protSrv=9.9 fatSrv=9.3
+      cats: ['Starchy vegetables', 'Eggs', 'Sugar & sweeteners', 'Milk', 'Ground spices', 'Extracts & essences', 'Cream & butter', 'Salt & seasonings']
+[57] corpus-titled-rice-pudding | Rice pudding | - | serv=140 plate=397 | cal100=210.9 calSrv=295.3 carbSrv=37.1 protSrv=11.6 fatSrv=11.5
+      cats: ['Refined grains', 'Milk', 'Sugar & sweeteners', 'Extracts & essences', 'Eggs', 'Ground spices', 'Dried fruits', 'Salt & seasonings', 'Cream & butter']
+[58] corpus-titled-caramel-corn | Caramel corn | American | serv=30 plate=172 | cal100=209.7 calSrv=62.9 carbSrv=7.3 protSrv=0.7 fatSrv=3.6
+      cats: ['Sugar & sweeteners', 'Baking ingredients', 'Salt & seasonings', 'Starchy vegetables', 'Cream & butter', 'Margarine & shortening', 'Extracts & essences']
+[59] corpus-titled-macaroni-salad | Macaroni salad | American | serv=230 plate=332 | cal100=114.0 calSrv=262.1 carbSrv=32.4 protSrv=10.0 fatSrv=10.7
+      cats: ['Refined grains', 'Other vegetables', 'Peppers & nightshades', 'Extracts & essences', 'Salt & seasonings', 'Dressings & dips', 'Eggs', 'Sugar & sweeteners', 'Pickled vegetables']
+[60] corpus-titled-hot-chicken-salad | Hot chicken salad | American | serv=230 plate=619 | cal100=126.7 calSrv=291.4 carbSrv=26.4 protSrv=16.9 fatSrv=14.4
+      cats: ['Poultry', 'Other vegetables', 'Extracts & essences', 'Citrus', 'Nuts', 'Salt & seasonings', 'Starchy vegetables', 'Aged cheese', 'Peppers & nightshades', 'Eggs']
+[61] corpus-titled-coconut-pie | Coconut pie | American | serv=140 plate=494 | cal100=187.1 calSrv=261.9 carbSrv=29.3 protSrv=9.5 fatSrv=12.4
+      cats: ['Sugar & sweeteners', 'Eggs', 'Tropical fruits', 'Milk', 'Extracts & essences', 'Flours', 'Cream & butter', 'Margarine & shortening']
+[62] corpus-titled-hamburger-casserole | Hamburger casserole | American | serv=360 plate=479 | cal100=112.2 calSrv=403.8 carbSrv=40.0 protSrv=27.4 fatSrv=16.1
+      cats: ['Red meat', 'Other vegetables', 'Peppers & nightshades', 'Starchy vegetables', 'Mushrooms', 'Salt & seasonings', 'Aged cheese']
+[63] corpus-titled-mexican-cornbread | Mexican cornbread | Tex-Mex | serv=320 plate=670 | cal100=160.6 calSrv=513.8 carbSrv=61.7 protSrv=21.5 fatSrv=21.5
+      cats: ['Peppers & nightshades', 'Eggs', 'Starchy vegetables', 'Aged cheese', 'Milk', 'Other vegetables', 'Oils', 'Flours', 'Salt & seasonings', 'Baking ingredients']
+[64] corpus-titled-mexican-casserole | Mexican casserole | Tex-Mex | serv=360 plate=563 | cal100=171.6 calSrv=617.7 carbSrv=53.4 protSrv=41.6 fatSrv=26.7
+      cats: ['Other vegetables', 'Red meat', 'Peppers & nightshades', 'Aged cheese', 'Mushrooms', 'Poultry', 'Sauces', 'Baked snacks & pastries', 'Bread & rolls']
+[65] corpus-titled-sloppy-joes | Sloppy joes | American | serv=320 plate=350 | cal100=112.8 calSrv=361.0 carbSrv=26.5 protSrv=25.5 fatSrv=17.7
+      cats: ['Red meat', 'Sauces', 'Other vegetables', 'Peppers & nightshades', 'Sugar & sweeteners', 'Salt & seasonings', 'Leafy greens', 'Dressings & dips']
+[66] corpus-titled-stuffed-mushrooms | Stuffed mushrooms | - | serv=80 plate=396 | cal100=160.5 calSrv=128.4 carbSrv=11.0 protSrv=5.6 fatSrv=7.2
+      cats: ['Mushrooms', 'Other vegetables', 'Bread & rolls', 'Aged cheese', 'Cream & butter', 'Salt & seasonings', 'Processed meat', 'Fresh herbs', 'Peppers & nightshades']
+[67] corpus-titled-hush-puppies | Hush puppies | Southern | serv=60 plate=547 | cal100=151.4 calSrv=90.8 carbSrv=13.6 protSrv=4.0 fatSrv=2.5
+      cats: ['Other vegetables', 'Flours', 'Eggs', 'Milk', 'Salt & seasonings', 'Baking ingredients', 'Sugar & sweeteners', 'Starchy vegetables']
+[68] corpus-titled-cheese-cake | Cheesecake | - | serv=140 plate=465 | cal100=156.3 calSrv=218.8 carbSrv=17.5 protSrv=9.3 fatSrv=12.7
+      cats: ['Sugar & sweeteners', 'Fresh cheese', 'Extracts & essences', 'Baked snacks & pastries', 'Eggs', 'Citrus', 'Cream & butter', 'Fermented dairy']
+[69] corpus-titled-chicken-divan | Chicken divan | American | serv=320 plate=400 | cal100=155.5 calSrv=497.6 carbSrv=41.4 protSrv=29.5 fatSrv=24.5
+      cats: ['Poultry', 'Cruciferous vegetables', 'Aged cheese', 'Extracts & essences', 'Citrus', 'Bread & rolls', 'Cream & butter', 'Spice blends']
+[70] corpus-titled-chicken-and-rice | Chicken and rice | - | serv=260 plate=286 | cal100=127.4 calSrv=331.2 carbSrv=31.9 protSrv=26.6 fatSrv=11.1
+      cats: ['Poultry', 'Refined grains', 'Other vegetables', 'Mushrooms', 'Salt & seasonings']
+[71] corpus-titled-blueberry-muffins | Blueberry muffins | - | serv=60 plate=505 | cal100=184.3 calSrv=110.6 carbSrv=12.0 protSrv=4.1 fatSrv=5.4
+      cats: ['Berries', 'Sugar & sweeteners', 'Eggs', 'Flours', 'Baking ingredients', 'Milk', 'Salt & seasonings', 'Cream & butter', 'Oils']
+[72] corpus-titled-taco-soup | Taco soup | Tex-Mex | serv=350 plate=811 | cal100=118.7 calSrv=415.4 carbSrv=55.7 protSrv=23.2 fatSrv=11.7
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Red meat', 'Legumes', 'Starchy vegetables', 'Spice blends', 'Bread & rolls', 'Prepared soups & broths']
+[73] corpus-titled-chicken-spaghetti | Chicken spaghetti | Southern | serv=320 plate=427 | cal100=139.4 calSrv=446.0 carbSrv=33.1 protSrv=32.4 fatSrv=21.1
+      cats: ['Poultry', 'Other vegetables', 'Peppers & nightshades', 'Mushrooms', 'Refined grains', 'Processed cheese', 'Aged cheese', 'Salt & seasonings']
+[74] corpus-titled-watergate-salad | Watergate salad | American | serv=230 plate=222 | cal100=228.3 calSrv=525.1 carbSrv=63.6 protSrv=7.2 fatSrv=30.3
+      cats: ['Tropical fruits', 'Candy & desserts', 'Nuts', 'Cream & butter']
+[75] corpus-titled-tuna-casserole | Tuna casserole | American | serv=360 plate=768 | cal100=140.5 calSrv=505.9 carbSrv=59.4 protSrv=32.8 fatSrv=16.1
+      cats: ['Oily fish', 'Mushrooms', 'Milk', 'Other vegetables', 'Refined grains', 'Legumes', 'Aged cheese', 'Peppers & nightshades']
+[76] corpus-titled-fruit-pizza | Fruit pizza | American | serv=260 plate=526 | cal100=109.9 calSrv=285.8 carbSrv=46.3 protSrv=9.0 fatSrv=8.7
+      cats: ['Sugar & sweeteners', 'Fresh cheese', 'Tropical fruits', 'Extracts & essences', 'Berries', 'Citrus', 'Bread & rolls']
+[77] corpus-titled-applesauce-cake | Applesauce cake | American | serv=140 plate=335 | cal100=232.6 calSrv=325.7 carbSrv=36.2 protSrv=6.9 fatSrv=18.7
+      cats: ['Sugar & sweeteners', 'Flours', 'Ground spices', 'Baking ingredients', 'Dried fruits', 'Temperate fruits', 'Whole spices', 'Eggs', 'Salt & seasonings', 'Margarine & shortening', 'Nuts', 'Cream & butter']
+[78] corpus-titled-spanish-rice | Spanish rice | Tex-Mex | serv=320 plate=302 | cal100=129.7 calSrv=415.0 carbSrv=40.3 protSrv=30.6 fatSrv=15.1
+      cats: ['Refined grains', 'Peppers & nightshades', 'Other vegetables', 'Salt & seasonings', 'Red meat', 'Ground spices']
+[79] corpus-titled-hash-brown-casserole | Hash brown casserole | American | serv=360 plate=607 | cal100=140.3 calSrv=505.1 carbSrv=35.4 protSrv=27.2 fatSrv=29.0
+      cats: ['Starchy vegetables', 'Fermented dairy', 'Other vegetables', 'Aged cheese', 'Poultry', 'Salt & seasonings', 'Cream & butter', 'Margarine & shortening', 'Peppers & nightshades']
+[80] corpus-titled-vegetable-dip | Vegetable dip | - | serv=60 plate=291 | cal100=86.9 calSrv=52.1 carbSrv=5.4 protSrv=2.9 fatSrv=2.2
+      cats: ['Other vegetables', 'Extracts & essences', 'Fermented dairy', 'Fresh herbs', 'Salt & seasonings', 'Sauces']
+[81] corpus-titled-no-bake-cookies | No-bake cookies | American | serv=40 plate=391 | cal100=268.7 calSrv=107.5 carbSrv=11.2 protSrv=3.2 fatSrv=5.8
+      cats: ['Sugar & sweeteners', 'Candy & desserts', 'Milk', 'Whole grains', 'Extracts & essences', 'Nut butters', 'Cream & butter', 'Margarine & shortening']
+[82] corpus-titled-dirt-cake | Dirt cake | American | serv=140 plate=367 | cal100=251.8 calSrv=352.6 carbSrv=32.7 protSrv=12.4 fatSrv=19.7
+      cats: ['Candy & desserts', 'Fresh cheese', 'Milk', 'Sugar & sweeteners', 'Cream & butter', 'Margarine & shortening']
+[83] corpus-titled-peanut-butter-balls | Peanut butter balls | American | serv=40 plate=104 | cal100=528.0 calSrv=211.2 carbSrv=15.8 protSrv=2.8 fatSrv=16.0
+      cats: ['Sugar & sweeteners', 'Nut butters', 'Candy & desserts', 'Cream & butter', 'Margarine & shortening']
+[84] corpus-titled-tater-tot-casserole | Tater tot casserole | American | serv=360 plate=478 | cal100=144.4 calSrv=519.9 carbSrv=34.6 protSrv=42.9 fatSrv=23.6
+      cats: ['Starchy vegetables', 'Red meat', 'Other vegetables', 'Mushrooms', 'Aged cheese', 'Poultry']
+[85] corpus-titled-chicken-pie | Chicken pot pie | American | serv=320 plate=455 | cal100=188.1 calSrv=601.8 carbSrv=57.8 protSrv=34.2 fatSrv=26.5
+      cats: ['Poultry', 'Other vegetables', 'Flours', 'Milk', 'Margarine & shortening', 'Salt & seasonings']
+[86] corpus-titled-chicken-and-dumplings | Chicken and dumplings | Southern | serv=230 plate=526 | cal100=149.1 calSrv=342.9 carbSrv=39.0 protSrv=21.9 fatSrv=11.5
+      cats: ['Poultry', 'Salt & seasonings', 'Flours', 'Milk', 'Other vegetables', 'Peppers & nightshades']
+[87] corpus-titled-vegetable-soup | Vegetable soup | - | serv=350 plate=656 | cal100=90.2 calSrv=315.8 carbSrv=35.8 protSrv=20.0 fatSrv=10.9
+      cats: ['Other vegetables', 'Peppers & nightshades', 'Starchy vegetables', 'Salt & seasonings', 'Red meat', 'Leafy greens', 'Prepared soups & broths']
+[88] corpus-titled-buttermilk-pie | Buttermilk pie | Southern | serv=140 plate=354 | cal100=228.6 calSrv=320.0 carbSrv=30.7 protSrv=12.5 fatSrv=16.5
+      cats: ['Sugar & sweeteners', 'Milk', 'Eggs', 'Flours', 'Extracts & essences', 'Cream & butter', 'Margarine & shortening']
+[89] corpus-titled-vegetable-pizza | Vegetable pizza | American | serv=100 plate=435 | cal100=158.6 calSrv=158.6 carbSrv=18.3 protSrv=6.5 fatSrv=6.9
+      cats: ['Fresh cheese', 'Baked snacks & pastries', 'Extracts & essences', 'Aged cheese', 'Cruciferous vegetables', 'Other vegetables', 'Peppers & nightshades', 'Bread & rolls']
+[90] corpus-titled-coconut-cake | Coconut cake | Southern | serv=140 plate=489 | cal100=165.7 calSrv=232.0 carbSrv=33.5 protSrv=9.6 fatSrv=7.2
+      cats: ['Tropical fruits', 'Sugar & sweeteners', 'Milk', 'Prepared mixes', 'Eggs']
+[91] corpus-titled-french-onion-soup | French onion soup | French | serv=350 plate=808 | cal100=150.4 calSrv=526.5 carbSrv=45.9 protSrv=21.9 fatSrv=18.5
+      cats: ['Other vegetables', 'Bread & rolls', 'Cream & butter', 'Red meat', 'Aged cheese', 'Salt & seasonings', 'Alcoholic beverages', 'Peppers & nightshades', 'Flours', 'Sauces', 'Prepared soups & broths']
+[92] corpus-titled-pizza-casserole | Pizza casserole | Italian-American | serv=360 plate=541 | cal100=162.4 calSrv=584.5 carbSrv=35.1 protSrv=38.4 fatSrv=32.9
+      cats: ['Fresh cheese', 'Red meat', 'Sauces', 'Other vegetables', 'Processed meat', 'Peppers & nightshades', 'Refined grains', 'Mushrooms', 'Aged cheese', 'Fresh herbs']
+[93] corpus-titled-angel-biscuits | Angel biscuits | Southern | serv=55 plate=301 | cal100=223.1 calSrv=122.7 carbSrv=15.2 protSrv=4.7 fatSrv=5.0
+      cats: ['Baking ingredients', 'Flours', 'Milk', 'Sugar & sweeteners', 'Margarine & shortening', 'Salt & seasonings']
+[94] corpus-titled-snickerdoodles | Snickerdoodles | American | serv=60 plate=126 | cal100=337.7 calSrv=202.6 carbSrv=15.8 protSrv=5.4 fatSrv=13.5
+      cats: ['Sugar & sweeteners', 'Eggs', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Margarine & shortening', 'Ground spices', 'Cream & butter']
+[95] corpus-titled-corn-bread | Cornbread | Southern | serv=320 plate=476 | cal100=191.4 calSrv=612.6 carbSrv=77.6 protSrv=23.5 fatSrv=24.4
+      cats: ['Eggs', 'Milk', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Sugar & sweeteners', 'Starchy vegetables', 'Oils']
+[96] corpus-titled-cabbage-casserole | Cabbage casserole | American | serv=360 plate=314 | cal100=123.2 calSrv=443.4 carbSrv=20.9 protSrv=37.6 fatSrv=24.1
+      cats: ['Leafy greens', 'Other vegetables', 'Peppers & nightshades', 'Salt & seasonings', 'Red meat', 'Aged cheese']
+[97] corpus-titled-guacamole | Guacamole | Mexican | serv=60 plate=304 | cal100=43.1 calSrv=25.9 carbSrv=6.2 protSrv=0.9 fatSrv=0.2
+      cats: ['Other vegetables', 'Peppers & nightshades', 'Citrus', 'Salt & seasonings', 'Fresh herbs']
+[98] corpus-titled-lasagne | Lasagna | Italian-American | serv=320 plate=467 | cal100=162.4 calSrv=519.8 carbSrv=32.2 protSrv=35.6 fatSrv=27.9
+      cats: ['Fresh cheese', 'Red meat', 'Aged cheese', 'Peppers & nightshades', 'Other vegetables', 'Fresh herbs', 'Salt & seasonings', 'Refined grains', 'Eggs', 'Sauces']
+[99] corpus-titled-ice-cream | Ice cream | - | serv=85 plate=311 | cal100=190.9 calSrv=162.3 carbSrv=15.3 protSrv=7.8 fatSrv=7.8
+      cats: ['Milk', 'Sugar & sweeteners', 'Extracts & essences', 'Eggs', 'Salt & seasonings', 'Cream & butter']
+[100] corpus-titled-punch-bowl-cake | Punch bowl cake | Southern | serv=320 plate=515 | cal100=121.4 calSrv=388.4 carbSrv=78.2 protSrv=6.2 fatSrv=8.2
+      cats: ['Prepared mixes', 'Tropical fruits', 'Candy & desserts', 'Temperate fruits', 'Berries']
+[101] corpus-titled-chicken-tetrazzini | Chicken tetrazzini | Italian-American | serv=320 plate=683 | cal100=161.5 calSrv=516.9 carbSrv=54.6 protSrv=29.3 fatSrv=20.9
+      cats: ['Poultry', 'Mushrooms', 'Aged cheese', 'Other vegetables', 'Peppers & nightshades', 'Cream & butter', 'Salt & seasonings', 'Refined grains', 'Flours', 'Milk']
+[102] corpus-titled-pretzel-salad | Strawberry pretzel salad | American | serv=140 plate=253 | cal100=190.1 calSrv=266.2 carbSrv=26.5 protSrv=7.6 fatSrv=15.0
+      cats: ['Baked snacks & pastries', 'Cream & butter', 'Fresh cheese', 'Sugar & sweeteners', 'Berries']
+[103] corpus-titled-spaghetti-salad | Spaghetti salad | American | serv=230 plate=275 | cal100=95.1 calSrv=218.8 carbSrv=35.0 protSrv=6.9 fatSrv=6.6
+      cats: ['Other vegetables', 'Peppers & nightshades', 'Dressings & dips', 'Refined grains', 'Leafy greens']
+[104] corpus-titled-strawberry-salad | Strawberry salad | - | serv=230 plate=478 | cal100=106.0 calSrv=243.9 carbSrv=29.0 protSrv=8.5 fatSrv=12.0
+      cats: ['Berries', 'Tropical fruits', 'Fermented dairy', 'Nuts']
+[105] corpus-titled-strawberry-cake | Strawberry cake | Southern | serv=140 plate=289 | cal100=200.7 calSrv=281.0 carbSrv=36.3 protSrv=7.3 fatSrv=12.7
+      cats: ['Berries', 'Prepared mixes', 'Eggs', 'Oils', 'Flours']
+[106] corpus-titled-artichoke-dip | Artichoke dip | American | serv=60 plate=340 | cal100=137.2 calSrv=82.3 carbSrv=4.0 protSrv=5.0 fatSrv=5.2
+      cats: ['Other vegetables', 'Fresh cheese', 'Aged cheese', 'Fermented dairy', 'Extracts & essences']
+[107] corpus-titled-rolls | Dinner rolls | - | serv=50 plate=351 | cal100=216.1 calSrv=108.1 carbSrv=12.0 protSrv=4.7 fatSrv=4.8
+      cats: ['Flours', 'Sugar & sweeteners', 'Baking ingredients', 'Salt & seasonings', 'Eggs', 'Margarine & shortening', 'Milk']
+[108] corpus-titled-pepper-steak | Pepper steak | Chinese-American | serv=320 plate=345 | cal100=157.7 calSrv=504.7 carbSrv=39.9 protSrv=27.6 fatSrv=26.8
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Sauces', 'Red meat', 'Refined grains', 'Oils', 'Salt & seasonings']
+[109] corpus-titled-bran-muffins | Bran muffins | - | serv=60 plate=495 | cal100=243.8 calSrv=146.3 carbSrv=18.1 protSrv=4.8 fatSrv=6.4
+      cats: ['Sugar & sweeteners', 'Flours', 'Baking ingredients', 'Eggs', 'Milk', 'Salt & seasonings', 'Whole grains', 'Oils', 'Refined grains', 'Dried fruits', 'Margarine & shortening']
+[110] corpus-titled-chicken-and-rice-casserole | Chicken and rice casserole | American | serv=360 plate=286 | cal100=127.4 calSrv=458.6 carbSrv=44.1 protSrv=36.9 fatSrv=15.3
+      cats: ['Poultry', 'Refined grains', 'Other vegetables', 'Mushrooms', 'Salt & seasonings']
+[111] corpus-titled-broccoli-cornbread | Broccoli cornbread | Southern | serv=320 plate=304 | cal100=156.4 calSrv=500.4 carbSrv=16.9 protSrv=20.1 fatSrv=40.3
+      cats: ['Cruciferous vegetables', 'Eggs', 'Other vegetables', 'Fresh cheese', 'Margarine & shortening', 'Cream & butter', 'Salt & seasonings']
+[112] corpus-titled-cream-cheese-pound-cake | Cream cheese pound cake | Southern | serv=140 plate=170 | cal100=318.0 calSrv=445.3 carbSrv=23.1 protSrv=15.4 fatSrv=32.5
+      cats: ['Eggs', 'Sugar & sweeteners', 'Fresh cheese', 'Flours', 'Extracts & essences', 'Cream & butter', 'Margarine & shortening', 'Salt & seasonings']
+[113] corpus-titled-pork-chop-casserole | Pork chop casserole | American | serv=360 plate=496 | cal100=110.3 calSrv=397.1 carbSrv=53.6 protSrv=24.0 fatSrv=10.7
+      cats: ['Red meat', 'Starchy vegetables', 'Other vegetables', 'Mushrooms', 'Salt & seasonings', 'Peppers & nightshades', 'Refined grains']
+[114] corpus-titled-lemon-pie | Lemon pie | American | serv=140 plate=478 | cal100=171.0 calSrv=239.4 carbSrv=28.3 protSrv=9.6 fatSrv=10.3
+      cats: ['Citrus', 'Eggs', 'Milk', 'Sugar & sweeteners', 'Baked snacks & pastries', 'Cream & butter']
+[115] corpus-titled-chicken-cacciatore | Chicken cacciatore | Italian | serv=320 plate=493 | cal100=137.5 calSrv=440.0 carbSrv=22.1 protSrv=18.1 fatSrv=16.8
+      cats: ['Other vegetables', 'Peppers & nightshades', 'Poultry', 'Fresh herbs', 'Salt & seasonings', 'Oils', 'Mushrooms', 'Alcoholic beverages']
+[116] corpus-titled-crab-dip | Crab dip | American | serv=60 plate=387 | cal100=97.4 calSrv=58.4 carbSrv=5.3 protSrv=4.7 fatSrv=2.3
+      cats: ['Shellfish', 'Fresh cheese', 'Other vegetables', 'Sauces', 'Extracts & essences', 'Citrus']
+[117] corpus-titled-deviled-eggs | Deviled eggs | American | serv=50 plate=229 | cal100=98.3 calSrv=49.1 carbSrv=3.4 protSrv=2.2 fatSrv=3.1
+      cats: ['Eggs', 'Leafy greens', 'Extracts & essences', 'Salt & seasonings', 'Ground spices', 'Peppers & nightshades', 'Dressings & dips', 'Pickled vegetables']
+[118] corpus-titled-mexican-corn-bread | Mexican cornbread (variant) | Tex-Mex | serv=320 plate=670 | cal100=160.6 calSrv=513.8 carbSrv=61.7 protSrv=21.5 fatSrv=21.5
+      cats: ['Eggs', 'Peppers & nightshades', 'Starchy vegetables', 'Aged cheese', 'Milk', 'Other vegetables', 'Oils', 'Salt & seasonings', 'Baking ingredients', 'Flours']
+[119] corpus-titled-stuffed-peppers | Stuffed peppers | - | serv=260 plate=301 | cal100=129.1 calSrv=335.6 carbSrv=32.3 protSrv=24.8 fatSrv=12.2
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Red meat', 'Refined grains', 'Salt & seasonings']
+[120] corpus-titled-swiss-steak | Swiss steak | American | serv=320 plate=300 | cal100=170.1 calSrv=544.4 carbSrv=40.2 protSrv=30.3 fatSrv=30.3
+      cats: ['Other vegetables', 'Peppers & nightshades', 'Salt & seasonings', 'Flours', 'Red meat', 'Oils']
+[121] corpus-titled-mexican-chicken | Mexican chicken | Tex-Mex | serv=320 plate=393 | cal100=142.2 calSrv=455.0 carbSrv=38.5 protSrv=30.3 fatSrv=20.9
+      cats: ['Poultry', 'Peppers & nightshades', 'Other vegetables', 'Mushrooms', 'Aged cheese', 'Baked snacks & pastries']
+[122] corpus-titled-asparagus-casserole | Asparagus casserole | American | serv=360 plate=287 | cal100=176.0 calSrv=633.5 carbSrv=51.4 protSrv=25.6 fatSrv=37.3
+      cats: ['Mushrooms', 'Other vegetables', 'Aged cheese', 'Eggs', 'Baked snacks & pastries', 'Cream & butter']
+[123] corpus-titled-cinnamon-rolls | Cinnamon rolls | - | serv=90 plate=366 | cal100=229.3 calSrv=206.4 carbSrv=20.9 protSrv=8.1 fatSrv=10.4
+      cats: ['Sugar & sweeteners', 'Flours', 'Ground spices', 'Baking ingredients', 'Salt & seasonings', 'Milk', 'Cream & butter', 'Eggs', 'Margarine & shortening']
+[124] corpus-titled-cornbread | Cornbread (skillet) | American | serv=320 plate=351 | cal100=221.6 calSrv=709.1 carbSrv=76.5 protSrv=29.7 fatSrv=32.8
+      cats: ['Eggs', 'Flours', 'Milk', 'Baking ingredients', 'Sugar & sweeteners', 'Salt & seasonings', 'Oils']
+[125] corpus-titled-german-potato-salad | German potato salad | German | serv=230 plate=415 | cal100=139.4 calSrv=320.6 carbSrv=42.6 protSrv=11.1 fatSrv=12.8
+      cats: ['Starchy vegetables', 'Other vegetables', 'Dressings & dips', 'Processed meat', 'Salt & seasonings', 'Sugar & sweeteners', 'Peppers & nightshades', 'Flours']
+[126] corpus-titled-oatmeal-cake | Oatmeal cake | American | serv=140 plate=173 | cal100=296.5 calSrv=415.2 carbSrv=40.1 protSrv=11.5 fatSrv=23.8
+      cats: ['Sugar & sweeteners', 'Flours', 'Eggs', 'Whole grains', 'Baking ingredients', 'Ground spices', 'Salt & seasonings', 'Margarine & shortening', 'Extracts & essences', 'Cream & butter']
+[127] corpus-titled-meatballs | Meatballs | - | serv=320 plate=634 | cal100=155.1 calSrv=496.4 carbSrv=53.0 protSrv=30.1 fatSrv=18.6
+      cats: ['Red meat', 'Other vegetables', 'Eggs', 'Salt & seasonings', 'Bread & rolls', 'Peppers & nightshades', 'Sauces', 'Fresh herbs', 'Milk']
+[128] corpus-titled-taco-casserole | Taco casserole | Tex-Mex | serv=240 plate=409 | cal100=185.3 calSrv=444.7 carbSrv=46.5 protSrv=24.1 fatSrv=18.3
+      cats: ['Red meat', 'Peppers & nightshades', 'Aged cheese', 'Other vegetables', 'Baked snacks & pastries', 'Sauces', 'Bread & rolls', 'Spice blends']
+[129] corpus-titled-mexican-dip | Mexican layer dip | Tex-Mex | serv=60 plate=483 | cal100=114.0 calSrv=68.4 carbSrv=4.7 protSrv=3.9 fatSrv=4.0
+      cats: ['Other vegetables', 'Peppers & nightshades', 'Aged cheese', 'Sauces', 'Fermented dairy', 'Pickled vegetables', 'Fresh cheese']
+[130] corpus-titled-chocolate-pound-cake | Chocolate pound cake | American | serv=140 plate=407 | cal100=248.5 calSrv=347.9 carbSrv=38.9 protSrv=12.0 fatSrv=16.6
+      cats: ['Eggs', 'Candy & desserts', 'Sugar & sweeteners', 'Flours', 'Milk', 'Extracts & essences', 'Baking ingredients', 'Margarine & shortening', 'Salt & seasonings', 'Cream & butter']
+[131] corpus-titled-biscuits | Buttermilk biscuits | Southern | serv=55 plate=301 | cal100=223.1 calSrv=122.7 carbSrv=15.2 protSrv=4.7 fatSrv=5.0
+      cats: ['Flours', 'Milk', 'Baking ingredients', 'Margarine & shortening', 'Salt & seasonings', 'Sugar & sweeteners']
+[132] corpus-titled-sauerkraut-salad | Sauerkraut salad | German-American | serv=230 plate=248 | cal100=120.2 calSrv=276.5 carbSrv=22.6 protSrv=4.1 fatSrv=20.3
+      cats: ['Other vegetables', 'Sugar & sweeteners', 'Peppers & nightshades', 'Pickled vegetables', 'Dressings & dips', 'Oils']
+[133] corpus-titled-turtle-cake | Turtle cake | American | serv=140 plate=336 | cal100=270.9 calSrv=379.3 carbSrv=36.3 protSrv=11.2 fatSrv=22.0
+      cats: ['Candy & desserts', 'Milk', 'Nuts', 'Cream & butter', 'Margarine & shortening']
+[134] corpus-titled-shrimp-creole | Shrimp creole | Creole | serv=320 plate=383.5 | cal100=149.0 calSrv=476.7 carbSrv=59.9 protSrv=23.9 fatSrv=17.0
+      cats: ['Peppers & nightshades', 'Other vegetables', 'Shellfish', 'Salt & seasonings', 'Ground spices', 'Fresh herbs', 'Refined grains', 'Dried herbs', 'Sauces', 'Oils', 'Flours', 'Sugar & sweeteners']
+[135] corpus-titled-sausage-casserole | Sausage casserole | American | serv=360 plate=658 | cal100=151.5 calSrv=545.5 carbSrv=53.0 protSrv=29.6 fatSrv=24.7
+      cats: ['Processed meat', 'Other vegetables', 'Peppers & nightshades', 'Refined grains', 'Aged cheese', 'Milk', 'Mushrooms', 'Eggs']
+[136] corpus-titled-enchilada-casserole | Enchilada casserole | Tex-Mex | serv=240 plate=523 | cal100=151.9 calSrv=364.5 carbSrv=26.5 protSrv=28.5 fatSrv=16.2
+      cats: ['Other vegetables', 'Red meat', 'Aged cheese', 'Bread & rolls', 'Sauces', 'Peppers & nightshades', 'Poultry', 'Mushrooms']
+[137] corpus-titled-spinach-balls | Spinach balls | American | serv=60 plate=364 | cal100=172.5 calSrv=103.5 carbSrv=8.3 protSrv=3.8 fatSrv=6.3
+      cats: ['Eggs', 'Aged cheese', 'Leafy greens', 'Bread & rolls', 'Other vegetables', 'Cream & butter', 'Peppers & nightshades', 'Fresh herbs', 'Margarine & shortening']
+[138] corpus-titled-fried-rice | Fried rice | Chinese-American | serv=320 plate=365 | cal100=167.3 calSrv=535.2 carbSrv=39.6 protSrv=21.8 fatSrv=33.0
+      cats: ['Other vegetables', 'Refined grains', 'Sauces', 'Eggs', 'Oils', 'Peppers & nightshades', 'Processed meat', 'Salt & seasonings']
+[139] corpus-titled-chess-pie | Chess pie | Southern | serv=140 plate=384 | cal100=228.3 calSrv=319.7 carbSrv=29.4 protSrv=11.8 fatSrv=17.4
+      cats: ['Sugar & sweeteners', 'Eggs', 'Extracts & essences', 'Cream & butter', 'Flours', 'Milk', 'Dressings & dips', 'Margarine & shortening']
+[140] corpus-titled-fruit-cocktail-cake | Fruit cocktail cake | American | serv=320 plate=137 | cal100=300.9 calSrv=962.8 carbSrv=142.3 protSrv=30.3 fatSrv=33.4
+      cats: ['Sugar & sweeteners', 'Eggs', 'Flours', 'Baking ingredients', 'Candy & desserts', 'Salt & seasonings']
+[141] corpus-titled-spinach-salad | Spinach salad | American | serv=230 plate=269 | cal100=193.2 calSrv=444.3 carbSrv=15.8 protSrv=17.5 fatSrv=35.2
+      cats: ['Leafy greens', 'Other vegetables', 'Processed meat', 'Dressings & dips', 'Eggs', 'Sugar & sweeteners', 'Oils', 'Salt & seasonings']
+[142] corpus-titled-strawberry-bread | Strawberry bread | American | serv=90 plate=280 | cal100=208.8 calSrv=187.9 carbSrv=18.1 protSrv=5.1 fatSrv=11.5
+      cats: ['Flours', 'Eggs', 'Sugar & sweeteners', 'Berries', 'Baking ingredients', 'Salt & seasonings', 'Oils', 'Ground spices', 'Nuts']
+[143] corpus-titled-earthquake-cake | Earthquake cake | American | serv=140 plate=295 | cal100=260.3 calSrv=364.4 carbSrv=31.6 protSrv=7.5 fatSrv=24.8
+      cats: ['Fresh cheese', 'Sugar & sweeteners', 'Tropical fruits', 'Candy & desserts', 'Nuts', 'Margarine & shortening', 'Cream & butter']
+[144] corpus-titled-pineapple-casserole | Pineapple casserole | Southern | serv=360 plate=270 | cal100=257.2 calSrv=925.9 carbSrv=103.2 protSrv=19.7 fatSrv=50.7
+      cats: ['Tropical fruits', 'Sugar & sweeteners', 'Flours', 'Aged cheese', 'Baked snacks & pastries', 'Cream & butter', 'Margarine & shortening']
+[145] corpus-titled-corn-chowder | Corn chowder | American | serv=350 plate=850 | cal100=124.1 calSrv=434.3 carbSrv=49.0 protSrv=19.4 fatSrv=18.6
+      cats: ['Starchy vegetables', 'Other vegetables', 'Milk', 'Salt & seasonings', 'Peppers & nightshades', 'Processed meat', 'Cream & butter', 'Prepared soups & broths']
+[146] corpus-titled-spinach-casserole | Spinach casserole | - | serv=360 plate=263 | cal100=175.5 calSrv=631.8 carbSrv=19.3 protSrv=34.1 fatSrv=47.4
+      cats: ['Leafy greens', 'Other vegetables', 'Aged cheese', 'Fresh cheese', 'Eggs', 'Cream & butter', 'Salt & seasonings']
+[147] corpus-titled-banana-cake | Banana cake | American | serv=140 plate=507 | cal100=188.3 calSrv=263.6 carbSrv=30.4 protSrv=9.6 fatSrv=12.1
+      cats: ['Tropical fruits', 'Eggs', 'Sugar & sweeteners', 'Baking ingredients', 'Flours', 'Milk', 'Extracts & essences', 'Salt & seasonings', 'Margarine & shortening', 'Cream & butter']
+[148] corpus-titled-breakfast-pizza | Breakfast pizza | American | serv=260 plate=679 | cal100=190.9 calSrv=496.4 carbSrv=57.4 protSrv=21.9 fatSrv=20.3
+      cats: ['Eggs', 'Aged cheese', 'Milk', 'Processed meat', 'Baked snacks & pastries', 'Peppers & nightshades', 'Salt & seasonings', 'Starchy vegetables', 'Bread & rolls']
+[149] corpus-titled-pumpkin-cake | Pumpkin cake | American | serv=140 plate=237 | cal100=211.1 calSrv=295.6 carbSrv=38.1 protSrv=8.0 fatSrv=13.3
+      cats: ['Eggs', 'Starchy vegetables', 'Sugar & sweeteners', 'Ground spices', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Oils']
+
+# end — 150 meals

@@ -1,0 +1,750 @@
+  1. freq=   96  id=corpus-titled-venison-roast
+     name: 'Venison Roast'
+     cats: ['Other vegetables', 'Red meat', 'Salt & seasonings', 'Peppers & nightshades', 'Sauces', 'Starchy vegetables', 'Processed meat']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+  2. freq=   96  id=corpus-titled-old-fashioned-sugar-cookies
+     name: 'Old Fashioned Sugar Cookies'
+     cats: ['Sugar & sweeteners', 'Flours', 'Eggs', 'Baking ingredients', 'Extracts & essences', 'Salt & seasonings', 'Margarine & shortening', 'Cream & butter', 'Milk']
+     tags: ['dessert']  contains: []  sg: 320
+
+  3. freq=   96  id=corpus-titled-english-muffins
+     name: 'English Muffins'
+     cats: ['Flours', 'Baking ingredients', 'Salt & seasonings', 'Sugar & sweeteners', 'Milk', 'Cream & butter', 'Eggs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+  4. freq=   96  id=corpus-titled-dilly-bread
+     name: 'Dilly Bread'
+     cats: ['Fresh herbs', 'Baking ingredients', 'Eggs', 'Other vegetables', 'Sugar & sweeteners', 'Flours', 'Salt & seasonings', 'Fresh cheese', 'Cream & butter']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+  5. freq=   96  id=corpus-titled-four-layer-dessert
+     name: 'Four Layer Dessert'
+     cats: ['Flours', 'Sugar & sweeteners', 'Fresh cheese', 'Margarine & shortening', 'Milk', 'Candy & desserts', 'Nuts', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 160
+
+  6. freq=   96  id=corpus-titled-peanut-butter-chocolate-chip-cookies
+     name: 'Peanut Butter Chocolate Chip Cookies'
+     cats: ['Eggs', 'Candy & desserts', 'Sugar & sweeteners', 'Baking ingredients', 'Flours', 'Nut butters', 'Extracts & essences', 'Salt & seasonings', 'Cream & butter', 'Margarine & shortening', 'Nuts']
+     tags: ['dessert']  contains: []  sg: 60
+
+  7. freq=   96  id=corpus-titled-spritz-cookies
+     name: 'Spritz Cookies'
+     cats: ['Flours', 'Sugar & sweeteners', 'Eggs', 'Extracts & essences', 'Cream & butter', 'Salt & seasonings', 'Baking ingredients']
+     tags: ['dessert']  contains: []  sg: 320
+
+  8. freq=   96  id=corpus-titled-cherries-in-the-snow
+     name: 'Cherries In The Snow'
+     cats: ['Temperate fruits', 'Sugar & sweeteners', 'Fresh cheese', 'Prepared mixes', 'Extracts & essences', 'Milk', 'Cream & butter']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+  9. freq=   96  id=corpus-titled-cheese-strata
+     name: 'Cheese Strata'
+     cats: ['Eggs', 'Milk', 'Bread & rolls', 'Salt & seasonings', 'Aged cheese', 'Leafy greens', 'Other vegetables', 'Processed meat']
+     tags: ['dinner', 'lunch']  contains: []  sg: 360
+
+ 10. freq=   96  id=corpus-titled-croutons
+     name: 'Croutons'
+     cats: ['Bread & rolls', 'Other vegetables', 'Oils', 'Cream & butter', 'Fresh herbs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 11. freq=   96  id=corpus-titled-macaroni-cheese
+     name: 'Macaroni & Cheese'
+     cats: ['Refined grains', 'Milk', 'Aged cheese', 'Salt & seasonings', 'Cream & butter', 'Peppers & nightshades', 'Flours']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 12. freq=   95  id=corpus-titled-chocolate-eclair-dessert
+     name: 'Chocolate Eclair Dessert'
+     cats: ['Baked snacks & pastries', 'Milk', 'Candy & desserts']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 13. freq=   95  id=corpus-titled-banana-nut-muffins
+     name: 'Banana Nut Muffins'
+     cats: ['Tropical fruits', 'Sugar & sweeteners', 'Baking ingredients', 'Eggs', 'Flours', 'Salt & seasonings', 'Nuts', 'Milk', 'Oils', 'Extracts & essences', 'Cream & butter']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 14. freq=   95  id=corpus-titled-corned-beef-salad
+     name: 'Corned Beef Salad'
+     cats: ['Other vegetables', 'Processed meat', 'Citrus', 'Eggs', 'Extracts & essences', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: []  sg: 230
+
+ 15. freq=   95  id=corpus-titled-fried-apples
+     name: 'Fried Apples'
+     cats: ['Temperate fruits', 'Sugar & sweeteners', 'Ground spices', 'Cream & butter']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 16. freq=   95  id=corpus-titled-company-potatoes
+     name: 'Company Potatoes'
+     cats: ['Starchy vegetables', 'Fermented dairy', 'Other vegetables', 'Aged cheese', 'Cream & butter', 'Salt & seasonings', 'Poultry', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 17. freq=   95  id=corpus-titled-collard-greens
+     name: 'Collard Greens'
+     cats: ['Leafy greens', 'Salt & seasonings', 'Peppers & nightshades', 'Processed meat', 'Other vegetables', 'Sugar & sweeteners']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 18. freq=   95  id=corpus-titled-pecan-puffs
+     name: 'Pecan Puffs'
+     cats: ['Sugar & sweeteners', 'Nuts', 'Extracts & essences', 'Flours', 'Cream & butter']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 19. freq=   95  id=corpus-titled-drop-sugar-cookies
+     name: 'Drop Sugar Cookies'
+     cats: ['Flours', 'Sugar & sweeteners', 'Eggs', 'Baking ingredients', 'Extracts & essences', 'Salt & seasonings', 'Margarine & shortening', 'Milk', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 20. freq=   95  id=corpus-titled-cauliflower-casserole
+     name: 'Cauliflower Casserole'
+     cats: ['Cruciferous vegetables', 'Aged cheese', 'Cream & butter', 'Salt & seasonings', 'Peppers & nightshades', 'Other vegetables', 'Bread & rolls']
+     tags: ['dinner', 'lunch']  contains: []  sg: 360
+
+ 21. freq=   95  id=corpus-titled-s-mores
+     name: "S'Mores"
+     cats: ['Candy & desserts', 'Baked snacks & pastries']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 22. freq=   95  id=corpus-titled-beet-pickles
+     name: 'Beet Pickles'
+     cats: ['Sugar & sweeteners', 'Dressings & dips', 'Starchy vegetables', 'Whole spices', 'Salt & seasonings', 'Ground spices']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 23. freq=   95  id=corpus-titled-chicken-fricassee
+     name: 'Chicken Fricassee'
+     cats: ['Other vegetables', 'Poultry', 'Salt & seasonings', 'Flours', 'Peppers & nightshades', 'Fresh herbs', 'Oils', 'Mushrooms', 'Cream & butter', 'Starchy vegetables', 'Alcoholic beverages']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 24. freq=   95  id=corpus-titled-green-tomato-pie
+     name: 'Green Tomato Pie'
+     cats: ['Peppers & nightshades', 'Sugar & sweeteners', 'Ground spices', 'Flours', 'Salt & seasonings', 'Cream & butter', 'Citrus', 'Baked snacks & pastries', 'Dressings & dips']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 25. freq=   95  id=corpus-titled-blackberry-jam-cake
+     name: 'Blackberry Jam Cake'
+     cats: ['Eggs', 'Flours', 'Sugar & sweeteners', 'Berries', 'Baking ingredients', 'Ground spices', 'Milk', 'Whole spices', 'Cream & butter', 'Salt & seasonings', 'Nuts']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 26. freq=   95  id=corpus-titled-cherry-pudding
+     name: 'Cherry Pudding'
+     cats: ['Sugar & sweeteners', 'Temperate fruits', 'Flours', 'Baking ingredients', 'Milk', 'Salt & seasonings', 'Eggs', 'Cream & butter', 'Margarine & shortening']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 27. freq=   95  id=corpus-titled-enchilada-sauce
+     name: 'Enchilada Sauce'
+     cats: ['Ground spices', 'Peppers & nightshades', 'Other vegetables', 'Salt & seasonings', 'Oils', 'Fresh herbs', 'Flours', 'Poultry']
+     tags: ['dinner', 'lunch']  contains: []  sg: 240
+
+ 28. freq=   94  id=corpus-titled-yogurt-pie
+     name: 'Yogurt Pie'
+     cats: ['Baked snacks & pastries', 'Yogurt']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 29. freq=   94  id=corpus-titled-sausage-dip
+     name: 'Sausage Dip'
+     cats: ['Processed meat', 'Peppers & nightshades', 'Processed cheese', 'Fresh cheese', 'Other vegetables']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 30. freq=   94  id=corpus-titled-never-fail-fudge
+     name: 'Never Fail Fudge'
+     cats: ['Sugar & sweeteners', 'Candy & desserts', 'Milk', 'Extracts & essences', 'Cream & butter', 'Margarine & shortening', 'Salt & seasonings']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 31. freq=   94  id=corpus-titled-lace-cookies
+     name: 'Lace Cookies'
+     cats: ['Sugar & sweeteners', 'Cream & butter', 'Flours', 'Extracts & essences', 'Eggs', 'Whole grains', 'Salt & seasonings', 'Baking ingredients', 'Nuts']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 32. freq=   94  id=corpus-titled-fried-corn
+     name: 'Fried Corn'
+     cats: ['Starchy vegetables', 'Salt & seasonings', 'Processed meat', 'Cream & butter', 'Peppers & nightshades', 'Sugar & sweeteners']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 33. freq=   94  id=corpus-titled-apple-pudding
+     name: 'Apple Pudding'
+     cats: ['Sugar & sweeteners', 'Temperate fruits', 'Flours', 'Ground spices', 'Baking ingredients', 'Eggs', 'Salt & seasonings', 'Cream & butter', 'Margarine & shortening']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 34. freq=   94  id=corpus-titled-chocolate-cupcakes
+     name: 'Chocolate Cupcakes'
+     cats: ['Candy & desserts', 'Sugar & sweeteners', 'Flours', 'Eggs', 'Baking ingredients', 'Extracts & essences', 'Salt & seasonings', 'Milk', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 35. freq=   94  id=corpus-titled-banana-oatmeal-cookies
+     name: 'Banana Oatmeal Cookies'
+     cats: ['Tropical fruits', 'Whole grains', 'Sugar & sweeteners', 'Eggs', 'Baking ingredients', 'Flours', 'Ground spices', 'Salt & seasonings', 'Margarine & shortening']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 36. freq=   94  id=corpus-titled-potato-rolls
+     name: 'Potato Rolls'
+     cats: ['Baking ingredients', 'Flours', 'Starchy vegetables', 'Sugar & sweeteners', 'Salt & seasonings', 'Eggs', 'Margarine & shortening', 'Milk']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 37. freq=   94  id=corpus-titled-pork-roast
+     name: 'Pork Roast'
+     cats: ['Red meat', 'Other vegetables', 'Salt & seasonings', 'Peppers & nightshades', 'Fresh herbs', 'Sugar & sweeteners']
+     tags: ['dinner', 'lunch']  contains: ['pork']  sg: 320
+
+ 38. freq=   94  id=corpus-titled-bagels
+     name: 'Bagels'
+     cats: ['Baking ingredients', 'Salt & seasonings', 'Flours', 'Sugar & sweeteners', 'Eggs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 39. freq=   94  id=corpus-titled-cranberry-mold
+     name: 'Cranberry Mold'
+     cats: ['Berries', 'Tropical fruits', 'Temperate fruits', 'Nuts', 'Citrus', 'Other vegetables']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 40. freq=   94  id=corpus-titled-vidalia-onion-pie
+     name: 'Vidalia Onion Pie'
+     cats: ['Other vegetables', 'Eggs', 'Salt & seasonings', 'Aged cheese', 'Cream & butter', 'Baked snacks & pastries', 'Milk', 'Peppers & nightshades', 'Fermented dairy']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 41. freq=   94  id=corpus-titled-molasses-cake
+     name: 'Molasses Cake'
+     cats: ['Sugar & sweeteners', 'Flours', 'Eggs', 'Baking ingredients', 'Ground spices', 'Salt & seasonings', 'Margarine & shortening', 'Milk', 'Whole spices', 'Pickled vegetables', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 42. freq=   94  id=corpus-titled-cucumber-pickles
+     name: 'Cucumber Pickles'
+     cats: ['Dressings & dips', 'Other vegetables', 'Sugar & sweeteners', 'Salt & seasonings', 'Spice blends']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 43. freq=   94  id=corpus-titled-greek-pasta-salad
+     name: 'Greek Pasta Salad'
+     cats: ['Peppers & nightshades', 'Refined grains', 'Other vegetables', 'Pickled vegetables', 'Fresh cheese', 'Fresh herbs', 'Oils', 'Dressings & dips', 'Salt & seasonings', 'Citrus']
+     tags: ['dinner', 'lunch']  contains: []  sg: 230
+
+ 44. freq=   93  id=corpus-titled-fruitcake-cookies
+     name: 'Fruitcake Cookies'
+     cats: ['Flours', 'Dried fruits', 'Sugar & sweeteners', 'Nuts', 'Eggs', 'Temperate fruits', 'Baking ingredients', 'Tropical fruits', 'Ground spices', 'Milk', 'Cream & butter', 'Salt & seasonings', 'Margarine & shortening']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 45. freq=   93  id=corpus-titled-chocolate-chip-muffins
+     name: 'Chocolate Chip Muffins'
+     cats: ['Sugar & sweeteners', 'Eggs', 'Candy & desserts', 'Flours', 'Baking ingredients', 'Milk', 'Salt & seasonings', 'Extracts & essences', 'Cream & butter', 'Oils']
+     tags: ['dinner', 'lunch']  contains: []  sg: 60
+
+ 46. freq=   93  id=corpus-titled-sourdough-biscuits
+     name: 'Sourdough Biscuits'
+     cats: ['Flours', 'Baking ingredients', 'Salt & seasonings', 'Sugar & sweeteners', 'Milk', 'Oils']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 47. freq=   93  id=corpus-titled-pickled-peaches
+     name: 'Pickled Peaches'
+     cats: ['Dressings & dips', 'Sugar & sweeteners', 'Temperate fruits', 'Whole spices', 'Ground spices']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 48. freq=   93  id=corpus-titled-poor-man-s-steak
+     name: "Poor Man'S Steak"
+     cats: ['Red meat', 'Salt & seasonings', 'Mushrooms', 'Other vegetables', 'Baked snacks & pastries', 'Milk', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 49. freq=   93  id=corpus-titled-porcupine-balls
+     name: 'Porcupine Balls'
+     cats: ['Red meat', 'Refined grains', 'Peppers & nightshades', 'Other vegetables', 'Salt & seasonings', 'Eggs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 50. freq=   93  id=corpus-titled-broccoli-souffle
+     name: 'Broccoli Souffle'
+     cats: ['Eggs', 'Cruciferous vegetables', 'Aged cheese', 'Other vegetables', 'Extracts & essences', 'Salt & seasonings', 'Flours', 'Mushrooms', 'Cream & butter']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 51. freq=   93  id=corpus-titled-chicken-dijon
+     name: 'Chicken Dijon'
+     cats: ['Leafy greens', 'Poultry', 'Cream & butter', 'Fresh herbs', 'Other vegetables', 'Peppers & nightshades', 'Salt & seasonings', 'Flours']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 52. freq=   93  id=corpus-titled-cinnamon-buns
+     name: 'Cinnamon Buns'
+     cats: ['Sugar & sweeteners', 'Ground spices', 'Flours', 'Cream & butter', 'Salt & seasonings', 'Baking ingredients', 'Milk', 'Eggs', 'Dried fruits', 'Margarine & shortening']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 53. freq=   93  id=corpus-titled-rice-krispies-treats
+     name: 'Rice Krispies Treats'
+     cats: ['Candy & desserts', 'Refined grains', 'Margarine & shortening']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 54. freq=   93  id=corpus-titled-fruit-salad-dressing
+     name: 'Fruit Salad Dressing'
+     cats: ['Sugar & sweeteners', 'Citrus', 'Eggs', 'Tropical fruits', 'Cream & butter', 'Flours']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 55. freq=   93  id=corpus-titled-candy-cane-cookies
+     name: 'Candy Cane Cookies'
+     cats: ['Sugar & sweeteners', 'Flours', 'Extracts & essences', 'Eggs', 'Salt & seasonings', 'Baking ingredients', 'Cream & butter', 'Margarine & shortening', 'Fresh herbs']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 56. freq=   93  id=corpus-titled-caramel-cake
+     name: 'Caramel Cake'
+     cats: ['Milk', 'Sugar & sweeteners', 'Eggs', 'Extracts & essences', 'Cream & butter', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Margarine & shortening', 'Candy & desserts']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 57. freq=   93  id=corpus-titled-pumpkin-pancakes
+     name: 'Pumpkin Pancakes'
+     cats: ['Starchy vegetables', 'Eggs', 'Milk', 'Sugar & sweeteners', 'Baking ingredients', 'Ground spices', 'Flours', 'Salt & seasonings', 'Oils', 'Extracts & essences']
+     tags: ['breakfast']  contains: []  sg: 320
+
+ 58. freq=   93  id=corpus-titled-creamy-chicken-enchiladas
+     name: 'Creamy Chicken Enchiladas'
+     cats: ['Poultry', 'Bread & rolls', 'Peppers & nightshades', 'Fresh cheese', 'Aged cheese', 'Other vegetables', 'Sauces', 'Fermented dairy', 'Cream & butter', 'Ground spices', 'Milk', 'Salt & seasonings']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 59. freq=   93  id=corpus-titled-black-beans-and-rice
+     name: 'Black Beans And Rice'
+     cats: ['Other vegetables', 'Refined grains', 'Peppers & nightshades', 'Oils', 'Fresh herbs', 'Ground spices', 'Salt & seasonings', 'Dressings & dips']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 60. freq=   92  id=corpus-titled-spice-tea
+     name: 'Spice Tea'
+     cats: ['Sugar & sweeteners', 'Whole spices', 'Ground spices', 'Citrus', 'Coffee & tea']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 61. freq=   92  id=corpus-titled-no-bake-chocolate-cookies
+     name: 'No Bake Chocolate Cookies'
+     cats: ['Sugar & sweeteners', 'Candy & desserts', 'Milk', 'Whole grains', 'Extracts & essences', 'Nut butters', 'Margarine & shortening', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 360
+
+ 62. freq=   92  id=corpus-titled-oven-fried-potatoes
+     name: 'Oven Fried Potatoes'
+     cats: ['Starchy vegetables', 'Salt & seasonings', 'Oils', 'Peppers & nightshades', 'Ground spices', 'Aged cheese']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 63. freq=   92  id=corpus-titled-layered-taco-dip
+     name: 'Layered Taco Dip'
+     cats: ['Other vegetables', 'Peppers & nightshades', 'Fermented dairy', 'Aged cheese', 'Pickled vegetables', 'Spice blends', 'Sauces']
+     tags: ['dinner', 'lunch']  contains: []  sg: 240
+
+ 64. freq=   92  id=corpus-titled-sour-cream-coconut-cake
+     name: 'Sour Cream Coconut Cake'
+     cats: ['Fermented dairy', 'Sugar & sweeteners', 'Tropical fruits', 'Prepared mixes', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 65. freq=   92  id=corpus-titled-cherry-cake
+     name: 'Cherry Cake'
+     cats: ['Temperate fruits', 'Eggs', 'Sugar & sweeteners', 'Flours', 'Baking ingredients', 'Extracts & essences', 'Prepared mixes', 'Cream & butter', 'Milk', 'Salt & seasonings', 'Margarine & shortening']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 66. freq=   92  id=corpus-titled-zucchini-lasagna
+     name: 'Zucchini Lasagna'
+     cats: ['Other vegetables', 'Fresh cheese', 'Fresh herbs', 'Peppers & nightshades', 'Salt & seasonings', 'Aged cheese', 'Eggs', 'Red meat', 'Flours']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 67. freq=   92  id=corpus-titled-pineapple-pound-cake
+     name: 'Pineapple Pound Cake'
+     cats: ['Tropical fruits', 'Eggs', 'Sugar & sweeteners', 'Flours', 'Extracts & essences', 'Margarine & shortening', 'Baking ingredients', 'Milk', 'Cream & butter', 'Salt & seasonings']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 68. freq=   92  id=corpus-titled-chewy-chocolate-cookies
+     name: 'Chewy Chocolate Cookies'
+     cats: ['Candy & desserts', 'Eggs', 'Sugar & sweeteners', 'Extracts & essences', 'Flours', 'Baking ingredients', 'Salt & seasonings', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 320
+
+ 69. freq=   92  id=corpus-titled-rhubarb-bread
+     name: 'Rhubarb Bread'
+     cats: ['Sugar & sweeteners', 'Flours', 'Other vegetables', 'Eggs', 'Baking ingredients', 'Salt & seasonings', 'Milk', 'Extracts & essences', 'Oils']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 70. freq=   92  id=corpus-titled-english-pea-salad
+     name: 'English Pea Salad'
+     cats: ['Legumes', 'Other vegetables', 'Peppers & nightshades', 'Extracts & essences', 'Eggs', 'Salt & seasonings', 'Pickled vegetables', 'Aged cheese']
+     tags: ['dinner', 'lunch']  contains: []  sg: 230
+
+ 71. freq=   92  id=corpus-titled-pecan-balls
+     name: 'Pecan Balls'
+     cats: ['Nuts', 'Sugar & sweeteners', 'Flours', 'Extracts & essences', 'Cream & butter', 'Salt & seasonings']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 72. freq=   92  id=corpus-titled-raspberry-salad
+     name: 'Raspberry Salad'
+     cats: ['Berries', 'Tropical fruits', 'Temperate fruits']
+     tags: ['dinner', 'lunch']  contains: []  sg: 230
+
+ 73. freq=   92  id=corpus-titled-snack-mix
+     name: 'Snack Mix'
+     cats: ['Nuts', 'Refined grains', 'Baked snacks & pastries']
+     tags: ['snack']  contains: []  sg: 60
+
+ 74. freq=   92  id=corpus-titled-cream-of-tomato-soup
+     name: 'Cream Of Tomato Soup'
+     cats: ['Peppers & nightshades', 'Other vegetables', 'Salt & seasonings', 'Cream & butter', 'Flours', 'Sugar & sweeteners', 'Milk', 'Fresh herbs', 'Dried herbs', 'Prepared soups & broths']
+     tags: ['dinner', 'lunch']  contains: []  sg: 350
+
+ 75. freq=   91  id=corpus-titled-brownie-pie
+     name: 'Brownie Pie'
+     cats: ['Candy & desserts', 'Eggs', 'Sugar & sweeteners', 'Extracts & essences', 'Flours', 'Cream & butter', 'Nuts', 'Salt & seasonings', 'Margarine & shortening']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 76. freq=   91  id=corpus-titled-zucchini-muffins
+     name: 'Zucchini Muffins'
+     cats: ['Other vegetables', 'Eggs', 'Baking ingredients', 'Flours', 'Sugar & sweeteners', 'Salt & seasonings', 'Ground spices', 'Oils', 'Extracts & essences', 'Nuts']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 77. freq=   91  id=corpus-titled-reuben-dip
+     name: 'Reuben Dip'
+     cats: ['Aged cheese', 'Pickled vegetables', 'Red meat', 'Extracts & essences', 'Fresh cheese', 'Processed meat', 'Fermented dairy']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 78. freq=   91  id=corpus-titled-chili-rellenos
+     name: 'Chili Rellenos'
+     cats: ['Peppers & nightshades', 'Eggs', 'Flours', 'Aged cheese', 'Milk', 'Salt & seasonings']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 79. freq=   91  id=corpus-titled-chicken-lasagna
+     name: 'Chicken Lasagna'
+     cats: ['Poultry', 'Refined grains', 'Fresh cheese', 'Aged cheese', 'Other vegetables', 'Mushrooms', 'Peppers & nightshades', 'Fresh herbs', 'Milk', 'Salt & seasonings', 'Cream & butter']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 80. freq=   91  id=corpus-titled-stuffed-potatoes
+     name: 'Stuffed Potatoes'
+     cats: ['Starchy vegetables', 'Aged cheese', 'Salt & seasonings', 'Other vegetables', 'Peppers & nightshades', 'Cream & butter', 'Fermented dairy', 'Processed meat', 'Fresh herbs', 'Milk']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 81. freq=   91  id=corpus-titled-chocolate-peanut-butter-pie
+     name: 'Chocolate Peanut Butter Pie'
+     cats: ['Candy & desserts', 'Nut butters', 'Sugar & sweeteners', 'Milk', 'Cream & butter', 'Baked snacks & pastries', 'Extracts & essences']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 82. freq=   91  id=corpus-titled-cream-cheese-cake
+     name: 'Cream Cheese Cake'
+     cats: ['Sugar & sweeteners', 'Fresh cheese', 'Eggs', 'Extracts & essences', 'Cream & butter', 'Flours', 'Margarine & shortening']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 83. freq=   91  id=corpus-titled-pumpkin-cake-roll
+     name: 'Pumpkin Cake Roll'
+     cats: ['Flours', 'Sugar & sweeteners', 'Eggs', 'Starchy vegetables', 'Ground spices', 'Baking ingredients', 'Salt & seasonings', 'Citrus', 'Pickled vegetables', 'Fresh cheese', 'Extracts & essences']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 84. freq=   91  id=corpus-titled-party-meatballs
+     name: 'Party Meatballs'
+     cats: ['Sauces', 'Red meat', 'Other vegetables', 'Eggs', 'Salt & seasonings', 'Bread & rolls', 'Peppers & nightshades', 'Temperate fruits', 'Milk']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 85. freq=   91  id=corpus-titled-seven-up-cake
+     name: 'Seven-Up Cake'
+     cats: ['Eggs', 'Citrus', 'Oils', 'Sugar & sweeteners', 'Flours', 'Tropical fruits']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 86. freq=   91  id=corpus-titled-porcupines
+     name: 'Porcupines'
+     cats: ['Refined grains', 'Red meat', 'Peppers & nightshades', 'Salt & seasonings', 'Other vegetables', 'Eggs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 87. freq=   91  id=corpus-titled-margarita
+     name: 'Margarita'
+     cats: ['Citrus', 'Alcoholic beverages', 'Salt & seasonings', 'Sugar & sweeteners']
+     tags: ['snack']  contains: []  sg: 260
+
+ 88. freq=   90  id=corpus-titled-scottish-shortbread
+     name: 'Scottish Shortbread'
+     cats: ['Cream & butter', 'Sugar & sweeteners', 'Flours']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+ 89. freq=   90  id=corpus-titled-london-broil
+     name: 'London Broil'
+     cats: ['Other vegetables', 'Red meat', 'Oils', 'Sauces', 'Salt & seasonings', 'Peppers & nightshades', 'Citrus']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 90. freq=   90  id=corpus-titled-taco-pizza
+     name: 'Taco Pizza'
+     cats: ['Peppers & nightshades', 'Red meat', 'Aged cheese', 'Other vegetables', 'Sauces', 'Bread & rolls', 'Leafy greens', 'Fermented dairy', 'Pickled vegetables', 'Spice blends']
+     tags: ['dinner', 'lunch']  contains: []  sg: 240
+
+ 91. freq=   90  id=corpus-titled-potato-cakes
+     name: 'Potato Cakes'
+     cats: ['Starchy vegetables', 'Flours', 'Eggs', 'Other vegetables', 'Salt & seasonings']
+     tags: ['dessert']  contains: []  sg: 260
+
+ 92. freq=   90  id=corpus-titled-peanut-butter-bread
+     name: 'Peanut Butter Bread'
+     cats: ['Baking ingredients', 'Sugar & sweeteners', 'Flours', 'Milk', 'Salt & seasonings', 'Nut butters', 'Eggs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 90
+
+ 93. freq=   90  id=corpus-titled-golden-punch
+     name: 'Golden Punch'
+     cats: ['Tropical fruits', 'Citrus', 'Sugar & sweeteners', 'Pickled vegetables', 'Juices']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 94. freq=   90  id=corpus-titled-chicken-teriyaki
+     name: 'Chicken Teriyaki'
+     cats: ['Sauces', 'Poultry', 'Sugar & sweeteners', 'Other vegetables', 'Oils', 'Pickled vegetables']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+ 95. freq=   90  id=corpus-titled-italian-vegetable-soup
+     name: 'Italian Vegetable Soup'
+     cats: ['Other vegetables', 'Peppers & nightshades', 'Fresh herbs', 'Starchy vegetables', 'Red meat', 'Refined grains', 'Salt & seasonings', 'Legumes', 'Leafy greens', 'Aged cheese', 'Prepared soups & broths']
+     tags: ['dinner', 'lunch']  contains: []  sg: 350
+
+ 96. freq=   90  id=corpus-titled-lemon-pudding-cake
+     name: 'Lemon Pudding Cake'
+     cats: ['Citrus', 'Eggs', 'Sugar & sweeteners', 'Milk', 'Flours', 'Salt & seasonings', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 97. freq=   90  id=corpus-titled-pretzels
+     name: 'Pretzels'
+     cats: ['Salt & seasonings', 'Flours', 'Baking ingredients', 'Sugar & sweeteners', 'Eggs']
+     tags: ['snack']  contains: []  sg: 260
+
+ 98. freq=   90  id=corpus-titled-sad-cake
+     name: 'Sad Cake'
+     cats: ['Sugar & sweeteners', 'Eggs', 'Extracts & essences', 'Tropical fruits', 'Nuts', 'Oils']
+     tags: ['dessert']  contains: []  sg: 140
+
+ 99. freq=   90  id=corpus-titled-chow-mein
+     name: 'Chow Mein'
+     cats: ['Other vegetables', 'Sauces', 'Refined grains', 'Red meat', 'Mushrooms', 'Poultry', 'Salt & seasonings', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+100. freq=   90  id=corpus-titled-yeast-bread
+     name: 'Yeast Bread'
+     cats: ['Baking ingredients', 'Sugar & sweeteners', 'Flours', 'Salt & seasonings', 'Margarine & shortening', 'Milk', 'Eggs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+101. freq=   90  id=corpus-titled-fruitcake
+     name: 'Fruitcake'
+     cats: ['Eggs', 'Flours', 'Nuts', 'Dried fruits', 'Temperate fruits', 'Sugar & sweeteners', 'Baking ingredients', 'Tropical fruits', 'Cream & butter', 'Salt & seasonings', 'Extracts & essences', 'Ground spices', 'Citrus', 'Whole spices']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+102. freq=   90  id=corpus-titled-chinese-fried-rice
+     name: 'Chinese Fried Rice'
+     cats: ['Other vegetables', 'Eggs', 'Sauces', 'Refined grains', 'Oils', 'Salt & seasonings', 'Processed meat', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+103. freq=   90  id=corpus-titled-pinwheels
+     name: 'Pinwheels'
+     cats: ['Fresh cheese', 'Other vegetables', 'Bread & rolls', 'Pickled vegetables', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+104. freq=   90  id=corpus-titled-green-tomato-pickles
+     name: 'Green Tomato Pickles'
+     cats: ['Peppers & nightshades', 'Dressings & dips', 'Sugar & sweeteners', 'Other vegetables', 'Salt & seasonings', 'Ground spices']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+105. freq=   90  id=corpus-titled-spiced-tea-mix
+     name: 'Spiced Tea Mix'
+     cats: ['Ground spices', 'Whole spices', 'Sugar & sweeteners', 'Coffee & tea', 'Citrus', 'Juices']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+106. freq=   90  id=corpus-titled-popsicles
+     name: 'Popsicles'
+     cats: ['Sugar & sweeteners', 'Candy & desserts']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+107. freq=   90  id=corpus-titled-potato-dumplings
+     name: 'Potato Dumplings'
+     cats: ['Starchy vegetables', 'Flours', 'Eggs', 'Salt & seasonings', 'Bread & rolls']
+     tags: ['dinner', 'lunch']  contains: []  sg: 230
+
+108. freq=   90  id=corpus-titled-candied-pecans
+     name: 'Candied Pecans'
+     cats: ['Sugar & sweeteners', 'Nuts', 'Ground spices', 'Salt & seasonings', 'Eggs', 'Extracts & essences']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+109. freq=   90  id=corpus-titled-cheese-danish
+     name: 'Cheese Danish'
+     cats: ['Fresh cheese', 'Sugar & sweeteners', 'Baked snacks & pastries', 'Extracts & essences', 'Eggs', 'Citrus']
+     tags: ['breakfast']  contains: []  sg: 320
+
+110. freq=   89  id=corpus-titled-s-meat-loaf
+     name: 'S Meat Loaf'
+     cats: ['Other vegetables', 'Eggs', 'Red meat', 'Salt & seasonings', 'Peppers & nightshades', 'Sauces', 'Bread & rolls', 'Baked snacks & pastries', 'Milk']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+111. freq=   89  id=corpus-titled-italian-spaghetti-sauce
+     name: 'Italian Spaghetti Sauce'
+     cats: ['Peppers & nightshades', 'Other vegetables', 'Fresh herbs', 'Salt & seasonings', 'Red meat', 'Oils', 'Sugar & sweeteners', 'Mushrooms', 'Dried herbs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+112. freq=   89  id=corpus-titled-cocoa-mix
+     name: 'Cocoa Mix'
+     cats: ['Sugar & sweeteners', 'Milk', 'Candy & desserts', 'Coffee & tea', 'Salt & seasonings']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+113. freq=   89  id=corpus-titled-pumpkin-chocolate-chip-cookies
+     name: 'Pumpkin Chocolate Chip Cookies'
+     cats: ['Baking ingredients', 'Candy & desserts', 'Flours', 'Sugar & sweeteners', 'Starchy vegetables', 'Ground spices', 'Eggs', 'Extracts & essences', 'Salt & seasonings', 'Cream & butter', 'Oils']
+     tags: ['dessert']  contains: []  sg: 60
+
+114. freq=   89  id=corpus-titled-stuffed-baked-potatoes
+     name: 'Stuffed Baked Potatoes'
+     cats: ['Starchy vegetables', 'Salt & seasonings', 'Aged cheese', 'Cream & butter', 'Other vegetables', 'Peppers & nightshades', 'Fermented dairy', 'Milk', 'Fresh herbs', 'Ground spices']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+115. freq=   89  id=corpus-titled-oreo-cookie-cake
+     name: 'Oreo Cookie Cake'
+     cats: ['Candy & desserts', 'Fresh cheese', 'Sugar & sweeteners', 'Margarine & shortening', 'Cream & butter', 'Milk']
+     tags: ['dessert']  contains: []  sg: 140
+
+116. freq=   89  id=corpus-titled-potato-latkes
+     name: 'Potato Latkes'
+     cats: ['Starchy vegetables', 'Other vegetables', 'Eggs', 'Salt & seasonings', 'Flours', 'Oils', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+117. freq=   89  id=corpus-titled-blondies
+     name: 'Blondies'
+     cats: ['Eggs', 'Flours', 'Sugar & sweeteners', 'Extracts & essences', 'Salt & seasonings', 'Cream & butter', 'Baking ingredients', 'Candy & desserts', 'Nuts']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+118. freq=   88  id=corpus-titled-hobo-dinner
+     name: 'Hobo Dinner'
+     cats: ['Starchy vegetables', 'Other vegetables', 'Red meat', 'Salt & seasonings']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+119. freq=   88  id=corpus-titled-salami
+     name: 'Salami'
+     cats: ['Red meat', 'Peppers & nightshades', 'Salt & seasonings', 'Ground spices', 'Sauces', 'Other vegetables']
+     tags: ['dinner', 'lunch']  contains: ['pork']  sg: 320
+
+120. freq=   88  id=corpus-titled-veggie-dip
+     name: 'Veggie Dip'
+     cats: ['Extracts & essences', 'Other vegetables', 'Fermented dairy', 'Fresh herbs']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+121. freq=   88  id=corpus-titled-orange-delight
+     name: 'Orange Delight'
+     cats: ['Citrus', 'Tropical fruits', 'Fresh cheese']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+122. freq=   88  id=corpus-titled-impossible-quiche
+     name: 'Impossible Quiche'
+     cats: ['Eggs', 'Milk', 'Aged cheese', 'Salt & seasonings', 'Peppers & nightshades', 'Processed meat', 'Other vegetables']
+     tags: ['dinner', 'lunch']  contains: []  sg: 360
+
+123. freq=   88  id=corpus-titled-coconut-balls
+     name: 'Coconut Balls'
+     cats: ['Sugar & sweeteners', 'Tropical fruits', 'Milk', 'Candy & desserts', 'Nuts', 'Cream & butter', 'Extracts & essences']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+124. freq=   88  id=corpus-titled-ham-salad
+     name: 'Ham Salad'
+     cats: ['Processed meat', 'Pickled vegetables', 'Extracts & essences', 'Other vegetables', 'Eggs', 'Leafy greens', 'Peppers & nightshades']
+     tags: ['dinner', 'lunch']  contains: ['pork']  sg: 230
+
+125. freq=   88  id=corpus-titled-sour-cream-biscuits
+     name: 'Sour Cream Biscuits'
+     cats: ['Fermented dairy', 'Flours', 'Cream & butter', 'Baking ingredients', 'Margarine & shortening']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+126. freq=   88  id=corpus-titled-sauerkraut-balls
+     name: 'Sauerkraut Balls'
+     cats: ['Pickled vegetables', 'Other vegetables', 'Eggs', 'Bread & rolls', 'Processed meat', 'Fresh herbs', 'Flours', 'Leafy greens', 'Fresh cheese', 'Milk', 'Peppers & nightshades', 'Red meat']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+127. freq=   88  id=corpus-titled-fruit-slush
+     name: 'Fruit Slush'
+     cats: ['Citrus', 'Tropical fruits', 'Sugar & sweeteners', 'Berries']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+128. freq=   88  id=corpus-titled-baked-potatoes
+     name: 'Baked Potatoes'
+     cats: ['Starchy vegetables', 'Salt & seasonings', 'Cream & butter', 'Other vegetables']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+129. freq=   88  id=corpus-titled-sandwich-spread
+     name: 'Sandwich Spread'
+     cats: ['Peppers & nightshades', 'Other vegetables', 'Dressings & dips', 'Sugar & sweeteners', 'Salt & seasonings', 'Extracts & essences', 'Leafy greens', 'Flours']
+     tags: ['dinner', 'lunch']  contains: []  sg: 240
+
+130. freq=   88  id=corpus-titled-mexican-wedding-cakes
+     name: 'Mexican Wedding Cakes'
+     cats: ['Flours', 'Sugar & sweeteners', 'Extracts & essences', 'Cream & butter', 'Salt & seasonings', 'Nuts']
+     tags: ['dessert']  contains: []  sg: 320
+
+131. freq=   88  id=corpus-titled-sausage-breakfast-casserole
+     name: 'Sausage Breakfast Casserole'
+     cats: ['Eggs', 'Aged cheese', 'Bread & rolls', 'Salt & seasonings', 'Processed meat', 'Milk', 'Leafy greens', 'Cream & butter']
+     tags: ['breakfast']  contains: []  sg: 360
+
+132. freq=   88  id=corpus-titled-oatmeal-crispies
+     name: 'Oatmeal Crispies'
+     cats: ['Sugar & sweeteners', 'Flours', 'Whole grains', 'Eggs', 'Baking ingredients', 'Extracts & essences', 'Salt & seasonings', 'Margarine & shortening', 'Nuts']
+     tags: ['breakfast']  contains: []  sg: 260
+
+133. freq=   88  id=corpus-titled-crab-bisque
+     name: 'Crab Bisque'
+     cats: ['Shellfish', 'Cream & butter', 'Other vegetables', 'Peppers & nightshades', 'Alcoholic beverages', 'Milk', 'Fresh herbs', 'Salt & seasonings', 'Flours', 'Prepared soups & broths']
+     tags: ['dinner', 'lunch']  contains: []  sg: 350
+
+134. freq=   88  id=corpus-titled-french-toast-casserole
+     name: 'French Toast Casserole'
+     cats: ['Sugar & sweeteners', 'Eggs', 'Milk', 'Bread & rolls', 'Extracts & essences', 'Ground spices', 'Cream & butter', 'Salt & seasonings']
+     tags: ['breakfast']  contains: []  sg: 200
+
+135. freq=   87  id=corpus-titled-yum-yum-salad
+     name: 'Yum Yum Salad'
+     cats: ['Tropical fruits', 'Citrus', 'Sugar & sweeteners', 'Cream & butter', 'Nuts', 'Aged cheese']
+     tags: ['dinner', 'lunch']  contains: []  sg: 230
+
+136. freq=   87  id=corpus-titled-s-pound-cake
+     name: 'S Pound Cake'
+     cats: ['Eggs', 'Sugar & sweeteners', 'Flours', 'Extracts & essences', 'Cream & butter', 'Milk', 'Margarine & shortening', 'Baking ingredients', 'Salt & seasonings', 'Citrus']
+     tags: ['dessert']  contains: []  sg: 140
+
+137. freq=   87  id=corpus-titled-mincemeat
+     name: 'Mincemeat'
+     cats: ['Sugar & sweeteners', 'Ground spices', 'Temperate fruits', 'Dried fruits', 'Whole spices', 'Red meat', 'Salt & seasonings', 'Citrus', 'Alcoholic beverages', 'Dressings & dips', 'Oils', 'Berries']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+138. freq=   87  id=corpus-titled-zucchini-cookies
+     name: 'Zucchini Cookies'
+     cats: ['Sugar & sweeteners', 'Baking ingredients', 'Flours', 'Other vegetables', 'Eggs', 'Ground spices', 'Salt & seasonings', 'Margarine & shortening', 'Dried fruits', 'Whole spices', 'Extracts & essences']
+     tags: ['dessert']  contains: []  sg: 320
+
+139. freq=   87  id=corpus-titled-hot-cocoa
+     name: 'Hot Cocoa'
+     cats: ['Milk', 'Candy & desserts', 'Sugar & sweeteners', 'Salt & seasonings', 'Extracts & essences']
+     tags: ['snack']  contains: []  sg: 320
+
+140. freq=   87  id=corpus-titled-mud-pie
+     name: 'Mud Pie'
+     cats: ['Candy & desserts', 'Cream & butter', 'Sugar & sweeteners']
+     tags: ['dessert']  contains: []  sg: 140
+
+141. freq=   87  id=corpus-titled-chili-mac
+     name: 'Chili Mac'
+     cats: ['Peppers & nightshades', 'Refined grains', 'Red meat', 'Other vegetables', 'Ground spices', 'Salt & seasonings', 'Aged cheese', 'Legumes']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+142. freq=   87  id=corpus-titled-onion-roasted-potatoes
+     name: 'Onion Roasted Potatoes'
+     cats: ['Other vegetables', 'Starchy vegetables', 'Oils']
+     tags: ['dinner', 'lunch']  contains: []  sg: 260
+
+143. freq=   87  id=corpus-titled-friendship-cake
+     name: 'Friendship Cake'
+     cats: ['Eggs', 'Sugar & sweeteners', 'Oils', 'Tropical fruits', 'Temperate fruits', 'Candy & desserts', 'Prepared mixes', 'Nuts']
+     tags: ['dessert']  contains: []  sg: 140
+
+144. freq=   87  id=corpus-titled-pineapple-sheet-cake
+     name: 'Pineapple Sheet Cake'
+     cats: ['Eggs', 'Sugar & sweeteners', 'Flours', 'Tropical fruits', 'Baking ingredients', 'Extracts & essences', 'Salt & seasonings']
+     tags: ['dessert']  contains: []  sg: 140
+
+145. freq=   87  id=corpus-titled-hot-clam-dip
+     name: 'Hot Clam Dip'
+     cats: ['Other vegetables', 'Shellfish', 'Citrus', 'Bread & rolls', 'Sauces', 'Cream & butter', 'Fresh cheese', 'Peppers & nightshades', 'Fresh herbs', 'Aged cheese']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+146. freq=   87  id=corpus-titled-cherry-chocolate-cake
+     name: 'Cherry Chocolate Cake'
+     cats: ['Temperate fruits', 'Eggs', 'Candy & desserts', 'Sugar & sweeteners']
+     tags: ['dessert']  contains: []  sg: 140
+
+147. freq=   87  id=corpus-titled-mandarin-salad
+     name: 'Mandarin Salad'
+     cats: ['Citrus', 'Other vegetables', 'Nuts', 'Sugar & sweeteners', 'Leafy greens', 'Tropical fruits', 'Dressings & dips']
+     tags: ['dinner', 'lunch']  contains: []  sg: 230
+
+148. freq=   87  id=corpus-titled-green-enchiladas
+     name: 'Green Enchiladas'
+     cats: ['Peppers & nightshades', 'Bread & rolls', 'Other vegetables', 'Poultry', 'Aged cheese', 'Red meat', 'Milk', 'Processed cheese', 'Salt & seasonings']
+     tags: ['dinner', 'lunch']  contains: []  sg: 320
+
+149. freq=   87  id=corpus-titled-cream-pie
+     name: 'Cream Pie'
+     cats: ['Sugar & sweeteners', 'Milk', 'Extracts & essences', 'Eggs', 'Salt & seasonings', 'Flours', 'Cream & butter']
+     tags: ['dessert']  contains: []  sg: 140
+
+150. freq=   87  id=corpus-titled-frozen-peanut-butter-pie
+     name: 'Frozen Peanut Butter Pie'
+     cats: ['Fresh cheese', 'Sugar & sweeteners', 'Nut butters', 'Milk', 'Baked snacks & pastries', 'Candy & desserts', 'Nuts']
+     tags: ['dessert']  contains: []  sg: 140
+

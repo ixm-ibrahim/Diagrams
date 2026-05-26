@@ -73,6 +73,11 @@ export const FOOD_GROUP_COLORS = {
 /* Phase 14: 12 food_groups in legend-display order. Dairy (cream, no hue)
  * leads, then the 11-hue rainbow at 32.7° spacing. The data-shape order is
  * in FOOD_GROUPS; this is only for legend rendering. */
+/* Display labels for the 3-channel `group_weights` vector. Distinct from
+ * FOOD_GROUPS (the 12 food-science groups) — this is the additive RGB
+ * visualization scheme: Animal=R, Plant=G, Dairy=B. */
+export const GROUP_WEIGHT_LABELS = ['Animal', 'Plant', 'Dairy'];
+
 export const FOOD_GROUPS_BY_HUE = [
   'Dairy',                // cream (no hue)
   'Fruits',               // 0°
@@ -120,6 +125,8 @@ export const FORMS = [
  *
  * Hand-assigned tags (food identity / role):
  *   breakfast        items typically eaten at the morning meal
+ *   lunch            items / meals typically eaten at midday (curated meals only — Batch 5b)
+ *   dinner           items / meals typically eaten in the evening (curated meals only — Batch 5b)
  *   snack            items typically eaten between meals (chips, nuts, jerky, etc.)
  *   dessert          items typically eaten as a sweet course
  *   condiment        flavor add-ons (sauces, mustards, vinegars, etc.)
@@ -129,10 +136,16 @@ export const FORMS = [
  *   smoked           items processed with smoke
  *   omega3-rich      salmon / mackerel / sardines / chia / flax / hemp / walnut
  *   iron-rich        liver / heart / kidney / red meat / dark leafy greens / lentils
+ *                    (NOTE: now derived from iron value ≥ 3.5 mg/100g; see NUTRIENT_TAG_RULES)
+ *
+ * lunch/dinner tags are unusual in that they only apply to whole meals
+ * (curated meals.json), not individual ingredients — most foods aren't
+ * intrinsically "lunch" or "dinner", but a meal-as-composed is.
+ * scripts/tag_meals_by_mealtime.py is the source of those tags.
  */
 export const TAGS = [
   'high-protein', 'high-fiber', 'low-cal', 'high-sodium',
-  'breakfast', 'snack', 'dessert', 'condiment', 'garnish',
+  'breakfast', 'lunch', 'dinner', 'snack', 'dessert', 'condiment', 'garnish',
   'fermented', 'cured', 'smoked',
   'omega3-rich', 'iron-rich',
 ];
@@ -141,7 +154,12 @@ export const TAGS = [
  * tags from an ingredient's actual values. Stored tags drift over time
  * (a tester correctly noticed "high-fiber" items with 0.9g fiber); we
  * recompute these at boot so the filter is always honest. Identity
- * tags (breakfast/snack/etc.) stay as curated since they're qualitative. */
+ * tags (breakfast/snack/etc.) stay as curated since they're qualitative.
+ *
+ * Batch 5: iron-rich was a hand-curated tag; now that iron is a
+ * first-class nutrient field, derive iron-rich from the actual value.
+ * Threshold: ≥ 3.5 mg/100g (FDA "high" cutoff for iron, equivalent to
+ * ≥ 20% DV per RACC for a typical serving size). */
 export const NUTRIENT_TAG_RULES = {
   'high-protein': (ing) => {
     const cals = +ing.calories || 0;
@@ -153,6 +171,7 @@ export const NUTRIENT_TAG_RULES = {
   'high-fiber':   (ing) => (+ing.fiber   || 0) >= 6,
   'low-cal':      (ing) => (+ing.calories || 0) < 100,
   'high-sodium':  (ing) => (+ing.sodium  || 0) >= 600,
+  'iron-rich':    (ing) => (+ing.iron    || 0) >= 3.5,
 };
 
 export const NUTRIENT_TAG_KEYS = Object.keys(NUTRIENT_TAG_RULES);
@@ -368,6 +387,10 @@ export const DIETS = {
       'Tropical fruits', 'Temperate fruits', 'Dried fruits',
       'Prepared mixes',
     ],
+    // Batch 14: nutrient floor catches berry-heavy parfaits and other
+    // category-permissive items that exceed real keto carb budgets.
+    // 15 g carbs / 100g of plate ≈ ≤45g per typical 300g serving.
+    nutrientMax: { carbs: 15, sugar: 8 },
   },
   paleo: {
     key: 'paleo',
@@ -376,10 +399,11 @@ export const DIETS = {
       'Whole grains', 'Refined grains', 'Bread & rolls', 'Pasta & noodles',
       'Baked snacks & pastries', 'Legumes', 'Soy products',
       'Milk', 'Yogurt', 'Aged cheese', 'Fresh cheese', 'Processed cheese',
-      'Frozen dairy', 'Cream & butter',
+      'Fermented dairy', 'Frozen dairy', 'Cream & butter',
       'Sugar & sweeteners', 'Candy & desserts', 'Jams & preserves',
       'Alcoholic beverages', 'Soft drinks', 'Prepared mixes',
       'Margarine & shortening',
+      'Processed meat',
     ],
   },
   mediterranean: {
@@ -399,7 +423,7 @@ export const DIETS = {
       'Whole grains', 'Refined grains', 'Bread & rolls', 'Pasta & noodles',
       'Baked snacks & pastries', 'Legumes', 'Soy products',
       'Milk', 'Yogurt', 'Aged cheese', 'Fresh cheese', 'Processed cheese',
-      'Frozen dairy', 'Cream & butter',
+      'Fermented dairy', 'Frozen dairy', 'Cream & butter',
       'Sugar & sweeteners', 'Candy & desserts', 'Jams & preserves',
       'Alcoholic beverages', 'Soft drinks', 'Juices',
       'Prepared mixes', 'Processed meat',
@@ -429,6 +453,11 @@ export const DIET_KEYS = Object.keys(DIETS);
 
 export const NUTRIENT_FIELDS = [
   'calories', 'carbs', 'protein', 'fiber', 'fat', 'sodium', 'sugar', 'saturated_fat',
+  // Batch 5: iron added as a first-class nutrient field. Stored in mg per
+  // 100g; surfaces everywhere the other nutrients do (axis picker, table,
+  // detail panel, thresholds, score weights). Backfilled from USDA-aligned
+  // category defaults via scripts/backfill_iron.py.
+  'iron',
 ];
 
 /* Per-nutrient display metadata: label for UI, unit, and a tick/cell formatter.
@@ -446,6 +475,17 @@ function formatGrams(value) {
  * dense tick labels in the 3D scene; `unitLong` is for menus and range
  * inputs where space is available and the per-100g context matters.
  */
+/* Iron formatter: under 1mg shows one decimal, above shows whole mg.
+ * Reads cleanly across the wide range we hit (milk 0.03mg → dark
+ * chocolate 12mg → dried herbs 60mg+). */
+function formatIron(v) {
+  if (v == null || !Number.isFinite(v)) return '0 mg';
+  if (v < 0.05) return '0 mg';
+  if (v < 1)    return `${v.toFixed(2)} mg`;
+  if (v < 10)   return `${v.toFixed(1)} mg`;
+  return `${Math.round(v)} mg`;
+}
+
 export const NUTRIENT_META = {
   calories:      { label: 'Calories', unit: 'kcal', unitLong: 'kcal per 100g', format: v => `${Math.round(v)} kcal` },
   carbs:         { label: 'Carbs',    unit: 'g',    unitLong: 'g per 100g',    format: formatGrams },
@@ -455,6 +495,7 @@ export const NUTRIENT_META = {
   sodium:        { label: 'Sodium',   unit: 'mg',   unitLong: 'mg per 100g',   format: v => `${Math.round(v)} mg` },
   sugar:         { label: 'Sugar',    unit: 'g',    unitLong: 'g per 100g',    format: formatGrams },
   saturated_fat: { label: 'Sat. fat', unit: 'g',    unitLong: 'g per 100g',    format: formatGrams },
+  iron:          { label: 'Iron',     unit: 'mg',   unitLong: 'mg per 100g',   format: formatIron },
 };
 
 /* Per-nutrient defaults for direction (semantic preference) and orientation
@@ -471,6 +512,9 @@ export const NUTRIENT_DEFAULTS = {
   sodium:        { direction: 'min', orientation: 'descending' },
   sugar:         { direction: 'min', orientation: 'descending' },
   saturated_fat: { direction: 'min', orientation: 'descending' },
+  // Iron is a beneficial micronutrient — more is better up to the dietary
+  // limit (45 mg/day UL for adults), which no realistic food approaches.
+  iron:          { direction: 'max', orientation: 'ascending'  },
 };
 
 const REQUIRED_FIELDS = [
