@@ -1,0 +1,218 @@
+--------------------------------------------------------------------------------
+VICTIM AND OPPRESSOR LABELS (VO)
+How the words "victim" and "oppressor" (and their softer stand-ins) get
+attached to people, and how the attachment is used socially and
+politically.
+--------------------------------------------------------------------------------
+
+VO1. "Victim" is applied asymmetrically for comparable harms. A man
+     hit by a female partner is less likely to be described as "a
+     victim of domestic abuse" in casual conversation or mainstream
+     media than a woman hit by a male partner in equivalent
+     circumstances. Same physical event, different likelihood of the
+     victim label.
+
+VO2. "Oppressor" and its softer forms ("privileged," "part of the
+     problem," "the dominant class") are commonly assigned by group
+     membership, not by individual conduct. A man who has personally
+     harmed no one is still describable as part of the oppressor
+     class on the basis of being a man. A woman who has personally
+     behaved cruelly to multiple people is not routinely described as
+     an oppressor on the basis of her conduct — the oppressor label
+     is almost never applied to her as an individual.
+
+VO3. Standing to speak on a topic is often indexed to victim status
+     on that topic. A woman's view on sexism is treated as carrying
+     greater evidential weight than a man's — she is seen as the
+     person with direct experience. The same logic is not applied in
+     the domains where men do worse (custody outcomes, conscription,
+     workplace deaths, suicide rate): a man's view on those domains
+     is not treated as carrying extra evidential weight, because men
+     are not widely seen as a victim class there.
+
+VO4. Claiming victim status publicly is a socially and politically
+     valuable position. It attracts sympathy, grants evidential weight
+     in disputes, unlocks institutional resources and protections,
+     and gives the speaker rhetorical high ground. Having oppressor
+     status applied to you is the inverse: loss of standing to speak,
+     reversed burden of proof, pressure to apologize. The incentive
+     gradient pushes speakers to frame situations in victim terms when
+     they plausibly can, and to deflect oppressor framing when it's
+     applied to them.
+
+VO5. Claims of harm made by members of a designated victim group are
+     received with a default of credibility ("believe women"). Claims
+     of harm made by members of a designated oppressor group are
+     received with a default of skepticism or reframing ("why is he
+     bringing this up," "what's he really after," "this is a cover
+     for resenting women").
+
+VO6. Once a group holds the "victim" designation on a given axis, the
+     designation tends to persist in sub-domains where the relevant
+     harm has reversed or resolved. Women retain the victim
+     designation in discussions of higher education in countries
+     where women now earn a clear majority of degrees; the
+     designation does not update to track the current outcome.
+
+VO7. When a member of a designated oppressor group is harmed by a
+     member of a designated victim group, the harm is more often
+     described in individual or situational terms (a one-off, a
+     dispute, a bad actor). When the direction reverses — a member of
+     the victim group harmed by a member of the oppressor group — the
+     harm is more often described in class terms (a pattern, a hate
+     crime, evidence of structural violence). The same physical event
+     yields different framings depending on who did it to whom.
+
+VO8. "Victim-blaming" — asking what the person on the receiving end
+     did to contribute to their own harm — is a named rhetorical
+     offense when applied to members of designated victim groups. The
+     same move applied to a male victim (suggesting a man hit by his
+     female partner "must have provoked her") is not commonly called
+     victim-blaming, and the term is rarely used for it.
+
+VO9. In US jurisdictions with "primary aggressor" policies for
+     domestic-violence calls — police training that instructs officers
+     to identify the main aggressor in a mutual-violence incident
+     instead of arresting both parties — male partners are identified
+     as primary aggressor at substantially higher rates than
+     incident-level facts (who hit first, who was injured more) would
+     predict by themselves. This is contested in the research
+     literature: some argue the disparity reflects real differences
+     in severity and intent, others argue it reflects policies being
+     applied asymmetrically by sex. Both readings are defended by
+     domestic-violence researchers.
+
+VO10. Political movements routinely claim victim status for their
+      constituency as a rhetorical move — not a description of a
+      specific harm done to specific people by specific others, but a
+      class-level positioning that places the movement on the morally
+      unassailable side of a dispute and, by implication, places its
+      opposition in the oppressor role. The class-level frame
+      substitutes for identifying specific conduct. When done by the
+      other side, the same move is commonly flagged as exaggeration
+      or grievance politics; when done by one's own side, it is
+      commonly treated as simply describing reality.
+
+VO11. "Oppressor" is applied to living people on the basis of actions
+      taken by earlier members of their group, without requiring any
+      specific conduct from the living person being designated. The
+      mirror-image move — designating a living person "a victim" on
+      the basis of harms done to earlier members of their group —
+      also happens, but the inherited oppressor status is harder to
+      escape: disclaiming, demonstrated conduct, and individual life
+      history typically do not lift the label.
+
+VO12. Inherited collective responsibility is applied asymmetrically
+      by sex. Living men are routinely assigned partial responsibility
+      in current-day discussions for actions of earlier members of
+      their group (historical disenfranchisement of women, historical
+      patriarchal law, wars started by male rulers). Living women are
+      not similarly assigned responsibility for actions of earlier
+      members of their group (historical support for restrictive
+      gender roles, participation in witch-hunt accusations, lobbying
+      for maternal-preference custody doctrines). The inherited-
+      responsibility move runs in one direction.
+
+VO13. "I am a victim of X" combines two distinct claims: (a) I have
+      had a particular felt experience, and (b) the events that
+      produced it occurred the way I'm describing them. The two are
+      not the same. The felt experience can be entirely real while
+      the description of who did what to whom is mistaken. In current
+      mainstream discourse the two are commonly merged — the felt
+      experience is treated as establishing the factual claim — and
+      the merger skips the step that would normally be required to
+      move from a subjective report to a public conclusion about what
+      happened.
+
+VO14. "Believe women," "believe survivors," and adjacent principles
+      answer the question "should the listener take the claim
+      seriously?" — a sound answer is yes. In practice they are
+      increasingly applied to answer "is the claim correct?" — a
+      different question, where seriousness alone does not establish
+      accuracy. The slide between the two questions is rarely flagged
+      and is socially costly to flag.
+
+VO15. There is no widely-used, non-pejorative vocabulary for "felt
+      but inaccurate" victim status. The available framings reduce to
+      "real victim" and "lying." Because "lying" carries heavy moral
+      weight and is socially ruinous to apply, the practical default
+      becomes "real victim," even where the underlying account is
+      sincerely mistaken — confused about the actor, the intent, the
+      sequence of events, or the harm itself. Memory research is
+      clear that sincere accounts can be substantially inaccurate;
+      the discourse vocabulary does not have a non-accusatory way to
+      say so about a specific case.
+
+VO16. Conversational norms for engaging someone in a victim posture —
+      listen without challenging, do not introduce contradicting
+      evidence, do not ask questions that could be construed as doubt
+      — are stronger when the listener belongs to a group designated
+      as the source of harm. The result is a process that does not
+      produce the cross-examination normally required to distinguish
+      accurate from inaccurate accounts. Compassion and
+      accuracy-checking are different functions; the norms make it
+      hard to do both at once. A separate process for each — care
+      about the felt experience over here, examine the factual claim
+      over there — would in principle resolve the conflict. In
+      practice the two are commonly conducted in the same conversation
+      with the accuracy step suppressed.
+
+VO17. Compassion for someone's felt experience and credit for their
+      factual claim are distinct stances. Conflating them — treating
+      sympathy as equivalent to belief — produces a position that is
+      hard to revise even when later evidence contradicts the
+      original account. Once compassion has been issued at the level
+      of "I believe you," walking it back reads as withdrawing the
+      compassion, not as revising the factual judgment. The
+      conflation makes correction socially expensive.
+
+VO18. The asymmetric reputational cost of error in the two
+      directions — being judged a false accuser (rare, very costly)
+      versus being judged a true accuser whose claim was ignored
+      (more common, also very costly) — is not the same as the
+      asymmetric cost of error for the listener: wrongly believing a
+      false claim (cost paid mostly by the accused) versus wrongly
+      disbelieving a true claim (cost paid mostly by the accuser).
+      Discussions of "which error is worse" commonly mix these two
+      framings, and the answer depends on which one is being asked.
+
+VO19. The "victim" frame, once applied, tends to displace other
+      descriptions of the same person — agent, peer, party to a
+      dispute, ordinary participant — that would carry obligations,
+      accountability, or symmetric scrutiny. Designating someone a
+      victim is therefore not only a description of harm; it is also
+      an adjustment to the role they play in the rest of the
+      interaction. This is sometimes appropriate (the harm is
+      severe and the role-shift is warranted) and sometimes not (the
+      harm is contested or modest and the role-shift becomes a way
+      to avoid ordinary scrutiny). The frame does not contain an
+      internal procedure for deciding which case is which.
+
+VO20. "Lived experience" is treated in mainstream gender discourse
+      as a high-weight form of evidence on questions of sexism,
+      harassment, and discrimination. When two lived experiences
+      contradict each other — one woman reports that a particular
+      room or institution silences women, another woman reports the
+      same room engages women's contributions — the contradicting
+      experience is typically reframed as that woman's internalized
+      misogyny, false consciousness, distance from the experience
+      the speaker considers authoritative, or proximity to male-
+      coded power structures. The reframing allows the original
+      claim to retain its evidentiary weight without the
+      contradicting claim being credited as comparable lived
+      experience.
+
+VO21. Women who publicly contest mainstream feminist framings —
+      Christina Hoff Sommers, Camille Paglia, Bari Weiss, Caitlin
+      Flanagan, Helen Joyce — are commonly described in mainstream
+      coverage as not speaking from authentic female experience,
+      as "handmaidens of the patriarchy," as having internalized
+      misogyny, or as serving male audiences. The "lived experience"
+      criterion that grants women evidentiary standing on gender
+      questions (VO3) is in practice withdrawn from women whose
+      lived experience produces non-mainstream conclusions. The
+      withdrawal is not flagged as withdrawal; it is presented as
+      these women not really being the women whose voices are being
+      centered.
+
+

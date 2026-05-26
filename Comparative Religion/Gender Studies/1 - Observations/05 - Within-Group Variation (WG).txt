@@ -1,0 +1,63 @@
+--------------------------------------------------------------------------------
+WITHIN-GROUP VARIATION (WG)
+A reading instruction for the rest of the framework. Every "men do X"
+and "women do Y" claim in this document is a claim about averages
+across a population. The within-sex spread is large and matters for how
+the claims should be read.
+--------------------------------------------------------------------------------
+
+WG1. The framework's claims about "men" and "women" are claims about
+     averages across populations, not about every individual. A claim
+     of the form "men do X more than women" is consistent with most
+     men not doing X and many women doing X. Mistaking the average
+     for the individual produces both false generalizations ("men are
+     like that") and false rebuttals ("but I know a man who isn't").
+     Both errors are common in gender discourse.
+
+WG2. The within-sex variance on most psychological and behavioral
+     measures is larger than the between-sex difference. "The average
+     man" claims describe a tendency in a distribution, not a
+     description of every member. This is a standard finding in
+     psychometrics and applies to almost every observation in this
+     framework that takes the form of a sex-difference claim.
+
+WG3. Class is a major within-sex moderator. Working-class men and
+     college-educated urban men diverge sharply on most outcome
+     measures: marriage rates, life expectancy, employment, suicide
+     rate, school achievement, friendship counts. Several "men's"
+     trends in this framework are concentrated in the lower end of
+     the class distribution and are partly masked by averaging with
+     the upper end. The same is true within women, with different
+     patterns.
+
+WG4. Geographic variation is large. Patterns visible in dense urban
+     areas (women out-earning men, female educational majorities,
+     late marriage) coexist with rural and suburban areas where the
+     older patterns persist. National averages mix the two and
+     produce a midpoint that describes neither well.
+
+WG5. Age-cohort variation is large. Several patterns identified in
+     this framework — the male attention decline (AB3), the
+     political-polarization gap (PP), the friendship decline (RS3),
+     the dating-market concentration (SR1) — are concentrated in
+     younger cohorts and partly absent from older ones. Aggregating
+     across cohorts hides the trajectory.
+
+WG6. Subgroup-level claims and population-level claims are different
+     claims. "Men in the bottom income quintile have life expectancy
+     X" is a different claim from "men have life expectancy X."
+     Several mainstream gender claims and several anti-mainstream
+     gender claims switch between these without flagging the move.
+     Wherever this framework cites a population average, the
+     within-group spread is meaningful and the average is not the
+     description of every member.
+
+WG7. The "all men benefit" / "all women suffer" framings the
+     framework critiques elsewhere (LR6, VO11) draw much of their
+     persuasive force from collapsing within-group variation. The
+     critique of those framings is itself weakened if the framework
+     making the critique then collapses the same variation in the
+     other direction. Honest reading of any sex-asymmetry claim — in
+     this framework or any other — requires keeping the distribution
+     visible behind the average.
+

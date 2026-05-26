@@ -1,0 +1,114 @@
+--------------------------------------------------------------------------------
+HEALTH AND MORTALITY (HM)
+Concrete statistical asymmetries in how long each sex lives and what
+each sex dies from.
+--------------------------------------------------------------------------------
+
+HM1. Men die by suicide at three to four times the rate of women in
+     most Western countries.
+
+HM2. Men have shorter life expectancy than women in virtually every
+     country in the world. In the US the gap is roughly five to six
+     years.
+
+HM3. Men are roughly 70% of homicide victims and roughly 80% of
+     homicide perpetrators.
+
+HM4. Men make up the substantial majority of homeless populations
+     and of overdose deaths.
+
+HM5. Men are less likely than women to seek preventive medical
+     care (routine check-ups, early screening) and more likely to
+     die of preventable conditions.
+
+HM6. Prostate cancer research receives substantially less public
+     and charitable funding than breast cancer research despite
+     comparable incidence rates in the population.
+
+HM7. Women's health awareness campaigns are culturally prominent
+     (pink ribbons, breast cancer awareness month, heart disease
+     in women campaigns). Men's health awareness campaigns (e.g.,
+     Movember) exist but are far smaller in cultural footprint and
+     institutional backing.
+
+HM8. Mental health services and outreach are mostly designed
+     around patterns more common in women: talking about feelings,
+     seeking help, describing internal states. Patterns more common
+     in men — irritability, physical symptoms, action-oriented
+     avoidance, externalizing — are less well served by the design
+     of mainstream mental-health services.
+
+HM9. Several diagnostic and treatment gaps run against women.
+     Endometriosis is diagnosed an average of seven to ten years
+     after symptom onset across many populations. Heart-attack
+     presentation in women has historically been underrecognized in
+     clinical training (women more often present with atypical
+     symptoms and receive delayed intervention). Autoimmune
+     conditions, which disproportionately affect women, show
+     measurable time-to-diagnosis gaps.
+
+HM10. Pain-management research and clinical practice have
+      documented under-treatment of pain in women relative to
+      comparable presentations in men. Women's pain reports are more
+      often interpreted as psychogenic, anxiety-related, or
+      stress-related rather than as evidence of physical pathology;
+      the under-treatment is measurable in opioid prescribing data,
+      time-to-analgesia in emergency departments, and referral
+      patterns.
+
+HM11. Old-age poverty falls more on women than on men. Women's
+      longer life expectancy combined with lower lifetime earnings
+      and lower retirement savings produces higher poverty rates
+      among women in late life. Men's earlier mortality cuts the
+      trajectory short; women's longer survival comes paired with
+      elevated economic vulnerability in the later years. The two
+      asymmetries (HM2 on life expectancy and HM11 on late-life
+      poverty) are not in tension — they describe different parts
+      of the same pattern.
+
+HM12. Diagnostic-prevalence patterns by sex (parallel to BD12):
+      women receive depression and anxiety diagnoses at higher rates
+      than men; men receive ADHD, autism-spectrum, substance-use,
+      and conduct-disorder diagnoses at higher rates than women. The
+      depression gap coexists with men's substantially higher suicide
+      rate (HM1), which raises a measurement question: whether men
+      under-report depression and are therefore under-diagnosed
+      despite the lethal outcomes, or whether the depression and
+      suicide patterns are partly distinct phenomena with different
+      sex distributions. Both readings have proponents.
+
+HM13. Veteran-specific health outcomes: post-service suicide rates
+      among male US veterans are substantially elevated above
+      same-age civilian male rates. Veteran homelessness in the US
+      is overwhelmingly male in absolute numbers. Female veterans
+      face elevated rates of military sexual trauma and
+      transition-related distress; per-capita rates can be
+      comparable while absolute numbers stay smaller because of
+      smaller force participation. Both patterns are real;
+      mainstream institutional attention is currently weighted
+      toward female-veteran-specific issues despite the male-side
+      numbers being substantially larger in scale.
+
+HM14. The "default male" / "invisible women" framing — that medical
+      research, drug dosing, crash-test dummy design, body-armor
+      sizing, and product ergonomics have historically defaulted to
+      male bodies — is a major mainstream gender claim. The
+      empirical record is mixed. Female underrepresentation in
+      cardiovascular and pharmacological trials through the late
+      twentieth century is documented; standard crash-test dummies
+      used a fiftieth-percentile male body as reference for decades;
+      some PPE and tool ergonomics were sized to male anthropometry.
+      FDA and NIH research-inclusion rules from the 1990s onward
+      substantially altered the trial-inclusion picture, and several
+      women-coded conditions (breast cancer, reproductive health)
+      now receive comparable or greater research and funding
+      attention than male-coded counterparts (HM6 on prostate vs.
+      breast cancer research). The specific diagnostic and
+      treatment gaps for women (HM9, HM10) survive the audit; the
+      stronger architectural claim — that medicine and design
+      generally treat the male body as default and the female body
+      as deviation — is partly real, partly outdated by reform, and
+      partly overstated. The framing is durable in mainstream
+      coverage even where the underlying domain has been reformed.
+
+

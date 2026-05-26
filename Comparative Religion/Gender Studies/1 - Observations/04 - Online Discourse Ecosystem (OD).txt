@@ -1,0 +1,392 @@
+--------------------------------------------------------------------------------
+ONLINE DISCOURSE ECOSYSTEM (OD)
+The medium most current gender discourse actually runs on. Algorithmic
+sorting, harassment patterns, subculture formations, and platform
+incentives that shape what readers encounter and how.
+--------------------------------------------------------------------------------
+
+OD1. Mainstream gender discourse — both feminist-coded and men's-
+     issues-coded — increasingly takes place in algorithmically-sorted
+     feed environments rather than in shared general-interest
+     publications. Recommendation systems on TikTok, Instagram,
+     YouTube, and X sort users into substantially different content
+     streams within weeks of account creation. "What men hear about
+     gender online" and "what women hear about gender online" are
+     drawn from largely disjoint content sets.
+
+OD2. Online harassment patterns are sex-asymmetric in form. Female
+     targets receive a higher share of sexualized harassment (rape
+     threats, sexual insults, image-based abuse). Male targets receive
+     a higher share of status-attacking harassment (calling them
+     losers, incels, or failures; demanding they kill themselves).
+     Both patterns are real, measurable, and harmful. The female
+     pattern is broadly named as harassment in mainstream coverage;
+     the male pattern is less commonly named as harassment at all and
+     is more often treated as ordinary online roughhousing.
+
+OD3. Subcultures organizing around male-disadvantage observations —
+     collectively called the "manosphere," including red-pill, MGTOW,
+     incel, and adjacent communities — exist and contain both real
+     grievance-naming and substantial misogynistic content. Mainstream
+     coverage tends to flatten the distinction, treating any naming
+     as continuous with the worst content (see PR1, PR2). Subcultures
+     organizing around female grievances — the "4B" formation,
+     certain TikTok communities, female-only forums — also exist and
+     contain comparable internal variance, but mainstream coverage
+     more often distinguishes their reasonable portions from their
+     excesses.
+
+OD4. The economic infrastructure of platform-monetized content
+     rewards emotional intensity. Sex-specific grievance content —
+     about either side — draws engagement and is therefore amplified.
+     The platform incentive does not select for accurate or
+     evenhanded; it selects for engaging. Claims that require both
+     evidentiary sets to be held simultaneously (as this framework
+     does) are at a structural disadvantage in this attention market.
+
+OD5. Dating-app data is now the largest single body of empirical
+     observation about heterosexual partner preferences and selection
+     in real conditions. The data consistently confirm patterns long
+     observed in survey research — concentration of female attention
+     on a minority of men, women's continued preference for
+     higher-status partners, and the sharply asymmetric distribution
+     of right-swipes across the male population (SR1, SR2). Despite
+     this, dating-app data is rarely cited in mainstream gender-
+     discourse coverage; when it is, it is more often debated than
+     reported.
+
+OD6. The "tradwife" formation (women presenting traditional
+     homemaking as aspirational identity) and the "passport bro"
+     formation (Western men seeking partners from cultures with
+     different sex-role expectations) are both responses to perceived
+     defects in the current Western marriage market. They run in
+     opposite directions but share a structural feature: participants
+     opt out of the local mainstream gender script in favor of an
+     older or foreign one.
+
+OD7. AI companions, virtual girlfriends, and parasocial creator
+     relationships are rising substitutes for human partnership on
+     both sides. Male use of AI/virtual-girlfriend products is the
+     more-covered side and is widely framed as a male attention or
+     loneliness problem. Female use of parasocial creator
+     relationships, reality TV, and serial-fiction substitutes is
+     comparable in scale and less commonly framed as a substitution
+     problem (cf. AB5). The cultural worry tracks the male-coded
+     forms.
+
+OD8. Platforms differ in their sex skew. Long-form podcast and
+     video-essay platforms (YouTube, podcasting infrastructure) skew
+     male in audience composition; short-form and feed platforms
+     (TikTok, Instagram) skew female or neutral. The two halves of
+     gender discourse partially live on different platforms, which
+     compounds the algorithmic-sorting effect (OD1).
+
+
+================================================================================
+META OBSERVATIONS
+Generalizations that surface from reading the level-1 observations
+above. Each is a claim of its own; the "draws from" line names the
+level-1 entries that ground it. Within a section, when a later level-1
+entry reinforces a meta observation already on the page, the entry is
+added to that meta observation's "draws from" rather than starting a
+new one. Parentheticals show the thinking that produced each meta
+observation — what was interrogated and what surfaced.
+================================================================================
+
+(OD1: "increasingly takes place in algorithmically-sorted feed
+environments rather than in shared general-interest publications."
+What's the venue shift?)
+
+ODm1. Mainstream gender talk has moved from shared publications,
+      where every reader could in principle see the same article,
+      to algorithmic feeds, where each reader sees a custom stream.
+      Draws from: OD1.
+
+(OD1: "Recommendation systems on TikTok, Instagram, YouTube, and X
+sort users into substantially different content streams within weeks
+of account creation." How fast and how thorough is the sorting?)
+
+ODm2. Recommendation systems pick up a new user's sex and interests
+      quickly enough that the gender content they see has already
+      been tailored within weeks of account creation, not months.
+      Draws from: OD1.
+
+(OD1: "'What men hear about gender online' and 'what women hear
+about gender online' are drawn from largely disjoint content sets."
+What's the result for the conversation?)
+
+ODm3. The gender material men encounter online and the gender
+      material women encounter online are mostly non-overlapping —
+      the two sides are not reacting to the same posts, articles,
+      or videos.
+      Draws from: OD1, OD8.
+
+(OD2: "Online harassment patterns are sex-asymmetric in form."
+What's the rule about the shape of attacks?)
+
+ODm4. Harassment online doesn't just target one sex more than the
+      other — it uses different attack types depending on the
+      target's sex.
+      Draws from: OD2.
+
+(OD2: "Female targets receive a higher share of sexualized
+harassment (rape threats, sexual insults, image-based abuse)." What
+is the female-side attack reaching for?)
+
+ODm5. The attacks aimed at women cluster on the sexual axis — rape
+      threats, sexual insults, image-based abuse. The vulnerability
+      being targeted is sexual.
+      Draws from: OD2.
+
+(OD2: "Male targets receive a higher share of status-attacking
+harassment (calling them losers, incels, or failures; demanding they
+kill themselves)." What is the male-side attack reaching for?)
+
+ODm6. The attacks aimed at men cluster on the status axis — calling
+      them losers, telling them to kill themselves. The vulnerability
+      being targeted is social standing and worth as a man.
+      Draws from: OD2.
+
+(OD2: "Both patterns are real, measurable, and harmful." Why does
+the source observation need to assert this at all?)
+
+ODm7. The male-targeted pattern faces a default doubt about whether
+      it counts as real harm; the female-targeted pattern does not
+      face the same doubt.
+      Draws from: OD2.
+
+(OD2: "The female pattern is broadly named as harassment in
+mainstream coverage." What's the naming on the female side?)
+
+ODm8. Mainstream coverage calls the female-targeted attacks
+      harassment.
+      Draws from: OD2.
+
+(OD2: "the male pattern is less commonly named as harassment at all
+and is more often treated as ordinary online roughhousing." What's
+the naming on the male side?)
+
+ODm9. The same coverage treats the male-targeted attacks — telling
+      men to kill themselves — as ordinary online roughhousing,
+      rather than as harassment.
+      Draws from: OD2.
+
+(OD2: the asymmetry across ODm8 and ODm9. Same act category, opposite
+labels. What's the underlying rule?)
+
+ODm10. What gets named as harassment depends on the sex of the
+       target, not just on what was done.
+       Draws from: OD2.
+
+(OD3: "Subcultures organizing around male-disadvantage observations
+... contain both real grievance-naming and substantial misogynistic
+content." What's actually inside the manosphere?)
+
+ODm11. The manosphere contains both legitimate naming of male-
+       disadvantage facts and substantial misogynistic content,
+       mixed together in the same spaces.
+       Draws from: OD3.
+
+(OD3: "Mainstream coverage tends to flatten the distinction, treating
+any naming as continuous with the worst content." What's the coverage
+move?)
+
+ODm12. Mainstream coverage of the manosphere collapses any male-
+       disadvantage observation into the worst content in the same
+       scene — naming a male-suicide statistic gets a writer tied
+       to rape jokes from the next thread over.
+       Draws from: OD3.
+
+(OD3: "Subcultures organizing around female grievances ... contain
+comparable internal variance." What's inside the female-side
+subcultures?)
+
+ODm13. Female-grievance subcultures (4B, certain TikTok communities,
+       female-only forums) contain a similar internal range, from
+       reasonable concerns to extreme rhetoric.
+       Draws from: OD3.
+
+(OD3: "mainstream coverage more often distinguishes their reasonable
+portions from their excesses." What's the coverage move on the
+female side?)
+
+ODm14. Coverage of female-grievance subcultures more often pulls
+       the reasonable concerns apart from the extremes, rather than
+       fusing them.
+       Draws from: OD3.
+
+(OD3: the asymmetry across ODm12 and ODm14. Same internal mix on
+both sides, opposite coverage methods. What's the rule?)
+
+ODm15. Whether mainstream coverage separates a grievance
+       subculture's reasonable parts from its worst content depends
+       on whether the subculture is male-coded or female-coded —
+       the manosphere gets fused, 4B gets sorted.
+       Draws from: OD3.
+
+(OD4: "The economic infrastructure of platform-monetized content
+rewards emotional intensity." What's the money rule?)
+
+ODm16. Platforms make money from engagement, and engagement runs on
+       emotional intensity — so the revenue pipe rewards heat over
+       calm.
+       Draws from: OD4.
+
+(OD4: "Sex-specific grievance content — about either side — draws
+engagement and is therefore amplified." What does the algorithm
+amplify, and is the amplification side-neutral?)
+
+ODm17. Grievance content draws engagement regardless of which side
+       it comes from, and the algorithm amplifies it accordingly.
+       The amplification picks heat, not a side.
+       Draws from: OD4.
+
+(OD4: "The platform incentive does not select for accurate or
+evenhanded; it selects for engaging." What's the selection rule, in
+its own right?)
+
+ODm18. The amplification filter selects for what's engaging, not for
+       what's accurate or evenhanded — these are different filters
+       and produce different content.
+       Draws from: OD4.
+
+(OD4: "Claims that require both evidentiary sets to be held
+simultaneously ... are at a structural disadvantage in this attention
+market." What about the cost to balanced claims?)
+
+ODm19. Claims that hold the male-side and female-side evidence at
+       once lose to one-sided heated claims in this venue. The
+       medium rewards picking a side.
+       Draws from: OD4.
+
+(OD5: "Dating-app data is now the largest single body of empirical
+observation about heterosexual partner preferences and selection in
+real conditions." What's the scale claim?)
+
+ODm20. Dating apps have produced more behavioral data on real
+       heterosexual partner selection than any earlier method —
+       survey research, lab studies, or naturalistic observation.
+       Draws from: OD5.
+
+(OD5: "The data consistently confirm patterns long observed in
+survey research." What's the relationship between the new data and
+the older data?)
+
+ODm21. The dating-app evidence ratifies what survey research had
+       already shown about partner preferences — concentration of
+       female attention on a minority of men, female preference for
+       higher-status partners, sharply asymmetric right-swipe
+       distributions across the male population.
+       Draws from: OD5.
+
+(OD5: "Despite this, dating-app data is rarely cited in mainstream
+gender-discourse coverage." What about the absence?)
+
+ODm22. The strongest available behavioral evidence on partner
+       preferences is largely missing from mainstream gender
+       coverage.
+       Draws from: OD5.
+
+(OD5: "when it is, it is more often debated than reported." What's
+the framing on the rare occasions it does appear?)
+
+ODm23. When dating-app evidence does enter coverage, it appears as
+       a contested claim rather than as a measurement.
+       Draws from: OD5.
+
+(OD6: "The 'tradwife' formation ... and the 'passport bro' formation
+... are both responses to perceived defects in the current Western
+marriage market." What's the rule about visible exits?)
+
+ODm24. Visible numbers of women and men are exiting the current
+       Western marriage market — tradwives on the women's side,
+       passport bros on the men's side.
+       Draws from: OD6.
+
+(OD6: "They run in opposite directions but share a structural
+feature." What's the same-shape claim, and what's concrete on each
+side?)
+
+ODm25. The two exits run in opposite directions — tradwives toward
+       an older domestic script, passport bros toward a foreign
+       mating market — but make the same structural move.
+       Draws from: OD6.
+
+(OD6: "participants opt out of the local mainstream gender script in
+favor of an older or foreign one." What is the shared move,
+specifically?)
+
+ODm26. The shared move is opting out of the local current gender
+       script in favor of an older or foreign one.
+       Draws from: OD6.
+
+(OD6: both formations have names and recognizable identities. What
+does that say about scale?)
+
+ODm27. The exits are common enough on both sides to have generated
+       named, organized identities — not isolated personal choices.
+       Draws from: OD6.
+
+(OD7: "AI companions, virtual girlfriends, and parasocial creator
+relationships are rising substitutes for human partnership on both
+sides." What's the rule?)
+
+ODm28. Substitutes for human partnership are spreading on both
+       sides — AI girlfriends and chatbots for men, parasocial
+       creator relationships and romance fiction for women.
+       Draws from: OD7.
+
+(OD7: "Male use of AI/virtual-girlfriend products is the more-covered
+side and is widely framed as a male attention or loneliness problem."
+How is the male side covered?)
+
+ODm29. The male-coded substitutes are covered as a male loneliness
+       or attention problem.
+       Draws from: OD7.
+
+(OD7: "Female use of parasocial creator relationships, reality TV,
+and serial-fiction substitutes is comparable in scale and less
+commonly framed as a substitution problem." How is the female side
+covered?)
+
+ODm30. The female-coded substitutes — parasocial creators, reality
+       TV, romance fiction — are comparable in scale and rarely
+       framed as a substitution problem at all.
+       Draws from: OD7.
+
+(OD7: "The cultural worry tracks the male-coded forms." What's the
+rule about which substitutes count as a worry?)
+
+ODm31. Whether using a partnership substitute is treated as a worry
+       depends on the user's sex — male AI-girlfriend use gets
+       called a crisis, comparable female parasocial-creator use
+       does not.
+       Draws from: OD7.
+
+(OD8: "Platforms differ in their sex skew." What's the rule?)
+
+ODm32. Different platforms attract different sex distributions —
+       there is no single online venue where gender discourse
+       happens.
+       Draws from: OD8.
+
+(OD8: "Long-form podcast and video-essay platforms ... skew male in
+audience composition; short-form and feed platforms ... skew female
+or neutral." What's the format-audience link?)
+
+ODm33. Long-form audio and video platforms (YouTube, podcasting)
+       skew male in audience; short-form feed platforms (TikTok,
+       Instagram) skew female or neutral.
+       Draws from: OD8.
+
+(OD8: "The two halves of gender discourse partially live on different
+platforms, which compounds the algorithmic-sorting effect." What does
+platform-skew add on top of feed-sorting?)
+
+ODm34. Platform-level sex skew sits on top of feed-level
+       recommendation sorting, so the two sides of gender discourse
+       are separated twice over — first by which platform they're
+       on, then by which content the algorithm picks for them once
+       they're there.
+       Draws from: OD8.
+

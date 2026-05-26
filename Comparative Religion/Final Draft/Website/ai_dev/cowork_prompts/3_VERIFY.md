@@ -1,44 +1,49 @@
-# Cowork Prompt 3 — Verify the tree is still coherent
+# Cowork Prompt 3 — Verify the edited tree
 
-Paste this after the audit session is done. Short session — runs the
-round-trip check and surfaces anything broken before we rebuild
-data.json.
+Paste this after the audit session is done. Short session — validates
+the `ai_dev/nodes/` tree and surfaces anything broken before we rebuild
+`data.json`.
 
 ---
 
 I just finished an audit pass that edited files under `ai_dev/nodes/`.
-Before I rebuild `data.json`, I want to confirm the tree is still valid
-and that a round-trip through compose+decompose is lossless.
+Before I rebuild `data.json`, I want to confirm the tree is internally
+consistent.
 
 ## What to do
 
-1. Run the round-trip verifier from the scripts folder:
+Run compose in dry-run mode from the scripts folder:
 
-   ```
-   cd ai_dev/scripts
-   python verify_roundtrip.py
-   ```
+```
+cd ai_dev/scripts
+python compose_data.py --dry-run
+```
 
-   This decomposes the *current* `data.json` into a temp folder, composes
-   that back, and deep-diffs — so it's checking the source data, not my
-   edits. It should still pass (or tell me exactly what's corrupt).
+This walks `ai_dev/nodes/` and validates:
+- Every `<id>.json` parses as JSON.
+- Every file's filename matches the `id` field inside.
+- Every folder path matches the id parts (node `1.2.5.4` must live at
+  `ai_dev/nodes/1/2/5/4/`).
+- No duplicate ids.
 
-2. Now check the edited tree itself. Run compose in dry-run mode:
+It does NOT read the existing `data.json` — the node tree is the source
+of truth here, and `data.json` is about to be rebuilt from it in step 4.
 
-   ```
-   python compose_data.py --dry-run
-   ```
+## If it passes
 
-   This walks `ai_dev/nodes/` and validates: every file's filename
-   matches its `id`, every folder path matches the id parts, no
-   duplicate ids. If any node file drifted, this is where we catch it.
+Tell me how many nodes compose found and anything else notable from the
+output. Then we're clear to run step 4.
 
-3. If either step fails, stop and show me the error. Don't try to fix
-   the node files without checking with me first — a mismatch between
-   filename/path/id usually means I need to decide which side to keep.
+## If it fails
 
-4. If both pass, tell me:
-   - How many nodes compose found.
-   - Anything else notable from the output.
+Stop and show me the error. Don't try to fix the node files without
+checking with me first — a mismatch between filename/path/id usually
+means I need to decide which side to keep.
 
-Don't actually write `data.json` in this session — that's the next step.
+## Note on `verify_roundtrip.py`
+
+Don't run `verify_roundtrip.py` here. That script's job is to test
+whether `decompose_data.py` + `compose_data.py` are lossless on a given
+`data.json` — useful after schema changes, but it requires a valid
+`data.json` as input, which is exactly what we're about to overwrite.
+For routine audits, `compose_data.py --dry-run` is the right check.

@@ -1,0 +1,77 @@
+SECTION ROSTER
+
+Block-by-block ordering of the framework's sections. Within each
+block, sections build on the prior block; reading in this order
+means every later section's claims rest on commitments the reader
+has already accepted from earlier ones.
+
+================================================================================
+
+BLOCK A — Discourse-level meta
+How the conversation about gender works as a conversation. Read first;
+the rest of the framework assumes these dynamics.
+  01  Discourse Dynamics (DD)
+  02  Defensive Patterns (DP)
+  03  Attention and Bandwidth (AB)
+  04  Online Discourse Ecosystem (OD)
+  05  Within-Group Variation (WG)              <- reading instruction
+
+BLOCK B — What can be said, and who hears it
+The empirical and reception conditions under which gender claims get
+made and received.
+  06  What Can Be Said About Biological Difference (BD)
+  07  Reception of Observations Like These (PR)
+  08  Readership and Coverage (RC)
+
+BLOCK C — Labels, guilt, and language
+The vocabulary the discourse runs on, and the moral economy that
+vocabulary encodes.
+  09  Victim and Oppressor Labels (VO)
+  10  Inherited Guilt (IG)
+  11  Language and Rhetoric (LR)
+  12  Attribution and Character Framing (AC)
+
+BLOCK D — Interpersonal and relational dynamics
+How emotional, agentic, and communicative roles are distributed in
+mainstream framings.
+  13  Emotional Needs (EN)
+  14  Agent-Patient Positioning (AP)
+  15  Tolerance and Accommodation (TA)
+  16  Communication Styles (CS)
+
+BLOCK E — Cultural representation
+How gender is depicted and narrated in shared cultural products.
+  17  Media and Representation (MR)
+  18  Religion, Tradition, and Meaning (RT)
+  19  The Predator Framing (PF)
+
+BLOCK F — Sex, romance, and family formation
+The mating market, the private sphere, and what happens to children
+in it.
+  20  Sexual and Romantic Dynamics (SR)
+  21  Relational and Private Sphere (RS)
+  22  Father Absence and Boys' Outcomes (FA)
+
+BLOCK G — Concrete domains
+Where the gender claims meet measurable outcomes: schools, workplaces,
+bodies, courts, streets.
+  23  Education (ED)
+  24  Workplace and Economics (WE)
+  25  Health and Mortality (HM)
+  26  Reproductive and Bodily Burden (RB)
+  27  Aesthetic and Appearance Labor (AL)
+  28  Violence and Safety (VS)
+  29  Family Law and State Policy (FL)
+
+BLOCK H — Movement over time
+How the picture is changing and where it is going.
+  30  Political Polarization (PP)
+  31  Trajectories Over Time (TS)
+
+================================================================================
+READING NOTE
+
+WG (05) is a reading instruction as well as an observation set.
+Every "men do X / women do Y" claim in this framework is a
+population-average claim with substantial within-sex variance.
+The observations are not descriptions of every member of either sex.

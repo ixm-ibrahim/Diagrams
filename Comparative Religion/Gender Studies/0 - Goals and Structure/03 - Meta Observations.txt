@@ -1,0 +1,218 @@
+META OBSERVATIONS
+
+What they are
+================================================================================
+
+A meta observation is a general claim that emerges from reading the
+source observations — either by looking at one closely and asking
+what's really going on in it, or by noticing the same pattern across
+several. The source observations describe specific patterns; the
+meta observation names what the pattern is about.
+
+The framework is built in layers. Each layer's meta observations
+become the next layer's observations: today's observations are
+level 1, the meta observations derived from them become level 2, a
+future meta layer would be level 3. The terminology in this doc is
+relative — "source observation" means whichever entries are directly
+below the layer being built.
+
+Each source observation can possibly carry more than one meta
+observation. Reading the source closely and asking "why is this
+happening?" surfaces several distinct angles — the form of the move,
+the role of the speaker, the role of the listener, what's being
+treated as evidence, where the asymmetry sits. Each angle that holds
+up on its own becomes a meta observation.
+
+How to derive them
+================================================================================
+
+Walk through each source observation clause by clause. Each clause
+that introduces a new aspect typically yields a separate meta
+observation.
+
+For each clause:
+  1. Read it.
+  2. Name the angles the clause touches. A clause is rarely about
+     one thing. It will name or imply several aspects at once: the
+     speaker, the listener, what's being said, how it's being said,
+     who is in the room, what is being treated as evidence, what is
+     not being asked, where an asymmetry sits, which side a move
+     runs in, what time period or population is in scope. Before
+     asking why, list the angles. Each angle that holds up on its
+     own is a candidate for a separate meta.
+  3. For each angle, ask two questions:
+       a. "Why is this happening?" — the answer is the underlying
+          rule, the implicit assumption, or the social permission
+          that makes the move work. This is the move that takes
+          you from the source layer to the meta layer above it.
+       b. "What's the general form?" — strip the specific noun
+          and ask what rule the specific case is one instance of.
+          A specific clause about emotional displays in political
+          debate may be one case of a more general rule about
+          which speakers are credited and which are discounted.
+     The two questions are not the same. Why digs for cause;
+     general form abstracts to rule. Run both, and a single angle
+     can yield more than one meta when they answer differently.
+  4. If the answer is not already a meta observation in this
+     section, add it as a new one in plain language.
+  5. If the answer is already there, add the current source ID to
+     that meta observation's "Draws from" line, and note the merge
+     in the parenthetical so the merge reasoning travels with the
+     meta.
+  6. If a later source entry refines an existing meta observation,
+     edit the meta observation; keep its ID stable.
+
+"Why" goes one level at a time. Asking why of a source observation
+gives you a meta observation. Asking why of the meta observation you
+just wrote would give you a meta-meta observation — that's the next
+layer up, out of scope while you are still building the current one.
+
+Show the work. While drafting, write the interrogation in parentheses
+before each meta observation: which clause is being read, which angle
+is being interrogated, what was asked, and (when relevant) why this
+is being kept separate from a similar meta or merged into it. The
+parentheticals are not just a transparency layer — they are a working
+notebook. Treat them as a place to record live thinking, not only
+finished derivations. Strip them after release or keep them as a
+transparency layer.
+
+Several meta observations per source entry is normal. If a source
+entry yields only one meta observation, the interrogation was too
+coarse — go back, list the angles, and walk it again.
+
+Things the parentheticals carry beyond the why-derivation
+================================================================================
+
+The parenthetical is also where in-flight thinking lives. The
+following are legitimate parenthetical content even when they do not
+yield a meta on the spot.
+
+- Open questions and surfaced tensions. While reading a clause, a
+  counter-case or unresolved question may surface — "but doesn't
+  this run into X?" or "this seems to contradict the move in DDm5
+  — does it?" Write it down in the parenthetical. It may seed a
+  future raw observation, get resolved by a later meta, or expose
+  a refinement the current meta needs. Losing the thought because
+  the meta itself is "clean" wastes the work.
+
+- Audit flags. If the source observation itself is unclear — the
+  example does not land, the quoted utterance is doing more work
+  than it should, or the writer is not sure what the example is
+  meant to demonstrate — flag it in the parenthetical with a
+  short note ("not sure what example this refers to — audit"). A
+  shaky source produces a shaky meta. The flag is a signal to
+  revisit the source, not to silently force a meta out of it.
+
+- Merge reasoning. When two angles or two clauses converge on the
+  same meta, the parenthetical records the convergence ("this is
+  the same rule DDm4 named — adding DD2 to its draws-from"). When
+  two near-identical metas are kept separate, the parenthetical
+  records the distinction ("same shape as DDm12 but the move is
+  motive-questioning rather than factual-error treatment, so
+  separate"). Without the merge reasoning, the next reader cannot
+  tell whether the split is principled or accidental.
+
+Things to avoid
+================================================================================
+
+- Academic vocabulary. The writing-goal rules apply at every layer.
+  Plain words, low cognitive load, no jargon when a common word
+  works. If a sentence reads like a journal abstract, rewrite.
+
+- Compound claims. Each meta observation is one clean claim. If two
+  distinct claims are joined by "and," split them.
+
+- Quoting the source observation. The meta stands on its own. The
+  source supports it; the "Draws from" line is the link.
+
+- Depending on neighboring metas. The meta also stands on its own
+  with respect to the other metas in the same section. A reader
+  who lands on a single meta out of order should understand it
+  without reading the meta above it. The "Draws from" line links
+  back to the source — it does not excuse the meta from being
+  readable on its own.
+
+  The orphan-determiner test: scan the meta for any phrase of the
+  form "the X," "this X," "that X," "the same X," "such X." Ask
+  whether the reader knows what X is from inside the meta alone.
+  "The offense," "the cost," "the asymmetry," "the pattern," "the
+  decline," "this discomfort," "the same setting," "the mirror
+  move" — each one points at something a previous entry defined.
+  If the meta is the reader's first contact with X, X has to be
+  named inside the meta. "The offense" becomes "enough to be read
+  as cold or dismissive." "The cost" becomes "the cost of managing
+  the other party's feelings." "The asymmetry" becomes the
+  asymmetry, named: "the asymmetric reception of male and female
+  emotional displays."
+
+  Read each finished meta aloud as if it were the first sentence
+  of an article. If a phrase needs the previous sentence to
+  resolve, rewrite.
+
+- Softening. The hard-on-topic / soft-on-reader rule applies. If the
+  meta observation states something contested or uncomfortable, keep
+  it plain and let the reader meet it directly.
+
+- Restating the source. A meta observation that just rephrases the
+  source isn't a meta observation — it's a paraphrase. The meta has
+  to add a layer: the underlying rule, the implicit assumption, the
+  general form.
+
+  Generalizing the specific to the abstract is still paraphrase.
+  Turning "'whataboutism' is named when an opponent does it and
+  unnamed when one's own side does it" into "a rhetorical move is
+  named when an opponent does it and unnamed when one's own side
+  does it" is the same claim with a placeholder swapped for the
+  noun. It doesn't answer why the asymmetry exists — and the why
+  is what the meta is supposed to add. Self-test on a draft meta:
+  if the source's specific noun were swapped back in, would the
+  meta become indistinguishable from the source? If yes, it's a
+  paraphrase, not a meta. The meta has to say something the
+  source doesn't — typically the why behind it.
+
+- Recursing. Asking why of the meta observation you just wrote
+  produces meta-meta — the next layer up, out of scope while
+  building the current one.
+
+Format
+================================================================================
+
+Each meta observation has an ID: the section's two-letter prefix +
+lowercase "m" + a number (e.g. DDm1, DPm3, VOm12). IDs are stable
+anchors, like the source-layer IDs.
+
+Each meta observation reads as one short prose claim, followed by a
+"Draws from:" line listing the source entries that ground it.
+Cross-references to other sections use the same convention.
+
+The meta layer is appended to each section file, separated by this
+header:
+
+  ============================================================
+  META OBSERVATIONS
+  Generalizations that surface from reading the observations
+  above. Each is a claim of its own; the "Draws from" line names
+  the source entries that ground it. When a later source entry
+  reinforces a meta observation already on the page, the entry
+  is added to its "Draws from" rather than starting a new one.
+  ============================================================
+
+Self-check
+================================================================================
+
+Before releasing a meta layer:
+  - A smart non-expert understands each meta observation on first
+    read.
+  - A specialist reads it and does not wince — nothing over-claims,
+    nothing is sloppy with the source evidence cited.
+  - No meta observation hedges without saying anything.
+  - No meta observation is just the source rephrased.
+  - Each source clause has been walked angle by angle, not asked a
+    single generic "why?". If a clause yielded one meta and the
+    clause names more than one aspect (speaker + listener,
+    speaker + content, move + asymmetry, etc.), the interrogation
+    was too coarse.
+  - Audit flags raised in the parentheticals are either resolved
+    (the source has been revised, or the example sharpened) or
+    carried forward as known follow-ups.
+If any fail, rewrite.

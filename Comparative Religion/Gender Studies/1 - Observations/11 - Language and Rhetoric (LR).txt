@@ -1,0 +1,139 @@
+--------------------------------------------------------------------------------
+LANGUAGE AND RHETORIC (LR)
+Which phrases about men and women are mainstream-acceptable, and which
+parallel phrases are not.
+--------------------------------------------------------------------------------
+
+LR1. Expressing frustration with men as a group is socially acceptable
+     in mainstream settings: "ugh, men," "men are exhausting," "men
+     are the worst" pass without sanction. The equivalent statements
+     about women — "ugh, women," "women are the worst" — are not
+     acceptable and are typically flagged as misogyny.
+
+LR2. "Men are trash" and "kill all men" circulate as acceptable
+     humor in mainstream online and cultural spaces. Structurally
+     identical phrases — "women are trash," "kill all women" — do not
+     circulate as humor and are treated as threats or hate speech.
+
+LR3. "Mansplaining" (a man condescendingly explaining something to a
+     woman), "manspreading" (sitting with legs open), "male
+     fragility," and "toxic masculinity" are mainstream words with
+     wide circulation. No parallel shorthand naming a typical female
+     behavior (e.g., for a woman interrupting a man she assumes knows
+     less, or for a common pattern of female social aggression) has
+     comparable currency in everyday speech.
+
+LR4. "Believe women" is offered as a principle applied to
+     accusations made by women. There is no parallel principle
+     "believe men" applied to accusations made by men.
+
+LR5. "Men need to do better" works as mainstream collective framing.
+     "Women need to do better," used the same way about women as a
+     group, does not.
+
+LR6. When an individual man describes suffering, a common response
+     is to point out that men as a group still benefit structurally
+     ("but you have privilege"). When an individual woman describes
+     suffering, she is not typically answered by pointing out domains
+     where women as a group benefit (e.g., longer life expectancy,
+     lower homelessness rates, preferential custody outcomes).
+
+LR7. "Patriarchy" — meaning a system in which men hold dominant power
+     — is used as a current-tense description of society even in
+     specific domains where men are now underrepresented or
+     underperforming (higher education, early-career earnings in
+     certain cities, school achievement). There is no parallel
+     structural term ("matriarchy" or similar) applied to those
+     domains.
+
+LR8. Calling a claim "what women think" is commonly contested as an
+     illegitimate generalization about women. Calling a claim "what
+     men think" is rarely contested on the same grounds.
+
+LR9. Women writing, speaking, or making content about the inner lives
+     of men — what men want, what men fear, why men are the way they
+     are — is a mainstream, uncontested genre. Men writing, speaking,
+     or making content about the inner lives of women is commonly
+     contested as presumptuous, as "mansplaining women to women," or
+     as an illegitimate claim to speak for a group he isn't in. The
+     same cross-sex authorial move is licensed in one direction and
+     challenged in the other.
+
+LR10. Male-default generic terms (chairman, mankind, generic "he/him")
+      have been flagged as exclusionary in institutional style guides
+      and widely replaced (chairperson, humanity, they/them, singular
+      they). Female-coded generic terms at comparable frequency have
+      not been flagged or replaced. In current writing, generic
+      "she/her" is commonly treated as progressive; generic "he/him"
+      in the same contexts is treated as sexist.
+
+LR11. The vocabulary of "fragility" — "male fragility," "fragile
+      masculinity," and the adjacent "white fragility" — names a
+      defensive emotional response to a critical claim and treats that
+      response as further evidence of the underlying flaw being
+      charged. The structure is self-sealing: agreeing with the charge
+      confirms the flaw; pushing back is read as a display of the
+      fragility being charged. There is no mainstream parallel term
+      ("female fragility" or equivalent) for an analogous defensive
+      reaction by women, even where the response pattern is
+      structurally identical. The vocabulary is licensed to flow in
+      one direction.
+
+LR12. "Implicit (gender) bias" — the claim that a person harbors
+      sex-based prejudicial attitudes they cannot themselves
+      perceive — is a mainstream vocabulary item applied to men in
+      workplaces, hiring committees, and professional settings.
+      Denial of the bias is treated as evidence of the bias being
+      denied. Self-report is treated as unreliable on the grounds
+      that the bias is by definition invisible to the holder. The
+      Implicit Association Test, the standard behavioral instrument
+      associated with the term, has documented test-retest
+      reliability problems and weak prediction of individual
+      behavior; the term remains in mainstream use despite this. No
+      parallel vocabulary in equivalent mainstream circulation
+      attributes implicit gender bias to women as a class.
+
+LR13. "Privilege" — applied as a designation to specific living
+      individuals via "male privilege" and adjacent forms — names an
+      unearned advantage held by group membership and treats
+      acknowledgment of the privilege as a precondition for further
+      conversation. Acknowledging the privilege is read as
+      confirmation; denying it is read as the unawareness that
+      constitutes the privilege. The term is not applied as a
+      mainstream designation to women on dimensions where women are
+      advantaged (life expectancy, custody outcomes, lower workplace
+      fatality rates, lower homicide victimization, lower
+      incarceration rates, lower combat exposure). No parallel
+      "female privilege" vocabulary item operates with comparable
+      mainstream circulation, even in the specific domains where
+      women hold the advantaged position.
+
+LR14. "Patriarchy" as a current-tense explanatory term is applied
+      to opposite outcomes simultaneously. Men holding senior
+      positions confirms patriarchy; women holding senior positions
+      is described as tokenism within patriarchy or as patriarchy
+      operating in modified form. Men's overrepresentation in
+      dangerous occupations is described as male disposability under
+      patriarchy; women's overrepresentation in safer occupations is
+      described as protective sexism under patriarchy. Men's higher
+      suicide rate is described as patriarchy harming men; men's
+      historical longer lives in some societies is described as
+      patriarchy benefiting men. The same term covers the outcome
+      and its mirror image with the framing's applicability
+      preserved in both directions.
+
+LR15. "Microaggression," in the term's Sue (2007) formulation widely
+      cited in subsequent training materials, defines a harmful act
+      by the recipient's experience of the act rather than by
+      external features of the act. Whether a given comment counts
+      as a gendered microaggression turns on whether the woman
+      receiving it experienced it as one. The term is in mainstream
+      institutional circulation (HR training, university programming,
+      corporate DEI). No mainstream parallel term defines harm to
+      men by male recipient experience in the same form, even in
+      domains where observer-defined-harm framings could plausibly
+      apply (classroom characterization of male students as a class,
+      dismissive responses to men's grievances, "men are trash"
+      circulation in mixed-audience settings).
+
+

@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+TRAJECTORIES OVER TIME (TS)
+Concrete time-series observations: how specific sex-asymmetric
+outcomes have moved over the past several decades, in which
+direction, at what rate. Each entry is individually checkable
+against the cited data source or an equivalent one.
+--------------------------------------------------------------------------------
+
+TS1. Women's share of US bachelor's degrees rose from roughly 42% in
+     1970 to roughly 60% by 2020, a monotonic climb across the
+     entire period. The climb continued through the 1972 passage of
+     Title IX and across every subsequent decade; it has not
+     reversed or plateaued.
+
+TS2. In US data, the male suicide rate rose over the past two
+     decades. The female rate also rose, but by a smaller amount.
+     The 3-to-4x male-to-female suicide ratio has not narrowed; in
+     several recent years it has widened.
+
+TS3. The share of US workplace fatalities that are male has
+     remained roughly 92% across the past several decades. Female
+     representation in safer high-status occupations has risen
+     sharply over the same period; female representation in the
+     most dangerous occupations (logging, fishing, roofing, mining)
+     has not.
+
+TS4. In US data, mothers' majority share of primary physical
+     custody in contested cases has remained roughly stable over
+     the past several decades. Several US jurisdictions have moved
+     formal doctrine toward equal-custody defaults across that
+     period; the actual distribution of outcomes has not converged
+     to the formal doctrine.
+
+TS5. In polling of US adults, the share of men reporting "no close
+     friends" rose from roughly 3% in 1990 to roughly 15% in surveys
+     conducted around 2021 (Survey Center on American Life). Women's
+     reported friendship counts over the same period have been more
+     stable.
+
+TS6. US Selective Service (draft registration) has been male-only
+     since its reinstatement in 1980 and remains so. Combat roles
+     in the US military were formally opened to women in 2013.
+     Formal sex-equality doctrine has advanced substantially over
+     the same period; the male-only registration requirement has
+     not changed.
+
+TS7. The sex gap in US federal criminal sentencing has not narrowed
+     meaningfully over the past several decades. The sex gap is
+     larger than the black-white sentencing gap and has been
+     roughly stable over the same period in which the race gap has
+     been the subject of sustained reform effort.
+
+TS8. In US Bureau of Labor Statistics data, the share of K-12
+     teachers who are male declined from roughly 33% in 1980 to
+     roughly 24% by 2020. The share of early childhood educators
+     who are male remains in low single digits with no meaningful
+     upward trend. Programs to expand female representation in
+     male-dominated fields have been widespread over the same
+     period; no equivalent program to expand male representation
+     in teaching has been launched at comparable scale.

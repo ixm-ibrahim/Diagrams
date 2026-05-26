@@ -1,0 +1,168 @@
+STRUCTURE
+
+Sections are ordered from less gender-specific (general discourse
+patterns, what can and can't be said about gender) toward more
+gender-specific (concrete stats and policy in specific domains
+of life).
+
+IDs are stable anchors. Each section has a fixed two-letter prefix
+(DD, DP, AB, OD, WG, BD, PR, RC, VO, IG, LR, AC, EN, AP, TA, etc.).
+Individual entry IDs (DP10, VO11, DDm1, etc.) survive across versions
+even when sections are reordered or file numbers change. The two-
+digit file prefix is ordering only and may change; the two-letter
+ID is the permanent anchor for cross-references.
+
+The block-by-block roster of sections is in 00 - Section Roster.
+
+================================================================================
+STRUCTURE OF AN OBSERVATION
+================================================================================
+
+Every entry in the framework — raw observation, meta observation,
+or any later layer — meets the same requirements. The requirements
+are not about formatting; they are about what makes an entry able
+to do its work.
+
+1. Demystification.
+   The entry reads in plain language. A smart non-expert understands
+   it on first read; a specialist reads it and does not wince. The
+   full demystification spec is in 01 - Writing Goal; this rule
+   applies at every layer.
+
+2. Accuracy.
+   The entry says what is the case, not what is comfortable for
+   either side. Where the empirical record is mixed, the entry
+   says so directly rather than picking the side that fits a prior
+   commitment.
+
+3. Precision.
+   The entry says one thing precisely. Two pieces have to be
+   bounded.
+
+   Scope — which time period, which population, which domain.
+   An entry vague about scope gives an alert reader an easy
+   way to dismiss it as overreach.
+
+   Claim-dimension — which aspect of the phenomenon the entry
+   is making a claim about. A pattern can be described along
+   several dimensions: how often it happens (frequency),
+   whether the move is permitted or sanctioned (social
+   acceptability), how harmful it is (severity), how widely
+   it is believed (uptake). The entry should pick the
+   dimension that matches the actual point. An entry on the
+   wrong dimension quietly undershoots — the words land but
+   describe something one step over from what the writer
+   meant.
+
+   The most common dimension-mistake in this framework is
+   making an acceptability claim with a verb that only carries
+   occurrence. Most of the discourse-move observations in this
+   framework are claims about what is socially permitted, not
+   about how often the move happens. The asymmetric-treatment
+   observations especially: the same move runs in both
+   directions, but only one direction is accepted while the
+   other is called out and punished. When that is the point,
+   the verb has to say so.
+
+   Verbs that carry occurrence only — "is X-ed," "is answered
+   with," "is replaced by," "is dismissed as," "happens,"
+   "occurs," "tends to" — describe what takes place. They do
+   not, on their own, claim the move is permitted. If the
+   meta's point is acceptability, the bare passive is
+   undershooting.
+
+   Verbs that carry acceptability — "is an accepted move,"
+   "passes as," "counts as," "reads as legitimate," "is
+   sanctioned," "is permitted," "is allowed to," "is treated
+   as fair game" — make the social-permission claim explicit.
+
+   "Common" and "commonly" fall into the same trap: they
+   describe frequency when the point is permission. Replace
+   with "accepted," "permitted," "treated as legitimate,"
+   "standard," or "sanctioned."
+
+   Self-test: read the meta and ask — am I claiming this
+   happens, or am I claiming this is allowed to happen? If
+   the latter, the verb has to say so. A bare "is answered
+   with" makes the weaker claim and quietly undershoots the
+   actual point.
+
+4. Soundness.
+   The entry's claim follows from the evidence cited or reachable.
+   Claims that go beyond what the evidence supports get trimmed
+   back or hedged in-place.
+
+5. Defensibility.
+   A specialist could look up the cited or implied evidence and
+   find no fatal weakness. Entries depending on a single contested
+   study are flagged. Entries that would not survive an honest
+   cross-examination are revised before release.
+
+6. Grounding.
+   Every entry except a raw observation cites the entries it builds
+   on, in a "Draws from:" line. Raw observations — direct empirical
+   or discourse-pattern claims that are not derived from another
+   entry — do not need a draws-from line. Everything else does.
+
+7. Concrete grounding.
+   Comparison-words like "mirror," "reverse," "parallel," and
+   "asymmetric" do not carry their content on their own. If an
+   entry uses one, it illustrates the comparison directly. Not
+   "the mirror move is not standard" but "the mirror move — saying
+   X about women — is not standard."
+
+8. No bare assertion.
+   An observation without an example, a number, or a named instance
+   is too weak to release. Discourse-pattern observations get a
+   typical-utterance example. Statistical observations get a number
+   with a source. Legal-framework observations get a specific
+   statute, policy, or case.
+
+   The example has to demonstrate the claim, not just label it.
+   Giving the name of a phenomenon ("concrete instance:
+   'whataboutism'") is not a demonstration of how the phenomenon
+   works — it requires the reader to already know what the name
+   refers to. A demonstration shows the move in action: a typical
+   utterance, the response it draws, and (for asymmetry claims)
+   the parallel move in the other direction going unflagged. If
+   the reader has to know the term to grasp the example, the
+   example isn't doing its job.
+
+9. Relatable examples.
+   An aspect of demystification is that the reader should
+   recognize every example, analogy, or named instance on first
+   read, without specialized background. The test is stronger
+   than "the reader has heard of this." The example should land
+   for a reader who has direct or close-second-hand experience
+   with the situation it describes, not just one who recognizes
+   the words.
+
+   Strong source-pools — things almost every adult has been in
+   or argued about: driving, paying bills, eating and cooking,
+   chores at home, family arguments, school, working a job,
+   texts and emails, mainstream news and TV. Examples drawn
+   from here usually land.
+
+   Weak source-pools that look stronger than they are:
+   experiences specific to a slice of readers — unpaid
+   internships, graduate school, particular industries, court
+   proceedings, niche sports, fashion or gaming subcultures.
+   These can feel "everyday" to a writer who lives near them,
+   while a reader without that background has no purchase on
+   them. The unpaid-internship vs. trial-shift analogy is a
+   case in point: it sounds universal but the underlying
+   experience is narrow.
+
+   When a precise term is needed (e.g. "parasocial"), pair it
+   with a plain gloss ("parasocial — feeling like you personally
+   know a creator you only watch online"). The same rule applies
+   to research-field references: name the finding in plain words
+   rather than leaning on the field name to do the work.
+
+   Self-check on any candidate example: would it land for a
+   reader who never went to college, never worked in a corporate
+   office, lives in a different country? If the example only
+   works for readers like the writer, it fails this rule.
+
+A pre-release self-check on each entry runs through 1–9. If any
+fail, rewrite.

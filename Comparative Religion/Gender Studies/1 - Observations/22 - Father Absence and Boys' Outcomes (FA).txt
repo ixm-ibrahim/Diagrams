@@ -1,0 +1,71 @@
+--------------------------------------------------------------------------------
+FATHER ABSENCE AND BOYS' OUTCOMES (FA)
+Concrete observations about the absence of a resident biological
+father and what that absence does, on average, to the children — and
+how the topic sits in different research and policy traditions.
+--------------------------------------------------------------------------------
+
+FA1. Father-absent households (no resident biological father) make
+     up roughly a quarter of US households with children, with
+     substantial variation across populations. The trend over the
+     past several decades has been toward higher rates of father
+     absence.
+
+FA2. Boys raised in father-absent households show, on average,
+     higher rates of school dropout, behavioral problems, juvenile
+     criminal-justice contact, and adult incarceration relative to
+     boys raised with present fathers in otherwise similar
+     circumstances. The effect remains substantial after controlling
+     for income and education in many studies, though the magnitude
+     varies and the causal pathway (selection vs. effect of absence
+     itself) is debated. Girls raised in father-absent households
+     also show negative effects, with a different pattern (earlier
+     sexual activity, higher teenage-pregnancy rates).
+
+FA3. The mainstream policy framing of single-parent households is
+     "support the parent" — typically the mother. The framing
+     "address why the father isn't there" or "intervene to keep
+     fathers present" has substantially less institutional support
+     and less developed policy infrastructure. Father presence as a
+     child-welfare intervention is not in the standard policy
+     toolkit.
+
+FA4. Custody policy (FL1, FL2) and family-law incentives interact
+     with father absence. When custody disputes systematically award
+     primary physical custody to mothers, the practical role
+     available to non-custodial fathers narrows. Whether the custody
+     pattern produces more father absence, or whether father absence
+     produces the custody pattern, is contested; both directions are
+     likely operating.
+
+FA5. The "father deficit" research is more institutionally developed
+     in some sub-disciplines (sociology of family, criminology, child
+     development) than in others (gender studies). The same
+     observation about a sex-asymmetric child-rearing arrangement
+     reads as central in one literature and marginal in another.
+
+FA6. The cultural prestige of fatherhood as an identity has declined
+     in mainstream Western depictions over the past several decades.
+     Fathers in popular media (MR1) are routinely shown as
+     incompetent at domestic tasks; the affirmative case for what a
+     father uniquely contributes to a child's development is less
+     common in current child-rearing advice than the equivalent case
+     for what a mother uniquely contributes.
+
+FA7. Boy-specific developmental data — later-on-average maturation
+     of executive function, higher rates of behavioral and
+     learning-disorder diagnoses (BD12, ED3), higher infant-mortality
+     rates, higher dropout rates — does not have a parallel
+     boys-as-population research and policy infrastructure equivalent
+     to the girls-as-population infrastructure (Title IX programs,
+     girls-in-STEM initiatives, "girl power" branding, MR4) that
+     responded to the female-side data of an earlier era.
+
+FA8. Where father-absence research has been engaged in mainstream
+     coverage, it has more often been treated as a class or race
+     story than as a gender story. The framing matters: when the
+     story is told as gender, it is a story about boys not having
+     fathers; when told as class, the same boys appear as a class
+     statistic. The gender framing is the one currently
+     under-represented.
+

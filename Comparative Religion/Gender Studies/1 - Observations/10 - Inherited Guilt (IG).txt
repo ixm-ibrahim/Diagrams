@@ -1,0 +1,444 @@
+--------------------------------------------------------------------------------
+INHERITED GUILT (IG)
+The expectation that a living person should feel and display moral
+guilt for actions taken by earlier members of their group, before any
+of their own conduct has been assessed. Distinct from inherited
+oppressor labels (VO11) and inherited collective responsibility
+(VO12) — those are about how the label is applied; this section is
+about the inner state and its performance.
+--------------------------------------------------------------------------------
+
+IG1. Inherited guilt is distinct from inherited responsibility (VO12).
+     Responsibility is an assignment ("you are accountable for X").
+     Guilt is an inner state ("you should feel bad about X").
+     Mainstream gender discourse on men commonly asks for both:
+     acknowledge the inherited responsibility, and display the
+     corresponding emotional state. The two are conflated in everyday
+     usage but are not the same ask.
+
+IG2. The structural template is theological. Original sin — moral
+     stain inherited at birth, requiring ongoing acknowledgment and
+     atonement, never fully discharged — is the closest historical
+     analog. Secular inherited-guilt frames inherit much of this
+     structure (the flaw is born-in, atonement is ongoing, full
+     release is unavailable) without the theological vocabulary.
+     The structure operates whether or not the speakers identify it
+     as theological.
+
+IG3. The performance of guilt is what gets ratified. Whether the
+     person actually feels guilty is uninspected. A man who publicly
+     says "I see how I've benefited from patriarchy and I'm working
+     on myself" is in good standing whether or not the inner state
+     matches the words. The system rewards the public display, not
+     the felt experience — which gives the system a hollow-performance
+     dynamic and rewards the rhetorically fluent over the genuinely
+     reflective.
+
+IG4. Refusal of inherited guilt is read as evidence of the underlying
+     flaw, structurally identical to the fragility move (LR11, DP10).
+     Pushing back on the inherited-guilt frame becomes proof that the
+     frame applies. The refusal cannot get a hearing on its merits —
+     the closed loop closes around the response.
+
+IG5. The grant of innocence is asymmetric. Women are presumptively
+     innocent of inherited collective harms (VO12). Men are
+     presumptively guilty until disclaimed, and disclaiming does not
+     fully clear the label (VO11). The inherited-guilt regime
+     therefore operates on men in a way it does not operate on women,
+     even where the underlying historical record is mixed (women's
+     historical participation in restrictive systems, female support
+     for restrictive gender roles, female-led witch-hunt waves,
+     women's lobbying for maternal-preference custody doctrines).
+
+IG6. Inherited guilt is not discharged by individual conduct. A man
+     who has personally treated women well, raised daughters,
+     supported female colleagues, opposed harassment, and refrained
+     from any specifically attributable wrong remains within the
+     inherited-guilt frame because the frame is not indexed to his
+     conduct. This separates inherited guilt from accountability:
+     accountability would be discharged by addressing specific
+     wrongs; inherited guilt is structurally not dischargeable.
+
+IG7. Inherited guilt is increasingly addressed to children. Boys in
+     current Western primary and secondary education are commonly
+     addressed as already implicated in patriarchy, toxic
+     masculinity, or men's collective record, before they have any
+     conduct to be assessed by. Girls are not typically addressed as
+     already implicated in any female collective record. The
+     asymmetry shapes early identity formation in a way the same
+     asymmetry applied to adults does not.
+
+IG8. Inherited guilt provides ongoing moral leverage. Each generation
+     can be approached as still owing something for the previous
+     generation's conduct, regardless of any individual or
+     generational change. The leverage does not expire, does not
+     diminish with time, and does not respond to demonstrated
+     change. This is unusual among moral frameworks and resembles a
+     permanent debt more than a discharged offense.
+
+IG9. The phrase "do the work" — naming a continuous, never-completed
+     labor of self-examination and acknowledgment — is the
+     contemporary form of the atonement structure (IG2). The work is
+     unending by design; framing it as completable would dissolve
+     the leverage IG8 describes.
+
+IG10. Inherited guilt and individual moral agency are in tension.
+      Holding a person responsible for their own conduct requires
+      treating that conduct as theirs and as decisive. Holding the
+      same person responsible for inherited collective conduct
+      requires treating their group membership as decisive instead.
+      Used together, the two moves let the speaker pick whichever
+      framing is more damning at the moment — individual conduct when
+      the conduct is bad, group inheritance when it isn't. The
+      person being addressed has no available framing that defeats
+      both moves.
+
+IG11. The reciprocal move — addressing women collectively to feel
+      guilt for harms historically done in women's name (witch-trial
+      accusations, support for restrictive role-codes, maternal-
+      preference custody lobbying, false accusations) — is not in
+      mainstream cultural use. The asymmetry is not that the
+      historical record on the women's side is empty; it is that the
+      inherited-guilt move is licensed in one direction and not the
+      other.
+
+
+================================================================================
+META OBSERVATIONS
+Generalizations that surface from reading the level-1 observations
+above. Each is a claim of its own; the "draws from" line names the
+level-1 entries that ground it. Within a section, when a later level-1
+entry reinforces a meta observation already on the page, the entry is
+added to that meta observation's "draws from" rather than starting a
+new one. Parentheticals show the thinking that produced each meta
+observation — what was interrogated and what surfaced.
+================================================================================
+
+(IG1: "Inherited guilt is distinct from inherited responsibility."
+What's the rule about telling them apart?)
+
+IGm1. Asking someone to be accountable for something and asking them
+      to feel a particular way about it are different kinds of
+      demand. One can be made without the other.
+      Draws from: IG1.
+
+(IG1: "Mainstream gender discourse on men commonly asks for both:
+acknowledge the inherited responsibility, and display the
+corresponding emotional state." Why both?)
+
+IGm2. Mainstream gender discourse on men bundles two demands
+      together — accept the responsibility, and produce the matching
+      feeling — and treats both as part of the same ask.
+      Draws from: IG1.
+
+(IG1: "The two are conflated in everyday usage but are not the same
+ask." Why does conflation matter?)
+
+IGm3. Conflating responsibility with guilt lets a demand for a
+      particular inner state ride along with a demand for
+      accountability, without the inner-state demand having to be
+      argued for on its own.
+      Draws from: IG1.
+
+(IG2: "The structural template is theological. Original sin — moral
+stain inherited at birth, requiring ongoing acknowledgment and
+atonement, never fully discharged — is the closest historical
+analog." Why call it theological?)
+
+IGm4. The shape of inherited guilt — a stain you're born with,
+      ongoing penance, no full release — comes straight out of
+      religious doctrine, specifically the Christian doctrine of
+      original sin.
+      Draws from: IG2.
+
+(IG2: "Secular inherited-guilt frames inherit much of this structure
+... without the theological vocabulary." Why does the structure
+carry over without the religious words?)
+
+IGm5. Secular gender discourse keeps the religious shape but drops
+      the religious vocabulary, so the source of the structure is
+      not visible at first glance — concrete instances: the public
+      acknowledgment ritual ("I see how I've benefited from
+      patriarchy and I'm working on myself") and the contemporary
+      atonement label ("do the work").
+      Draws from: IG2, IG3, IG9.
+
+(IG2: "The structure operates whether or not the speakers identify
+it as theological." Why does it work either way?)
+
+IGm6. A structural pattern keeps working whether or not the people
+      using it can name where it came from. Knowing the source is
+      not required for the structure to do its work.
+      Draws from: IG2.
+
+(IG3: "The performance of guilt is what gets ratified. Whether the
+person actually feels guilty is uninspected." What's the rule about
+display versus feeling?)
+
+IGm7. What the system actually checks is the public display of
+      guilt, not the inner state — even though the surface language
+      is about the inner state.
+      Draws from: IG3.
+
+(IG3: "Whether the person actually feels guilty is uninspected." Why
+not inspect?)
+
+IGm8. An inner state cannot be inspected from outside, so the
+      visible performance gets accepted as a stand-in. The system
+      checks what it can see.
+      Draws from: IG3.
+
+(IG3: "rewards the rhetorically fluent over the genuinely
+reflective." Why does fluency win?)
+
+IGm9. Verbal fluency produces the right display on demand;
+      reflection often does not. A system that grades on display
+      therefore rewards fluent speakers over thoughtful ones,
+      regardless of how hard each is actually thinking.
+      Draws from: IG3.
+
+(IG4: "Refusal of inherited guilt is read as evidence of the
+underlying flaw." What's the rule?)
+
+IGm10. Refusing the inherited-guilt label is treated as proof that
+       the person has the very flaw the label was about.
+       Draws from: IG4.
+
+(IG4: "structurally identical to the fragility move (LR11, DP10).
+Pushing back on the inherited-guilt frame becomes proof that the
+frame applies." What's the structural property?)
+
+IGm11. Inherited-guilt refusal runs as a closed loop: agreement
+       counts as confirmation, and disagreement counts as
+       confirmation too. This is the same shape as the "fragility"
+       charge in DP10 — naming someone "fragile" if they react and
+       "in denial" if they don't.
+       Draws from: IG4.
+
+(IG4: "the refusal cannot get a hearing on its merits — the closed
+loop closes around the response." What does the closed loop do to
+the response's chances?)
+
+IGm12. Inside a closed-loop frame, a response cannot be evaluated
+       on whether it is correct. The framing has already supplied
+       the verdict before the content gets read.
+       Draws from: IG4.
+
+(IG5: "The grant of innocence is asymmetric." What's the rule about
+starting points?)
+
+IGm13. Men and women enter the inherited-guilt regime from
+       different default starting points — guilty for men, innocent
+       for women.
+       Draws from: IG5, IG7.
+
+(IG5: "Women are presumptively innocent of inherited collective
+harms." Why does the women's side get a pass?)
+
+IGm14. Women's historical collective record is treated as not
+       generating inherited guilt for living women. The default
+       move is to leave it alone rather than to bring it forward.
+       Draws from: IG5, IG7, IG11.
+
+(IG5: "Men are presumptively guilty until disclaimed." Why does
+men's side start guilty?)
+
+IGm15. Men start the inherited-guilt regime already labeled. The
+       default position is one they have to actively argue their
+       way out of.
+       Draws from: IG5, IG7.
+
+(IG5: "disclaiming does not fully clear the label." Why doesn't a
+disclaim work?)
+
+IGm16. Even a man who explicitly rejects the inherited-guilt label
+       does not fully come out from under it. The disclaim reduces
+       the label without removing it.
+       Draws from: IG5.
+
+(IG5: "even where the underlying historical record is mixed
+(women's historical participation in restrictive systems, female
+support for restrictive gender roles, female-led witch-hunt waves,
+women's lobbying for maternal-preference custody doctrines)." Why
+not the empty-record explanation?)
+
+IGm17. The asymmetry is not because the women's-side historical
+       record is empty. Concrete instances of female collective
+       participation include support for restrictive gender role-
+       codes, female-led witch-hunt waves, and women's lobbying for
+       maternal-preference custody doctrines. The record exists;
+       the inherited-guilt move just isn't run against it.
+       Draws from: IG5, IG11.
+
+(IG6: "Inherited guilt is not discharged by individual conduct ...
+the frame is not indexed to his conduct." Why doesn't conduct move
+the label?)
+
+IGm18. Personal conduct doesn't move the inherited-guilt label,
+       because the label was never measuring personal conduct in
+       the first place. It was always about group membership.
+       Draws from: IG6, IG10.
+
+(IG6: "This separates inherited guilt from accountability:
+accountability would be discharged by addressing specific wrongs;
+inherited guilt is structurally not dischargeable." What's the
+indexing difference?)
+
+IGm19. Accountability is indexed to specific wrongs that can be
+       identified and addressed. Inherited guilt is indexed to
+       group membership, which cannot be exited. They look like
+       similar moral language from outside but they discharge
+       differently.
+       Draws from: IG6.
+
+(IG6: "structurally not dischargeable." Why structurally?)
+
+IGm20. The non-dischargeability is built into the design of the
+       frame. No action available to the labeled person — apology,
+       reform, restitution, time — would clear it, because clearing
+       it was never an option the frame allowed for.
+       Draws from: IG6, IG8.
+
+(IG7: "Inherited guilt is increasingly addressed to children." What's
+the rule?)
+
+IGm21. The inherited-guilt frame is being applied earlier in life
+       than before, including to children in primary and secondary
+       schools.
+       Draws from: IG7.
+
+(IG7: "Boys ... are commonly addressed as already implicated in
+patriarchy, toxic masculinity, or men's collective record, before
+they have any conduct to be assessed by." Why before any conduct?)
+
+IGm22. Boys are addressed with the inherited-guilt label before any
+       of their own conduct exists to be evaluated. The label is
+       applied to a near-empty record.
+       Draws from: IG7.
+
+(IG7: "Girls are not typically addressed as already implicated in
+any female collective record." What about the other side of the
+classroom?)
+
+IGm23. Girls in the same classrooms are not addressed as carrying
+       any female collective record. There is no parallel
+       curriculum module asking girls to examine female
+       participation in restrictive role-codes, witch-hunt waves,
+       or maternal-preference custody lobbying.
+       Draws from: IG7.
+
+(IG7: "The asymmetry shapes early identity formation in a way the
+same asymmetry applied to adults does not." Why does it land harder
+on kids?)
+
+IGm24. Applied to children, the inherited-guilt frame shapes
+       identity before the child has the experience or vocabulary
+       to push back against the framing. Adults can refuse a frame
+       they recognize; children mostly cannot recognize it as a
+       frame.
+       Draws from: IG7.
+
+(IG8: "Inherited guilt provides ongoing moral leverage." What does
+the leverage look like in practice?)
+
+IGm25. Whoever speaks against the labeled group can return to make
+       new moral demands at any later point, because the labeled
+       group can never reach a "this is settled" state.
+       Draws from: IG8.
+
+(IG8: "Each generation can be approached as still owing something
+for the previous generation's conduct." Why does the debt cross
+generations?)
+
+IGm26. The debt is renewed at each generation rather than ending
+       with the people who actually did the original conduct.
+       Living people are charged for acts they were not part of.
+       Draws from: IG8.
+
+(IG8: "The leverage does not expire, does not diminish with time,
+and does not respond to demonstrated change. This is unusual among
+moral frameworks." How is it unusual?)
+
+IGm27. Most moral frames let an offender clear an offense — by
+       changed conduct, by restitution, or by enough time. The
+       inherited-guilt frame is unusual in offering none of these
+       exits.
+       Draws from: IG8.
+
+(IG9: "'Do the work' — naming a continuous, never-completed labor
+of self-examination and acknowledgment — is the contemporary form
+of the atonement structure (IG2)." Why does this phrase exist?)
+
+IGm28. Penance for inherited guilt has a current secular name —
+       "do the work" — and a current form, even after the religious
+       vocabulary has been dropped.
+       Draws from: IG9.
+
+(IG9: "The work is unending by design; framing it as completable
+would dissolve the leverage IG8 describes." Why must the work stay
+unending?)
+
+IGm29. The labor is set up so it can never be finished. Allowing
+       it to be finishable would end the ongoing claim on the
+       labeled group, which is the part of the system that does
+       the most work.
+       Draws from: IG9.
+
+(IG10: "Holding a person responsible for their own conduct requires
+treating that conduct as theirs and as decisive. Holding the same
+person responsible for inherited collective conduct requires
+treating their group membership as decisive instead." Why are these
+in tension?)
+
+IGm30. Treating someone's own conduct as the decisive thing about
+       them and treating their group membership as the decisive
+       thing about them cannot both be the active rule at the same
+       time. One has to displace the other.
+       Draws from: IG10.
+
+(IG10: "the two moves let the speaker pick whichever framing is
+more damning at the moment — individual conduct when the conduct is
+bad, group inheritance when it isn't." What does having both
+available do for the speaker?)
+
+IGm31. When two framings are both available, the speaker can
+       switch between them so the verdict stays negative whichever
+       way the facts run — concrete instance: bad personal conduct
+       gets pinned on the individual, good personal conduct gets
+       dissolved into group inheritance.
+       Draws from: IG10.
+
+(IG10: "The person being addressed has no available framing that
+defeats both moves." What's the listener's position?)
+
+IGm32. The person being addressed has no single response that
+       answers both framings, since each requires a different kind
+       of defense. Whichever defense they pick leaves the other
+       framing untouched.
+       Draws from: IG10.
+
+(IG11: "The reciprocal move ... is not in mainstream cultural use."
+What about the missing direction?)
+
+IGm33. The mirror move — addressing women collectively to feel
+       guilt for historical harms done in women's name, such as
+       witch-trial accusations, support for restrictive role-codes,
+       or maternal-preference custody lobbying — is not a standard
+       cultural move and does not appear in mainstream curricula,
+       sermons, or political speech.
+       Draws from: IG11.
+
+(IG11: "the historical record on the women's side is empty" was
+already addressed by IGm17. IG11 added to IGm17's draws-from. The
+new angle below is about what kind of fact the asymmetry actually
+is.)
+
+(IG11: "the inherited-guilt move is licensed in one direction and
+not the other." Why one direction?)
+
+IGm34. The inherited-guilt move is licensed only in one direction —
+       applied to men but not to women — and the licensing is a
+       cultural choice, not a deduction from the historical record.
+       Either side's record could in principle ground the move;
+       only one side's actually does.
+       Draws from: IG11.

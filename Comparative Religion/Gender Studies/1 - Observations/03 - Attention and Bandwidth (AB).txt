@@ -1,0 +1,274 @@
+--------------------------------------------------------------------------------
+ATTENTION AND BANDWIDTH (AB)
+Cognitive resources required to engage analytically with an emotionally
+intense interlocutor, and what happens to discourse if those resources
+are scarce. Some entries are well-supported empirically; the connections
+between them and discourse outcomes are flagged where speculative.
+--------------------------------------------------------------------------------
+
+AB1. Carefully engaging with a person who is emotionally intense
+     costs bandwidth separate from the work of evaluating what they
+     said. The listener has to track the other person's feelings,
+     control their own reactions, and manage tone — alongside, not
+     instead of, evaluating what was said. This is a standard
+     finding in cognitive-load and emotion-regulation research and
+     holds regardless of who is talking to whom.
+
+AB2. The bandwidth cost of managing feelings in a conversation is
+     not paid equally by the two parties. The calmer party carries
+     the emotion-management work; the more-intense party does not
+     pay the same cost. Over a long exchange this becomes a real
+     one-sided drain, separate from any question of who is correct.
+     The party paying the cost has less left over for the substance.
+
+AB3. Survey measures of attention behavior in Western adults — average
+     uninterrupted task time, screen-shifting frequency, depth of
+     single-source reading — have moved in the direction of less
+     sustained attention over the past two decades. Most measures
+     point in that direction; how big the drop is, is contested
+     across studies, and a minority of researchers argue that what
+     looks like a drop is attention being moved to new things rather
+     than capacity falling. The trend appears in both sexes; some
+     measures show it more pronounced in younger men.
+
+AB4. (Speculative.) Sustained-attention capacity has dropped over the
+     past two decades while the bandwidth cost of carefully engaging
+     with someone who is emotionally intense has not. If both are
+     true, that cost is harder to pay; likely consequences include
+     more leaving conversations, more reactive responses, and less
+     careful engagement on emotionally charged topics — with the
+     costs falling harder on the calmer party. The link between the
+     focus data and the discourse outcomes is plausible but hasn't
+     been tested directly; flag it as a guess rather than a finding.
+
+AB5. Activities that eat up long stretches of focus — and so
+     compete with time spent talking with people or thinking
+     carefully — differ by sex in what form they take. Long-form
+     video games (action, competitive, role-playing,
+     massively-multiplayer online) are a male-skewed category and
+     have been accepted in the mainstream as a focus or attention
+     concern for two decades. Female-skewed scrollable feeds
+     (Instagram, TikTok) joined the named-concern list around
+     2023–2024, primarily on youth mental-health grounds. Other
+     female-skewed equivalents — reality TV, parasocial creator
+     content (feeling close to YouTubers, streamers, and podcasters
+     one only watches), true-crime media, romance and serial
+     fiction — eat up comparable hours per week in survey data and
+     remain outside the mainstream focus/addiction conversation.
+     The asymmetry has narrowed but not closed.
+
+AB6. In a charged disagreement, today's discourse norms add a rule
+     on top of the bandwidth cost difference: when one party is much
+     more emotionally intense than the other, the calmer party is
+     expected to do the actual reasoning AND to carry the emotional
+     management — and also expected not to say they are doing both.
+     Naming the split ("I notice you're upset and I'm trying to stay
+     analytical and I'm being asked to handle both") reads as
+     dismissive or detached (see DD1).
+
+
+================================================================================
+META OBSERVATIONS — TEMPLATE
+Empty meta-observation slots, each preceded by a parenthetical that
+names which clause is being interrogated, which angle within that
+clause is on the table, and what is being asked. The meta itself is
+left blank ([TBD]) for the writer to land. The interrogation procedure
+is the one in 03 - Meta Observations: name the angle in the clause,
+ask why (cause/rule), and — when distinct — ask what the general form
+is (the rule the specific case is one instance of). Open questions,
+surfaced tensions, cross-section merge candidates, and audit flags
+are also recorded in the parentheticals where they arise.
+
+IDs are tentative until the meta is filled in. Empty slots can be
+renumbered, merged, or dropped before the writer commits to wording.
+================================================================================
+
+(AB1, "carefully engaging with a person who is emotionally intense costs bandwidth separate from the work of evaluating what they said" — angle: the bandwidth cost itself. What's the underlying rule about emotional engagement and bandwidth?)
+
+ABm1. [TBD]
+      Draws from: AB1.
+
+(AB1, "separate from the work of evaluating what they said" — angle: orthogonality. The two costs are independent. Why are they separate rather than overlapping?)
+
+ABm2. [TBD]
+      Draws from: AB1.
+
+(AB1, "the listener has to track the other person's feelings, control their own reactions, and manage tone" — angle: the three jobs. Three separable kinds of work in one clause. What does it mean that the cost decomposes into three rather than one?)
+
+ABm3. [TBD]
+      Draws from: AB1.
+
+(AB1, "alongside, not instead of, evaluating what was said" — angle: simultaneity. Both costs are paid at once, not in sequence. What's the rule about how the listener pays both at the same time?)
+
+ABm4. [TBD]
+      Draws from: AB1.
+
+(AB1, "this is a standard finding in cognitive-load and emotion-regulation research" — angle: the empirical grounding. Why include the research clause? What does it do that the bare claim wouldn't?)
+
+ABm5. [TBD]
+      Draws from: AB1.
+
+(AB1, "holds regardless of who is talking to whom" — angle: universality. The cost doesn't depend on speaker or listener identity. What does this clause guard against, and why include it?)
+
+ABm6. [TBD]
+      Draws from: AB1.
+
+(AB1, general form: when does emotional engagement cost separable bandwidth from cognitive engagement, and when do they merge?)
+
+ABm7. [TBD]
+      Draws from: AB1.
+
+(AB2, "the bandwidth cost of managing feelings in a conversation is not paid equally by the two parties" — angle: cost distribution. Why do the parties pay differently?)
+
+ABm8. [TBD]
+      Draws from: AB2.
+
+(AB2, "the calmer party carries the emotion-management work; the more-intense party does not pay the same cost" — angle: the directional rule. The cost falls on whoever isn't generating the emotion. Why this direction?)
+
+ABm9. [TBD]
+      Draws from: AB2.
+
+(AB2, "over a long exchange this becomes a real one-sided drain" — angle: temporal compounding. Why does duration matter? What does a small per-exchange cost become over time?)
+
+ABm10. [TBD]
+       Draws from: AB2.
+
+(AB2, "separate from any question of who is correct" — angle: independence from rightness. What does this clause guard against — specifically, the assumption that the cost-payer is the right one?)
+
+ABm11. [TBD]
+       Draws from: AB2.
+
+(AB2, "the party paying the cost has less left over for the substance" — angle: the consequence. Bandwidth is finite. What does the consequence imply about who's likely to argue well in a charged exchange?)
+
+ABm12. [TBD]
+       Draws from: AB2.
+
+(AB2, general form: when an asymmetric cost compounds over time, what happens to the carrier's capacity for substantive engagement?)
+
+ABm13. [TBD]
+       Draws from: AB2.
+
+(AB3, "have moved in the direction of less sustained attention over the past two decades" — angle: the basic empirical claim. What's the direction-claim, and why is twenty years the relevant window?)
+
+ABm14. [TBD]
+       Draws from: AB3.
+
+(AB3, "average uninterrupted task time, screen-shifting frequency, depth of single-source reading" — angle: the named survey measures. Three measures. Why these specifically? What do they share?)
+
+ABm15. [TBD]
+       Draws from: AB3.
+
+(AB3, "most measures point in that direction; how big the drop is, is contested" — angle: direction agreed, magnitude not. Why split the empirical claim this way? What does separating direction from magnitude let the writer do?)
+
+ABm16. [TBD]
+       Draws from: AB3.
+
+(AB3, "a minority of researchers argue that what looks like a drop is attention being moved to new things rather than capacity falling" — angle: the minority view. What does the alternate reading add — and why include it?)
+
+ABm17. [TBD]
+       Draws from: AB3.
+
+(AB3, "the trend appears in both sexes; some measures show it more pronounced in younger men" — angle: sub-population. What does this clause guard against (a story about one sex losing focus while the other holds steady) and what does it admit (younger men getting hit harder)?)
+
+ABm18. [TBD]
+       Draws from: AB3.
+
+(AB3, general form: how do empirical claims with disputed magnitude but agreed direction get communicated honestly?)
+
+ABm19. [TBD]
+       Draws from: AB3.
+
+(AB4, "(Speculative.)" and "plausible but hasn't been tested directly; flag it as a guess rather than a finding" — angle: the epistemic flag. What's the rule about how compositional speculative claims get marked?)
+
+ABm20. [TBD]
+       Draws from: AB4.
+
+(AB4, "sustained-attention capacity has dropped over the past two decades while the bandwidth cost of carefully engaging with someone who is emotionally intense has not. If both are true, that cost is harder to pay" — angle: the conditional structure. What's the predicted mechanism, and why is the mechanism plausible without being established?)
+
+ABm21. [TBD]
+       Draws from: AB4.
+
+(AB4, "likely consequences include more leaving conversations, more reactive responses, and less careful engagement on emotionally charged topics" — angle: the predicted shape. Three predicted reactions. What's the underlying rule about what people do when bandwidth costs become unpayable?)
+
+ABm22. [TBD]
+       Draws from: AB4.
+
+(AB4, "with the costs falling harder on the calmer party" — angle: asymmetric impact. The breakdown lands harder on the party already paying more. Why does the asymmetry compound?)
+
+ABm23. [TBD]
+       Draws from: AB4.
+
+(AB4, general form: what's the rule for combining two well-supported findings via a plausible mechanism into a third claim? Under what conditions does the composite claim get to count as a finding?)
+
+ABm24. [TBD]
+       Draws from: AB4.
+
+(AB5, "activities that eat up long stretches of focus ... differ by sex in what form they take" — angle: the form-by-sex rule. Why do men's and women's voluntary time-sinks differ in form rather than just in title?)
+
+ABm25. [TBD]
+       Draws from: AB5.
+
+(AB5, "long-form video games (action, competitive, role-playing, massively-multiplayer online) are a male-skewed category and have been accepted in the mainstream as a focus or attention concern for two decades" — angle: the male side. The category is named, the framing is concern, the timeline is two decades. What does the long-standing concern-framing tell us?)
+
+ABm26. [TBD]
+       Draws from: AB5.
+
+(AB5, "female-skewed scrollable feeds (Instagram, TikTok) joined the named-concern list around 2023–2024, primarily on youth mental-health grounds" — angle: scrollable feeds. Why does this category enter the concern-conversation when it does, and on the specific grounds named (youth mental health rather than attention)?)
+
+ABm27. [TBD]
+       Draws from: AB5.
+
+(AB5, "other female-skewed equivalents — reality TV, parasocial creator content (feeling close to YouTubers, streamers, and podcasters one only watches), true-crime media, romance and serial fiction — eat up comparable hours per week in survey data and remain outside the mainstream focus/addiction conversation" — angle: the omitted female-skewed time-sinks. Comparable hours, no concern-framing. Why are some female-skewed time-sinks in the conversation and others outside?)
+
+ABm28. [TBD]
+       Draws from: AB5.
+
+(AB5, the contrast itself — same hours, different cultural treatment. Distinct from the side-specific metas because it names the asymmetry, not either side. What's the underlying rule about which time-uses earn the concern-frame and which don't?)
+
+ABm29. [TBD]
+       Draws from: AB5.
+
+(AB5, "the asymmetry has narrowed but not closed" — angle: the trajectory. What does the narrowing tell us about the rule's stability — is the rule changing, or is the rule the same and the inputs are changing?)
+
+ABm30. [TBD]
+       Draws from: AB5.
+
+(AB5, the four named non-listed female-skewed categories — reality TV, parasocial creator content, true-crime, romance/serial fiction — angle: the category. What do they share that puts them in the same omitted bucket?)
+
+ABm31. [TBD]
+       Draws from: AB5.
+
+(AB5, general form: when does a time-use category become a named cultural concern vs stay outside the conversation?)
+
+ABm32. [TBD]
+       Draws from: AB5.
+
+(AB6, "today's discourse norms add a rule on top of the bandwidth cost difference" — angle: the layered rule. Why does the discourse rule layer on top of the bandwidth cost rather than replace it?)
+
+ABm33. [TBD]
+       Draws from: AB6.
+
+(AB6, "the calmer party is expected to do the actual reasoning AND to carry the emotional management" — angle: dual expectation. Both jobs land on the same person. Why is the calmer party assigned both?)
+
+ABm34. [TBD]
+       Draws from: AB6.
+
+(AB6, "and also expected not to say they are doing both" — angle: the silence rule. The cost-payer is expected to be silent about the cost. Why is naming the asymmetry forbidden?)
+
+ABm35. [TBD]
+       Draws from: AB6.
+
+(AB6, "naming the split ('I notice you're upset and I'm trying to stay analytical and I'm being asked to handle both') reads as dismissive or detached" — angle: the punishment for breaking the silence rule. Same character-charge as DD1. What's the rule about how naming the asymmetry gets re-described as the same flaw the calm-speech rule already punishes?)
+
+ABm36. [TBD]
+       Draws from: AB6.
+
+(AB6, "see DD1" — angle: the cross-reference. The same mechanism that punishes calm speech also punishes naming the split. What's the connection — one mechanism, two surfaces, or two mechanisms that happen to land on the same character-charge?)
+
+ABm37. [TBD]
+       Draws from: AB6.
+
+(AB6, general form: when does naming an asymmetric cost get punished as evidence of the cost-payer's defective character?)
+
+ABm38. [TBD]
+       Draws from: AB6.

@@ -1,7 +1,7 @@
 ================================================================================
 OBSERVED ASYMMETRIES IN HOW MEN AND WOMEN ARE TREATED
-STAGING — items held outside the main Layer 2, Layer 3, and Layer 4
-lists (v8)
+STAGING — items held outside the main Layer 2, Layer 3, Layer 4, and
+Layer 5 lists (v11)
 ================================================================================
 
 
@@ -21,14 +21,16 @@ kinds of entries live in each layer's section:
     the layer below. Held here until the next layer's file exists.
 
 Items in this file do not carry main-list IDs. The main Layer 2,
-Layer 3, and Layer 4 files use contiguous IDs with no gaps. Staging
-IDs are separate:
+Layer 3, Layer 4, and Layer 5 files use contiguous IDs with no gaps.
+Staging IDs are separate:
   - Layer 2 failed-audit: S-*
   - Layer 2 promoted to Layer 3: L3-*
   - Layer 3 failed-audit: M-S-*
   - Layer 3 promoted to Layer 4: L4-*
   - Layer 4 failed-audit: H-S-*
   - Layer 4 promoted to Layer 5: L5-*
+  - Layer 5 failed-audit: G-S-*
+  - Layer 5 promoted to Layer 6: L6-*
 ================================================================================
 
 
@@ -72,19 +74,159 @@ SECTION 3: LAYER 4 STAGING
 
 3B. PROMOTED TO LAYER 5 CANDIDACY
 
+(currently empty — L5-A has been promoted into the main Layer 5 file
+as G1, with a slight revision in wording and with the shape-note
+question resolved in favor of keeping H1–H7 together under one entry
+rather than splitting. The reflexive-case difference that H7 carries
+is flagged inside G1's body rather than given its own L5 entry, on
+the ground that a split would leave H7 as a one-H restatement that
+fails layer-fit.)
 
-L5-A. Candidate: the asymmetry runs in parallel at every register
-      the discourse uses at once. The same shape shows up in what
-      counts as progress (H1), the layer at which it is held in
-      place — defaults rather than rules on paper (H2), the role men
-      and women get cast in (H3), the vocabulary available to name
-      patterns and the cost of using it (H4), whether claims get
-      judged at the class or the individual level (H5), the
-      reception of descriptions of the asymmetry itself (H6), and
-      the distribution of the evidence across reading venues (H7).
 
-      Why held: this is a pattern across the Layer 4 entries, not a
-      structural claim drawn from Layer 3. H1 through H7 are the
-      evidence for it, not the claim itself. If all the Layer 4
-      entries hold, this is a Layer 5 claim. Held here until a
-      Layer 5 file exists.
+================================================================================
+SECTION 4: LAYER 5 STAGING
+================================================================================
+
+4A. FAILED AUDIT, HELD FOR READMISSION
+
+
+G-S-1. Candidate: the formal layer and the informal layer run in
+       opposite directions.
+
+       Why held: reads as a restatement of H2 with H1 and H5
+       sprinkled on. H2 already says the asymmetry lives in the
+       defaults rather than in the rules on paper; adding H1's
+       toolkit-direction and H5's class/individual selection does
+       not produce a new pattern across H-entries, only a slightly
+       longer paraphrase of H2.
+
+       Readmission condition: reframe to identify a pattern that
+       the cited H-entries do not individually carry, or to name a
+       mechanism across H-entries that H2 alone does not cover.
+
+
+G-S-2. Candidate: the asymmetry constrains the vocabulary and the
+       framings available to describe it.
+
+       Why held: the claim is already covered by the union of H4
+       (vocabulary supply and speech cost), H6 (readership
+       coverage), and H7 (reception). It does not identify a
+       pattern on top of that union, and it overlaps heavily with
+       G1's multi-register claim.
+
+       Readmission condition: reframe to name a specific pattern
+       that is distinct from G1 and not reducible to H4 ∪ H6 ∪ H7.
+
+
+G-S-3. Candidate: the framework predicts its own reception.
+
+       Why held: restates H7 rather than identifying a pattern
+       across H-entries. H7 is one of the observations L5 is built
+       from, not the content of an L5 claim.
+
+       Readmission condition: reframe as a pattern across multiple
+       H-entries (for example, a pattern linking the reflexive
+       shape of H7 to non-reflexive shapes in H1–H6 in a way that
+       doesn't reduce to G1's multi-register claim).
+
+
+G-S-4. Candidate: formal equality doctrine functions as cover — it
+       leaves the asymmetry-producing defaults in place while
+       appearing to address them.
+
+       Why held: "functions as cover" is a functional-causal claim.
+       The H-entries establish that formal rules are symmetric and
+       defaults are not; they do not establish that the formal rule
+       serves the function of keeping the default in place. The
+       claim fails filter (2), smallest interpretive move.
+
+       Readmission condition: reframe without the functional claim,
+       or hold until a later layer establishes the function from
+       independent evidence (e.g., cases where doctrinal shifts in
+       the male-disadvantaging direction were introduced and then
+       not operationalized by defaults, against cases where
+       doctrinal shifts in the female-disadvantaging direction were
+       operationalized).
+
+
+G-S-5. Candidate: the female-direction case in each register is not
+       the mirror of the male-direction case — it is the
+       structurally absent case.
+
+       Why held: sharpens H1 past what H1's cited M-entries clearly
+       license. H1 says the tools get pointed in one direction and
+       not the other; G-S-5 says the other direction is absent
+       rather than underweighted. "Absent" is a stronger claim and
+       needs evidence the H-entries don't quite carry.
+
+       Readmission condition: demonstrate, from H-entries or from
+       Layer 3 evidence, that the male-disadvantage-equivalent
+       register is systematically missing — not merely
+       systematically downweighted — in at least two of the
+       registers G1 names.
+
+
+G-S-6. Candidate: there is no neutral vocabulary in which to
+       describe the asymmetry; every available register codes one
+       side or the other.
+
+       Why held: restates H4 in a stronger form without producing
+       new pattern content across H-entries. H4 already covers the
+       vocabulary asymmetry; G-S-6 pushes it to universality
+       without the support of the other H-entries.
+
+       Readmission condition: reframe to name a pattern across
+       multiple H-entries (not just H4), or sharpen to a universal-
+       vocabulary claim H4's cited evidence actually supports.
+
+
+4B. PROMOTED TO LAYER 6 CANDIDACY
+
+
+L6-A. Candidate: the asymmetry is self-maintaining — the same
+      mechanisms that produce it also prevent its correction.
+
+      Why held: the H-entries establish patterns, not a feedback
+      loop. Moving from "the tools don't get pointed at male
+      disadvantage" (H1) and "the framework takes more flak on the
+      speech side" (H7) to "the tools' pointing prevents correction"
+      is a dynamics claim that reaches past what L4 supports. The
+      claim is plausible and may hold at a higher layer; it does
+      not hold at L5 because L5 describes patterns across H-entries,
+      not dynamics across time.
+
+      Held until a Layer 6 file exists and the dynamics claim can
+      be tested against a set of L5 entries and against the
+      trajectory evidence the lower layers already carry (M11, I36,
+      I37, I38).
+
+
+L6-B. Candidate: the Layer 5 entries are not independent — G1 and
+      G2 lean on mechanisms the other presupposes, and dropping
+      either would weaken the other.
+
+      Why held: this is a claim about how L5 entries couple into
+      one larger pattern. It is a pattern across L5 entries rather
+      than across L4 entries, which makes it L6 material by
+      construction. At L5 there are only two entries; the coupling
+      claim is premature to audit here.
+
+      Held until Layer 6 and, possibly, until additional L5 entries
+      are admitted that would let the coupling be tested on a
+      larger set than G1 plus G2.
+
+
+L6-C. Candidate: the same discourse practices that produce the
+      asymmetry are also what make it hard to see.
+
+      Why held: binds the asymmetry-producing mechanisms to the
+      invisibility-producing mechanisms more tightly than H4, H6,
+      and H7 do individually. "Same practices produce both" is a
+      shared-function claim that reaches past the H-entries into
+      causal-functional territory. Related to L6-A but narrower:
+      L6-A says the asymmetry sustains itself; L6-C says the
+      practices that produce it also produce its invisibility.
+
+      Held for Layer 6. The two could turn out to be the same claim
+      under a different frame, or to split cleanly; that decision
+      is Layer 6's to make.

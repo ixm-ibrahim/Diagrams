@@ -1,0 +1,378 @@
+--------------------------------------------------------------------------------
+DISCOURSE DYNAMICS (DD)
+How argument, evidence, and disagreement behave on loaded topics. Not
+gender-specific on its face, but shapes what happens when gender
+asymmetries are discussed.
+--------------------------------------------------------------------------------
+
+DD1. When a topic is emotionally charged, calm, analytical speech
+     passes as enough reason to read the speaker as cold,
+     dismissive, or hostile, and often is read that way. The tone
+     itself is what the listener judges by — "you sound too
+     detached about this" — separate from whether what the speaker
+     said was accurate.
+
+DD2. Strong feelings about a position pass as evidence that the
+     position is true. "You can see how much this hurts them"
+     stands in as an argument, instead of leading to the question
+     of whether the claim that's hurting them is true.
+
+DD3. Pointing out that an argument is badly structured (e.g., "this
+     mixes two separate issues" or "this premise doesn't support that
+     conclusion") reads as disagreement with the argument's
+     conclusion — as if the only reason to critique an argument is
+     to reject what it's defending.
+
+DD4. A single factual error inside a contrarian argument passes as
+     enough to discredit the entire position. The same factual error
+     from the mainstream side counts as a local correction; the
+     speaker's overall position keeps standing.
+
+DD5. When someone raises an uncomfortable observation, an accepted
+     first response is to question the speaker's motives ("why are
+     you bringing this up," "who's paying you to say this," "what
+     are you really after") rather than to evaluate the observation
+     itself. Someone raising an observation that fits the dominant
+     view is not standardly asked about their motives first.
+
+DD6. Taboos here are mainly held in place by social punishment —
+     mockery, being labeled, lost friends, professional cost, being
+     cut out of social circles — rather than by someone producing a
+     counter-argument against the claim.
+
+DD7. Speech on these topics is increasingly accepted as itself
+     harm or violence. Saying the thing reads as doing something
+     to someone, instead of as a claim to be agreed with or
+     contested.
+
+DD8. If a listener feels uncomfortable hearing an idea, that discomfort
+     is increasingly accepted as evidence the idea itself is harmful,
+     rather than as a signal that the listener is running into
+     something that challenges a belief they hold.
+
+DD9. "Psychological safety" — originally meaning freedom from being
+     personally attacked or humiliated — has come to also mean freedom
+     from being exposed to views one disagrees with.
+
+DD10. When women express distress in political debates or public
+      forums (tears, visible upset, emotional appeals), it reads as
+      testimony that adds weight to their position. When men
+      express the same distress in the same settings, it reads as
+      instability, overreaction, or evidence they shouldn't be in
+      the conversation. You can see the asymmetry in how today's
+      media frames the same kind of display by men versus women.
+      (This is a claim about how today's mainstream framing tends
+      to go, not a universal rule. Specific cases run the other way
+      — a woman's distress read as hysteria in some workplace,
+      professional, or medical settings; a man's composure read as
+      authoritative regardless of substance. The claim is about
+      the default reception in today's political and public-forum
+      contexts, not every individual case.)
+
+DD11. When a current claim of male disadvantage is raised, an
+      accepted response is to bring up historical male advantage
+      ("men had power for centuries") as if it disproves the current
+      statistic. The current claim and the historical fact cover
+      different time periods and measure different things. The mirror
+      move — responding to a current female-disadvantage claim by
+      bringing up historical female-advantage domains (exemption from
+      conscription, maternal-preference custody, dower rights) — is
+      not an accepted move and is flagged as deflection when
+      attempted.
+
+
+================================================================================
+META OBSERVATIONS — TEMPLATE
+Empty meta-observation slots, each preceded by a parenthetical that
+names which clause is being interrogated, which angle within that
+clause is on the table, and what is being asked. The meta itself is
+left blank ([TBD]) for the writer to land. The interrogation procedure
+is the one in 03 - Meta Observations: name the angle in the clause,
+ask why (cause/rule), and — when distinct — ask what the general form
+is (the rule the specific case is one instance of). Open questions,
+surfaced tensions, cross-section merge candidates, and audit flags
+are also recorded in the parentheticals where they arise.
+
+IDs are tentative until the meta is filled in. Empty slots can be
+renumbered, merged, or dropped before the writer commits to wording.
+================================================================================
+
+(DD1, "when a topic is emotionally charged" — angle: the situation. What does a topic's emotional charge change about how a speaker's words get evaluated? General form: under what conditions does the topic's emotional weight shift the listener's evidence base?)
+
+DDm1. Speakers can be emotionally attached to the topic they speak about, expressing those emotions in how they present their words. This can subsequently inspire appropriate/supportive emotions in the listeners.
+      Draws from: DD1
+
+(DD1, "calm, analytical speech ... read the speaker as cold, dismissive, or hostile" — angle: style → character inference. Why does a speech style get heard as evidence about who the speaker is, rather than as evidence about how the speaker is choosing to speak?)
+
+DDm2. Someone who is calm or otherwise emotionless (in the face of an emotionally charged speaker) can be perceived as cold, dismissive, or hostile.
+      Draws from: DD1
+
+(DD1, "passes as enough reason" — angle: acceptability. The phrasing makes this a claim about social permission, not about frequency. What's the rule about which inferences from speech-style to character are permitted on a charged topic?)
+
+DDm3. It is more socially preferable to engage with a speaker's visible emotions than to appear detached from them.
+      Draws from: DD1
+
+(DD1, "the tone itself is what the listener judges by" — angle: tone over content as judgment basis. When tone and content disagree, which side carries the verdict, and why?)
+
+DDm4. Listeners tend to judge a speaker based on their emotional engagement, not just the content of their words - regardless of their accuracy.
+      Draws from: DD1
+
+(DD1, "'you sound too detached about this'" — angle: appearance vs reality. The diagnosis is how the speaker sounds, not what they actually feel. Why does sounding a way settle the question without the underlying state being checked?)
+
+DDm5. How a speaker talks and the emotions they express can be independent from how they truly feel about the topic.
+      Draws from: DD1
+
+(DD1, "separate from whether what the speaker said was accurate" — angle: accuracy drops out. Why does the truth of what was said stop entering the evaluation? General form: under what conditions does the question of whether-it's-true get pushed off the table? ***added to DDm4***)
+
+(DD2, "strong feelings about a position pass as evidence that the position is true" — angle: emotional intensity → claim truth. Why does the strength of someone's feeling get heard as evidence about whether the world is the way they say it is?)
+
+DDm6. It is socially acceptable to pass a speaker's strong feelings as evidence that their chosen position is true.
+      Draws from: DD2
+
+(DD2, "'you can see how much this hurts them' stands in as an argument" — angle: substitution. Visible distress runs in place of an argument. Why does observed emotion cancel the requirement for reasoning?)
+
+DDm7. It is socially acceptable to use hurt as evidence.
+      Draws from: DD2
+
+(DD2, "instead of leading to the question of whether the claim that's hurting them is true" — angle: the displaced question. Why does the truth-question get pushed out instead of running alongside the distress?)
+
+DDm8. Listeners can elevate a speaker's emotions as stronger evidence against others.
+      Draws from: DD2
+
+(DD2, surfaced tension: pathological lying, performed distress, and emotional manipulation are widely recognized phenomena. Why does the feeling-as-evidence move still work in the room when everyone knows feelings can be staged? Possibilities: the listener doesn't apply the lying frame here, the move runs whether or not the listener believes the feelings, or the social cost of doubting the feeling is higher than the cost of granting the claim. Worth interrogating directly.)
+
+(DD2, possible merge with DD1: DD1 says calm tone is read as evidence about the speaker; DD2 says strong feelings are read as evidence about the claim. Both treat the emotional channel as the evidence base. Whether these collapse to one underlying meta or split into two depends on whether the inferred target — speaker vs claim — matters. Flag for later.)
+
+(DD3, "pointing out that an argument is badly structured ... reads as disagreement with the argument's conclusion" — angle: structural critique → content-disagreement inference. Why does someone calling out a flaw in reasoning get heard as disagreeing with the conclusion the reasoning is defending?)
+
+DDm9. [TBD]
+      Draws from: DD3
+
+(DD3, "as if the only reason to critique an argument is to reject what it's defending" — angle: assumed motive. Why is the critic's motive presumed to be conclusion-rejection rather than reasoning-improvement?)
+
+DDm10. Disagreeing with a speaker's position, especially when emotionally charged, can appear irrational - especially on the basis of the argument's structure (which requires a greater amount of reasoning and communication and can appear like pulling at straws).
+       Draws from: DD3.
+
+(DD3, the missing position — agreeing with a conclusion but thinking the reasoning is bad. Why is that slot empty? What does its absence say about how arguments are categorized in everyday discourse?)
+
+DDm11. [TBD - something about how the process of reasoning can lead to things you disagree with, or that you arrived at what you do agree with a different way that has implications]
+       Draws from: DD3.
+
+(DD3, the mirror missing — disagreeing with a conclusion but thinking the reasoning is sound. The same emptiness on the other side. What's the rule that closes both directions at once? This would be a meta-observation that encompasses both of these. Flag for later.)
+
+(DD4, "a single factual error inside a contrarian argument passes as enough to discredit the entire position" — angle: contrarian-side rule. Why does one mistake count against the whole position when the speaker is on the contrarian side?)
+
+DDm12. An error from a contrarian speaker tends to be seen as a weakness of the supported position.
+       Draws from: DD4.
+
+(DD4, "the same factual error from the mainstream side counts as a local correction; the speaker's overall position keeps standing" — angle: mainstream-side rule. Why does one mistake count only against itself when the speaker is on the mainstream side?)
+
+DDm13. An error from a mainstream speaker tends to be seen a weakness of the speaker themselves.
+       Draws from: DD4.
+
+(DD4, the asymmetry itself: same factual error, different cost depending on which side the speaker is on. Distinct from the two side-specific metas because it names the comparison, not either side. What's the underlying rule that runs both directions?)
+
+DDm14. [TBD]
+       Draws from: DD4.
+
+(DD5, "When someone raises an uncomfortable observation, an accepted first response is to question the speaker's motives" — angle: the substitute response. Why does questioning the speaker beat evaluating the observation when the observation is uncomfortable?)
+
+DDm15. It is easier to assume that those who defend contrarian positions have selfish or otherwise immoral motives than those who defend mainstream positions.
+       Draws from: DD5.
+
+(DD5, "'why are you bringing this up,' 'who's paying you to say this,' 'what are you really after'" — angle: the shape of the motive-question. All three target the speaker's intent, not the content. Why is intent the substitute for content here? When is interrogating the speaker a permitted substitute for interrogating the message?)
+
+DDm16. If a speaker is perceived to have selfish or otherwise immoral motives, then it is socially acceptable to reject what they defend.
+       Draws from: DD5.
+
+(DD5, "first" — angle: temporal ordering. Motive comes before evaluation, not alongside. Why does the order matter — what does putting motive first do to whether the observation is ever evaluated? This seems to be more of a meta meta-observation - defer for later.)
+
+(DD5, "someone raising an observation that fits the dominant view is not standardly asked about their motives first" — angle: the asymmetry. Same speech act, different reception by side. What's the rule that closes the motive-question on one side?)
+
+DDm17. It is easier to assume that those who defend mainstream positions have selfless or otherwise objective motives than those who defend contrarian positions.
+       Draws from: DD5.
+
+(DD6, "taboos here are mainly held in place by social punishment ... rather than by someone producing a counter-argument" — angle: the enforcement mechanism. Why is social punishment the accepted enforcement, and refutation absent?)
+
+DDm18. The strength of a taboo is socially defended, rather than rationally defended.
+       Draws from: DD6.
+
+(DD6, the five named cost-channels — mockery, being labeled, lost friends, professional cost, being cut out of social circles. Why? What does it punish?)
+
+DDm19. Those who challenge taboos tend to be punished, both socially and professionally.
+       Draws from: DD6.
+
+(DD6, "rather than by someone producing a counter-argument against the claim" — angle: the missing refutation. Why does the room not produce a counter-argument? Is the argument unavailable, or just not required?)
+
+DDm20. Taboos tend to be supported by social cost, rather than rational standing.
+       Draws from: DD6.
+
+(DD6, surfaced tension: a claim kept out of conversation by cost rather than refutation can be either true or false. The mechanism doesn't sort by accuracy. Why is enforcement-without-refutation accepted even though it can't distinguish a suppressed truth from a deserved-shame falsehood? Seems like a meta meta-observation - defer for later.)
+
+(DD7, "speech on these topics is increasingly accepted as itself harm or violence" — angle: speech-as-harm equivalence. Why is the equivalence growing, and what conditions are letting the act-frame displace the claim-frame?)
+
+DDm38. [TBD]
+       Draws from: DD7.
+
+DD7. Speech on these topics is increasingly accepted as itself
+     harm or violence. Saying the thing reads as doing something
+     to someone, instead of as a claim to be agreed with or
+     contested.
+
+(DD7, "increasingly" — angle: temporal. What about the trajectory matters separately from the rule? Is the timing a clue about the cause?)
+
+DDm39. [TBD]
+       Draws from: DD7.
+
+(DD7, "saying the thing reads as doing something to someone" — angle: speech-as-action. The act-frame replaces the claim-frame. Why does the act-frame stick — what's it doing that the claim-frame wasn't?)
+
+DDm40. [TBD]
+       Draws from: DD7.
+
+(DD7, "instead of as a claim to be agreed with or contested" — angle: what got displaced. The claim-frame admits agreement or contesting; the act-frame doesn't. What does the listener lose when the claim-frame goes?)
+
+DDm41. [TBD]
+       Draws from: DD7.
+
+(DD7, the listener's options — once speech is heard as an act, the response set narrows from agree/disagree to protect/stop. General form: when an utterance is reclassified from claim to act, what happens to the response set?)
+
+DDm42. [TBD]
+       Draws from: DD7.
+
+(DD8, "if a listener feels uncomfortable hearing an idea, that discomfort is increasingly accepted as evidence the idea itself is harmful" — angle: discomfort → idea-harmful. Why does a listener's internal state pass as evidence about the idea?)
+
+DDm43. [TBD]
+       Draws from: DD8.
+
+(DD8, "increasingly accepted" — angle: temporal + acceptability. Same temporal qualifier as DD7's "increasingly." What does the timing tell us about the move's spread?)
+
+DDm44. [TBD]
+       Draws from: DD8.
+
+(DD8, "rather than as a signal that the listener is running into something that challenges a belief they hold" — angle: the displaced reading. Same internal feeling, two possible attributions. Why does one attribution get accepted and the other dropped?)
+
+DDm45. [TBD]
+       Draws from: DD8.
+
+(DD8, the asymmetry between the two readings — one points outward (the speaker did something wrong), the other points inward (a belief got challenged). General form: when does a listener's internal state attribute to the world vs to the listener?)
+
+DDm46. [TBD]
+       Draws from: DD8.
+
+(DD8, possible merge with DD7: both treat the listener's experience as certifying the moral status of the speech. DD7 is the speech-as-act frame; DD8 is the discomfort-as-evidence frame. One mechanism with two layers, or two distinct mechanisms? Flag for the writer.)
+
+(DD9, "originally meaning freedom from being personally attacked or humiliated" — angle: the original sense. What was "psychological safety" meant to protect when it was coined?)
+
+DDm47. [TBD]
+       Draws from: DD9.
+
+(DD9, "has come to also mean freedom from being exposed to views one disagrees with" — angle: the added sense. Why does being-disagreed-with get folded into a word that covered being-attacked?)
+
+DDm48. [TBD]
+       Draws from: DD9.
+
+(DD9, the addition pattern — the new meaning is layered on, not replacing the old. Why is addition the form of the shift rather than substitution?)
+
+DDm49. [TBD]
+       Draws from: DD9.
+
+(DD9, the implicit equivalence: being-disagreed-with is treated as comparable to being-attacked. What's the rule that makes the comparison feel natural? Under what conditions is exposure to a view treated as a kind of attack?)
+
+DDm50. [TBD]
+       Draws from: DD9.
+
+(DD9, the shift is unflagged — the new meaning runs as if it were what the word always meant. Why is the shift not visible to speakers using the word?)
+
+DDm51. [TBD]
+       Draws from: DD9.
+
+(DD9, general form: how do words for narrow protections grow over time to cover broader ones? Is this specific to "psychological safety" or a general feature of protection-language?)
+
+DDm52. [TBD]
+       Draws from: DD9.
+
+(DD9, audit flag: the source claim is temporal — the word's meaning has shifted. The source doesn't cite an instance, a study, or a date for the shift. The goals doc's no-bare-assertion rule applies. Flag for the writer to either find the documentation or trim the temporal claim.)
+
+(DD10, "when women express distress ... it reads as testimony that adds weight to their position" — angle: women's-side rule. Why does the same emotional signal get weighted as testimony when the speaker is a woman?)
+
+DDm53. [TBD]
+       Draws from: DD10.
+
+(DD10, "when men express the same distress in the same settings, it reads as instability, overreaction, or evidence they shouldn't be in the conversation" — angle: men's-side rule. Why does the same emotional signal get discounted as instability when the speaker is a man?)
+
+DDm54. [TBD]
+       Draws from: DD10.
+
+(DD10, the asymmetry itself: same display, opposite reading. Distinct from the two side-specific metas because it names the comparison, not either side. What's the underlying rule that runs both directions at once?)
+
+DDm55. [TBD]
+       Draws from: DD10.
+
+(DD10, "in political debates or public forums" — angle: the contexts named. Why these contexts and not others? What about political/public settings makes the asymmetry visible — and what does the source's explicit limitation to these contexts tell us?)
+
+DDm56. [TBD]
+       Draws from: DD10.
+
+(DD10, "tears, visible upset, emotional appeals" — angle: the display types named. Three forms. Do all three carry the asymmetry equally, or does one form land harder than the others?)
+
+DDm57. [TBD]
+       Draws from: DD10.
+
+(DD10, "you can see the asymmetry in how today's media frames the same kind of display by men versus women" — angle: the cross-coverage methodology. The asymmetry is visible from outside the speakers, in third-party framing. What does that visibility tell us about whether the asymmetry sits in the speakers, the listeners, or the framing organs?)
+
+DDm58. [TBD]
+       Draws from: DD10.
+
+(DD10, "this is a claim about how today's mainstream framing tends to go, not a universal rule" — angle: the hedge. What does the hedge protect against, and what does it concede? When does a discourse-pattern claim need a hedge of this kind?)
+
+DDm59. [TBD]
+       Draws from: DD10.
+
+(DD10, "specific cases run the other way — a woman's distress read as hysteria in some workplace, professional, or medical settings; a man's composure read as authoritative regardless of substance" — angle: counter-cases. The asymmetry runs differently in non-political settings. Why does the political/public-forum context produce one pattern and the workplace/medical context produce a different one?)
+
+DDm60. [TBD]
+       Draws from: DD10.
+
+(DD10, possible merge with DD2: DD2 says strong feelings pass as evidence of truth. DD10 says the conversion runs differently by sex. One rule with a sex-dependent multiplier, or two distinct rules? Flag for the writer.)
+
+(DD11, "an accepted response is to bring up historical male advantage as if it disproves the current statistic" — angle: the historical-rebuts-current move on the male-disadvantage side. Why does invoking history pass as a rebuttal of a current statistic?)
+
+DDm61. [TBD]
+       Draws from: DD11.
+
+(DD11, "'men had power for centuries'" — angle: the example utterance. What does the centuries-long-frame do that a shorter time-window wouldn't?)
+
+DDm62. [TBD]
+       Draws from: DD11.
+
+(DD11, "the current claim and the historical fact cover different time periods and measure different things" — angle: the conflation. Why is comparing two claims that measure different things over different periods accepted as a rebuttal at all?)
+
+DDm63. [TBD]
+       Draws from: DD11.
+
+(DD11, "the mirror move ... is not an accepted move and is flagged as deflection when attempted" — angle: direction. Same move, different acceptability by which side it runs on. What's the rule that closes the female-disadvantage direction?)
+
+DDm64. [TBD]
+       Draws from: DD11.
+
+(DD11, the asymmetry itself: same move, different cost depending on direction. What's the underlying rule that runs both directions?)
+
+DDm65. [TBD]
+       Draws from: DD11.
+
+(DD11, "exemption from conscription, maternal-preference custody, dower rights" — angle: the named female-advantage examples. Why these three — what category do they share, and what does the example-set tell us about which historical female-advantage domains are even legible in mainstream framings?)
+
+DDm66. [TBD]
+       Draws from: DD11.
+
+(DD11, "is flagged as deflection" — angle: the labeling move. Naming an attempted rebuttal "deflection" closes the rebuttal off. Same shape as DP2's "whataboutism" — moves get named on one side and unnamed on the other. Possible merge with the DP2 meta — flag for the writer.)
+
+DDm67. [TBD]
+       Draws from: DD11.
+
+(DD11, general form: when is invoking historical context accepted as a rebuttal of a current statistic? Under what conditions does the temporal mismatch between two claims stop mattering for the audience?)
+
+DDm68. [TBD]
+       Draws from: DD11.
+
+(DD11, possible merges with DP2 and DP9: all three are about same-move-runs-different-by-side. DP2 names whataboutism; DP9 names counter-cases by direction; DD11 names the historical-rebut. Three instances of one larger pattern, or three distinct patterns? Flag for the writer.)

@@ -1,0 +1,418 @@
+--------------------------------------------------------------------------------
+DEFENSIVE PATTERNS (DP)
+Moves a person tends to make when an uncomfortable claim lands, instead
+of engaging the claim on its merits. Not specific to gender, but very
+active on gender topics. These moves are not always invalid — sometimes
+the pushback is correct — but each one is also available as a way to
+avoid engaging, so the move shows up whether or not the original claim
+was right.
+--------------------------------------------------------------------------------
+
+DP1. When someone offers an analogy ("A is like B in this one respect"),
+     an accepted response is to list differences between A and B
+     that are true but don't speak to the specific point the
+     analogy makes. Example: "going five miles per hour over the
+     speed limit and going twenty-five over are alike in one
+     specific way — both break the speed limit." Reply: "no — five
+     over is what everyone does, twenty-five over is reckless, and
+     the consequences if you're stopped are completely different."
+     All three differences are real; but none of them speak to the
+     specific point the analogy was making, which was that both
+     break the speed limit. The real differences are used to block
+     engagement with the narrow point.
+
+DP2. When a specific asymmetry is raised (e.g., "men are 92% of
+     workplace fatalities"), an accepted move is to bring up a
+     different asymmetry that favors the other side ("but women earn
+     less"). The second may be true, but it doesn't address the
+     first, and bringing it up keeps the first from being examined
+     at all. Called "whataboutism" when the other side does it;
+     unnamed when one's own side does it.
+
+DP3. When a group-level statistic is raised, an accepted move is to
+     offer up a single case that doesn't fit and treat that case as
+     if it disproves the statistic. "Men are about 78% of US homicide
+     victims" met with "my aunt was killed by her husband." The
+     individual case is real, the statistic is still real, and the
+     conversation moves on as if the statistic has been answered —
+     even though one case and one aggregate can both be true at once.
+
+DP4. Tying a claim to a disliked group counts, on its own, as a
+     reason to dismiss the claim. "That sounds like something a
+     men's rights activist would say" or "that's an incel talking
+     point" passes as a full refutation in many settings without
+     the claim itself being engaged.
+
+DP5. When a claim is made about a group someone identifies with, an
+     accepted move is to reframe the claim as a personal attack.
+     Instead of engaging with "you're describing a pattern in which
+     some men behave badly," the response shifts the topic to "so
+     you're saying I'm the bad guy?" The conversation moves from the
+     pattern to the hurt, and the pattern stops being discussed.
+
+DP6. Attacking the source of evidence passes as a rebuttal of the
+     evidence itself. "That study was funded by X" or "that
+     researcher has said problematic things elsewhere" is offered as
+     a reason not to engage with what the study actually found.
+
+DP7. An accepted response to an uncomfortable observation is to
+     ask for a fix on the spot before the observation itself has
+     been acknowledged. "What do you propose we do about it?" shifts
+     the question from "is this true?" to "is there a fix?" If the
+     speaker doesn't have a fix at hand, the observation is read as
+     discredited by the missing fix.
+
+DP8. In group conversation, sidelining the question of whether a
+     claim is true in favor of worry about how raising it will make
+     people feel is an accepted move. "This is upsetting people in
+     the room" is treated as taking priority over "is what you said
+     accurate?" — and the question of whether the claim is true is
+     allowed to lapse, never settled.
+
+DP9. Counter-cases to group-level statistics get different
+     acceptability depending on direction. Naming "not all men" on
+     entry and dismissing it as deflection — when it's offered
+     against a statistic about male behavior — passes as the
+     legitimate response. The mirror move — "my wife out-earns me"
+     against the pay-gap figure, "I've known women who abused their
+     husbands" against domestic-violence-against-women statistics
+     — is not accepted as a move in mainstream discourse, so is
+     rarely offered; and when offered, dismissing it as deflection
+     before the underlying statistic is examined is the accepted
+     response. Same rhetorical move, different acceptability by
+     direction.
+
+DP10. The "fragility" charge (see LR11) works as a closed loop in
+      argument. Accepting the charge confirms it. Pushing back on it
+      is read as confirming it. The structure leaves no way to
+      engage the underlying claim without first accepting the
+      framing. The same closed-loop charge is not in active
+      mainstream use against women in mirror form: a woman
+      responding defensively to a comparable claim about women is
+      not standardly met with "that response just shows female
+      fragility."
+
+DP11. The bodily-integrity analogy between routine infant circumcision
+      and female genital cutting is a recurring concrete instance of
+      DP1. The analogy claims a narrow point — both involve cutting a
+      child's genitals without the child's consent — and is reliably
+      met by listing real differences (FGM causes more physical harm,
+      has no medical rationale, is done to suppress female sexuality)
+      that don't speak to the consent point. The differences are
+      real; they don't engage the specific analogical claim. The
+      response is predictable enough to be flagged in advance
+      whenever the analogy is raised. (See FL10 for the
+      legal-framework version of the same asymmetry.)
+
+
+================================================================================
+META OBSERVATIONS — TEMPLATE
+Empty meta-observation slots, each preceded by a parenthetical that
+names which clause is being interrogated, which angle within that
+clause is on the table, and what is being asked. The meta itself is
+left blank ([TBD]) for the writer to land. The interrogation procedure
+is the one in 03 - Meta Observations: name the angle in the clause,
+ask why (cause/rule), and — when distinct — ask what the general form
+is (the rule the specific case is one instance of). Open questions,
+surfaced tensions, cross-section merge candidates, and audit flags
+are also recorded in the parentheticals where they arise.
+
+IDs are tentative until the meta is filled in. Empty slots can be
+renumbered, merged, or dropped before the writer commits to wording.
+================================================================================
+
+(DP1, "an analogy ('A is like B in this one respect')" — angle: the structure of an analogy. What's the rule about what an analogy claims and doesn't claim?)
+
+DPm1. [TBD]
+      Draws from: DP1.
+
+(DP1, "list differences between A and B that are true but don't speak to the specific point the analogy makes" — angle: the listing-differences move. Why does listing real-but-irrelevant differences pass as engagement with the analogy?)
+
+DPm2. [TBD]
+      Draws from: DP1.
+
+(DP1, "all three differences are real; but none of them speak to the specific point the analogy was making" — angle: the relationship between true and relevant. A fact can be true and still irrelevant to the claim it's offered against. What's the rule about that gap?)
+
+DPm3. [TBD]
+      Draws from: DP1.
+
+(DP1, the speed-limit example — angle: example-quality. Does the example demonstrate the move (in the goals doc's "demonstration vs labeling" sense), or does it land as making the move feel unreasonable on cue? Worth checking whether the example is doing its job — and whether the unpaid-internship-style narrowness applies to driving examples too.)
+
+DPm4. [TBD]
+      Draws from: DP1.
+
+(DP1, "the real differences are used to block engagement with the narrow point" — angle: the consequence. The narrow point stops being engaged. What does the move do to the conversation's task?)
+
+DPm5. [TBD]
+      Draws from: DP1.
+
+(DP1, "an accepted response" — angle: acceptability. Listing differences is socially permitted, not just frequent. What's the rule about which ways of refusing an analogy count as legitimate?)
+
+DPm6. [TBD]
+      Draws from: DP1.
+
+(DP1, general form: when is offering a true-but-irrelevant fact accepted as a sufficient response to a claim?)
+
+DPm7. [TBD]
+      Draws from: DP1.
+
+(DP2, "bring up a different asymmetry that favors the other side" — angle: the counter-asymmetry move. Why does offering a counter-asymmetry pass as a response to the original asymmetry?)
+
+DPm8. [TBD]
+      Draws from: DP2.
+
+(DP2, "the second may be true, but it doesn't address the first" — angle: the cancellation logic. Two true asymmetries pointing in opposite directions don't cancel each other; both can remain true. What's the underlying logical rule, and why does the room treat them as if they cancel?)
+
+DPm9. [TBD]
+      Draws from: DP2.
+
+(DP2, "bringing it up keeps the first from being examined at all" — angle: the substitution. The original specific claim drops out. What changes about the question on the table once a counter-asymmetry is raised?)
+
+DPm10. [TBD]
+       Draws from: DP2.
+
+(DP2, "called 'whataboutism' when the other side does it; unnamed when one's own side does it" — angle: the labeling asymmetry. Why does the same move get a fallacy label in one direction and not the other?)
+
+DPm11. [TBD]
+       Draws from: DP2.
+
+(DP2, general form: when does a different-axis counter-claim get accepted as a response to a specific claim?)
+
+DPm12. [TBD]
+       Draws from: DP2.
+
+(DP3, "offer up a single case that doesn't fit and treat that case as if it disproves the statistic" — angle: the single-case move. Why does one case get treated as if it answered an aggregate?)
+
+DPm13. [TBD]
+       Draws from: DP3.
+
+(DP3, "the individual case is real, the statistic is still real" — angle: the logical fact. Both can be true at once. What's the rule about case vs aggregate?)
+
+DPm14. [TBD]
+       Draws from: DP3.
+
+(DP3, "the conversation moves on as if the statistic has been answered" — angle: the social effect. What lets the room treat the statistic as handled without examining it?)
+
+DPm15. [TBD]
+       Draws from: DP3.
+
+(DP3, vivid case vs abstract aggregate — angle: vividness. The single case is concrete and visualizable; the statistic is abstract. What does vividness do to weight in the room?)
+
+DPm16. [TBD]
+       Draws from: DP3.
+
+(DP3, general form: when does a single instance get treated as if it disproved a group statistic? Under what conditions does the case-aggregate gap collapse in conversation?)
+
+DPm17. [TBD]
+       Draws from: DP3.
+
+(DP4, "tying a claim to a disliked group counts, on its own, as a reason to dismiss the claim" — angle: source → truth inference. Why does the source of an idea pass as evidence about the idea's truth?)
+
+DPm18. [TBD]
+       Draws from: DP4.
+
+(DP4, "'that's an incel talking point' functions as a full refutation in many settings" — angle: substitution. Naming the camp passes as engaging the claim. What does naming-the-camp do in place of evaluation?)
+
+DPm19. [TBD]
+       Draws from: DP4.
+
+(DP4, defending a tagged claim now requires defending the camp it was tagged with — angle: the consequence. What position does the speaker get put in when their claim gets tagged?)
+
+DPm20. [TBD]
+       Draws from: DP4.
+
+(DP4, possible merge with DP6: DP6 also treats source-of-evidence as substitute for engagement. The two may be one rule with two surfaces — group-as-source vs paid-by-as-source. Flag for the writer.)
+
+(DP4, general form: when does where an idea comes from settle whether the idea is true?)
+
+DPm21. [TBD]
+       Draws from: DP4.
+
+(DP5, "a claim is made about a group someone identifies with ... reframe the claim as a personal attack" — angle: group-claim → personal-attack reframe. Why does a group-pattern claim get heard as a personal accusation?)
+
+DPm22. [TBD]
+       Draws from: DP5.
+
+(DP5, "'so you're saying I'm the bad guy?'" — angle: the example utterance. What position does the reframe leave the original speaker in?)
+
+DPm23. [TBD]
+       Draws from: DP5.
+
+(DP5, "the conversation shifts from the pattern to the hurt, and the pattern stops being discussed" — angle: substitution. Hurt becomes the new task; the pattern drops out. What does hurt-in-the-room do to the conversation's task?)
+
+DPm24. [TBD]
+       Draws from: DP5.
+
+(DP5, possible merge with DP8: both let listener-comfort/listener-hurt take priority over the original question. DP5 is about the listener identifying with the group; DP8 is about the room generally. Same rule with two scopes? Flag for the writer.)
+
+(DP5, general form: when does a group-level claim get heard as a personal accusation, and when does it stay at the group level?)
+
+DPm25. [TBD]
+       Draws from: DP5.
+
+(DP6, "attacking the source of evidence passes as a rebuttal of the evidence itself" — angle: source-of-evidence → truth-of-evidence inference. Same shape as DP4 (group-as-source → claim-truth). Why does the same rule run on both?)
+
+DPm26. [TBD]
+       Draws from: DP6.
+
+(DP6, "'that study was funded by X'" — angle: funding-source as stand-in. What does the funding-source serve as a substitute for? Methods? Findings? The whole evaluation?)
+
+DPm27. [TBD]
+       Draws from: DP6.
+
+(DP6, "'that researcher has said problematic things elsewhere'" — angle: the researcher's outside record. What does the researcher's record on unrelated topics do to the work being discussed?)
+
+DPm28. [TBD]
+       Draws from: DP6.
+
+(DP6, general form: when does evaluating where evidence comes from substitute for evaluating the evidence itself?)
+
+DPm29. [TBD]
+       Draws from: DP6.
+
+(DP7, "an accepted response ... is to ask for a fix on the spot before the observation has been acknowledged" — angle: fix-before-acknowledgment. Why is acknowledgment held hostage to fix-availability?)
+
+DPm30. [TBD]
+       Draws from: DP7.
+
+(DP7, "'what do you propose we do about it?'" — angle: the example utterance. The question shifts from "is this true?" to "is there a fix?" Why does the second question get treated as a precondition for the first?)
+
+DPm31. [TBD]
+       Draws from: DP7.
+
+(DP7, "if the speaker doesn't have a fix at hand, the observation is read as discredited by the missing fix" — angle: absence-of-fix → not-real inference. Why does the absence of a solution get read as evidence the problem isn't real?)
+
+DPm32. [TBD]
+       Draws from: DP7.
+
+(DP7, the two questions are separate — angle: the conflation. Truth and fix are different questions. Why are they conflated in the room?)
+
+DPm33. [TBD]
+       Draws from: DP7.
+
+(DP7, general form: when is a solution treated as a precondition for acknowledging a problem exists?)
+
+DPm34. [TBD]
+       Draws from: DP7.
+
+(DP8, "in group conversation, sidelining the question of whether a claim is true in favor of worry about how raising it will make people feel is an accepted move" — angle: comfort over truth. Why does keeping-the-room-comfortable take priority over settling the truth question in group settings?)
+
+DPm35. [TBD]
+       Draws from: DP8.
+
+(DP8, "'this is upsetting people in the room' is treated as taking priority over 'is what you said accurate?'" — angle: priority-rule. What's the rule about which question wins when comfort and truth conflict?)
+
+DPm36. [TBD]
+       Draws from: DP8.
+
+(DP8, "in group conversation" — angle: context. Why groups specifically? What does the group setting add that a one-on-one wouldn't have?)
+
+DPm37. [TBD]
+       Draws from: DP8.
+
+(DP8, "the question of whether the claim is true is allowed to lapse, never settled" — angle: the lapse. The truth-question drops out and doesn't return. Why is the lapse one-way — what closes the door on bringing the question back?)
+
+DPm38. [TBD]
+       Draws from: DP8.
+
+(DP8, general form: when does keeping the room comfortable take priority over settling whether a claim is true?)
+
+DPm39. [TBD]
+       Draws from: DP8.
+
+(DP9, "counter-cases to group-level statistics get different acceptability depending on direction" — angle: the directional rule. Same move, different acceptability by direction. Why does direction matter?)
+
+DPm40. [TBD]
+       Draws from: DP9.
+
+(DP9, "'not all men' on entry and dismissing it as deflection — when it's offered against a statistic about male behavior — passes as the legitimate response" — angle: the male-statistic side. Naming-and-dismissing-on-entry is the accepted response. What's specific to that direction?)
+
+DPm41. [TBD]
+       Draws from: DP9.
+
+(DP9, "the mirror move ... is not accepted as a move in mainstream discourse, so is rarely offered" — angle: the missing mirror. The same move on the other direction has no recognized slot. Why is the female-counter-case absent from the move-set in the first place — what makes the move unavailable, not just unfavored?)
+
+DPm42. [TBD]
+       Draws from: DP9.
+
+(DP9, "when offered, dismissing it as deflection before the underlying statistic is examined is the accepted response" — angle: when the mirror IS attempted. What happens to a move that runs against the established direction? Is the deflection-charge applied by the same rules in both directions, or stricter on the unfamiliar one?)
+
+DPm43. [TBD]
+       Draws from: DP9.
+
+(DP9, "my wife out-earns me," "I've known women who abused their husbands" — angle: the named female-counter-case examples. Why these specifically? What do they share, and what category of mainstream-pro-female stats do they push against?)
+
+DPm44. [TBD]
+       Draws from: DP9.
+
+(DP9, possible merges with DP2, DD11: all about same-move-runs-different-by-side. DP2 names whataboutism; DD11 names historical-rebut; DP9 names counter-cases. Three instances of one larger pattern, or three distinct patterns? Flag for the writer.)
+
+(DP9, general form: when does naming-and-dismissing a counter-case before examining the underlying stat count as a legitimate response?)
+
+DPm45. [TBD]
+       Draws from: DP9.
+
+(DP10, "the 'fragility' charge ... works as a closed loop in argument" — angle: the structural property. What makes a charge a closed loop?)
+
+DPm46. [TBD]
+       Draws from: DP10.
+
+(DP10, "accepting the charge confirms it. Pushing back on it is read as confirming it" — angle: the bidirectional confirmation. Both responses produce the same verdict. What does the listener's escape route look like, and what does it mean that there isn't one?)
+
+DPm47. [TBD]
+       Draws from: DP10.
+
+(DP10, "the structure leaves no way to engage the underlying claim without first accepting the framing" — angle: the framing precondition. To respond at all, the listener must first accept the kind-of-person framing the charge contains. Why does the framing get to set the condition of engagement?)
+
+DPm48. [TBD]
+       Draws from: DP10.
+
+(DP10, "the same closed-loop charge is not in active mainstream use against women in mirror form" — angle: directional asymmetry. The closed-loop structure is available against one side and not the other. Why?)
+
+DPm49. [TBD]
+       Draws from: DP10.
+
+(DP10, "see LR11" — angle: the cross-reference. What does LR11 (the language/rhetoric section's entry on fragility) add that the meta needs to absorb? Audit-flag-adjacent: the meta can't be finalized without checking what LR11 actually says.)
+
+DPm50. [TBD]
+       Draws from: DP10.
+
+(DP10, general form: what's the structural property of charges where any response confirms the charge? Are there other examples of closed-loop charges in this domain or elsewhere worth surfacing?)
+
+DPm51. [TBD]
+       Draws from: DP10.
+
+(DP11, "the bodily-integrity analogy between routine infant circumcision and female genital cutting is a recurring concrete instance of DP1" — angle: the specific case. What does this instance add beyond DP1's general claim?)
+
+DPm52. [TBD]
+       Draws from: DP11.
+
+(DP11, "the analogy claims a narrow point — both involve cutting a child's genitals without the child's consent" — angle: the analogy's claim. What does the analogy actually assert, and what does it not assert?)
+
+DPm53. [TBD]
+       Draws from: DP11.
+
+(DP11, "is reliably met by listing real differences (FGM causes more physical harm, has no medical rationale, is done to suppress female sexuality) that don't speak to the consent point" — angle: the reliable response. Same as DP1's listing-differences move (DPm2-3) — DP11 reinforces those. What new angle is specific to DP11 beyond reinforcing DP1?)
+
+DPm54. [TBD]
+       Draws from: DP11.
+
+(DP11, "the response is predictable enough to be flagged in advance whenever the analogy is raised" — angle: topic-locked predictability. The response can be predicted from the topic alone, before the actual content is read. What does it mean that some defensive patterns lock onto particular topics this tightly?)
+
+DPm55. [TBD]
+       Draws from: DP11.
+
+(DP11, the named differences — "FGM causes more physical harm, has no medical rationale, is done to suppress female sexuality" — angle: which differences get named. Three. Each is true; none speaks to the consent point. Why these three, and what does it mean that they all redirect from consent to harm/rationale/sexuality?)
+
+DPm56. [TBD]
+       Draws from: DP11.
+
+(DP11, "see FL10 for the legal-framework version of the same asymmetry" — angle: the cross-reference. What's the legal-framework parallel, and how does the legal version reinforce the discourse-pattern version? Worth opening FL before finalizing this section.)
+
+DPm57. [TBD]
+       Draws from: DP11.
+
+(DP11, general form: when is a defensive pattern locked tightly enough to a particular topic that the response can be predicted before the actual content is read?)
+
+DPm58. [TBD]
+       Draws from: DP11.
