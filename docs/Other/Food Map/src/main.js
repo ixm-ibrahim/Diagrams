@@ -2340,6 +2340,44 @@ async function boot() {
     });
   }
 
+  /* Mobile: the header is a horizontal-scroll strip with the ☰ + title
+   * pinned (sticky) on the left. Flag the header while it's actively being
+   * scrolled so CSS can fade the pinned cluster (revealing the controls
+   * sliding underneath it). A short idle timer clears the flag. */
+  const appHeader = document.querySelector('.app-header');
+  if (appHeader) {
+    let scrollIdle = 0;
+
+    /* Right-edge "swipe for more" cue. The mobile header overflows into a
+     * horizontal scroll with a hidden scrollbar, so off-screen clusters
+     * (camera controls, theme, config, unit toggle) are otherwise
+     * invisible to discover. The cue shows only while there's content to
+     * the right and hides the moment the bar reaches the end. CSS keeps it
+     * display:none above the mobile breakpoint, so on desktop — where the
+     * header wraps and never overflows — it stays absent. */
+    const scrollCue = document.createElement('div');
+    scrollCue.className = 'header-scroll-cue';
+    scrollCue.setAttribute('aria-hidden', 'true');
+    scrollCue.hidden = true;
+    document.body.appendChild(scrollCue);
+    const updateScrollCue = () => {
+      const more =
+        appHeader.scrollWidth - appHeader.clientWidth - appHeader.scrollLeft > 4;
+      scrollCue.hidden = !more;
+    };
+
+    appHeader.addEventListener('scroll', () => {
+      appHeader.classList.add('is-scrolling');
+      clearTimeout(scrollIdle);
+      scrollIdle = setTimeout(() => appHeader.classList.remove('is-scrolling'), 320);
+      updateScrollCue();
+    }, { passive: true });
+    window.addEventListener('resize', updateScrollCue);
+    // Initial pass, plus one after async control mounts settle the layout.
+    updateScrollCue();
+    setTimeout(updateScrollCue, 400);
+  }
+
   mountLegend(document.getElementById('legend'), { state });
 
   // Phase 38 + 40.{9,11}: active-filters chip rail. Always visible; chips
@@ -2356,6 +2394,54 @@ async function boot() {
     defaultThresholdsMap,
     defaultThresholdsMapServing,
   });
+
+  /* Mobile bottom-corner accordion: the three floating corner panels —
+   * active filters (bottom-left), color guide / legend and axes (bottom-
+   * right) — are too big to coexist expanded on a phone. Enforce "at most
+   * one expanded at a time": opening one collapses the others. Desktop
+   * has room for all three docked, so this only runs at the mobile
+   * breakpoint. A reentrancy guard stops the cascade of state.set calls
+   * from re-triggering each other. */
+  (function wireCornerAccordion() {
+    // Priority order also decides which panel stays open when several are
+    // open at first paint (enforceOnMobile keeps the first match): favor
+    // the color guide, then axes, then the (often-empty) active filters.
+    const CORNER_OPEN_KEYS = ['legendOpen', 'axisControlsOpen', 'activeFiltersOpen'];
+    const mq = matchMedia('(max-width: 768px)');
+    const isOpenVal = (v) => v !== false; // these default-open slices use !== false
+    let guard = false;
+
+    function collapseOthers(openedKey) {
+      if (guard) return;
+      guard = true;
+      const patch = {};
+      for (const k of CORNER_OPEN_KEYS) {
+        if (k !== openedKey && isOpenVal(state.get(k))) patch[k] = false;
+      }
+      if (Object.keys(patch).length) state.set(patch);
+      guard = false;
+    }
+
+    for (const key of CORNER_OPEN_KEYS) {
+      state.subscribe(s => s[key], (val) => {
+        if (!mq.matches) return;
+        if (!isOpenVal(val)) return; // only react to a panel OPENING
+        collapseOthers(key);
+      });
+    }
+
+    /* Enforce the invariant at first paint (and whenever we cross into the
+     * mobile breakpoint): if several corner panels are open at once, keep
+     * the first open one in priority order and collapse the rest so the
+     * canvas isn't buried under stacked panels. */
+    function enforceOnMobile() {
+      if (!mq.matches) return;
+      const firstOpen = CORNER_OPEN_KEYS.find(k => isOpenVal(state.get(k)));
+      if (firstOpen) collapseOthers(firstOpen);
+    }
+    enforceOnMobile();
+    mq.addEventListener('change', enforceOnMobile);
+  })();
 
   // Phase 40.4: 3D search dropdown. Mounted in the header center,
   // shares the same hidden-set logic the scene uses so restricted

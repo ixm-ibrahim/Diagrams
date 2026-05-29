@@ -456,12 +456,19 @@ export function mountActiveFilters(root, {
       ${bodyHtml}
       <button class="active-filters-clear btn-link" type="button"
               ${chips.length === 0 ? 'disabled' : ''}>Clear all</button>
+      ${hideAll ? '' : `<button class="active-filters-collapse-foot" type="button"
+              aria-label="Collapse active filters">▾ Hide</button>`}
     `;
 
-    const collapseBtn = root.querySelector('.active-filters-collapse');
-    if (collapseBtn && !hideAll) {
-      collapseBtn.addEventListener('click', () => {
-        state.set({ activeFiltersOpen: false });
+    // Both the header ▾ (desktop) and the bottom "▾ Hide" bar (mobile, sits
+    // where the expand pill is) collapse the panel. Neither renders while
+    // filtersHideAll forces the panel open.
+    const collapseEls = root.querySelectorAll('.active-filters-collapse, .active-filters-collapse-foot');
+    if (!hideAll) {
+      collapseEls.forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.set({ activeFiltersOpen: false });
+        });
       });
     }
     root.querySelector('.active-filters-clear').addEventListener('click', clearAll);

@@ -37,19 +37,57 @@ export function mountConfigMenu(root, { state }) {
   const btn  = root.querySelector('.config-menu-button');
   const menu = root.querySelector('.config-menu');
 
+  /* Portal the menu to <body> so it isn't a fixed descendant of the
+   * mobile header's overflow-scroll container — WebKit clips / paints
+   * such elements behind the WebGL canvas otherwise. */
+  document.body.appendChild(menu);
+
+  /* The menu is position:fixed (so it isn't clipped by the mobile
+   * header's horizontal-scroll overflow). Anchor its right edge under the
+   * button and clamp to the viewport so it never spills off an edge. */
+  function positionMenu() {
+    const MARGIN = 8;
+    menu.hidden = false; // unhide first so offset dimensions are measurable
+    const r = btn.getBoundingClientRect();
+    const w = menu.offsetWidth  || 200;
+    const h = menu.offsetHeight || 0;
+    let left = Math.min(r.right - w, window.innerWidth - w - MARGIN);
+    left = Math.max(MARGIN, left);
+    let top = r.bottom + 4;
+    if (top + h > window.innerHeight - MARGIN) {
+      top = Math.max(MARGIN, r.top - h - 4); // flip above if no room below
+    }
+    menu.style.left = `${Math.round(left)}px`;
+    menu.style.top  = `${Math.round(top)}px`;
+  }
+
+  function closeMenu() {
+    menu.hidden = true;
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
   btn.addEventListener('click', (ev) => {
     ev.stopPropagation();
-    const open = !menu.hidden;
-    menu.hidden = open;
-    btn.setAttribute('aria-expanded', String(!open));
+    if (menu.hidden) {
+      positionMenu();
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      closeMenu();
+    }
   });
+  // Fixed coords go stale once the viewport changes (e.g. the mobile
+  // header scrolls or the device rotates), so just dismiss on resize.
+  window.addEventListener('resize', closeMenu);
   // Phase 40: pointerdown (capture) so the containment check sees the
   // original target before any in-menu re-render detaches it.
   document.addEventListener('pointerdown', (ev) => {
-    if (!root.contains(ev.target)) { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    // The menu is portaled to <body>, so a click on it is no longer inside
+    // `root` — exempt it explicitly or selecting an item would dismiss
+    // the menu before its own handler runs.
+    if (!root.contains(ev.target) && !menu.contains(ev.target)) closeMenu();
   }, true);
   document.addEventListener('keydown', (ev) => {
-    if (ev.key === 'Escape') { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    if (ev.key === 'Escape') closeMenu();
   });
 
   menu.addEventListener('click', (ev) => {

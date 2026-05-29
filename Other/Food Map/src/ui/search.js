@@ -139,6 +139,17 @@ export function mountSearch(root, {
   function positionDropdown() {
     if (dropdown.hidden) return;
     const rect = inputEl.getBoundingClientRect();
+    // Mobile: the search input lives in a narrow, horizontally-scrolling
+    // header, so anchoring the dropdown to its width/left would leave it
+    // tiny and possibly off-screen. Pin it edge-to-edge instead.
+    if (matchMedia('(max-width: 768px)').matches) {
+      dropdown.style.left  = `${VIEWPORT_MARGIN}px`;
+      dropdown.style.right = `${VIEWPORT_MARGIN}px`;
+      dropdown.style.top   = `${Math.round(rect.bottom + 4)}px`;
+      dropdown.style.minWidth = '0';
+      return;
+    }
+    dropdown.style.right = '';
     dropdown.style.left = `${Math.round(Math.max(VIEWPORT_MARGIN, rect.left))}px`;
     dropdown.style.top  = `${Math.round(rect.bottom + 4)}px`;
     dropdown.style.minWidth = `${Math.round(rect.width)}px`;

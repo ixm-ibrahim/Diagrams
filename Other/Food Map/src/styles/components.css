@@ -1358,20 +1358,33 @@
   .rail-left.is-collapsed .rail-chrome { display: none; }
 }
 @media (max-width: 768px) {
-  /* Mobile keeps the header title; hide the rail-mounted duplicate. */
-  .left-rail .rail-chrome { display: none; }
-
-  /* .rail-fade removed in Phase 13.5 round 4 — the rail no longer
-   * sits under the header so the fade is moot. */
+  /* Mobile keeps the page-header title, so the drawer's duplicate
+   * "Food Map" is hidden — but the chrome row itself stays visible to
+   * host an explicit in-drawer close (✕) button (the rail-collapse
+   * button, restyled below). Relying on tap-outside / Esc alone left
+   * users hunting for a way to dismiss the drawer. */
+  .left-rail .rail-chrome {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 48px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: var(--color-surface);
+  }
+  .left-rail .app-title-rail { display: none; }
+  .left-rail .rail-collapse {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+  }
 }
 
 .rail-toggle {
-  /* Push to the right edge of .app-header-left, then nudge inward so the
-   * collapse arrow sits inside the rail's right edge — mirroring the
-   * right rail's collapse arrow, which sits just inside its own inner
-   * edge (Phase 13.5 round 3). */
-  margin-left: auto;
-  margin-right: var(--space-3);
+  /* Sits at the very left of the header as a hamburger menu button, just
+   * before the "Food Map" title (.app-header-left is mobile-only — on
+   * desktop the rail's own chrome owns the collapse affordance). */
+  margin: 0;
 }
 
 .rail-toggle {
@@ -1710,6 +1723,10 @@ body.is-rail-resizing * {
   padding: 3px 8px;
   font-size: var(--font-size-xs);
   min-height: 0;
+  /* These are press-and-drag controls (pan / zoom an axis). Own the
+   * gesture so a touch-drag adjusts the axis instead of scrolling the
+   * page or pinch-zooming. */
+  touch-action: none;
 }
 .axis-row-pan.is-active,
 .axis-row-zoom.is-active {
@@ -3739,12 +3756,13 @@ body.axis-drag-locked * {
   border-color: var(--color-border);
 }
 
+/* position: fixed (coords set in config-menu.js on open) so the menu
+ * escapes the header — on mobile the header is an overflow:auto scroll
+ * container, which would otherwise clip this downward-opening dropdown. */
 .config-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 4px;
+  position: fixed;
   min-width: 200px;
+  max-width: calc(100vw - 2 * var(--space-2));
   padding: var(--space-1);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -3880,7 +3898,7 @@ body.axis-drag-locked * {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-2);
   text-align: center;
-  max-width: 380px;
+  max-width: min(380px, calc(100vw - 2 * var(--space-4)));
 }
 
 .empty-filter-message {
@@ -3970,6 +3988,28 @@ body.axis-drag-locked * {
     min-height: 44px;
   }
 
+  /* Bottom-sheet dismiss (×) is a primary control on mobile — bump it to
+   * the 44px touch target (it's 36px on desktop where the cursor is
+   * precise). Tap-outside + drag-to-dismiss still work alongside it. */
+  .detail-close {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Active-filter chips: the × is the ONLY removal target (tapping the
+   * label does nothing), so an 18px hit area is too small for a finger.
+   * Enlarge it and let the chip grow to suit — the list wraps, so taller
+   * chips just take another row in the bottom-corner panel. */
+  .active-filter-chip {
+    padding: 3px 3px 3px 12px;
+    font-size: var(--font-size-sm);
+  }
+  .active-filter-chip-x {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
   /* Thresholds + meal builder icon buttons. */
   .threshold-row-reset,
   .meal-ingredient-remove {
@@ -4015,14 +4055,76 @@ body.axis-drag-locked * {
     font-size: var(--font-size-md);
   }
 
-  /* Mobile bottom-sheet handle wider so it's easier to drag, and pad
-   * the search input so the on-screen keyboard doesn't cramp it. */
+  /* Mobile bottom-sheet handle: give it a generous tappable strip (the
+   * visible pill is small, but the hit area spans the sheet's full width
+   * and a comfy height) so dismiss-by-drag isn't pixel-precise. */
   .detail-grab {
-    height: 8px;
+    position: relative;
+    height: 22px;
+    width: 100%;
+    margin: 0;
+    background: transparent; /* the visible pill is the ::after below */
+    border-radius: 0;
+    touch-action: none; /* own the vertical drag; don't scroll the sheet */
+    cursor: grab;
+  }
+  .detail-grab::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 48px;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--color-border);
+  }
+  /* The chrome row (× + grab live here) also acts as a drag surface on
+   * mobile — see detail-panel.js. Buttons inside still take their taps. */
+  .right-rail .rail-chrome {
+    touch-action: none;
   }
   .ingredient-filter-search {
     min-height: 40px;
+  }
+
+  /* --- Broad touch hygiene --- */
+  /* Kill the 300ms tap delay + double-tap zoom on every interactive
+   * control so taps feel native. */
+  button, .seg-btn, .btn, .filter-check, label, a, summary,
+  select, .chip, .tag-chip, .search-row, .data-th-btn {
+    touch-action: manipulation;
+  }
+  /* Sliders own their gesture so a drag doesn't scroll the rail or
+   * pinch-zoom the page. */
+  input[type="range"] {
+    touch-action: none;
+  }
+
+  /* Popovers must never run off the right edge on a narrow viewport. */
+  .seg-dropdown,
+  .zoom-anchor-menu,
+  .axis-picker,
+  .profile-dropdown-panel,
+  .meal-add-suggestions,
+  .remix-add-suggestions {
+    max-width: calc(100vw - 2 * var(--space-2));
+  }
+}
+
+/* Don't let :hover styling "stick" after a tap on touch-only devices —
+ * the pressed look would otherwise linger until the next tap elsewhere.
+ * Scoped to no-hover pointers so desktop hover is untouched. */
+@media (hover: none) {
+  /* Only controls whose RESTING background is transparent — resetting to
+   * transparent here neutralizes the lingering hover without wiping a
+   * deliberate fill. (.btn et al. are intentionally excluded.) */
+  .seg-btn:not(.is-active):hover,
+  .btn-ghost:hover,
+  .rail-section-toggle:hover,
+  .data-table tbody tr:hover,
+  .seg-dropdown-item:not(.is-active):hover {
+    background: transparent;
   }
 }
 
@@ -4610,8 +4712,15 @@ body.axis-drag-locked * {
   flex-direction: column;
   gap: var(--space-3);
   transition: top 180ms var(--ease-out), left 180ms var(--ease-out),
-              right 180ms var(--ease-out);
+              right 180ms var(--ease-out), opacity var(--duration-base) var(--ease-out);
   animation: tutorial-card-in 220ms var(--ease-out);
+}
+/* Mobile: while the user reaches past the card to touch the app, fade it
+ * (see onGlobalPointerDown) so the live result is visible. Opacity only —
+ * the card stays clickable (faint), so Back/Next never become unreachable
+ * even if a pointerup is missed. */
+.tutorial.is-interacting .tutorial-card {
+  opacity: 0.12;
 }
 @keyframes tutorial-card-in {
   from { opacity: 0; transform: translateY(4px); }
@@ -4656,6 +4765,19 @@ body.axis-drag-locked * {
 .tutorial-skip-x:hover {
   background: var(--color-surface-2);
   color: var(--color-text);
+}
+/* Mobile: the × becomes a labeled "Hide ▴" pill so it's clear it tucks the
+ * tour up to the top bar rather than ending it. */
+.tutorial-skip-x.is-hide {
+  width: auto;
+  gap: 4px;
+  padding: 0 var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tutorial-title {
@@ -4814,8 +4936,100 @@ body.axis-drag-locked * {
   pointer-events: none;
 }
 
+/* --- Mobile collapsed bar --- */
+/* When the user taps × on a phone, the full card is hidden and this slim
+ * bar takes over: a constant "Guided tour" header, the current step's
+ * instruction, an always-present expand button, and a Next button that
+ * surfaces once the slide's checklist is done. The spotlight chrome is
+ * hidden via JS (reposition()) so the app behind is fully interactive. */
+.tutorial-collapsed {
+  position: fixed;
+  /* env() is 0 on desktop — only notched phones, where the header is
+   * taller by the top inset, shift this collapsed pill down to match. */
+  top: calc(var(--header-height) + env(safe-area-inset-top) + var(--space-2));
+  left: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+  pointer-events: auto;
+  display: none; /* shown only while .tutorial.is-collapsed */
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+}
+.tutorial.is-collapsed .tutorial-collapsed { display: flex; }
+/* Collapsed hides ONLY the big card — the dim panels + spotlight ring stay
+ * so the highlighted region remains highlighted (and, on interactive task
+ * slides, still touchable through the pointer-events:none dims). The slim
+ * bar takes the card's place. */
+.tutorial.is-collapsed .tutorial-card { display: none; }
+/* Collapsed always lets the app behind be touched (even on non-task
+ * slides whose dim would normally swallow clicks) — the whole point of
+ * collapsing is to interact with what the spotlight is pointing at. */
+.tutorial.is-collapsed .tutorial-dim { pointer-events: none; }
+
+.tutorial-collapsed-text {
+  flex: 1 1 auto;
+  min-width: 0; /* allow the step line to truncate instead of overflow */
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.tutorial-collapsed-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.tutorial-collapsed-progress {
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.02em;
+}
+.tutorial-collapsed-step {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tutorial-collapsed-next {
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+.tutorial-collapsed-next[hidden] { display: none; }
+.tutorial-collapsed-expand {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.tutorial-collapsed-expand:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
 @media (max-width: 768px) {
-  .tutorial-card { width: calc(100vw - 24px); }
+  /* Cap the card to the viewport and let it scroll — long steps (e.g. the
+   * 7-bullet wrap-up) would otherwise push the Back/Next buttons off the
+   * bottom of a phone screen, trapping the user. */
+  .tutorial-card {
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 2 * var(--space-3));
+    overflow-y: auto;
+  }
   .tutorial-actions .btn { min-height: 40px; }
 }
 
@@ -4826,5 +5040,38 @@ body.axis-drag-locked * {
     transition: none;
   }
   .tutorial-card { animation: none; }
+}
+
+/* --- Mobile collapse-from-bottom bars for the floating corner panels --- */
+/* The color guide, axes, and active-filters panels are anchored to the
+ * bottom of the screen. A full-width "▾ Hide" bar at the bottom of each
+ * expanded panel lands in (nearly) the same spot as its collapsed pill, so
+ * the user toggles the panel from one place instead of reaching up to the
+ * header × (which is hidden on mobile). Desktop keeps the header ×. */
+.legend-collapse-foot,
+.axis-controls-collapse-foot,
+.active-filters-collapse-foot { display: none; }
+
+@media (max-width: 768px) {
+  .legend-collapse-foot,
+  .axis-controls-collapse-foot,
+  .active-filters-collapse-foot {
+    display: block;
+    width: 100%;
+    margin-top: var(--space-2);
+    padding: var(--space-2);
+    text-align: center;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+  }
+  /* The bottom bar is the collapse control on mobile; hide the top-corner
+   * close/collapse button so there's a single, reachable affordance. */
+  .legend-close,
+  .axis-controls-close,
+  .active-filters-collapse { display: none; }
 }
 
