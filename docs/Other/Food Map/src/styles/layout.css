@@ -89,12 +89,86 @@ input, select, textarea {
   line-height: var(--line-height-tight);
 }
 
-/* On mobile the header crams six control clusters into a narrow viewport,
- * which forces flex-wrap. Shrink the title so the header has a better
- * shot at staying single-row, and so the wrapped row count is bounded. */
+/* On mobile the header crams six control clusters into a narrow viewport.
+ * Rather than wrap to 2–3 rows (which eats precious vertical space above
+ * the canvas), keep it a SINGLE row that scrolls horizontally. The bar
+ * stays at one --header-height tall and the user swipes sideways to reach
+ * controls that don't fit. Scrollbar is visually hidden but functional.
+ *
+ * The header is normally pointer-events:none (so canvas gestures pass
+ * through the transparent gaps); on mobile we make it auto so a horizontal
+ * swipe anywhere on the bar scrolls it instead of leaking to the canvas. */
 @media (max-width: 768px) {
   .app-title {
     font-size: var(--font-size-lg);
+    flex: 0 0 auto;
+  }
+
+  .app-header {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: var(--space-1);
+    padding: var(--space-1) var(--space-2);
+    /* viewport-fit=cover lets the page draw under the notch / rounded
+     * corners (landscape) and the status bar (standalone). Pad the header
+     * past those insets so the ☰, title, and controls aren't clipped.
+     * env() resolves to 0 in normal desktop/browser contexts, so this is
+     * inert anywhere there's no inset. */
+    padding-left: max(var(--space-2), env(safe-area-inset-left));
+    padding-right: max(var(--space-2), env(safe-area-inset-right));
+    padding-top: max(var(--space-1), env(safe-area-inset-top));
+    min-height: calc(var(--header-height) + env(safe-area-inset-top));
+    pointer-events: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;            /* Firefox */
+    /* Let horizontal swipes scroll the bar but still allow vertical
+     * gestures to fall through to the page where relevant. */
+    touch-action: pan-x;
+  }
+  .app-header::-webkit-scrollbar { display: none; } /* WebKit */
+
+  /* Each cluster keeps its intrinsic width and never wraps internally —
+   * the parent bar is the only thing that scrolls. */
+  .app-header-left,
+  .app-header-center,
+  .app-header-actions {
+    flex: 0 0 auto;
+  }
+  .app-header-center { gap: var(--space-1); }
+  .app-header-actions {
+    gap: var(--space-1);
+    margin-left: 0; /* nowrap scroll row: no auto-margin push */
+  }
+  .view-controls { flex-wrap: nowrap; }
+
+  /* Keep the ☰ menu button + "Food Map" title pinned to the left edge of
+   * the horizontally-scrolling header strip so the filter toggle is always
+   * reachable, no matter how far the user has swiped the controls. While
+   * the strip is actively being scrolled, fade this pinned cluster so the
+   * controls sliding beneath it stay visible (main.js toggles is-scrolling
+   * with a short idle debounce). */
+  .app-header-left {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    /* Solid surface so scrolled controls don't show through when idle;
+     * a short fade trails off into the scroll area on the right. */
+    background: var(--color-surface);
+    padding-right: var(--space-2);
+    transition: opacity var(--duration-base) var(--ease-out);
+  }
+  .app-header.is-scrolling .app-header-left {
+    opacity: 0.25;
+  }
+  /* While the tutorial spotlights a header control, hide the pinned
+   * ☰ + title cluster so it can't overlap the button the slide wants
+   * tapped (tutorial.js sets this body class for those slides only). */
+  body.tutorial-target-in-header .app-header-left {
+    display: none;
   }
 }
 
@@ -140,14 +214,9 @@ input, select, textarea {
 
 .table-container[hidden] { display: none; }
 
-/* On mobile the header can wrap to 2 rows (3D/Table + level on row 1,
- * camera/snap on row 2). Reserve enough room above the table so the
- * Columns button isn't obscured. */
-@media (max-width: 768px) {
-  .table-container {
-    padding-top: calc(var(--header-height) * 2);
-  }
-}
+/* The mobile header is now a single horizontally-scrolling row (see the
+ * .app-header rules above), so the table only needs to clear one header
+ * height — same as desktop. */
 
 /* --- Rails (mobile-first: overlays) --- */
 
@@ -185,18 +254,30 @@ input, select, textarea {
   transform: translateX(0);
 }
 
-/* Backdrop overlay so taps outside the drawer dismiss it on mobile. */
-.rail-backdrop {
-  display: none;
+/* Body-level scrim for mobile drawers / bottom sheet. Lives directly on
+ * <body> (NOT inside a rail) because a fixed-position child of a
+ * transform:translate()-ed rail is clipped to the rail's own box — which
+ * made the old in-rail .rail-backdrop unable to cover (and dismiss from)
+ * the area outside the drawer. Sits below the rails but above the canvas
+ * and the floating overlays. Managed by left-rail.js / detail-panel.js. */
+.rail-scrim {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: -1; /* sits behind the rail but above the canvas */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: calc(var(--z-rail) - 1);
+  opacity: 1;
+  transition: opacity var(--duration-base) var(--ease-out);
+}
+.rail-scrim[hidden] {
+  display: none;
+}
+@media (min-width: 769px) {
+  /* Docked rails on desktop never use the scrim. */
+  .rail-scrim { display: none !important; }
 }
 
-.rail-left.is-open .rail-backdrop {
-  display: block;
-}
+/* Legacy in-rail backdrop is superseded by .rail-scrim; neutralize it. */
+.rail-backdrop { display: none !important; }
 
 .rail-right {
   left: 0;
@@ -264,8 +345,10 @@ input, select, textarea {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  /* Smooth slide when the legend resizes (collapse / scheme swap). */
-  transition: right var(--duration-base) var(--ease-out);
+  /* Smooth slide when the legend resizes (collapse / scheme swap); the
+   * opacity transition powers the pan/zoom-drag fade on mobile. */
+  transition: right var(--duration-base) var(--ease-out),
+              opacity var(--duration-slow) ease-in-out;
 }
 .axis-controls[hidden] {
   display: none;
@@ -343,6 +426,75 @@ body:has(.table-view tbody tr:hover) .active-filters {
 .legend:hover,
 .active-filters:hover {
   opacity: 1 !important;
+}
+
+/* --- Mobile: keep the floating corner overlays inside the viewport --- */
+/* Desktop positions the axis-controls panel relative to the legend's
+ * width, which on a ~360px screen pushes its left edge off-screen. Pin
+ * all three corner overlays to the viewport edge and cap their widths so
+ * nothing overflows horizontally on a phone. */
+@media (max-width: 768px) {
+  .legend {
+    width: min(220px, calc(100vw - 2 * var(--space-3)));
+  }
+  /* The legend and axis-controls both anchor to the bottom-right corner.
+   * They sit SIDE BY SIDE (axes to the left of the legend, same as
+   * desktop): the bottom-corner accordion guarantees at most one of the
+   * two is expanded at a time, so the pair always fits even on a phone.
+   * The base .axis-controls rule already parks it flush against the
+   * legend's live width (--legend-width); here we only cap its width so an
+   * expanded panel can't run off the left edge. */
+  .axis-controls {
+    width: min(240px, calc(100vw - 2 * var(--space-3)));
+  }
+  .active-filters {
+    /* Reserve room on the right for the collapsed legend + axes pills so
+     * an expanded chip list never runs underneath them. The accordion
+     * keeps the right-corner pair collapsed (small) whenever this panel
+     * is the expanded one. */
+    max-width: calc(100vw - 190px);
+  }
+
+  /* The corner overlays sit at the rail z-index, so when a drawer or the
+   * bottom sheet is open they'd float un-dimmed on top of the scrim. Hide
+   * them while either mobile panel is open. */
+  body:has(.left-rail.is-open) .legend,
+  body:has(.left-rail.is-open) .axis-controls,
+  body:has(.left-rail.is-open) .active-filters,
+  body:has(.right-rail.is-open) .legend,
+  body:has(.right-rail.is-open) .axis-controls,
+  body:has(.right-rail.is-open) .active-filters {
+    display: none;
+  }
+
+  /* While dragging a nutrient-threshold slider, fade the drawer + scrim so
+   * the live-filtering dot map behind is visible under the finger. It
+   * restores on pointerup (see nutrient-thresholds.js).
+   *
+   * The fade uses ease-in-out at --duration-slow on BOTH the drawer and
+   * the scrim. The rail's base opacity transition is ease-out, which
+   * front-loads ~70% of the change into the first ~40 ms and reads as an
+   * instant snap; a symmetric ease over a longer span is perceived as a
+   * real fade in and out. Transform stays at the snappy base duration so
+   * the drawer still slides in/out quickly. */
+  .rail-left {
+    transition: transform var(--duration-base) var(--ease-out),
+                opacity var(--duration-slow) ease-in-out;
+  }
+  .rail-scrim {
+    transition: opacity var(--duration-slow) ease-in-out;
+  }
+  body.threshold-dragging .rail-left { opacity: 0.12; }
+  body.threshold-dragging .rail-scrim { opacity: 0; }
+
+  /* Same idea for the Axes panel: while a finger drags a Pan/Zoom control,
+   * the panel (and its bottom-corner neighbors) sit on top of the dot map
+   * that's live-rescaling, so fade the corner overlays out for the
+   * duration of the drag. axis-controls.js toggles body.axis-drag-locked;
+   * the buttons keep pointer capture, so the drag continues while faded. */
+  body.axis-drag-locked .axis-controls,
+  body.axis-drag-locked .legend,
+  body.axis-drag-locked .active-filters { opacity: 0.12; }
 }
 
 /* --- Desktop overrides --- */
@@ -454,4 +606,104 @@ body:has(.table-view tbody tr:hover) .active-filters {
   .right-rail.is-collapsed .detail-grab {
     display: none;
   }
+}
+
+/* --- Mobile safe-area insets (viewport-fit=cover) --- */
+/*
+ * The page draws edge-to-edge under the notch, rounded corners, and the
+ * home indicator. Without these offsets, bottom-anchored UI (the detail
+ * bottom sheet, the legend / axes / active-filter pills) sits under the
+ * home bar, and the left drawer's content runs under a landscape notch.
+ * Every value falls back through env()'s implicit 0 on devices / browsers
+ * without insets, so desktop and non-notched phones are unaffected.
+ *
+ * Scoped entirely to the mobile breakpoint: on desktop the rails are
+ * docked grid columns (position: relative) and these fixed-position
+ * overrides never apply.
+ */
+@media (max-width: 768px) {
+  /* The header grew by env(safe-area-inset-top) (see the .app-header rule
+   * above), so the drawer and table must start below the taller header. */
+  .rail-left {
+    top: calc(var(--header-height) + env(safe-area-inset-top));
+    /* Keep drawer content clear of a left-side notch in landscape. The
+     * surface still paints under the notch; only the content shifts in. */
+    padding-left: env(safe-area-inset-left);
+  }
+  .table-container {
+    padding-top: calc(var(--header-height) + env(safe-area-inset-top));
+  }
+
+  /* Bottom sheet: let its scrollable body run past the home indicator so
+   * the last row of content / the save button isn't hidden under it. */
+  .rail-right .detail-body {
+    padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+  }
+
+  /* Floating corner pills clear the home indicator and side insets. The
+   * base rules anchor them at --space-3 from each edge; add the inset. */
+  .legend {
+    bottom: calc(var(--space-3) + env(safe-area-inset-bottom));
+    right: calc(var(--space-3) + env(safe-area-inset-right));
+  }
+  .axis-controls {
+    bottom: calc(var(--space-3) + env(safe-area-inset-bottom));
+    right: calc(var(--legend-width, 220px) + var(--space-3) + var(--space-3)
+                + env(safe-area-inset-right));
+  }
+  .active-filters {
+    bottom: calc(var(--space-3) + env(safe-area-inset-bottom));
+    left: calc(var(--space-3) + env(safe-area-inset-left));
+  }
+}
+
+/* --- Mobile header scroll cue --- */
+/*
+ * The mobile header is a single horizontally-scrolling strip with a
+ * hidden scrollbar (see .app-header above). With the bar scrolled to the
+ * start, the camera / theme / config / unit clusters live off-screen to
+ * the right with no visual hint they exist. This pinned gradient + chevron
+ * fades the right edge to signal "swipe for more", and main.js toggles it
+ * off once the bar is scrolled to the end (or doesn't overflow at all).
+ *
+ * It's position:fixed (so it doesn't scroll away with the strip) and
+ * pointer-events:none (so taps fall through to the control beneath it).
+ * Display is gated to the mobile breakpoint; on desktop the header never
+ * overflows, so main.js keeps it hidden regardless.
+ */
+.header-scroll-cue {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header-scroll-cue:not([hidden]) {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: calc(var(--header-height) + env(safe-area-inset-top));
+    width: calc(36px + env(safe-area-inset-right));
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: max(6px, env(safe-area-inset-right));
+    z-index: calc(var(--z-header) + 1);
+    pointer-events: none;
+    color: var(--color-text-muted);
+    font-size: 22px;
+    line-height: 1;
+    background: linear-gradient(to right,
+      transparent, var(--color-surface) 70%);
+  }
+  /* Nudge only the glyph (not the gradient, which is anchored to the edge)
+   * so the cue reads as an active "more this way" hint. */
+  .header-scroll-cue::after {
+    content: "›";
+    animation: header-cue-nudge 1.7s var(--ease-out) infinite;
+  }
+}
+@keyframes header-cue-nudge {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header-scroll-cue::after { animation: none; }
 }

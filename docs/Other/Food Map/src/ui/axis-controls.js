@@ -127,6 +127,8 @@ export function mountAxisControls(root, { state, openAxisPicker, getAxisDefault,
           Filter by axis ranges
         </button>
       </div>
+      <button type="button" class="axis-controls-collapse-foot" data-action="close"
+              aria-label="Collapse axes panel">▾ Hide</button>
     `;
 
     wireRows();
@@ -230,10 +232,11 @@ export function mountAxisControls(root, { state, openAxisPicker, getAxisDefault,
       resetBtn.addEventListener('click', () => resetAxis(axisIdx));
     });
 
-    const closeBtn = root.querySelector('[data-action="close"]');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => state.set({ axisControlsOpen: false }));
-    }
+    // Two collapse affordances share data-action="close": the header × (desktop)
+    // and the bottom "▾ Hide" bar (mobile, sits where the expand pill is).
+    root.querySelectorAll('[data-action="close"]').forEach(btn => {
+      btn.addEventListener('click', () => state.set({ axisControlsOpen: false }));
+    });
 
     const resetAllBtn = root.querySelector('[data-action="reset-all"]');
     if (resetAllBtn) {

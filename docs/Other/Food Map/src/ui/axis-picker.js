@@ -115,14 +115,14 @@ export function mountAxisPicker({ getCamera, renderer, controls, state, getAxisN
           <label>
             <span>Min</span>
             <input type="number" class="axis-picker-range-min input"
-                   step="any"
+                   step="any" inputmode="decimal"
                    value="${fmtNumberInputValue(constraint.min)}">
             <span class="axis-picker-unit muted">${unitShort}</span>
           </label>
           <label>
             <span>Max</span>
             <input type="number" class="axis-picker-range-max input"
-                   step="any"
+                   step="any" inputmode="decimal"
                    value="${fmtNumberInputValue(constraint.max)}">
             <span class="axis-picker-unit muted">${unitShort}</span>
           </label>

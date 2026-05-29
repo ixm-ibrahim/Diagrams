@@ -104,8 +104,30 @@ export function mountLegend(root, { state } = {}) {
       '--legend-width',
       `${Math.round(root.offsetWidth)}px`
     );
+    // Mobile stacks the axis-controls panel directly above the legend
+    // (they'd otherwise overlap in the same bottom-right corner), so it
+    // needs the legend's live height to know how far up to sit.
+    document.documentElement.style.setProperty(
+      '--legend-height',
+      `${Math.round(root.offsetHeight)}px`
+    );
   });
   ro.observe(root);
+}
+
+/* Mobile: a full-width collapse bar pinned at the BOTTOM of the expanded
+ * panel. Because the panel is bottom-anchored, this bar sits in (almost)
+ * the same spot as the collapsed "Legend" pill — so the user taps the same
+ * area to expand and to collapse, instead of reaching up to the header ×
+ * (which is hidden on mobile). Desktop keeps the header ×; this is
+ * display:none there. */
+function collapseFootHtml() {
+  return `<button class="legend-collapse-foot" type="button"
+                  aria-label="Collapse color guide">▾ Hide</button>`;
+}
+function wireCollapseFoot(root, onClose) {
+  const b = root.querySelector('.legend-collapse-foot');
+  if (b) b.addEventListener('click', onClose);
 }
 
 function schemeToggleHtml(current) {
@@ -184,11 +206,13 @@ function renderRgb(root, onClose, setScheme, hidden, toggleHidden, setAllHidden)
       <ul class="legend-list">${comboRows}</ul>
     </div>
     <p class="legend-note muted">Uncheck a row to hide that group from view.</p>
+    ${collapseFootHtml()}
   `;
   root.querySelector('.legend-close').addEventListener('click', onClose);
   wireSchemeToggle(root, setScheme);
   wireCheckboxes(root, toggleHidden);
   wireBulkToggle(root, allKeys, setAllHidden);
+  wireCollapseFoot(root, onClose);
 }
 
 function renderFoodGroups(root, onClose, setScheme, hidden, toggleHidden, setAllHidden) {
@@ -215,11 +239,13 @@ function renderFoodGroups(root, onClose, setScheme, hidden, toggleHidden, setAll
       <ul class="legend-list">${items}</ul>
     </div>
     <p class="legend-note muted">Uncheck a row to hide that group from view.</p>
+    ${collapseFootHtml()}
   `;
   root.querySelector('.legend-close').addEventListener('click', onClose);
   wireSchemeToggle(root, setScheme);
   wireCheckboxes(root, toggleHidden);
   wireBulkToggle(root, allKeys, setAllHidden);
+  wireCollapseFoot(root, onClose);
 }
 
 function wireBulkToggle(root, allKeys, setAllHidden) {
@@ -248,8 +274,10 @@ function renderScore(root, onClose, state) {
             title="Switch back to Filter mode so dots keep their food-group colors. Threshold values are preserved.">
       ↻ Restore normal coloring
     </button>
+    ${collapseFootHtml()}
   `;
   root.querySelector('.legend-close').addEventListener('click', onClose);
+  wireCollapseFoot(root, onClose);
   /* Batch 10: mirrors the same button in nutrient-thresholds.js — gives
    * the user a one-click out from Score mode without having to scroll
    * the rail to find the Filter tab. State guard kept defensive for

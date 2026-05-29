@@ -152,8 +152,12 @@ export function mountDetailPanel(root, {
   const body = root.querySelector('.detail-body');
   const closeBtn = root.querySelector('.detail-close');
   const grab = root.querySelector('.detail-grab');
+  const chrome = root.querySelector('.rail-chrome');
   const collapseBtn = root.querySelector('.rail-collapse');
   const expandBtn   = root.querySelector('.rail-expand');
+
+  const mobileMq = matchMedia('(max-width: 768px)');
+  const isMobile = () => mobileMq.matches;
 
   // Batch 4: ingredient lookups for the ingredient-level Remix. Built once —
   // the ingredient dataset is immutable at runtime.
@@ -165,6 +169,21 @@ export function mountDetailPanel(root, {
     if (state.get('selectedIngredientId') !== null) state.set({ selectedIngredientId: null });
   }
   closeBtn.addEventListener('click', clearSelection);
+
+  /* Body-level scrim behind the mobile bottom sheet. Tapping the exposed
+   * area above the sheet dismisses the selection — the previous build had
+   * no tap-outside affordance, so closing meant either hitting the small
+   * × or a pixel-precise drag of the grab bar. */
+  const scrim = document.createElement('div');
+  scrim.className = 'rail-scrim';
+  scrim.hidden = true;
+  scrim.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(scrim);
+  scrim.addEventListener('click', clearSelection);
+  function syncScrim() {
+    scrim.hidden = !(isMobile() && root.classList.contains('is-open'));
+  }
+  mobileMq.addEventListener('change', syncScrim);
   collapseBtn.addEventListener('click', () => state.set({ rightRailOpen: false }));
   expandBtn.addEventListener('click',   () => state.set({ rightRailOpen: true }));
 
@@ -191,19 +210,32 @@ export function mountDetailPanel(root, {
     document.removeEventListener('pointerup', onDragEnd);
     document.removeEventListener('pointercancel', onDragEnd);
     const dismiss = dragOffset > DRAG_DISMISS_PX;
+    root.style.transition = 'transform var(--duration-base) var(--ease-out)';
     root.style.transform = '';
+    // Drop the temporary transition once the snap-back settles so it
+    // doesn't lag the next open/close.
+    setTimeout(() => { root.style.transition = ''; }, 220);
     if (dismiss) clearSelection();
   }
-  grab.addEventListener('pointerdown', (ev) => {
-    if (!matchMedia('(max-width: 768px)').matches) return;
+  function startDrag(ev) {
+    if (!isMobile()) return;
+    // Let the × / collapse buttons take their own taps.
+    if (ev.target.closest('button')) return;
     dragging = true;
     dragStartY = ev.clientY;
     dragOffset = 0;
+    // Kill the rail's transform transition so the sheet tracks the finger
+    // 1:1 instead of easing toward each pointer position.
+    root.style.transition = 'none';
     document.addEventListener('pointermove', onDragMove);
     document.addEventListener('pointerup', onDragEnd);
     document.addEventListener('pointercancel', onDragEnd);
     ev.preventDefault();
-  });
+  }
+  // Both the grab pill and the chrome row initiate the drag, so the whole
+  // top strip of the sheet is a drag target rather than a thin handle.
+  grab.addEventListener('pointerdown', startDrag);
+  chrome.addEventListener('pointerdown', startDrag);
 
   function currentReasons(ingredient) {
     const unit = state.get('nutrientUnit') || '100g';
@@ -247,6 +279,7 @@ export function mountDetailPanel(root, {
     body.scrollTop = 0;
     closeBtn.hidden = false;
     root.classList.add('is-open');
+    syncScrim();
     if (state.get('rightRailOpen') === false) {
       state.set({ rightRailOpen: true });
     }
@@ -258,6 +291,7 @@ export function mountDetailPanel(root, {
     body.innerHTML = renderEmptyHtml();
     closeBtn.hidden = true;
     root.classList.remove('is-open');
+    syncScrim();
   }
 
   state.subscribe(s => s.selectedIngredientId, (id) => {

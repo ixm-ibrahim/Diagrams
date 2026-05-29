@@ -46,6 +46,20 @@ const CARD_GAP     = 14;
 const VIEWPORT_PAD = 12;
 const MOBILE_BP    = 768;
 
+/* A "smart" indicator point for a collapsible corner panel (color guide,
+ * axes, active filters). While the panel is expanded its inner control
+ * exists, so the dot points at that; once the panel is collapsed to a pill
+ * the inner control is gone from the DOM, so the dot points at the expand
+ * button instead — telling the user to open the panel first. Re-evaluated
+ * every frame by positionCallouts(), so it hops as the panel opens/closes. */
+function cornerTaskPoint(panelSel, expandSel, innerSel) {
+  return () => {
+    if (document.querySelector(innerSel)) return { dom: innerSel };
+    if (document.querySelector(expandSel)) return { dom: expandSel };
+    return { dom: panelSel };
+  };
+}
+
 export function mountTutorial({
   state,
   /* Optional refs for 3D-anchored callouts. Each is a getter so the
@@ -65,6 +79,13 @@ export function mountTutorial({
   let currentPoint = null; // active indicator source (spec | fn | array), resolved per frame
   let onResize = null;
   let savedRailOpen = null;
+  /* Mobile: the × collapses the tour to a slim bar (header + the current
+   * step's instruction) instead of ending it — the full card eats most of
+   * a phone screen, so the user needs a way to tuck it aside and actually
+   * touch the controls behind it. Only "Skip tour" (in the expanded card)
+   * ends the tour. The bar auto-advances its step text as checklist tasks
+   * complete and surfaces a Next button once the slide is done. */
+  let collapsed = false;
   /* Batch 5: per-slide interactive checklist. A slide may declare `tasks`
    * (1–3 actions). They gate sequentially — only the first not-yet-done task
    * is "active" and shows an on-screen indicator; later ones stay locked
@@ -104,6 +125,7 @@ export function mountTutorial({
   function start() {
     if (root) return; // already open
     stepIdx = 0;
+    collapsed = false;
     steps = buildSteps();
     buildDom();
     if (state && isMobile()) {
@@ -122,6 +144,32 @@ export function mountTutorial({
     window.addEventListener('resize', onResize);
     window.addEventListener('scroll', onResize, true);
     document.addEventListener('keydown', onKey, true);
+    // Mobile: fade the card whenever the user reaches past it to touch the
+    // app (orbit/pinch the map, drag a slider, etc.) so the live result is
+    // visible under the instructions. See onGlobalPointerDown.
+    document.addEventListener('pointerdown', onGlobalPointerDown, true);
+  }
+
+  /* While the expanded card is up on a phone, the moment the user starts a
+   * gesture anywhere that ISN'T the card or the collapsed bar, fade the
+   * card out (it covers most of the screen) so they can watch the map /
+   * rail react. It snaps back when the finger lifts. The card's dim panels
+   * are already pointer-events:none on task slides, so the gesture itself
+   * lands on the app underneath regardless. */
+  function onGlobalPointerDown(ev) {
+    if (!root || collapsed || !isMobile()) return;
+    const card = root.querySelector('.tutorial-card');
+    const bar  = root.querySelector('.tutorial-collapsed');
+    if (card && card.contains(ev.target)) return;
+    if (bar && bar.contains(ev.target)) return;
+    root.classList.add('is-interacting');
+    const clear = () => {
+      if (root) root.classList.remove('is-interacting');
+      document.removeEventListener('pointerup', clear, true);
+      document.removeEventListener('pointercancel', clear, true);
+    };
+    document.addEventListener('pointerup', clear, true);
+    document.addEventListener('pointercancel', clear, true);
   }
 
   function end({ markAsSeen = true } = {}) {
@@ -133,6 +181,8 @@ export function mountTutorial({
       onResize = null;
     }
     document.removeEventListener('keydown', onKey, true);
+    document.removeEventListener('pointerdown', onGlobalPointerDown, true);
+    document.body.classList.remove('tutorial-target-in-header');
     stopLiveLoop();
     calloutEls = [];
     currentPoint = null;
@@ -172,6 +222,126 @@ export function mountTutorial({
     renderStep();
   }
 
+  /* --- Mobile collapse/expand --- */
+
+  function collapse() {
+    if (!root || collapsed) return;
+    collapsed = true;
+    root.classList.add('is-collapsed');
+    updateCollapsedBar();
+    // Only the card is hidden (CSS). The dim panels + ring stay so the
+    // highlight remains, but the dims go pointer-events:none (CSS) so the
+    // app behind is fully touchable; the live loop keeps everything tracking.
+    scheduleReposition();
+  }
+
+  function expand() {
+    if (!root || !collapsed) return;
+    collapsed = false;
+    root.classList.remove('is-collapsed');
+    /* Do NOT call renderStep() here: that re-fires the slide's beforeShow
+     * (which resets the scene / filters) and re-inits the checklist back to
+     * task 1 — the "collapsing resets me to step 1" bug. The card DOM still
+     * holds the current slide (it was only CSS-hidden), so we just refresh
+     * the live bits (checklist UI + indicator) and re-measure the spotlight. */
+    renderTasksUI();
+    updateTaskIndicator();
+    scheduleReposition();
+  }
+
+  /* The collapsed bar's Next: advance to the next slide AND expand it so
+   * the user reads the new slide's full card, mirroring "expand into the
+   * next slide" from the spec. On the last slide it finishes the tour. */
+  function collapsedNext() {
+    if (stepIdx >= steps.length - 1) { end(); return; }
+    collapsed = false;
+    root.classList.remove('is-collapsed');
+    next();
+  }
+
+  // Whether the current slide is "done" — every checklist task complete,
+  // or the slide has no tasks at all (welcome / wrap-up / pure-info).
+  function slideComplete() {
+    const tasks = (steps[stepIdx] && steps[stepIdx].tasks) || [];
+    if (tasks.length === 0) return true;
+    return firstIncompleteIndex() >= tasks.length;
+  }
+
+  function updateCollapsedBar() {
+    if (!root) return;
+    const bar = root.querySelector('.tutorial-collapsed');
+    if (!bar) return;
+    const step = steps[stepIdx];
+    const tasks = (step && step.tasks) || [];
+    const progEl = bar.querySelector('.tutorial-collapsed-progress');
+    const stepEl = bar.querySelector('.tutorial-collapsed-step');
+    const nextBtn = bar.querySelector('.tutorial-collapsed-next');
+
+    if (progEl) progEl.textContent = `${stepIdx + 1}/${steps.length}`;
+
+    let stepText;
+    if (tasks.length === 0) {
+      // No checklist — show the slide title as the "current step".
+      stepText = step ? step.title : '';
+    } else {
+      const idx = firstIncompleteIndex();
+      stepText = idx < tasks.length
+        ? tasks[idx].label
+        : 'Step complete';
+    }
+    if (stepEl) stepEl.textContent = stepText;
+
+    if (nextBtn) {
+      const done = slideComplete();
+      nextBtn.hidden = !done;
+      nextBtn.textContent = (step && step.isLast) ? 'Finish' : 'Next →';
+    }
+  }
+
+  /* Mobile only. When a slide spotlights a control in the (horizontally-
+   * scrolling) header, the sticky "Food Map" + ☰ cluster can sit on top of
+   * the very button the slide wants tapped — so hide that cluster for the
+   * duration of those slides (body class → CSS). Also bring the target into
+   * view ONCE if it's currently scrolled off-screen, without pinning the
+   * strip (the user can still swipe it afterwards; the ring re-measures and
+   * follows). Called from renderStep after beforeShow. */
+  function updateHeaderForStep(step) {
+    const headerEl = document.querySelector('.app-header');
+    if (!isMobile() || !headerEl) {
+      document.body.classList.remove('tutorial-target-in-header');
+      return;
+    }
+    const tgt = effectiveTarget(step);
+    const selectors = tgt ? (Array.isArray(tgt) ? tgt : [tgt]) : [];
+    const inHeader = selectors
+      .map(s => document.querySelector(s))
+      .filter(el => el && headerEl.contains(el));
+    document.body.classList.toggle('tutorial-target-in-header', inHeader.length > 0);
+    if (!inHeader.length) {
+      /* No header control spotlighted on this slide. Return the strip to
+       * its start so controls a PREVIOUS header slide scrolled away come
+       * back — most importantly the 3D/Table toggle on the table slide,
+       * which slide 8 (camera/theme/settings) leaves scrolled off to the
+       * left, hidden under the sticky ☰ + title cluster. */
+      if (headerEl.scrollLeft !== 0) headerEl.scrollLeft = 0;
+      return;
+    }
+    // Measure AFTER toggling the class so the hidden cluster's reflow is
+    // accounted for, then scroll into view only if currently clipped.
+    const hRect = headerEl.getBoundingClientRect();
+    let minL = Infinity, maxR = -Infinity;
+    for (const el of inHeader) {
+      const rc = el.getBoundingClientRect();
+      minL = Math.min(minL, rc.left  - hRect.left + headerEl.scrollLeft);
+      maxR = Math.max(maxR, rc.right - hRect.left + headerEl.scrollLeft);
+    }
+    const viewL = headerEl.scrollLeft;
+    const viewR = headerEl.scrollLeft + headerEl.clientWidth;
+    if (minL < viewL || maxR > viewR) {
+      headerEl.scrollLeft = Math.max(0, (minL + maxR) / 2 - headerEl.clientWidth / 2);
+    }
+  }
+
   function buildSteps() {
     /* sectionStates lets a slide declare which collapsible panels
      * should be open / closed while it's visible. Panels not named are
@@ -179,6 +349,11 @@ export function mountTutorial({
      * guide so they're hidden until the user reaches the slide that
      * actually explains them (Batch 9.4). */
     const SECTIONS_DEFAULT = { axisControlsOpen: false, legendOpen: false };
+
+    /* Mobile uses touch gestures and a bottom sheet instead of a mouse and
+     * a docked right rail, so a handful of steps phrase their instructions
+     * differently. Evaluated once when the steps are built. */
+    const mob = isMobile();
 
     return [
       {
@@ -198,9 +373,12 @@ export function mountTutorial({
         body:
           'Every sphere is one food. Color hints at the food group — red for ' +
           'animal, green for plant, blue for dairy (other groups blend in). ' +
-          'Drag to orbit, scroll to zoom (pinch on a trackpad). Click a sphere ' +
-          'to open its full nutrient breakdown in the right panel.',
-        tip: 'Click an axis label to swap which nutrient that axis represents.',
+          (mob
+            ? 'Drag with one finger to orbit, pinch to zoom. Tap a sphere to open ' +
+              'its full nutrient breakdown in the panel that slides up from the bottom.'
+            : 'Drag to orbit, scroll to zoom (pinch on a trackpad). Click a sphere ' +
+              'to open its full nutrient breakdown in the right panel.'),
+        tip: (mob ? 'Tap' : 'Click') + ' an axis label to swap which nutrient that axis represents.',
         prefer: 'center',
         // Card pinned out of the way so the whole map stays clickable.
         cardCorner: 'bottom-left',
@@ -210,7 +388,13 @@ export function mountTutorial({
         sectionStates: SECTIONS_DEFAULT,
         // The whole map is the target, so these gestures need no point dot —
         // the spotlight ring already frames where to act.
-        tasks: [
+        // Mobile zoom is a pinch (no 'wheel' event fires), so the separate
+        // scroll-to-zoom task can't settle there — fold it into the orbit
+        // task and use touch verbs.
+        tasks: mob ? [
+          { label: 'Drag to orbit; pinch to zoom', dom: { event: 'pointerdown', sel: '#canvas-container' } },
+          { label: 'Tap a sphere to open its details', changed: s => s.selectedIngredientId },
+        ] : [
           { label: 'Drag to orbit the map', dom: { event: 'pointerdown', sel: '#canvas-container' } },
           { label: 'Scroll to zoom in and out', dom: { event: 'wheel', sel: '#canvas-container' } },
           { label: 'Click a sphere to open its details', changed: s => s.selectedIngredientId },
@@ -253,7 +437,10 @@ export function mountTutorial({
         target: '#rail-left',
         title: 'Nutrient thresholds + filters',
         body:
-          'The left rail lives at filters. The very top section is Nutrient ' +
+          (mob
+            ? 'This panel (the ☰ menu, top-left) holds every filter. '
+            : 'The left rail holds every filter. ') +
+          'The very top section is Nutrient ' +
           'thresholds — drag the min/max sliders to filter or score by nutrient. ' +
           'Below it: dietary restrictions, diet & cuisine, food group, category, ' +
           'ingredient, and tag filters. Everything composes.',
@@ -310,7 +497,8 @@ export function mountTutorial({
               : [{ axisIndex: 0 }, { axisIndex: 1 }, { axisIndex: 2 }]),
             changed: s => (s.axes || []).map(a => a && a.nutrient).join('|') },
           { label: 'Click "Zoom to fit" to frame the visible dots',
-            point: { dom: '#axis-controls [data-action="fit-visible"]' },
+            point: cornerTaskPoint('#axis-controls', '#axis-controls .axis-controls-expand',
+              '#axis-controls [data-action="fit-visible"]'),
             dom: { event: 'click', sel: '#axis-controls [data-action="fit-visible"]' } },
         ],
         beforeShow: () => {
@@ -347,9 +535,11 @@ export function mountTutorial({
         keepLegend: true,
         tasks: [
           { label: 'Switch the color scheme (A/P/D or Food group)',
-            point: { dom: '#legend .legend-scheme' }, changed: s => s.colorScheme },
+            point: cornerTaskPoint('#legend', '#legend .legend-expand', '#legend .legend-scheme'),
+            changed: s => s.colorScheme },
           { label: 'Hide a group by unchecking its row',
-            point: { dom: '#legend .legend-item' }, changed: s => s.legendHidden },
+            point: cornerTaskPoint('#legend', '#legend .legend-expand', '#legend .legend-item'),
+            changed: s => s.legendHidden },
         ],
         beforeShow: () => {
           if (state && state.get('view') !== '3d') state.set({ view: '3d' });
@@ -372,7 +562,9 @@ export function mountTutorial({
           'running list of everything currently narrowing the map and table. ' +
           'We turned one on so you can see it; click the chip to switch it off.',
         tasks: [
-          { label: 'Click the chip to clear that filter', point: { dom: '#active-filters' },
+          { label: 'Click the chip to clear that filter',
+            point: cornerTaskPoint('#active-filters', '#active-filters .active-filters-expand',
+              '#active-filters .active-filter-chip-x'),
             changed: s => s.tagFilter },
         ],
         tip: "It's the quickest way to see — and undo — what's filtering your view.",
@@ -636,13 +828,30 @@ export function mountTutorial({
           <button class="btn btn-primary tutorial-next" type="button">Next →</button>
         </div>
       </div>
+      <div class="tutorial-collapsed" role="region" aria-label="Guided tour (collapsed)">
+        <div class="tutorial-collapsed-text">
+          <span class="tutorial-collapsed-title">
+            Guided tour <span class="tutorial-collapsed-progress muted"></span>
+          </span>
+          <span class="tutorial-collapsed-step"></span>
+        </div>
+        <button class="btn btn-primary tutorial-collapsed-next" type="button" hidden>Next →</button>
+        <button class="tutorial-collapsed-expand" type="button"
+                aria-label="Expand the tour" title="Expand the tour">⤢</button>
+      </div>
     `;
     document.body.appendChild(root);
 
     root.querySelector('.tutorial-next').addEventListener('click', next);
     root.querySelector('.tutorial-back').addEventListener('click', back);
     root.querySelector('.tutorial-skip').addEventListener('click', () => end());
-    root.querySelector('.tutorial-skip-x').addEventListener('click', () => end());
+    // Mobile: × tucks the tour into the collapsed bar instead of ending it.
+    // Desktop keeps the original dismiss behavior.
+    root.querySelector('.tutorial-skip-x').addEventListener('click', () => {
+      if (isMobile()) collapse(); else end();
+    });
+    root.querySelector('.tutorial-collapsed-expand').addEventListener('click', expand);
+    root.querySelector('.tutorial-collapsed-next').addEventListener('click', collapsedNext);
 
     // Dim panels swallow clicks so the user can't accidentally interact
     // with the app outside the highlighted target. They don't advance —
@@ -671,6 +880,39 @@ export function mountTutorial({
     if (state && step.sectionStates) {
       for (const [key, want] of Object.entries(step.sectionStates)) {
         if (state.get(key) !== want) state.set({ [key]: want });
+      }
+    }
+
+    /* Mobile: start every slide with the floating corner panels (color
+     * guide, axes, active filters) AND the left filter drawer collapsed.
+     * They eat the small screen, and the per-slide auto-open from
+     * sectionStates above is disorienting on a phone — instead the
+     * checklist's smart callout dot points at the relevant pill/section so
+     * the user opens it themselves. This also gives each slide a clean
+     * slate (nothing left open from the previous slide). Slides that
+     * genuinely need the drawer (thresholds, the use-case flows) reopen it
+     * in their beforeShow below, which runs AFTER this. */
+    if (state && isMobile()) {
+      const patch = {};
+      for (const k of ['legendOpen', 'axisControlsOpen', 'activeFiltersOpen', 'leftRailOpen']) {
+        if (state.get(k) !== false) patch[k] = false;
+      }
+      if (Object.keys(patch).length) state.set(patch);
+    }
+
+    /* Mobile: the × isn't a dismiss — it tucks the tour into the top bar.
+     * Label it so the user knows where it's going. Desktop keeps the plain
+     * close ×. (Set every render since the breakpoint can change on resize.) */
+    const skipX = root.querySelector('.tutorial-skip-x');
+    if (skipX) {
+      if (isMobile()) {
+        skipX.innerHTML = 'Hide <span aria-hidden="true">▴</span>';
+        skipX.setAttribute('aria-label', 'Hide the tour (collapses to the top)');
+        skipX.classList.add('is-hide');
+      } else {
+        skipX.textContent = '×';
+        skipX.setAttribute('aria-label', 'End tour');
+        skipX.classList.remove('is-hide');
       }
     }
 
@@ -736,6 +978,8 @@ export function mountTutorial({
     card.classList.remove('is-centered');
     root.classList.toggle('is-centered', !step.target);
 
+    updateHeaderForStep(step);
+    updateCollapsedBar();
     scheduleReposition();
   }
 
@@ -760,6 +1004,17 @@ export function mountTutorial({
 
   function reposition() {
     if (!root) return;
+
+    /* The collapse affordance is a mobile convenience; if the viewport grew
+     * back to desktop while collapsed, re-expand. */
+    if (collapsed && !isMobile()) { expand(); return; }
+
+    /* When collapsed we keep the spotlight (dim panels + ring) so the
+     * highlighted region stays highlighted and the user can still see —
+     * and, on interactive task slides, touch — what the step is about. Only
+     * the big card is hidden (via CSS), replaced by the slim top bar. So
+     * the positioning below runs in BOTH states; the card just isn't
+     * visible while collapsed. */
     const step = steps[stepIdx];
     const ring = root.querySelector('.tutorial-ring');
     const card = root.querySelector('.tutorial-card');
@@ -798,10 +1053,15 @@ export function mountTutorial({
      * toggle, in particular). Missing selectors are skipped; if none
      * resolve, fall back to centered. */
     const selectors = Array.isArray(tgt) ? tgt : [tgt];
+    const els = selectors.map(sel => document.querySelector(sel)).filter(Boolean);
+    /* The header is a horizontal-scroll strip on mobile; we bring a
+     * spotlighted header control into view ONCE per slide (updateHeaderForStep,
+     * called from renderStep) rather than re-centering every frame here —
+     * the latter pinned scrollLeft and made the strip impossible to swipe.
+     * The ring/dims below re-measure each frame, so they still follow the
+     * target as the user scrolls it around. */
     const rects = [];
-    for (const sel of selectors) {
-      const el = document.querySelector(sel);
-      if (!el) continue;
+    for (const el of els) {
       const rc = el.getBoundingClientRect();
       if (rc.width === 0 && rc.height === 0) continue;
       rects.push(rc);
@@ -1066,6 +1326,14 @@ export function mountTutorial({
     } else {
       currentPoint = (step && step.callouts) || null;
     }
+    // Keep the collapsed bar's step text + Next button in sync as tasks
+    // complete (this runs on every task-state change).
+    updateCollapsedBar();
+    /* Re-sync the header for the now-active task: on the use-case flows the
+     * focus moves from a header control (e.g. "Switch to the Meals level"
+     * → #view-level) onto the left rail, so the ☰/title cluster should
+     * reappear and the strip reset once the header step is done. */
+    updateHeaderForStep(step);
     positionCallouts();
   }
 

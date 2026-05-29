@@ -111,9 +111,23 @@ export function mountLeftRail(root, { state }) {
   });
   syncCollapseAllVisibility();
 
+  const mobileMq = matchMedia('(max-width: 768px)');
+  const isMobile = () => mobileMq.matches;
+
   function setOpen(open) {
     state.set({ leftRailOpen: open });
   }
+
+  /* Body-level scrim for the mobile drawer. Lives on <body> (not inside
+   * the rail) because the rail is transform:translateX()-ed when open,
+   * which would clip a fixed child to the rail's own box. Tapping it
+   * dismisses the drawer. */
+  const scrim = document.createElement('div');
+  scrim.className = 'rail-scrim';
+  scrim.hidden = true;
+  scrim.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(scrim);
+  scrim.addEventListener('click', () => setOpen(false));
 
   expandBtn.addEventListener('click',   () => setOpen(true));
   collapseBtn.addEventListener('click', () => setOpen(false));
@@ -124,10 +138,35 @@ export function mountLeftRail(root, { state }) {
     root.classList.toggle('is-open', open);
     root.classList.toggle('is-collapsed', !open);
     if (appMain) appMain.setAttribute('data-left-open', open ? 'true' : 'false');
+    scrim.hidden = !(open && isMobile());
     syncRailToggleVisibility(open);
   }
   applyOpen(state.get('leftRailOpen'));
   state.subscribe(s => s.leftRailOpen, applyOpen);
+  // Re-evaluate the scrim when crossing the breakpoint (e.g. rotation)
+  // so it never lingers over a now-docked desktop rail.
+  mobileMq.addEventListener('change', () => applyOpen(state.get('leftRailOpen')));
+
+  /* Mobile accordion: only one section open at a time. Each section's own
+   * toggle (createRailSection) flips its data-collapsed on click; this
+   * delegated listener runs afterward (bubbling) and, if the just-clicked
+   * section is now OPEN, collapses its siblings. Desktop keeps independent
+   * sections. */
+  sections.addEventListener('click', (ev) => {
+    if (!isMobile()) return;
+    const toggle = ev.target.closest('.rail-section-toggle');
+    if (!toggle || !sections.contains(toggle)) return;
+    const opened = toggle.closest('.rail-section');
+    if (!opened || opened.dataset.collapsed === 'true') return; // it just closed
+    for (const other of sections.querySelectorAll('.rail-section')) {
+      if (other === opened || other.dataset.collapsed === 'true') continue;
+      other.dataset.collapsed = 'true';
+      const t = other.querySelector('.rail-section-toggle');
+      const c = other.querySelector('.rail-section-chevron');
+      if (t) t.setAttribute('aria-expanded', 'false');
+      if (c) c.textContent = '▸';
+    }
+  });
 
   // Esc dismisses the mobile drawer (overlay over canvas). On desktop
   // the same key would just collapse the rail — opting out so Esc on
@@ -205,7 +244,10 @@ function syncRailToggleVisibility(railOpen) {
   const railToggle = document.getElementById('rail-toggle');
   if (!railToggle) return;
   const icon = railToggle.querySelector('.rail-toggle-icon') || railToggle;
-  icon.textContent = railOpen ? '←' : '→';
+  // This header button only shows on mobile (the desktop title + collapse
+  // arrow live in the rail's own chrome), so it stays the conventional
+  // hamburger glyph regardless of open/closed state; only the label flips.
+  icon.textContent = '☰';
   railToggle.setAttribute('aria-label', railOpen ? 'Hide filters' : 'Show filters');
   railToggle.title = railOpen ? 'Hide filters' : 'Show filters';
 }

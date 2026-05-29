@@ -1646,7 +1646,11 @@
       "low-cal"
     ],
     "serving_grams": 33,
-    "iron": 0.1
+    "iron": 0.1,
+    "aliases": [
+      "egg whites",
+      "liquid egg whites"
+    ]
   },
   {
     "id": "egg-yolk",
@@ -1998,7 +2002,12 @@
       "low-cal"
     ],
     "serving_grams": 100,
-    "iron": 0.4
+    "iron": 0.4,
+    "aliases": [
+      "cauliflower rice",
+      "riced cauliflower",
+      "cauliflower steak"
+    ]
   },
   {
     "id": "brussels-sprouts",
@@ -2091,7 +2100,12 @@
       "low-cal"
     ],
     "serving_grams": 196,
-    "iron": 0.6
+    "iron": 0.6,
+    "aliases": [
+      "zoodles",
+      "zucchini noodles",
+      "courgette"
+    ]
   },
   {
     "id": "tomato",
@@ -10705,7 +10719,10 @@
       "low-cal"
     ],
     "serving_grams": 125,
-    "iron": 0.6
+    "iron": 0.6,
+    "aliases": [
+      "spaghetti squash noodles"
+    ]
   },
   {
     "id": "kabocha",
@@ -25007,7 +25024,11 @@
       "low-cal"
     ],
     "serving_grams": 85,
-    "iron": 0.6
+    "iron": 0.6,
+    "aliases": [
+      "kelp",
+      "dried kelp"
+    ]
   },
   {
     "id": "wakame",
@@ -27584,8 +27605,8 @@
   {
     "id": "shirataki",
     "name": "Shirataki noodles",
-    "category": "Refined grains",
-    "subcategory": "Noodles",
+    "category": "Noodle & rice alternatives",
+    "subcategory": "Shirataki",
     "food_group": "Grains",
     "contains": [],
     "group_weights": [
@@ -27611,7 +27632,13 @@
       "low-cal"
     ],
     "serving_grams": 45,
-    "iron": 1.0
+    "iron": 1.0,
+    "aliases": [
+      "konjac noodles",
+      "miracle noodle",
+      "glucomannan noodles",
+      "keto noodles"
+    ]
   },
   {
     "id": "spelt",
@@ -43931,5 +43958,348 @@
     "tags": [],
     "serving_grams": 30,
     "iron": 2.3
+  },
+  {
+    "id": "konjac-rice",
+    "name": "Konjac rice",
+    "category": "Noodle & rice alternatives",
+    "subcategory": "Konjac rice",
+    "food_group": "Grains",
+    "contains": [],
+    "group_weights": [
+      0,
+      1,
+      0
+    ],
+    "examples": [
+      "keto fried rice",
+      "poke bowls",
+      "rice substitute"
+    ],
+    "aliases": [
+      "shirataki rice",
+      "miracle rice",
+      "konjac yam rice"
+    ],
+    "calories": 10,
+    "carbs": 4.0,
+    "protein": 0.4,
+    "fiber": 3.0,
+    "fat": 0.1,
+    "sodium": 10,
+    "sugar": 0,
+    "saturated_fat": 0,
+    "notes": "Konjac-yam rice; near-zero calorie low-carb rice swap.",
+    "tags": [
+      "low-cal"
+    ],
+    "serving_grams": 115,
+    "iron": 0.5
+  },
+  {
+    "id": "kelp-noodles",
+    "name": "Kelp noodles",
+    "category": "Noodle & rice alternatives",
+    "subcategory": "Kelp noodles",
+    "food_group": "Grains",
+    "contains": [],
+    "group_weights": [
+      0,
+      1,
+      0
+    ],
+    "examples": [
+      "raw pad thai",
+      "cold noodle salads",
+      "low-carb stir-fry"
+    ],
+    "aliases": [
+      "seaweed noodles",
+      "kelp pasta"
+    ],
+    "calories": 6,
+    "carbs": 1.0,
+    "protein": 0.0,
+    "fiber": 0.4,
+    "fat": 0.0,
+    "sodium": 140,
+    "sugar": 0,
+    "saturated_fat": 0,
+    "notes": "Clear noodles of kelp and sodium alginate; crunchy, near-zero calorie.",
+    "tags": [
+      "low-cal"
+    ],
+    "serving_grams": 115,
+    "iron": 0.3
+  },
+  {
+    "id": "hearts-of-palm-pasta",
+    "name": "Hearts of palm pasta",
+    "category": "Noodle & rice alternatives",
+    "subcategory": "Hearts of palm pasta",
+    "food_group": "Grains",
+    "contains": [],
+    "group_weights": [
+      0,
+      1,
+      0
+    ],
+    "examples": [
+      "low-carb spaghetti",
+      "linguine alfredo",
+      "pasta salad"
+    ],
+    "aliases": [
+      "palmini",
+      "palm pasta",
+      "hearts of palm noodles"
+    ],
+    "calories": 25,
+    "carbs": 5.0,
+    "protein": 1.5,
+    "fiber": 3.0,
+    "fat": 0.5,
+    "sodium": 200,
+    "sugar": 0,
+    "saturated_fat": 0,
+    "notes": "Hearts-of-palm cut into noodle shapes; low-carb, high-fiber pasta swap.",
+    "tags": [
+      "low-cal",
+      "high-fiber"
+    ],
+    "serving_grams": 115,
+    "iron": 0.6
+  },
+  {
+    "id": "tofu-shirataki",
+    "name": "Tofu shirataki noodles",
+    "category": "Noodle & rice alternatives",
+    "subcategory": "Shirataki",
+    "food_group": "Grains",
+    "contains": [
+      "soy"
+    ],
+    "group_weights": [
+      0,
+      1,
+      0
+    ],
+    "examples": [
+      "low-carb ramen",
+      "fettuccine alfredo",
+      "noodle stir-fry"
+    ],
+    "aliases": [
+      "konjac tofu noodles",
+      "house foods shirataki"
+    ],
+    "calories": 15,
+    "carbs": 3.0,
+    "protein": 1.0,
+    "fiber": 2.0,
+    "fat": 0.5,
+    "sodium": 15,
+    "sugar": 0,
+    "saturated_fat": 0,
+    "notes": "Konjac noodles blended with tofu; slightly more body than plain shirataki.",
+    "tags": [
+      "low-cal"
+    ],
+    "serving_grams": 115,
+    "iron": 0.4
+  },
+  {
+    "id": "whey-protein-powder",
+    "name": "Whey protein powder",
+    "category": "Protein powders",
+    "subcategory": "Whey protein",
+    "food_group": "Dairy",
+    "contains": [
+      "dairy"
+    ],
+    "group_weights": [
+      0,
+      0,
+      1
+    ],
+    "examples": [
+      "protein shakes",
+      "smoothies",
+      "protein pancakes"
+    ],
+    "aliases": [
+      "whey isolate",
+      "wpi",
+      "protein powder"
+    ],
+    "calories": 370,
+    "carbs": 8,
+    "protein": 80,
+    "fiber": 0,
+    "fat": 6,
+    "sodium": 300,
+    "sugar": 5,
+    "saturated_fat": 3,
+    "notes": "Dried whey isolate/concentrate; about 80% protein by weight.",
+    "tags": [
+      "high-protein"
+    ],
+    "serving_grams": 32,
+    "iron": 1.5
+  },
+  {
+    "id": "casein-protein-powder",
+    "name": "Casein protein powder",
+    "category": "Protein powders",
+    "subcategory": "Casein protein",
+    "food_group": "Dairy",
+    "contains": [
+      "dairy"
+    ],
+    "group_weights": [
+      0,
+      0,
+      1
+    ],
+    "examples": [
+      "bedtime shakes",
+      "protein mousse",
+      "overnight pudding"
+    ],
+    "aliases": [
+      "micellar casein",
+      "protein powder"
+    ],
+    "calories": 360,
+    "carbs": 7,
+    "protein": 78,
+    "fiber": 1,
+    "fat": 2,
+    "sodium": 350,
+    "sugar": 4,
+    "saturated_fat": 1,
+    "notes": "Slow-digesting milk protein; about 78% protein by weight.",
+    "tags": [
+      "high-protein"
+    ],
+    "serving_grams": 32,
+    "iron": 1.0
+  },
+  {
+    "id": "pea-protein-powder",
+    "name": "Pea protein powder",
+    "category": "Protein powders",
+    "subcategory": "Pea protein",
+    "food_group": "Protein (plant)",
+    "contains": [],
+    "group_weights": [
+      0,
+      1,
+      0
+    ],
+    "examples": [
+      "vegan shakes",
+      "smoothies",
+      "plant protein bars"
+    ],
+    "aliases": [
+      "vegan protein powder",
+      "plant protein powder",
+      "protein powder"
+    ],
+    "calories": 380,
+    "carbs": 7,
+    "protein": 80,
+    "fiber": 6,
+    "fat": 6,
+    "sodium": 400,
+    "sugar": 1,
+    "saturated_fat": 1,
+    "notes": "Isolated yellow-pea protein; about 80% protein, soy- and dairy-free.",
+    "tags": [
+      "high-protein",
+      "high-fiber"
+    ],
+    "serving_grams": 32,
+    "iron": 6.0
+  },
+  {
+    "id": "pork-rinds",
+    "name": "Pork rinds (chicharron)",
+    "category": "Processed meat",
+    "subcategory": "Fried pork skin",
+    "food_group": "Protein (animal)",
+    "contains": [
+      "meat",
+      "pork"
+    ],
+    "group_weights": [
+      1,
+      0,
+      0
+    ],
+    "examples": [
+      "keto snack",
+      "breading crumb",
+      "nacho base"
+    ],
+    "aliases": [
+      "chicharron",
+      "chicharrones",
+      "pork scratchings",
+      "pork cracklings"
+    ],
+    "calories": 545,
+    "carbs": 0,
+    "protein": 61,
+    "fiber": 0,
+    "fat": 31,
+    "sodium": 1700,
+    "sugar": 0,
+    "saturated_fat": 11,
+    "notes": "Puffed fried pork skin; zero-carb, high-protein crunchy snack and breading.",
+    "tags": [
+      "high-protein",
+      "snack"
+    ],
+    "serving_grams": 28,
+    "iron": 1.2
+  },
+  {
+    "id": "psyllium-husk",
+    "name": "Psyllium husk",
+    "category": "Seeds",
+    "subcategory": "Psyllium",
+    "food_group": "Nuts & seeds",
+    "contains": [],
+    "group_weights": [
+      0,
+      1,
+      0
+    ],
+    "examples": [
+      "keto bread binder",
+      "fiber supplement",
+      "low-carb tortillas"
+    ],
+    "aliases": [
+      "psyllium",
+      "ispaghula",
+      "isabgol"
+    ],
+    "calories": 200,
+    "carbs": 85,
+    "protein": 2,
+    "fiber": 80,
+    "fat": 0.5,
+    "sodium": 35,
+    "sugar": 0,
+    "saturated_fat": 0,
+    "notes": "Soluble-fiber seed husk; mostly fiber (net carbs near zero), gels for keto baking.",
+    "tags": [
+      "high-fiber"
+    ],
+    "serving_grams": 5,
+    "iron": 1.5
   }
 ]

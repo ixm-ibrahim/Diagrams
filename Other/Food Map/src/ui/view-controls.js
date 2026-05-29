@@ -65,14 +65,27 @@ export function mountViewLevel(root, { state }) {
   const menu        = root.querySelector('.seg-dropdown');
   const labelEl     = root.querySelector('.seg-btn-label');
 
+  /* Portal the menu to <body>. Nested inside the header it would be a
+   * fixed descendant of the mobile header's overflow-scroll container,
+   * which WebKit clips / mis-composites behind the WebGL canvas (the dot
+   * map). As a body child at --z-overlay it paints above everything,
+   * matching the search dropdown's proven pattern. */
+  document.body.appendChild(menu);
+
   function openMenu() {
     // Position the fixed menu just below the Categories button. Done at
     // open-time because window resize / camera changes don't trigger a
     // re-layout for fixed elements.
     const rect = dropdownBtn.getBoundingClientRect();
-    menu.style.left = `${Math.round(rect.left)}px`;
+    menu.hidden = false; // unhide first so offsetWidth is measurable
+    // Clamp within the viewport so the menu never runs off the right edge
+    // on a narrow screen (the header scrolls horizontally on mobile, so
+    // the button can sit anywhere).
+    const MARGIN = 8;
+    const menuW = menu.offsetWidth || 160;
+    const left = Math.max(MARGIN, Math.min(rect.left, window.innerWidth - menuW - MARGIN));
+    menu.style.left = `${Math.round(left)}px`;
     menu.style.top  = `${Math.round(rect.bottom + 4)}px`;
-    menu.hidden = false;
     dropdownBtn.setAttribute('aria-expanded', 'true');
   }
   function closeMenu() {
@@ -116,14 +129,16 @@ export function mountViewLevel(root, { state }) {
       if (menu.hidden) openMenu(); else closeMenu();
       return;
     }
-    // Picking a menu item commits both viewLevel and categoryGroupBy.
+  });
+
+  // The menu lives on <body> now, so its item clicks no longer bubble to
+  // `root` — handle them on the menu itself. Picking an item commits both
+  // viewLevel and categoryGroupBy.
+  menu.addEventListener('click', (ev) => {
     const item = ev.target.closest('.seg-dropdown-item');
-    if (item) {
-      const groupBy = item.dataset.groupBy;
-      state.set({ viewLevel: 'category', categoryGroupBy: groupBy });
-      closeMenu();
-      return;
-    }
+    if (!item) return;
+    state.set({ viewLevel: 'category', categoryGroupBy: item.dataset.groupBy });
+    closeMenu();
   });
 
   // Dismiss on outside click / Escape / viewport resize (the fixed

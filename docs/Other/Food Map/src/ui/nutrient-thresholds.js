@@ -190,6 +190,25 @@ export function mountNutrientThresholds(host, { state, ranges, getDefaultThresho
   const modeBtns    = body.querySelectorAll('.threshold-modes .seg-btn');
   const listEl      = body.querySelector('.threshold-list');
   const resetAll    = body.querySelector('.threshold-reset-all');
+
+  /* Mobile: while a finger is actively dragging a threshold slider, fade
+   * the drawer (and its scrim) almost out so the live filtering on the 3D
+   * map behind is visible. The panel stays interactive (opacity doesn't
+   * block pointer events), so the drag continues; it snaps back the moment
+   * the finger lifts. */
+  const sliderMq = matchMedia('(max-width: 768px)');
+  listEl.addEventListener('pointerdown', (ev) => {
+    if (!sliderMq.matches) return;
+    if (!ev.target.closest('input[type="range"]')) return;
+    document.body.classList.add('threshold-dragging');
+    const end = () => {
+      document.body.classList.remove('threshold-dragging');
+      document.removeEventListener('pointerup', end);
+      document.removeEventListener('pointercancel', end);
+    };
+    document.addEventListener('pointerup', end);
+    document.addEventListener('pointercancel', end);
+  });
   const profileTrigger = body.querySelector('.profile-dropdown-trigger');
   const profilePanel   = body.querySelector('.profile-dropdown-panel');
   const profileApplyBtns = body.querySelectorAll('.profile-apply-btn');
