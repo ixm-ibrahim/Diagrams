@@ -1,0 +1,262 @@
+/* ====================================================================
+ * Comparison Matrix archetype.
+ * Used for Section 5 (Alignment with Reality) and as the base for
+ * Section 7 (with topic-cluster wrapper).
+ *
+ * Filter pills + horizontal scroll with synced rows + per-criterion synthesis.
+ * ==================================================================== */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0 14px;
+  border-bottom: 0.5px dashed var(--divider);
+  margin-bottom: 16px;
+}
+
+.filter-bar-label {
+  font-size: var(--fs-mini);
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border: 1px solid var(--w-color);
+  border-radius: 10px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--w-numeral);
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-pill[data-active="false"] {
+  opacity: 0.4;
+  border-style: dashed;
+}
+
+.filter-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--w-color);
+  flex-shrink: 0;
+}
+
+.criteria-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.criterion {
+  /* container for header + scroll pane + synthesis */
+}
+
+.tier-tag {
+  font-size: var(--fs-tiny);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+  padding-left: 2px;
+}
+
+.criterion-header {
+  font-size: var(--fs-body);
+  color: var(--text-tertiary);
+  font-style: italic;
+  line-height: 1.4;
+  padding: 0 2px 6px;
+}
+
+.criterion-header[data-collapsible] {
+  cursor: pointer;
+}
+
+.scroll-pane {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  padding-bottom: 4px;
+}
+
+.cells-row {
+  display: flex;
+  gap: 6px;
+  min-width: max-content;
+}
+
+.matrix-cell {
+  flex-shrink: 0;
+  width: 180px;
+  padding: 7px 9px;
+  border-left: 3px solid var(--w-color);
+  background: var(--w-bg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.matrix-cell:hover {
+  filter: brightness(0.98);
+}
+
+.matrix-cell.is-hidden {
+  display: none;
+}
+
+.matrix-cell-head {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.matrix-cell-world {
+  font-size: var(--fs-mini);
+  font-weight: 500;
+  opacity: 0.85;
+  color: var(--w-numeral);
+  flex: 1;
+}
+
+.matrix-cell-verdict {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--w-numeral);
+}
+
+.matrix-cell-text {
+  font-size: var(--fs-mini);
+  line-height: 1.35;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* Synthesis card — per-criterion */
+.synth-card {
+  margin-top: 8px;
+  padding: 8px 11px;
+  background: var(--synth-bg);
+  border-left: 3px dashed var(--synth-border);
+  border-radius: 3px;
+}
+
+.synth-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 3px;
+}
+
+.synth-text {
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  font-style: italic;
+  color: inherit;
+  opacity: 0.92;
+}
+
+/* Topic cluster (Section 7) ========================================= */
+
+.topic-cluster {
+  padding-top: 8px;
+  border-top: 1px solid var(--topic-rule);
+  margin-bottom: 8px;
+}
+
+.topic-eyebrow {
+  font-size: var(--fs-tiny);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+
+.topic-header {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: inherit;
+}
+
+.topic-header[data-collapsible] {
+  cursor: pointer;
+}
+
+.topic-subtitle {
+  font-size: var(--fs-small);
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+/* Topic synthesis card — heavier than per-criterion */
+.topic-synth-card {
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--topic-synth-bg);
+  border-left: 4px solid var(--topic-synth-border);
+  border-radius: var(--radius-sm);
+}
+
+.topic-synth-label {
+  font-size: var(--fs-mini);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 5px;
+}
+
+.topic-synth-text {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* Evidence cards extend matrix with serif quotes ==================== */
+
+.evidence-cell {
+  width: 200px;
+}
+
+.evidence-source {
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--w-numeral);
+  margin-bottom: 4px;
+}
+
+.evidence-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 11.5px;
+  line-height: 1.4;
+  padding-left: 7px;
+  border-left: 2px solid var(--quote-line);
+  color: inherit;
+  margin-bottom: 4px;
+}
+
+.evidence-analysis {
+  font-size: var(--fs-mini);
+  line-height: 1.4;
+  color: inherit;
+  opacity: 0.85;
+}

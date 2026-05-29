@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archetype mockup — Convergent Tree</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 24px; background: #F0EBE4; color: #2C2C2A; line-height: 1.5; }
+h1.page-title { font-size: 18px; font-weight: 500; margin: 0 auto 24px; max-width: 720px; }
+.layout { display: flex; flex-direction: column; gap: 24px; max-width: 720px; margin: 0 auto; }
+.cmp-frame { padding: 18px 14px; border-radius: 12px; border: 0.5px solid; }
+.cmp-light { background: #FFFFFF; color: #2C2C2A; border-color: rgba(0,0,0,0.08); --tt: #888780; --t1: #E24B4A; --t1n: #791F1F; --t1bg: rgba(226,75,74,0.025); --t2: #D85A30; --t2n: #712B13; --t2bg: rgba(216,90,48,0.025); --t3: #EF9F27; --t3n: #633806; --t3bg: rgba(239,159,39,0.035); --t4: #639922; --t4n: #27500A; --t4bg: rgba(99,153,34,0.035); --t5: #378ADD; --t5n: #0C447C; --t5bg: rgba(55,138,221,0.025); --t6: #7F77DD; --t6n: #3C3489; --t6bg: rgba(127,119,221,0.025); --t7: #D4537E; --t7n: #72243E; --t7bg: rgba(212,83,126,0.025); --root: #5F5E5A; --rootn: #2C2C2A; --divider: rgba(0,0,0,0.12); }
+.cmp-dark { background: #1F1D1B; color: #E5E2DD; border-color: rgba(255,255,255,0.08); --tt: #B4B2A9; --t1: #E24B4A; --t1n: #F7C1C1; --t1bg: rgba(226,75,74,0.045); --t2: #D85A30; --t2n: #F5C4B3; --t2bg: rgba(216,90,48,0.045); --t3: #EF9F27; --t3n: #FAC775; --t3bg: rgba(239,159,39,0.05); --t4: #639922; --t4n: #C0DD97; --t4bg: rgba(99,153,34,0.05); --t5: #378ADD; --t5n: #B5D4F4; --t5bg: rgba(55,138,221,0.045); --t6: #7F77DD; --t6n: #CECBF6; --t6bg: rgba(127,119,221,0.045); --t7: #D4537E; --t7n: #F4C0D1; --t7bg: rgba(212,83,126,0.045); --root: #B4B2A9; --rootn: #E5E2DD; --divider: rgba(255,255,255,0.1); }
+.cmp-label { font-size: 11px; color: #888780; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.cmp-head { text-align: center; margin-bottom: 14px; }
+.cmp-eyebrow { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px; color: var(--tt); }
+.cmp-title { font-size: 15px; font-weight: 500; margin: 0; color: inherit; }
+.root-row { display: flex; gap: 8px; justify-content: center; padding-bottom: 12px; margin-bottom: 10px; border-bottom: 0.5px dashed var(--divider); flex-wrap: wrap; }
+.root-card { padding: 5px 12px; border-radius: 14px; font-size: 12px; font-weight: 500; border: 1.5px solid var(--root); color: var(--rootn); }
+.lanes-stack { display: flex; flex-direction: column; gap: 3px; }
+.lane { display: flex; align-items: flex-start; gap: 8px; padding: 7px 10px; border-radius: 6px; }
+.lane-chip { flex-shrink: 0; display: flex; align-items: center; gap: 8px; min-width: 110px; padding-top: 1px; justify-content: flex-end; }
+.lane-circle { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 500; border: 1.5px solid; background: transparent; }
+.lane-name { font-size: 11px; font-weight: 500; color: var(--tt); line-height: 1.2; }
+.lane-cards { display: flex; flex-wrap: wrap; gap: 5px; flex: 1; min-width: 0; align-items: center; }
+.tier-card { padding: 4px 8px 4px 7px; border-left: 3px solid; font-size: 11px; line-height: 1.35; color: inherit; }
+.more-card { padding: 3px 8px; border: 0.5px dashed; border-radius: 4px; font-size: 10px; color: var(--tt); }
+</style>
+</head>
+<body>
+<h1 class="page-title">Convergent Tree — Section 3 sample (tier 1→7 top-to-bottom)</h1>
+<div class="layout">
+
+  <div>
+    <div class="cmp-label">Desktop · light</div>
+    <div class="cmp-frame cmp-light">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 3</div><h2 class="cmp-title">Building confidence in a claim</h2></div>
+      <div class="root-row"><div class="root-card">Historical claim</div><div class="root-card">Logical claim</div></div>
+      <div class="lanes-stack">
+        <div class="lane" style="background:var(--t1bg);"><div class="lane-chip"><div class="lane-name">Subject</div><div class="lane-circle" style="border-color:var(--t1);color:var(--t1n);">1</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t1);">Historical event</div><div class="tier-card" style="border-color:var(--t1);">Philosophical/religious claim</div></div></div>
+        <div class="lane" style="background:var(--t2bg);"><div class="lane-chip"><div class="lane-name">Evidence</div><div class="lane-circle" style="border-color:var(--t2);color:var(--t2n);">2</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t2);">Oral eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Written eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Archaeological alignment</div><div class="more-card" style="border-color:var(--t2);">+2 more</div></div></div>
+        <div class="lane" style="background:var(--t3bg);"><div class="lane-chip"><div class="lane-name">Corroboration</div><div class="lane-circle" style="border-color:var(--t3);color:var(--t3n);">3</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t3);">Multiple independent corroborations</div><div class="tier-card" style="border-color:var(--t3);">Axioms grounded in reality</div></div></div>
+        <div class="lane" style="background:var(--t4bg);"><div class="lane-chip"><div class="lane-name">Integrity</div><div class="lane-circle" style="border-color:var(--t4);color:var(--t4n);">4</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t4);">Unbroken chain of transmission</div><div class="tier-card" style="border-color:var(--t4);">Premises grounded in axioms</div></div></div>
+        <div class="lane" style="background:var(--t5bg);"><div class="lane-chip"><div class="lane-name">Coherence</div><div class="lane-circle" style="border-color:var(--t5);color:var(--t5n);">5</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t5);">Consistency with broader context</div><div class="tier-card" style="border-color:var(--t5);">Coherence and internal consistency</div></div></div>
+        <div class="lane" style="background:var(--t6bg);"><div class="lane-chip"><div class="lane-name">Robustness</div><div class="lane-circle" style="border-color:var(--t6);color:var(--t6n);">6</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t6);">Resistance to fabrication</div><div class="tier-card" style="border-color:var(--t6);">Absence of alternate explanations</div><div class="tier-card" style="border-color:var(--t6);">Robustness to objections</div></div></div>
+        <div class="lane" style="background:var(--t7bg);"><div class="lane-chip"><div class="lane-name">Verification</div><div class="lane-circle" style="border-color:var(--t7);color:var(--t7n);">7</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t7);">Scientific verification</div><div class="tier-card" style="border-color:var(--t7);">Iterative verification</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Desktop · dark</div>
+    <div class="cmp-frame cmp-dark">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 3</div><h2 class="cmp-title">Building confidence in a claim</h2></div>
+      <div class="root-row"><div class="root-card">Historical claim</div><div class="root-card">Logical claim</div></div>
+      <div class="lanes-stack">
+        <div class="lane" style="background:var(--t1bg);"><div class="lane-chip"><div class="lane-name">Subject</div><div class="lane-circle" style="border-color:var(--t1);color:var(--t1n);">1</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t1);">Historical event</div><div class="tier-card" style="border-color:var(--t1);">Philosophical/religious claim</div></div></div>
+        <div class="lane" style="background:var(--t2bg);"><div class="lane-chip"><div class="lane-name">Evidence</div><div class="lane-circle" style="border-color:var(--t2);color:var(--t2n);">2</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t2);">Oral eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Written eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Archaeological alignment</div><div class="more-card" style="border-color:var(--t2);">+2 more</div></div></div>
+        <div class="lane" style="background:var(--t3bg);"><div class="lane-chip"><div class="lane-name">Corroboration</div><div class="lane-circle" style="border-color:var(--t3);color:var(--t3n);">3</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t3);">Multiple independent corroborations</div><div class="tier-card" style="border-color:var(--t3);">Axioms grounded in reality</div></div></div>
+        <div class="lane" style="background:var(--t4bg);"><div class="lane-chip"><div class="lane-name">Integrity</div><div class="lane-circle" style="border-color:var(--t4);color:var(--t4n);">4</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t4);">Unbroken chain of transmission</div><div class="tier-card" style="border-color:var(--t4);">Premises grounded in axioms</div></div></div>
+        <div class="lane" style="background:var(--t5bg);"><div class="lane-chip"><div class="lane-name">Coherence</div><div class="lane-circle" style="border-color:var(--t5);color:var(--t5n);">5</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t5);">Consistency with broader context</div><div class="tier-card" style="border-color:var(--t5);">Coherence and internal consistency</div></div></div>
+        <div class="lane" style="background:var(--t6bg);"><div class="lane-chip"><div class="lane-name">Robustness</div><div class="lane-circle" style="border-color:var(--t6);color:var(--t6n);">6</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t6);">Resistance to fabrication</div><div class="tier-card" style="border-color:var(--t6);">Absence of alternate explanations</div><div class="tier-card" style="border-color:var(--t6);">Robustness to objections</div></div></div>
+        <div class="lane" style="background:var(--t7bg);"><div class="lane-chip"><div class="lane-name">Verification</div><div class="lane-circle" style="border-color:var(--t7);color:var(--t7n);">7</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t7);">Scientific verification</div><div class="tier-card" style="border-color:var(--t7);">Iterative verification</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · light</div>
+    <div class="cmp-frame cmp-light" style="max-width: 360px; margin: 0 auto;">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 3</div><h2 class="cmp-title">Building confidence in a claim</h2></div>
+      <div class="root-row"><div class="root-card">Historical claim</div><div class="root-card">Logical claim</div></div>
+      <div class="lanes-stack">
+        <div class="lane" style="background:var(--t1bg);"><div class="lane-chip"><div class="lane-name">Subject</div><div class="lane-circle" style="border-color:var(--t1);color:var(--t1n);">1</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t1);">Historical event</div><div class="tier-card" style="border-color:var(--t1);">Philosophical/religious claim</div></div></div>
+        <div class="lane" style="background:var(--t2bg);"><div class="lane-chip"><div class="lane-name">Evidence</div><div class="lane-circle" style="border-color:var(--t2);color:var(--t2n);">2</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t2);">Oral eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Written eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Archaeological alignment</div><div class="more-card" style="border-color:var(--t2);">+2 more</div></div></div>
+        <div class="lane" style="background:var(--t3bg);"><div class="lane-chip"><div class="lane-name">Corroboration</div><div class="lane-circle" style="border-color:var(--t3);color:var(--t3n);">3</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t3);">Multiple independent corroborations</div><div class="tier-card" style="border-color:var(--t3);">Axioms grounded in reality</div></div></div>
+        <div class="lane" style="background:var(--t4bg);"><div class="lane-chip"><div class="lane-name">Integrity</div><div class="lane-circle" style="border-color:var(--t4);color:var(--t4n);">4</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t4);">Unbroken chain of transmission</div><div class="tier-card" style="border-color:var(--t4);">Premises grounded in axioms</div></div></div>
+        <div class="lane" style="background:var(--t5bg);"><div class="lane-chip"><div class="lane-name">Coherence</div><div class="lane-circle" style="border-color:var(--t5);color:var(--t5n);">5</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t5);">Consistency with broader context</div><div class="tier-card" style="border-color:var(--t5);">Coherence and internal consistency</div></div></div>
+        <div class="lane" style="background:var(--t6bg);"><div class="lane-chip"><div class="lane-name">Robustness</div><div class="lane-circle" style="border-color:var(--t6);color:var(--t6n);">6</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t6);">Resistance to fabrication</div><div class="tier-card" style="border-color:var(--t6);">Absence of alternate explanations</div><div class="tier-card" style="border-color:var(--t6);">Robustness to objections</div></div></div>
+        <div class="lane" style="background:var(--t7bg);"><div class="lane-chip"><div class="lane-name">Verification</div><div class="lane-circle" style="border-color:var(--t7);color:var(--t7n);">7</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t7);">Scientific verification</div><div class="tier-card" style="border-color:var(--t7);">Iterative verification</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · dark</div>
+    <div class="cmp-frame cmp-dark" style="max-width: 360px; margin: 0 auto;">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 3</div><h2 class="cmp-title">Building confidence in a claim</h2></div>
+      <div class="root-row"><div class="root-card">Historical claim</div><div class="root-card">Logical claim</div></div>
+      <div class="lanes-stack">
+        <div class="lane" style="background:var(--t1bg);"><div class="lane-chip"><div class="lane-name">Subject</div><div class="lane-circle" style="border-color:var(--t1);color:var(--t1n);">1</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t1);">Historical event</div><div class="tier-card" style="border-color:var(--t1);">Philosophical/religious claim</div></div></div>
+        <div class="lane" style="background:var(--t2bg);"><div class="lane-chip"><div class="lane-name">Evidence</div><div class="lane-circle" style="border-color:var(--t2);color:var(--t2n);">2</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t2);">Oral eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Written eyewitness testimony</div><div class="tier-card" style="border-color:var(--t2);">Archaeological alignment</div><div class="more-card" style="border-color:var(--t2);">+2 more</div></div></div>
+        <div class="lane" style="background:var(--t3bg);"><div class="lane-chip"><div class="lane-name">Corroboration</div><div class="lane-circle" style="border-color:var(--t3);color:var(--t3n);">3</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t3);">Multiple independent corroborations</div><div class="tier-card" style="border-color:var(--t3);">Axioms grounded in reality</div></div></div>
+        <div class="lane" style="background:var(--t4bg);"><div class="lane-chip"><div class="lane-name">Integrity</div><div class="lane-circle" style="border-color:var(--t4);color:var(--t4n);">4</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t4);">Unbroken chain of transmission</div><div class="tier-card" style="border-color:var(--t4);">Premises grounded in axioms</div></div></div>
+        <div class="lane" style="background:var(--t5bg);"><div class="lane-chip"><div class="lane-name">Coherence</div><div class="lane-circle" style="border-color:var(--t5);color:var(--t5n);">5</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t5);">Consistency with broader context</div><div class="tier-card" style="border-color:var(--t5);">Coherence and internal consistency</div></div></div>
+        <div class="lane" style="background:var(--t6bg);"><div class="lane-chip"><div class="lane-name">Robustness</div><div class="lane-circle" style="border-color:var(--t6);color:var(--t6n);">6</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t6);">Resistance to fabrication</div><div class="tier-card" style="border-color:var(--t6);">Absence of alternate explanations</div><div class="tier-card" style="border-color:var(--t6);">Robustness to objections</div></div></div>
+        <div class="lane" style="background:var(--t7bg);"><div class="lane-chip"><div class="lane-name">Verification</div><div class="lane-circle" style="border-color:var(--t7);color:var(--t7n);">7</div></div><div class="lane-cards"><div class="tier-card" style="border-color:var(--t7);">Scientific verification</div><div class="tier-card" style="border-color:var(--t7);">Iterative verification</div></div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

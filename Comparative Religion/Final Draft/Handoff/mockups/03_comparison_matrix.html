@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archetype mockup — Comparison Matrix</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 24px; background: #F0EBE4; color: #2C2C2A; line-height: 1.5; }
+h1.page-title { font-size: 18px; font-weight: 500; margin: 0 auto 24px; max-width: 720px; }
+.layout { display: flex; flex-direction: column; gap: 24px; max-width: 720px; margin: 0 auto; }
+.cmp-frame { padding: 18px 14px; border-radius: 12px; border: 0.5px solid; }
+.cmp-light { background: #FFFFFF; color: #2C2C2A; border-color: rgba(0,0,0,0.08); --tt: #888780; --w1: #E24B4A; --w1n: #791F1F; --w1bg: rgba(226,75,74,0.025); --w2: #EF9F27; --w2n: #633806; --w2bg: rgba(239,159,39,0.035); --w3: #639922; --w3n: #27500A; --w3bg: rgba(99,153,34,0.035); --w4: #378ADD; --w4n: #0C447C; --w4bg: rgba(55,138,221,0.025); --divider: rgba(0,0,0,0.12); --synth-bg: rgba(0,0,0,0.025); --synth-border: rgba(0,0,0,0.15); }
+.cmp-dark { background: #1F1D1B; color: #E5E2DD; border-color: rgba(255,255,255,0.08); --tt: #B4B2A9; --w1: #E24B4A; --w1n: #F7C1C1; --w1bg: rgba(226,75,74,0.045); --w2: #EF9F27; --w2n: #FAC775; --w2bg: rgba(239,159,39,0.05); --w3: #639922; --w3n: #C0DD97; --w3bg: rgba(99,153,34,0.05); --w4: #378ADD; --w4n: #B5D4F4; --w4bg: rgba(55,138,221,0.045); --divider: rgba(255,255,255,0.1); --synth-bg: rgba(255,255,255,0.04); --synth-border: rgba(255,255,255,0.18); }
+.cmp-label { font-size: 11px; color: #888780; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.cmp-head { text-align: center; margin-bottom: 12px; }
+.cmp-eyebrow { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px; color: var(--tt); }
+.cmp-title { font-size: 15px; font-weight: 500; margin: 0; color: inherit; }
+.cmp-subtitle { font-size: 11px; color: var(--tt); font-style: italic; margin-top: 4px; line-height: 1.4; }
+.filter-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 6px 0 14px; border-bottom: 0.5px dashed var(--divider); margin-bottom: 16px; }
+.filter-label { font-size: 10px; color: var(--tt); letter-spacing: 0.05em; text-transform: uppercase; margin-right: 4px; }
+.fpill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border: 1px solid; border-radius: 10px; font-size: 11px; font-weight: 500; cursor: pointer; user-select: none; background: transparent; color: inherit; }
+.fdot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.criteria-stack { display: flex; flex-direction: column; gap: 20px; }
+.tier-tag { font-size: 9.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--tt); margin-bottom: 4px; padding-left: 2px; }
+.criterion-header { font-size: 12px; color: var(--tt); font-style: italic; line-height: 1.4; padding: 0 2px 6px; }
+.scroll-pane { overflow-x: auto; scrollbar-width: thin; padding-bottom: 4px; }
+.cells-row { display: flex; gap: 6px; min-width: max-content; }
+.cell { flex-shrink: 0; width: 180px; padding: 7px 9px; border-left: 3px solid; border-radius: 4px; }
+.cell-head { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+.cell-world { font-size: 10px; font-weight: 500; opacity: 0.85; flex: 1; }
+.cell-verdict { font-size: 12px; font-weight: 500; }
+.cell-text { font-size: 10.5px; line-height: 1.35; color: inherit; opacity: 0.85; }
+.synth { margin-top: 8px; padding: 8px 11px; background: var(--synth-bg); border-left: 3px dashed var(--synth-border); border-radius: 3px; }
+.synth-label { font-size: 9px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tt); margin-bottom: 3px; }
+.synth-text { font-size: 11px; line-height: 1.45; font-style: italic; color: inherit; opacity: 0.92; }
+</style>
+</head>
+<body>
+<h1 class="page-title">Comparison Matrix — Section 5 sample (filter pills, scroll-sync, synthesis)</h1>
+<div class="layout">
+
+  <div>
+    <div class="cmp-label">Desktop · light</div>
+    <div class="cmp-frame cmp-light">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 5</div><h2 class="cmp-title">Religious comparison: alignment with reality</h2><div class="cmp-subtitle">Worldviews ordered along the atheism→monotheism spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Trinitarianism</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Monotheism</button></div>
+      <div class="criteria-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 1 · Subject</div>
+          <div class="criterion-header">1 · Things are identified by distinguishing their properties from others.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">Yes</span></div><div class="cell-text">Natural processes are distinguishable</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Each god has distinct properties</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Maybe</span></div><div class="cell-text">3 Persons distinction neither fundamental nor superficial</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">God distinct from creation</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Three worldviews pass cleanly; Trinitarianism produces an undecidable distinction that resists identification.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">2 · All information comes from a source.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">No</span></div><div class="cell-text">Infinite regress or creation from nothing</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Universe came from uncaused gods</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Yes</span></div><div class="cell-text">Same as monotheism</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">Universe came from uncaused God</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Atheism is the only worldview where information has no source — eliminating it at this tier.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 5 · Coherence</div>
+          <div class="criterion-header">3 · Every inference has a limit; speculation is neither proof nor refutation.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">Maybe</span></div><div class="cell-text">Requires "speculation is proof" exception</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Maybe</span></div><div class="cell-text">Multiversal speculation doesn't resolve regress</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Yes</span></div><div class="cell-text">Same as monotheism</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">God is eternal and uncaused</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Both eliminated worldviews retreat to speculative exceptions; monotheistic positions absorb the constraint cleanly.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Desktop · dark</div>
+    <div class="cmp-frame cmp-dark">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 5</div><h2 class="cmp-title">Religious comparison: alignment with reality</h2><div class="cmp-subtitle">Worldviews ordered along the atheism→monotheism spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Trinitarianism</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Monotheism</button></div>
+      <div class="criteria-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 1 · Subject</div>
+          <div class="criterion-header">1 · Things are identified by distinguishing their properties from others.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">Yes</span></div><div class="cell-text">Natural processes are distinguishable</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Each god has distinct properties</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Maybe</span></div><div class="cell-text">3 Persons distinction neither fundamental nor superficial</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">God distinct from creation</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Three worldviews pass cleanly; Trinitarianism produces an undecidable distinction that resists identification.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">2 · All information comes from a source.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">No</span></div><div class="cell-text">Infinite regress or creation from nothing</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Universe came from uncaused gods</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Yes</span></div><div class="cell-text">Same as monotheism</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">Universe came from uncaused God</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Atheism is the only worldview where information has no source — eliminating it at this tier.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 5 · Coherence</div>
+          <div class="criterion-header">3 · Every inference has a limit; speculation is neither proof nor refutation.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">Maybe</span></div><div class="cell-text">Requires "speculation is proof" exception</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Maybe</span></div><div class="cell-text">Multiversal speculation doesn't resolve regress</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Yes</span></div><div class="cell-text">Same as monotheism</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">God is eternal and uncaused</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Both eliminated worldviews retreat to speculative exceptions; monotheistic positions absorb the constraint cleanly.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · light</div>
+    <div class="cmp-frame cmp-light" style="max-width: 360px; margin: 0 auto;">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 5</div><h2 class="cmp-title">Religious comparison: alignment with reality</h2><div class="cmp-subtitle">Worldviews ordered along the atheism→monotheism spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Trinitarianism</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Monotheism</button></div>
+      <div class="criteria-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 1 · Subject</div>
+          <div class="criterion-header">1 · Things are identified by distinguishing their properties from others.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">Yes</span></div><div class="cell-text">Natural processes are distinguishable</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Each god has distinct properties</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Maybe</span></div><div class="cell-text">3 Persons distinction neither fundamental nor superficial</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">God distinct from creation</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Three worldviews pass cleanly; Trinitarianism produces an undecidable distinction.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">2 · All information comes from a source.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">No</span></div><div class="cell-text">Infinite regress or creation from nothing</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Universe came from uncaused gods</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Yes</span></div><div class="cell-text">Same as monotheism</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">Universe came from uncaused God</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Atheism alone has no source — eliminated at this tier.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · dark</div>
+    <div class="cmp-frame cmp-dark" style="max-width: 360px; margin: 0 auto;">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 5</div><h2 class="cmp-title">Religious comparison: alignment with reality</h2><div class="cmp-subtitle">Worldviews ordered along the atheism→monotheism spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Trinitarianism</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Monotheism</button></div>
+      <div class="criteria-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 1 · Subject</div>
+          <div class="criterion-header">1 · Things are identified by distinguishing their properties from others.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">Yes</span></div><div class="cell-text">Natural processes are distinguishable</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Each god has distinct properties</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Maybe</span></div><div class="cell-text">3 Persons distinction neither fundamental nor superficial</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">God distinct from creation</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Three worldviews pass cleanly; Trinitarianism produces an undecidable distinction.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">2 · All information comes from a source.</div>
+          <div class="scroll-pane sync"><div class="cells-row">
+            <div class="cell" style="background:var(--w1bg);border-color:var(--w1);"><div class="cell-head"><span class="cell-world" style="color:var(--w1n);">Atheism</span><span class="cell-verdict" style="color:var(--w1n);">No</span></div><div class="cell-text">Infinite regress or creation from nothing</div></div>
+            <div class="cell" style="background:var(--w2bg);border-color:var(--w2);"><div class="cell-head"><span class="cell-world" style="color:var(--w2n);">Polytheism</span><span class="cell-verdict" style="color:var(--w2n);">Yes</span></div><div class="cell-text">Universe came from uncaused gods</div></div>
+            <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Trinitarianism</span><span class="cell-verdict" style="color:var(--w3n);">Yes</span></div><div class="cell-text">Same as monotheism</div></div>
+            <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Monotheism</span><span class="cell-verdict" style="color:var(--w4n);">Yes</span></div><div class="cell-text">Universe came from uncaused God</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Atheism alone has no source — eliminated at this tier.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  document.querySelectorAll('.cmp-frame').forEach(frame => {
+    const panes = frame.querySelectorAll('.scroll-pane.sync');
+    let active = false;
+    panes.forEach(pane => {
+      pane.addEventListener('scroll', () => {
+        if (active) return;
+        active = true;
+        panes.forEach(p => { if (p !== pane) p.scrollLeft = pane.scrollLeft; });
+        requestAnimationFrame(() => { active = false; });
+      });
+    });
+    const pills = frame.querySelectorAll('.fpill');
+    pills.forEach((pill, idx) => {
+      pill.addEventListener('click', () => {
+        const isActive = pill.dataset.active === 'true';
+        pill.dataset.active = isActive ? 'false' : 'true';
+        pill.style.opacity = isActive ? '0.4' : '1';
+        pill.style.borderStyle = isActive ? 'dashed' : 'solid';
+        const sel = '.cell:nth-child(' + (idx + 1) + ')';
+        frame.querySelectorAll('.cells-row').forEach(row => {
+          const card = row.querySelector(sel);
+          if (card) card.style.display = isActive ? 'none' : '';
+        });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

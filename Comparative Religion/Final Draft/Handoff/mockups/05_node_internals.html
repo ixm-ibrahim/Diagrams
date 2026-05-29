@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Node-card internals (expanded state) — locked</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 24px; background: #F0EBE4; color: #2C2C2A; line-height: 1.5; }
+h1.page-title { font-size: 18px; font-weight: 500; margin: 0 auto 24px; max-width: 720px; }
+.layout { display: flex; flex-direction: column; gap: 24px; max-width: 720px; margin: 0 auto; }
+.cmp-frame { padding: 18px 14px; border-radius: 12px; border: 0.5px solid; }
+.cmp-light { background: #FFFFFF; color: #2C2C2A; border-color: rgba(0,0,0,0.08); --tt: #888780; --t3: #EF9F27; --t3n: #633806; --t3bg: rgba(239,159,39,0.035); --divider: rgba(0,0,0,0.12); --agree: #15803D; --agree-bd: rgba(34,197,94,0.45); --agree-bg: rgba(34,197,94,0.06); --disagree: #991B1B; --disagree-bd: rgba(239,68,68,0.45); --chip-bg: rgba(0,0,0,0.05); }
+.cmp-dark { background: #1F1D1B; color: #E5E2DD; border-color: rgba(255,255,255,0.08); --tt: #B4B2A9; --t3: #EF9F27; --t3n: #FAC775; --t3bg: rgba(239,159,39,0.05); --divider: rgba(255,255,255,0.1); --agree: #86EFAC; --agree-bd: rgba(34,197,94,0.5); --agree-bg: rgba(34,197,94,0.08); --disagree: #FCA5A5; --disagree-bd: rgba(239,68,68,0.5); --chip-bg: rgba(255,255,255,0.08); }
+.cmp-label { font-size: 11px; color: #888780; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.node-card { padding: 16px 18px; border-radius: 8px; border: 0.5px solid var(--divider); border-left: 3px solid var(--t3); background: var(--t3bg); }
+.node-head { margin-bottom: 14px; }
+.node-tier { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 3px; background: var(--chip-bg); font-size: 9.5px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--tt); margin-bottom: 6px; }
+.node-tier-num { color: var(--t3n); font-weight: 600; }
+.node-title { font-size: 15px; font-weight: 500; margin: 0; color: inherit; line-height: 1.35; }
+.strip { padding-bottom: 12px; margin-bottom: 12px; border-bottom: 0.5px dashed var(--divider); }
+.strip:last-of-type { border-bottom: none; }
+.strip-label { font-size: 9.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--tt); margin-bottom: 5px; }
+.strip-text { font-size: 12px; line-height: 1.5; color: inherit; }
+.strip-bullets { display: flex; flex-direction: column; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.strip-bullets li { font-size: 11.5px; line-height: 1.45; padding-left: 14px; position: relative; color: inherit; }
+.strip-bullets li::before { content: "—"; position: absolute; left: 0; color: var(--tt); opacity: 0.7; }
+.objection { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; font-size: 11.5px; line-height: 1.45; }
+.obj-arrow { color: var(--tt); flex-shrink: 0; }
+.obj-text { flex: 1; color: inherit; }
+.obj-type { font-size: 8.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; padding: 1px 6px; border-radius: 2px; background: var(--chip-bg); color: var(--tt); flex-shrink: 0; }
+.node-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; padding-top: 12px; border-top: 0.5px solid var(--divider); margin-top: 4px; }
+.node-btn { font-size: 11px; padding: 4px 11px; border-radius: 4px; border: 0.5px solid var(--divider); background: transparent; cursor: pointer; font-weight: 500; color: inherit; }
+.btn-primary { border-color: var(--t3); color: var(--t3n); }
+.btn-agree { border-color: var(--agree-bd); color: var(--agree); background: var(--agree-bg); }
+.btn-disagree { border-color: var(--disagree-bd); color: var(--disagree); }
+.cost-readout { font-size: 10.5px; color: var(--tt); font-style: italic; margin-left: auto; }
+</style>
+</head>
+<body>
+<h1 class="page-title">Node-card internals — Section 3, Tier 3 sample</h1>
+<div class="layout">
+
+  <div>
+    <div class="cmp-label">Desktop · light</div>
+    <div class="cmp-frame cmp-light">
+      <div class="node-card">
+        <div class="node-head"><span class="node-tier"><span class="node-tier-num">3</span> · Corroboration</span><h3 class="node-title">Multiple independent corroborations</h3></div>
+        <div class="strip"><div class="strip-label">Claim</div><div class="strip-text">A claim's confidence rises when independent sources — lacking motive or contact to collude — agree on its substance.</div></div>
+        <div class="strip"><div class="strip-label">So what</div><div class="strip-text">Unlocks tier 4 (chain integrity): without corroboration, transmission integrity has nothing to compare against.</div></div>
+        <div class="strip"><div class="strip-label">Unlocks</div><ul class="strip-bullets"><li>Multiple corroborations enable chain validation</li><li>Reduces dependence on any single source</li><li>Allows scope-appropriate confidence thresholds</li></ul></div>
+        <div class="strip"><div class="strip-label">Eliminates</div><ul class="strip-bullets"><li>Single-source claims with no corroboration cannot pass this tier</li><li>Private revelations not preserved elsewhere</li><li>Self-attesting claims without independent verification</li></ul></div>
+        <div class="strip"><div class="strip-label">Unknown remainder</div><ul class="strip-bullets"><li>Number of corroborators needed scales with claim scope; this tier doesn't fix the threshold</li></ul></div>
+        <div class="strip"><div class="strip-label">Objections (3)</div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Collusion can be undetectable</span><span class="obj-type">Premise</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">"Independent" is unfalsifiable in practice</span><span class="obj-type">Rule</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Mass delusion case</span><span class="obj-type">Conclusion</span></div>
+        </div>
+        <div class="node-footer">
+          <button class="node-btn btn-primary">Derivation →</button>
+          <button class="node-btn btn-agree">✓ Agree</button>
+          <button class="node-btn btn-disagree">✗ Disagree</button>
+          <span class="cost-readout">Cost: 7 nodes downstream</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Desktop · dark</div>
+    <div class="cmp-frame cmp-dark">
+      <div class="node-card">
+        <div class="node-head"><span class="node-tier"><span class="node-tier-num">3</span> · Corroboration</span><h3 class="node-title">Multiple independent corroborations</h3></div>
+        <div class="strip"><div class="strip-label">Claim</div><div class="strip-text">A claim's confidence rises when independent sources — lacking motive or contact to collude — agree on its substance.</div></div>
+        <div class="strip"><div class="strip-label">So what</div><div class="strip-text">Unlocks tier 4 (chain integrity): without corroboration, transmission integrity has nothing to compare against.</div></div>
+        <div class="strip"><div class="strip-label">Unlocks</div><ul class="strip-bullets"><li>Multiple corroborations enable chain validation</li><li>Reduces dependence on any single source</li><li>Allows scope-appropriate confidence thresholds</li></ul></div>
+        <div class="strip"><div class="strip-label">Eliminates</div><ul class="strip-bullets"><li>Single-source claims with no corroboration cannot pass this tier</li><li>Private revelations not preserved elsewhere</li><li>Self-attesting claims without independent verification</li></ul></div>
+        <div class="strip"><div class="strip-label">Unknown remainder</div><ul class="strip-bullets"><li>Number of corroborators needed scales with claim scope; this tier doesn't fix the threshold</li></ul></div>
+        <div class="strip"><div class="strip-label">Objections (3)</div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Collusion can be undetectable</span><span class="obj-type">Premise</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">"Independent" is unfalsifiable in practice</span><span class="obj-type">Rule</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Mass delusion case</span><span class="obj-type">Conclusion</span></div>
+        </div>
+        <div class="node-footer">
+          <button class="node-btn btn-primary">Derivation →</button>
+          <button class="node-btn btn-agree">✓ Agree</button>
+          <button class="node-btn btn-disagree">✗ Disagree</button>
+          <span class="cost-readout">Cost: 7 nodes downstream</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · light</div>
+    <div class="cmp-frame cmp-light" style="max-width: 360px; margin: 0 auto;">
+      <div class="node-card" style="padding: 12px 14px;">
+        <div class="node-head"><span class="node-tier"><span class="node-tier-num">3</span> · Corroboration</span><h3 class="node-title">Multiple independent corroborations</h3></div>
+        <div class="strip"><div class="strip-label">Claim</div><div class="strip-text">A claim's confidence rises when independent sources — lacking motive or contact to collude — agree on its substance.</div></div>
+        <div class="strip"><div class="strip-label">So what</div><div class="strip-text">Unlocks tier 4: without corroboration, transmission integrity has nothing to compare against.</div></div>
+        <div class="strip"><div class="strip-label">Unlocks</div><ul class="strip-bullets"><li>Multiple corroborations enable chain validation</li><li>Reduces dependence on any single source</li></ul></div>
+        <div class="strip"><div class="strip-label">Eliminates</div><ul class="strip-bullets"><li>Single-source claims cannot pass this tier</li><li>Private revelations not preserved elsewhere</li></ul></div>
+        <div class="strip"><div class="strip-label">Unknown remainder</div><ul class="strip-bullets"><li>Number of corroborators scales with claim scope; threshold not fixed here</li></ul></div>
+        <div class="strip"><div class="strip-label">Objections (3)</div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Collusion can be undetectable</span><span class="obj-type">Premise</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">"Independent" is unfalsifiable</span><span class="obj-type">Rule</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Mass delusion case</span><span class="obj-type">Conclusion</span></div>
+        </div>
+        <div class="node-footer">
+          <button class="node-btn btn-primary">Derivation →</button>
+          <button class="node-btn btn-agree">✓ Agree</button>
+          <button class="node-btn btn-disagree">✗ Disagree</button>
+          <span class="cost-readout">Cost: 7 nodes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · dark</div>
+    <div class="cmp-frame cmp-dark" style="max-width: 360px; margin: 0 auto;">
+      <div class="node-card" style="padding: 12px 14px;">
+        <div class="node-head"><span class="node-tier"><span class="node-tier-num">3</span> · Corroboration</span><h3 class="node-title">Multiple independent corroborations</h3></div>
+        <div class="strip"><div class="strip-label">Claim</div><div class="strip-text">A claim's confidence rises when independent sources — lacking motive or contact to collude — agree on its substance.</div></div>
+        <div class="strip"><div class="strip-label">So what</div><div class="strip-text">Unlocks tier 4: without corroboration, transmission integrity has nothing to compare against.</div></div>
+        <div class="strip"><div class="strip-label">Unlocks</div><ul class="strip-bullets"><li>Multiple corroborations enable chain validation</li><li>Reduces dependence on any single source</li></ul></div>
+        <div class="strip"><div class="strip-label">Eliminates</div><ul class="strip-bullets"><li>Single-source claims cannot pass this tier</li><li>Private revelations not preserved elsewhere</li></ul></div>
+        <div class="strip"><div class="strip-label">Unknown remainder</div><ul class="strip-bullets"><li>Number of corroborators scales with claim scope; threshold not fixed here</li></ul></div>
+        <div class="strip"><div class="strip-label">Objections (3)</div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Collusion can be undetectable</span><span class="obj-type">Premise</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">"Independent" is unfalsifiable</span><span class="obj-type">Rule</span></div>
+          <div class="objection"><span class="obj-arrow">→</span><span class="obj-text">Mass delusion case</span><span class="obj-type">Conclusion</span></div>
+        </div>
+        <div class="node-footer">
+          <button class="node-btn btn-primary">Derivation →</button>
+          <button class="node-btn btn-agree">✓ Agree</button>
+          <button class="node-btn btn-disagree">✗ Disagree</button>
+          <span class="cost-readout">Cost: 7 nodes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

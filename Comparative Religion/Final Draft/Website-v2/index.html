@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title id="page-title">Loading…</title>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/collapsible.css">
+  <link rel="stylesheet" href="css/archetype-ladder.css">
+  <link rel="stylesheet" href="css/archetype-tree.css">
+  <link rel="stylesheet" href="css/archetype-matrix.css">
+  <link rel="stylesheet" href="css/node-card.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="page-header">
+      <span class="page-brand">How objective truths lead to Islam through reason</span>
+      <div class="page-controls">
+        <button id="theme-toggle" class="btn-icon" type="button" aria-label="Toggle theme">
+          <span id="theme-icon">☾</span>
+          <span id="theme-label">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumbs">
+      <a href="#home">Home</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span class="current" id="breadcrumb-current">Section</span>
+    </nav>
+
+    <nav class="section-picker" aria-label="Section picker" id="section-picker">
+      <!-- populated by main.js -->
+    </nav>
+
+    <main id="content" role="main">
+      <!-- archetype renderer populates here -->
+    </main>
+  </div>
+</body>
+</html>

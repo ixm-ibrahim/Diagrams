@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Section 7 — Topic cluster wrapper</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 24px; background: #F0EBE4; color: #2C2C2A; line-height: 1.5; }
+h1.page-title { font-size: 18px; font-weight: 500; margin: 0 auto 24px; max-width: 720px; }
+.layout { display: flex; flex-direction: column; gap: 24px; max-width: 720px; margin: 0 auto; }
+.cmp-frame { padding: 18px 14px; border-radius: 12px; border: 0.5px solid; }
+.cmp-light { background: #FFFFFF; color: #2C2C2A; border-color: rgba(0,0,0,0.08); --tt: #888780; --w3: #639922; --w3n: #27500A; --w3bg: rgba(99,153,34,0.035); --w4: #378ADD; --w4n: #0C447C; --w4bg: rgba(55,138,221,0.025); --divider: rgba(0,0,0,0.12); --synth-bg: rgba(0,0,0,0.025); --synth-border: rgba(0,0,0,0.15); --topic-synth-bg: rgba(0,0,0,0.045); --topic-synth-border: rgba(0,0,0,0.35); --topic-rule: rgba(0,0,0,0.18); }
+.cmp-dark { background: #1F1D1B; color: #E5E2DD; border-color: rgba(255,255,255,0.08); --tt: #B4B2A9; --w3: #639922; --w3n: #C0DD97; --w3bg: rgba(99,153,34,0.05); --w4: #378ADD; --w4n: #B5D4F4; --w4bg: rgba(55,138,221,0.045); --divider: rgba(255,255,255,0.1); --synth-bg: rgba(255,255,255,0.04); --synth-border: rgba(255,255,255,0.18); --topic-synth-bg: rgba(255,255,255,0.06); --topic-synth-border: rgba(255,255,255,0.4); --topic-rule: rgba(255,255,255,0.22); }
+.cmp-label { font-size: 11px; color: #888780; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.cmp-head { text-align: center; margin-bottom: 12px; }
+.cmp-eyebrow { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px; color: var(--tt); }
+.cmp-title { font-size: 15px; font-weight: 500; margin: 0; color: inherit; }
+.cmp-subtitle { font-size: 11px; color: var(--tt); font-style: italic; margin-top: 4px; line-height: 1.4; }
+.filter-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 6px 0 14px; border-bottom: 0.5px dashed var(--divider); margin-bottom: 18px; }
+.filter-label { font-size: 10px; color: var(--tt); letter-spacing: 0.05em; text-transform: uppercase; margin-right: 4px; }
+.fpill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border: 1px solid; border-radius: 10px; font-size: 11px; font-weight: 500; cursor: pointer; user-select: none; background: transparent; color: inherit; }
+.fdot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.topic-cluster { padding-top: 8px; border-top: 1px solid var(--topic-rule); margin-bottom: 8px; }
+.topic-eyebrow { font-size: 9.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tt); margin-bottom: 4px; }
+.topic-header { font-size: 14px; font-weight: 500; margin: 0 0 4px; color: inherit; }
+.topic-sub { font-size: 11px; color: var(--tt); font-style: italic; margin: 0 0 16px; line-height: 1.4; }
+.criteria-stack { display: flex; flex-direction: column; gap: 18px; }
+.tier-tag { font-size: 9.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--tt); margin-bottom: 4px; padding-left: 2px; }
+.criterion-header { font-size: 12px; color: var(--tt); font-style: italic; line-height: 1.4; padding: 0 2px 6px; }
+.scroll-pane { overflow-x: auto; scrollbar-width: thin; padding-bottom: 4px; }
+.cells-row { display: flex; gap: 6px; min-width: max-content; }
+.cell { flex-shrink: 0; width: 210px; padding: 7px 9px; border-left: 3px solid; border-radius: 4px; }
+.cell-head { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
+.cell-world { font-size: 10px; font-weight: 500; opacity: 0.85; flex: 1; }
+.cell-position { font-size: 11.5px; font-weight: 500; }
+.cell-text { font-size: 10.5px; line-height: 1.4; color: inherit; opacity: 0.85; }
+.synth { margin-top: 8px; padding: 7px 11px; background: var(--synth-bg); border-left: 3px dashed var(--synth-border); border-radius: 3px; }
+.synth-label { font-size: 9px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tt); margin-bottom: 3px; }
+.synth-text { font-size: 11px; line-height: 1.45; font-style: italic; color: inherit; opacity: 0.92; }
+.topic-synth { margin-top: 16px; padding: 12px 14px; background: var(--topic-synth-bg); border-left: 4px solid var(--topic-synth-border); border-radius: 4px; }
+.topic-synth-label { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tt); margin-bottom: 5px; }
+.topic-synth-text { font-size: 12.5px; line-height: 1.5; color: inherit; }
+</style>
+</head>
+<body>
+<h1 class="page-title">Section 7 topic-cluster wrapper — Christology example</h1>
+<div class="layout">
+
+  <div>
+    <div class="cmp-label">Desktop · light</div>
+    <div class="cmp-frame cmp-light">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 7</div><h2 class="cmp-title">Theological comparison</h2><div class="cmp-subtitle">New Testament vs. Quran, grouped by topic</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Christianity</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Islam</button></div>
+      <div class="topic-cluster">
+        <div class="topic-eyebrow">Topic 7.1</div>
+        <h3 class="topic-header">Christology</h3>
+        <div class="topic-sub">The nature, mission, and return of Jesus across the two traditions</div>
+        <div class="criteria-stack">
+          <div>
+            <div class="tier-tag">↳ Ties back to Tier 5 · Coherence</div>
+            <div class="criterion-header">1 · Ontological nature of Jesus</div>
+            <div class="scroll-pane sync"><div class="cells-row">
+              <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Christianity</span><span class="cell-position" style="color:var(--w3n);">Divine + human</span></div><div class="cell-text">Second Person of the Trinity, incarnated as a fully human being while remaining fully God.</div></div>
+              <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Islam</span><span class="cell-position" style="color:var(--w4n);">Prophet</span></div><div class="cell-text">Messiah, born of a virgin, sent as a messenger of God — fully human, not divine; Q4:171, Q5:75.</div></div>
+            </div></div>
+            <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Both affirm Jesus as a singular figure; they diverge on whether divine and human natures can coexist in one person.</div></div>
+          </div>
+          <div>
+            <div class="tier-tag">↳ Ties back to Tier 4 · Integrity</div>
+            <div class="criterion-header">2 · The crucifixion event</div>
+            <div class="scroll-pane sync"><div class="cells-row">
+              <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Christianity</span><span class="cell-position" style="color:var(--w3n);">Crucified, died, rose</span></div><div class="cell-text">The crucifixion is the central salvific event; resurrection on the third day vindicates the atonement.</div></div>
+              <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Islam</span><span class="cell-position" style="color:var(--w4n);">Not crucified</span></div><div class="cell-text">Raised to God before the crucifixion attempt; one was made to appear like him; Q4:157–158.</div></div>
+            </div></div>
+            <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Christianity treats the crucifixion as the central salvific event; Islam treats it as a historical event divinely interrupted.</div></div>
+          </div>
+          <div>
+            <div class="tier-tag">↳ Ties back to Tier 6 · Robustness</div>
+            <div class="criterion-header">3 · Second coming / return</div>
+            <div class="scroll-pane sync"><div class="cells-row">
+              <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Christianity</span><span class="cell-position" style="color:var(--w3n);">Returns as judge</span></div><div class="cell-text">Second coming inaugurates the final judgment; living and dead are resurrected and judged.</div></div>
+              <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Islam</span><span class="cell-position" style="color:var(--w4n);">Returns, defeats dajjal</span></div><div class="cell-text">Returns near the end of time, defeats the antichrist (dajjal); final judgment is by God.</div></div>
+            </div></div>
+            <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Both expect a return; Christianity assigns Jesus the judgment role, Islam reserves judgment for God alone.</div></div>
+          </div>
+        </div>
+        <div class="topic-synth"><div class="topic-synth-label">Topic synthesis · Christology</div><div class="topic-synth-text">Across all three christological tests, the two traditions diverge on Jesus's ontology, the necessity of his crucifixion, and his eschatological role. The split reduces to one metaphysical commitment: <em>can a divine being become embodied?</em> Christianity says yes and treats the incarnation, death, and resurrection as the central salvific arc; Islam says no and treats Jesus as the highest of the prophets within a strict monotheism. Every downstream christological disagreement traces back to this single yes/no.</div></div>
+      </div>
+      <div class="topic-cluster">
+        <div class="topic-eyebrow">Topic 7.2</div>
+        <h3 class="topic-header">Soteriology</h3>
+        <div class="topic-sub">How salvation is obtained and what makes it necessary</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Desktop · dark</div>
+    <div class="cmp-frame cmp-dark">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 7</div><h2 class="cmp-title">Theological comparison</h2><div class="cmp-subtitle">New Testament vs. Quran, grouped by topic</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Christianity</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Islam</button></div>
+      <div class="topic-cluster">
+        <div class="topic-eyebrow">Topic 7.1</div>
+        <h3 class="topic-header">Christology</h3>
+        <div class="topic-sub">The nature, mission, and return of Jesus across the two traditions</div>
+        <div class="criteria-stack">
+          <div>
+            <div class="tier-tag">↳ Ties back to Tier 5 · Coherence</div>
+            <div class="criterion-header">1 · Ontological nature of Jesus</div>
+            <div class="scroll-pane sync"><div class="cells-row">
+              <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Christianity</span><span class="cell-position" style="color:var(--w3n);">Divine + human</span></div><div class="cell-text">Second Person of the Trinity, incarnated as a fully human being while remaining fully God.</div></div>
+              <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Islam</span><span class="cell-position" style="color:var(--w4n);">Prophet</span></div><div class="cell-text">Messiah, born of a virgin, sent as a messenger of God — fully human, not divine; Q4:171, Q5:75.</div></div>
+            </div></div>
+            <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Both affirm Jesus as a singular figure; they diverge on whether divine and human natures can coexist in one person.</div></div>
+          </div>
+          <div>
+            <div class="tier-tag">↳ Ties back to Tier 4 · Integrity</div>
+            <div class="criterion-header">2 · The crucifixion event</div>
+            <div class="scroll-pane sync"><div class="cells-row">
+              <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Christianity</span><span class="cell-position" style="color:var(--w3n);">Crucified, died, rose</span></div><div class="cell-text">The crucifixion is the central salvific event; resurrection on the third day vindicates the atonement.</div></div>
+              <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Islam</span><span class="cell-position" style="color:var(--w4n);">Not crucified</span></div><div class="cell-text">Raised to God before the crucifixion attempt; one was made to appear like him; Q4:157–158.</div></div>
+            </div></div>
+            <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Christianity treats the crucifixion as the central salvific event; Islam treats it as a historical event divinely interrupted.</div></div>
+          </div>
+          <div>
+            <div class="tier-tag">↳ Ties back to Tier 6 · Robustness</div>
+            <div class="criterion-header">3 · Second coming / return</div>
+            <div class="scroll-pane sync"><div class="cells-row">
+              <div class="cell" style="background:var(--w3bg);border-color:var(--w3);"><div class="cell-head"><span class="cell-world" style="color:var(--w3n);">Christianity</span><span class="cell-position" style="color:var(--w3n);">Returns as judge</span></div><div class="cell-text">Second coming inaugurates the final judgment; living and dead are resurrected and judged.</div></div>
+              <div class="cell" style="background:var(--w4bg);border-color:var(--w4);"><div class="cell-head"><span class="cell-world" style="color:var(--w4n);">Islam</span><span class="cell-position" style="color:var(--w4n);">Returns, defeats dajjal</span></div><div class="cell-text">Returns near the end of time, defeats the antichrist (dajjal); final judgment is by God.</div></div>
+            </div></div>
+            <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Both expect a return; Christianity assigns Jesus the judgment role, Islam reserves judgment for God alone.</div></div>
+          </div>
+        </div>
+        <div class="topic-synth"><div class="topic-synth-label">Topic synthesis · Christology</div><div class="topic-synth-text">Across all three christological tests, the two traditions diverge on Jesus's ontology, the necessity of his crucifixion, and his eschatological role. The split reduces to one metaphysical commitment: <em>can a divine being become embodied?</em> Christianity says yes and treats the incarnation, death, and resurrection as the central salvific arc; Islam says no and treats Jesus as the highest of the prophets within a strict monotheism. Every downstream christological disagreement traces back to this single yes/no.</div></div>
+      </div>
+      <div class="topic-cluster">
+        <div class="topic-eyebrow">Topic 7.2</div>
+        <h3 class="topic-header">Soteriology</h3>
+        <div class="topic-sub">How salvation is obtained and what makes it necessary</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  document.querySelectorAll('.cmp-frame').forEach(frame => {
+    const panes = frame.querySelectorAll('.scroll-pane.sync');
+    let active = false;
+    panes.forEach(pane => {
+      pane.addEventListener('scroll', () => {
+        if (active) return;
+        active = true;
+        panes.forEach(p => { if (p !== pane) p.scrollLeft = pane.scrollLeft; });
+        requestAnimationFrame(() => { active = false; });
+      });
+    });
+    const pills = frame.querySelectorAll('.fpill');
+    pills.forEach((pill, idx) => {
+      pill.addEventListener('click', () => {
+        const isActive = pill.dataset.active === 'true';
+        pill.dataset.active = isActive ? 'false' : 'true';
+        pill.style.opacity = isActive ? '0.4' : '1';
+        pill.style.borderStyle = isActive ? 'dashed' : 'solid';
+        const sel = '.cell:nth-child(' + (idx + 1) + ')';
+        frame.querySelectorAll('.cells-row').forEach(row => {
+          const card = row.querySelector(sel);
+          if (card) card.style.display = isActive ? 'none' : '';
+        });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

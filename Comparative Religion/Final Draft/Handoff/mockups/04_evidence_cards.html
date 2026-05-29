@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archetype mockup — Evidence Cards</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 24px; background: #F0EBE4; color: #2C2C2A; line-height: 1.5; }
+h1.page-title { font-size: 18px; font-weight: 500; margin: 0 auto 24px; max-width: 720px; }
+.layout { display: flex; flex-direction: column; gap: 24px; max-width: 720px; margin: 0 auto; }
+.cmp-frame { padding: 18px 14px; border-radius: 12px; border: 0.5px solid; }
+.cmp-light { background: #FFFFFF; color: #2C2C2A; border-color: rgba(0,0,0,0.08); --tt: #888780; --w1: #E24B4A; --w1n: #791F1F; --w1bg: rgba(226,75,74,0.025); --w2: #EF9F27; --w2n: #633806; --w2bg: rgba(239,159,39,0.035); --w3: #639922; --w3n: #27500A; --w3bg: rgba(99,153,34,0.035); --w4: #378ADD; --w4n: #0C447C; --w4bg: rgba(55,138,221,0.025); --quote-line: rgba(0,0,0,0.15); --divider: rgba(0,0,0,0.12); --synth-bg: rgba(0,0,0,0.025); --synth-border: rgba(0,0,0,0.15); }
+.cmp-dark { background: #1F1D1B; color: #E5E2DD; border-color: rgba(255,255,255,0.08); --tt: #B4B2A9; --w1: #E24B4A; --w1n: #F7C1C1; --w1bg: rgba(226,75,74,0.045); --w2: #EF9F27; --w2n: #FAC775; --w2bg: rgba(239,159,39,0.05); --w3: #639922; --w3n: #C0DD97; --w3bg: rgba(99,153,34,0.05); --w4: #378ADD; --w4n: #B5D4F4; --w4bg: rgba(55,138,221,0.045); --quote-line: rgba(255,255,255,0.18); --divider: rgba(255,255,255,0.1); --synth-bg: rgba(255,255,255,0.04); --synth-border: rgba(255,255,255,0.18); }
+.cmp-label { font-size: 11px; color: #888780; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.cmp-head { text-align: center; margin-bottom: 12px; }
+.cmp-eyebrow { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px; color: var(--tt); }
+.cmp-title { font-size: 15px; font-weight: 500; margin: 0; color: inherit; }
+.cmp-subtitle { font-size: 11px; color: var(--tt); font-style: italic; margin-top: 4px; line-height: 1.4; }
+.filter-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 6px 0 14px; border-bottom: 0.5px dashed var(--divider); margin-bottom: 16px; }
+.filter-label { font-size: 10px; color: var(--tt); letter-spacing: 0.05em; text-transform: uppercase; margin-right: 4px; }
+.fpill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border: 1px solid; border-radius: 10px; font-size: 11px; font-weight: 500; cursor: pointer; user-select: none; background: transparent; color: inherit; }
+.fdot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.evidence-stack { display: flex; flex-direction: column; gap: 20px; }
+.tier-tag { font-size: 9.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--tt); margin-bottom: 4px; padding-left: 2px; }
+.criterion-header { font-size: 12px; color: var(--tt); font-style: italic; line-height: 1.4; padding: 0 2px 6px; }
+.scroll-pane { overflow-x: auto; scrollbar-width: thin; padding-bottom: 4px; }
+.evidence-row { display: flex; gap: 6px; min-width: max-content; }
+.ev-card { flex-shrink: 0; width: 180px; padding: 8px 10px; border-left: 3px solid; border-radius: 4px; display: flex; flex-direction: column; gap: 5px; }
+.ev-source { font-size: 9.5px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+.ev-quote { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 11.5px; line-height: 1.4; padding-left: 7px; border-left: 2px solid var(--quote-line); color: inherit; }
+.ev-analysis { font-size: 10px; line-height: 1.4; color: inherit; opacity: 0.85; }
+.synth { margin-top: 8px; padding: 8px 11px; background: var(--synth-bg); border-left: 3px dashed var(--synth-border); border-radius: 3px; }
+.synth-label { font-size: 9px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tt); margin-bottom: 3px; }
+.synth-text { font-size: 11px; line-height: 1.45; font-style: italic; color: inherit; opacity: 0.92; }
+</style>
+</head>
+<body>
+<h1 class="page-title">Evidence Cards — Section 6 sample (4 worldviews, scroll-sync, synthesis)</h1>
+<div class="layout">
+
+  <div>
+    <div class="cmp-label">Desktop · light</div>
+    <div class="cmp-frame cmp-light">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 6</div><h2 class="cmp-title">Historical reliability of scripture</h2><div class="cmp-subtitle">Source-by-source comparison across the worldview spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Christianity</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Islam</button></div>
+      <div class="evidence-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">1 · Manuscript dating and earliest surviving sources</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · naturalistic</div><div class="ev-quote">No sacred manuscript posited; religious texts treated as cultural artifact.</div><div class="ev-analysis">Disqualified by exclusion — no candidate at this tier.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · Vedic et al.</div><div class="ev-quote">Vedas preserved orally from ~1500 BCE; Egyptian, Greek, Norse vary widely.</div><div class="ev-analysis">Strong oral preservation in one tradition; methodology varies elsewhere.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · P52 papyrus</div><div class="ev-quote">Earliest fragment c. 125 CE — ~90 years after Jesus's death.</div><div class="ev-analysis">Originals lost; complete codices date to 4th century.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · Birmingham ms.</div><div class="ev-quote">Carbon-dated 568–645 CE, overlapping companions' lifetime.</div><div class="ev-analysis">Complete copies within ~20 years of Prophet's death.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Origin-to-manuscript gap: ~20 years (Quran), ~90 years (NT), millennia with oral preservation (Vedas). Shorter gap = stronger historical anchor; oral methodology can partially compensate when rigorous.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 4 · Integrity</div>
+          <div class="criterion-header">2 · Chain of transmission and textual variants</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · n/a</div><div class="ev-quote">No text held as preserved; no transmission claim.</div><div class="ev-analysis">Excluded — no scriptural commitment to evaluate.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · sruti</div><div class="ev-quote">Vedas preserved via strict mnemonic chains, mathematically verifiable.</div><div class="ev-analysis">Comparable rigor for Vedas; most others lack equivalent methodology.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · textual criticism</div><div class="ev-quote">~5,800 Greek manuscripts; ~400,000 variants — more variants than NT words.</div><div class="ev-analysis">Successive copying across languages; some variants affect doctrine.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · isnad + hafiz</div><div class="ev-quote">Each verse traceable via named chain, cross-verified within first century.</div><div class="ev-analysis">Oral and written transmission preserved in parallel; Uthmanic standardization.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Verification mode differs: dual oral+written (Quran), manuscript volume (NT), mnemonic precision (Vedas), n/a (Atheism). Different methodologies produce different forms of confidence — but only some are auditable end-to-end.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Desktop · dark</div>
+    <div class="cmp-frame cmp-dark">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 6</div><h2 class="cmp-title">Historical reliability of scripture</h2><div class="cmp-subtitle">Source-by-source comparison across the worldview spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Christianity</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Islam</button></div>
+      <div class="evidence-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">1 · Manuscript dating and earliest surviving sources</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · naturalistic</div><div class="ev-quote">No sacred manuscript posited; religious texts treated as cultural artifact.</div><div class="ev-analysis">Disqualified by exclusion — no candidate at this tier.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · Vedic et al.</div><div class="ev-quote">Vedas preserved orally from ~1500 BCE; Egyptian, Greek, Norse vary widely.</div><div class="ev-analysis">Strong oral preservation in one tradition; methodology varies elsewhere.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · P52 papyrus</div><div class="ev-quote">Earliest fragment c. 125 CE — ~90 years after Jesus's death.</div><div class="ev-analysis">Originals lost; complete codices date to 4th century.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · Birmingham ms.</div><div class="ev-quote">Carbon-dated 568–645 CE, overlapping companions' lifetime.</div><div class="ev-analysis">Complete copies within ~20 years of Prophet's death.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Origin-to-manuscript gap: ~20 years (Quran), ~90 years (NT), millennia with oral preservation (Vedas). Shorter gap = stronger historical anchor; oral methodology can partially compensate when rigorous.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 4 · Integrity</div>
+          <div class="criterion-header">2 · Chain of transmission and textual variants</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · n/a</div><div class="ev-quote">No text held as preserved; no transmission claim.</div><div class="ev-analysis">Excluded — no scriptural commitment to evaluate.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · sruti</div><div class="ev-quote">Vedas preserved via strict mnemonic chains, mathematically verifiable.</div><div class="ev-analysis">Comparable rigor for Vedas; most others lack equivalent methodology.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · textual criticism</div><div class="ev-quote">~5,800 Greek manuscripts; ~400,000 variants — more variants than NT words.</div><div class="ev-analysis">Successive copying across languages; some variants affect doctrine.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · isnad + hafiz</div><div class="ev-quote">Each verse traceable via named chain, cross-verified within first century.</div><div class="ev-analysis">Oral and written transmission preserved in parallel; Uthmanic standardization.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Verification mode differs: dual oral+written (Quran), manuscript volume (NT), mnemonic precision (Vedas), n/a (Atheism). Different methodologies produce different forms of confidence — but only some are auditable end-to-end.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · light</div>
+    <div class="cmp-frame cmp-light" style="max-width: 360px; margin: 0 auto;">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 6</div><h2 class="cmp-title">Historical reliability of scripture</h2><div class="cmp-subtitle">Source-by-source comparison across the worldview spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Christianity</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Islam</button></div>
+      <div class="evidence-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">1 · Manuscript dating and earliest surviving sources</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · naturalistic</div><div class="ev-quote">No sacred manuscript posited; religious texts treated as cultural artifact.</div><div class="ev-analysis">Disqualified by exclusion — no candidate at this tier.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · Vedic et al.</div><div class="ev-quote">Vedas preserved orally from ~1500 BCE; Egyptian, Greek, Norse vary widely.</div><div class="ev-analysis">Strong oral preservation in one tradition.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · P52 papyrus</div><div class="ev-quote">Earliest fragment c. 125 CE — ~90 years after Jesus's death.</div><div class="ev-analysis">Originals lost; complete codices 4th century.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · Birmingham ms.</div><div class="ev-quote">Carbon-dated 568–645 CE, overlapping companions' lifetime.</div><div class="ev-analysis">Complete copies within ~20 years of Prophet's death.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Origin-to-manuscript gap: ~20 years (Quran), ~90 years (NT), millennia for Vedas with oral preservation.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 4 · Integrity</div>
+          <div class="criterion-header">2 · Chain of transmission and textual variants</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · n/a</div><div class="ev-quote">No text held as preserved.</div><div class="ev-analysis">Excluded — no scriptural commitment to evaluate.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · sruti</div><div class="ev-quote">Vedas preserved via strict mnemonic chains.</div><div class="ev-analysis">Comparable rigor for Vedas only.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · textual criticism</div><div class="ev-quote">~5,800 Greek manuscripts; ~400,000 variants.</div><div class="ev-analysis">Some variants affect doctrine.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · isnad + hafiz</div><div class="ev-quote">Each verse traceable via named chain.</div><div class="ev-analysis">Oral and written preserved in parallel.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Verification modes differ: dual oral+written (Quran), volume (NT), mnemonic (Vedas), n/a (Atheism).</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cmp-label">Mobile · dark</div>
+    <div class="cmp-frame cmp-dark" style="max-width: 360px; margin: 0 auto;">
+      <div class="cmp-head"><div class="cmp-eyebrow">Section 6</div><h2 class="cmp-title">Historical reliability of scripture</h2><div class="cmp-subtitle">Source-by-source comparison across the worldview spectrum</div></div>
+      <div class="filter-bar"><span class="filter-label">Show</span><button class="fpill" data-active="true" style="border-color:var(--w1);color:var(--w1n);"><span class="fdot" style="background:var(--w1);"></span>Atheism</button><button class="fpill" data-active="true" style="border-color:var(--w2);color:var(--w2n);"><span class="fdot" style="background:var(--w2);"></span>Polytheism</button><button class="fpill" data-active="true" style="border-color:var(--w3);color:var(--w3n);"><span class="fdot" style="background:var(--w3);"></span>Christianity</button><button class="fpill" data-active="true" style="border-color:var(--w4);color:var(--w4n);"><span class="fdot" style="background:var(--w4);"></span>Islam</button></div>
+      <div class="evidence-stack">
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 2 · Evidence</div>
+          <div class="criterion-header">1 · Manuscript dating and earliest surviving sources</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · naturalistic</div><div class="ev-quote">No sacred manuscript posited; religious texts treated as cultural artifact.</div><div class="ev-analysis">Disqualified by exclusion — no candidate at this tier.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · Vedic et al.</div><div class="ev-quote">Vedas preserved orally from ~1500 BCE; Egyptian, Greek, Norse vary widely.</div><div class="ev-analysis">Strong oral preservation in one tradition.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · P52 papyrus</div><div class="ev-quote">Earliest fragment c. 125 CE — ~90 years after Jesus's death.</div><div class="ev-analysis">Originals lost; complete codices 4th century.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · Birmingham ms.</div><div class="ev-quote">Carbon-dated 568–645 CE, overlapping companions' lifetime.</div><div class="ev-analysis">Complete copies within ~20 years of Prophet's death.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Origin-to-manuscript gap: ~20 years (Quran), ~90 years (NT), millennia for Vedas with oral preservation.</div></div>
+        </div>
+        <div>
+          <div class="tier-tag">↳ Ties back to Tier 4 · Integrity</div>
+          <div class="criterion-header">2 · Chain of transmission and textual variants</div>
+          <div class="scroll-pane sync"><div class="evidence-row">
+            <div class="ev-card" style="background:var(--w1bg);border-color:var(--w1);"><div class="ev-source" style="color:var(--w1n);">Atheism · n/a</div><div class="ev-quote">No text held as preserved.</div><div class="ev-analysis">Excluded — no scriptural commitment to evaluate.</div></div>
+            <div class="ev-card" style="background:var(--w2bg);border-color:var(--w2);"><div class="ev-source" style="color:var(--w2n);">Polytheism · sruti</div><div class="ev-quote">Vedas preserved via strict mnemonic chains.</div><div class="ev-analysis">Comparable rigor for Vedas only.</div></div>
+            <div class="ev-card" style="background:var(--w3bg);border-color:var(--w3);"><div class="ev-source" style="color:var(--w3n);">NT · textual criticism</div><div class="ev-quote">~5,800 Greek manuscripts; ~400,000 variants.</div><div class="ev-analysis">Some variants affect doctrine.</div></div>
+            <div class="ev-card" style="background:var(--w4bg);border-color:var(--w4);"><div class="ev-source" style="color:var(--w4n);">Quran · isnad + hafiz</div><div class="ev-quote">Each verse traceable via named chain.</div><div class="ev-analysis">Oral and written preserved in parallel.</div></div>
+          </div></div>
+          <div class="synth"><div class="synth-label">Synthesis</div><div class="synth-text">Verification modes differ: dual oral+written (Quran), volume (NT), mnemonic (Vedas), n/a (Atheism).</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  document.querySelectorAll('.cmp-frame').forEach(frame => {
+    const panes = frame.querySelectorAll('.scroll-pane.sync');
+    let active = false;
+    panes.forEach(pane => {
+      pane.addEventListener('scroll', () => {
+        if (active) return;
+        active = true;
+        panes.forEach(p => { if (p !== pane) p.scrollLeft = pane.scrollLeft; });
+        requestAnimationFrame(() => { active = false; });
+      });
+    });
+    const pills = frame.querySelectorAll('.fpill');
+    pills.forEach((pill, idx) => {
+      pill.addEventListener('click', () => {
+        const isActive = pill.dataset.active === 'true';
+        pill.dataset.active = isActive ? 'false' : 'true';
+        pill.style.opacity = isActive ? '0.4' : '1';
+        pill.style.borderStyle = isActive ? 'dashed' : 'solid';
+        const sel = '.ev-card:nth-child(' + (idx + 1) + ')';
+        frame.querySelectorAll('.evidence-row').forEach(row => {
+          const card = row.querySelector(sel);
+          if (card) card.style.display = isActive ? 'none' : '';
+        });
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

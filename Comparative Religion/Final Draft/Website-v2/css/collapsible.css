@@ -1,0 +1,65 @@
+/* ====================================================================
+ * Collapsible sections — universal pattern across all archetypes.
+ * Any header with [data-collapsible] gets a chevron and click target.
+ * Sibling .section-body collapses when [data-collapsed="true"].
+ * ==================================================================== */
+
+[data-collapsible] {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+[data-collapsible] .chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-left: auto;
+  transition: transform 0.18s ease;
+  flex-shrink: 0;
+}
+
+[data-collapsible][data-collapsed="true"] .chevron {
+  transform: rotate(-90deg);
+}
+
+.section-body[data-collapsed="true"] {
+  display: none;
+}
+
+/* Page-level collapse-all / expand-all control */
+.collapse-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: var(--fs-tiny);
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.collapse-controls button {
+  background: transparent;
+  border: 0;
+  padding: 2px 4px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.collapse-controls button:hover {
+  color: var(--text);
+}
+
+.collapse-controls .sep {
+  opacity: 0.5;
+}

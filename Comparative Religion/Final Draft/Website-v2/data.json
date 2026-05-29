@@ -1,0 +1,232 @@
+{
+  "$comment": "Sample data exercising each archetype. Content is illustrative — final content comes from Final Draft/Website/data.json (Section 1) and AI/Comparative Religion Diagram/*.txt (Sections 2+).",
+  "sections": [
+    {
+      "id": "section-1",
+      "archetype": "rainbow-ladder",
+      "eyebrow": "Section 1",
+      "title": "The pursuit of truth",
+      "subtitle": "Six steps from motivation to belief refinement",
+      "tiers": [
+        {
+          "n": 1, "title": "Motivation for knowing our purpose and following the truth", "name": "Motivation",
+          "internals": {
+            "claim": "Without an honest motive to seek truth, all downstream inquiry is corruptible by preference.",
+            "soWhat": "Locks in the precondition for every later step: the reader has to actually want truth more than comfort.",
+            "unlocks": ["The reader's willingness to entertain conclusions they don't prefer", "A baseline against which later steps can be checked for motivated reasoning"],
+            "eliminates": ["Inquiries undertaken to confirm an existing belief", "Reasoning that bends evidence to fit preferred outcomes"],
+            "unknown": ["This step doesn't fix which substantive truths exist — only that the reader is positioned to find them"],
+            "objections": [
+              { "text": "\"I'm motivated\" is unfalsifiable", "type": "Rule" },
+              { "text": "Curiosity can substitute for moral motivation", "type": "Premise" }
+            ]
+          }
+        },
+        { "n": 2, "title": "Discover observations and infer the nature of reality", "name": "Discovery" },
+        { "n": 3, "title": "Deduce the definition of god from how reality is", "name": "Deduction" },
+        { "n": 4, "title": "Match religions to the deduced definition of god", "name": "Matching" },
+        { "n": 5, "title": "Interpret details through fundamentals", "name": "Interpretation" },
+        { "n": 6, "title": "Refine beliefs incrementally", "name": "Refinement" }
+      ]
+    },
+    {
+      "id": "section-3",
+      "archetype": "convergent-tree",
+      "eyebrow": "Section 3",
+      "title": "Building confidence in a claim",
+      "subtitle": "Two parallel claim types supported by seven tiers of confidence-building",
+      "roots": [
+        { "id": "root-historical", "label": "Historical claim" },
+        { "id": "root-logical", "label": "Logical claim" }
+      ],
+      "tiers": [
+        { "n": 1, "name": "Subject", "cards": [
+          { "id": "t1-historical-event", "title": "Historical event", "tierName": "Subject" },
+          { "id": "t1-philosophical-claim", "title": "Philosophical/religious claim", "tierName": "Subject" }
+        ]},
+        { "n": 2, "name": "Evidence", "more": 2, "cards": [
+          { "id": "t2-oral", "title": "Oral eyewitness testimony", "tierName": "Evidence" },
+          { "id": "t2-written", "title": "Written eyewitness testimony", "tierName": "Evidence" },
+          { "id": "t2-archaeological", "title": "Archaeological alignment", "tierName": "Evidence" }
+        ]},
+        { "n": 3, "name": "Corroboration", "cards": [
+          {
+            "id": "t3-multi-corroboration",
+            "title": "Multiple independent corroborations",
+            "tierName": "Corroboration",
+            "cost": 7,
+            "internals": {
+              "claim": "A claim's confidence rises when independent sources — lacking motive or contact to collude — agree on its substance.",
+              "soWhat": "Unlocks tier 4 (chain integrity): without corroboration, transmission integrity has nothing to compare against.",
+              "unlocks": ["Multiple corroborations enable chain validation", "Reduces dependence on any single source", "Allows scope-appropriate confidence thresholds"],
+              "eliminates": ["Single-source claims with no corroboration cannot pass this tier", "Private revelations not preserved elsewhere", "Self-attesting claims without independent verification"],
+              "unknown": ["Number of corroborators needed scales with claim scope; this tier doesn't fix the threshold"],
+              "objections": [
+                { "text": "Collusion can be undetectable", "type": "Premise" },
+                { "text": "\"Independent\" is unfalsifiable in practice", "type": "Rule" },
+                { "text": "Mass delusion case", "type": "Conclusion" }
+              ]
+            }
+          },
+          { "id": "t3-axioms-grounded", "title": "Axioms grounded in reality", "tierName": "Corroboration" }
+        ]},
+        { "n": 4, "name": "Integrity", "cards": [
+          { "id": "t4-chain", "title": "Unbroken chain of transmission", "tierName": "Integrity" },
+          { "id": "t4-premises", "title": "Premises grounded in axioms", "tierName": "Integrity" }
+        ]},
+        { "n": 5, "name": "Coherence", "cards": [
+          { "id": "t5-context", "title": "Consistency with broader context", "tierName": "Coherence" },
+          { "id": "t5-internal", "title": "Coherence and internal consistency", "tierName": "Coherence" }
+        ]},
+        { "n": 6, "name": "Robustness", "cards": [
+          { "id": "t6-resistance", "title": "Resistance to fabrication", "tierName": "Robustness" },
+          { "id": "t6-absence", "title": "Absence of alternate explanations", "tierName": "Robustness" },
+          { "id": "t6-objections", "title": "Robustness to objections", "tierName": "Robustness" }
+        ]},
+        { "n": 7, "name": "Verification", "cards": [
+          { "id": "t7-scientific", "title": "Scientific verification", "tierName": "Verification" },
+          { "id": "t7-iterative", "title": "Iterative verification", "tierName": "Verification" }
+        ]}
+      ]
+    },
+    {
+      "id": "section-5",
+      "archetype": "comparison-matrix",
+      "eyebrow": "Section 5",
+      "title": "Religious comparison: alignment with reality",
+      "subtitle": "Worldviews ordered along the atheism→monotheism spectrum",
+      "worldviews": [
+        { "id": "atheism", "name": "Atheism", "slot": 1 },
+        { "id": "polytheism", "name": "Polytheism", "slot": 3 },
+        { "id": "trinitarianism", "name": "Trinitarianism", "slot": 4 },
+        { "id": "monotheism", "name": "Monotheism", "slot": 5 }
+      ],
+      "criteria": [
+        {
+          "id": "c-distinguishing",
+          "tiesBackTo": { "tier": 1, "name": "Subject" },
+          "header": "1 · Things are identified by distinguishing their properties from others.",
+          "cells": [
+            { "worldview": "atheism", "verdict": "Yes", "text": "Natural processes are distinguishable" },
+            { "worldview": "polytheism", "verdict": "Yes", "text": "Each god has distinct properties" },
+            { "worldview": "trinitarianism", "verdict": "Maybe", "text": "3 Persons distinction neither fundamental nor superficial" },
+            { "worldview": "monotheism", "verdict": "Yes", "text": "God distinct from creation" }
+          ],
+          "synthesis": "Three worldviews pass cleanly; Trinitarianism produces an undecidable distinction that resists identification."
+        },
+        {
+          "id": "c-information-source",
+          "tiesBackTo": { "tier": 2, "name": "Evidence" },
+          "header": "2 · All information comes from a source.",
+          "cells": [
+            { "worldview": "atheism", "verdict": "No", "text": "Infinite regress or creation from nothing" },
+            { "worldview": "polytheism", "verdict": "Yes", "text": "Universe came from uncaused gods" },
+            { "worldview": "trinitarianism", "verdict": "Yes", "text": "Same as monotheism" },
+            { "worldview": "monotheism", "verdict": "Yes", "text": "Universe came from uncaused God" }
+          ],
+          "synthesis": "Atheism is the only worldview where information has no source — eliminating it at this tier."
+        },
+        {
+          "id": "c-inference-limit",
+          "tiesBackTo": { "tier": 5, "name": "Coherence" },
+          "header": "3 · Every inference has a limit; speculation is neither proof nor refutation.",
+          "cells": [
+            { "worldview": "atheism", "verdict": "Maybe", "text": "Requires \"speculation is proof\" exception" },
+            { "worldview": "polytheism", "verdict": "Maybe", "text": "Multiversal speculation doesn't resolve regress" },
+            { "worldview": "trinitarianism", "verdict": "Yes", "text": "Same as monotheism" },
+            { "worldview": "monotheism", "verdict": "Yes", "text": "God is eternal and uncaused" }
+          ],
+          "synthesis": "Both eliminated worldviews retreat to speculative exceptions; monotheistic positions absorb the constraint cleanly."
+        }
+      ]
+    },
+    {
+      "id": "section-6",
+      "archetype": "evidence-cards",
+      "eyebrow": "Section 6",
+      "title": "Historical reliability of scripture",
+      "subtitle": "Source-by-source comparison across the worldview spectrum",
+      "worldviews": [
+        { "id": "atheism", "name": "Atheism", "slot": 1 },
+        { "id": "polytheism", "name": "Polytheism", "slot": 3 },
+        { "id": "christianity", "name": "Christianity", "slot": 4 },
+        { "id": "islam", "name": "Islam", "slot": 5 }
+      ],
+      "criteria": [
+        {
+          "id": "c-manuscript-dating",
+          "tiesBackTo": { "tier": 2, "name": "Evidence" },
+          "header": "1 · Manuscript dating and earliest surviving sources",
+          "cells": [
+            { "worldview": "atheism", "source": "Atheism · naturalistic", "quote": "No sacred manuscript posited; religious texts treated as cultural artifact.", "analysis": "Disqualified by exclusion — no candidate at this tier." },
+            { "worldview": "polytheism", "source": "Polytheism · Vedic et al.", "quote": "Vedas preserved orally from ~1500 BCE; Egyptian, Greek, Norse vary widely.", "analysis": "Strong oral preservation in one tradition; methodology varies elsewhere." },
+            { "worldview": "christianity", "source": "NT · P52 papyrus", "quote": "Earliest fragment c. 125 CE — ~90 years after Jesus's death.", "analysis": "Originals lost; complete codices date to 4th century." },
+            { "worldview": "islam", "source": "Quran · Birmingham ms.", "quote": "Carbon-dated 568–645 CE, overlapping companions' lifetime.", "analysis": "Complete copies within ~20 years of Prophet's death." }
+          ],
+          "synthesis": "Origin-to-manuscript gap: ~20 years (Quran), ~90 years (NT), millennia with oral preservation (Vedas). Shorter gap = stronger historical anchor; oral methodology can partially compensate when rigorous."
+        },
+        {
+          "id": "c-transmission-chain",
+          "tiesBackTo": { "tier": 4, "name": "Integrity" },
+          "header": "2 · Chain of transmission and textual variants",
+          "cells": [
+            { "worldview": "atheism", "source": "Atheism · n/a", "quote": "No text held as preserved; no transmission claim.", "analysis": "Excluded — no scriptural commitment to evaluate." },
+            { "worldview": "polytheism", "source": "Polytheism · sruti", "quote": "Vedas preserved via strict mnemonic chains, mathematically verifiable.", "analysis": "Comparable rigor for Vedas; most others lack equivalent methodology." },
+            { "worldview": "christianity", "source": "NT · textual criticism", "quote": "~5,800 Greek manuscripts; ~400,000 variants — more variants than NT words.", "analysis": "Successive copying across languages; some variants affect doctrine." },
+            { "worldview": "islam", "source": "Quran · isnad + hafiz", "quote": "Each verse traceable via named chain, cross-verified within first century.", "analysis": "Oral and written transmission preserved in parallel; Uthmanic standardization." }
+          ],
+          "synthesis": "Verification mode differs: dual oral+written (Quran), manuscript volume (NT), mnemonic precision (Vedas), n/a (Atheism). Different methodologies produce different forms of confidence — but only some are auditable end-to-end."
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "archetype": "comparison-matrix-clustered",
+      "eyebrow": "Section 7",
+      "title": "Theological comparison",
+      "subtitle": "New Testament vs. Quran, grouped by topic",
+      "worldviews": [
+        { "id": "christianity", "name": "Christianity", "slot": 4 },
+        { "id": "islam", "name": "Islam", "slot": 5 }
+      ],
+      "topics": [
+        {
+          "id": "christology",
+          "eyebrow": "Topic 7.1",
+          "title": "Christology",
+          "subtitle": "The nature, mission, and return of Jesus across the two traditions",
+          "criteria": [
+            {
+              "id": "c-jesus-nature",
+              "tiesBackTo": { "tier": 5, "name": "Coherence" },
+              "header": "1 · Ontological nature of Jesus",
+              "cells": [
+                { "worldview": "christianity", "verdict": "Divine + human", "text": "Second Person of the Trinity, incarnated as a fully human being while remaining fully God." },
+                { "worldview": "islam", "verdict": "Prophet", "text": "Messiah, born of a virgin, sent as a messenger of God — fully human, not divine; Q4:171, Q5:75." }
+              ],
+              "synthesis": "Both affirm Jesus as a singular figure; they diverge on whether divine and human natures can coexist in one person."
+            },
+            {
+              "id": "c-crucifixion",
+              "tiesBackTo": { "tier": 4, "name": "Integrity" },
+              "header": "2 · The crucifixion event",
+              "cells": [
+                { "worldview": "christianity", "verdict": "Crucified, died, rose", "text": "The crucifixion is the central salvific event; resurrection on the third day vindicates the atonement." },
+                { "worldview": "islam", "verdict": "Not crucified", "text": "Raised to God before the crucifixion attempt; one was made to appear like him; Q4:157–158." }
+              ],
+              "synthesis": "Christianity treats the crucifixion as the central salvific event; Islam treats it as a historical event divinely interrupted."
+            }
+          ],
+          "synthesis": "Across all christological tests, the two traditions diverge on Jesus's ontology, the necessity of his crucifixion, and his eschatological role. The split reduces to one metaphysical commitment: can a divine being become embodied? Christianity says yes and treats the incarnation, death, and resurrection as the central salvific arc; Islam says no and treats Jesus as the highest of the prophets within a strict monotheism. Every downstream christological disagreement traces back to this single yes/no."
+        },
+        {
+          "id": "soteriology",
+          "eyebrow": "Topic 7.2",
+          "title": "Soteriology",
+          "subtitle": "How salvation is obtained and what makes it necessary",
+          "criteria": []
+        }
+      ]
+    }
+  ]
+}

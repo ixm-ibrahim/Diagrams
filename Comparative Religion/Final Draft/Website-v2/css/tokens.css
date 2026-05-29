@@ -1,0 +1,123 @@
+/* ====================================================================
+ * Design tokens — the source of truth for color, spacing, and typography.
+ * Two modes: [data-theme="light"] and [data-theme="dark"] applied to <html>.
+ *
+ * Tier palette: epistemic elevation (Rainbow Ladder, Convergent Tree)
+ * Worldview palette: spectrum position (Comparison Matrix, Evidence Cards)
+ * Same hex codes — different semantic per archetype.
+ * ==================================================================== */
+
+:root[data-theme="light"] {
+  /* Frame */
+  --bg-page: #F0EBE4;
+  --bg-frame: #FFFFFF;
+  --text: #2C2C2A;
+  --text-tertiary: #888780;
+  --border: rgba(0, 0, 0, 0.08);
+  --divider: rgba(0, 0, 0, 0.12);
+  --quote-line: rgba(0, 0, 0, 0.15);
+
+  /* Synthesis tokens */
+  --synth-bg: rgba(0, 0, 0, 0.025);
+  --synth-border: rgba(0, 0, 0, 0.15);
+  --topic-synth-bg: rgba(0, 0, 0, 0.045);
+  --topic-synth-border: rgba(0, 0, 0, 0.35);
+  --topic-rule: rgba(0, 0, 0, 0.18);
+  --chip-bg: rgba(0, 0, 0, 0.05);
+
+  /* Agreement (semantic — distinct from tier/worldview palette) */
+  --agree: #15803D;
+  --agree-bd: rgba(34, 197, 94, 0.45);
+  --agree-bg: rgba(34, 197, 94, 0.06);
+  --disagree: #991B1B;
+  --disagree-bd: rgba(239, 68, 68, 0.45);
+  --disagree-bg: rgba(239, 68, 68, 0.06);
+
+  /* Tier / worldview palette — light mode
+   * Each tier/slot exposes: --tN (400 stop, accent), --tNn (800 stop, text on light), --tNbg (low-opacity tint)
+   * Mapping by use:
+   *   Tier: 1=red(Subject), 2=coral(Evidence), 3=amber(Corroboration), 4=green(Integrity),
+   *         5=blue(Coherence), 6=purple(Robustness), 7=pink(Verification)
+   *   Worldview: 1=red(Atheism), 2=coral(reserved), 3=amber(Polytheism),
+   *              4=green(Trinitarianism/Christianity), 5=blue(Monotheism/Islam),
+   *              6=purple(reserved/Deism), 7=pink(reserved)
+   * Note: Comparison/Evidence in current docs use w1=red, w2=amber, w3=green, w4=blue (skipping coral slot)
+   *       because no worldview currently fits the coral position. The renderer maps by slot, not w-number.
+   */
+  --t1: #E24B4A;  --t1n: #791F1F;  --t1bg: rgba(226, 75, 74, 0.025);
+  --t2: #D85A30;  --t2n: #712B13;  --t2bg: rgba(216, 90, 48, 0.025);
+  --t3: #EF9F27;  --t3n: #633806;  --t3bg: rgba(239, 159, 39, 0.035);
+  --t4: #639922;  --t4n: #27500A;  --t4bg: rgba(99, 153, 34, 0.035);
+  --t5: #378ADD;  --t5n: #0C447C;  --t5bg: rgba(55, 138, 221, 0.025);
+  --t6: #7F77DD;  --t6n: #3C3489;  --t6bg: rgba(127, 119, 221, 0.025);
+  --t7: #D4537E;  --t7n: #72243E;  --t7bg: rgba(212, 83, 126, 0.025);
+
+  /* Neutral root color — for top-level claims that sit above the rainbow */
+  --root: #5F5E5A;
+  --rootn: #2C2C2A;
+}
+
+:root[data-theme="dark"] {
+  --bg-page: #1A1918;
+  --bg-frame: #1F1D1B;
+  --text: #E5E2DD;
+  --text-tertiary: #B4B2A9;
+  --border: rgba(255, 255, 255, 0.08);
+  --divider: rgba(255, 255, 255, 0.1);
+  --quote-line: rgba(255, 255, 255, 0.18);
+
+  --synth-bg: rgba(255, 255, 255, 0.04);
+  --synth-border: rgba(255, 255, 255, 0.18);
+  --topic-synth-bg: rgba(255, 255, 255, 0.06);
+  --topic-synth-border: rgba(255, 255, 255, 0.4);
+  --topic-rule: rgba(255, 255, 255, 0.22);
+  --chip-bg: rgba(255, 255, 255, 0.08);
+
+  --agree: #86EFAC;
+  --agree-bd: rgba(34, 197, 94, 0.5);
+  --agree-bg: rgba(34, 197, 94, 0.08);
+  --disagree: #FCA5A5;
+  --disagree-bd: rgba(239, 68, 68, 0.5);
+  --disagree-bg: rgba(239, 68, 68, 0.08);
+
+  /* Tier/worldview palette — dark mode
+   * Accents (--tN) keep the same vivid hex (they read well on dark);
+   * text-on-circle/chip (--tNn) flips to the 100-stop (light tint);
+   * backgrounds (--tNbg) bump opacity ~2x so they stay perceptible on dark bg.
+   */
+  --t1: #E24B4A;  --t1n: #F7C1C1;  --t1bg: rgba(226, 75, 74, 0.045);
+  --t2: #D85A30;  --t2n: #F5C4B3;  --t2bg: rgba(216, 90, 48, 0.045);
+  --t3: #EF9F27;  --t3n: #FAC775;  --t3bg: rgba(239, 159, 39, 0.05);
+  --t4: #639922;  --t4n: #C0DD97;  --t4bg: rgba(99, 153, 34, 0.05);
+  --t5: #378ADD;  --t5n: #B5D4F4;  --t5bg: rgba(55, 138, 221, 0.045);
+  --t6: #7F77DD;  --t6n: #CECBF6;  --t6bg: rgba(127, 119, 221, 0.045);
+  --t7: #D4537E;  --t7n: #F4C0D1;  --t7bg: rgba(212, 83, 126, 0.045);
+
+  --root: #B4B2A9;
+  --rootn: #E5E2DD;
+}
+
+/* Typographic scale (mode-independent) */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", "Iowan Old Style", serif;
+
+  --fs-tiny: 9.5px;
+  --fs-mini: 10.5px;
+  --fs-small: 11px;
+  --fs-body: 12px;
+  --fs-card-title: 13px;
+  --fs-section-title: 15px;
+  --fs-page-title: 18px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+}

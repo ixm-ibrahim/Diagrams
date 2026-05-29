@@ -1,0 +1,122 @@
+/* ====================================================================
+ * Convergent Tree archetype.
+ * Used for Sections 3 (Building Confidence), 4 (Defining God).
+ *
+ * Apex on top via roots row, then tier lanes 1→N descending.
+ * Each lane has chip on the left (right-aligned content), cards on right.
+ * Lane background = tier color at low opacity.
+ * ==================================================================== */
+
+.tree-roots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px dashed var(--divider);
+  flex-wrap: wrap;
+}
+
+.tree-root-card {
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  border: 1.5px solid var(--root);
+  color: var(--rootn);
+}
+
+.tree-lanes {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tree-lane {
+  border-radius: var(--radius-md);
+  background: var(--tier-bg, transparent);
+}
+
+.tree-lane-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 7px 10px;
+}
+
+.tree-lane-chip {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 115px;
+  padding-top: 1px;
+  justify-content: flex-end;
+}
+
+.tree-lane-name {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text-tertiary);
+  line-height: 1.2;
+}
+
+.tree-lane-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 500;
+  border: 1.5px solid var(--tier-color);
+  color: var(--tier-numeral);
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.tree-lane-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+}
+
+.tree-card {
+  padding: 4px 8px 4px 7px;
+  border-left: 3px solid var(--tier-color);
+  font-size: var(--fs-small);
+  line-height: 1.35;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tree-card:hover {
+  background: var(--chip-bg);
+}
+
+.tree-card.is-active {
+  background: var(--tier-bg);
+}
+
+.tree-card-more {
+  padding: 3px 8px;
+  border: 0.5px dashed var(--tier-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-tiny);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  background: transparent;
+}
+
+.tree-card-more:hover {
+  color: var(--text);
+}
+
+/* Chevron in lane-head when collapsible */
+.tree-lane-head[data-collapsible] .chevron {
+  margin-left: 4px;
+}
