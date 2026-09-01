@@ -2,9 +2,11 @@
 
 The phenomenological grounding: every term the project uses, defined only from words already given meaning, tracing back to the starting point. One note per term. This page just lists what exists.
 
+[[01 Derivation Rules]] — how new nodes get derived; rules are added there as they are discovered.
+
 ## Phenomenological Primitives
 
-- (node one in progress)
+- [[PP1 Phenomena]]
 
 ## tmp-dump
 
