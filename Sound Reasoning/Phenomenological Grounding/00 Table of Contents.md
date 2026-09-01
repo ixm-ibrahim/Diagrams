@@ -4,9 +4,11 @@ The phenomenological grounding: every term the project uses, defined only from w
 
 [[01 Derivation Rules]] — how new nodes get derived; rules are added there as they are discovered.
 
+[[02 Unresolved Objections]] — objections waiting for the node that properly answers them.
+
 ## Phenomenological Primitives
 
-- [[PP1 Phenomena]]
+- [[PP1 - Phenomena]]
 
 ## tmp-dump
 
