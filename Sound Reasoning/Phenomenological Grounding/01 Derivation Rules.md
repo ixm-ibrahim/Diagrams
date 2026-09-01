@@ -29,3 +29,18 @@ A node's introduced terms are the words that, used in later sentences, refer bac
 6. Terms Introduced
 7. Notes
 8. Examples
+
+## The blank template he fills for each new node (standard in all threads and prompts, his ruling 2026-09-01)
+
+Every thread pastes this, blank, each time it opens a new entry, so he never retypes the field names:
+
+```
+1. ID: 
+2. Title: 
+3. Motivation: 
+4. Definition: 
+5. Inherits From: 
+6. Terms Introduced: {}
+7. Notes: 
+8. Examples: 
+```
