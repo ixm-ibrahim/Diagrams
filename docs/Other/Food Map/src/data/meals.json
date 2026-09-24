@@ -1060,7 +1060,8 @@
     "cuisine": "American",
     "notes": "A triple-decker tower of toasted bread layered with turkey, bacon, lettuce, tomato, and mayo, skewered into four neat triangles.",
     "diet_compatibility": [
-      "lowfodmap"
+      "lowfodmap",
+      "high_protein"
     ],
     "frequency": 1,
     "source": "curated",
@@ -1539,7 +1540,8 @@
     "cuisine": "French",
     "notes": "Ham and Gruyère sandwiched in buttered bread, the top blanketed in béchamel and broiled until bubbling and bronzed.",
     "diet_compatibility": [
-      "lowfodmap"
+      "lowfodmap",
+      "high_protein"
     ],
     "frequency": 1,
     "source": "curated",
@@ -19474,5 +19476,602 @@
     "diet_compatibility": [
       "lowfodmap"
     ]
+  },
+  {
+    "id": "shirataki-chicken-ramen",
+    "name": "Shirataki chicken ramen",
+    "ingredient_categories": [
+      "Noodle & rice alternatives",
+      "Poultry",
+      "Eggs",
+      "Prepared soups & broths",
+      "Other vegetables"
+    ],
+    "example_ingredients": [
+      "shirataki",
+      "chicken-breast",
+      "egg-whole",
+      "chicken-broth",
+      "scallion"
+    ],
+    "notes": "Konjac shirataki noodles in a savory chicken broth with sliced poached chicken, a soft egg, and scallions — a full ramen bowl at a fraction of the carbs.",
+    "cuisine": "Japanese",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "serving_grams": 450
+  },
+  {
+    "id": "shirataki-pad-thai",
+    "name": "Shirataki pad thai",
+    "ingredient_categories": [
+      "Noodle & rice alternatives",
+      "Eggs",
+      "Shellfish",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "example_ingredients": [
+      "tofu-shirataki",
+      "egg-whole",
+      "shrimp",
+      "scallion",
+      "fish-sauce"
+    ],
+    "notes": "Tofu shirataki noodles tossed with shrimp, egg, and scallion in a tangy fish-sauce dressing — the pad thai experience without the rice-noodle carb load.",
+    "cuisine": "Thai",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "serving_grams": 380
+  },
+  {
+    "id": "egg-drop-soup",
+    "name": "Egg drop soup",
+    "ingredient_categories": [
+      "Eggs",
+      "Prepared soups & broths",
+      "Other vegetables"
+    ],
+    "example_ingredients": [
+      "egg-whole",
+      "chicken-broth",
+      "scallion"
+    ],
+    "notes": "Silky ribbons of egg swirled into hot chicken broth with scallion — a light, warming, near-zero-carb starter.",
+    "cuisine": "Chinese",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch"
+    ],
+    "serving_grams": 350
+  },
+  {
+    "id": "tuna-lettuce-wraps",
+    "name": "Tuna salad lettuce wraps",
+    "ingredient_categories": [
+      "Oily fish",
+      "Leafy greens",
+      "Dressings & dips"
+    ],
+    "example_ingredients": [
+      "tuna",
+      "iceberg-lettuce",
+      "mayonnaise"
+    ],
+    "notes": "Creamy tuna salad spooned into crunchy lettuce cups — high protein, almost no carbs, and quick to assemble.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch"
+    ],
+    "serving_grams": 300
+  },
+  {
+    "id": "greek-yogurt-protein-bowl",
+    "name": "Greek yogurt protein bowl",
+    "ingredient_categories": [
+      "Yogurt",
+      "Berries",
+      "Nuts"
+    ],
+    "example_ingredients": [
+      "greek-yogurt-nonfat",
+      "blueberry",
+      "almond"
+    ],
+    "notes": "Thick nonfat Greek yogurt topped with a few berries and almonds — a high-volume, protein-forward breakfast that stays low in sugar.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "breakfast",
+      "snack"
+    ],
+    "serving_grams": 320
+  },
+  {
+    "id": "cottage-cheese-berry-bowl",
+    "name": "Cottage cheese & berries",
+    "ingredient_categories": [
+      "Fresh cheese",
+      "Berries",
+      "Nuts"
+    ],
+    "example_ingredients": [
+      "cottage-cheese",
+      "strawberry",
+      "almond"
+    ],
+    "notes": "Cottage cheese with fresh strawberries and a scatter of almonds — a filling, low-calorie snack with plenty of casein protein.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "breakfast",
+      "snack"
+    ],
+    "serving_grams": 280
+  },
+  {
+    "id": "zoodle-shrimp-scampi",
+    "name": "Zucchini noodle shrimp scampi",
+    "ingredient_categories": [
+      "Other vegetables",
+      "Shellfish",
+      "Cream & butter",
+      "Fresh herbs"
+    ],
+    "example_ingredients": [
+      "zucchini",
+      "shrimp",
+      "butter",
+      "parsley"
+    ],
+    "notes": "Spiralized zucchini \"zoodles\" with garlicky butter shrimp and parsley — all the comfort of scampi with the noodles swapped for vegetables.",
+    "cuisine": "Italian",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "dinner"
+    ],
+    "serving_grams": 360
+  },
+  {
+    "id": "zoodle-bolognese",
+    "name": "Zucchini noodle bolognese",
+    "ingredient_categories": [
+      "Other vegetables",
+      "Red meat",
+      "Peppers & nightshades",
+      "Aged cheese"
+    ],
+    "example_ingredients": [
+      "zucchini",
+      "ground-beef-90-10",
+      "tomato-sauce-canned",
+      "parmesan"
+    ],
+    "notes": "A rich beef-and-tomato ragu over zucchini noodles, finished with parmesan — a hearty pasta night that skips the wheat.",
+    "cuisine": "Italian",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "dinner"
+    ],
+    "serving_grams": 420
+  },
+  {
+    "id": "cauliflower-fried-rice",
+    "name": "Cauliflower fried rice",
+    "ingredient_categories": [
+      "Cruciferous vegetables",
+      "Eggs",
+      "Poultry",
+      "Other vegetables",
+      "Sauces"
+    ],
+    "example_ingredients": [
+      "cauliflower",
+      "egg-whole",
+      "chicken-breast",
+      "scallion",
+      "soy-sauce"
+    ],
+    "notes": "Riced cauliflower stir-fried with egg, chicken, and scallion in a splash of soy — the fried-rice format with a fraction of the carbs.",
+    "cuisine": "Chinese",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "serving_grams": 400
+  },
+  {
+    "id": "egg-white-veggie-omelette",
+    "name": "Egg-white veggie omelette",
+    "ingredient_categories": [
+      "Eggs",
+      "Peppers & nightshades",
+      "Mushrooms",
+      "Aged cheese"
+    ],
+    "example_ingredients": [
+      "egg-white",
+      "bell-pepper-red",
+      "mushroom-white",
+      "cheddar"
+    ],
+    "notes": "A fluffy egg-white omelette folded around peppers, mushrooms, and a little cheddar — lean protein to start the day.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "breakfast"
+    ],
+    "serving_grams": 300
+  },
+  {
+    "id": "chicken-caesar-no-crouton",
+    "name": "Chicken Caesar salad (no croutons)",
+    "ingredient_categories": [
+      "Leafy greens",
+      "Poultry",
+      "Aged cheese",
+      "Dressings & dips"
+    ],
+    "example_ingredients": [
+      "romaine-lettuce",
+      "chicken-breast",
+      "parmesan",
+      "mayonnaise"
+    ],
+    "notes": "Romaine tossed in a creamy parmesan Caesar dressing with grilled chicken, holding the croutons — crisp, savory, and protein-dense.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "serving_grams": 350
+  },
+  {
+    "id": "baked-salmon-asparagus",
+    "name": "Baked salmon & asparagus",
+    "ingredient_categories": [
+      "Oily fish",
+      "Other vegetables",
+      "Oils",
+      "Fresh herbs"
+    ],
+    "example_ingredients": [
+      "salmon",
+      "asparagus",
+      "olive-oil",
+      "dill"
+    ],
+    "notes": "A fillet of omega-3-rich salmon roasted with asparagus, olive oil, and dill — a clean, satisfying low-carb plate.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "dinner"
+    ],
+    "serving_grams": 320
+  },
+  {
+    "id": "steak-and-eggs",
+    "name": "Steak & eggs",
+    "ingredient_categories": [
+      "Red meat",
+      "Eggs",
+      "Cream & butter"
+    ],
+    "example_ingredients": [
+      "beef-sirloin",
+      "egg-whole",
+      "butter"
+    ],
+    "notes": "Seared sirloin alongside butter-basted eggs — a classic high-protein, zero-carb breakfast that keeps you full for hours.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "breakfast"
+    ],
+    "serving_grams": 330
+  },
+  {
+    "id": "bunless-bacon-cheeseburger",
+    "name": "Bunless bacon cheeseburger",
+    "ingredient_categories": [
+      "Red meat",
+      "Processed meat",
+      "Aged cheese",
+      "Leafy greens"
+    ],
+    "example_ingredients": [
+      "ground-beef-90-10",
+      "bacon",
+      "cheddar",
+      "iceberg-lettuce"
+    ],
+    "notes": "A juicy beef patty with bacon and melted cheddar, wrapped in crisp lettuce instead of a bun — all the burger, none of the bread.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "serving_grams": 320
+  },
+  {
+    "id": "beef-broccoli-no-rice",
+    "name": "Beef & broccoli (no rice)",
+    "ingredient_categories": [
+      "Red meat",
+      "Cruciferous vegetables",
+      "Sauces",
+      "Oils"
+    ],
+    "example_ingredients": [
+      "beef-sirloin",
+      "broccoli",
+      "soy-sauce",
+      "sesame-oil"
+    ],
+    "notes": "Tender sliced beef and broccoli in a glossy soy-sesame sauce, served as-is without rice — a takeout favorite made low-carb.",
+    "cuisine": "Chinese",
+    "diet_compatibility": [
+      "keto",
+      "paleo",
+      "mediterranean",
+      "whole30",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "dinner"
+    ],
+    "serving_grams": 380
+  },
+  {
+    "id": "buffalo-chicken-bites",
+    "name": "Buffalo chicken bites",
+    "ingredient_categories": [
+      "Poultry",
+      "Sauces",
+      "Cream & butter",
+      "Dressings & dips"
+    ],
+    "example_ingredients": [
+      "chicken-breast",
+      "sriracha",
+      "butter",
+      "mayonnaise"
+    ],
+    "notes": "Bite-size chicken tossed in a buttery hot sauce with a cool creamy dip — a high-protein, low-carb take on wings.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "snack",
+      "dinner"
+    ],
+    "serving_grams": 300
+  },
+  {
+    "id": "pork-rind-chicken-tenders",
+    "name": "Pork-rind crusted chicken tenders",
+    "ingredient_categories": [
+      "Poultry",
+      "Processed meat",
+      "Eggs"
+    ],
+    "example_ingredients": [
+      "chicken-breast",
+      "pork-rinds",
+      "egg-whole"
+    ],
+    "notes": "Chicken tenders breaded in crushed pork rinds and baked crisp — the crunch of breaded tenders with zero breadcrumb carbs.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "lunch",
+      "dinner"
+    ],
+    "serving_grams": 300
+  },
+  {
+    "id": "bell-pepper-beef-nachos",
+    "name": "Bell pepper beef nachos",
+    "ingredient_categories": [
+      "Peppers & nightshades",
+      "Red meat",
+      "Aged cheese",
+      "Dressings & dips"
+    ],
+    "example_ingredients": [
+      "bell-pepper-red",
+      "ground-beef-90-10",
+      "cheddar",
+      "guacamole"
+    ],
+    "notes": "Bell-pepper \"chips\" loaded with seasoned beef, melted cheddar, and guacamole — nacho night without the tortilla chips.",
+    "cuisine": "Mexican",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "snack",
+      "dinner"
+    ],
+    "serving_grams": 380
+  },
+  {
+    "id": "shrimp-cauliflower-grits",
+    "name": "Shrimp & cauliflower grits",
+    "ingredient_categories": [
+      "Shellfish",
+      "Cruciferous vegetables",
+      "Aged cheese",
+      "Cream & butter"
+    ],
+    "example_ingredients": [
+      "shrimp",
+      "cauliflower",
+      "cheddar",
+      "butter"
+    ],
+    "notes": "Sauteed shrimp over creamy cheesy cauliflower \"grits\" — a Southern comfort plate reimagined low-carb.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "dinner"
+    ],
+    "serving_grams": 360
+  },
+  {
+    "id": "smoked-salmon-rollups",
+    "name": "Smoked salmon & cream cheese roll-ups",
+    "ingredient_categories": [
+      "Canned & cured fish",
+      "Fresh cheese",
+      "Fresh herbs"
+    ],
+    "example_ingredients": [
+      "smoked-salmon-lox",
+      "cream-cheese",
+      "dill"
+    ],
+    "notes": "Smoked salmon rolled around herbed cream cheese — an elegant, near-zero-carb snack or light breakfast.",
+    "cuisine": "American",
+    "diet_compatibility": [
+      "keto",
+      "mediterranean",
+      "lowfodmap",
+      "high_protein"
+    ],
+    "frequency": 1,
+    "source": "curated",
+    "tags": [
+      "breakfast",
+      "snack"
+    ],
+    "serving_grams": 180
   }
 ]

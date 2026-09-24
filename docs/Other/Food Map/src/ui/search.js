@@ -167,6 +167,19 @@ export function mountSearch(root, {
     return '';
   }
 
+  /* Name the alternate name a row matched on, so a row found via "konjac"
+   * (when the displayed name is "Shirataki noodles") explains itself. */
+  function aliasHint(item) {
+    if (!currentQuery || !item || !Array.isArray(item.aliases)) return '';
+    if (item.name && item.name.toLowerCase().includes(currentQuery)) return '';
+    for (const alias of item.aliases) {
+      if (typeof alias === 'string' && alias.toLowerCase().includes(currentQuery)) {
+        return `also: ${alias}`;
+      }
+    }
+    return '';
+  }
+
   function render() {
     if (lastResults.length === 0) {
       dropdown.innerHTML = `<p class="search-empty muted">No matches.</p>`;
@@ -179,7 +192,7 @@ export function mountSearch(root, {
               aria-hidden="true"></span>
         <span class="search-text">
           <span class="search-name">${escapeHtml(r.name)}</span>
-          <span class="search-sub muted">${escapeHtml(ingredientHint(r) || subtitleFor(r))}</span>
+          <span class="search-sub muted">${escapeHtml(ingredientHint(r) || aliasHint(r) || subtitleFor(r))}</span>
         </span>
       </button>
     `).join('');
@@ -255,6 +268,16 @@ export function mountSearch(root, {
       if (!item || !item.name) continue;
       if (hiddenSet && hiddenSet.has(item.id)) continue;
       let isMatch = item.name.toLowerCase().includes(query);
+      // An item also matches on any of its alternate names, so "konjac",
+      // "miracle noodle", or "glucomannan" all surface "Shirataki noodles".
+      if (!isMatch && Array.isArray(item.aliases)) {
+        for (const alias of item.aliases) {
+          if (typeof alias === 'string' && alias.toLowerCase().includes(query)) {
+            isMatch = true;
+            break;
+          }
+        }
+      }
       // Batch 3: a meal also matches on the specific ingredients it uses, so
       // typing "bagel" at the Meals level surfaces meals that actually use a
       // bagel rather than every refined-grain dish.

@@ -1,0 +1,535 @@
+================================================================================
+A RECORD OF MY INTELLECTUAL QUESTIONS
+Recovered from past conversations  ·  Compiled 2026-05-29
+================================================================================
+
+This is a summary of the questions I have been working through across many
+sessions, reconstructed from the conversations themselves. It covers four big
+areas — consciousness and the will, truth and reasoning, religion, and gender
+discourse — and ends with the threads that run through all of them.
+
+Quotes in "quotation marks" are my own words, pulled from the original chats.
+
+
+================================================================================
+1. CONSCIOUSNESS, AWARENESS, THE MIND & THE WILL
+   (the "phenomenology tree" / DAG project)
+================================================================================
+
+This is the largest and most foundational thread: a structured tree of ~168+
+nodes that starts from what is absolutely undeniable in direct experience and
+builds every later concept (reality, truth, the self, will, and eventually God)
+on top of it. The rule was that nothing could be used before it was grounded.
+
+--------------------------------------------------------------------------------
+1.1  The starting point: "Something is happening" (Node 1.1.1)
+--------------------------------------------------------------------------------
+The root of everything is the bare fact of occurrence — before any argument,
+something is present in experience. I wanted the examples to be concrete and to
+include phenomena people don't realize they're aware of:
+
+   "add more senses that people aren't commonly aware of (but still get
+    awareness of, whether they realize or not), like proprioception, a logical
+    statement, a moral statement, a false statement, etc."
+
+The key move is Cartesian and self-sealing: to doubt that something is happening,
+something must happen — the doubt itself. A false or imaginary thought ("a flying
+pig") still OCCURS as a phenomenon even though its object doesn't exist. This is
+also where I took on eliminativism — the claim that "consciousness is an illusion,
+nothing is actually happening" — and argued it operates beneath the level the
+objection can reach.
+
+Questions at this layer:
+  - What is the absolute, undeniable starting point of all knowledge?
+  - Can the bare fact of occurrence be doubted without self-refutation?
+  - How wide is the scope of "phenomena" — does it include logic, morality,
+    falsehood, and imagination, not just the five senses?
+
+--------------------------------------------------------------------------------
+1.2  The minimal structure of any experience (Node 1.1.x)
+--------------------------------------------------------------------------------
+Beneath "phenomena occur," five primitives: (1) phenomena occur, (2) they occur
+with distinctions, (3) they have qualities, (4) qualities have associations, and
+(5) awareness is "the occurrence of a quality or association." I kept pushing to
+keep these grounded in observation rather than smuggling in metaphysics — e.g.
+stripping an ungrounded "my" out of the root claim.
+
+A deliberate choice: defer the self. No "I," "you," "my," "your" allowed until a
+much later node — the subject of experience is something to DERIVE, not assume.
+
+Questions at this layer:
+  - What is the minimal structure any experience must have?
+  - Can that structure be stated without presupposing a self?
+  - Where is the line between what experience GIVES us and what ultimately
+    EXISTS (the monism / dualism / hard-problem fault line)?
+
+--------------------------------------------------------------------------------
+1.3  Will, desire & motivation (Node 1.2.5.1) — the free-will territory
+--------------------------------------------------------------------------------
+This branch reconstructs agency from the inside. Wanting/willing is treated as a
+distinct kind of phenomenon: one that is DIRECTED — toward something. The
+signature distinction I built here:
+
+   - DESIRE = a *wanted* want's opposite: an UNWANTED want — an uninvited
+     craving (craving while wanting not to crave).
+   - WILL   = a *wanted* want — an endorsed resolve.
+
+So desire and will are "wants about wants." The open questions (left as explicit
+Unknowns) are essentially the free-will questions held in reserve: mechanism,
+physicalism, the self, unconscious wants, and outcome patterns. If you reject the
+whole branch, "the entire domain of motivation has no experiential basis" —
+hunger becomes indistinguishable from a mere stomach sensation.
+
+Questions at this layer:
+  - What is the will, and what distinguishes it from desire?
+  - What does it mean to ENDORSE one's own wanting?
+  - Does motivation have any purely experiential basis — or is "wanting just
+    complex sensations" (reductionism)?
+
+--------------------------------------------------------------------------------
+1.4  Time, change, memory (Node 1.2.5.3) and qualia/perception (1.2.5.2)
+--------------------------------------------------------------------------------
+Node 1.2.5.3 grounds the temporal dimension — that awareness has a "now," a
+"before," memory, succession, change, and events — and I treated imagination and
+thought as built ON TOP of this temporal vocabulary. Nearby nodes handle
+surprise, possibility, and "not-occurring" / absence (the machinery for imagining
+what is not the case). The 1.2.5.2 branch covers intensity, sensation, and the
+move from raw sensation to perception (qualia proper). Aphantasia came up as a
+real objection — what to make of people who report no mental imagery.
+
+--------------------------------------------------------------------------------
+1.5  How I wanted the mind reasoned about (method)
+--------------------------------------------------------------------------------
+   "Prioritize sound reasoning over my preferences. If something doesn't hold
+    logically, say so — don't defer to my judgment when the logic is clear.
+    Think WITH me, not just do what I say."
+
+Other standing rules: trace every new term back to previously defined terms (keep
+the graph acyclic); challenge ungrounded terms instead of rationalizing them
+(defending a known problem is "confirmation bias support, the opposite of the
+project's purpose"); use only real objections people actually hold (eliminativism,
+monism, dualism), never strawmen; and the standard for every node — "clear enough
+for a middle schooler, precise enough for a philosopher."
+
+Core epistemic stance: "Your awareness of X is what any theory of X is built from.
+You do not need the theory to have the awareness." Phenomenology comes first.
+
+>> BIGGEST RECURRING QUESTIONS IN THIS AREA
+   - Is "something is happening" truly indubitable?
+   - What is the minimal structure of experience, without assuming a self?
+   - What is the self — and can the subject be derived rather than assumed?
+   - What is the will, and how does it differ from desire?
+   - How do time and memory ground the higher mind (imagination, thought)?
+   - Where exactly does phenomenology end and metaphysics begin?
+
+
+================================================================================
+2. TRUTH, REASONING & METHOD
+   (the "Sieve of Truth" argument tree, objection design, meta-observations,
+    and the "AI Council")
+================================================================================
+
+The engine behind everything else: how to establish what is actually true,
+expose hidden assumptions, and reason without fooling myself.
+
+--------------------------------------------------------------------------------
+2.1  What counts as objective truth (the argument tree)
+--------------------------------------------------------------------------------
+A deeply nested tree (~176 nodes) that derives foundational truths from the
+ground up. Deepest descendants are "atomic operations"; parents SYNTHESIZE their
+children rather than repeat them, so a reader can "dive in at the level they
+want." It grew out of comparative-religion / metaphysical inquiry and was also
+rendered as an interactive page using multiple visual forms (ladder, tree,
+matrix, evidence cards), with ideas like "agreement propagation" and a
+"cost-of-disagreement" traversal.
+
+--------------------------------------------------------------------------------
+2.2  Logic, imagination & contradiction
+--------------------------------------------------------------------------------
+A purely philosophical worry I raised about my OWN system's consistency:
+
+   "we observe that 'A contradiction is when imagining a concept's definitions
+    does not result in a visualization' (like I can't visualize a square circle's
+    definition, but I can visualize 'infinity's definition [but not infinity
+    itself]'). I feel like there may be a contradiction here — is there?"
+
+Resolution I accepted: one claim is about imagination vs. the external world, the
+other about imagination vs. itself — two different axes, not a contradiction. This
+was an attempt to ground logical IMPOSSIBILITY in the structure of imagination.
+
+--------------------------------------------------------------------------------
+2.3  Designing objections — steelmanning & exposing the hidden assumption
+--------------------------------------------------------------------------------
+I was unhappy that the tree's objections were weak and "self-resolved." My
+signature move: expose the hidden assumption doing all the work. I built a
+four-part objection pipeline where each section feeds the next:
+
+   1. Objection Basis      — steelman the objector's argument
+   2. Objection Commitments — expose the assumptions they must hold
+   3. What's Missing        — show where those assumptions break "logically,
+                              not vibes"
+   4. Correction           — what the node provides that resolves it
+
+   "by root cause analysis, I meant exposing the assumptions of the objection,
+    not my nodes."
+
+   "every section's output is the input of the other."
+
+Objections had to come from real positions (eliminativism, constructivism,
+idealism, mereological nihilism, Frankfurt's higher-order desires, sorites
+problems, James-Lange, Bergson, Hume, Sellars) — not complaints "nobody holds."
+The quality test was experiential: the objector should say "ah, I hadn't
+considered that," not "that's not what I was saying." This surfaced retorsion
+arguments — positions that self-destruct by needing the very thing they deny
+(e.g. hard determinism needing reasoning to argue for determinism).
+
+--------------------------------------------------------------------------------
+2.4  A method for rigorous thinking ("meta observations")
+--------------------------------------------------------------------------------
+A documented PROCESS for thinking: walk a text clause by clause and, for each
+fragment, derive the underlying rule it's an instance of. I cared about the
+thought process itself, not just the output:
+
+   "this question was about the thought process, not the meta observations
+    themselves."
+
+Moves I wanted made explicit: name the angle before asking "why"; treat "what's
+the general form?" as distinct from "why" (abstraction vs. cause); flag claims
+that confuse whether something OCCURS with whether it's ACCEPTABLE (a recurring
+"dimension mistake"); reject compound claims and paraphrase-pretending-to-be-
+insight. A live tension I raised myself:
+
+   "don't people recognize that pathological liars exist?" (i.e. if strong
+    feeling is treated as evidence of truth, why does that survive everyone
+    knowing feelings can be faked?)
+
+In the end I had the meta-observations cleared to empty templates so I could fill
+them in myself — I wanted to do the thinking, not outsource it.
+
+--------------------------------------------------------------------------------
+2.5  The "AI Council" — real pluralism vs. the illusion of it
+--------------------------------------------------------------------------------
+A multi-agent tool to "ask philosophical questions and demystify complex social,
+political, and intellectual topics." I immediately spotted the core problem:
+
+   "I definitely want to resolve that issue with all the models thinking the same
+    under the hood."
+
+My proposed fix — an "anti-Claude" agent whose job is exposure, not disagreement:
+
+   "to make every single thing/assumption exposed, so the other AI's can digest
+    that."
+
+This became a pipeline: a "Prior Scout" that exposes the model's framings, hedges,
+and safe defaults; tradition-based council members (a Muslim scholar, a Christian
+scholar, a hard secular skeptic, a historian); an anonymizer + quality assessor
+scoring real engagement vs. hedging; and a final synthesizer. Same signature as
+the objection work: surface the hidden assumption, then stress-test it.
+
+>> BIGGEST RECURRING QUESTIONS IN THIS AREA
+   - What actually counts as objective truth, and can it be derived bottom-up?
+   - What is the hidden assumption doing all the work here?
+   - Is my own system internally consistent?
+   - How do you reason rigorously without fooling yourself?
+   - Is multi-perspective deliberation real, or an illusion when every voice
+     shares one underlying mind?
+
+
+================================================================================
+3. RELIGION
+   (comparative religion, Islam, the LDS/Mormon church, the Book of Mormon)
+================================================================================
+
+A long-running project — part devotional, part adversarial — that tests Islam,
+Christianity, and (in a major addendum) the LDS church against one fixed set of
+epistemic rules: the "Sieve of Truth." The throughline is a refusal to let any
+tradition, including a preferred one, win on feeling.
+
+--------------------------------------------------------------------------------
+3.1  A rigorous method for judging religions ("the sieve")
+--------------------------------------------------------------------------------
+The core distinction: the COHERENCE axis vs. the COMFORT axis — is a belief true
+because it survives scrutiny, or merely because it's consoling? The website
+encodes this as nodes like "Rationalizing Confusion" and the target belief it
+argues against: "Beliefs can be safely based on strong feelings, comfort, or
+intuition alone." The deepest methodological demand was SYMMETRY:
+
+   "if you read the original project, you'll find that I tested both directions -
+    ie. assuming christianity is true and islam is the falsehood, AND in parallel,
+    islam is true while christianity is the falsehood. So the same thing needs to
+    happen with lds being true and islam/christianity being false."
+
+--------------------------------------------------------------------------------
+3.2  Reading the Book of Mormon firsthand
+--------------------------------------------------------------------------------
+I prepared to read the Book of Mormon cover to cover, with my own framework as a
+lens, asking for a plan measured in pages and annotated with what should "pop
+out":
+
+   "I am about to read the book of mormon. Give me a set of reading goals,
+    equidistant in terms of pages (not chapters)... what should pop out to me,
+    and when? go in chronological order, as if I was reading with these notes."
+
+Things to watch for: anachronism and authorship (pre-Christ Christology; KJV
+phrasing and the Sermon on the Mount appearing verbatim in supposedly ancient
+text); internal contradiction (Jacob 2-3 condemning polygamy vs. D&C 132
+commanding it); the epistemology of feeling (Alma 32's faith-as-seed; Moroni
+10:3-5's "ask God... he will manifest the truth" — the mirror image of my own
+rules); and the thesis that the Book of Mormon is MORE orthodox/monotheistic than
+later LDS revelation ("early vision + later institutional accretion").
+
+--------------------------------------------------------------------------------
+3.3  Islam vs. the LDS church — the comparison I found most alive
+--------------------------------------------------------------------------------
+A Muslim and a Mormon share more surface ground than either shares with creedal
+Christianity (both reject the Trinity, both have post-biblical scripture, angelic
+visitation, living authority). I wanted it dramatized as a real conversation, and
+insisted on steelmanning the other side:
+
+   "What would the main topics be? What rebuttals and challenges would he expect
+    from that person who also knows about Islam?"
+
+   "I want you to surface the strongest objections the lds member can leverage
+    against the muslim (ideally the ones that are lds-specific)."
+
+Flashpoints:
+  - Tawhid vs. henotheism: is "one God we worship" actually monotheism, or a
+    chain of gods?
+  - The sealing of prophecy: by Islam's own logic (prophets to every nation), why
+    does revelation stop in 632 CE — and does Joseph Smith fit Islamic
+    prophetology better than Muslims admit? (One of the two objections I judged
+    to genuinely "bite.")
+  - Pre-mortal existence: Islam has the seed (the mithaq, Q 7:172); LDS builds the
+    whole structure. Whose theology does more with the same raw material?
+  - Anthropomorphism: the Quran gives God a face, hands, a throne — do Muslims
+    allegorize these away, and is that the same move they criticize in others?
+    (The other objection that bites.)
+  - Witnesses & transmission: Book of Mormon witnesses vs. the Quran's mass
+    (mutawatir) transmission.
+  - Falsifiability: the Book of Abraham papyri as a cleanly falsified translation
+    claim, and whether "catalyst theory" is an unfalsifiable rescue.
+
+--------------------------------------------------------------------------------
+3.4  Theology under stress (the LDS addendum)
+--------------------------------------------------------------------------------
+The hardest doctrinal work — built, then audited:
+  - Euthyphro's second horn: LDS grounds justice in an eternal law external to God
+    (Alma 42:25) — does that put something above God? (And does Islam's own
+    Ash'arite/Mu'tazilite debate face the same problem?)
+  - An embodied, once-mortal God: if God has a body He is in space, extended,
+    contingent — does literal scripture-reading buy fidelity at the cost of
+    metaphysical coherence?
+  - Genesis 3:5 ("ye shall be as gods"): LDS reads it as a true prophecy of human
+    destiny; Islam and Christianity read it as the paradigmatic Satanic lie — the
+    single most diagnostic finding.
+  - Teleology: LDS's infinite forward regress of gods vs. Islam's terminus ("to
+    Him we return").
+A meta-finding I sought out and accepted: several critiques I leveled at LDS
+(continuing revelation as a "doctrinal absorber," esoteric teaching, the founder's
+resilience as evidence) generalize uncomfortably to features Islam also has.
+
+>> BIGGEST RECURRING QUESTIONS IN THIS AREA
+   - What makes a religious claim true — coherence, or comfort/feeling?
+   - Is the LDS church monotheist or polytheist; can an embodied, once-mortal God
+     be the uncaused absolute?
+   - By Islam's own logic, why does prophecy end — and does Joseph Smith fit it
+     better than Muslims admit?
+   - What separates a legitimate "restoration" of a faith from a "corruption" —
+     and is the test falsifiable in every direction?
+   - Am I applying my own standards fairly? (A question I kept turning on myself.)
+
+
+================================================================================
+4. GENDER & DISCOURSE
+   (a layered framework documenting asymmetries in how men and women are treated)
+================================================================================
+
+A stacked, falsifiable framework cataloguing asymmetries in law, media, language,
+emotional life, violence, health — and especially in DISCOURSE itself: how claims
+about gender get made, received, and shut down.
+
+--------------------------------------------------------------------------------
+4.1  The layered structure (the method)
+--------------------------------------------------------------------------------
+Each layer treats the layer below as its raw material:
+   Layer 1 — Observations (individually checkable facts/patterns; ~147 of them)
+   Layer 2 — Inferences ("the smallest interpretive step from the observations")
+   Layer 3 — Structural claims (patterns across Layer 2)
+   Layer 4 — Patterns across Layer 3
+   Layer 5 — "Governing patterns"
+   + a staging file for candidates that failed audit or belong one layer up.
+
+   "basically the same operation, but treating level N nodes as the new
+    observations and deriving the higher-level inferences from those."
+
+The hard problem I kept circling — how to generate candidate principles freely
+yet keep only the correct ones:
+
+   "I imagine many possible explanations may work - but I'm only wanting the
+    'right' ones, if that makes sense. Not sure how to filter that."
+
+Four filters every entry had to pass: both-sidedness; the smallest interpretive
+move; the "specialist wouldn't wince" test; and falsifiability (you must be able
+to name an observation that would disconfirm it).
+
+--------------------------------------------------------------------------------
+4.2  Discourse mechanics — how arguments get deflected
+--------------------------------------------------------------------------------
+The original seed: rhetorical moves that are "structurally available" whether or
+not the underlying claim is true. My flagship example:
+
+   "the use of misrepresenting analogies... 'no it's not, B has xyz qualities
+    (that are true but irrelevant to the point) that A doesn't have' - especially
+    in emotionally charged settings."
+
+I insisted a meta-observation name the REASON, not just relabel the move:
+
+   "why is whataboutism ok for one side but not ok for another? Meta observations
+    can be made about consistency, deflection, etc."
+
+--------------------------------------------------------------------------------
+4.3  The unfalsifiability lens (the most important epistemic test)
+--------------------------------------------------------------------------------
+   "if your system of reasoning can be used to justify a falsehood, it can't
+    distinguish between truth and falsehood."
+
+Applied here: if a framework can't tell a real victim/bias/oppressor from a felt
+or false one, it isn't producing evidence. This generated a cluster of
+"closed-loop" observations (implicit bias where denial confirms it; privilege
+where both acknowledgment and refusal confirm it; "lived experience" as a trump
+that breaks when two experiences contradict) — and I demanded the SAME lens be
+turned on the men's side too (alpha/beta, hypergamy as post-hoc framings),
+because flagging only one side "would itself fail the audit."
+
+--------------------------------------------------------------------------------
+4.4  Symmetry — documenting male-disadvantaging asymmetries too
+--------------------------------------------------------------------------------
+A throughline was fairness in both directions: Selective Service/conscription,
+the "women and children first" protector-disposability norm, ~92% of workplace
+fatalities, 3-4x suicide and homelessness ratios, sentencing disparities, the
+post-divorce package (custody, support, home, alimony), "deadbeat dad" with no
+"deadbeat mom," and the empathy gap. The Layer 3/4 synthesis: mainstream
+discourse runs gender equality as a "one-way project" — progress counts only when
+it reduces female disadvantage.
+
+I also kept the framework honest about its own gaps — the largest acknowledged
+hole being trans / gender-identity discourse ("the biggest single elephant... the
+framework currently has nothing on it").
+
+--------------------------------------------------------------------------------
+4.5  Writing philosophy
+--------------------------------------------------------------------------------
+   "Writing goal: demystification. Use plain, common language and keep cognitive
+    load low, while staying precise enough that a specialist would agree it's
+    accurate. Be hard on the topic, soft on the reader."
+
+Drifts to avoid: academic jargon, bland "both-sidesing" that claims nothing,
+false accessibility that makes a specialist object, and emotional cushioning that
+buries the point.
+
+>> BIGGEST RECURRING QUESTIONS IN THIS AREA
+   - Can a gender-discourse framework distinguish a real victim/bias from a merely
+     felt one — applied symmetrically to both sides?
+   - How do you generate inferences freely yet filter to only the correct ones?
+   - Why the asymmetry (the reason), not merely that one exists?
+   - Is equality being pursued one-directionally?
+   - Can it stay both-sided, falsifiable, AND readable at once?
+
+
+================================================================================
+5. THE THREADS THAT CONNECT EVERYTHING
+================================================================================
+
+Across consciousness, truth, religion, and gender, the same intellectual
+signature shows up again and again:
+
+  - EXPOSE THE HIDDEN ASSUMPTION. Whether it's a philosophical objection, a
+    religious claim, an AI's trained priors, or a rhetorical deflection — the real
+    work is surfacing the assumption doing the load-bearing, then testing it.
+
+  - COHERENCE OVER COMFORT. A belief earns its place by surviving scrutiny, not by
+    how good it feels. "Strong feeling as evidence of truth" is the error you
+    chased through every domain (Moroni's promise, the pathological-liar tension,
+    emotionally charged discourse).
+
+  - SYMMETRY / TEST BOTH DIRECTIONS. Every claim gets tested all ways: each
+    religion assumed true in turn; asymmetries documented for both sexes; "if your
+    method can justify a falsehood, it can't tell truth from falsehood."
+
+  - STEELMAN, DON'T STRAWMAN. Objections must come from real positions people hold,
+    strong enough that the objector nods rather than protests.
+
+  - DEMYSTIFY WITHOUT LOSING ACCURACY. Plain enough for a non-expert, precise
+    enough that a specialist wouldn't wince — never hedging into saying nothing.
+
+  - DERIVE, DON'T ASSUME. Ground every term in earlier ones; defer the self until
+    it can be earned; build parents from children.
+
+  - INTELLECTUAL HONESTY ABOUT YOURSELF. The recurring meta-question — "Am I
+    applying my own standards fairly? What have I missed?" — turned on your own
+    work as hard as on anyone else's. You repeatedly cleared finished output back
+    to blank so you could do the thinking yourself.
+
+================================================================================
+end
+================================================================================
+
+ok here's my loose attempt, much taken from my notes on phenomenological grounding (I did what I could for the entire node 1 - there are many nodes here that are terminal just because I ran out of thought processing power to think about them - you can see after 1.3 that I kind of gave up):
+
+
+1. "Some things are true and some are false - and I want to be able to tell which is which."
+        1.1. Phenomenological Grounding: "distinct things occur in my awareness."
+                1.1.1. Phenomena occur.
+                1.1.2. Distinct phenomena occur.
+                1.1.3. Qualities occur.
+                1.1.4. Associations occur.
+                1.1.5. Awareness is the occurrence of a quality or association.
+        1.2. Epistemological Grounding: physical, emotional, mental, willful, and temporal phenomena occur.
+                1.2.1. Information is a quality or association.
+                    1.2.2. Information belongs with a phenomenon.
+                    1.2.3. A feature is a distinct piece of information.
+                    1.2.4. A pattern is a similar quality that a set of features have.
+                    1.2.5. A class is a similar quality that a set of patterns have.
+                    1.2.6. Sameness is the similarity of a pattern across its features.
+                    1.2.7. Variation is the difference of a pattern across its features.
+                1.2.8. Phenomena are associated in distinct "types".
+                    1.2.9. Physical phenomena occur.
+                    1.2.10. Emotional phenomena occur.
+                    1.2.11. Mental phenomena occur.
+                    1.2.12. Willful phenomena occur.
+                            1.2.12.1. Wantings occur.
+                                1.2.12.2. Direction is the wanted information.
+                                    1.2.12.3. Success is the occurrence of what is wanted.
+                                    1.2.12.4. Failure is the non-occurrence of what is wanted.
+                                1.2.12.5. An outcome is a success or failure.
+                            1.2.12.6. Intensities occur.
+                                1.2.12.7. Sensation is intensity without wanting.
+                                1.2.12.8. Satisfaction is when a wanted sensation occurs.
+                                1.2.12.9. Frustration is when a wanted sensation does not occur?
+                                1.2.12.10. Perception is the occurrence of a sensation.
+                    1.2.13. Temporal phenomena occur.
+                            1.2.13.1. Phenomena occur presently.
+                                1.2.13.2. Past phenomena are those that occur before the present.
+                                1.2.13.3. A memory is a present phenomena about a past phenomena.
+                                    1.2.13.4. Recognition is when a phenomenon is like a memory.
+                                    1.2.13.5. Imagination is information from different memories.
+                            1.2.13.6. Phenomena occur sequentially.
+                                1.2.13.7. Change is the difference of a quality in a sequence.
+                                1.2.13.8. An event is the transition from "not-occurring" to "occurring".
+                                1.2.13.9. A correlation is when one event often follows another.
+                1.2.14. Independence is when the variations in one set of features do not correlate with the variations in another.
+        1.3. Ontological Grounding: "reality" is what occurs independently of will.
+                1.3.1. Outcomes do not correlate with want.
+                1.3.2. Wants do not correlate with sensations.
+                1.3.3. A limit is what is independent from want.
+                    1.3.4. Nature is the set of properties for a limit.
+                    1.3.5. A structure is a set of limits.
+                1.3.6. An object is a structure with nature.
+                1.3.7. Reality is the set of all objects.
+        1.4. Logical Grounding: "truth" is when a claim corresponds with reality, and "falsehood" is when it doesn't.
+        1.5. Reasoning is the way of checking whether a claim is true or not.
+        1.6. Wanting something to be true doesn't make it true.
+        1.7. Any method of reasoning that can equally justify falsehood can't distinguish it from truth.
+        1.8. "I want to know what is actually true - not what I wish were true."
+
+

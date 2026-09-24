@@ -226,6 +226,7 @@ export const SERVING_GRAMS_BY_CATEGORY = {
   'Baked snacks & pastries':   40,
   'Flours':                    30,
   'Prepared mixes':            55,
+  'Noodle & rice alternatives':115,  // hydrated shirataki / konjac / kelp portion
   // --- Protein (animal), all cooked weights ---
   'Red meat':                  85,   // 3 oz
   'Poultry':                   85,
@@ -404,6 +405,7 @@ export const DIETS = {
       'Alcoholic beverages', 'Soft drinks', 'Prepared mixes',
       'Margarine & shortening',
       'Processed meat',
+      'Noodle & rice alternatives',  // konjac/processed; not paleo
     ],
   },
   mediterranean: {
@@ -427,6 +429,7 @@ export const DIETS = {
       'Sugar & sweeteners', 'Candy & desserts', 'Jams & preserves',
       'Alcoholic beverages', 'Soft drinks', 'Juices',
       'Prepared mixes', 'Processed meat',
+      'Noodle & rice alternatives',  // konjac/processed; not whole30
     ],
   },
   lowfodmap: {

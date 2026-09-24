@@ -17,6 +17,28 @@ the Phase 36 corpus extraction (see "Phase 39 taxonomy audit" below).
 | Subcategories           | 368       | 292            | +76    |
 | Distinct cuisines (meals) | 86      | 0              | +86    |
 
+> The table above is the Phase 32 / Phase 39 snapshot. Counts have since
+> grown through follow-on work; treat it as a historical baseline.
+
+## Low-carb audit (2026-06)
+
+Targeted pass for low-carb / low-cal / high-protein coverage and search
+discoverability (see `scripts/add_lowcarb_ingredients.py`,
+`scripts/add_lowcarb_meals.py`):
+
+- **+9 ingredients → 1,371.** New low-carb noodle/rice swaps (kelp noodles,
+  konjac rice, hearts-of-palm pasta, tofu shirataki), protein powders
+  (whey / casein / pea), pork rinds, psyllium husk.
+- **+2 categories.** New keto-eligible `Noodle & rice alternatives` (shirataki
+  re-homed here, out of `Refined grains`, so noodle-based meals stop
+  inheriting that category's high-carb average) and `Protein powders`.
+  `Noodle & rice alternatives` is excluded from paleo/whole30 but **not** keto.
+- **+20 curated meals → 607** in `meals.json`, all keto-compatible, 7 also
+  high-protein (incl. a shirataki chicken ramen).
+- **Search aliases.** Ingredients gained an optional `aliases[]` field and
+  `src/ui/search.js` now matches it, so "konjac" / "miracle noodle" /
+  "zoodles" / "cauliflower rice" find the right item.
+
 ## RecipeNLG coverage
 
 The `recipe_taxonomy.csv` reference (~2.2M recipes from RecipeNLG) was

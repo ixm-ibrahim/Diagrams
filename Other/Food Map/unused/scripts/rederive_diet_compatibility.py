@@ -45,6 +45,7 @@ DIETS = {
             'Alcoholic beverages', 'Soft drinks', 'Prepared mixes',
             'Margarine & shortening',
             'Processed meat',
+            'Noodle & rice alternatives',
         ],
     },
     'mediterranean': {
@@ -64,6 +65,7 @@ DIETS = {
             'Sugar & sweeteners', 'Candy & desserts', 'Jams & preserves',
             'Alcoholic beverages', 'Soft drinks', 'Juices',
             'Prepared mixes', 'Processed meat',
+            'Noodle & rice alternatives',
         ],
     },
     'lowfodmap': {
