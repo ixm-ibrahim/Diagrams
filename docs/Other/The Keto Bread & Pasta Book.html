@@ -149,6 +149,8 @@ th{font-weight:700;color:var(--accent-ink)}
 .note strong{color:var(--accent-ink)}
 .variants{margin-top:.9rem;font-size:.95rem}
 .boost{margin-top:.9rem;padding:.5rem .85rem;border-left:3px solid var(--v);font-size:.93rem;max-width:none}
+.better{margin-top:.9rem;padding:.5rem .85rem;border-left:3px solid var(--accent);font-size:.93rem;max-width:none}
+.better strong{color:var(--accent-ink)}
 .boost strong{color:var(--v)}
 .variants dt{font-weight:700;margin-top:.5rem}
 .variants dd{margin:0 0 .25rem}
@@ -287,6 +289,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li><a href="#fathead-crackers">Fathead crackers</a></li>
       <li><a href="#fathead-cinnamon-rolls">Fathead cinnamon rolls</a></li>
       <li><a href="#fathead-pretzel-bites">Pretzel bites</a></li>
+      <li><a href="#cheese-wraps">Baked cheese wraps, shells &amp; crisps</a></li>
+      <li><a href="#fathead-quiche">Fathead quiche, empanadas &amp; danish</a></li>
     </ul>
     </div>
     <div class="navgroup" id="nav-3">
@@ -299,6 +303,20 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li><a href="#protein-bread">Egg-white protein bread</a></li>
       <li><a href="#cream-cheese-pancakes">Cream cheese pancakes</a></li>
       <li><a href="#spinach-wraps">Spinach wraps</a></li>
+      <li><a href="#egg-white-wraps">Egg-white wraps</a></li>
+    </ul>
+    </div>
+    <div class="navgroup" id="nav-11">
+    <h2><button class="navh" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Whipped egg whites<span class="navcount"></span></button></h2>
+    <ul>
+      <li><a href="#meringue-kisses">Allulose meringue kisses</a></li>
+      <li><a href="#egg-white-crisps">Savoury egg-white crisps</a></li>
+      <li><a href="#souffle-omelet">Soufflé omelet &amp; cloud eggs</a></li>
+      <li><a href="#souffle-pancakes">Soufflé pancakes</a></li>
+      <li><a href="#cheese-souffle">Cheese soufflé</a></li>
+      <li><a href="#angel-food-cake">Angel food cake</a></li>
+      <li><a href="#pavlova">Pavlova &amp; meringue nests</a></li>
+      <li><a href="#protein-fluff">Frozen protein fluff</a></li>
     </ul>
     </div>
     <div class="navgroup" id="nav-4">
@@ -321,6 +339,9 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li><a href="#coconut-tortillas">Coconut flour tortillas</a></li>
       <li><a href="#almond-crackers">Almond crackers</a></li>
       <li><a href="#seed-crackers">Seed crackers</a></li>
+      <li><a href="#flax-wraps">Flaxseed wraps</a></li>
+      <li><a href="#psyllium-pizza">Psyllium pizza crust</a></li>
+      <li><a href="#biscotti">Biscotti, rusks &amp; melba toast</a></li>
     </ul>
     </div>
     <div class="navgroup" id="nav-5">
@@ -330,6 +351,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li><a href="#cauliflower-breadsticks">Cauliflower breadsticks &amp; buns</a></li>
       <li><a href="#chicken-crust-pizza">Chicken crust pizza</a></li>
       <li><a href="#crackling-rolls">Crackling rolls</a></li>
+      <li><a href="#veg-tortillas">Cauliflower &amp; zucchini tortillas</a></li>
+      <li><a href="#broccoli-bread">Broccoli cheese bread &amp; tots</a></li>
       <li><a href="#swaps">No-recipe bread swaps</a></li>
     </ul>
     </div>
@@ -380,6 +403,24 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
     </ul>
     </div>
     <div class="navgroup" id="nav-10">
+    <h2><button class="navh" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Bases, techniques &amp; better ways<span class="navcount"></span></button></h2>
+    <ul>
+      <li><a href="#t-whites">Whipped egg whites</a></li>
+      <li><a href="#t-eggsheet">Egg sheets</a></li>
+      <li><a href="#t-cheese">Melted cheese as structure</a></li>
+      <li><a href="#t-gluten">Isolated gluten</a></li>
+      <li><a href="#t-psyllium">Psyllium gel</a></li>
+      <li><a href="#t-flax">Flax &amp; chia mucilage</a></li>
+      <li><a href="#t-squeeze">Squeeze-dry vegetables</a></li>
+      <li><a href="#t-alkali">Alkaline treatment</a></li>
+      <li><a href="#t-protein">Protein powder as flour</a></li>
+      <li><a href="#t-twicebake">Twice-baking</a></li>
+      <li><a href="#t-konjac">Konjac gel</a></li>
+      <li><a href="#t-fat">Rendered fat &amp; cracklings</a></li>
+      <li><a href="#better">Common advice worth ignoring</a></li>
+    </ul>
+    </div>
+    <div class="navgroup" id="nav-12">
     <h2><button class="navh" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Back of the book<span class="navcount"></span></button></h2>
     <ul>
       <li><a href="#pantry">Pantry</a></li>
@@ -403,12 +444,13 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
 <div class="legend">
   <div class="G"><b>Gluten blend</b>Vital wheat gluten, almond flour, flax and oat fiber. Yeasted, kneaded, rises. The closest thing to real bread and real pasta.</div>
   <div class="F"><b>Fathead</b>Melted mozzarella, cream cheese, almond flour and egg. No yeast, ready in 20 minutes, pizza-parlour chewy.</div>
-  <div class="E"><b>Egg</b>Eggs plus cream cheese or shredded cheese. Fastest, lowest-carb, softest.</div>
+  <div class="E"><b>Egg</b>Eggs plus cream cheese or shredded cheese, and whipped whites on their own. Fastest, lowest-carb, softest.</div>
   <div class="A"><b>Nut, coconut, seed</b>Almond flour, coconut flour, psyllium, flax and whole seeds with chemical leavening. Gluten-free quick breads.</div>
   <div class="V"><b>Vegetable</b>Cauliflower breads, and squash, zucchini, cabbage and roots cut into noodles.</div>
   <div class="P"><b>Meat &amp; cheese</b>Chicken, beef or chicken cracklings, and cheese doing the job of flour. Near-zero carb.</div>
   <div class="S"><b>Konjac &amp; store-bought</b>Shirataki and konjac rice, homemade konjac noodles from glucomannan, plus kelp and heart-of-palm noodles, with the prep that makes them good.</div>
 </div>
+<p>Three kinds of note appear on the cards: plain boxes for tips and variants, green-barred notes for nutrient boosts that carry a real amount per serving, and amber-barred notes where the usual way of doing something is worse than a less usual way.</p>
 <p>Measurements give cups and grams. A scale makes the gluten-blend recipes far more repeatable; the almond flour and egg recipes are forgiving either way. The nutrition strip on each card is computed per serving from typical brand labels for the ingredients as listed (optional add-ins left out), rounded; expect it to move a little with your specific bags and how you slice. Net carbs are total carbs minus fiber. Every recipe assumes large eggs, full-fat dairy, unsalted butter, and halal-slaughtered meat and poultry. Wherever a recipe calls for something you'd normally buy but could make, a <a href="#diy">homemade</a> link points to the method in the back.</p>
 
 </div>
@@ -444,7 +486,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
   <tr><td>Bread in under 20 minutes, no yeast</td><td><a href="#fathead-dough">Fathead dough</a>, <a href="#chaffles">chaffles</a>, <a href="#ninety-second-bread">90-second bread</a></td></tr>
   <tr><td>No wheat or gluten at all</td><td>Anything tagged Fathead, Egg, Nut/coconut/seed, Vegetable, Meat &amp; cheese</td></tr>
   <tr><td>No tree nuts</td><td><a href="#coconut-bread">Coconut bread</a>, <a href="#coconut-tortillas">coconut tortillas</a>, <a href="#flax-focaccia">flax focaccia</a>, <a href="#cloud-bread">cloud bread</a>, <a href="#chaffles">chaffles</a>, <a href="#egg-loaf">egg loaf</a>, <a href="#crackling-rolls">crackling rolls</a>, <a href="#cheese-noodles">cheese noodles</a>, <a href="#egg-noodles">egg noodles</a>, all vegetable noodles</td></tr>
-  <tr><td>No eggs</td><td><a href="#sandwich-loaf">Gluten-blend loaf</a> (swap eggs for ½ cup more water), <a href="#psyllium-buns">psyllium buns</a> (uses whites only; see egg-free note), <a href="#nut-seed-loaf">nut &amp; seed loaf</a>, <a href="#seed-crackers">seed crackers</a>, <a href="#flour-tortillas">flour tortillas</a>, all vegetable and store-bought noodles</td></tr>
+  <tr><td>No eggs</td><td><a href="#flax-wraps">Flax wraps</a>, <a href="#psyllium-pizza">psyllium pizza crust</a>, <a href="#cheese-wraps">cheese wraps and shells</a>, <a href="#sandwich-loaf">gluten-blend loaf</a> (swap eggs for ½ cup more water), <a href="#psyllium-buns">psyllium buns</a> (see egg-free note), <a href="#nut-seed-loaf">nut &amp; seed loaf</a>, <a href="#seed-crackers">seed crackers</a>, <a href="#flour-tortillas">flour tortillas</a>, all vegetable and store-bought noodles</td></tr>
+  <tr><td>Something sweet that weighs nothing</td><td><a href="#meringue-kisses">Meringue kisses</a>, <a href="#angel-food-cake">angel food cake</a>, <a href="#pavlova">pavlova</a>, <a href="#protein-fluff">protein fluff</a></td></tr>
   <tr><td>Lowest possible carbs</td><td><a href="#cloud-bread">Cloud bread</a>, <a href="#egg-loaf">egg loaf</a>, <a href="#chicken-crust-pizza">chicken crust</a>, <a href="#flax-focaccia">flax focaccia</a>, <a href="#shirataki">shirataki</a></td></tr>
   <tr><td>Something that toasts well</td><td><a href="#sandwich-loaf">Sandwich loaf</a>, <a href="#nut-seed-loaf">nut &amp; seed loaf</a>, <a href="#english-muffins">English muffins</a>, <a href="#almond-sandwich-bread">almond bread</a></td></tr>
   <tr><td>Wraps with vegetables in them</td><td><a href="#spinach-wraps">Spinach wraps</a>, <a href="#flour-tortillas">spinach tortillas</a>, <a href="#chaffles">green chaffles</a></td></tr>
@@ -532,7 +575,7 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
     <div><h4>Method</h4><ol>
       <li>Stir the yeast and sugar into ¾ cup of the warm water. Wait 5–10 minutes for foam. No foam means dead yeast; start over.</li>
       <li>Put the blend and salt (and baking powder) in the mixer bowl. Add the yeast water, eggs and butter. Dough hook on low for 1 minute to bring it together.</li>
-      <li>Knead on medium (speed 4 on a KitchenAid) for 6–8 minutes, and stop when it's smooth and springy; gluten this concentrated develops fast and turns rubbery if you keep going. You want a smooth, springy ball that slaps the bowl and pulls cleanly off the sides. If it tears or looks dry, add the remaining water a tablespoon at a time. If it's a sticky puddle, add blend a tablespoon at a time. It should be tacky, not sticky.</li>
+      <li>Knead on low (speed 2 on a KitchenAid, which is the highest its manual allows for dough) for 7–10 minutes, and stop when it's smooth and springy; gluten this concentrated develops fast and turns rubbery if you keep going. You want a smooth, springy ball that slaps the bowl and pulls cleanly off the sides. If it tears or looks dry, add the remaining water a tablespoon at a time. If it's a sticky puddle, add blend a tablespoon at a time. It should be tacky, not sticky.</li>
       <li>Cover the bowl and rest 10–15 minutes so the oat fiber and flax finish absorbing water.</li>
       <li>Flatten the dough into a rectangle as wide as your pan, roll it up tightly, pinch the seam, and set it seam-down in a greased 9×5 pan (8½×4½ for a taller loaf).</li>
       <li>Cover loosely and rise somewhere warm for 45–75 minutes, until the dome crowns ½–1 inch above the rim. Don't push past that; overproofed gluten bread sinks.</li>
@@ -545,7 +588,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <dt>More rise and chew</dt><dd>Swap ¼ cup of the blend for ¼ cup more vital wheat gluten. The blend as written leans tender; gluten-heavier keto doughs rise higher and chew more, up to the point where they turn rubbery.</dd>
       <dt>Softer, rounder flavour</dt><dd>Add 1 tsp apple cider vinegar to the water. It relaxes the gluten slightly and takes the edge off the flax.</dd>
     </dl>
-    <p class="boost"><strong>Nutrient boost.</strong> Make it with the <a href="#master-blend">mineral blend</a>, or bake it as the <a href="#seeded-loaf">seeded loaf</a> with the seeds doubled. Those are the two changes that move the numbers; a teaspoon of molasses or a pinch of potassium salt in a whole loaf sounds good but comes to almost nothing per slice.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> Make it with the <a href="#master-blend">mineral blend</a>, or bake it as the <a href="#seeded-loaf">seeded loaf</a> with the seeds doubled. Those are the two changes that move the numbers; a teaspoon of molasses or a pinch of potassium salt in a whole loaf sounds good but comes to almost nothing per slice.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Don't wait for it to double, which is what every wheat recipe says; a gluten-isolate dough over-proofs before that and collapses in the oven. Proof it somewhere warm and deliberate: the oven with only the light on, or a turned-off oven with a pan of just-boiled water on the floor, runs about 80°F and is more reliable than a windowsill. And weigh the blend: a scooped cup of almond flour varies by a third depending on how it's packed, which is why the same recipe works one week and not the next.</p></div>
   </div>
 </article>
 
@@ -649,13 +693,14 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
     </ul></div>
     <div><h4>Method</h4><ol>
       <li>Make a half batch of loaf dough with these amounts: bloom the yeast in the water, then knead everything 5–6 minutes to a smooth ball. Rest covered 20–30 minutes.</li>
-      <li>Heat the oven to 450°F with a stone or heavy sheet inside.</li>
+      <li>Heat the oven to 500°F, or as hot as it goes, with a baking steel or stone inside for 45 minutes.</li>
       <li>Roll the dough out on parchment to 12–13 inches. It will fight you; when it springs back, walk away for 5 minutes and try again.</li>
-      <li>Dock the whole surface thoroughly with a fork. Slide the parchment onto the hot stone and par-bake 8–10 minutes until set and lightly coloured.</li>
-      <li>Top with low-carb sauce, cheese and whatever else, keeping toppings dry. Bake 8–10 minutes more until the cheese blisters.</li>
+      <li>Dock the whole surface thoroughly with a fork. Slide the parchment onto the hot steel and par-bake 6–8 minutes until set and lightly coloured, then flip it over for the second bake so the bottom gets the heat.</li>
+      <li>Top with low-carb sauce, cheese and whatever else, keeping toppings dry. Bake 6–8 minutes more until the cheese blisters.</li>
     </ol>
     <p class="note"><strong>No time for yeast?</strong> Skip it, add 1 tsp baking powder to the blend, rest 10 minutes, and roll. Slightly less chew, ready in 25 minutes.</p>
-    <p class="boost"><strong>Nutrient boost.</strong> Simmer the sauce in a cast-iron pan: twenty minutes of acidic tomato picks up roughly 3–5 mg of iron per cup, which is more than the crust could ever carry, and half a cup on a pizza puts a fifth of a day's iron on each slice. Anchovies add about 400 mg of EPA/DHA omega-3 per ounce, the kind your body uses directly.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> Simmer the sauce in a cast-iron pan: twenty minutes of acidic tomato picks up roughly 3–5 mg of iron per cup, which is more than the crust could ever carry, and half a cup on a pizza puts a fifth of a day's iron on each slice. Anchovies add about 400 mg of EPA/DHA omega-3 per ounce, the kind your body uses directly.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Most recipes say 425°F on a sheet pan; the bottom never crisps. A steel or stone preheated 45 minutes at the oven's maximum, and flipping the par-baked crust so its bottom faces the heat for the second bake, is what turns a keto crust from soft to pizzeria. A steel beats a stone: it holds and transfers more heat.</p></div>
   </div>
 </article>
 
@@ -747,7 +792,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Boil 3–4 bagels at a time, 45 seconds per side. Lift out with a slotted spoon onto a rack for a minute, then back to the parchment.</li>
       <li>Brush with egg wash, press the tops into a plate of toppings, and bake 18–22 minutes until golden and firm. Cool 20 minutes.</li>
     </ol>
-    <p class="note"><strong>Expectations.</strong> The boil sets the skin and gives the dense chew. They'll be a shade paler and less glossy than wheat bagels because there's no malt or starch to caramelise; the egg wash does most of the work. Split and freeze the day you bake them.</p></div>
+    <p class="note"><strong>Expectations.</strong> The boil sets the skin and gives the dense chew. They'll be a shade paler and less glossy than wheat bagels because there's no malt or starch to caramelise; the egg wash does most of the work. Split and freeze the day you bake them.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Most keto bagel recipes skip the boil and bake rings of dough at 400°F. Those are rolls with a hole. The boil is what gelatinises the skin for the dense chew and gloss, so don't skip it. Two upgrades from real bagel shops: after shaping, refrigerate the rings uncovered overnight and boil them cold the next morning, which gives a blistered skin and deeper flavour; and put 1 tbsp allulose in the boiling water where a shop would use malt, since allulose browns the way malt does and adds nothing to the count.</p></div>
   </div>
 </article>
 
@@ -770,7 +816,12 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Dip each pretzel 30 seconds, flipping once, lift with a slotted spatula, shake off, and return to the parchment. It's the alkaline bath that makes it taste like a pretzel.</li>
       <li>Brush with egg wash, sprinkle salt, bake 12–15 minutes (bites 10–12) until deep brown. Brush with butter out of the oven.</li>
     </ol>
-    <p class="note"><strong>Darker pretzels.</strong> Spread 1 cup of baking soda on foil and bake at 250°F for an hour to make it more alkaline, then use ½ cup of that in the bath. Wear gloves; it's harsh on skin.</p></div>
+    <p class="note"><strong>Darker pretzels.</strong> Spread 1 cup of baking soda on foil and bake at 250°F for an hour to make it more alkaline, then use ½ cup of that in the bath. Wear gloves; it's harsh on skin.</p>
+    <dl class="variants">
+      <dt>Pretzel buns</dt><dd>Divide the dough into 8, round tightly, rest 15 minutes, dip 30 seconds, score an X, salt, and bake at 425°F for 18–20 minutes. The best burger bun in the book for a wet burger.</dd>
+      <dt>The browning wash</dt><dd>The alkaline bath is why pretzels brown so deeply: browning reactions run faster at high pH. A milder version works on any pale loaf or roll here: brush with ½ tsp baking soda dissolved in ¼ cup water just before baking, instead of or under the egg wash.</dd>
+    </dl>
+    <p class="better"><strong>The usual way, and the better way.</strong> The usual home shortcut is a dip in warm baking-soda water, which gives a pale, faintly pretzel-flavoured roll. A boiling bath is much better, baked baking soda better still, and a food-grade lye bath (the professional method) best of all for colour and the true pretzel skin, but lye needs gloves, goggles and respect, and the baked-soda bath gets you most of the way without it.</p></div>
   </div>
 </article>
 
@@ -879,7 +930,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Cook in a dry skillet over medium-high, 45–60 seconds per side, until spotted and puffing. Stack under a towel.</li>
     </ol>
     <p class="note"><strong>Storage.</strong> Fridge for a week in a bag; reheat in a dry skillet for 20 seconds a side to bring back the flex. They freeze well with parchment between.</p>
-    <p class="boost"><strong>Spinach tortillas.</strong> Blend ½ cup cooked, squeezed spinach into the hot water and hold back 2 tablespoons of water. Method on the <a href="#spinach-wraps">spinach wraps</a> card; each tortilla carries about a third of a day's vitamin K.</p></div>
+    <p class="boost"><strong>Spinach tortillas.</strong> Blend ½ cup cooked, squeezed spinach into the hot water and hold back 2 tablespoons of water. Method on the <a href="#spinach-wraps">spinach wraps</a> card; each tortilla carries about a third of a day's vitamin K.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> A tortilla press lined with parchment beats a rolling pin: even thickness, no fighting, and it takes seconds. Cook them less than you think; a tortilla browned all over has dried out and will crack when folded. Spotted and just puffing is the moment to flip.</p></div>
   </div>
 </article>
 
@@ -1080,7 +1132,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Roll or press between two sheets of parchment. If it's too sticky to handle, chill 10 minutes.</li>
     </ol>
     <p class="note"><strong>Sweet version:</strong> leave out the salt and seasonings, add 2 tbsp granular sweetener and ½ tsp vanilla. <strong>Coconut flour version</strong> (nut-free): swap the almond flour for 3 tbsp coconut flour and add a second egg. <strong>Cheese bites</strong> (pão de queijo-style): add 3 tbsp grated parmesan to the savoury dough, roll 1¼-inch balls, bake at 375°F for 15–18 minutes until puffed and golden. The tapioca original isn't keto; these are chewy in the same spirit.</p>
-    <p class="boost"><strong>Nut-free mineral version.</strong> Use pumpkin seed flour for all the almond flour, same weight. Each eighth of a batch then carries about 0.8 mg iron, 50 mg magnesium and 0.7 mg zinc, and the dough turns olive-green. A tablespoon of fortified nutritional yeast tastes like extra cheese and adds a day's B12 across the batch.</p></div>
+    <p class="boost"><strong>Nut-free mineral version.</strong> Use pumpkin seed flour for all the almond flour, same weight. Each eighth of a batch then carries about 0.8 mg iron, 50 mg magnesium and 0.7 mg zinc, and the dough turns olive-green. A tablespoon of fortified nutritional yeast tastes like extra cheese and adds a day's B12 across the batch.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Two things the usual recipe doesn't tell you. Pre-shredded cheese is coated with potato starch or cellulose to keep it from clumping, which adds about half a gram of carbs per cup and dulls the melt slightly; it's acceptable in fathead dough, but for cheese crisps and wraps grate a block. And if the dough turns greasy and separates, it was overheated: stop the microwave the moment the cheese is melted and stretchy, and knead any pooled fat back in with wet hands rather than adding more flour.</p></div>
   </div>
 </article>
 
@@ -1099,7 +1152,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Bake 8–10 minutes until golden with a few darker spots. If big bubbles form, pop them with a knife.</li>
       <li>Top lightly (wet toppings make it soggy) and bake 5–8 minutes more until the cheese bubbles. Cool 3 minutes; it firms up enough to hold a slice.</li>
     </ol>
-    <p class="boost"><strong>Nutrient boost.</strong> The same sauce trick as the <a href="#pizza-crust-yeasted">gluten-blend pizza</a>: simmer it in cast iron and it carries more iron than any crust; anchovies for omega-3.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> The same sauce trick as the <a href="#pizza-crust-yeasted">gluten-blend pizza</a>: simmer it in cast iron and it carries more iron than any crust; anchovies for omega-3.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Flip the par-baked crust before topping. The bottom gets the direct heat and crisps; a crust baked one-sided stays soft underneath.</p></div>
   </div>
 </article>
 
@@ -1220,6 +1274,53 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
   </div>
 </article>
 
+<article class="recipe" id="cheese-wraps" data-base="F" data-tags="baked cheese sheet frico wraps taco shells bowls crisps provolone mozzarella parmesan cheddar nut-free gluten-free keto folios" data-time="15" data-kcal="195" data-protein="14.0" data-net="1.1" data-avoid="dairy" data-fat="15.1" data-fiber="0.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Baked cheese wraps, shells, bowls & crisps</button></h3>
+  <span class="tag">Fathead</span>
+  <div class="facts"><span>Makes <b>4 shells or wraps</b></span><span>Time <b>15 min (10 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per shell or wrap</span><span><b>195</b> kcal</span><span><b>14 g</b> protein</span><span><b>15 g</b> fat</span><span><b>1 g</b> net carbs</span><span><b>0 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>2 cups (224 g) shredded or thin-sliced cheese: provolone or low-moisture mozzarella for pliable wraps and shells; cheddar or parmesan for crisps and bowls</li>
+      <li>Optional: paprika, everything seasoning, chili flakes</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 400°F. On parchment, lay out ½ cup of cheese (or 2 slices) in an even 7-inch circle for each piece, 2 inches apart.</li>
+      <li>Bake 5–8 minutes until fully melted, bubbling, and just gold at the edges. Blot the pooled fat with a paper towel.</li>
+      <li><b>Wrap:</b> lift the parchment and let the round cool 60–90 seconds until it can be peeled off in one piece while still flexible; fill and roll immediately. <b>Taco shell:</b> drape over the handle of a wooden spoon balanced across two glasses and cool 3 minutes. <b>Bowl:</b> drape over an upturned small bowl. <b>Crisp:</b> leave flat and cool completely.</li>
+      <li>Wraps are best used within a few minutes; shells, bowls and crisps keep airtight for 2 days and re-crisp at 350°F for 3 minutes.</li>
+    </ol>
+    <p class="note">Melted cheese is a structural material: hot it drapes, cool it holds whatever shape it cooled in. Provolone and mozzarella stay bendable longest; parmesan sets glassy. The same idea, with almond flour and egg mixed in, becomes the <a href="#fathead-dough">fathead dough</a>. Grate and bake cheddar into a thin lace for a zero-carb "crumb" on casseroles.</p>
+    <dl class="variants">
+      <dt>Cheese-crust pizza</dt><dd>Bake a 10-inch round of mozzarella with 2 tbsp parmesan mixed in for 8 minutes until the edges brown, blot, top lightly, and bake 4 minutes more. Crisp, thin, and pure cheese.</dd>
+      <dt>Cheese chips for dipping</dt><dd>Tablespoon mounds of cheddar or parmesan, 400°F for 5–6 minutes, cool flat. Add a few jalapeño slices before baking.</dd>
+    </dl></div>
+  </div>
+</article>
+
+<article class="recipe" id="fathead-quiche" data-base="F" data-tags="fathead pie crust quiche tart empanadas danish pastry cream cheese filling savoury sweet gluten-free" data-time="60" data-kcal="335" data-protein="18.1" data-net="3.0" data-avoid="nuts eggs dairy" data-fat="27.5" data-fiber="1.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Fathead pie crust: quiche, empanadas & cheese danish</button></h3>
+  <span class="tag">Fathead</span>
+  <div class="facts"><span>Makes <b>one 9-inch quiche, 8 slices</b></span><span>Time <b>1 hr (20 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per slice of quiche</span><span><b>335</b> kcal</span><span><b>18 g</b> protein</span><span><b>28 g</b> fat</span><span><b>3 g</b> net carbs</span><span><b>1 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>1 batch <a href="#fathead-dough">fathead dough</a>, savoury</li>
+      <li>Quiche filling: 6 large eggs, ¾ cup (180 ml) heavy cream, 1 cup (112 g) grated cheddar or gruyère, ½ tsp salt, pepper, nutmeg, plus 1 cup cooked add-ins (sautéed spinach squeezed dry, mushrooms, halal turkey or beef bacon, onion)</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 375°F. Press the dough evenly across the bottom and up the sides of a 9-inch pie plate, dock with a fork, and par-bake 10–12 minutes until set and lightly gold. Press down any bubbles.</li>
+      <li>Whisk the eggs, cream and seasonings; scatter the cheese and add-ins over the crust and pour the custard over.</li>
+      <li>Bake at 350°F for 35–40 minutes until just set in the centre. Rest 15 minutes before cutting; the crust firms as it cools.</li>
+    </ol>
+    <p class="note">Fathead makes a better pie crust than most people expect: it doesn't go soggy, it slices clean, and it browns. Chill the pressed crust 10 minutes before par-baking if the dough was warm and slumping.</p>
+    <dl class="variants">
+      <dt>Empanadas</dt><dd>Roll the dough to ⅛ inch and cut 5-inch rounds. Fill with 2 tbsp of the <a href="#diy">spiced beef crumbles</a> mixed with a little cheese and chopped olives, fold, crimp with a fork, egg-wash, and bake at 400°F for 15–18 minutes. Makes 8.</dd>
+      <dt>Cheese danish</dt><dd>Sweet fathead dough, cut into 4-inch rounds, edges pressed up. Fill the centre with 2 tbsp of a mixture of 4 oz cream cheese, 2 tbsp powdered sweetener, 1 yolk and vanilla; add a few raspberries. Bake at 375°F for 14–16 minutes and drizzle with the <a href="#cinnamon-rolls">cinnamon-roll icing</a>. Makes 6.</dd>
+    </dl></div>
+  </div>
+</article>
+
 </div>
 </section>
 
@@ -1246,7 +1347,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Fold a third of the whites into the yolks to loosen, then fold in the rest gently. Stop while streaks remain rather than deflate it.</li>
       <li>Spoon 6 mounds onto the sheet and flatten slightly to 4 inches. Bake 25–30 minutes until golden and dry to the touch.</li>
       <li>Cool on a rack. Eat now for a meringue-soft bun, or store overnight in the fridge in a bag with a paper towel; they turn bread-like.</li>
-    </ol></div>
+    </ol>
+    <p class="better"><strong>The usual way, and the better way.</strong> Many versions call for baking powder as the stabiliser. Cream of tartar or lemon juice does the job properly, because it's the acid that stabilises the foam; baking powder adds a metallic note and does little for the whites. Whip in glass or metal, never plastic, which holds a film of grease that stops whites from climbing.</p></div>
   </div>
 </article>
 
@@ -1268,7 +1370,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Rest on a rack 1–2 minutes to crisp. Repeat. Use as sandwich bread, burger buns, or toast with butter.</li>
     </ol>
     <p class="note"><strong>Variations.</strong> Add a tablespoon of finely chopped jalapeño and cheddar; or ¼ tsp garlic powder and parmesan for garlic bread; or ¼ cup finely riced cauliflower for a softer, bigger chaffle.</p>
-    <p class="boost"><strong>Green chaffle.</strong> Stir 2 tbsp finely chopped cooked spinach or kale, squeezed dry, into the egg. One chaffle then carries around 100 mcg vitamin K (most of a day), 0.7 mg iron and 30 mcg folate, and it's one of the few places 20 g of greens disappears completely.</p></div>
+    <p class="boost"><strong>Green chaffle.</strong> Stir 2 tbsp finely chopped cooked spinach or kale, squeezed dry, into the egg. One chaffle then carries around 100 mcg vitamin K (most of a day), 0.7 mg iron and 30 mcg folate, and it's one of the few places 20 g of greens disappears completely.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Grate the cheese from a block. Pre-shredded cheese is dusted with starch that keeps it from crisping in the iron; a block-grated chaffle is noticeably crunchier at the edges. Let it rest a minute on a rack before eating; steam makes it soft if you stack them.</p></div>
   </div>
 </article>
 
@@ -1291,7 +1394,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Microwave on high 90 seconds. It should be puffed and set; give it 15 more seconds if wet.</li>
       <li>Turn out, cool a minute, slice horizontally into two. Toast in the toaster or fry both sides in butter, which turns it from spongy to bread.</li>
     </ol>
-    <p class="boost"><strong>Nutrient boost.</strong> Replace 1 tbsp of the almond flour with 1 tbsp hemp hearts. That single tablespoon brings about 0.8 mg iron, 70 mg magnesium (a sixth of a day), 3 g protein and 1 g omega-3 ALA to a one-person bread.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> Replace 1 tbsp of the almond flour with 1 tbsp hemp hearts. That single tablespoon brings about 0.8 mg iron, 70 mg magnesium (a sixth of a day), 3 g protein and 1 g omega-3 ALA to a one-person bread.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> The microwave gives a spongy crumb; that's the trade for speed. If you have a toaster oven, the same batter in a small greased dish at 350°F for 12–14 minutes is a real little loaf. And either way, the toasting or pan-frying step isn't optional; it's what makes it taste like bread.</p></div>
   </div>
 </article>
 
@@ -1325,7 +1429,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
   <div class="cols">
     <div><h4>Ingredients</h4><ul>
       <li>12 large egg whites (1½ cups, 360 g; carton whites work)</li>
-      <li>1 cup (95 g) unflavoured egg white protein powder. Not whey, not collagen.</li>
+      <li>1 cup (95 g) unflavoured egg white protein powder (see the note on whey isolate); not collagen</li>
+      <li>Optional: 1 tsp baking powder, sifted in with the protein powder, for a little extra lift</li>
       <li>1 tsp cream of tartar, or 1 tbsp lemon juice</li>
       <li>½ tsp salt</li>
       <li>Optional: 2 tbsp allulose for a softer, slightly sweet loaf</li>
@@ -1337,7 +1442,12 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Pile into the pan, smooth the top, and bake 40–45 minutes until deep gold and firm to a press.</li>
       <li>Turn the oven off, crack the door, and leave the loaf 10–15 minutes so it doesn't collapse from the temperature drop. Cool fully before slicing.</li>
     </ol>
-    <p class="note"><strong>What it is.</strong> Springy and airy, somewhere between bread and a firm angel-food cake, and the highest-protein, lowest-calorie bread in the book. Toast it. It keeps 3 days in the fridge or freezes well. Whey protein melts into a rubber sheet here; the egg white protein is the structure.</p></div>
+    <p class="note"><strong>What it is.</strong> Springy and airy, somewhere between bread and a firm angel-food cake, and the highest-protein, lowest-calorie bread in the book. Toast it. It keeps 3 days in the fridge or freezes well. <strong>On whey:</strong> egg white protein powder is the reliable structure. Unflavoured whey isolate works for many bakers and is what a lot of published versions use, but it's more prone to collapsing or turning gummy; if you use it, whip the whites stiffer, fold faster, and don't open the oven door.</p>
+    <dl class="variants">
+      <dt>Egg-white protein pizza crust</dt><dd>Spread the batter ½ inch thick in a 12-inch round on parchment, bake at 325°F for 25 minutes until firm, then top and bake at 400°F for 8 minutes. About 50 kcal and 10 g protein a slice before toppings; keep toppings light or it sags.</dd>
+      <dt>Protein waffles</dt><dd>Half a batch in a hot, well-buttered waffle iron, 5–6 minutes, don't open early. Crisp outside, marshmallow inside, and a sandwich bread that's all protein.</dd>
+    </dl>
+    <p class="better"><strong>The usual way, and the better way.</strong> Fold, don't stir, and sift the powder over in stages: dumping it in and stirring collapses the whites and gives a dense, rubbery slab, which is the usual failure. A stand mixer whips the whites better than a hand mixer here because you need very stiff peaks and it takes a while.</p></div>
   </div>
 </article>
 
@@ -1391,6 +1501,239 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
   </div>
 </article>
 
+<article class="recipe" id="egg-white-wraps" data-base="E" data-tags="egg white wraps egglife thin crepe zero fat high protein sheet nut-free dairy-free gluten-free" data-time="15" data-kcal="30" data-protein="6.6" data-net="0.4" data-avoid="eggs psyllium" data-fat="0.1" data-fiber="0.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Egg-white wraps</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>4 nine-inch wraps</b></span><span>Time <b>15 min (10 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per wrap</span><span><b>30</b> kcal</span><span><b>6.5 g</b> protein</span><span><b>0 g</b> fat</span><span><b>0.5 g</b> net carbs</span><span><b>0 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>1 cup (240 g) egg whites, carton or from about 7 eggs</li>
+      <li>½ tsp psyllium husk powder, or ¼ tsp xanthan gum</li>
+      <li>¼ tsp salt</li>
+      <li>A little oil or butter for the pan</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Whisk the whites with the psyllium and salt (don't whip; you want liquid, not foam) and let it stand 5 minutes to thicken slightly.</li>
+      <li>Heat a 9-inch nonstick skillet over medium and oil it very lightly. Pour in ¼ cup and swirl to coat the pan thinly.</li>
+      <li>Cook about 90 seconds until the top is set and matte, loosen the edge, flip, and cook 20 seconds more. Repeat, stacking the wraps on a plate.</li>
+      <li>Cool and use as tortillas, or roll around fillings. Fridge 4 days stacked between parchment; they reheat in a dry pan.</li>
+    </ol>
+    <p class="note">The store-bought "egg white wrap" is this recipe with a few gums. At 30 calories and 6 g protein each with almost no fat, they're the leanest wrap in the book, and the psyllium is what keeps them from tearing. The same egg-sheet technique, with whole eggs and cream cheese, makes the <a href="#egg-noodles">egg noodles</a> and <a href="#spinach-wraps">spinach wraps</a>.</p></div>
+  </div>
+</article>
+
+</div>
+</section>
+<section class="sec" id="sec-whipped" data-kind="recipes">
+<h2 id="whipped"><button class="sech" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Whipped egg whites<span class="seccount"></span></button></h2>
+<div class="secbody">
+<p class="chapter-intro">Whipping traps air in egg-white protein, and the oven sets it: volume, lift and structure with no flour, almost no fat and about 17 calories per white. It's the tool behind <a href="#cloud-bread">cloud bread</a> and the <a href="#protein-bread">egg-white protein bread</a>, and it reaches a good deal further, from crisps and omelets to cakes that weigh nothing. Everything here follows the same rules: a completely grease-free glass or metal bowl and whisk (plastic holds a film of grease), room-temperature whites, an acid (cream of tartar or lemon juice) to stabilise the foam, sweetener added only after soft peaks form, and stopping at stiff, glossy peaks. Stiff and glossy means the peak stands straight up when you lift the whisk, the surface is shiny like wet paint, and you can tilt the bowl without anything sliding; dull, dry and clumpy means you've gone past it, and there's no way back. Carton whites whip more slowly because pasteurisation weakens the proteins, so give them extra time and don't skip the acid.</p>
+
+<article class="recipe" id="meringue-kisses" data-base="E" data-tags="meringue kisses cookies whipped egg whites allulose dessert sweet nut-free gluten-free" data-time="130" data-kcal="13" data-protein="2.7" data-net="0.2" data-avoid="eggs" data-fat="0.0" data-fiber="0.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Allulose meringue kisses</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>about 40 kisses</b></span><span>Time <b>2 hr 10 min (15 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per 10 kisses</span><span><b>13</b> kcal</span><span><b>2.5 g</b> protein</span><span><b>0 g</b> fat</span><span><b>0 g</b> net carbs</span><span><b>0 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>3 large egg whites, room temperature</li>
+      <li>¼ tsp cream of tartar, or ½ tsp lemon juice</li>
+      <li>½ cup (100 g) allulose, blitzed to a powder in a blender</li>
+      <li>½ tsp alcohol-free vanilla</li>
+      <li>Pinch of salt</li>
+      <li>Optional: 1 tbsp cocoa or 1 tsp espresso powder, folded in at the end</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 200°F and line a sheet with parchment.</li>
+      <li>Whip the whites with the cream of tartar to soft peaks, then add the powdered allulose a tablespoon at a time, whipping between additions, until stiff and glossy. Add the vanilla and salt at the end.</li>
+      <li>Pipe or spoon 1-inch kisses onto the parchment. Bake 90–120 minutes until they lift off the paper cleanly and the bottoms are dry, then turn the oven off and leave them inside for an hour.</li>
+      <li>Cool completely and store airtight with a packet of desiccant if you have one.</li>
+    </ol>
+    <p class="note"><strong>Allulose behaves differently from sugar.</strong> It browns earlier (hence the low oven) and holds moisture, so these come out slightly softer and a little tacky rather than shatter-crisp, and they soften further in humid air. Half allulose and half erythritol blend gives a crisper kiss with a hint of the erythritol cooling; pure erythritol makes them gritty.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Add the sweetener only after the whites reach soft peaks, a spoon at a time. Adding it at the start, which many recipes do, gives you a foam that never firms up. Whip in glass or metal; use parchment, not baking spray, since the lecithin in most sprays makes meringue bottoms stick and brown.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="egg-white-crisps" data-base="E" data-tags="egg white crisps chips crunchy parmesan whipped whites snack nut-free gluten-free high protein" data-time="70" data-kcal="45" data-protein="6.0" data-net="0.5" data-avoid="eggs dairy" data-fat="1.9" data-fiber="0.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Savoury egg-white crisps</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>one sheet, about 4 servings</b></span><span>Time <b>1 hr 10 min (10 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per serving</span><span><b>45</b> kcal</span><span><b>6 g</b> protein</span><span><b>2 g</b> fat</span><span><b>0.5 g</b> net carbs</span><span><b>0 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>4 large egg whites</li>
+      <li>¼ tsp cream of tartar</li>
+      <li>½ tsp salt</li>
+      <li>¼ cup (25 g) finely grated parmesan</li>
+      <li>½ tsp smoked paprika, ¼ tsp garlic powder, or everything seasoning</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 250°F. Line a rimmed sheet with parchment.</li>
+      <li>Whip the whites with the cream of tartar and salt to stiff peaks.</li>
+      <li>Spread ⅛ inch thick across the whole sheet with an offset spatula. Dust evenly with the parmesan and spices.</li>
+      <li>Bake 45–60 minutes until dry, pale gold and crisp to the tap; if the centre flexes, give it 10 more. Cool on the sheet, then break into shards.</li>
+    </ol>
+    <p class="note">Chip-like crunch for almost nothing, and they take dips well. They soften within a day, so make them the day you eat them or re-crisp at 250°F for 10 minutes.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="souffle-omelet" data-base="E" data-tags="souffle omelet fluffy whipped whites breakfast cloud eggs nut-free gluten-free" data-time="15" data-kcal="315" data-protein="19.0" data-net="1.1" data-avoid="eggs dairy" data-fat="25.6" data-fiber="0.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Soufflé omelet & cloud eggs</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>1 dinner-plate omelet</b></span><span>Time <b>15 min (10 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per omelet</span><span><b>315</b> kcal</span><span><b>19 g</b> protein</span><span><b>26 g</b> fat</span><span><b>1 g</b> net carbs</span><span><b>0 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>3 large eggs, separated</li>
+      <li>¼ tsp salt, pepper</li>
+      <li>1 tbsp butter</li>
+      <li>Optional: 2 tbsp grated cheese, chopped herbs, or cooked spinach</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Whip the whites to stiff peaks. Whisk the yolks with the salt and pepper until smooth, then fold the whites into the yolks in two additions, leaving a few streaks.</li>
+      <li>Melt the butter in a 9-inch nonstick skillet over medium-low. Pour in the batter, smooth the top, and put a lid on.</li>
+      <li>Cook 4–5 minutes until the bottom is golden and the top is set but still soft. Scatter cheese or filling over half, fold, and slide onto a plate. It deflates a little as it cools; eat it immediately.</li>
+    </ol>
+    <dl class="variants">
+      <dt>Cloud eggs</dt><dd>Whip 2 whites with salt to stiff peaks and fold in 2 tbsp parmesan. Spoon two nests onto parchment, make a well in each, and bake at 450°F for 3 minutes. Drop a yolk into each well and bake 3 minutes more. A whipped-white technique for breakfast rather than a bread, but the same tool.</dd>
+    </dl></div>
+  </div>
+</article>
+
+<article class="recipe" id="souffle-pancakes" data-base="E" data-tags="souffle pancakes japanese fluffy tall whipped whites breakfast gluten-free" data-time="20" data-kcal="90" data-protein="5.2" data-net="0.7" data-avoid="eggs nuts dairy" data-fat="7.5" data-fiber="0.5">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Soufflé pancakes</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>3 tall pancakes</b></span><span>Time <b>20 min (15 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per pancake</span><span><b>90</b> kcal</span><span><b>5 g</b> protein</span><span><b>7.5 g</b> fat</span><span><b>0.5 g</b> net carbs</span><span><b>0.5 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>2 large eggs, separated</li>
+      <li>2 tbsp (14 g) almond flour</li>
+      <li>1 tbsp granular sweetener</li>
+      <li>¼ tsp baking powder</li>
+      <li>1 tbsp unsweetened almond milk</li>
+      <li>¼ tsp alcohol-free vanilla</li>
+      <li>¼ tsp cream of tartar</li>
+      <li>Butter for the pan</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Whisk the yolks with the almond flour, sweetener, baking powder, milk and vanilla to a smooth batter.</li>
+      <li>Whip the whites with the cream of tartar to stiff peaks. Fold a third into the yolk batter, then the rest, gently.</li>
+      <li>Heat a nonstick skillet over the lowest heat and butter it. Spoon three tall mounds (or fill greased 3-inch ring moulds), add a teaspoon of water to the pan away from the pancakes, and cover.</li>
+      <li>Cook 4–5 minutes until the bottoms are golden and the sides look set, then flip carefully, cover again and cook 3–4 minutes more. They should wobble like a soufflé.</li>
+    </ol>
+    <p class="note">The Japanese café pancake, and one of the rare places whipped whites give you height without any flour to speak of. Serve at once with butter and berries; they sink within minutes.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="cheese-souffle" data-base="E" data-tags="cheese souffle whipped whites baked cheddar gruyere dinner nut-free gluten-free" data-time="45" data-kcal="310" data-protein="15.0" data-net="2.0" data-avoid="eggs dairy" data-fat="26.4" data-fiber="0.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Cheese soufflé</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>one 1½-quart soufflé, 4 servings</b></span><span>Time <b>45 min (15 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per serving</span><span><b>310</b> kcal</span><span><b>15 g</b> protein</span><span><b>26 g</b> fat</span><span><b>2 g</b> net carbs</span><span><b>0 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>4 large eggs, separated, room temperature</li>
+      <li>4 oz (113 g) cream cheese, softened</li>
+      <li>1 cup (112 g) grated sharp cheddar or gruyère</li>
+      <li>1 tsp Dijon mustard, ½ tsp salt, pinch of cayenne and nutmeg</li>
+      <li>¼ tsp cream of tartar</li>
+      <li>1 tbsp butter for the dish, plus 2 tbsp grated parmesan to coat it</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 375°F. Butter a 1½-quart soufflé dish or four 8-oz ramekins and coat with the parmesan.</li>
+      <li>Beat the yolks with the cream cheese until smooth, then stir in the cheddar, mustard and seasonings. The base is thick; that's right.</li>
+      <li>Whip the whites with the cream of tartar to stiff, glossy peaks. Stir a quarter into the base to loosen it, then fold in the rest gently.</li>
+      <li>Pour into the dish, run a thumb around the inside rim to help it rise straight, and bake 25–30 minutes (ramekins 15–18) until puffed and deep gold with a slight wobble. Serve within a minute of it leaving the oven.</li>
+    </ol>
+    <p class="note">A classic soufflé uses a flour roux for the base; the cream cheese does that job here with no carbs and more stability. This is a dinner that eats like bread and cheese together.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="angel-food-cake" data-base="E" data-tags="angel food cake whipped whites allulose light sponge dessert gluten-free" data-time="75" data-kcal="50" data-protein="6.2" data-net="0.7" data-avoid="eggs nuts" data-fat="2.1" data-fiber="0.5">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Angel food cake</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>one 9-inch tube cake, 12 slices</b></span><span>Time <b>1 hr 15 min (20 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per slice</span><span><b>50</b> kcal</span><span><b>6 g</b> protein</span><span><b>2 g</b> fat</span><span><b>0.5 g</b> net carbs</span><span><b>0.5 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>12 large egg whites (1½ cups, 360 g), room temperature</li>
+      <li>1½ tsp cream of tartar</li>
+      <li>¾ cup (150 g) allulose, blitzed to a powder</li>
+      <li>½ cup (50 g) super-fine almond flour</li>
+      <li>¼ cup (25 g) unflavoured egg white protein powder</li>
+      <li>1 tsp alcohol-free vanilla, ½ tsp almond extract (alcohol-free)</li>
+      <li>¼ tsp salt</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 325°F. Do not grease the tube pan; the batter needs to climb the sides.</li>
+      <li>Sift the almond flour and protein powder together twice.</li>
+      <li>Whip the whites with the cream of tartar and salt to soft peaks, then add the powdered allulose gradually and whip to stiff, glossy peaks. Add the extracts.</li>
+      <li>Sift a third of the flour mixture over the whites and fold in gently; repeat twice. Spoon into the pan and cut through the batter once with a knife to remove air pockets.</li>
+      <li>Bake 40–45 minutes until the top is golden and springs back. Invert the pan onto a bottle neck or its own feet and cool completely upside down, an hour, before running a knife around and releasing.</li>
+    </ol>
+    <p class="note">At about 50 calories a slice this is the lightest cake possible. Allulose gives a slightly denser, moister crumb than sugar and a browner crust; cut with a serrated knife. Serve with berries and whipped cream.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="pavlova" data-base="E" data-tags="pavlova meringue nests whipped whites allulose dessert berries cream nut-free gluten-free" data-time="150" data-kcal="125" data-protein="3.0" data-net="2.6" data-avoid="eggs dairy" data-fat="11.0" data-fiber="1.9">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Pavlova & meringue nests</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>one 9-inch pavlova or 8 nests</b></span><span>Time <b>2½ hr (20 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per serving with cream and berries</span><span><b>125</b> kcal</span><span><b>3 g</b> protein</span><span><b>11 g</b> fat</span><span><b>2.5 g</b> net carbs</span><span><b>2 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>4 large egg whites, room temperature</li>
+      <li>1 tsp cream of tartar</li>
+      <li>¾ cup (150 g) allulose, or half allulose and half erythritol blend, powdered</li>
+      <li>1 tsp white vinegar, 1 tsp alcohol-free vanilla</li>
+      <li>To serve: 1 cup heavy cream whipped with 1 tbsp sweetener; 2 cups raspberries or strawberries</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 225°F. Draw a 9-inch circle on parchment (or eight 3-inch circles) and flip it over on a sheet.</li>
+      <li>Whip the whites with the cream of tartar to soft peaks, add the sweetener a spoonful at a time, and whip to stiff, glossy peaks. Fold in the vinegar and vanilla.</li>
+      <li>Mound onto the circle, building the edge higher than the middle. For nests, spoon eight mounds and press a hollow into each.</li>
+      <li>Bake 90 minutes (nests 60), then turn the oven off and leave the door cracked until fully cool, at least an hour.</li>
+      <li>Fill with cream and berries just before serving.</li>
+    </ol>
+    <p class="note">The pavlova is the one meringue where allulose's softness is a feature: a proper pavlova is marshmallowy inside anyway, and the shell is only slightly less crisp than a sugar one. The erythritol blend gives a crisper shell if you prefer that trade.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="protein-fluff" data-base="E" data-tags="frozen protein fluff whipped whites allulose soft serve dessert high volume nut-free gluten-free" data-time="40" data-kcal="50" data-protein="10.9" data-net="0.7" data-avoid="eggs" data-fat="0.2" data-fiber="0.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Frozen protein fluff</button></h3>
+  <span class="tag">Egg</span>
+  <div class="facts"><span>Makes <b>1 huge bowl, 1 serving</b></span><span>Time <b>40 min (10 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per bowl</span><span><b>50</b> kcal</span><span><b>11 g</b> protein</span><span><b>0 g</b> fat</span><span><b>0.5 g</b> net carbs</span><span><b>0 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>3 pasteurised egg whites (½ cup / 100 g from a carton; do not use whites from shell eggs here)</li>
+      <li>3 tbsp allulose</li>
+      <li>½ tsp alcohol-free vanilla</li>
+      <li>¼ tsp cream of tartar</li>
+      <li>Optional: 1 scoop unflavoured or vanilla whey isolate or egg white protein, and 1 tbsp cocoa</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Whip the whites with the cream of tartar in a large bowl on high. Carton whites take longer; give them 4–5 minutes to reach soft peaks.</li>
+      <li>Add the allulose, vanilla and any protein powder and keep whipping to stiff, glossy peaks, another 2–3 minutes. It will fill the bowl.</li>
+      <li>Freeze 30–60 minutes, stirring once halfway, until it has the texture of soft-serve. Eat straight away; it doesn't keep.</li>
+    </ol>
+    <p class="note">A quart of dessert from 50 calories, or 130 with a scoop of protein. It's eaten raw, which is why the whites must be pasteurised carton whites; the pasteurisation also weakens the proteins, so the cream of tartar isn't optional here.</p></div>
+  </div>
+</article>
+
+<div class="card">
+  <h3>Also possible with the same tool</h3>
+  <ul>
+    <li><b>Chocolate soufflé:</b> melt 3 oz sugar-free chocolate with 2 tbsp butter, stir in 3 yolks, fold in 3 whipped whites sweetened with 3 tbsp allulose; 375°F for 14 minutes in buttered ramekins.</li>
+    <li><b>Floating islands:</b> poach spoonfuls of sweetened meringue in barely simmering water for 2 minutes a side and set them on a sugar-free custard.</li>
+    <li><b>Keto macarons:</b> almond flour, powdered allulose and whipped whites; they work but need a dry day, a rest before baking, and patience. Not a first project.</li>
+    <li><b>Chocolate mousse, no cream:</b> whipped whites folded into melted sugar-free chocolate and a yolk.</li>
+    <li><b>Lightening any batter:</b> separate the eggs in the <a href="#almond-pancakes">almond pancakes</a>, <a href="#muffins">muffins</a> or <a href="#skillet-cornbread">cornbread</a>, whip the whites, and fold them in last. It's the cheapest way to make almond-flour bakes less dense.</li>
+    <li><b>Egg-white protein pizza crust and waffles:</b> on the <a href="#protein-bread">protein bread</a> card.</li>
+  </ul>
+</div>
 </div>
 </section>
 
@@ -1421,7 +1764,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Cool 15 minutes in the pan, then fully on a rack. Slice ½ inch. Store in the fridge.</li>
     </ol>
     <p class="note"><strong>It's a different animal from the gluten loaf:</strong> softer, cakier, no chew. Toasted, it's excellent under eggs or avocado. It won't survive a wet sandwich.</p>
-    <p class="boost"><strong>Nutrient boost.</strong> Swap half the almond flour (1 cup, 100 g) for pumpkin seed flour. Each slice gets roughly 0.7 mg iron, 45 mg magnesium and 0.6 mg zinc and a khaki crumb. The texture is the same; the flavour is a little more like whole wheat.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> Swap half the almond flour (1 cup, 100 g) for pumpkin seed flour. Each slice gets roughly 0.7 mg iron, 45 mg magnesium and 0.6 mg zinc and a khaki crumb. The texture is the same; the flavour is a little more like whole wheat.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> The common recipe uses five or six whole eggs and tastes like a frittata. Replacing two of them with whites is the fix, and it's already in the ingredient list. Weigh the almond flour; scooping can put 30% more in the bowl, which is the difference between a loaf and a brick.</p></div>
   </div>
 </article>
 
@@ -1448,7 +1792,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Bake buns 50–60 minutes, a loaf 60–70, on the lower rack. They're done when tapping the bottom sounds hollow. Cool fully.</li>
     </ol>
     <p class="note"><strong>Purple or grey inside?</strong> Some psyllium brands do that; it's harmless. Finely ground blond psyllium (NOW or Anthony's) stays pale. <strong>Egg-free:</strong> drop the whites and add 2 tbsp more psyllium and ¼ cup more water; the crumb is denser but it holds.</p>
-    <p class="boost"><strong>Nutrient boost.</strong> Add 1 tbsp fortified nutritional yeast to the dry ingredients: each bun then carries around 1 mcg B12, close to half a day. These are already about 8 g of fiber each, so nothing else is needed.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> Add 1 tbsp fortified nutritional yeast to the dry ingredients: each bun then carries around 1 mcg B12, close to half a day. These are already about 8 g of fiber each, so nothing else is needed.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> The boiling water is not optional; lukewarm water leaves the psyllium half-hydrated and the crumb gummy. Let the shaped buns sit 10 minutes before they go in so the gel finishes forming, and bake the full time: an under-baked psyllium bun looks done outside and is paste inside. Tap the bottom; it should sound hollow.</p></div>
   </div>
 </article>
 
@@ -1530,7 +1875,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Bake at 350°F for 20 minutes. Lift the loaf out of the pan, flip it directly onto the oven rack, and bake 30–40 minutes more until it sounds hollow.</li>
       <li>Cool completely, several hours, before slicing. Slice thin with a serrated knife and toast. Keeps 5 days airtight at room temperature; freeze slices with parchment between.</li>
     </ol>
-    <p class="boost"><strong>Already the richest thing here.</strong> A slice carries roughly 1.3 mg iron, 100 mg magnesium (a quarter of a day) and 1.5 mg zinc without changing anything. To add selenium, chop 3 Brazil nuts into the mix, no more: that's about 18 mcg per slice, a third of a day, and Brazil nuts overshoot easily.</p></div>
+    <p class="boost"><strong>Already the richest thing here.</strong> A slice carries roughly 1.3 mg iron, 100 mg magnesium (a quarter of a day) and 1.5 mg zinc without changing anything. To add selenium, chop 3 Brazil nuts into the mix, no more: that's about 18 mcg per slice, a third of a day, and Brazil nuts overshoot easily.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> The rest is the recipe. Recipes that say 'rest 1 hour' produce a loaf that crumbles when sliced; two hours is the minimum and overnight is better, because the psyllium and chia need that long to bind the seeds.</p></div>
   </div>
 </article>
 
@@ -1553,7 +1899,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Heat the oven to 400°F. Whisk the dry ingredients. Cut in the butter with your fingertips until it's pea-sized.</li>
       <li>Stir in the egg and sour cream (and cheddar and chives) until it just holds together.</li>
       <li>Drop 8 rough mounds onto parchment, or pat ¾ inch thick and cut rounds. Bake 12–15 minutes until golden. Brush with melted butter.</li>
-    </ol></div>
+    </ol>
+    <p class="better"><strong>The usual way, and the better way.</strong> Cold butter cut in coarsely, then the least mixing you can get away with. Overworked almond-flour biscuits are dense and oily because the butter melts into the flour instead of staying in flakes. If the kitchen is warm, chill the dough 10 minutes before baking.</p></div>
   </div>
 </article>
 
@@ -1635,7 +1982,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <dt>Pumpkin bread</dt><dd>Swap the zucchini for ⅔ cup pumpkin purée and use 2 tsp pumpkin pie spice (<a href="#diy">homemade</a>).</dd>
       <dt>“Banana” bread</dt><dd>Swap the zucchini for ½ cup sour cream and add 1½ tsp alcohol-free banana extract. Real bananas are 20-plus grams of net carbs each, so this is the way.</dd>
     </dl>
-    <p class="boost"><strong>What the variants carry.</strong> The pumpkin version gives each slice about 125 mcg vitamin A, a seventh of a day. The walnuts give each slice around 0.45 g omega-3 ALA, about a third of the daily intake. Leave the zucchini skin on for the potassium.</p></div>
+    <p class="boost"><strong>What the variants carry.</strong> The pumpkin version gives each slice about 125 mcg vitamin A, a seventh of a day. The walnuts give each slice around 0.45 g omega-3 ALA, about a third of the daily intake. Leave the zucchini skin on for the potassium.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Recipes that skip salting and squeezing the zucchini produce a wet, sunken middle. Salt the shredded zucchini 10 minutes, then squeeze it in a towel until it stops dripping, and measure the cup after squeezing, not before.</p></div>
   </div>
 </article>
 
@@ -1803,7 +2151,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Remove the top sheet, score into 1½-inch squares, prick each with a fork, sprinkle flaky salt.</li>
       <li>Bake at 350°F for 12–15 minutes until golden. The edge crackers finish first; pull them off and give the middle 2 more minutes. Cool on the sheet.</li>
     </ol>
-    <p class="boost"><strong>Nutrient boost.</strong> 1 tbsp fortified nutritional yeast in the dough (B12) and 1 tsp dulse or nori flakes (iodine, roughly a quarter of a day per 6 crackers). Both disappear into the rosemary and parmesan.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> 1 tbsp fortified nutritional yeast in the dough (B12) and 1 tsp dulse or nori flakes (iodine, roughly a quarter of a day per 6 crackers). Both disappear into the rosemary and parmesan.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Bake crackers on parchment, not a silicone mat. Silicone insulates and traps moisture underneath, so the bottoms stay soft; on parchment they crisp all the way through.</p></div>
   </div>
 </article>
 
@@ -1825,7 +2174,85 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Bake at 300°F for 55–65 minutes, flipping the whole slab (peel it off the parchment) at 40 minutes. It's done when dry and rigid.</li>
       <li>Cool completely and break into shards. Store airtight; re-crisp at 300°F for 10 minutes if they soften.</li>
     </ol>
-    <p class="boost"><strong>Nutrient boost.</strong> A serving of 4 is already about 2 mg iron, 150 mg magnesium and 1.5 mg zinc. Lean the mix toward pumpkin and hemp for more of the same, and add 1 tsp nori or dulse flakes to the water for around 40 mcg iodine per serving. Toasting the seeds first lowers the phytate that blocks some mineral absorption.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> A serving of 4 is already about 2 mg iron, 150 mg magnesium and 1.5 mg zinc. Lean the mix toward pumpkin and hemp for more of the same, and add 1 tsp nori or dulse flakes to the water for around 40 mcg iodine per serving. Toasting the seeds first lowers the phytate that blocks some mineral absorption.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Parchment, not a silicone mat, for the same reason as the almond crackers: silicone keeps the underside soft. And flipping the whole slab at 40 minutes matters more than it sounds; without it the bottom is still flexible when the top is done.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="flax-wraps" data-base="A" data-tags="flax wraps flaxseed tortilla egg-free nut-free dairy-free vegan gel sturdy burrito gluten-free" data-time="25" data-kcal="140" data-protein="4.7" data-net="0.5" data-avoid="" data-fat="10.9" data-fiber="7.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Flaxseed wraps</button></h3>
+  <span class="tag">Nut, coconut, seed</span>
+  <div class="facts"><span>Makes <b>4 eight-inch wraps</b></span><span>Time <b>25 min (15 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per wrap</span><span><b>140</b> kcal</span><span><b>4.5 g</b> protein</span><span><b>11 g</b> fat</span><span><b>0.5 g</b> net carbs</span><span><b>7 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>1 cup (104 g) golden flaxseed meal, finely ground</li>
+      <li>1 cup (240 ml) water</li>
+      <li>½ tsp salt</li>
+      <li>Optional: ½ tsp garlic powder, 1 tsp dried herbs, or ½ tsp cumin</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Bring the water and salt to a boil in a small saucepan. Remove from the heat, pour in the flax meal all at once, and stir hard for a minute. It will thicken into a sticky mass.</li>
+      <li>Return to low heat and stir 1–2 minutes until it pulls away from the pan in a ball. Tip onto parchment and cool 5 minutes until you can handle it.</li>
+      <li>Knead 30 seconds, divide into 4, and roll each between two sheets of parchment to an 8-inch round about 1/16 inch thick. Trim ragged edges with a knife if you like.</li>
+      <li>Cook in a dry skillet over medium, 2 minutes a side, until dry to the touch and lightly spotted. Cool on a rack; they turn pliable as they cool.</li>
+    </ol>
+    <p class="note">Flax's mucilage gels with hot water into a dough that needs no egg, no cheese and no nut flour, which makes these the wrap for anyone avoiding all three. Nutty, sturdy enough for a wet burrito, and about 7 g of fiber each. The same gel, from 1 tbsp flax or chia plus 3 tbsp water rested 5 minutes, replaces one egg as a binder in <a href="#seed-crackers">crackers</a> and flatbreads.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="psyllium-pizza" data-base="A" data-tags="psyllium pizza crust egg-free almond boiling water flatbread gel gluten-free" data-time="40" data-kcal="95" data-protein="2.7" data-net="1.7" data-avoid="nuts psyllium" data-fat="8.0" data-fiber="3.7">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Psyllium pizza crust (egg-free)</button></h3>
+  <span class="tag">Nut, coconut, seed</span>
+  <div class="facts"><span>Makes <b>one 11-inch crust, 8 slices</b></span><span>Time <b>40 min (10 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per slice, crust only</span><span><b>95</b> kcal</span><span><b>2.5 g</b> protein</span><span><b>8 g</b> fat</span><span><b>1.5 g</b> net carbs</span><span><b>3.5 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>1 cup (100 g) almond flour</li>
+      <li>3 tbsp (24 g) psyllium husk powder</li>
+      <li>1 tsp baking powder</li>
+      <li>½ tsp salt, 1 tsp Italian seasoning, ½ tsp garlic powder</li>
+      <li>1 tbsp olive oil</li>
+      <li>¾ cup (180 ml) boiling water</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 400°F. Whisk the dry ingredients in a bowl.</li>
+      <li>Add the oil, pour in the boiling water, and stir hard for 30 seconds. Rest 5 minutes; the psyllium gels and it becomes a soft, shapeable dough.</li>
+      <li>Press or roll between parchment to an 11-inch round, ¼ inch thick, building a slight rim. Prick with a fork.</li>
+      <li>Par-bake 15 minutes until firm and dry on top, then top and bake 8–10 minutes more. Cool 3 minutes; it firms up.</li>
+    </ol>
+    <p class="note">Psyllium plus boiling water is the egg-free structural trick of the gluten-free chapter: it made the <a href="#psyllium-buns">buns</a>, and here it makes a crust that's chewy rather than cakey, with none of the fathead cheese. Slightly grey from the psyllium; blond psyllium keeps it paler. The same dough, rolled thinner and cooked in a skillet, is a flatbread.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="biscotti" data-base="A" data-tags="biscotti rusks melba toast twice baked crisp dry almond dunking coffee zwieback gluten-free" data-time="60" data-kcal="80" data-protein="3.3" data-net="1.4" data-avoid="nuts eggs" data-fat="7.0" data-fiber="1.5">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Almond biscotti, rusks & melba toast</button></h3>
+  <span class="tag">Nut, coconut, seed</span>
+  <div class="facts"><span>Makes <b>about 20 biscotti</b></span><span>Time <b>1 hr (15 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per biscotti</span><span><b>80</b> kcal</span><span><b>3.5 g</b> protein</span><span><b>7 g</b> fat</span><span><b>1.5 g</b> net carbs</span><span><b>1.5 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>2 cups (200 g) almond flour</li>
+      <li>⅓ cup (65 g) allulose or granular sweetener</li>
+      <li>1 tsp baking powder</li>
+      <li>¼ tsp salt</li>
+      <li>1 large egg + 1 egg white</li>
+      <li>1 tsp alcohol-free vanilla, ½ tsp alcohol-free almond extract</li>
+      <li>½ cup (70 g) whole almonds, roughly chopped</li>
+      <li>Optional: 1 tbsp orange zest, or ⅓ cup sugar-free chocolate chips</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 350°F. Mix the dry ingredients, then the eggs and extracts, then the almonds, into a firm dough.</li>
+      <li>Form two logs 3 inches wide and 1 inch tall on parchment. Bake 20 minutes until set and lightly gold. Cool 10 minutes.</li>
+      <li>Slice on the diagonal ¾ inch thick with a serrated knife. Lay the slices flat, drop the oven to 300°F, and bake 15 minutes a side until dry and crisp.</li>
+      <li>Cool completely on a rack; they crisp fully as they cool. Airtight for two weeks.</li>
+    </ol>
+    <p class="note">Twice-baking drives the moisture out of a bread that would otherwise go stale in days, and it works on breads already in the book.</p>
+    <dl class="variants">
+      <dt>Rusks</dt><dd>Slice the <a href="#almond-sandwich-bread">almond bread</a> or <a href="#sandwich-loaf">gluten loaf</a> ⅓ inch thick and bake at 250°F for 45–60 minutes, flipping once, until dry through. Keeps for weeks; dunk it.</dd>
+      <dt>Melba toast</dt><dd>Chill a loaf, slice it as thin as you can (⅛ inch), and bake at 300°F for 15–20 minutes until curled and crisp. The gluten loaf makes the best one.</dd>
+      <dt>Croutons and crumbs</dt><dd>On the <a href="#diy">make-it-yourself</a> table.</dd>
+    </dl></div>
   </div>
 </article>
 
@@ -1856,7 +2283,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Mix with everything else. Press onto parchment in a ¼-inch round, building a slight rim.</li>
       <li>Bake at 425°F for 15–20 minutes until golden and dry to the touch, then top and bake 8–10 minutes more. Let it sit 3 minutes before slicing.</li>
     </ol>
-    <p class="note"><strong>Make ahead.</strong> Par-bake two or three crusts, cool, and freeze between parchment. Top and bake straight from frozen.</p></div>
+    <p class="note"><strong>Make ahead.</strong> Par-bake two or three crusts, cool, and freeze between parchment. Top and bake straight from frozen.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Frozen riced cauliflower, thawed and squeezed, is easier and drier than fresh: freezing breaks the cell walls so the water comes out with less effort. Whatever you start with, flip the par-baked crust before topping so the bottom crisps; a one-sided crust folds.</p></div>
   </div>
 </article>
 
@@ -1921,6 +2349,49 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
   </div>
 </article>
 
+<article class="recipe" id="veg-tortillas" data-base="V" data-tags="cauliflower tortillas zucchini tortillas vegetable wraps squeezed dry low calorie nut-free gluten-free" data-time="45" data-kcal="50" data-protein="4.1" data-net="2.2" data-avoid="eggs" data-fat="2.4" data-fiber="1.3">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Cauliflower & zucchini tortillas</button></h3>
+  <span class="tag">Vegetable</span>
+  <div class="facts"><span>Makes <b>6 six-inch tortillas</b></span><span>Time <b>45 min (20 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per cauliflower tortilla</span><span><b>50</b> kcal</span><span><b>4 g</b> protein</span><span><b>2.5 g</b> fat</span><span><b>2 g</b> net carbs</span><span><b>1.5 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>Cauliflower version: 4 cups riced cauliflower (from one small head), 2 large eggs, ¼ tsp salt, 2 tbsp grated parmesan or 1 tbsp psyllium husk powder for flexibility</li>
+      <li>Zucchini version: 3 cups (about 350 g) grated zucchini, 1 large egg, 2 tbsp almond flour, ¼ cup shredded mozzarella, ¼ tsp salt</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Cook the riced cauliflower (microwave 5 minutes) or salt the grated zucchini 10 minutes, then wring either one in a tea towel until no more water comes out. You should lose at least a cup of liquid; this is the whole recipe.</li>
+      <li>Mix with the egg and the rest. Heat the oven to 375°F and line two sheets with parchment.</li>
+      <li>Spread the mixture into six 6-inch rounds, ¼ inch thick and as even as you can, with the back of a spoon.</li>
+      <li>Bake 15–18 minutes until the edges brown, flip carefully, and bake 5 minutes more. Warm briefly in a dry skillet before serving; that's what makes them fold.</li>
+    </ol>
+    <p class="note">Squeeze-dry vegetables plus egg is the technique behind the <a href="#cauliflower-pizza-crust">cauliflower crust</a>, and it bends the same way into tortillas at about 35 calories each. They fold rather than roll; for a burrito use the <a href="#flax-wraps">flax wraps</a> or the <a href="#egg-white-wraps">egg-white wraps</a>.</p></div>
+  </div>
+</article>
+
+<article class="recipe" id="broccoli-bread" data-base="V" data-tags="broccoli cheese bread breadsticks tots squeezed dry vegetable nut-free gluten-free kids" data-time="45" data-kcal="130" data-protein="11.1" data-net="2.6" data-avoid="eggs dairy" data-fat="7.8" data-fiber="1.0">
+  <h3><button class="rtoggle" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Broccoli cheese bread & tots</button></h3>
+  <span class="tag">Vegetable</span>
+  <div class="facts"><span>Makes <b>one 9×13 sheet (12 pieces) or 20 tots</b></span><span>Time <b>45 min (20 min hands-on)</b></span></div>
+  <div class="nutri"><span class="nl">Per 4 tots or 1 piece</span><span><b>130</b> kcal</span><span><b>11 g</b> protein</span><span><b>8 g</b> fat</span><span><b>2.5 g</b> net carbs</span><span><b>1 g</b> fiber</span></div>
+  <div class="cols">
+    <div><h4>Ingredients</h4><ul>
+      <li>2 cups (200 g) steamed broccoli, chopped very fine and squeezed dry in a towel (or riced raw and steamed)</li>
+      <li>2 large eggs</li>
+      <li>1 cup (112 g) shredded mozzarella</li>
+      <li>¼ cup (25 g) grated parmesan</li>
+      <li>½ tsp garlic powder, ½ tsp salt, ¼ tsp pepper</li>
+      <li>Optional: 2 tbsp almond flour or crushed <a href="#crackling-rolls">cracklings</a> for a firmer bind</li>
+    </ul></div>
+    <div><h4>Method</h4><ol>
+      <li>Heat the oven to 400°F. Mix everything into a dense, wet dough.</li>
+      <li><b>Bread:</b> press into a ½-inch-thick rectangle on parchment, bake 25 minutes until golden and set, then scatter extra cheese on top and bake 5 minutes more; cut into sticks or sandwich squares. <b>Tots:</b> form 20 tight cylinders with wet hands, bake 20–25 minutes, turning once, until crisp and browned.</li>
+      <li>Cool 5 minutes before handling; both firm as they cool. Serve with marinara.</li>
+    </ol>
+    <p class="note">The same squeeze-and-bind logic as cauliflower, and broccoli holds together better because it has less water. Cut into thin squares it makes a green sandwich bread; the tots are the version children eat without asking.</p></div>
+  </div>
+</article>
+
 <div class="card" id="swaps">
   <h3>No-recipe bread swaps</h3>
   <div class="tablewrap"><table>
@@ -1967,7 +2438,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Cook in well-salted boiling water for 2–4 minutes. Taste at 2 minutes; it's done when tender with a firm chew. Drain and sauce immediately.</li>
     </ol>
     <p class="note"><strong>Tuning.</strong> Too rubbery: use more almond flour next time, roll thinner, cook shorter. Falling apart: less water, more gluten, don't over-boil. <strong>Silkier:</strong> use 1 whole egg and 4 yolks. <strong>Storage:</strong> dusted and covered in the fridge 2 days; freeze nests on a tray, then bag, and cook from frozen adding a minute. <strong>The lupin version:</strong> if you buy lupin flour, the established formula is equal weights, ⅔ cup (80 g) vital wheat gluten to ⅔ cup (80 g) lupin flour with 2 eggs and no oil. It rolls a little more like semolina dough, comes out paler, and lands around 3–4 g net per serving. Lupin is the keto legume flour (about 1 g net per ¼ cup); buy debittered "sweet lupin", and note it's a peanut relative for allergy purposes.</p>
-    <p class="boost"><strong>Pasta verde.</strong> Blend ½ cup cooked, squeezed spinach with the eggs and leave out the water; add a tablespoon of almond flour if the dough is soft. Each serving then carries about 110 mcg vitamin K (nearly a day), 0.8 mg iron, 33 mcg folate and 100 mg potassium. Cook time is the same.</p></div>
+    <p class="boost"><strong>Pasta verde.</strong> Blend ½ cup cooked, squeezed spinach with the eggs and leave out the water; add a tablespoon of almond flour if the dough is soft. Each serving then carries about 110 mcg vitamin K (nearly a day), 0.8 mg iron, 33 mcg folate and 100 mg potassium. Cook time is the same.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Three pieces of standard pasta advice, two of them wrong here. Don't add oil to the water: it does nothing to stop sticking and it coats the pasta so sauce slides off. Don't rinse cooked pasta: rinsing washes away the surface that grips sauce. And do keep the water at a strong simmer rather than a rolling boil; wheat pasta shrugs off a hard boil, but keto pasta tears in it. To stop sticking, dust the cut pasta generously with oat fiber and stir it for the first 30 seconds in the pot. On recipes generally: the popular keto pasta made from almond flour, egg and xanthan gum disintegrates in water. Gluten or lupin is what makes it pasta.</p></div>
   </div>
 </article>
 
@@ -2202,15 +2674,16 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
     <div><h4>Method</h4><ol>
       <li>Blend everything completely smooth.</li>
       <li>Pour onto a parchment-lined 13×18 rimmed sheet pan in a layer ⅛ inch thick; use two pans if it's thicker than that.</li>
-      <li>Bake at 325°F for 8–10 minutes until just set and matte, not browned. Cool 5 minutes.</li>
-      <li>Roll the sheet up with its parchment, slice into ¼-inch coils, and unroll into noodles. For lasagna, cut the sheet to fit your pan instead.</li>
+      <li>Bake at 325°F for 8–10 minutes until the whole surface is matte and dry to a fingertip, springy, with nothing that jiggles or sticks; the shift from shiny to matte is the reliable sign. Pale, not browned; browned edges mean brittle noodles. Cool 5 minutes.</li>
+      <li>Roll the sheet up with its parchment, slice into ¼-inch coils, and unroll into noodles. For lasagna, cut the sheet to fit your pan instead. To store uncut, cool completely, keep it rolled in its parchment in a bag in the fridge up to 5 days, and slice off the roll as needed; a chilled sheet cuts cleaner than a fresh one, and it freezes flat between parchment.</li>
       <li>Warm in the sauce for a minute. Never boil them. Good in stroganoff, alfredo, buttered with parsley, or dropped into chicken soup right before serving.</li>
     </ol>
     <p class="note"><strong>Skillet version.</strong> Cook the batter like thin crepes in a buttered nonstick pan, ¼ cup at a time, then roll and slice. Same noodles, no oven.</p>
     <dl class="variants">
       <dt>Sturdier cheese sheets for lasagna and cannelloni</dt><dd>Blend 2 eggs, 1 cup (110 g) shredded mozzarella, ⅓ cup (40 g) finely grated parmesan and a pinch of salt. Spread thin on parchment and bake at 350°F for 10–12 minutes until set and lightly golden. Cool, cut to size, and layer or roll around filling. Don't boil. Holds up to a heavy meat sauce better than the cream cheese noodles.</dd>
     </dl>
-    <p class="boost"><strong>Spinach noodles.</strong> Blend ½ cup cooked squeezed spinach into the batter; bake as usual. Each serving carries about 0.8 mg iron and 110 mcg vitamin K, and the sheets cut into <a href="#spinach-wraps">spinach wraps</a> as well as noodles.</p></div>
+    <p class="boost"><strong>Spinach noodles.</strong> Blend ½ cup cooked squeezed spinach into the batter; bake as usual. Each serving carries about 0.8 mg iron and 110 mcg vitamin K, and the sheets cut into <a href="#spinach-wraps">spinach wraps</a> as well as noodles.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> The instinct is to boil them like noodles. Don't; they're cooked, and water dissolves them. Warm them in the sauce for a minute or drop them into soup at the table. Chilled sheets cut cleaner than fresh ones, so bake ahead and slice cold.</p></div>
   </div>
 </article>
 
@@ -2259,7 +2732,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Serve immediately. Never boil them and don't hold them in sauce; they weep.</li>
     </ol>
     <p class="note"><strong>Cold uses:</strong> raw with pesto, or dressed like a slaw. <strong>Drier still:</strong> spread salted noodles on a sheet and roast at 400°F for 8 minutes.</p>
-    <p class="boost"><strong>Nutrient boost.</strong> Keep the skin on for the potassium. Make the pesto with pumpkin seeds instead of pine nuts: 2 tablespoons of it bring around 0.6 mg iron and 40 mg magnesium along with the basil.</p></div>
+    <p class="boost"><strong>Nutrient boost.</strong> Keep the skin on for the potassium. Make the pesto with pumpkin seeds instead of pine nuts: 2 tablespoons of it bring around 0.6 mg iron and 40 mg magnesium along with the basil.</p>
+    <p class="better"><strong>The usual way, and the better way.</strong> Use the wider fettuccine blade on the spiralizer, not the spaghetti blade: thicker ribbons hold their bite and don't weep as fast. Never boil them, and never simmer them in the sauce; both turn them to soup. Salt, squeeze, and a hot pan for a minute is the whole technique.</p></div>
   </div>
 </article>
 
@@ -2278,7 +2752,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Brush the flesh with oil, salt it, and set cut-side down on parchment. Roast at 400°F for 35–45 minutes until a fork slides in easily.</li>
       <li>Cool 10 minutes, then scrape the strands out with a fork.</li>
       <li>Toss the strands in a hot dry skillet for 2 minutes to drive off water before saucing. Holds up to meaty sauces and baked dishes better than zucchini.</li>
-    </ol></div>
+    </ol>
+    <p class="better"><strong>The usual way, and the better way.</strong> Everyone halves it lengthwise. Cut it into 1-inch rings instead: the strands run around the squash, not along it, so rings give you long noodles rather than short ones, they roast in 25–30 minutes, and they don't waterlog. Roast at 400°F cut-side up so the flesh dries rather than steams, and stop while the strands still have bite; over-roasted squash is mush.</p></div>
   </div>
 </article>
 
@@ -2415,7 +2890,8 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
       <li>Boil 2–3 minutes, drain thoroughly.</li>
       <li>Dry-fry: put them in a hot, dry skillet and stir 5–8 minutes until they squeak against the pan and no moisture remains. This step transforms the rubbery texture into something close to a rice noodle.</li>
       <li>Sauce right away. Best in ramen, pho, pad thai, sesame noodles and alfredo. <b>Tofu shirataki</b> is softer; rinse, boil 2 minutes, pat dry, and skip the long dry-fry. <b>Konjac fettuccine and lasagna sheets</b> (sold under a few brands) take the same rinse-boil-dry treatment; the sheets go straight into a lasagna without boiling.</li>
-    </ol></div>
+    </ol>
+    <p class="better"><strong>The usual way, and the better way.</strong> The package says rinse and use. Rinsed-only shirataki is rubbery and faintly fishy, which is why most people try them once. The boil and the dry-fry are what fix both problems, and they take ten minutes.</p></div>
   </div>
 </article>
 
@@ -2519,6 +2995,116 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
 </div>
 </section>
 
+<section class="sec" id="sec-techniques" data-kind="text">
+<h2 id="techniques"><button class="sech" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Bases &amp; techniques<span class="seccount"></span></button></h2>
+<div class="secbody">
+<p class="chapter-intro">Under the 100-odd recipes there are about a dozen tricks. Each one is a way of getting structure without starch, and once you can see the trick you can make things that aren't written down anywhere. This is the map: what each technique does, where the book uses it, and what else it will do.</p>
+
+<div class="card" id="t-whites">
+  <h3>Whipped egg whites</h3>
+  <p>Beating unfolds egg-white proteins and stretches them around air bubbles; heat sets the film. Volume and lift from nothing. Acid stabilises the foam; any fat kills it.</p>
+  <p><b>Here:</b> <a href="#cloud-bread">cloud bread</a>, <a href="#protein-bread">egg-white protein bread</a>, and the whole <a href="#whipped">whipped egg whites</a> chapter.</p>
+  <p><b>Beyond:</b> fold whipped whites into any almond-flour batter to lighten it; chocolate soufflé; floating islands; macarons; mousse; a marshmallow-style fluff from whites, allulose and gelatin; whipped-white "bread" in a mug for a 60-second bun.</p>
+</div>
+<div class="card" id="t-eggsheet">
+  <h3>Egg sheets</h3>
+  <p>Egg cooked thin sets into a flexible film. Pure whites give the leanest sheet; yolks and cream cheese make it richer and more tender; a little psyllium or xanthan stops tearing.</p>
+  <p><b>Here:</b> <a href="#egg-noodles">egg noodles</a>, <a href="#egg-white-wraps">egg-white wraps</a>, <a href="#spinach-wraps">spinach wraps</a>, <a href="#cream-cheese-pancakes">cream cheese pancakes</a>, lasagna and cannelloni sheets.</p>
+  <p><b>Beyond:</b> egg-sheet "rice paper" for summer rolls; an omelet cut into ribbons as a soup noodle; egg crepes folded around fillings as blintzes; a rolled Japanese omelet (tamagoyaki) sliced as a sandwich layer.</p>
+</div>
+<div class="card" id="t-cheese">
+  <h3>Melted cheese as structure</h3>
+  <p>Hot cheese flows, cool cheese holds. Alone it makes crisps, shells, bowls and wraps; mixed with egg and almond flour it becomes a kneadable dough. Low-moisture cheeses only; fresh mozzarella has too much water.</p>
+  <p><b>Here:</b> <a href="#fathead-dough">fathead dough</a> and its chapter, <a href="#cheese-wraps">cheese wraps and shells</a>, <a href="#cheese-noodles">cheese noodles</a>, <a href="#chaffles">chaffles</a>, parmesan crisps, <a href="#fathead-quiche">quiche crust, empanadas and danish</a>.</p>
+  <p><b>Beyond:</b> cheese "bread bowls" for soup; a lattice of baked cheese as a pie top; grated-and-baked cheese lace as a crumb topping; provolone sheets wrapped around fillings and baked as "cannelloni".</p>
+</div>
+<div class="card" id="t-gluten">
+  <h3>Isolated gluten</h3>
+  <p>Vital wheat gluten is the protein that made wheat bread work, minus the starch. It kneads, rises, holds shape and boils without falling apart. It also over-develops fast and turns rubbery when there's too much of it.</p>
+  <p><b>Here:</b> the whole <a href="#gluten-breads">gluten-blend</a> and <a href="#pasta-gluten">pasta</a> chapters.</p>
+  <p><b>Beyond:</b> seitan-style "meat" is the same ingredient without the almond flour; a small spoonful in almond-flour doughs gives them a little stretch; gluten pasta dough rolled paper-thin makes lavash and cracker sheets.</p>
+</div>
+<div class="card" id="t-psyllium">
+  <h3>Psyllium gel</h3>
+  <p>Psyllium husk swells in hot water into an elastic gel that mimics gluten's stretch in a gluten-free dough and stands in for eggs as a binder. Too much and the crumb turns gummy and grey.</p>
+  <p><b>Here:</b> <a href="#psyllium-buns">psyllium buns</a>, <a href="#psyllium-pizza">psyllium pizza crust</a>, <a href="#almond-tortillas">almond</a> and <a href="#coconut-tortillas">coconut tortillas</a>, <a href="#roti-paratha">roti</a>, <a href="#soda-bread">soda bread</a>, <a href="#nut-seed-loaf">nut &amp; seed loaf</a>, <a href="#egg-white-wraps">egg-white wraps</a>.</p>
+  <p><b>Beyond:</b> a teaspoon in almond-flour cookie dough stops crumbling; ½ tsp in a smoothie thickens it; psyllium and water alone set into a gel that binds veggie burgers; a psyllium-almond dough rolled thin makes egg-free crackers.</p>
+</div>
+<div class="card" id="t-flax">
+  <h3>Flax and chia mucilage</h3>
+  <p>Ground flax and chia release a mucilage that gels in water, binding without egg, cheese or gum. Slower and softer than psyllium, with omega-3 and a nutty taste.</p>
+  <p><b>Here:</b> <a href="#flax-wraps">flax wraps</a>, <a href="#seed-crackers">seed crackers</a>, <a href="#flax-focaccia">flax focaccia</a>, <a href="#nut-seed-loaf">nut &amp; seed loaf</a>, the flax in the <a href="#master-blend">master blend</a>.</p>
+  <p><b>Beyond:</b> a "flax egg" (1 tbsp flax + 3 tbsp water, 5 minutes) replaces an egg as a binder in crackers, flatbreads and quick breads that don't rely on egg for lift; chia soaked overnight is a pudding; flax meal and water pressed flat makes egg-free crispbread.</p>
+</div>
+<div class="card" id="t-squeeze">
+  <h3>Squeeze-dry vegetables</h3>
+  <p>Grate or rice a vegetable, cook or salt it, and wring out the water; what's left binds with egg and cheese into a dough that holds a shape. The wringing is the recipe.</p>
+  <p><b>Here:</b> <a href="#cauliflower-pizza-crust">cauliflower crust</a>, <a href="#cauliflower-breadsticks">breadsticks and buns</a>, <a href="#cauliflower-gnocchi">cauliflower gnocchi</a>, <a href="#veg-tortillas">cauliflower and zucchini tortillas</a>, <a href="#broccoli-bread">broccoli bread and tots</a>, <a href="#zucchini-bread">zucchini bread</a>.</p>
+  <p><b>Beyond:</b> zucchini fritters; spinach-and-cheese "bread" from a 10-oz block of frozen spinach squeezed dry plus 2 eggs and a cup of mozzarella; cauliflower "rice cakes" pressed and pan-fried; a cabbage-and-egg pancake (okonomiyaki without the flour).</p>
+</div>
+<div class="card" id="t-alkali">
+  <h3>Alkaline treatment</h3>
+  <p>A baking-soda bath or an alkaline salt raises the surface pH, which speeds browning reactions and changes texture: pretzel skin, bagel chew, ramen spring.</p>
+  <p><b>Here:</b> <a href="#soft-pretzels">pretzels and pretzel buns</a>, <a href="#bagels">bagels</a>, <a href="#ramen-noodles">ramen</a>, <a href="#kelp-noodles">kelp noodles</a> (softened with baking soda), <a href="#konjac-noodles">homemade konjac</a> (set with lime).</p>
+  <p><b>Beyond:</b> the browning wash on any pale loaf; a pinch of baking soda in the fathead dough for deeper colour; alkaline noodles cut wide as "udon".</p>
+</div>
+<div class="card" id="t-protein">
+  <h3>Protein powder as flour</h3>
+  <p>Egg white protein, and to a lesser extent whey isolate, sets when baked and can carry a whipped-white structure the way flour carries a cake. Nearly zero carb and fat.</p>
+  <p><b>Here:</b> <a href="#protein-bread">egg-white protein bread</a>, its pizza crust and waffles, <a href="#angel-food-cake">angel food cake</a>, <a href="#protein-fluff">protein fluff</a>.</p>
+  <p><b>Beyond:</b> a tablespoon in the <a href="#almond-pancakes">almond pancakes</a> makes them hold together better; protein "bagels" from the bread batter piped in rings; a scoop whipped into the <a href="#chaffles">chaffle</a> egg for a leaner chaffle.</p>
+</div>
+<div class="card" id="t-twicebake">
+  <h3>Twice-baking and drying</h3>
+  <p>A second, low bake drives out the moisture that makes these high-fat breads stale and mould quickly, and turns soft into crisp.</p>
+  <p><b>Here:</b> <a href="#biscotti">biscotti, rusks and melba toast</a>, all the crackers, <a href="#seed-crackers">seed crispbread</a>, croutons and crumbs, <a href="#egg-white-crisps">egg-white crisps</a>, <a href="#meringue-kisses">meringues</a>.</p>
+  <p><b>Beyond:</b> dry any leftover loaf at 250°F into rusks that keep a month; bake the fathead dough thin and long for a cracker that stores; a low oven turns cheese slices into shelf-stable crisps.</p>
+</div>
+<div class="card" id="t-konjac">
+  <h3>Konjac gel</h3>
+  <p>Glucomannan swells enormously in water and, set with an alkali, becomes a permanent gel: a noodle that is 97% water.</p>
+  <p><b>Here:</b> <a href="#shirataki">shirataki</a>, <a href="#konjac-rice">konjac rice</a>, <a href="#konjac-noodles">homemade konjac noodles</a>, <a href="#glucomannan">glucomannan as a binder and thickener</a>.</p>
+  <p><b>Beyond:</b> cast the gel into sheets for a zero-calorie lasagna layer; konjac "pearls" for drinks; a pinch in tortilla dough for flex.</p>
+</div>
+<div class="card" id="t-fat">
+  <h3>Rendered fat and cracklings</h3>
+  <p>Rendering separates fat from connective tissue: the fat becomes a cooking medium and the crisp solids become a zero-carb crumb.</p>
+  <p><b>Here:</b> <a href="#crackling-rolls">crackling rolls</a>, chicken-skin crisps and beef cracklings, tallow for the <a href="#flour-tortillas">tortillas</a>, the coating and binding notes.</p>
+  <p><b>Beyond:</b> cracklings as a pie-crust base pressed with egg; chicken-skin "taco shells"; cracklings ground with parmesan as a cracker dough.</p>
+</div>
+</div>
+</section>
+<section class="sec" id="sec-better" data-kind="text">
+<h2 id="better"><button class="sech" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Common advice worth ignoring<span class="seccount"></span></button></h2>
+<div class="secbody">
+<p class="chapter-intro">The amber notes on the recipe cards mark the places where the usual method is worse than a less usual one. These are the ones that cut across the whole book.</p>
+<div class="tablewrap">
+<table>
+  <tr><th>What you'll read everywhere</th><th>What to do instead</th><th>Why</th></tr>
+  <tr><td>Measure almond flour in cups</td><td>Weigh it: 1 cup super-fine almond flour = 100 g in this book</td><td>A scooped cup varies by up to a third with packing, which is the single biggest reason a keto recipe works one day and fails the next.</td></tr>
+  <tr><td>Let the dough double</td><td>Proof gluten-blend doughs until they crown ½–1 inch over the pan, or look puffy, then bake</td><td>Isolated gluten over-proofs and collapses long before it doubles. The wheat rule doesn't transfer.</td></tr>
+  <tr><td>Knead on a medium speed</td><td>Speed 2 on a KitchenAid, 7–10 minutes</td><td>Speed 2 is the manufacturer's maximum for dough; higher speeds strain the motor and over-develop this gluten into rubber.</td></tr>
+  <tr><td>Use pre-shredded cheese</td><td>Grate from a block for crisps, wraps and chaffles; pre-shredded is fine in fathead dough</td><td>The anti-clumping starch or cellulose adds about half a gram of carbs per cup and keeps cheese from crisping.</td></tr>
+  <tr><td>Oil in the pasta water</td><td>Dust cut pasta with oat fiber and stir for the first 30 seconds</td><td>Oil doesn't prevent sticking and it makes sauce slide off the pasta.</td></tr>
+  <tr><td>Rinse cooked pasta</td><td>Drain and sauce it straight away</td><td>Rinsing strips the surface that grips sauce.</td></tr>
+  <tr><td>Boil keto pasta and vegetable noodles hard</td><td>Strong simmer for gluten pasta; no boiling at all for zucchini, egg or cheese noodles</td><td>Nothing in this book has wheat starch to hold it together in turbulent water.</td></tr>
+  <tr><td>Keto bagels: skip the boil</td><td>Boil them, 45 seconds a side</td><td>The boil gelatinises the skin; that's what makes it a bagel rather than a roll.</td></tr>
+  <tr><td>Bake pizza on a sheet pan at 425°F</td><td>A preheated steel or stone at the oven's maximum, and flip the par-baked crust</td><td>Crisp bottoms need stored heat from below; a sheet pan has none.</td></tr>
+  <tr><td>Rinse shirataki and use</td><td>Rinse, boil 2–3 minutes, then dry-fry until they squeak</td><td>Rinsing removes the smell from the surface only; the dry-fry fixes the rubbery texture.</td></tr>
+  <tr><td>Halve a spaghetti squash lengthwise</td><td>Cut it into rings</td><td>The strands run around the squash; rings give long noodles, cook faster and don't waterlog.</td></tr>
+  <tr><td>Baking spray for meringues and cloud bread</td><td>Parchment, or butter</td><td>The lecithin in most sprays makes whipped whites stick and brown underneath.</td></tr>
+  <tr><td>Silicone mats for crackers and crisps</td><td>Parchment</td><td>Silicone insulates and traps moisture, so bottoms stay soft.</td></tr>
+  <tr><td>Trust the oven dial</td><td>An oven thermometer on the rack; and for convection, drop 25°F</td><td>Home ovens are commonly off by 25°F or more, and keto bakes, with no starch to buffer them, brown and dry faster than wheat.</td></tr>
+  <tr><td>Any "sugar-free" syrup or chocolate</td><td>Read the sweetener line: allulose, erythritol, monk fruit or stevia</td><td>Maltitol is the usual filler in "sugar-free" candy and syrup. It raises blood sugar about as much as sugar and it's a laxative. Sorbitol is similar.</td></tr>
+  <tr><td>Store keto bread on the counter</td><td>Fridge for a week, or slice and freeze</td><td>High-fat, high-moisture breads mould in two or three days at room temperature. Only the nut &amp; seed loaf and the crackers are exceptions.</td></tr>
+  <tr><td>Almond flour bread with six whole eggs</td><td>Trade two of the eggs for whites</td><td>It's the difference between bread and a baked omelet.</td></tr>
+  <tr><td>Almond flour, egg and xanthan pasta</td><td>Gluten or lupin flour</td><td>The xanthan version disintegrates in water; every recipe in the pasta chapter has a protein network holding it together.</td></tr>
+  <tr><td>Cool for 10 minutes and slice</td><td>Cool completely, an hour for loaves</td><td>The crumb sets as it cools; warm slices are gummy and compress.</td></tr>
+  <tr><td>Eat almond and coconut breads fresh</td><td>Toast them</td><td>Toasting drives off the eggy softness and gives the browning these breads can't get in the loaf.</td></tr>
+</table>
+</div>
+</div>
+</section>
 <section class="sec" id="sec-pantry" data-kind="text">
 <h2 id="pantry"><button class="sech" type="button" aria-expanded="true"><span class="chev" aria-hidden="true"></span>Pantry<span class="seccount"></span></button></h2>
 <div class="secbody">
@@ -2599,7 +3185,7 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
   <tr><td>Gluten loaf sank in the middle</td><td>Over-proofed, or sliced before cooling</td><td>Bake when it's ½–1 inch over the rim, not more; cool fully</td></tr>
   <tr><td>Gluten bread is rubbery or squeaky</td><td>Gluten too concentrated for the shape</td><td>Add 2–3 tbsp almond flour to the batch, add a tablespoon of fat, roll thinner, rest longer before shaping</td></tr>
   <tr><td>Gummy centre with a good crust</td><td>Under-baked or cut warm</td><td>200°F internal, then a full hour on the rack</td></tr>
-  <tr><td>Pale crust</td><td>No starch or sugar to brown</td><td>Egg wash, 5 more minutes, or a rack one notch higher for the last 10</td></tr>
+  <tr><td>Pale crust</td><td>No starch or sugar to brown</td><td>Egg wash, 5 more minutes, a rack one notch higher for the last 10, or the baking-soda browning wash on the <a href="#soft-pretzels">pretzel</a> card</td></tr>
   <tr><td>Bagels or pretzels flattened in the water</td><td>Over-proofed before boiling</td><td>Rest 20–30 minutes only; they should look puffy, not doubled</td></tr>
   <tr><td>Tortillas snap back and won't roll thin</td><td>Gluten not relaxed</td><td>Rest 30 minutes minimum, then 5 more if a piece resists</td></tr>
   <tr><td>Fathead dough is a sticky mess</td><td>Too warm</td><td>Chill 10 minutes, wet your hands, roll between parchment</td></tr>
