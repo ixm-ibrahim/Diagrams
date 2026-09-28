@@ -171,12 +171,14 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
 .fpanel > summary::-webkit-details-marker{display:none}
 .fpanel > summary::marker{content:""}
 .fpanel[open] > summary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.fpanel .panel{position:absolute;left:0;right:0;top:100%;z-index:45;background:var(--paper);border-bottom:1px solid var(--rule);box-shadow:0 14px 34px rgba(0,0,0,.2);padding:.9rem 1.25rem calc(env(safe-area-inset-bottom,0px) + 1.25rem);max-height:calc(100vh - 3.6rem);overflow:auto;-webkit-overflow-scrolling:touch}
+.fpanel .panel{position:absolute;left:0;right:0;top:100%;z-index:45;background:var(--paper);border-bottom:1px solid var(--rule);box-shadow:0 14px 34px rgba(0,0,0,.2);padding:.9rem 1.25rem calc(env(safe-area-inset-bottom,0px) + 1.5rem);max-height:calc(var(--vh,100vh) - var(--bar-h,3.6rem));overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;box-sizing:border-box}
+@media (max-width:899px){ .fpanel .panel{position:fixed;top:var(--bar-h,3.4rem);left:0;right:0;bottom:0;max-height:none;height:auto;box-shadow:none} }
 .panel input[type=search]{width:100%;font:inherit;font-size:1.05rem;padding:.7rem .9rem;border:1.5px solid var(--rule);border-radius:8px;background:var(--panel);color:var(--ink);box-sizing:border-box}
 .panel input[type=search]:focus{border-color:var(--accent)}
 .panel input[type=search]::placeholder{color:var(--muted)}
 .fgroup{display:flex;align-items:flex-start;gap:.4rem .8rem;margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--rule)}
-.panel input[type=search] + .fgroup{border-top:0;padding-top:0;margin-top:.9rem}
+.fgroup-first{border-top:0;padding-top:0;margin-top:0}
+.panel input[type=search]{margin-top:.9rem}
 .fgroup .flabel{flex:0 0 7.5rem;font-size:.9rem;font-weight:700;color:var(--ink);padding-top:.35rem;line-height:1.25}
 .fgroup .flabel small{display:block;font-weight:400;font-size:.75rem;color:var(--muted);margin-top:.1rem}
 .fgroup .chips{flex:1 1 auto}
@@ -224,7 +226,8 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 .nav .navgroup > summary h2{font-size:.92rem;margin:.8rem 0 .25rem}
 .navh{padding:.1rem 0}
 .nav h2 .chev{width:.45em;height:.45em;border-width:2px;margin:0 .55em .1em .1em;opacity:.9}
-@media (max-width:899px){ .tb-title{font-size:.95rem} .tb-btns .count{display:none} .fgroup{flex-direction:column;gap:.45rem} .fgroup .flabel{flex:0 0 auto;padding-top:0} .fgroup .flabel small{display:inline;margin-left:.4rem} }
+.lbl-narrow{display:none}
+@media (max-width:899px){ .tb-title{font-size:.95rem} .tb-btns .count{display:none} .lbl-wide{display:none} .lbl-narrow{display:inline} .tb-btns{flex-wrap:nowrap} .fgroup{flex-direction:column;gap:.45rem} .fgroup .flabel{flex:0 0 auto;padding-top:0} .fgroup .flabel small{display:inline;margin-left:.4rem} }
 @media print{ .topbar,.count,.top,.toc-btn,.chev,.seccount,.navcount,.nav{display:none} }
 </style>
 </head>
@@ -236,8 +239,16 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
   <span class="tb-btns">
     <span class="count" id="count"></span>
     <details class="fpanel" id="fpanel">
-      <summary>Search &amp; filters</summary>
+      <summary><span class="lbl-wide">Search &amp; filters</span><span class="lbl-narrow">Filters</span></summary>
       <div class="panel">
+        <div class="fgroup fgroup-view fgroup-first"><span class="flabel">View<small>fold &amp; unfold</small></span><div class="chips secctl">
+          <button class="chip" id="foldAll" type="button">Fold everything</button>
+          <button class="chip" id="collapseAll" type="button">Fold chapters, keep parts open</button>
+          <button class="chip" id="titlesOnly" type="button">Recipe titles only</button>
+          <button class="chip" id="expandAll" type="button">Unfold everything</button>
+          <button class="chip" id="defaultView" type="button">Opening view</button>
+          <button class="chip reset" id="reset" type="button">Clear all filters</button>
+        </div></div>
         <input type="search" id="q" placeholder="Search recipes and ingredients: bagel, tortilla, zucchini, ravioli, psyllium…" aria-label="Search recipes">
         <div class="fgroup"><span class="flabel">Type<small>one or both</small></span><div class="chips" id="types">
           <button class="chip" data-v="bread" aria-pressed="false">Breads &amp; bakes</button>
@@ -285,18 +296,10 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
           <label>Fat per serving<select id="ffat"><option value="">Any</option><option value="max5">5 g or less</option><option value="max10">10 g or less</option><option value="max15">15 g or less</option><option value="min10">10 g or more</option><option value="min15">15 g or more</option></select></label>
           <label>Fiber per serving<select id="ffib"><option value="">Any</option><option value="2">2 g or more</option><option value="4">4 g or more</option><option value="6">6 g or more</option></select></label>
         </div>
-        <div class="fgroup fgroup-view"><span class="flabel">View<small>fold &amp; unfold</small></span><div class="chips secctl">
-          <button class="chip" id="foldAll" type="button">Fold everything</button>
-          <button class="chip" id="collapseAll" type="button">Fold chapters, keep parts open</button>
-          <button class="chip" id="titlesOnly" type="button">Recipe titles only</button>
-          <button class="chip" id="expandAll" type="button">Unfold everything</button>
-          <button class="chip reset" id="reset" type="button">Clear all filters</button>
-        </div></div>
         <p class="hint">Chips within a group combine as "any of these"; groups combine as "all of these". Tap any part, chapter or recipe heading to fold or unfold it. Searching or filtering unfolds every chapter with a match and hides the rest until the filters are cleared. Search matches names and ingredient lists. "Without" reads each recipe as written; where a card offers an egg-free or nut-free variant, it still counts as containing them here.</p>
         <p class="count" id="count2"></p>
       </div>
     </details>
-    <button class="chip" id="tb-recipes" type="button">Titles only</button>
     <button class="chip tb-contents" id="tb-contents" type="button">Contents</button>
   </span>
 </header>
@@ -537,7 +540,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-halal" data-kind="text" open>
+<details class="sec" id="sec-halal" data-kind="text">
 <summary class="sech"><h2 id="halal"><span class="chev" aria-hidden="true"></span>Halal, as written<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Every recipe here is halal as printed. Nothing uses pork, lard, gelatin or alcohol, and where a conventional version would, the swap is already in the ingredient list: beef tallow or ghee in tortillas, beef bacon in haluski, halal beef pepperoni in calzones and stromboli, chicken or lamb in dumplings, chicken-skin or beef cracklings where pork rinds would be. A few ingredients still deserve a label check because they vary by brand.</p>
@@ -556,7 +559,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-pick" data-kind="text" open>
+<details class="sec" id="sec-pick" data-kind="text">
 <summary class="sech"><h2 id="pick"><span class="chev" aria-hidden="true"></span>Pick a base by what you need<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <div class="tablewrap">
@@ -582,7 +585,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-howclose" data-kind="text" open>
+<details class="sec" id="sec-howclose" data-kind="text">
 <summary class="sech"><h2 id="howclose"><span class="chev" aria-hidden="true"></span>How close each one gets<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Plain talk about what each recipe does and doesn't reproduce, so you can pick with the right expectations.</p>
@@ -620,7 +623,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 <details class="part" id="part-breads" open>
 <summary class="parth"><h2 class="parttitle"><span class="chev" aria-hidden="true"></span>Breads &amp; bakes</h2></summary>
 <div class="partbody">
-<details class="sec" id="sec-gluten-breads" data-kind="recipes" open>
+<details class="sec" id="sec-gluten-breads" data-kind="recipes">
 <summary class="sech"><h2 id="gluten-breads"><span class="chev" aria-hidden="true"></span>Yeasted breads from the gluten blend<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">This is the blend from your guide, with the numbers corrected. It is the only keto base with real gluten, which means it kneads, rises, holds a shape and browns (a little). Make the blend in bulk, then every recipe in this chapter starts from the same loaf dough and diverges at shaping.</p>
@@ -1233,7 +1236,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-fathead" data-kind="recipes" open>
+<details class="sec" id="sec-fathead" data-kind="recipes">
 <summary class="sech"><h2 id="fathead"><span class="chev" aria-hidden="true"></span>Fathead (cheese) dough<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Melted mozzarella and cream cheese stand in for gluten. It's chewy, browns well, needs no yeast and no rise, and is the fastest route to a pizza that folds. It is best hot; it stiffens as it cools and softens again when reheated.</p>
@@ -1457,7 +1460,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-egg-breads" data-kind="recipes" open>
+<details class="sec" id="sec-egg-breads" data-kind="recipes">
 <summary class="sech"><h2 id="egg-breads"><span class="chev" aria-hidden="true"></span>Egg-based breads<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Eggs and cheese, nothing resembling flour. These are the lowest-carb breads in the book and the fastest. They are soft rather than chewy, and most of them improve after a night in the fridge as the eggy edge fades.</p>
@@ -1674,7 +1677,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 
 </div>
 </details>
-<details class="sec" id="sec-whipped" data-kind="recipes" open>
+<details class="sec" id="sec-whipped" data-kind="recipes">
 <summary class="sech"><h2 id="whipped"><span class="chev" aria-hidden="true"></span>Whipped egg whites<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Whipping traps air in egg-white protein, and the oven sets it: volume, lift and structure with no flour, almost no fat and about 17 calories per white. It's the tool behind <a href="#cloud-bread">cloud bread</a> and the <a href="#protein-bread">egg-white protein bread</a>, and it reaches a good deal further, from crisps and omelets to cakes that weigh nothing. Everything here follows the same rules: a completely grease-free glass or metal bowl and whisk (plastic holds a film of grease), room-temperature whites, an acid (cream of tartar or lemon juice) to stabilise the foam, sweetener added only after soft peaks form, and stopping at stiff, glossy peaks. Stiff and glossy means the peak stands straight up when you lift the whisk, the surface is shiny like wet paint, and you can tilt the bowl without anything sliding; dull, dry and clumpy means you've gone past it, and there's no way back. Carton whites whip more slowly because pasteurisation weakens the proteins, so give them extra time and don't skip the acid.</p>
@@ -1908,7 +1911,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-nut-breads" data-kind="recipes" open>
+<details class="sec" id="sec-nut-breads" data-kind="recipes">
 <summary class="sech"><h2 id="nut-breads"><span class="chev" aria-hidden="true"></span>Nut, coconut, psyllium &amp; seed breads<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Quick breads: baking powder does the lifting, so there's no yeast, no kneading and no rise time. Almond flour gives a tender cake-like crumb, coconut flour a denser sweeter one, psyllium a chewy elastic one, and whole seeds a dark Scandinavian rye-like slab. All of them are gluten-free and all of them are better toasted.</p>
@@ -2469,7 +2472,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-veg-breads" data-kind="recipes" open>
+<details class="sec" id="sec-veg-breads" data-kind="recipes">
 <summary class="sech"><h2 id="veg-breads"><span class="chev" aria-hidden="true"></span>Vegetable, meat &amp; cheese breads<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">When the "flour" is a vegetable or a protein. These are the lowest-carb pizza bases and buns, and the ones that most reward getting the moisture out first.</p>
@@ -2644,7 +2647,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 <details class="part" id="part-pasta" open>
 <summary class="parth"><h2 class="parttitle"><span class="chev" aria-hidden="true"></span>Pasta &amp; noodles</h2></summary>
 <div class="partbody">
-<details class="sec" id="sec-pasta-gluten" data-kind="recipes" open>
+<details class="sec" id="sec-pasta-gluten" data-kind="recipes">
 <summary class="sech"><h2 id="pasta-gluten"><span class="chev" aria-hidden="true"></span>Pasta from the gluten dough<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Gluten is what holds pasta together in boiling water, so vital wheat gluten is the base again, with more egg and no flax or oat fiber, which would make it gritty. The dough is stiff and springy, rests before rolling, and cooks in a couple of minutes. It comes out chewier than semolina pasta and holds sauce well.</p>
@@ -2902,7 +2905,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-egg-noodles-chapter" data-kind="recipes" open>
+<details class="sec" id="sec-egg-noodles-chapter" data-kind="recipes">
 <summary class="sech"><h2 id="egg-noodles-chapter"><span class="chev" aria-hidden="true"></span>Egg &amp; cheese noodles<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">No flour of any kind. These are baked or set rather than boiled, so treat them as noodles that get warmed in sauce, not cooked in water.</p>
@@ -2963,7 +2966,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-veg-noodles" data-kind="recipes" open>
+<details class="sec" id="sec-veg-noodles" data-kind="recipes">
 <summary class="sech"><h2 id="veg-noodles"><span class="chev" aria-hidden="true"></span>Vegetable noodles<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">The lightest options and the ones to reach for on a weeknight. The rule for nearly all of them: get the water out before it gets into your sauce, and cook them far less than you think.</p>
@@ -3127,7 +3130,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-store-noodles" data-kind="recipes" open>
+<details class="sec" id="sec-store-noodles" data-kind="recipes">
 <summary class="sech"><h2 id="store-noodles"><span class="chev" aria-hidden="true"></span>Konjac &amp; store-bought bases<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Konjac is the odd one out in this book: not a flour, not a vegetable, but a root fiber that sets into a near-zero-calorie gel. Shirataki noodles are that gel. Kelp and heart-of-palm noodles round out the pantry. All of them are a little strange straight from the package, and the prep below is what makes them worth eating.</p>
@@ -3152,9 +3155,6 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
     <p class="lowcarb"><strong>Low-carb, not keto.</strong> Half shirataki, half rice noodles: ½ cup cooked rice noodles per bowl, about 20 g net. The konjac disappears into the mix.</p></div>
   </div>
 </details>
-</div>
-</details>
-
 
 <details class="recipe" id="konjac-rice" data-base="S" data-tags="konjac rice pearls shirataki rice fried rice store-bought gluten-free zero carb" data-time="10" data-kcal="10" data-protein="0.0" data-net="0.0" data-avoid="" data-fat="0" data-fiber="3" data-type="pasta" data-cat="noodles" open>
   <summary class="rtoggle"><h3><span class="chev" aria-hidden="true"></span>Konjac rice</h3><span class="tag">Konjac &amp; store-bought</span></summary>
@@ -3256,11 +3256,14 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 
 </div>
 </details>
+</div>
+</details>
+
 
 <details class="part" id="part-techniques" open>
 <summary class="parth"><h2 class="parttitle"><span class="chev" aria-hidden="true"></span>Bases, techniques &amp; better ways</h2></summary>
 <div class="partbody">
-<details class="sec" id="sec-techniques" data-kind="text" open>
+<details class="sec" id="sec-techniques" data-kind="text">
 <summary class="sech"><h2 id="techniques"><span class="chev" aria-hidden="true"></span>Bases &amp; techniques<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Under the 100-odd recipes there are about a dozen tricks. Each one is a way of getting structure without starch, and once you can see the trick you can make things that aren't written down anywhere. This is the map: what each technique does, where the book uses it, and what else it will do.</p>
@@ -3339,7 +3342,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </div>
 </details>
-<details class="sec" id="sec-better" data-kind="text" open>
+<details class="sec" id="sec-better" data-kind="text">
 <summary class="sech"><h2 id="better"><span class="chev" aria-hidden="true"></span>Common advice worth ignoring<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">The amber notes on the recipe cards mark the places where the usual method is worse than a less usual one. These are the ones that cut across the whole book.</p>
@@ -3376,7 +3379,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 <details class="part" id="part-back" open>
 <summary class="parth"><h2 class="parttitle"><span class="chev" aria-hidden="true"></span>Back of the book</h2></summary>
 <div class="partbody">
-<details class="sec" id="sec-pantry" data-kind="text" open>
+<details class="sec" id="sec-pantry" data-kind="text">
 <summary class="sech"><h2 id="pantry"><span class="chev" aria-hidden="true"></span>Pantry<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <div class="tablewrap">
@@ -3408,7 +3411,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-equipment" data-kind="text" open>
+<details class="sec" id="sec-equipment" data-kind="text">
 <summary class="sech"><h2 id="equipment"><span class="chev" aria-hidden="true"></span>Equipment<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p>A stand mixer with a dough hook is what makes the gluten-blend chapter practical; the dough is too tough to enjoy kneading by hand. A kitchen scale turns those recipes from "usually works" into repeatable. Beyond that: a 9×5 and an 8×4 loaf pan, a heavy sheet pan, parchment, a Dutch oven for the boule, a cast-iron skillet for flatbreads and cornbread, an instant-read thermometer (200°F is the loaf test), a bench scraper, a pizza wheel for crackers and pasta, and a spiralizer or julienne peeler for the vegetable chapter. Nice to have: a pasta roller (the mixer attachment works well), a mini waffle maker for chaffles, a tortilla press, and English-muffin rings.</p>
@@ -3416,7 +3419,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-nutrition" data-kind="text" open>
+<details class="sec" id="sec-nutrition" data-kind="text">
 <summary class="sech"><h2 id="nutrition"><span class="chev" aria-hidden="true"></span>Nutrition by base<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p>A side-by-side of the main bases. Every recipe card carries its own per-serving strip computed the same way, from typical brand labels, with optional add-ins left out.</p>
@@ -3446,7 +3449,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-troubleshooting" data-kind="text" open>
+<details class="sec" id="sec-troubleshooting" data-kind="text">
 <summary class="sech"><h2 id="troubleshooting"><span class="chev" aria-hidden="true"></span>Troubleshooting<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">The quick table. Each recipe card also carries its own red "if it didn't turn out" note with the causes specific to it and what to do with the batch in front of you.</p>
@@ -3480,7 +3483,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-diy" data-kind="text" open>
+<details class="sec" id="sec-diy" data-kind="text">
 <summary class="sech"><h2 id="diy"><span class="chev" aria-hidden="true"></span>Make it instead of buying it<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Everything in the book you'd normally buy that a home kitchen can make, with the quick method and a note on when store-bought is still the better tool. Vital wheat gluten, oat fiber, lupin flour, glucomannan, egg white protein and sweeteners are the exceptions: those are factory products with no home version.</p>
@@ -3519,7 +3522,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-taste" data-kind="text" open>
+<details class="sec" id="sec-taste" data-kind="text">
 <summary class="sech"><h2 id="taste"><span class="chev" aria-hidden="true"></span>Taste: where the off-notes come from<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Every base in this book has a signature flavour that wheat flour doesn't, and most of what makes keto bread taste odd traces back to a handful of causes, each with a lever. The blue notes on the cards apply these to specific recipes; this is the general theory.</p>
@@ -3544,7 +3547,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </div>
 </details>
-<details class="sec" id="sec-leftovers" data-kind="text" open>
+<details class="sec" id="sec-leftovers" data-kind="text">
 <summary class="sech"><h2 id="leftovers"><span class="chev" aria-hidden="true"></span>Leftovers &amp; byproducts<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Whipped-white recipes leave yolks, yolk-rich ones leave whites, and the vegetable recipes leave stems and cores. The dotted notes on the cards say what each recipe leaves behind; this is where it all goes.</p>
@@ -3594,7 +3597,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </div>
 </details>
-<details class="sec" id="sec-nutrients" data-kind="text" open>
+<details class="sec" id="sec-nutrients" data-kind="text">
 <summary class="sech"><h2 id="nutrients"><span class="chev" aria-hidden="true"></span>Nutrient boosts<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p class="chapter-intro">Bread and pasta are vehicles, and keto tends to run short on the things that make people feel flat: sodium and potassium first, then magnesium, with iron worth watching if you eat little red meat. Every recipe card carries a green note saying what it contributes and how to raise it. This table says what each addition actually delivers, because a lot of popular "fortifying" tricks come to almost nothing once divided by sixteen slices.</p>
@@ -3640,7 +3643,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 
 </div>
 </details>
-<details class="sec" id="sec-storage" data-kind="text" open>
+<details class="sec" id="sec-storage" data-kind="text">
 <summary class="sech"><h2 id="storage"><span class="chev" aria-hidden="true"></span>Storage<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <p>Every bread in this book is higher in fat and moisture than wheat bread and moulds faster. Cool loaves completely, slice, and refrigerate in a bag for up to a week, or freeze slices with parchment between and toast straight from frozen. Buns, bagels and English muffins: split before freezing. Fathead and cheese-based items keep 4–5 days in the fridge and re-crisp in a hot oven or skillet. Cloud bread and egg noodles: fridge, 4–5 days, in a bag with a paper towel. Fresh gluten pasta: dusted and covered in the fridge 2 days, or frozen in nests. The dry master blend keeps a month at room temperature, longer in the fridge; flaxseed meal on its own should live in the fridge or freezer. Crackers: airtight at room temperature, re-crisp at 300°F for 10 minutes if they soften.</p>
@@ -3648,7 +3651,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
 </div>
 </details>
 
-<details class="sec" id="sec-skip" data-kind="text" open>
+<details class="sec" id="sec-skip" data-kind="text">
 <summary class="sech"><h2 id="skip"><span class="chev" aria-hidden="true"></span>What to skip<span class="seccount"></span></h2></summary>
 <div class="secbody">
 <div class="card">
@@ -3696,7 +3699,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
   var navLinks=Array.prototype.slice.call(document.querySelectorAll('.nav li a'));
   var navGroups=Array.prototype.slice.call(document.querySelectorAll('details.navgroup'));
   var navParts=Array.prototype.slice.call(document.querySelectorAll('details.navpart'));
-  var nav=$('toc'), tocbtn=$('tocbtn'), tbContents=$('tb-contents'), tbRecipes=$('tb-recipes'), mainEl=document.querySelector('main'), topbtn=$('topbtn'), bar=$('topbar');
+  var nav=$('toc'), tocbtn=$('tocbtn'), tbContents=$('tb-contents'), mainEl=document.querySelector('main'), topbtn=$('topbtn'), bar=$('topbar');
   var narrow=window.matchMedia('(max-width: 899px)');
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var total=recipes.length;
@@ -3704,9 +3707,12 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
   recipes.forEach(function(r){ r._text=norm(r.textContent+' '+(r.getAttribute('data-tags')||'')); });
 
   // fold state: native <details>; remember what the reader folded by hand
-  var userState={};
+  var foldables=recipes.concat(secs,parts,navGroups,navParts), defaultState={};
+  foldables.forEach(function(el){ if(!el.open) defaultState[el.id]=true; });
+  function copyDefault(){ var o={}; for(var k in defaultState) o[k]=defaultState[k]; return o; }
+  var userState=copyDefault();
   function setOpen(el,open){ if(el.open!==open){ el._prog=true; el.open=open; } }
-  recipes.concat(secs,parts,navGroups,navParts).forEach(function(el){
+  foldables.forEach(function(el){
     el.addEventListener('toggle',function(){ if(el._prog){ el._prog=false; return; } userState[el.id]=!el.open; });
   });
 
@@ -3764,13 +3770,13 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
     });
     var ct= filtering ? ('Showing '+shown+' of '+total) : (total+' recipes'); count.textContent=ct; var c2=$('count2'); if(c2) c2.textContent=ct;
     empty.classList.toggle('show', filtering && shown===0);
-    tbRecipes.textContent = recipes.some(function(r){return r.open && !r.classList.contains('hidden');}) ? 'Titles only' : 'Expand recipes';
     if(!ticking){ ticking=true; requestAnimationFrame(trackNav); }
     sizePane();
   }
+  function isFiltering(){ return !!(norm(q.value).trim()||pressed(typesBox).length||pressed(baseBox).length||pressed(tagsBox).length||pressed(avoidBox).length||ftime.value||fnet.value||fprot.value||fkcal.value||ffat.value||ffib.value); }
   function applyReset(){
-    // a change of filters unfolds the matches; hand-folding starts fresh
-    recipes.concat(secs,parts,navGroups,navParts).forEach(function(el){ delete userState[el.id]; });
+    // filtering unfolds the matches; clearing the filters returns the book to its opening state
+    userState = isFiltering() ? {} : copyDefault();
     apply(); instantScroll(pane(),0); if(!narrow.matches) instantScroll(window,0);
   }
   [typesBox,baseBox,tagsBox,avoidBox].forEach(function(box){
@@ -3788,11 +3794,13 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
   $('foldAll').addEventListener('click',function(){ foldAll(parts,true); foldAll(secs,true); foldAll(recipes,true); foldAll(navParts,true); foldAll(navGroups,true); apply(); });
   $('titlesOnly').addEventListener('click',function(){ foldAll(recipes,true); apply(); });
   $('expandAll').addEventListener('click',function(){ userState={}; apply(); });
-  tbRecipes.addEventListener('click',function(){ var anyOpen=recipes.some(function(r){return r.open && !r.classList.contains('hidden');}); foldAll(recipes,anyOpen); apply(); });
+  $('defaultView') && $('defaultView').addEventListener('click',function(){ userState=copyDefault(); apply(); });
 
   // panes
   function pane(){ return narrow.matches ? window : mainEl; }
   function sizePane(){
+    document.documentElement.style.setProperty('--bar-h', bar.offsetHeight+'px');
+    document.documentElement.style.setProperty('--vh', window.innerHeight+'px');
     if(narrow.matches){ document.documentElement.style.removeProperty('--pane-h'); return; }
     var h=Math.max(nav.offsetHeight, window.innerHeight - bar.offsetHeight - 8);
     document.documentElement.style.setProperty('--pane-h', Math.round(h)+'px');
@@ -3830,6 +3838,9 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
   nav.addEventListener('click',function(e){ if(e.target.tagName==='A' && narrow.matches){ document.documentElement.classList.remove('noscroll'); nav.removeAttribute('open'); } });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ fpanel.removeAttribute('open'); if(narrow.matches){ document.documentElement.classList.remove('noscroll'); nav.removeAttribute('open'); } } });
   document.addEventListener('click',function(e){ if(fpanel.hasAttribute('open') && !fpanel.contains(e.target) && !e.target.closest('.topbar')){ fpanel.removeAttribute('open'); } });
+  fpanel.addEventListener('toggle',function(){ var o=fpanel.hasAttribute('open'); if(narrow.matches){ document.documentElement.classList.toggle('noscroll', o || nav.hasAttribute('open')); } if(o){ sizePane(); fpanel.querySelector('.panel').scrollTop=0; } });
+  if(window.visualViewport){ window.visualViewport.addEventListener('resize',sizePane); }
+  window.addEventListener('orientationchange',function(){ setTimeout(sizePane,150); });
 
   // highlight the recipe in view
   var ticking=false;
