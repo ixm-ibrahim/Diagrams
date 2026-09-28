@@ -154,7 +154,7 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
 }
 
 /* top bar and filter dropdown */
-.topbar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:calc(env(safe-area-inset-top,0px) + .45rem) 0 .45rem}
+.topbar{position:sticky;top:0;z-index:40;background:var(--panel2);border-bottom:2px solid var(--rule);box-shadow:0 3px 10px rgba(0,0,0,.10);display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:calc(env(safe-area-inset-top,0px) + .5rem) .9rem .5rem;margin:0 -.9rem}
 .tb-title{font-weight:800;font-size:1.05rem;color:var(--head);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1 1 auto;font-variation-settings:"opsz" 96}
 .tb-btns{display:flex;gap:.4rem;flex-shrink:0;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 .count{color:var(--muted);font-size:.85rem;white-space:nowrap}
@@ -167,12 +167,15 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
 .chip[aria-pressed=true] .dot{background:var(--paper)}
 .chip.reset{border-style:dashed;color:var(--muted)}
 .fpanel{position:static}
-.fpanel > summary{list-style:none;cursor:pointer;font:inherit;font-size:.9rem;padding:.4rem .75rem;border-radius:999px;border:1.5px solid var(--rule);background:transparent;color:var(--ink);display:inline-block;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.fpanel > summary{list-style:none;cursor:pointer;font:inherit;font-size:.9rem;font-weight:600;padding:.45rem .85rem;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);display:inline-block;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.fpanel > summary::after{content:" \25BE";font-size:.85em}
+.fpanel[open] > summary::after{content:" \25B4"}
 .fpanel > summary::-webkit-details-marker{display:none}
 .fpanel > summary::marker{content:""}
-.fpanel[open] > summary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.fpanel .panel{position:absolute;left:0;right:0;top:100%;z-index:45;background:var(--paper);border-bottom:1px solid var(--rule);box-shadow:0 14px 34px rgba(0,0,0,.2);padding:.9rem 1.25rem calc(env(safe-area-inset-bottom,0px) + 1.5rem);max-height:calc(var(--vh,100vh) - var(--bar-h,3.6rem));overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;box-sizing:border-box}
-@media (max-width:899px){ .fpanel .panel{position:fixed;top:var(--bar-h,3.4rem);left:0;right:0;bottom:0;max-height:none;height:auto;box-shadow:none} }
+.fpanel[open] > summary{background:var(--accent-ink);border-color:var(--accent-ink);color:var(--paper)}
+.fpanel[open]::before{content:"";position:fixed;inset:0;background:rgba(20,14,8,.45);z-index:44}
+.fpanel .panel{position:absolute;left:0;right:0;top:100%;z-index:45;background:var(--panel);border:1px solid var(--rule);border-top:3px solid var(--accent);border-radius:0 0 14px 14px;box-shadow:0 26px 50px rgba(0,0,0,.35);padding:.9rem 1.25rem calc(env(safe-area-inset-bottom,0px) + 1.5rem);max-height:calc(var(--vh,100vh) - var(--bar-h,3.6rem));overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;box-sizing:border-box}
+@media (max-width:899px){ .fpanel .panel{position:fixed;top:var(--bar-h,3.4rem);left:0;right:0;bottom:0;max-height:none;height:auto;box-shadow:none;border-radius:0} }
 .panel input[type=search]{width:100%;font:inherit;font-size:1.05rem;padding:.7rem .9rem;border:1.5px solid var(--rule);border-radius:8px;background:var(--panel);color:var(--ink);box-sizing:border-box}
 .panel input[type=search]:focus{border-color:var(--accent)}
 .panel input[type=search]::placeholder{color:var(--muted)}
@@ -189,6 +192,7 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
 #types .chip[aria-pressed=true]{background:var(--ink);color:var(--paper)}
 /* base: tinted pills carrying their colour */
 #chips .chip{border-color:transparent;background:var(--panel2)}
+#tags .chip,#chips .chip{border-color:transparent}
 #chips .chip[data-base=G]{background:color-mix(in srgb,var(--g) 18%,transparent)} #chips .chip[data-base=F]{background:color-mix(in srgb,var(--f) 18%,transparent)} #chips .chip[data-base=E]{background:color-mix(in srgb,var(--e) 18%,transparent)} #chips .chip[data-base=A]{background:color-mix(in srgb,var(--a) 20%,transparent)} #chips .chip[data-base=V]{background:color-mix(in srgb,var(--v) 20%,transparent)} #chips .chip[data-base=P]{background:color-mix(in srgb,var(--p) 18%,transparent)} #chips .chip[data-base=S]{background:color-mix(in srgb,var(--s) 18%,transparent)}
 #chips .chip[aria-pressed=true]{color:var(--ink);font-weight:700;border-width:2px}
 #chips .chip[aria-pressed=true][data-base=G]{background:color-mix(in srgb,var(--g) 45%,transparent);border-color:var(--g)} #chips .chip[aria-pressed=true][data-base=F]{background:color-mix(in srgb,var(--f) 45%,transparent);border-color:var(--f)} #chips .chip[aria-pressed=true][data-base=E]{background:color-mix(in srgb,var(--e) 45%,transparent);border-color:var(--e)} #chips .chip[aria-pressed=true][data-base=A]{background:color-mix(in srgb,var(--a) 45%,transparent);border-color:var(--a)} #chips .chip[aria-pressed=true][data-base=V]{background:color-mix(in srgb,var(--v) 45%,transparent);border-color:var(--v)} #chips .chip[aria-pressed=true][data-base=P]{background:color-mix(in srgb,var(--p) 45%,transparent);border-color:var(--p)} #chips .chip[aria-pressed=true][data-base=S]{background:color-mix(in srgb,var(--s) 45%,transparent);border-color:var(--s)}
@@ -203,7 +207,7 @@ body.filtering .sec[data-kind=recipes] .chapter-intro,body.filtering .sec[data-k
 #avoid .chip[aria-pressed=true]{background:var(--f);color:#fff;border-color:var(--f);border-style:solid}
 #avoid .chip[aria-pressed=true]::before{opacity:1}
 /* view: quiet square buttons */
-.fgroup-view .chip{border-radius:6px;font-size:.88rem;background:var(--panel)}
+.fgroup-view .chip{border-radius:6px;font-size:.88rem;background:var(--panel2)}
 .fgroup-view .chip.reset{background:transparent}
 .filters2{display:flex;flex-wrap:wrap;gap:.6rem 1rem;margin-top:.9rem;align-items:flex-end}
 .filters2 label{display:flex;flex-direction:column;gap:.2rem;font-size:.85rem;font-weight:600;color:var(--muted)}
@@ -319,7 +323,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
     <details class="navpart" id="navpart-breads" open>
     <summary class="navh"><h2 class="navparttitle"><span class="chev" aria-hidden="true"></span>Breads &amp; bakes</h2></summary>
     <div class="navpartbody">
-    <details class="navgroup" id="nav-1" open>
+    <details class="navgroup" id="nav-1">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Yeasted breads from the gluten blend<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#master-blend">The master blend</a></li>
@@ -349,7 +353,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
       <li><a href="#blend-crackers">Wheat-style crackers</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-2" open>
+    <details class="navgroup" id="nav-2">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Fathead (cheese) dough<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#fathead-dough">The dough</a></li>
@@ -364,7 +368,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
       <li><a href="#fathead-quiche">Fathead quiche, empanadas &amp; danish</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-3" open>
+    <details class="navgroup" id="nav-3">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Egg-based breads<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#cloud-bread">Cloud bread</a></li>
@@ -377,7 +381,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
       <li><a href="#egg-white-wraps">Egg-white wraps</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-11" open>
+    <details class="navgroup" id="nav-11">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Whipped egg whites<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#meringue-kisses">Allulose meringue kisses</a></li>
@@ -390,7 +394,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
       <li><a href="#protein-fluff">Frozen protein fluff</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-4" open>
+    <details class="navgroup" id="nav-4">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Nut, coconut, psyllium &amp; seed breads<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#almond-sandwich-bread">Almond flour sandwich bread</a></li>
@@ -415,7 +419,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
       <li><a href="#biscotti">Biscotti, rusks &amp; melba toast</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-5" open>
+    <details class="navgroup" id="nav-5">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Vegetable, meat &amp; cheese breads<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#cauliflower-pizza-crust">Cauliflower pizza crust</a></li>
@@ -432,7 +436,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
     <details class="navpart" id="navpart-pasta" open>
     <summary class="navh"><h2 class="navparttitle"><span class="chev" aria-hidden="true"></span>Pasta &amp; noodles</h2></summary>
     <div class="navpartbody">
-    <details class="navgroup" id="nav-6" open>
+    <details class="navgroup" id="nav-6">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Pasta from the gluten dough<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#pasta-dough">Master pasta dough</a></li>
@@ -447,14 +451,14 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
       <li><a href="#cauliflower-gnocchi">Cauliflower gnocchi</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-7" open>
+    <details class="navgroup" id="nav-7">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Egg &amp; cheese noodles<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#egg-noodles">Egg noodles &amp; lasagna sheets</a></li>
       <li><a href="#cheese-noodles">Two-ingredient cheese noodles</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-8" open>
+    <details class="navgroup" id="nav-8">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Vegetable noodles<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#zoodles">Zucchini noodles</a></li>
@@ -467,7 +471,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
       <li><a href="#enoki-noodles">Enoki noodles</a></li>
     </ul>
     </details>
-    <details class="navgroup" id="nav-9" open>
+    <details class="navgroup" id="nav-9">
     <summary class="navh"><h2><span class="chev" aria-hidden="true"></span>Konjac &amp; store-bought bases<span class="navcount"></span></h2></summary>
     <ul>
       <li><a href="#shirataki">Shirataki &amp; tofu shirataki</a></li>
@@ -3837,7 +3841,7 @@ h2.parttitle{font-size:clamp(2.1rem,4.6vw,2.9rem);line-height:1.05;letter-spacin
   nav.addEventListener('toggle',function(){ var o=nav.hasAttribute('open'); document.documentElement.classList.toggle('noscroll', o && narrow.matches); tocbtn.setAttribute('aria-expanded', o?'true':'false'); });
   nav.addEventListener('click',function(e){ if(e.target.tagName==='A' && narrow.matches){ document.documentElement.classList.remove('noscroll'); nav.removeAttribute('open'); } });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ fpanel.removeAttribute('open'); if(narrow.matches){ document.documentElement.classList.remove('noscroll'); nav.removeAttribute('open'); } } });
-  document.addEventListener('click',function(e){ if(fpanel.hasAttribute('open') && !fpanel.contains(e.target) && !e.target.closest('.topbar')){ fpanel.removeAttribute('open'); } });
+  document.addEventListener('click',function(e){ if(fpanel.hasAttribute('open') && (e.target===fpanel || (!fpanel.contains(e.target) && !e.target.closest('.topbar')))){ fpanel.removeAttribute('open'); } });
   fpanel.addEventListener('toggle',function(){ var o=fpanel.hasAttribute('open'); if(narrow.matches){ document.documentElement.classList.toggle('noscroll', o || nav.hasAttribute('open')); } if(o){ sizePane(); fpanel.querySelector('.panel').scrollTop=0; } });
   if(window.visualViewport){ window.visualViewport.addEventListener('resize',sizePane); }
   window.addEventListener('orientationchange',function(){ setTimeout(sizePane,150); });
