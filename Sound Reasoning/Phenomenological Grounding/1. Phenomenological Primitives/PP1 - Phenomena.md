@@ -12,7 +12,6 @@ Terms Introduced:
   - occur
   - phenomenon
   - thing
-metadata_status: ratified
 metadata_date: 2026-09-01
 ---
 
@@ -46,17 +45,17 @@ Something either happens or it does not.
 ## If Rejected
 
 - **Without phenomena, there is nothing — not even the rejection of this very claim.**
-    - **Proof by Contradiction** (assume the opposite, and show it breaks itself)
+    - **Proof by Contradiction** (assume the opposite, and show how it breaks itself)
         1. Suppose phenomena don't occur.
         2. Then no act, thought, or awareness of any kind could occur.
-        3. But the act of supposing in step 1 itself occurred — and supposing is a phenomenon.
+        3. But the act of supposing in step 1 itself occurred (let alone the reading, thoughts, emotions, and experience that comes with it) — and supposing is a phenomenon.
         4. Contradiction: supposing can't occur, yet it did.
         
     - **Consequences**
         1. The rejection defeats itself:
             - If nothing occurs, then there is nothing to notice, nothing to point at, nothing to feel. There are no observations, no statements, no thoughts — not even the thought that nothing is happening.
             - But the rejection is itself an occurrence — a thought, a doubt, a denial. So there is no way to reject the claim without that rejection being something occurring.
-            - So the denial does not expose an alternative — it is itself an example of the very thing it denies.
+            - So the denial does not expose a rational alternative — it is itself an example of the very thing it denies.
 
 ## Unlocks
 
@@ -70,8 +69,8 @@ Something either happens or it does not.
 
 ## Eliminates
 
-- "Nothing whatsoever is happening" — holding this position is itself something happening.
-- A more basic starting point — because beneath "something occurs" there is nothing left to break down: things either occur or they don't.
+- "Nothing whatsoever is happening" — since holding this position is itself something happening.
+- A more basic starting point — because without "something occurs" there is nothing left to break down: things either occur or they don't.
     - Note that learning how things happen is a secondary step, which can only occur after the initial observation that something is happening.
 
 ## Unknowns
@@ -87,14 +86,16 @@ Something either happens or it does not.
 
 **Objection Basis**
 
-- "Phenomena occur" is true by definition — we are simply defining a "phenomenon" as something that occurs. This isn't a discovery; it's a tautology. Tautologies carry no information: "triangles have three sides" tells you nothing about any actual triangle — it's like saying "a three-sided shape has three sides".
-- A statement that is true by definition gets its truth from how we chose to use words — the world was never consulted. Learning it teaches you vocabulary, not facts about anything. How could a report about our word-choices hold up claims about what actually occurs?
-- Some philosophers add that starting points aren't needed at all: a belief is held up by how well it fits with all your other beliefs, the way bricks in an arch hold each other, with no single brick at the bottom. (These schools are called coherentism and pragmatism.)
+- "Phenomena occur" is true by definition — we are simply defining a "phenomenon" as something that occurs. This isn't a discovery; it's a tautology (a statement with no significant information).
+	- For example, "triangles have three sides" tells you nothing about any actual triangle — it's like saying "a three-sided shape has three sides".
+- A statement that is true by definition gets its truth from how we chose to use words, not from whether or not it aligns with reality — teaching you vocabulary, not facts about anything.
+	- How could a report about our word-choices hold up claims about what actually occurs?
+- Some philosophers add that starting points aren't needed at all: a belief is actually held up by how well it fits with all your other beliefs  — just like the way bricks in an arch hold each other, with no single brick at the bottom. (These schools are called coherentism and pragmatism.)
 
 **Objection Commitments**
 
-1. A statement that is true by definition tells you nothing about the world, because its truth comes from how words were chosen, not from how the world is.
-2. A starting point has to stake something on how the world is — otherwise it carries no weight.
+1. A statement that is true by definition tells you nothing about reality, because its truth comes from how words were chosen, not from how the world actually is.
+2. A starting point has to actually describe how the world is — otherwise it carries no weight.
 3. Starting points are optional anyway — beliefs can hold each other up without one, so long as they are consistent with each other.
 
 **Shared Ground**
@@ -104,15 +105,15 @@ Something either happens or it does not.
 
 **What's Missing**
 
-- The first commitment says a true-by-definition statement reports our word-choices, not the world. Test it: ask what it would mean for "Phenomena occur" to actually be wrong.
-    - Not wrong in some imagined way — really wrong, as in: nothing occurring at all.
+- The first commitment says a true-by-definition statement reflects our word-choices, not the nature of reality. So, let's test it: what it would mean for "Phenomena occur" to actually be wrong?
+    - Not wrong in some imagined way, but as in: nothing occurring at all.
     - In that situation there are no beliefs, no consistency between beliefs, no arguments, no objections.
     - So even the objector's preferred picture — beliefs holding each other up with no starting point (the third commitment) — needs something for the beliefs to be about before it can be built.
 - This also shows the claim is not trivial the way "triangles have three sides" is.
     - That sentence just unpacks a definition someone chose — its guarantee comes entirely from the choice of words.
-    - But "Phenomena occur" is not guaranteed by any choice of words: no way of defining "phenomenon" makes anything occur. What makes it true is that something does occur — the word only labels it.
-    - So it points at the raw material that every claim, every definition, and every argument is made of.
-- The second commitment asks the starting point to stake something on how the world is. That gets the job backwards — but not because the world is out of the picture.
+    - But "Phenomena occur" is not guaranteed by any choice of words: our choice of defining "phenomenon" does not cause anything to occur. What makes it true is that something does actually occur — our word only labels it.
+    - So, it identifies the raw material that every claim, every definition, and every argument is made of.
+- The second commitment asks the starting point to describe how reality actually is. That gets the job backwards — but not because the world is out of the picture.
     - "Phenomena occur" is settled by the world: something occurs. It just cannot be settled the other way, because a world with nothing occurring leaves nobody to settle anything.
     - And the one place you want a statement that cannot fail is the bottom of the structure — asking the base to be able to fail is asking for weakness exactly where the role requires firmness.
 - The valid worry underneath the objection: a claim this thin might not do enough work to support anything.
@@ -122,14 +123,14 @@ Something either happens or it does not.
 **Correction**
 
 - "Phenomena occur" is not empty the way "triangles have three sides" is: it points at the material every further claim is made of, and taking it away removes the possibility of any claim at all — including the objector's.
-- The beliefs-holding-each-other alternative still needs something for the beliefs to be about — and that something is phenomena occurring.
-    - The claim's plainness is its strength: it cannot be denied without the denial itself proving it.
+- The beliefs-holding-each-other alternative still needs something for the beliefs to be about — and that "something" is some phenomena occurring.
+    - The claim's foundational simplicity is its strength: it cannot be denied without the denial itself proving it.
 
 ### 2. This looks like a claim, but what does it actually rule out?
 
 **Objection Basis**
 
-- "Phenomena occur" sounds like it says something — but try to describe what things would be like if it were not so. There is nothing to describe.
+- "Phenomena occur" sounds like it says something — but try to describe what things would be like if it were not so... there is nothing to describe.
 - And a sentence tells you something only if it draws a line between how things are and how they are not. A sentence that draws no line isn't really saying anything: it has the shape of a claim while carrying nothing inside. (A philosopher named Carnap called sentences like that pseudo-statements — grammatically fine, but conceptually empty. For example: "reality realizes itself" — words arranged like a claim, but actually saying nothing.)
 
 **Objection Commitments**

@@ -10,7 +10,8 @@ The general possibility of being wrong is treated as if it were evidence of bein
 - "Science has been wrong before — so this result can be dismissed."
 - Treating "your senses could deceive you" as if it subtracted from what you actually saw.
 - Demanding that a starting point be able to fail — asking for weakness exactly where the job requires firmness.
-- The framing itself is contagious: describing a good claim as "one that could have been wrong" sounds like a quality standard, but the only quality it names is the possibility of failure. The honest version of the demand is that a claim stake something on how the world is — and that version no longer counts against a claim the world settles in only one direction.
+- The framing itself is contagious: describing a good claim as "one that could have been wrong" sounds like a quality standard, but the only quality it names is the possibility of failure. The fair version of the demand is that a claim be able to turn out wrong about the world — and that version no longer counts against a claim the world makes true in only one direction.
+- An AI padding a node's objection list with restatements of a single doubt — treating the count of objections as rigor. The tell: two objections that cannot be told apart by the commitments they stand on (named as a standing risk by the author).
 
 ### The fake-neutral default
 
@@ -20,6 +21,15 @@ One stance — usually an agnostic, physicalist, hyperskeptical one — is treat
 - "The burden of proof is on you" — said by someone whose own stance never carries one.
 - "Methodological naturalism" sounds like a working habit — "when doing science, look for natural mechanisms" — but ask what "natural" means, and the usual answer, "what happens passively", is the same claim as physicalism, now dressed as the referee.
 - An AI presenting the agnostic reading of a question as "the balanced view", as if this view were not itself a stance.
+
+### Starting from the model instead of the observations
+
+A picture of what reality is gets treated as the given, and the observations are demoted to things that must fit it — or must wait for its permission to mean anything. The real order runs the other way: knowing starts from observations and closes in on what explains them, and every explanation is itself a new observation with no explanation of its own yet — so explaining moves the ignorance one level deeper rather than removing it. Nobody starts from direct knowledge of how reality is; that is what the explaining converges toward (his framing, recorded while working PP2's first objection — a theme that runs through the whole project). The tell: the "given" in the argument is something nobody ever observed, while what was actually observed is told to wait.
+
+- "Everything is really just atoms" — a picture of what things are, offered in place of what occurs.
+- "Reality is one undivided whole: without you to tell this from that, nothing is actually this rather than that" — the commitment behind PP2's objection that distinctions are made, not found; nobody has ever observed reality apart from experience.
+- "How do we know anything is real?" asked as if illusion-versus-reality came first — the framing starts with the model instead of the observations. The observations (red, anger, 2) came first, and "real" was built from them.
+- "An observation can't be considered meaningful until you can explain what you observed" — a demand no observation could ever satisfy, since every explanation waits on the explanation beneath it.
 
 ### Speculation as proof or refutation
 
@@ -57,6 +67,14 @@ An unresolved clash is presented as profundity. What powers this is a confusion 
 - A self-defeating position presented as humility: "no statement is true — including this one — and that is the deepest truth of all."
 - A riddle used to end questioning rather than to sharpen it.
 
+### The question dressed as impossible
+
+A question gets framed so that no answer could pass, and the framing is then mistaken for a discovery that the question is hard. The impossibility lives in a hidden premise of the framing, not in any failed search — the answers were shut out before anyone looked. From the inside it feels like depth or humility: respecting a Hard Problem. (Added on his catch — the writing standard's opening already describes the move from the telling side: complexity "dressing something up as impossible to tackle, or as deeper than it is".) The tell: find the premise in the framing that no answer could get past, and ask what stands behind it — a genuinely hard question has directions to dig in; a dressed one has a premise standing guard.
+
+- The regress problem (an old skeptic named Agrippa): a claim's support is another claim, and so on — the chain goes on forever, loops, or stops, "and each ending is a defeat." The defeat verdict on stopping assumes that whatever stops a chain is itself a claim needing support. A chain that stops at a given — a non-claim — walks out: this record stops at what occurs and tests the stop by denial (PP1, objections 1 and 2). The premise, not the problem, made it look hopeless.
+- "How do you know your senses are reliable? Any test would use the senses." — framed so only a test using no sense could pass, a kind of test the framing itself defines out of existence.
+- "You cannot justify logic without using logic, so logic is unjustifiable." — assumes the only support logic could have is a proof from outside it; the boundary claims stand by their denials destroying themselves, a test rather than a proof from outside.
+
 ### Exporting a claim beyond its context
 
 A claim true within its scope is carried outside it, and then declared refuted. The claim never failed; the subject was changed under it. The tell: the "refutation" only works after the subject has been quietly swapped.
@@ -74,6 +92,15 @@ One word carries two meanings across an argument, and the conclusion needs both 
 - "Thing" sliding between object and occurrence across a page — caught once already inside PP1's own objections.
 - "Evolution is just a theory" — "theory" drifting between "guess" and "well-tested model".
 - "Faith" drifting between "trust built on a track record" and "belief without any reason".
+
+### Old material as authority
+
+The author's earlier files are treated as settling a question, when their only standing is as a pool of ideas. His ruling: the old projects are a source of ideas, not a source of truth. The mistake feels safe from the inside — deferring to his own past words looks like respecting his authorship — but it replaces the actual test (does the reasoning stand on what occurs, under the current rules?) with an appeal to where something used to sit. The tell: the argument cites the old file's placement or wording as the reason, instead of a reason.
+
+- "The old scheme only ever placed 'than' at the distinctness row — so it belongs there." (Caught in this project: the placement history is a candidate, not a verdict.)
+- Treating an old vocabulary list as deciding what a new node grants, instead of asking what the words refer back to.
+- The mirror image: dismissing an idea only because an old draft later dropped it.
+- Quoting the old website's answer to an objection as if the answer were already ratified, instead of re-deriving it under the current rules.
 
 ### Trained framing
 

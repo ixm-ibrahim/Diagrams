@@ -11,10 +11,14 @@
             "id": "c04ed511e25fdf05",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Temporary Files/Handoff - Fresh Start - Reasoning Fundamentals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Handoff - Fresh Start - Reasoning Fundamentals"
             }
           }
         ]
@@ -37,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -90,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Temporary Files/Handoff - Fresh Start - Reasoning Fundamentals.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -108,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Temporary Files/Reference Refactor - Package 3/09 - Unresolved Objections (draft).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -158,8 +166,7 @@
               "title": "Outline"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -178,14 +185,41 @@
   },
   "active": "c04ed511e25fdf05",
   "lastOpenFiles": [
-    "Welcome.md",
-    "Inbox",
-    "Maps",
-    "Drafts",
-    "Logs",
-    "Glossary",
-    "Sources",
-    "Examples",
-    "Principles"
+    "Temporary Files/Trying to discover reasoning fundamentals/6 - The Audit of His Derivation - Results.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/6 - His Derivation - D1 to D3.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/5 - The Round on Context and Coverage - Results.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/5 - Appendix - The Six Fresh Answers.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/4 - Appendix - The Abduction Candidates.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/4 - The Round on the Four Forms - Results.md",
+    "Temporary Files/Reference Refactor - Package 3/09 - Unresolved Objections (draft).md",
+    "Temporary Files/Handoff - Fresh Start - Reasoning Fundamentals.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/3 - The Round on the Four Forms - His Messages.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/2 - The Complete Question - Reasoning Fundamentals.md.tmp.12980.d0699f79b472",
+    "Temporary Files/Trying to discover reasoning fundamentals/0 - Tentative Answers.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/2 - The Complete Question - Reasoning Fundamentals.md",
+    "Temporary Files/Trying to discover reasoning fundamentals/1 - The Complete Question - Form of Reasoning Between Nodes.md",
+    "Temporary Files/Trying to discover reasoning fundamentals",
+    "Temporary Files/Reference Refactor - Package 3/08 - Objection Index (draft).md",
+    "Temporary Files/Reference Refactor - Package 3/07 - Phenomenological Dictionary (draft).md",
+    "Temporary Files/Reference Refactor - Package 3/06 - Pending Links (draft).md",
+    "Temporary Files/Reference Refactor - Package 3/05 - Common Biases (draft).md",
+    "Temporary Files/Reference Refactor - Package 1/Sweep - five new words.md",
+    "Temporary Files/Answer - Form of Reasoning Between Nodes.md",
+    "Temporary Files/Reference Refactor - Package 3/Change List - Package 3.md",
+    "Temporary Files/Reference Refactor - Package 3/07 - Phenomenological Dictionary (draft).md.tmp.86500.2fd912b835a4",
+    "Temporary Files/Reference Refactor - Package 3",
+    "Temporary Files/Reference Refactor - Package 2/03 - Derivation Rules (draft).md.tmp.86500.71c1e1b4e5d9",
+    "Temporary Files/Reference Refactor - Package 2/02 - Project Purpose (draft).md",
+    "Temporary Files/Reference Refactor - Package 2/sedPnzCfT",
+    "Temporary Files/Reference Refactor - Package 2/sedDErnRG",
+    "Temporary Files/Reference Refactor - Package 1/sedjLkuMJ",
+    "Temporary Files/Reference Refactor - Package 2/03 - Derivation Rules (draft).md",
+    "Temporary Files/Reference Refactor - Package 1/10 - Watch-list (draft).md",
+    "Temporary Files/Reference Refactor - Package 1/04 - Demystification (draft).md",
+    "Temporary Files/Reference Refactor - Package 2/11 - The Relation Between Nodes (draft).md",
+    "Temporary Files/Reference Refactor - Package 2/02 - Derivation Rules (draft).md",
+    "Temporary Files/Reference Refactor - Package 2/01 - Processing Queries (draft).md",
+    "Temporary Files/Handoff - Answer in Stages.md.tmp.53496.cbe4aeba0a72",
+    "Temporary Files/Reference Refactor - Package 2"
   ]
 }

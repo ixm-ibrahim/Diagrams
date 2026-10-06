@@ -18,9 +18,14 @@ The phenomenological grounding: every term the project uses, defined only from w
 
 [[08 - Unresolved Objections]] — objections waiting for the node that properly answers them.
 
+[[09 - AI Thesaurus]] — for each common AI word, what the author has accepted to say instead, context by context.
+
+[[10 - Sentence Case Studies]] — sentences that failed the writing standard and how they got fixed: the diagnosis and the lesson, case by case.
+
 ## Phenomenological Primitives
 
 - [[PP1 - Phenomena]]
+- [[PP2 - Distinction]]
 
 ## tmp-dump
 

@@ -1,0 +1,149 @@
+#Motivation#
+
+Deduction offers a strong guarantee: if its premises are true and its rules valid, then its conclusion cannot be false. As a result, this form of reasoning is heavily advertised as the standard for all legitimate reasoning, with other forms of reasoning marketed as incomplete or invalid because they do not offer the same kind of proof.
+
+But this framing raises a concern: deduction preserves truth through the connection between premises and conclusion, but that connection does not, by itself, establish the truth of the premises. If the premises come from earlier deductions, the question moves backward: what establishes the truth of those earlier premises? Even a flawless chain of deductions leaves us asking where its initial support comes from.
+
+This exposes the fundamental concern: where does truth first enter the chain? And if the validity of the rules is itself something we hold to be true, where does truth first enter that chain? What underlying mechanism supports deduction?
+
+---
+
+#Constraints#
+
+To investigate these questions, we need to state our starting assumptions and constraints.
+
+1. Reasoning can be examined through experiments in the mind
+
+We can investigate reasoning just as we investigate any other physical process: perform an operation, examine what happens, and vary the conditions to identify what makes a difference. Here, we perform the science experiment within our own awareness. This examination of awareness is called phenomenological inquiry.
+
+For example, read a sentence whose words you recognize but whose meaning you do not yet understand. Then consider an explanation that makes its meaning clear. What changed? Which connection had been missing? Did deciding to understand produce the understanding, or did something else need to occur?
+
+The gaps in understanding give us something to examine, and we must distinguish our proposed explanations from what actually happens in reality. Anyone can repeat the exercise; if their results differ, the difference becomes something to investigate.
+
+2. Awareness and deduction are the endpoints of this exercise
+
+We begin with deduction and trace what it depends on. At the other end is what becomes available in awareness: experiences, thoughts, distinctions, and understood relationships.
+
+The exercise is then to explain the connections and mechanisms between them. Whenever we identify a required operation, we will ask what it needs, what it does, and what it contributes to the next step. We can work backward from deduction’s requirements and examine how those requirements manifest as what becomes available in awareness.
+
+Note that this doesn't assume that deduction is the highest form of reasoning. Whether there are further forms of reasoning beyond deduction can be investigated afterward.
+
+3. All things originate from the not-thing
+
+The ultimate origin of something must require what is not already that same thing. A house is constructed from materials that are not already a house; a loaf is made from ingredients that are not already a loaf; the first chicken came from a not-chicken; the first life from not-life; first planet from not-planet; etc..
+
+Note that this principle is about how patterns ultimately originate, not merely the production of an instance from another. That distinction matters: chickens do come from other chickens, life does come from other life - the principle here is about what ultimately begins those cycles.
+
+Its application to this exercise is immediate: if we ask where deduction receives its initial support and answer only with “another deduction,” we have moved the question backward without identifying its ultimate source. We will therefore investigate an a-deductive source of support: one whose contribution is not itself another deduction (with the prefix a- being used in this exercise as marking that absence, at the fundamental level).
+
+4. Names represent what occurs in reality, even as placeholders
+
+We may identify the role of an operation and some of its constraints, even before fully understanding how it works. Giving it a name allows us to track it as a placeholder, distinguish it from neighboring operations, and investigate its dependencies.
+
+For example, suppose one key unlocks a door while another does not. Even without opening the lock, we can name the “locking mechanism” as what we need to investigate. We already know something it must explain: how turning the matching key releases the door, and why the other key fails. Identifying these constraints narrows the question. The name lets us refer to that unfinished task without repeatedly restating it.
+
+The progress comes from identifying the role and its constraints. Naming an unexplained operation does not explain its mechanism.
+
+5. Truth is correspondence with reality
+
+A claim is true when what it says corresponds with reality. Accepting a claim and its being true are therefore distinct: acceptance is what we do with a claim, while correspondence is what we are trying to assess. Acceptance alone does not establish correspondence.
+
+This definition depends on more fundamental concept that themselves need defining. What does "truth" mean? What makes something "true"? How does “reality” first become meaningful to us? How can we recognize "correspondence"? What enables an experience to support a claim? Considering how fundamental to reasoning all these concepts are, this exercise can be expected to expose the answers to these questions.
+
+6. The results must be self-consistent with the reasoning used to reach them
+
+We are using reasoning to investigate reasoning. The resulting account must therefore be consistent with, and explain, the reasoning used to reach it - including the assumptions and constraints stated here. This also means that we should expect the principle of self-consistency itself to show up in the results.
+
+7. Ignorance does not answer the original question
+
+Before a question is answered, we lack the knowledge needed to answer it. That absence does not establish that a proposed answer is true, false, impossible, or unknowable.
+
+For example, suppose a lamp lights up when you press its switch, but you do not understand how its internal circuitry works. - your inability to explain the circuitry does not erase the observations you made about the light's behavior. “Did the lamp light up?” and “How did the circuitry produce that result?” are different questions. You can have an answer to the first while still investigating the second.
+
+Note that an investigation can legitimately conclude that the available information does not answer a question. But this only describes the state of the investigation; it does not actually supply the missing answer. We should identify what remains unknown (where the line between what is known and unknown are those constraints) and, where possible, what information or operation would be needed to proceed. An unanswered question does not erase what has already been established about a different question.
+
+8. Familiarity and doubt are not evidence by themselves
+
+Familiar or popular philosophical language and standards can help us formulate questions, but familiarity does not establish their correctness. A position presented as neutral must face the same examination as the positions it assesses. This applies to our own assumptions as well.
+
+Likewise, the possibility of error is not evidence that an error occurred. An objection should identify what it challenges and why: a description, a meaning, a connection, or the scope of a conclusion. Merely saying “perhaps it's something else” supplies no such justification.
+
+We will assess objections by the specific problem they reveal and the support they provide for identifying it: an observation that conflicts with the claim, incompatible requirements, or a demonstrated gap in the reasoning. Merely being skeptical and proposing an alternative does not establish any of these. The same standard applies to familiar and unfamiliar positions, without granting either automatic authority or automatic rejection.
+
+---
+
+#1. Defining "reason"#
+
+Consider the following:
+ 1. Squares have 4 sides. This object is a square. Therefore, this object has 4 sides.
+ 2. I like squares. Therefore, I accept this shape to be a square.
+ 3. I notice a 4-sided shape that I've never seen before. Therefore, I will call this a "square".
+
+With each of these sets of sentences, there are starting sentences, and concluding sentences. This is what we refer to as reasoning, in which we transform one set of statements into another. We can represent this with the following:
+
+R = p ---> c
+
+Where R is reasoning; p is the premises; and c is the conclusions. It is also apparent that each "therefore" is doing something different:
+ 1. "Therefore" - if the premises are true, then the conclusion must be true
+ 2. "Therefore" - my liking of something dictates what I accept
+ 3. "Therefore" - I assign a label to a new concept
+
+Each one is exposing how the conclusion is reached from the premises. Thus we expose another aspect of reasoning: there is a link between premises and conclusions. We can refine the above representation with the following:
+
+R = p --[m]--> c
+
+Where m is the mechanism that transforms p into c. Let's call this an inference: a single set of premises, conclusions and the link between them. Note how this representation is completely independent of truth and falsehood: it does not, by itself, tell us whether the premises or conclusions are true, or whether the mechanism justifies the conclusion. This advantage allows us to represent both successful and unsuccessful reasoning in the same form. The following sections will investigate what enables a mechanism to distinguish between truth and falsehood.
+
+#2. The foundation for deduction#
+
+Consider a simple deduction:
+
+Consider a simple deduction:
+ - All squares have 4 sides.
+ - This object is a square.
+ - Therefore, this object has 4 sides.
+
+The first premise assigns four sides to every square; the second identifies this object as a square. Together, they require the conclusion that this object has four sides.
+
+This gives us an example to start with, allowing us to separate two questions: how do we establish that the premises are true (ie. that squares have 4 sides, and that this object is a square)? And how do we establish that the connection preserves truth - that these premises, if true, require the conclusion to be true?
+
+If we derive deductive premises from earlier deductive premises, then the same question applies to those premises, and the question becomes fundamentally unanswered. Therefore, to identify the ultimate source of truth for any deduction, one of the constraints to this question's answer is that it must be an a-deductive source - something that actually generates truth, and does not merely transfer truth from another deduction. We can represent this with the following:
+
+R_t = d_a --[d_m]--> d
+
+Where R_t is proper reasoning towards a truth; d_a is this a-deductive, truth-generating source; d_m is the deductive mechanism that establishes the truth-preservation link between the premises and conclusion; and d_c is the resulting deduction. Note that d is where deductive chains may live, which can be represented with the following:
+
+d = d_p --[d_m]--> d_c --[d_m]--> d_x
+
+Where d_p is a deductive premises; d_c is a deductive conclusion; and d_x any subsequent deductive conclusion. Note that d_m is the same here as before.
+
+This allows us to refine the two questions above into:
+ 1. How is d_a produced, such that it is {true, a-deductive}? Let's call this D1 - our first question about deduction, with its discovered constraints so far.
+ 2. How is d_m produced, such that it is {truth-preserving}? Let's call this D2.
+
+---
+
+3. <???>
+
+
+
+
+
+
+
+<this is wrong - d_m *ultimately* lives in the o_x --[t_m]-- d_a space>
+
+If d_a represents the space where truth is established, and the principles within d_m are truths themselves, then d_m must be derived in the same way any other truth is produced - as a manifestation of R_t. And if the output is d_m, then this results in the following representation:
+
+R_d_m = d_m_a --[d_m]--> d_m
+
+Where R_d_m is reasoning towards the deductive mechanism and d_m_a is its a-deductive, truth-generating source.
+
+Note how d_m is both the mechanism and the output here. This exposes that self-consistency is one of the constraints that must exist within d_m.
+
+<this is where selection shows up - how do we know that selection needs to happen to begin with?>
+
+
+
+
+When getting to c_x: note how we always start from examples in each section, to ground ourselves in the space of "zero counterexamples".

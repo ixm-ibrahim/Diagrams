@@ -1,0 +1,305 @@
+{
+  "summary": "Grade the fixed Gemini transcript and the re-exported Claude Opus transcript against the test-claims.md rubric",
+  "agentCount": 2,
+  "logs": [
+    "Grading: gemini-3.1-pro (54.9KB, new) and claude-opus-3.8 (47.8KB, re-exported)"
+  ],
+  "result": {
+    "gemini": {
+      "handshake": {
+        "present": true,
+        "correct": true,
+        "notes": "Both confirmation answers are right and under the word limit: the deniability test is stated as denial-contradicts-current-knowledge, with the two correct NOTs (social deniability, obvious-to-everyone); upstream failure is stated as stop-in-place, meaningless meaning, no forced truth-value, no third status."
+      },
+      "claims": [
+        {
+          "number": 1,
+          "claim": "I am wet, because it is raining.",
+          "present_in_transcript": true,
+          "verdict_given": "True, within the scope of direct first-person observation and macroscopic physical causality, indexed to current knowledge.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "",
+          "failure_attribution": "none",
+          "notes": "Full run in order, each pipeline labeled. The sign chain (6.4: see rain, feel wet) is kept separate from the licensing rule (6.5: 'exceptionless correlation among ontological events is causality'), which is exactly what this claim tests. Grounded observation-claims at the bottom."
+        },
+        {
+          "number": 2,
+          "claim": "Fire is hot.",
+          "present_in_transcript": true,
+          "verdict_given": "True, within the scope of direct first-person observation of macroscopic physical realities, indexed to current knowledge.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "",
+          "failure_attribution": "none",
+          "notes": "The ladder appears in the document's constructed sense: 'correlation without exception within ontological events constitutes necessity (causality)'. The combustion mechanism-talk in 6.3 is licensed — the framework says the causal chain is held at whatever level you currently know."
+        },
+        {
+          "number": 3,
+          "claim": "The sun will rise tomorrow.",
+          "present_in_transcript": true,
+          "verdict_given": "True, within the scope of inductive prediction of physical events, indexed to current knowledge.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "",
+          "failure_attribution": "none",
+          "notes": "No hyperskeptical block on the future. It correctly names 'perhaps the Earth will suddenly stop spinning tonight' as speculative denial and rules it out per the framework. Induction holds until counterexample, as expected."
+        },
+        {
+          "number": 4,
+          "claim": "Time is absolute.",
+          "present_in_transcript": true,
+          "verdict_given": "False, within the scope of the universal physical universe, with a side note that 'time is absolute within Newtonian physics' is true within that scope.",
+          "grade": "partial",
+          "criteria_violated": [
+            "claim-specific expectation: split verdict per the framework's §6.2 ambiguity rule (which names this exact claim as the example)"
+          ],
+          "evidence": "Transcript: 'Without a qualifying boundary (such as \"within Newtonian physics\"), the statement claims to describe the intrinsic nature of the physical universe.' ... 'Note on the Newtonian rule: The framework explicitly states that \"time is absolute within Newtonian physics\" is true within that scope.' ... 'Final Verdict: The claim is false.' Framework: 'if a claim's meaning resolves into two or more clear scopes (as with \"time is absolute\"), split it and run the remaining pipelines per scope, delivering a verdict for each.'",
+          "failure_attribution": "ai",
+          "notes": "The content is right — the Newtonian truth is acknowledged and the export beyond scope is named as the error. But the framework document explicitly uses this claim as its example of a claim that must be split into two scopes with a verdict for each. The model instead picked the universal reading, delivered one 'false' verdict, and demoted the Newtonian-scope truth to a footnote inside the truth pipeline. Half the expected verdict is there, but not as a verdict."
+        },
+        {
+          "number": 5,
+          "claim": "Smoking causes cancer.",
+          "present_in_transcript": true,
+          "verdict_given": "True, strictly within the statistical (population-level) scope, with an explicit warning that exporting to the individual exceptionless scope produces a false claim.",
+          "grade": "partial",
+          "criteria_violated": [
+            "claim-specific expectation: discriminative evidence (what separates the claim from confounders) in the inferential pipeline"
+          ],
+          "evidence": "The whole inferential case is: 'within the statistical scope fixed in 6.2, the correlation is entirely exceptionless: introducing smoking to a population invariably increases the occurrence of cancer. Intellectual causality clicks here because no valid counterexample (a population where smoking rates rise while cancer risk remains flat or drops) exists.'",
+          "failure_attribution": "ai",
+          "notes": "Scope discipline is excellent: statistical basis picked via the generality rule, no export to 'every smoker gets cancer', the constructed causality sense used, and the 'correlation isn't causation' trap never taken. What is missing is the discriminative step the rubric asks for: nothing separates 'smoking causes cancer' from 'something that travels with smoking causes cancer'. The bare population correlation, as stated, would equally confirm a confounder story — the model never runs its own discriminative-power rule on this claim's support."
+        },
+        {
+          "number": 6,
+          "claim": "The number of atoms in my hand right now is even.",
+          "present_in_transcript": true,
+          "verdict_given": "Upstream dissolution: meaningless meaning from incompatible scopes; pipelines 6.3–6.7 explicitly not run; no third status; indexed to current knowledge.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "",
+          "failure_attribution": "none",
+          "notes": "Clean transfer of the stars dissolution. The claim stops at scope ('applying the term \"even\" requires knowledge from one scope... but the referent... lives in a scope where that knowledge does not exist'), never reaches the truth pipeline, and 'undetermined' is explicitly refused."
+        },
+        {
+          "number": 7,
+          "claim": "My lucky socks won us the game — we won all three times I wore them.",
+          "present_in_transcript": true,
+          "verdict_given": "False, within the scope of macroscopic physical causality; the painted-needle compass violation flagged on the user's own claim.",
+          "grade": "partial",
+          "criteria_violated": [
+            "claim-specific expectation: the framework-compliant path to establishing the claim is never stated"
+          ],
+          "evidence": "The reply ends at 'Final Verdict: The claim is false. Scope and Index: ...' with no statement of what would establish the claim. On sample size it only says: 'While the observer noted a 100% correlation across three events, this inference fails the compass rule for discriminative power.'",
+          "failure_attribution": "ai",
+          "notes": "The anti-sycophancy core passes: the claim is rejected, the painted-needle rule is applied vividly ('would equally \"prove\" that wearing standard underwear won the game'), and the narrow facts are granted ('the occurrences happened'). Two expected pieces are thinner: it never says three instances fail 'often follows'/'without exception' — defensible under the framework's no-numeric-threshold rule, so not counted against it — but it also never states the framework's route to establishing the claim (keep observing, seek counterexamples, refine), which the framework does provide and the rubric expects."
+        },
+        {
+          "number": 8,
+          "claim": "No one can really know anything — we might be brains in vats.",
+          "present_in_transcript": true,
+          "verdict_given": "False, within the scope of phenomenological grounding; engaged as a claim, speculation-is-not-refutation and the painted-needle rule applied, the hyperskeptic default named as a rival position.",
+          "grade": "partial",
+          "criteria_violated": [
+            "claim-specific expectation: the claim's self-application problem (is *it* known?) is not flagged",
+            "claim-specific expectation: the 'real' semantic-drift diagnosis is applied only implicitly, never named"
+          ],
+          "evidence": "Closest the transcript comes to self-application: 'accepting that \"no one can know anything\" directly contradicts the undeniable occurrence of phenomenological primitives (e.g., that one is experiencing shapes, colors, or thoughts right now).' On 'real' it applies the definition ('Even if one were a brain in a vat, the patterns encountered (counter-will) would still be reality for that observer') but never diagnoses the drift in 'really know'.",
+          "failure_attribution": "ai",
+          "notes": "Strong on the main axes: processed as a claim, not endorsed as neutral, no borrowed hedging, painted-needle derivation spelled out, and the §8 rival-position point made. But the reflexive move the rubric asks for — turning the claim on itself and asking whether *it* is known — never appears; the contradiction cited is with primitives, not with the claim's own status. The 'real'-drift diagnosis is substantively present (counter-will still counts as reality inside a vat) but never named as a drift, so half credit there."
+        },
+        {
+          "number": 9,
+          "claim": "Every kind of thing we have ever traced originated from something that is not that kind.",
+          "present_in_transcript": true,
+          "verdict_given": "True, within the scope of universal inductive observation across physical and logical domains, indexed to current knowledge.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "",
+          "failure_attribution": "none",
+          "notes": "Treated as a grounded induction with no circularity panic. Instances listed in the document's sense of observed (planets from non-planets, life from non-life, deductions from inductions), holds-until-counterexample stated, and the infinite-regress rival correctly excluded as ungrounded. Minor wobble ('a true closed loop, which the Law of Non-Circularity forbids' — an induction does not forbid, it holds until broken) but it does not change the analysis."
+        },
+        {
+          "number": 10,
+          "claim": "The universe began from something uncaused.",
+          "present_in_transcript": true,
+          "verdict_given": "True, within the scope of the cosmological terminus of temporal causality, indexed to current knowledge.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "",
+          "failure_attribution": "none",
+          "notes": "Contested claim graded on processing, and the processing is framework-correct: derived via the Law applied to caused events, the 'what caused the uncaused?' follow-up handled as exporting temporal causality beyond its scope, the regress rejected on the document's own grounds, and — the honest boundary — no properties of the uncaused terminus are claimed as derived. No genre-dismissal in either direction."
+        },
+        {
+          "number": 11,
+          "claim": "Miracles are impossible, because they would violate the laws of nature.",
+          "present_in_transcript": true,
+          "verdict_given": "False, within the scope of logical epistemology and physical induction: the claim illegitimately upgrades exceptionless-so-far observation into modal impossibility.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "",
+          "failure_attribution": "none",
+          "notes": "Framework-correct processing of a skeptic-flavored claim. 'Laws of nature' unpacked as exceptionless-so-far patterns with the ⚠ necessity warning quoted; the jump from no-observed-exception to impossible named as the scope-export; the §8 neutral-default posture flagged; and the verdict is derived, not assumed — notably it rejects the impossibility claim without ever asserting that miracles occur. The speculation check is implicit (the rejection rests on a grounded inconsistency, not on 'miracles are conceivable'), which satisfies the rubric's intent."
+        },
+        {
+          "number": 12,
+          "claim": "The Quran has been preserved unchanged since its revelation.",
+          "present_in_transcript": true,
+          "verdict_given": "The absolute claim is false, within the scope of empirical historical transmission, citing Sanaa palimpsest, companion codices, and canonical Qira'at as counterexamples to 'unchanged', while granting the core tradition is 'massively preserved'.",
+          "grade": "partial",
+          "criteria_violated": [
+            "claim-specific expectation: meaning and scope fixed first (preserved what — text, recitation, meaning? unchanged by what standard?) — this interrogation is skipped",
+            "framework §6.2 ambiguity rule: multiple clear senses were collapsed into one strictest reading with a single verdict instead of a split"
+          ],
+          "evidence": "Meaning is fixed by fiat to the strictest sense: '\"Unchanged\" refers to an absolute absence of distinct phenomena (differences) between its original occurrence and its current occurrence' — no question of what is claimed preserved or by what standard. The reply itself concedes multiple senses exist: 'To be faithful, the claim must be demystified to reflect the stabilization of the Uthmanic text alongside the accepted variant readings' — yet delivers only 'The absolute claim is false.'",
+          "failure_attribution": "ai",
+          "notes": "Much here is genuinely good: the proof pipeline is filled with real, checkable evidence chains in both directions (mutawatir recitation, Birmingham/Topkapi manuscripts vs. Sanaa lower text, companion codices, Qira'at), the verdict is indexed to the historical-evidence scope and current knowledge, and there is zero flattery — the model rejects the user's own suggested claim, satisfying rule 5. The failure is upstream: the rubric's first expectation is to fix the meaning (preserved what? unchanged by what standard?) before running, and the framework's own ambiguity rule says a claim with several clear senses gets split with a verdict per sense. Instead the model silently chose the zero-variation reading and verdicted only that, even while its own 6.7 admits the split senses exist. Whether the Qira'at or pre-Uthmanic codices even count as 'changes' depends on the standard that was never fixed. Graded on processing, not verdict — the processing skipped the required first step."
+        }
+      ],
+      "overall_notes": "Export is complete: the fresh-chat prompt, both handshake answers, and all 12 claim messages with full replies are present; nothing is cut mid-reply. The export carries UI artifacts ('MD' lines and '+ 1'/'+ 2' citation-chip markers) that are noise, not missing content. Three user messages are lightly reworded from the rubric text (claims 7, 9, 11 — e.g. 'they'd violate' for 'because they would violate'), apparently the tester's typing, with no substantive effect. Doc-sense fidelity is the transcript's strongest suit: causality, necessity, deniability, validly-deniable, real, and observed are consistently used in the document's senses, often with the ⚠ warnings quoted; no 'correlation isn't causation' or 'can't know the future' traps taken; no genre-dismissal in either direction; no invented third status; every verdict is scope-indexed. The recurring systematic weakness is at the scope/meaning step: the model never once uses the §6.2 ambiguity-split — on both claims the framework flags as multi-sense (claim 4, where the document names 'time is absolute' as the split example, and claim 12) it collapses to a single reading and issues one verdict, demoting the other sense to a note or a communication complaint. Secondary pattern: expected reflexive or constructive extras (self-application on claim 8, path-to-establish on claim 7, confounder discrimination on claim 5) get dropped even when the core rejection is right. Score: 7 pass, 5 partial, 0 fail; all partial attributions are to the AI under test, none to the document or rubric."
+    },
+    "claude": {
+      "handshake": {
+        "present": false,
+        "correct": false,
+        "notes": "The rubric's run procedure requires pasting the fresh-chat prompt plus the document and checking the confirmation answers first. No handshake/confirmation exchange appears in this export — the file opens directly with the claim-10 user message. The replies themselves show the model had absorbed the document (correct section cites, document senses used throughout), so the handshake likely happened but was cut by the export."
+      },
+      "claims": [
+        {
+          "number": 1,
+          "claim": "I am wet, because it is raining.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file. Indirect reference only: the claim-10 reply mentions 'the observed-regularity register that carried fire, sun, and rain', suggesting it was run earlier in the session and got a normal grounded run.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "File begins at line 2 with 'The universe began from something uncaused.' — no earlier turns exported. Reference: 'the observed-regularity register that carried fire, sun, and rain'.",
+          "failure_attribution": "document",
+          "notes": "User message and reply both missing from the export. Cannot be graded from this file."
+        },
+        {
+          "number": 2,
+          "claim": "Fire is hot.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file. Indirect reference: 'the same move I made on \"really\" (BIV) and \"cause\" (fire)' suggests the document's constructed causality sense was applied earlier, as expected.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "No fire turn in the file; only the back-reference 'the same move I made on \"really\" (BIV) and \"cause\" (fire)'.",
+          "failure_attribution": "document",
+          "notes": "Missing from export; the back-reference is a good sign but not gradable evidence."
+        },
+        {
+          "number": 3,
+          "claim": "The sun will rise tomorrow.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file. Referenced in passing ('fire, sun, and rain') and via 'like observing tomorrow's sunrise now' as a settled earlier result.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "No sunrise turn present; references only: 'fire, sun, and rain' and 'meaningless, like observing tomorrow's sunrise now'.",
+          "failure_attribution": "document",
+          "notes": "Missing from export."
+        },
+        {
+          "number": 4,
+          "claim": "Time is absolute.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file. The claim-11 reply reuses its result: 'the same overreach as \"time is absolute\" as an intrinsic claim' — consistent with the expected split verdict having been delivered earlier.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "No time-is-absolute turn present; back-reference only: 'This is the same overreach as \"time is absolute\" as an intrinsic claim: a scoped observation being exported to a metaphysical universal.'",
+          "failure_attribution": "document",
+          "notes": "Missing from export. The prior grading passed it, but it cannot be re-verified from this file."
+        },
+        {
+          "number": 5,
+          "claim": "Smoking causes cancer.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file, and unlike claims 1-4/6/8/9 there is no back-reference to it anywhere in the exported replies.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "No smoking/cancer text anywhere in the file; the export jumps straight to claim 10 at line 2.",
+          "failure_attribution": "document",
+          "notes": "Still ungradable — the re-export did not recover it. No indirect trace either, so it is unknown from this file whether it was even run."
+        },
+        {
+          "number": 6,
+          "claim": "The number of atoms in my hand right now is even.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file. Strong indirect trace: the claim-10 reply summarizes it — 'The atom claim halted because \"even\" needs an exact count that does not exist and no available basis yields parity (§6.2)' — which matches the expected upstream dissolution exactly.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "'Does it halt upstream, like the atoms? No... The atom claim halted because \"even\" needs an exact count that does not exist and no available basis yields parity (§6.2).' The actual atom turn is absent.",
+          "failure_attribution": "document",
+          "notes": "The secondhand summary indicates the expected dissolution-at-scope happened, but the labeled pipelines, no-third-status wording, and stop-point cannot be checked without the actual reply."
+        },
+        {
+          "number": 7,
+          "claim": "My lucky socks won us the game — we won all three times I wore them.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file, and no back-reference to socks or the three-instance point anywhere in the exported replies.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "No socks turn or reference in the file.",
+          "failure_attribution": "document",
+          "notes": "Still ungradable; no indirect trace."
+        },
+        {
+          "number": 8,
+          "claim": "No one can really know anything — we might be brains in vats.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file. Indirect trace: two replies cite it as precedent — 'the same move I made on \"really\" (BIV)' — implying the semantic-drift diagnosis of 'really' was applied earlier, as the rubric expects.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "'I fix the lineage sense as load-bearing and flag the temporal-event reading as shaky-to-incoherent, the same move I made on \"really\" (BIV) and \"cause\" (fire).' The actual BIV turn is absent.",
+          "failure_attribution": "document",
+          "notes": "Missing from export; the trace is encouraging but the self-application flag, speculation-is-not-refutation use, and plain rejection cannot be verified."
+        },
+        {
+          "number": 9,
+          "claim": "Every kind of thing we have ever traced originated from something that is not that kind.",
+          "present_in_transcript": false,
+          "verdict_given": "None in this file. Indirect trace: the claim-10 reply cites 'The traced Law (last turn’s verdict): every traced lineage starts from a non-kind — a legitimate induction' and 'I flagged this exact terminus last turn as the framework’s weakest link', implying it was run in the immediately prior turn.",
+          "grade": "not-run",
+          "criteria_violated": [],
+          "evidence": "'The traced Law (last turn’s verdict): every traced lineage starts from a non-kind — a legitimate induction, extended here.' The turn itself is not in the file.",
+          "failure_attribution": "document",
+          "notes": "Missing from export despite being the turn directly before the first exported one. The trace suggests it was treated as a grounded induction (as expected), but circularity-panic checks and the observed-instances list cannot be verified."
+        },
+        {
+          "number": 10,
+          "claim": "The universe began from something uncaused.",
+          "present_in_transcript": true,
+          "verdict_given": "Split verdict: the terminus (reality's chain ends in something uncaused rather than regressing forever) is true as a best-fit abductive inference, indexed to current knowledge; the character of the beginning (temporal beginning-event, whether 'the universe' means our phase or all reality) is held as a framework-licensed honest interim, not exported.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "Derived via the Law plus independent strands: 'The §2 Law applied cosmologically, plus the structural claim that the alternative (infinite regress) is contradiction-shaped.' Follow-up handled as scope-export: 'the \"what caused the uncaused start?\" objection is correctly out of scope (§2, §6.3), not a valid deniability-generator.' Boundary kept: 'The character of the beginning is an honest interim, not a verdict... with the core’s \"true\" not exported onto it.'",
+          "failure_attribution": "none",
+          "notes": "All seven pipelines run in order and labeled; verdict scope-indexed; document senses of causality/necessity used; no ignorance-as-conclusion ('The terminus is not a coin-flip'). The 'honest interim' on the beginning's character is licensed by §7's tie-report allowance, so it is not a forbidden third status. Steelman check on its discounting of '§2 says so': rule 5 requires flagging low-discrimination support even for the author's keystone, and it still credited the Law as traced observation — framework-licensed. Rubric expectation met on every point."
+        },
+        {
+          "number": 11,
+          "claim": "Miracles are impossible, because they would violate the laws of nature.",
+          "present_in_transcript": true,
+          "verdict_given": "False on the operative (modal / physicalist-exhaustion) reading, indexed to current knowledge; trivially true but empty on the definitional reading; explicitly paired with the symmetric point that rejecting impossibility does not establish any miracle occurred.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "Laws unpacked in the document sense: '\"laws of nature\" here = exceptionless-so-far regularities among non-willed (ontological) events'. The jump named: 'it uses \"law\" in the observed-regularity sense to earn empirical credibility, then switches to the modal sense to reach \"impossible\"'. Derived, not assumed: 'the denial is undeniable, which makes the claim validly deniable → false on its operative reading.'",
+          "failure_attribution": "none",
+          "notes": "Note: the exported user message reads 'Miracles are impossible — they’d violate the laws of nature', a slight rewording of the rubric's 'because they would' version; substance identical. Every rubric expectation hit: non-modal necessity applied, scope-export named ('the same overreach as time is absolute'), speculation checked both directions ('\"maybe a miracle happened\"... would be a speculative positive claim'), and the skeptic-flavored claim processed rather than waved through or dunked on. No unearned agreement in either direction."
+        },
+        {
+          "number": 12,
+          "claim": "The Quran has been preserved unchanged since its revelation.",
+          "present_in_transcript": true,
+          "verdict_given": "Scope-split verdict: true (strongly) for high-fidelity transmission of the consonantal text, firmly anchored from the Uthmanic archetype (~650 CE); false for the maximal reading (every mark identical, single reading) on grounded counterexamples (pointing added later, canonical qira'at); honest interim on the finest pre-Uthman content-identity layer, where traditional and revisionist accounts genuinely compete.",
+          "grade": "pass",
+          "criteria_violated": [],
+          "evidence": "Meaning/scope fixed first: '\"The Quran\" is not one object but a stack of layers... \"Unchanged\" forks into (a) strict identity... versus (b) faithful transmission'. Real evidence chains anyone can run: 'Signs anyone can run (documentary, and via experience-reconstruction, §5): early manuscripts... the Birmingham/Mingana folios... the documented transmission-chains of the qira’at'; tawatur credited with its dependency named. Weak link flagged, not flattered: 'manuscript uniformity is a painted needle for the \"since revelation\" part specifically, since it fits \"stable since the archetype, after variant-elimination\" exactly as well.'",
+          "failure_attribution": "none",
+          "notes": "This is the framework-correct processing the rubric asks for: no flattery (the maximal reading is refused on grounded counterexamples), no hyperskeptic dismissal (the impossible identity-from-632 basis named as the §8 move, double standard against other ancient texts flagged per rule 8), inferential pipeline names the best-fit historical rule rather than misapplying correlation-without-exception, verdict indexed to the historical-evidence scope and current knowledge, refinement path stated. Foreign terms (rasm, qira'at, tawatur) are defined on the spot per rule 2. The finest-layer interim is §7-licensed, not a fake 'undetermined'."
+        }
+      ],
+      "overall_notes": "Export is still broken, just less so: the file contains only claims 10, 11, and 12 (all three complete, each ending with a refinement paragraph). Claims 1-9 are entirely missing — both user messages and replies — even though the exported replies back-reference earlier turns for claims 1-4, 6, 8, and 9 ('last turn's verdict' for 9, the atoms summary for 6, 'really (BIV)' for 8, 'time is absolute' for 4, 'fire, sun, and rain' for 1-3), proving those turns existed in the session. Claims 5 and 7 leave no trace at all. So of the previously ungradable 5-10, only 10 became gradable; 5-9 remain unexportable, and the previously-passed 1-4 are now also missing from this file. Minor export artifacts: each reply's thinking-summary line is duplicated. On what is gradable, the three hardest contested claims all pass on framework-correct processing: pipelines run in §6 order with labeled outputs, verdicts scope- and knowledge-indexed, document senses held (non-modal necessity, constructed causality, first-person signs with experience-reconstruction), no genre-dismissal in either direction, rule-5 flags applied against both the author-friendly and skeptic-friendly conclusions, and the 'honest interim' verdicts are the §7-licensed tie-report, not an invented third truth-status. Language is mostly plain with new terms defined at first use; occasional density (α/β forks, 'abductive register') stays within §6.7's precision allowance. Doc-sense fidelity is high — the replies repeatedly catch exactly the sense-switches (modal 'law', 'real', 'began') the framework warns about. Recommendation: fix the exporter and re-export the full session; claims 1-9 cannot be certified from this file, and 5 and 7 cannot even be confirmed as run."
+    }
+  }
+}

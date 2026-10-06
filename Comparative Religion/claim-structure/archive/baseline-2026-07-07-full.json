@@ -1,0 +1,678 @@
+{
+  "summary": "Cold-read baseline of raw claim-structure notes: restate, apply, find ambiguities, flag term collisions",
+  "agentCount": 4,
+  "logs": [
+    "4 cold readers: restate / apply / ambiguities / term collisions",
+    "[stall] agent \"ambiguities\" stalled (no progress) after 324s — retrying (1/5)"
+  ],
+  "result": {
+    "restate": {
+      "summary": "The document builds a theory of what a claim is and how to analyze one, in three stages: a grounding ladder, a set of derived definitions, and seven analysis pipelines.\n\nSTAGE 1 — THE ANTI-CIRCULARITY MOVE. The author's foundational worry is circularity: if every claim is justified by other claims, nothing is ever grounded. The escape is what the author calls the \"law of non-circularity,\" an observed regularity that every cycle originates from something that is not itself a member of the cycle (chickens from a non-chicken, life from non-life, universe from non-universe; and in logic: deductions from inductions, inductions from observations, observations from phenomena). Applied to claims, this means all chains of claims must terminate in something that is not a claim. The candidates are phenomena — raw occurrences like \"red,\" \"anger,\" \"2\" — which are the ultimate givens: they simply occur, they are not asserted, so they cannot be circularly justified. Everything else in the framework is built on top of them.\n\nSTAGE 2 — THE DEFINITION LADDER. Definitions are stacked so that each new concept is either a directly observable feature of phenomena or an earlier concept restricted to a narrower \"context.\" The ladder: (1) phenomena occur; (2) phenomena are distinct from one another (differences occur); (3) phenomena carry qualities, where associations between phenomena are themselves a kind of quality; (4) among the qualities we find will, temporal qualia (before/after/time), and \"scope,\" defined as a pattern that a set of observations share; (5) correlation = one phenomenon often follows another; (6) independence = no correlation, and necessity = correlation without exception. Then the context-restriction moves begin: (7) \"ontological\" = whatever is independent of will (the author includes will itself and unobserved things under this heading); (8) causality = necessity, restricted to the context of ontological events — and by the non-circularity law, causal chains must start at an uncaused event; (9) intellectual causality = causality, restricted to the context of imagination/thought — and intellectual chains must start at something non-intellectual, i.e., a phenomenological primitive; (10) truth = intellectual causality, restricted to the context of undeniability (with the caveat that truth is context/domain-relative, the way Newtonian mechanics is true within its domain even though relativity exists); (11) a claim = a statement with a truth-value. A parallel cluster of definitions fills in the machinery: a statement is an inferential structure (equivalently, a set of definitions plus their associations); an event is an ontic structure; a truth-value is whether the inferential structure corresponds to the ontic structure it refers to (truth = it corresponds, falsehood = it doesn't); faithfulness is the analogous correspondence for communicative structures; a proof is a sequence of claims in an inferential structure; a conclusion is a proof's final step; a proof is \"grounded\" when its first step is phenomenological, \"valid\" when the conclusion's link to prior steps occurs by intellectual causality, and \"sound\" when every link does. Deniability — the hinge of the truth definition — means: given what you currently know, does denying the thing produce an inconsistency? This is an internal, phenomenological event (a felt \"knowing you're wrong\"), not public disavowal. Falsehood is intellectual causality within the context of deniability. The author stresses that undeniability still operates in probabilistic domains: for \"there is microbial life outside Earth,\" you don't demand direct observation (that would be hyperskepticism); you apply abductive reasoning layer by layer — statistical inference, universal physics, atmospheric chemistry — and undeniability is assessed at each scope layer, down to the claim.\n\nSTAGE 3 — THE SEVEN PIPELINES. A claim's full structure decomposes into seven analyses, each shaped the same way: start at the claim, walk backward through a repeating \"cycle\" of intermediate elements, and terminate at a non-circular ground. (1) MEANING — \"what does the claim say?\" Unpack each definition into the definitions it depends on, until you bottom out in phenomenological primitives. Output: what the claim is talking about — what to imagine. (\"Definition\" here covers anything that references something specific: concepts, terms, etc.) (2) SCOPE/REFERENCE — \"what is the claim about; what scope does it live under?\" Trace the claim's scope through cycles of definition-scopes and pattern identification down to primitives (a scope being, phenomenologically, a pattern that joins/categorizes observations). Output: the part of reality under discussion. (3) ONTOLOGY — \"what has to happen in reality for this claim to occur?\" Take the ontological event the claim refers to and trace its causes back through the causal cycle to an intrinsic cause, with \"cause\" operating inside the scope established in pipeline 2. Output: how the claim fits the known ontological conditions for it. (4) PROOF — \"what justifies/points to the claim?\" A chain of signs/supports, each pointing to the next, bottoming out in phenomenological primitives. Signs merely point (I feel wet; I see rain; the droplets correspond to the feeling) — the licensing logic is handled separately. Output: the claim's external justification, observable by anyone. (5) INFERENTIAL — \"what allows the proof to lead to the claim?\" The rules of inference connecting the signs to the claim, grounded ultimately in logical/intellectual causality. Output: the claim's internal/logical justification. (6) TRUTH — \"what makes the claim true?\" Apply the deniability test to the outputs of all the prior pipelines — meaning, scope, proof, inferential proof, and the known ontological conditions. Output: the claim's truth-value. (7) COMMUNICATION — \"how to faithfully communicate the claim?\" Choose and shape wording (\"demystification\") according to the audience's knowledge, disposition, and language, which are in turn grounded in human psychological nature. Output: a proper, faithful understanding of the claim in the audience. (The author marks this pipeline as tentative.)\n\nSUPPORTING DOCTRINES. Statements have two graded properties: comprehensibility (is it imaginable at all, regardless of observed context — \"pink elephants\" are imaginable; positive form coherence, negative incoherence; bounded by the limits of imagination) and rationality (are the definitions comprehensible within their real contexts — a pink elephant is irrational because elephants aren't pink; bounded by the precedent of reality, and revisable by the \"refinement\" step of the scientific method). The structure of a claim itself bears on its truth: a justification that would equally confirm a falsehood — like a clock whose hands point to all times, or a smoke detector that beeps with no smoke — cannot establish truth; so one condition for truth is that the proof structure can distinguish truth from falsehood (including truth mixed with falsehood). Since a claim's parts and their connections are themselves claims with their own structures, there may be a self-referential/recursive component to claims. Reason is defined as a sequence of intellectual causality — something discovered, not decided — and the scientific method (Observation → Definition → Induction → Deduction → Refinement) is glossed as: grounding in reality → something identifiable with clear scope → identifying the pattern behind the defined scopes → applying observational precedent → refining scopes with new information. The author also argues at length that the modern \"neutral default\" (agnostic, physicalist, hyperskeptical) is not actually neutral: it has rivals, it has its own hard problems (intrinsic nature of causality, energy, etc.), hard problems are merely synonyms for limits of knowledge (all knowledge is domain-relative), \"speculation as proof/refutation\" is another all-pointing clock, and the illusion-vs-reality skeptical puzzle dissolves once you note that \"reality\" was originally defined as whatever is independent of will — so illusions and dreams are categorizations *within* reality, and the puzzle came from semantically drifting the word \"real.\"\n\nThe document closes with two compressed \"phenomenological reductions\": truth = a necessary, ontological (non-willed) event that is an undeniable imagination; and a claim = an undeniable set of definitions and their associations (a false claim being a deniable one), referring to a necessary ontological event, where the ontological event correlates with the intellectual event.",
+      "load_bearing_definitions": [
+        {
+          "term": "phenomenon / phenomenological primitive",
+          "meaning_in_doc": "The ultimate givens — raw occurrences (e.g., red, anger, 2) that are not themselves claims and therefore need no justification; the terminus of every grounding chain in the framework."
+        },
+        {
+          "term": "law of non-circularity",
+          "meaning_in_doc": "The observed regularity that every cycle originates from something that is not the thing itself (chicken from non-chicken, life from non-life; deductions from inductions, observations from phenomena). It is the inference used to terminate every regress in the framework."
+        },
+        {
+          "term": "quality",
+          "meaning_in_doc": "A feature phenomena present. Associations, will, and temporal qualia (before/after/time) are all explicitly typed as qualities."
+        },
+        {
+          "term": "scope",
+          "meaning_in_doc": "A pattern that a set of observations share — i.e., a pattern that joins/categorizes observations. A claim's scope is the part of reality it lives under."
+        },
+        {
+          "term": "correlation",
+          "meaning_in_doc": "When one phenomenon often follows another."
+        },
+        {
+          "term": "independence",
+          "meaning_in_doc": "When phenomena do not correlate."
+        },
+        {
+          "term": "necessity",
+          "meaning_in_doc": "When phenomena correlate without exception."
+        },
+        {
+          "term": "ontological",
+          "meaning_in_doc": "Whatever is independent of will — explicitly including will itself, and including things not directly observed."
+        },
+        {
+          "term": "causality",
+          "meaning_in_doc": "Necessity, restricted to the context of ontological events. Causal cycles start with an uncaused event (by the non-circularity inference)."
+        },
+        {
+          "term": "intellectual causality",
+          "meaning_in_doc": "Causality, restricted to the context of imagination/thoughts. Intellectual causal chains start with a non-intellectual event, i.e., a phenomenological primitive."
+        },
+        {
+          "term": "truth",
+          "meaning_in_doc": "In the ladder: intellectual causality within the context of undeniability (domain-relative, like Newtonian mechanics being true within its domain). In the correspondence gloss: when an inferential structure corresponds to the ontic structure it refers to. In the final reduction: a necessary ontological (non-willed) event that is an undeniable imagination."
+        },
+        {
+          "term": "falsehood",
+          "meaning_in_doc": "Intellectual causality within the context of deniability; equivalently, when the inferential structure does not correspond to the ontic structure it refers to."
+        },
+        {
+          "term": "deniability / undeniability",
+          "meaning_in_doc": "Whether denying something, given what you currently know, produces an inconsistency — an internal, phenomenological occurrence of intellectual causality ('knowing you're wrong'), NOT the social ability to openly deny. Applies layer-by-layer even in probabilistic/abductive domains."
+        },
+        {
+          "term": "claim",
+          "meaning_in_doc": "A statement with a truth-value. In the final reduction: an undeniable set of definitions and their associations (a false claim being a deniable one), referring to a necessary ontological event, where the ontological event correlates with the intellectual event."
+        },
+        {
+          "term": "statement",
+          "meaning_in_doc": "An inferential structure; equivalently, a set of definitions plus their associations."
+        },
+        {
+          "term": "event",
+          "meaning_in_doc": "An ontic structure."
+        },
+        {
+          "term": "truth-value",
+          "meaning_in_doc": "Whether an inferential structure corresponds with the ontic structure it refers to (correspond = truth, not correspond = falsehood)."
+        },
+        {
+          "term": "faithfulness",
+          "meaning_in_doc": "Whether a communicative structure corresponds with the inferential/ontic structures it refers to."
+        },
+        {
+          "term": "proof / justification",
+          "meaning_in_doc": "A sequence of claims in an inferential structure."
+        },
+        {
+          "term": "conclusion",
+          "meaning_in_doc": "The final step of a proof."
+        },
+        {
+          "term": "grounded",
+          "meaning_in_doc": "A proof whose first step is phenomenological."
+        },
+        {
+          "term": "valid",
+          "meaning_in_doc": "When the link between a proof's conclusion and its previous steps occurs by intellectual causality."
+        },
+        {
+          "term": "sound",
+          "meaning_in_doc": "When every link in a proof occurs by intellectual causality."
+        },
+        {
+          "term": "definition (as used in the pipelines)",
+          "meaning_in_doc": "Anything that references something specific — concepts, terms, etc."
+        },
+        {
+          "term": "sign / support",
+          "meaning_in_doc": "Something that points to a claim (as rain points to 'I am wet'); the pointing is distinct from the rules of inference that license moving from sign to claim."
+        },
+        {
+          "term": "comprehensibility (coherence/incoherence)",
+          "meaning_in_doc": "Whether a statement is imaginable at all, regardless of observed context ('pink elephants' are imaginable); grounded in the limits of imagination, not observed reality."
+        },
+        {
+          "term": "rationality (rational/irrational)",
+          "meaning_in_doc": "Whether a statement's definitions are comprehensible within their real contexts (a pink elephant is irrational because elephants aren't pink); grounded in the precedent of reality, and revisable via refinement."
+        },
+        {
+          "term": "reason",
+          "meaning_in_doc": "A sequence of intellectual causality — something one discovers rather than decides (the author tentatively equates it with proof)."
+        },
+        {
+          "term": "intrinsic cause",
+          "meaning_in_doc": "The terminus of the ontology pipeline's causal regress. Not explicitly defined; apparently the uncaused starting point of a causal chain (see guesses)."
+        },
+        {
+          "term": "demystification",
+          "meaning_in_doc": "The communication pipeline's step of word choice/selection tuned to the audience; only glossed as '(word choice, selection, etc.)'."
+        }
+      ],
+      "guesses": [
+        "Reconciling the three characterizations of truth: the ladder says truth = intellectual causality within the context of undeniability; item 12.3 says truth = correspondence between inferential and ontic structure; the closing reduction says truth = a necessary ontological event that is an undeniable imagination. The document never states how these relate. I guessed they are intended as the same notion expressed at different levels of reduction, but the text underdetermines this.",
+        "The parenthetical in the 'ontological' definition — 'independent of will (including will itself, as well as whatever is not directly observed)'. I read it as: will itself counts as ontological (it occurs whether or not you will it), and unobserved things also count. But the grammar allows other readings (e.g., that 'independent of will' must be understood as also excluding will), and the text does not disambiguate.",
+        "In rung 9, 'intellectual events are caused by others [in which all the above are ontological, even your own will]' — what 'all the above' refers to is unclear. I guessed it means the causes of intellectual events are themselves ontological events (including one's own will), consistent with rung 7, but this is a guess.",
+        "The arrow/bracket notation of the Truth pipeline: 'claim (its truth-value) <- deniability (known ontological conditions) & (deniability [inferential proof] <- deniability [proof]) <- deniability (scope) <- deniability (meaning)'. The exact dependency ordering — what feeds what, and whether the '&' branches run in parallel — is underdetermined. I guessed it means: apply the deniability test to each prior pipeline's output, layered from meaning up through scope, proof, inferential proof, and ontological conditions.",
+        "The '...' in the Scope pipeline's 'cycle of (definition scope <- pattern identification <- ...)' leaves the cycle's continuation unspecified. I guessed it alternates definition-scope and pattern-identification steps until reaching phenomenological primitives.",
+        "'Intrinsic cause' (terminus of the Ontology pipeline) is never defined. By parallel with rung 8's 'uncaused event' and the non-circularity law, I guessed it means the uncaused first cause terminating the causal chain within the relevant scope — but equating 'intrinsic cause' with 'uncaused event' is my inference, not the document's statement.",
+        "The Communication pipeline ends with a '?', and 'demystification' is only glossed as '(word choice, selection, etc.)'. I guessed demystification means selecting wording that removes obscurity for the specific audience; the author marks the whole pipeline as tentative, so its details are underdetermined by design.",
+        "'Communicative structure' (in the definition of faithfulness) is never defined. I guessed it means the linguistic/expressed form of a claim (spoken, written, etc.), parallel to inferential and ontic structures.",
+        "The closing reduction defines a claim as 'an undeniable set of definitions and their associations,' while rung 11 defines a claim as a statement with a truth-value (which may be false). Since the reduction adds 'a false claim would be a deniable one,' I guessed the reduction is describing the fully successful (true) claim, with the deniable variant covering falsehood — but the text does not explicitly resolve the tension.",
+        "The deniability definition itself carries a question mark ('...results in an inconsistency/knowing you're wrong?') and refers to 'as explained earlier,' but the earlier explanation is not in this document. I took the internal-inconsistency reading (supported by the microbial-life example), but the author's own phrasing is tentative.",
+        "In Note 5, the mapping of Deduction — 'Apply observational precedent to patterns? and/or, observe what occurs after intellectual causality occurs?' — contains the author's own question marks. I preserved both alternatives rather than choosing; the intended reading is underdetermined. Likewise 'Reason (proof?)' leaves open whether reason and proof are identical.",
+        "Whether the seven pipelines are strictly ordered (each consuming the previous one's output) is only partially stated: pipeline 3 says 'cause' operates within the scope defined earlier, and pipeline 6 consumes all previous outputs. I guessed the listed order (meaning → scope → ontology → proof → inferential → truth → communication) reflects an intended dependency ordering throughout, but the document only establishes it for those two cases.",
+        "Why will, temporal qualia, and scope all appear together at rung 4 of the ladder, and what ordering principle places them there, is not explained; I treated rung placement as roughly 'what each concept presupposes' without textual confirmation.",
+        "In Note 4 the author explicitly leaves open whether 'truth from the structure of a claim' is just the claim's self-referential nature 'or perhaps something more - idk.' I reported the uncertainty rather than resolving it; any firmer reading would be a guess.",
+        "In the abduction discussion, the 'metric X' by which one prefers hypothesis A over B is deliberately left unspecified ('by some metric X'); I did not assign it a specific meaning."
+      ]
+    },
+    "apply": {
+      "decomposition": "Reading convention I adopted: the document writes every pipeline as \"claim <- ... <- phenomenological primitive(s)\", where \"<-\" means \"is grounded in.\" To RUN a pipeline I therefore build from the rightmost term (the primitive) leftward until I arrive at the claim. Claim under analysis: \"Aspirin reduces fever.\"\n\n=== PIPELINE 1 — MEANING ===\nArrow: claim (the 'what') <- cycle of (definition <- definition) <- phenomenological primitive. (\"definition\" = concepts/terms/anything referencing something specific.)\nTrace (right -> left):\n- Primitive base: levels 1-4 of the ladder — \"phenomena occur,\" \"distinct phenomena occur,\" \"qualities & associations occur,\" \"temporal qualia occur.\"\n- Cycle of definitions, one term at a time:\n  - \"fever\" := the quality body-heat (level 3, quality) at a degree distinct (level 2, difference) from ordinary body-heat. Bottoms out at the warmth-quale under \"qualities occur.\"\n  - \"aspirin\" := a distinct phenomenon (level 2) — one specific substance/pill — individuated by its qualities & associations (level 3). Bottoms out at \"distinct phenomena occur.\"\n  - \"reduces\" := a temporal-comparative relation — the fever-quality is greater \"before\" and lesser \"after\" (level 4, temporal qualia). Bottoms out at \"temporal qualia occur.\"\n- Assemble leftward into the claim: a distinct substance (aspirin) associated with the body-heat quality decreasing across time.\nOUTPUT (what the claim is talking about / what to imagine): Imagine a distinct substance called aspirin entering a body that carries the felt/observed quality of excess heat (fever), and imagine that heat-quality being greater at an earlier moment and lesser at a later moment — the picture of a hot, feverish body cooling after the substance is taken.\n\n=== PIPELINE 2 — SCOPE / REFERENCE ===\nArrow: claim (its scope) <- cycle of (definition scope <- pattern identification <- ...) <- phenomenological primitives. (A scope is \"a pattern that a set of observations have,\" level 4.)\nTrace (right -> left):\n- Primitives: many distinct observations of bodies, substances, temperatures.\n- Pattern identification: across these observations, \"a body given aspirin\" is often followed by \"that body's heat-quality dropping\" (correlation, level 5). That recurring pattern IS the scope-pattern.\n- Definition scope: categorize the pattern as the domain of febrile bodies + ingested substances (physiological/pharmacological events), held as a scope of tendency/probability rather than single-case certainty — following the document's own microbial-life note that undeniability can live at the statistical level.\nOUTPUT (the part of reality we're talking about): The pharmacological/physiological scope — the categorized set of observations of fever-bearing bodies that ingest aspirin. The part of reality is that population/domain of body-plus-aspirin events, framed as a statistical tendency.\n\n=== PIPELINE 3 — ONTOLOGY ===\nArrow: claim (its known ontological conditions) <- ontological event (that it references) <- cycle of (cause <- cause) <- intrinsic cause. (\"cause\" occurs within the scope from Pipeline 2; ontological = not-willed; causality = necessity within ontological events.)\nTrace (right -> left):\n- Intrinsic cause: per the law of non-circularity, the causal cycle must start from an uncaused/intrinsic cause within the pharmacological scope — the point where tracing exits the scope (the intrinsic chemical nature of the aspirin substance and the body's intrinsic thermoregulatory nature). [Flagged — see stuck points.]\n- Cycle of cause <- cause (within scope): aspirin ingested <- aspirin present in the body <- aspirin acting on the fever-raising mechanism (necessity: holds without exception within scope) <- body's heat-setpoint lowered <- measured body-heat decreases.\n- Ontological event referenced: the not-willed event of a body's fever actually decreasing after aspirin.\nOUTPUT (a fit with the known ontological conditions): The claim FITS — its referenced not-willed event (fever decreasing) is reachable by a chain of causes-within-scope from aspirin ingestion down to the measured decrease, terminating (per non-circularity) in an intrinsic cause. The claim is consistent with the known ontological conditions for a substance lowering body-heat.\n\n=== PIPELINE 4 — PROOF ===\nArrow: claim (proof) <- cycle of (sign/support <- sign/support) <- phenomenological primitives. (Signs \"point to\" the claim; the logic connecting them is Pipeline 5.)\nTrace (right -> left):\n- Primitives: the actual felt/seen observations.\n- Cycle of signs/supports: sign — a thermometer reading is lower after aspirin than before (observable by anyone); support — that drop recurs across many feverish bodies given aspirin, and recurs more than when nothing is given. Each sign points at the claim the way \"seeing rain\" pointed at \"I am wet\" in the document's example.\nOUTPUT (external justification, for anyone to observe for themselves): The observable, repeatable signs — measured body-temperature falls after aspirin is administered, recurring across many cases (and more than without it). Anyone can give aspirin to a feverish body, watch the thermometer, and observe the sign directly.\n\n=== PIPELINE 5 — INFERENTIAL ===\nArrow: claim <- inferences <- cycle of (rule of inference <- rule of inference) <- logical/intellectual causality.\nTrace (right -> left):\n- Base: intellectual causality (level 9) — the links are discovered, not decided.\n- Cycle of rules of inference: correlation (level 5: fever-drop often follows aspirin) <- if it holds without exception, necessity (level 6) <- within not-willed events this necessity is causality (level 8: aspirin causes the drop) <- inductive generalization from the recurring sign to the general claim <- abduction (best explanation of the recurring sign is that aspirin reduces fever).\n- Inferences: these rules carry the Pipeline-4 signs up to the claim.\nOUTPUT (internal/logical justification): The rules of inference that make the signs actually lead to the claim — correlation upgraded to necessity/causality within not-willed events, plus inductive generalization and abduction — grounded in intellectual causality. This is what stops the proof from being a bare coincidence.\n\n=== PIPELINE 6 — TRUTH ===\nArrow: claim (its truth-value) <- deniability (known ontological conditions) & (deniability [inferential proof] <- deniability [proof]) <- deniability (scope) <- deniability (meaning). (Deniability = does denying it produce inconsistency/knowing-you're-wrong; truth = undeniable, falsehood = deniable.) I read the \"&\"/nesting as: apply the deniability test to every prior output and conjoin — the claim is true iff each is undeniable.\nTrace (applying deniability to each earlier output):\n- Deniability(meaning): denying that the claim coherently pictures aspirin/fever/decrease is inconsistent — the meaning is coherent and rational. UNDENIABLE.\n- Deniability(scope): denying that the claim belongs to the pharmacological/statistical scope is inconsistent. UNDENIABLE.\n- Deniability(proof): denying the observed recurring temperature-drop sign contradicts observation. UNDENIABLE (at the statistical level, per the microbial-life caveat).\n- Deniability(inferential proof): denying the correlation->causality/induction link while accepting the signs is inconsistent. UNDENIABLE. (And the proof distinguishes truth from falsehood — it is NOT a \"clock whose hands point at all times,\" because the drop tracks aspirin specifically rather than confirming any outcome.)\n- Deniability(known ontological conditions): denying the causal fit contradicts the Pipeline-3 output. UNDENIABLE.\n- Conjoin (&): all prior outputs are undeniable.\nOUTPUT (the claim's truth-value): TRUE — within the pharmacological scope and at the level of statistical/probabilistic undeniability, denying \"aspirin reduces fever\" produces inconsistency with the meaning, scope, proof, inferential proof, and ontological conditions. It would come out FALSE only if some link were deniable.\n\n=== PIPELINE 7 — COMMUNICATION ===\nArrow: claim (communication) <- demystification (word choice, selection, etc.) <- audience knowledge & audience disposition & audience language <- (human) psychological nature. (Faithfulness = the communicative structure corresponds to the inferential/ontic structures it refers to.)\nTrace (right -> left):\n- (Human) psychological nature: how a mind receives words. [Document marks this grounding with a \"?\" — uncertain.]\n- Audience knowledge & disposition & language: e.g., layperson vs. clinician; their prior vocabulary; their trust/skepticism.\n- Demystification / word choice: pick words so the received picture matches the ontic/inferential structure fixed by the earlier pipelines. Layperson: \"Taking aspirin usually brings a fever down\" (conveys tendency, not a guaranteed cure, not \"always\"). Clinician: specify dose, mechanism, and that \"reduces\" is not \"eliminates.\"\nOUTPUT (a proper, faithful understanding of the claim): A rendering whose words make the audience imagine exactly the probabilistic, causal fever-lowering the earlier pipelines established — no more (\"aspirin always cures fever\") and no less — tuned to that audience's knowledge, disposition, and language, so the communicative structure faithfully corresponds to the inferential/ontic structures.",
+      "stuck_points": [
+        "Arrow direction / entry point: the document never states whether a pipeline is 'run' right-to-left or left-to-right. The '<-' is only defined implicitly as grounding. I improvised by reading '<-' as 'is grounded in' and building each pipeline from the rightmost phenomenological primitive up to the claim.",
+        "Cycle termination: every pipeline contains a 'cycle of (X <- X)' with no stated stopping rule beyond eventually reaching a phenomenological primitive (and the non-circularity law that a cycle starts from a non-thing). I improvised by stopping each cycle the moment a term bottomed out at a listed ladder level (e.g., a quality, a distinct phenomenon, a temporal qualia).",
+        "Meaning pipeline gives no rule for splitting a multi-word claim into its definitions. I improvised by decomposing into the three lexical terms — 'aspirin', 'reduces', 'fever' — and grounding each separately.",
+        "Ontology's 'intrinsic cause': the document asserts the causal cycle 'starts with an uncaused/intrinsic cause' but gives no method to identify it for a concrete claim. I improvised by naming the intrinsic cause as the point where causal tracing exits the pharmacological scope (aspirin's intrinsic chemistry / the body's intrinsic thermoregulation) and flagged it as indeterminate.",
+        "Scope pipeline literally leaves the chain open with '...': 'definition scope <- pattern identification <- ...'. I improvised the missing middle by treating pattern identification (correlation across observations) as feeding directly into the scope categorization.",
+        "Whether I may import real empirical knowledge of aspirin at all: the instruction says treat the document as the SOLE authority on term meanings, but Pipelines 3-5 require actual causes, signs, and observations about aspirin that the document does not contain. I improvised by importing only minimal empirical content (fever measurably drops after aspirin, recurring across cases) as the raw 'observations/signs/causes' the framework's structure is meant to be filled with, since the framework supplies structure but no pharmacological content.",
+        "Ontology depth / 'known ontological conditions' is undefined as to how far down the causal chain must go or what counts as 'known.' I improvised with a short common-knowledge causal chain (ingested -> present -> acts on fever mechanism -> setpoint lowered -> temperature drops) rather than a specific biochemical depth.",
+        "Truth pipeline's arrow-structure mixes '&', '<-', and nesting — 'deniability(known ontological conditions) & (deniability[inferential proof] <- deniability[proof]) <- deniability(scope) <- deniability(meaning)' — with no stated rule for how these combine into one truth-value. I improvised by treating it as: apply the deniability test to every prior output and conjoin them ('&' = logical AND), so the claim is true iff each prior output is undeniable.",
+        "Truth threshold for statistical/probabilistic undeniability: the microbial-life note says undeniability can operate at the statistical level, but no threshold is given for when statistical undeniability counts as 'true.' I improvised by declaring the claim 'true within scope at the level of statistical undeniability' without any numeric cutoff.",
+        "Communication's final grounding is written by the author with a trailing '?' ('(human) psychological nature'?), signaling the author's own uncertainty about the primitive. I improvised by treating human psychological nature as the grounding primitive anyway.",
+        "Separating Proof (signs) from Inferential (rules of inference): for this claim the observable sign (temperature drops after aspirin) and the inference (correlation->causality->induction) are entangled, and the document does not say how to cleanly split them. I improvised by assigning the bare observable event to Proof and all the correlation/causality/induction/abduction logic to Inferential.",
+        "Output form of the Ontology pipeline: the document says its output is 'a fit with the known ontological conditions,' not a truth-value, so ontology apparently does not itself decide truth. I improvised by rendering 'a fit' as a consistency verdict ('the claim's causal story is consistent with known ontology') rather than as a proof or a true/false judgment.",
+        "Primitive singular vs. plural: the Meaning pipeline says 'phenomenological primitive' (singular) while others say 'primitives' (plural), with no explained distinction. I treated both as 'the base phenomenological givens' and did not attach significance to the number."
+      ]
+    },
+    "ambig": {
+      "ambiguities": [
+        {
+          "quote": "therefore they fit the induction that all cycles must originate from something that isn't the thing itself",
+          "issue": "This induction (later named 'the law of non-circularity') is used at the very top of the document to justify starting at phenomenological grounding, yet note 3 says 'Along the way of discovering reality, we somehow discover the law of non-circularity' — i.e., it is discovered downstream of the ladder it is used to found. Its status in the framework's own vocabulary (phenomenological given? correlation? necessity?) and its position on the ladder are never stated, even though rungs 8 and 9 both lean on it.",
+          "question_for_author": "Where does the law of non-circularity sit on the grounding ladder, and in your own terms is it a phenomenological given, a correlation, or a necessity — given that it both justifies the ladder's starting point and is described as discovered later 'along the way'?"
+        },
+        {
+          "quote": "that cycle ends/starts at this stage as phenomena make up of all things if that makes sense",
+          "issue": "The sentence is grammatically garbled. 'Phenomena make up of all things' could mean 'phenomena constitute all things', 'all things are made up of phenomena', or 'all things are only accessible to us via phenomena' — and each reading changes what 'grounded in something phenomenological' requires. It is also unclear which cycle 'ends/starts' here.",
+          "question_for_author": "Can you restate this sentence — do you mean everything is composed of phenomena, or everything is only present to us through phenomena — and which cycle is it that 'ends/starts' at this stage?"
+        },
+        {
+          "quote": "the cycle starts with a non-intellectual event [ie. phenomenological primitive]",
+          "issue": "'Phenomenological primitive' is the terminus of the meaning, scope, and proof pipelines, but is never defined. It is unclear which ladder items count as primitives: only rung-1 raw phenomena and rung-2 distinctions, or also qualities, associations, will, temporal qualia, correlations, etc. Without a criterion, one cannot tell when a grounding chain has legitimately bottomed out.",
+          "question_for_author": "Exactly which items count as 'phenomenological primitives' — only bare phenomena/distinctions, or everything up to some specific rung — and how do I recognize that a chain has actually reached one?"
+        },
+        {
+          "quote": "qualities & associations occur (where associations are a type of quality)",
+          "issue": "'Association' is never defined, yet it is load-bearing: note 2 defines a statement as 'a set of definitions + their associations'. It is unclear what distinguishes an association from any other quality, and whether the rung-3 phenomenal sense (something that 'occurs') is the same 'association' that structurally combines definitions inside a statement.",
+          "question_for_author": "What is an 'association' — how do I tell one apart from other qualities, and is the rung-3 phenomenal sense the same 'association' that combines with definitions to form a statement?"
+        },
+        {
+          "quote": "scope is a pattern that a set of observations have",
+          "issue": "'Observation' first appears here with no ladder definition, and note 3 later treats observations as derived from phenomena ('observations from phenomena'), implying they are a distinct, unlisted rung. 'Pattern' is also undefined. Since the entire scope pipeline is built on 'pattern' over 'observations', both need fixing before the pipeline can be applied.",
+          "question_for_author": "What is an 'observation' as distinct from a phenomenon, and where do 'observation' and 'pattern' fall on the ladder relative to rungs 1-4?"
+        },
+        {
+          "quote": "correlation is a when a phenomena often follows another",
+          "issue": "'Often' has no threshold, and 'follows' restricts correlation to temporal succession — it is unclear whether simultaneous co-occurrence counts as correlation at all. Since necessity, causality, and ultimately truth are all built on this definition, the vagueness propagates upward.",
+          "question_for_author": "How often is 'often', and does correlation cover only one phenomenon following another in time, or also phenomena that occur together simultaneously?"
+        },
+        {
+          "quote": "independence is when phenomena do not correlate",
+          "issue": "If correlation requires 'often' following, then phenomena that occasionally-but-not-often follow one another appear to be neither correlated nor independent, leaving an unclassified middle category; alternatively 'do not correlate' may mean 'never follow one another'. The document does not say which.",
+          "question_for_author": "Do phenomena that occasionally (but not often) follow one another count as independent, or is there an intended middle category between correlation and independence?"
+        },
+        {
+          "quote": "necessity is when phenomena correlate without exception",
+          "issue": "'Without exception' is ambiguous between 'no exception among observations so far' (defeasible, which fits a framework grounded in observed phenomena) and 'no exception possible ever'. Because causality = necessity and truth is built on intellectual causality, this decides whether truth-verdicts can be silently overturned by one future counterexample.",
+          "question_for_author": "Is 'without exception' indexed to observations to date — so a necessity can be demoted by a single future counterexample — or is it meant absolutely, and if the former, does a claim's truth-value change when the necessity underlying it is demoted?"
+        },
+        {
+          "quote": "ontological = whatever is not willed - or more accurately, independent of will (including will itself, as well as whatever is not directly observed)",
+          "issue": "The head definition excludes the willed, but the parenthetical then includes 'will itself' — as written, will is simultaneously the excluded criterion and a member of the category. The second inclusion, 'whatever is not directly observed', is also unclear: is being unobserved sufficient to be ontological, or merely not disqualifying? Meanwhile the key reductions gloss 'ontological' as '[non-willed]', which appears to re-exclude will.",
+          "question_for_author": "Is will itself ontological or not, and does 'including... whatever is not directly observed' mean unobserved things are ontological by definition, or only that unobservedness does not block ontological status?"
+        },
+        {
+          "quote": "will occurs (a type of quality)",
+          "issue": "'Willed' is the criterion for the entire ontological/non-ontological divide, but no test for whether a given phenomenon is willed is provided. Edge cases directly affect the pipelines: are deliberately conjured mental images willed (hence non-ontological)? Are intrusive thoughts unwilled (hence ontological)?",
+          "question_for_author": "What is the operational test for deciding that a particular phenomenon is 'willed' — for example, is a deliberately imagined image willed, and is an intrusive thought unwilled?"
+        },
+        {
+          "quote": "note that we already inferred that ontological events are caused by others, in which the cycle starts with an uncaused event [applying the same non-circular inference used everywhere else]",
+          "issue": "'We already inferred' points to an inference that does not appear anywhere earlier in the document — rungs 1-7 nowhere derive that ontological events are caused. A reader cannot reconstruct the inference or its premises from the notes as written.",
+          "question_for_author": "Where is the inference that 'ontological events are caused by others' supposed to have been made — can you state its premises explicitly in terms of rungs 1-7?"
+        },
+        {
+          "quote": "intellectual causality = causality, within the context of imagination/thoughts",
+          "issue": "It is unclear whether intellectual causality is descriptive (whatever thought does in fact necessarily follow another in a given mind — in which case a psychologically compelling fallacy counts) or normative (only correct transitions count). Note 5 ('I don't decide if something results in truth or falsehood, I simply discover it') suggests it is simply discovered, but people also 'discover' invalid transitions that feel compelled. Since validity, soundness, and truth are all defined via intellectual causality, this ambiguity infects the whole framework.",
+          "question_for_author": "If a fallacious inference feels compelled and exceptionless to a particular thinker, is that transition an instance of intellectual causality — and if not, what distinguishes genuine intellectual causality from a psychologically compelled mistake?"
+        },
+        {
+          "quote": "intellectual events are caused by others [in which all the above are ontological, even your own will]",
+          "issue": "The referent of 'all the above' is unclear — all the previous ladder rungs? all the causes of intellectual events? — and the bracket asserts that will is ontological, feeding the rung-7 contradiction about whether will is inside or outside the ontological category.",
+          "question_for_author": "In this bracket, what does 'all the above' refer to — the prior ladder rungs, or the causes of intellectual events?"
+        },
+        {
+          "quote": "truth = intellectual causality, within the context of undeniability",
+          "issue": "The document gives three non-obviously-equivalent definitions of truth: this one (truth is a species of causality), 12.3.1 'Truth is when it does correspond' (a correspondence relation between an inferential and an ontic structure), and reduction 1 'truth = necessary ontological [non-willed] event, that is an undeniable imagination' (an event). Falsehood likewise gets two ('falsehood = intellectual causality, within the context of deniability' vs 12.3.2 'Falsehood is when it does not correspond'). When the truth pipeline outputs 'the claim's truth-value', the reader cannot tell which definition is operative.",
+          "question_for_author": "Are the causality, correspondence, and event formulations of truth intended as one definition seen three ways or as genuinely different notions — and when the truth pipeline outputs a truth-value, which formulation is it outputting?"
+        },
+        {
+          "quote": "within the context of undeniability",
+          "issue": "The earlier 'within the context of X' constructions restrict a relation to a domain of events (ontological events, thoughts). 'Undeniability' is not a domain of events, so the construction breaks pattern here — it is unclear what set of things this phrase restricts intellectual causality to.",
+          "question_for_author": "In 'truth = intellectual causality, within the context of undeniability', what exactly is the restricting context — intellectual causation among undeniable items, causation whose denial produces inconsistency, or something else?"
+        },
+        {
+          "quote": "the existence of special/general relativity doesn't mean that, within newtonian physics, time isn't absolute/constant",
+          "issue": "The aside implies truth-values are relative to a scope or domain ('within newtonian physics'), but the definitions of truth and truth-value carry no scope parameter, and the truth pipeline's stated output is 'the claim's truth-value' simpliciter. Whether every truth-value is scope-indexed, and how the index is fixed, is left open.",
+          "question_for_author": "Is every truth-value scope-indexed — i.e., should the truth pipeline output 'true/false within scope S' rather than bare true/false — and if so, how is S determined when the claim doesn't state its own scope?"
+        },
+        {
+          "quote": "claim = an undeniable set of definitions and their associations (where a false claim would be a deniable one)",
+          "issue": "This conflicts with rung 11, 'claim = a statement with a truth-value': rung 11 makes false statements claims, whereas the reduction defines 'claim' as undeniable and then paradoxically allows a 'false claim' that is deniable — violating its own definiens.",
+          "question_for_author": "Is 'claim' the genus covering both true and false statements (rung 11), or specifically an undeniable set (reduction 2) — and if the latter, in what sense is a 'false claim' still a claim?"
+        },
+        {
+          "quote": "Statement - an inferential structure",
+          "issue": "Note 2 separately defines 'Statement = a set of definitions + their associations'. It is unclear whether an inferential structure just is a set of definitions plus associations, or whether these are two different characterizations that could pick out different things. Nothing in 'set of definitions + associations' is obviously 'inferential'.",
+          "question_for_author": "Are 'an inferential structure' and 'a set of definitions + their associations' two descriptions of the same thing — and if so, what makes a mere set of definitions and associations 'inferential'?"
+        },
+        {
+          "quote": "Event - an ontic structure",
+          "issue": "'Ontic' appears only in items 12.2-12.4, while the defined term throughout the ladder is 'ontological' (rung 7: independent of will). It is unclear whether 'ontic' is exactly synonymous with that or marks a different distinction.",
+          "question_for_author": "Is 'ontic' exactly synonymous with your rung-7 'ontological', or does it mark a different notion?"
+        },
+        {
+          "quote": "Truth-value - where an inferential structure may or may not correspond with the ontic structure it refers to",
+          "issue": "Combined with 'claim = a statement with a truth-value', this implies some statements lack truth-values (otherwise 'with a truth-value' is redundant), but no criterion is given for which statements those are. In particular, notes on comprehensibility/rationality never say whether an incoherent or irrational statement has a truth-value (false?) or lacks one (non-claim).",
+          "question_for_author": "Which statements lack a truth-value and so fail to be claims — e.g., does an incoherent statement, or one whose referenced ontic structure doesn't exist, come out false or come out truth-valueless?"
+        },
+        {
+          "quote": "Faithfulness - where a communicative structure may or may not correspond with the inferential/ontic structures it refers to",
+          "issue": "'Communicative structure' is never defined, and the slash in 'inferential/ontic' leaves open whether faithfulness requires correspondence with both structures, with either one, or with whichever the communication happens to refer to.",
+          "question_for_author": "What counts as a communicative structure, and does faithfulness require correspondence with both the inferential and the ontic structure, or just one — and which?"
+        },
+        {
+          "quote": "Proof/justification - a sequence of claims in an inferential structure",
+          "issue": "Two problems: (a) as written, any arbitrary sequence of claims qualifies as a proof — linkage requirements only appear in the separate valid/sound definitions; (b) since 12.1 says a statement IS an inferential structure, a proof would be a sequence of claims inside a statement, which seems unintended. Note 5 also floats a different characterization ('Reason (proof?): sequence of \"intellectual causality\"').",
+          "question_for_author": "Is a proof any ordered sequence of claims (with validity/soundness as separate gradings), or must steps be inference-linked to count as a proof at all — and what is the containing 'inferential structure', given a statement is also called an inferential structure?"
+        },
+        {
+          "quote": "Grounded - when a proof's first step is phenomenological",
+          "issue": "A proof is defined as a sequence of claims (12.5), but the document's opening says phenomenological givens 'are non-claims themselves'. So a grounded proof's first step must simultaneously be a claim (by 12.5) and a phenomenological non-claim (by 12.7) — an apparent self-contradiction at the exact point where the framework's anti-circularity story lives.",
+          "question_for_author": "In a grounded proof, is the first step the phenomenon itself (a non-claim), or a claim reporting the phenomenon — and if the latter, what grounds that reporting claim?"
+        },
+        {
+          "quote": "Valid - when the link between a proof's conclusion and its previous steps occurs by intellectual causality",
+          "issue": "'The link between a proof's conclusion and its previous steps' is ambiguous between (a) a single link from the immediately preceding step to the conclusion, and (b) a link from all previous steps taken jointly to the conclusion. The two readings classify different proofs as valid.",
+          "question_for_author": "For validity, must the conclusion follow by intellectual causality from the immediately preceding step alone, or from all previous steps taken together?"
+        },
+        {
+          "quote": "Sound - when the every link in a proof occurs by intellectual causality",
+          "issue": "In the document's sense, soundness concerns only the links, while groundedness (12.7) is a separate property — so a proof could apparently be sound yet ungrounded, starting from an arbitrary or false first step. Whether that is intended, or whether soundness tacitly presupposes groundedness, is unstated. (Also 'the every link' looks like a typo — presumably 'every link'.)",
+          "question_for_author": "Can a proof be 'sound' in your sense while ungrounded (first step not phenomenological) — and if yes, does a sound-but-ungrounded proof confer anything on its conclusion's truth-value?"
+        },
+        {
+          "quote": "Some more, that should be ordered properly phenomenologically above, but I have them here so I don't clutter above:",
+          "issue": "The ladder's numbering apparently encodes grounding order (each rung may presuppose earlier ones), but items 12.1-12.9 are admitted to be unplaced, and some (e.g., 'statement') are used at rung 11 before being defined at 12.1. Without their positions, one cannot tell what each definition is allowed to presuppose.",
+          "question_for_author": "What does the ladder's numbering encode (strict grounding dependency?), and where exactly should items 12.1-12.9 slot into rungs 1-11?"
+        },
+        {
+          "quote": "It basically broke it down into 7 pipelines",
+          "issue": "The referent of 'It' is unclear — a prior analysis, a tool/AI session, or a typo for 'I'. This matters for how authoritative the seven-pipeline breakdown is relative to the author's own commitments elsewhere in the notes.",
+          "question_for_author": "What does 'It' refer to here, and do you endorse the seven-pipeline breakdown as your own, or is it a provisional output from something else?"
+        },
+        {
+          "quote": "meaning (what does the claim say? output: what the claim is talking about, like what to imagine)",
+          "issue": "The meaning pipeline's output ('what the claim is talking about') and the scope pipeline's framing ('what is the claim about') are nearly identical phrasings, so the operational boundary between pipelines 1 and 2 is unclear — a user could not reliably decide which content belongs in which output.",
+          "question_for_author": "For one concrete claim, can you show the meaning output and the scope output side by side — what exactly differs between 'what the claim is talking about' and 'what is the claim about'?"
+        },
+        {
+          "quote": "ontology (what has to happen in reality to make this claim occur? output: a fit with the known ontological conditions for the claim)",
+          "issue": "'Make this claim occur' is ambiguous between the conditions for the claim's being true and the conditions for the claim's being made or thought (a claim is itself an intellectual event in this framework). Also, 'a fit' is undefined as an output artifact — a yes/no verdict? a mapping? a degree? — and nothing says what the pipeline outputs when the ontological conditions are unknown or contested.",
+          "question_for_author": "Does 'make this claim occur' mean the conditions under which the claim would be true (rather than conditions for someone making the claim), and what concrete form does 'a fit with the known ontological conditions' take — especially when little or nothing is known about those conditions?"
+        },
+        {
+          "quote": "output: the part of reality we're talking about",
+          "issue": "This realist gloss of the scope output sits uneasily beside the phenomenological definition in the very next section: 'a \"scope\", phenomenologically, is a pattern that joins/categorizes observations'. A pattern over observations and a part of reality are different kinds of output, and the truth pipeline consumes 'deniability (scope)' without saying which one.",
+          "question_for_author": "Is the scope pipeline's output a pattern over observations or a part/region of reality — and if both, which one does the truth pipeline's 'deniability (scope)' step consume?"
+        },
+        {
+          "quote": "claim (the 'what') <- cycle of (definition <- definition) <- phenomenological primitive",
+          "issue": "The notation is undefined: presumably 'A <- B' means 'A is grounded in B', but this is never stated. And 'cycle of (definition <- definition)' is confusing because the framework's own law of non-circularity forbids genuine cycles — 'cycle' here seems to mean an iterated chain/regress that terminates, not a loop, but that is a guess.",
+          "question_for_author": "Does '<-' read 'is grounded in / is produced from', and does 'cycle of (X <- X)' denote a finite repeated chain of X-to-X links terminating at the right-hand end (not an actual loop)?"
+        },
+        {
+          "quote": "(where \"definition\" encompasses concepts, terms, etc. anything that references something specific)",
+          "issue": "'Something specific' is vague. It is unclear whether general terms ('animal'), abstract terms ('justice'), logical vocabulary ('not', 'all'), or empty terms ('unicorn') count as referencing 'something specific' and hence as definitions the meaning pipeline must ground.",
+          "question_for_author": "Do general, abstract, logical, and non-referring terms count as 'definitions' under 'anything that references something specific', or only terms picking out particular determinate referents?"
+        },
+        {
+          "quote": "cycle of (definition scope <- pattern identification <- ...)",
+          "issue": "The ellipsis leaves the scope pipeline's chain unspecified — the reader cannot tell what links come between 'pattern identification' and the phenomenological primitives, so this pipeline cannot be executed as written.",
+          "question_for_author": "What fills in the '...' in the scope pipeline — what are the remaining links between pattern identification and the phenomenological primitives?"
+        },
+        {
+          "quote": "cycle of (cause <- cause) <- intrinsic cause",
+          "issue": "'Intrinsic cause' appears only here and is never defined. It plausibly corresponds to rung 8's 'uncaused event', but 'intrinsic' ordinarily suggests something different (a cause internal to the thing) rather than an uncaused terminus of a causal chain.",
+          "question_for_author": "Is 'intrinsic cause' the same as rung 8's 'uncaused event', and if not, what does 'intrinsic' add or change?"
+        },
+        {
+          "quote": "note that I use \"sign\" here because signs \"point to\" a claim, and the actual logic is the rules of inference between them",
+          "issue": "This blurs the boundary between pipeline 4 (proof: chain of signs grounded in phenomenological primitives) and pipeline 5 (inferential: chain of rules of inference grounded in logical/intellectual causality). It is unclear whether the two pipelines analyze the same chain from two angles (signs as nodes, inference rules as links) or produce two independent structures with separate outputs.",
+          "question_for_author": "Are the proof chain and the inferential chain the same sequence — signs as nodes, rules of inference as links — or two separate structures, and if the former, why do they terminate in different grounds (primitives vs logical/intellectual causality)?"
+        },
+        {
+          "quote": "cycle of (rule of inference <- rule of inference) <- logical/intellectual causality",
+          "issue": "The slash introduces 'logical causality' as if interchangeable with intellectual causality (rung 9), but it is unclear whether it is a synonym, a subset, or a distinct notion.",
+          "question_for_author": "Is 'logical causality' just another name for intellectual causality, or a distinct (e.g., narrower) notion — and if distinct, how do they differ?"
+        },
+        {
+          "quote": "claim (its truth-value) <- deniability (known ontological conditions) & (deniability [inferential proof] <- deniability [proof]) <- deniability (scope) <- deniability (meaning)",
+          "issue": "The formula mixes '&', '<-', parentheses, and square brackets with no stated precedence, so the order and dependency of the deniability checks cannot be reconstructed. For instance, does 'deniability (scope)' ground both conjuncts or only the proof pair, and is there a mandatory evaluation order starting from meaning?",
+          "question_for_author": "Can you spell out the truth pipeline's evaluation step by step — which deniability check consumes which output, and how do '&' and '<-' combine when they appear in the same expression?"
+        },
+        {
+          "quote": "basically applying deniability with all the previous outputs",
+          "issue": "Deniability is defined as an operation on denying a claim, but the meaning, scope, and ontological-conditions outputs are not claims (a meaning is 'what to imagine'; a scope is a pattern). It is unclear what act corresponds to 'denying' a meaning or a scope.",
+          "question_for_author": "What does it mean to apply deniability to a non-claim output like a meaning or a scope — is it shorthand for denying an associated claim (e.g., 'this claim has meaning M' or 'this claim lives under scope S'), and if so, exactly which claim?"
+        },
+        {
+          "quote": "claim (communication) <- demystification (word choice, selection, etc.) <- audience knowledge & audience disposition & audience language <- (human) psychological nature\"?",
+          "issue": "Three issues: 'demystification' is an undefined operation; the entire pipeline line ends with a question mark, suggesting the author is unsure of it; and the stated output elsewhere ('a proper, faithful understanding of the claim') is a state in the audience rather than an artifact like the other pipelines' outputs.",
+          "question_for_author": "What operation does 'demystification' denote, does the trailing '?' mean pipeline 7 is provisional, and is its output a produced artifact (a formulated message) or the audience's resulting state of understanding?"
+        },
+        {
+          "quote": "communication (how to faithfully communicate the claim? output: a proper, faithful understanding of the claim)",
+          "issue": "The pipelines are listed in a fixed order, and the truth pipeline explicitly consumes outputs of pipelines 1-5, but nothing says whether all seven must run in order, whether communication consumes the truth output, or which pipelines can run independently of the others.",
+          "question_for_author": "Must the pipelines be executed in the listed order 1 through 7, each consuming its predecessors' outputs — and in particular, does the communication pipeline take the truth-value as an input?"
+        },
+        {
+          "quote": "(not the ability to openly deny something or something like that, as explained earlier)",
+          "issue": "'As explained earlier' points to an explanation that does not exist anywhere in this document, so the fuller account of deniability the author relies on cannot be recovered by a reader of these notes alone.",
+          "question_for_author": "Where is the earlier explanation of deniability referenced here — can it be added to or restated in these notes?"
+        },
+        {
+          "quote": "Deniability = whether or not denying it results in an inconsistency/knowing you're wrong?",
+          "issue": "The definition of the framework's most load-bearing operator is itself phrased as a question, and its two disjuncts can come apart: 'an inconsistency' is a logical relation while 'knowing you're wrong' is an epistemic/felt state — one can harbor an inconsistency without knowing it, or feel wrong without any actual inconsistency.",
+          "question_for_author": "Is deniability-failure constituted by the existence of an inconsistency, by the subject's recognition of being wrong, or only when both coincide — and which one governs when they diverge?"
+        },
+        {
+          "quote": "By \"undeniable\", again I mean: based on what you know now, does this claim contradict anything when you deny it?",
+          "issue": "This makes undeniability — and hence truth, which rung 10 defines via undeniability — relative to a knower's current knowledge, whereas 12.3's truth-value is a knower-independent correspondence with an ontic structure. Under the knower-relative reading, the same claim could be 'true' for one person and not another, or flip as knowledge grows.",
+          "question_for_author": "Can a claim's truth-value differ between two people with different knowledge, or change over time as knowledge grows — and if not, how does knower-relative undeniability deliver the knower-independent correspondence of 12.3?"
+        },
+        {
+          "quote": "(again, not a outward denial - I'm referring to the phenomenological occurrence of intellectual causality)",
+          "issue": "The act of 'denying' is glossed only as 'the phenomenological occurrence of intellectual causality', which does not specify the operation a user actually performs: entertaining the negation? internally asserting not-P? attempting and failing to imagine not-P?",
+          "question_for_author": "Concretely, what mental operation constitutes 'denying' a claim when testing deniability — imagining the claim false, internally asserting its negation, attempting to coherently conceive not-P, or something else?"
+        },
+        {
+          "quote": "knowledge of exoplanets and planets where we and directly see it occurs from statistics",
+          "issue": "The sentence is garbled — most likely a dropped word (e.g., 'where we can't directly see it') — and the intended meaning inverts depending on the missing word. This matters because it sits inside the only worked example of applying deniability to an empirical claim.",
+          "question_for_author": "Should this read 'planets where we can't directly see it', or something else — what was the intended sentence?"
+        },
+        {
+          "quote": "the scope of this whole thing is already not some of certainty but of probability",
+          "issue": "If a claim's scope is probabilistic, it is unclear what the truth pipeline outputs: a binary truth-value (per 12.3's correspondence), a probabilistic/graded value, or a suspension ('no truth-value yet'). The walkthrough of the microbial-life claim never states its final output. (Also 'not some of certainty' looks like a typo for 'not one of certainty'.)",
+          "question_for_author": "For a claim whose scope is probabilistic, what does the truth pipeline output — true/false, a probability, or 'undetermined' — and what is the intended final verdict for 'There is microbial life somewhere outside Earth'?"
+        },
+        {
+          "quote": "by some metric X, we will discover if we prefer A or B - where that metric X isn't necessarily \"believing requires seeing\"",
+          "issue": "The abductive step hinges entirely on choosing metric X, but no criterion for choosing it is given beyond 'we have to pick what approach best first the data that matters' — itself garbled ('best fits'?), with 'the data that matters' left unspecified. Two users of the framework could pick different metrics and get opposite preferences.",
+          "question_for_author": "How is metric X selected non-arbitrarily — what determines which metric, and which 'data that matters', govern the abductive preference between rival stances A and B?"
+        },
+        {
+          "quote": "like in topics in which abductive reasoning should be used, instead of identifying the metric by which a stance (among others) can be preferred",
+          "issue": "Abduction yields a preference among rivals, which is weaker than intellectual causality (built on necessity, 'correlate without exception'). It is unclear whether an abductive step counts as intellectual causality, and therefore whether proofs containing abductive steps can be valid/sound or ground a truth-value at all.",
+          "question_for_author": "Is an abductive preference an instance of intellectual causality — can a proof containing abductive steps be valid/sound and yield an (un)deniability verdict, or does abduction only ever deliver something weaker than truth?"
+        },
+        {
+          "quote": "imaginable or not [regardless of observed context - like I can imagine \"pink elephants\" even though \"elephants are not pink\"]",
+          "issue": "Comprehensibility is defined by imaginability, but imaginability varies by imaginer (e.g., a four-dimensional cube or an unseen color may be unimaginable to most people). No standard is given for whose imagination, or what degree/kind of imagining, fixes comprehensibility.",
+          "question_for_author": "Imaginable by whom — the claim's author, the audience, an idealized imaginer — and does partial or structural imagining (e.g., grasping a 4D object by analogy) count as 'imaginable'?"
+        },
+        {
+          "quote": "Statements have rationality (definitions are comprehensible or not [within their contexts - like a pink elephant is irrational because \"elephants aren't pink\"])",
+          "issue": "Rationality is defined by reusing 'comprehensible' — the same word that defined comprehensibility — with only the bracketed context clause distinguishing them, which blurs the two notions. Further, the context is 'the precedent of reality', which suggests any statement contrary to observed precedent (including a genuinely novel true discovery) is 'irrational' until refinement — and the relation of irrationality to deniability and falsehood is never stated.",
+          "question_for_author": "Is 'irrational' equivalent to 'deniable'/false, or can an irrational statement be true — e.g., would a novel claim contradicting all observed precedent but later verified count as irrational at first, and what exactly changes its status?"
+        },
+        {
+          "quote": "(see the above point about illusions vs. reality)",
+          "issue": "The illusions-vs-reality discussion appears below this note (inside note 6), not above it — so the cross-reference is either backwards or points to material outside this document.",
+          "question_for_author": "Does this refer to the illusions/reality passage in note 6 below, or to a discussion in some other document?"
+        },
+        {
+          "quote": "Perhaps this observation is just noticing that the \"truth from the structure of a claim\" is just its self-referential nature, or perhaps something more - idk.",
+          "issue": "Note 4 (claim structure bearing on truth, parts-of-claims being claims, a possible self-referential component) ends in explicit uncertainty ('idk'), so it is unclear whether any pipeline should implement a structural/self-referential check or whether note 4 is exploratory only.",
+          "question_for_author": "Should the truth (or proof) pipeline include a formal check on the claim's structure — e.g., the 'clock whose hands point to all times' test — or is note 4 open speculation not yet part of the framework?"
+        },
+        {
+          "quote": "there are conditions for the truth of a claim - one of which is the ability to distinguish between truth and falsehood",
+          "issue": "Underdefined in three ways: whose ability (the claimant's? a property of the proof structure's discriminating power?), how it is operationalized (e.g., 'the sign must not also occur when the claim is false'?), and what the other unnamed conditions are — 'one of which' implies more exist.",
+          "question_for_author": "Is this condition a property of the proof structure (its signs must not equally support the claim's falsehood), how is it tested in practice, and what are the other 'conditions for the truth of a claim' you have in mind?"
+        },
+        {
+          "quote": "Reason (proof?): sequence of \"intellectual causality\" (ie. I don't decide if something results in truth or falsehood, I simply discover it)",
+          "issue": "The '(proof?)' marks the author's own uncertainty over whether reason equals proof, and this characterization (a sequence of intellectual-causality instances) differs from 12.5's definition of proof (a sequence of claims). Which characterization the proof pipeline should follow is unclear.",
+          "question_for_author": "Is 'reason' here identical to 'proof' (12.5) — and is a proof a sequence of claims, a sequence of intellectual-causality links, or claims-as-nodes joined by causality-as-links?"
+        },
+        {
+          "quote": "identify/observe (assume?) the pattern behind the defined scopes -> Apply observational precedent to patterns? and/or, observe what occurs after \"intellectual causality\" occurs?",
+          "issue": "The mapping of the scientific method onto the framework is hedged throughout ('assume?', '?', 'and/or'), so the Induction and Deduction steps each have two or three candidate readings and cannot be applied deterministically.",
+          "question_for_author": "For the Deduction step, which reading is intended — applying observational precedent to patterns, observing what follows intellectual causality, or both — and is the Induction step an observation of the pattern or an assumption of it?"
+        },
+        {
+          "quote": "The default/neutral position of people and AI nowadays seems to be an agnostic, physicsalist, hyperskepticalist view. This has a few problems:",
+          "issue": "Note 6 is a long polemic whose status within the framework is unclear: is it background motivation, or does it add operative rules to the pipelines — e.g., 'hyperskeptical doubt does not make a claim deniable', 'speculation never counts as proof/refutation', 'use abduction rather than suspending judgment at the limits of knowledge'?",
+          "question_for_author": "Does note 6 contribute formal rules to the pipelines — for instance, that mere speculation never counts as a sign/proof and that hyperskeptical doubt does not render a claim deniable — or is it commentary outside the framework proper?"
+        },
+        {
+          "quote": "truth = necessary ontological [non-willed] event, that is an undeniable imagination",
+          "issue": "Two category problems: (a) 'necessary' was defined as a relation between correlating phenomena, so a single event can only be 'necessary' relative to some correlate, which is unspecified here; (b) the event is simultaneously 'ontological [non-willed]' and 'an imagination', though rungs 8-9 set up ontological events and imagination/thoughts as contrasting contexts.",
+          "question_for_author": "Necessary relative to what correlate — and how can the same item be both an ontological (non-willed) event and an imagination, given the ontological/intellectual contrast at rungs 8-9?"
+        },
+        {
+          "quote": "referring to a necessary ontological [non-willed] event, in which the ontological event correlates with the intellectual event",
+          "issue": "'The intellectual event' appears without introduction (presumably the claim as a thought), and 'correlates' — defined at rung 5 as 'often follows' — leaves the direction unstated (which follows which) and uses mere 'often' correlation where the rest of the reduction demands necessity and undeniability.",
+          "question_for_author": "Which intellectual event is meant, in which direction does the correlation run (ontological event follows intellectual, or vice versa), and is 'often follows' correlation really sufficient here, or did you mean necessity?"
+        }
+      ]
+    },
+    "terms": {
+      "terms": [
+        {
+          "term": "phenomenological / phenomenological primitive / phenomena",
+          "doc_sense": "The bottom rung of the grounding ladder: raw givens ('phenomena occur') that are non-claims and therefore terminate every chain of definition, proof, or causation. 'Phenomena make up all things.' A 'phenomenological primitive' is any such given (red, anger, 2, feeling wet) that a chain bottoms out in.",
+          "standard_sense": "'Phenomenological' evokes Husserlian phenomenology (a method for analyzing structures of conscious experience) or, in science, a descriptive model without mechanism. 'Phenomenological primitive' is an established term in physics education (diSessa's p-prims: intuitive knowledge fragments). 'Phenomena' are often contrasted with things-in-themselves.",
+          "misread_risk": "Moderate-high. A philosophy reader will look for Husserlian machinery (epoché, intentionality) that isn't there; the doc uses the word purely for 'the pre-claim given that stops regress.' A physics-education reader would badly misparse 'phenomenological primitive.' Since this term anchors the entire ladder, importing either standard sense skews everything above it."
+        },
+        {
+          "term": "quality (incl. 'temporal qualia')",
+          "doc_sense": "Any distinguishable aspect that occurs among phenomena — explicitly including associations, will, and 'temporal qualia' ('before', 'after', 'time') as types of quality.",
+          "standard_sense": "A property or attribute possessed by an object (redness, mass). Will is standardly a faculty, an association a relation, and 'qualia' are the subjective sensory characters of experience — none are 'qualities' in this classificatory sense.",
+          "misread_risk": "Moderate. A reader treating qualities as static attributes of objects misses that the ladder classifies will and time-experience as occurring qualities — a classification the later definitions ('ontological = not willed', causality's temporal ordering) directly depend on."
+        },
+        {
+          "term": "scope",
+          "doc_sense": "'A pattern that a set of observations have' / a pattern that joins or categorizes observations. Functions as the domain or context a claim lives under (the Newtonian-mechanics example), with claims having scope layers (statistical level, physics level, etc.).",
+          "standard_sense": "In logic, the reach of a quantifier or operator within a formula. In everyday and project speech, the extent or range of what is covered.",
+          "misread_risk": "High. Scope is load-bearing in pipelines 2, 3, and 6. A reader using the everyday 'extent' sense reads the scope pipeline as mere topic-narrowing and misses that scope is itself a phenomenologically grounded pattern that fixes which 'causes' and which 'deniability' tests are even admissible for a claim."
+        },
+        {
+          "term": "correlation",
+          "doc_sense": "'When a phenomena often follows another' — an asymmetric, temporal succession-regularity between phenomena.",
+          "standard_sense": "A symmetric statistical association (two variables co-vary), with no built-in temporal direction. 'A regularly follows B' is succession or regularity, not correlation.",
+          "misread_risk": "High. Causality is defined as exceptionless correlation, so a reader importing the symmetric statistical sense loses the temporal directedness that makes the doc's 'causality' resemble causation at all, and may wrongly object 'correlation isn't causation' to a framework that deliberately builds the latter from the former."
+        },
+        {
+          "term": "independence",
+          "doc_sense": "'When phenomena do not correlate' — i.e., neither regularly follows the other, in the doc's succession sense of correlation.",
+          "standard_sense": "Statistical independence: P(A and B) = P(A)P(B). Crucially, zero correlation does NOT imply independence in standard statistics.",
+          "misread_risk": "Moderate. A statistically literate reader will judge the definition mathematically wrong and may discount the whole ladder — but the 'error' only exists under the substituted sense; within the doc it is just the negation of the doc's own correlation."
+        },
+        {
+          "term": "necessity",
+          "doc_sense": "'When phenomena correlate without exception' — exceptionless observed regularity, defeasible in principle by a future counterexample.",
+          "standard_sense": "Modal necessity: what could not have been otherwise, true in all possible worlds — categorically stronger than any observed regularity.",
+          "misread_risk": "Severe. Necessity feeds causality and then the final reduction ('truth = necessary ontological event...'). Reading modal necessity in makes the framework claim vastly more than it does; the doc's necessity is an empirical, exceptionless-so-far pattern, not metaphysical inevitability."
+        },
+        {
+          "term": "ontological / ontic",
+          "doc_sense": "'Whatever is not willed — or more accurately, independent of will (including will itself, as well as whatever is not directly observed).' An 'ontological event' is any non-willed occurrence; 'event = an ontic structure' is the reality-side term of the correspondence relation. On this definition, dreams and hallucinations are ontological/real.",
+          "standard_sense": "Pertaining to being or existence; ontology as the inventory of what mind-independently exists. Nothing about will. (In CS, an ontology is a formal vocabulary; in Heidegger, 'ontic' contrasts with 'ontological'.)",
+          "misread_risk": "Severe — probably the framework's most idiosyncratic definition. A reader assuming 'ontological = about what really exists out there' will think the framework smuggles in mind-independence claims it never makes, and will find '(including will itself)' contradictory instead of seeing the point: your own will occurs to you unbidden, so it too is will-independent in the relevant sense."
+        },
+        {
+          "term": "causality",
+          "doc_sense": "'Necessity, within the context of ontological events' — exceptionless succession among non-willed events, plus the inference that the causal chain starts with an uncaused event.",
+          "standard_sense": "A productive, mechanistic, or counterfactual relation ('A brings about B'), pointedly distinguished from mere correlation.",
+          "misread_risk": "Severe. The doc deliberately constructs causality from exceptionless correlation. A reader silently importing production/mechanism will misread every downstream definition (intellectual causality, truth) as making mechanistic claims, and will raise 'correlation is not causation' objections that are category errors against the doc's stipulated sense."
+        },
+        {
+          "term": "intellectual causality",
+          "doc_sense": "'Causality, within the context of imagination/thoughts' — one thought following another without exception; experienced as discovery, not decision ('I don't decide if something results in truth or falsehood, I simply discover it'). It is the engine of inference, validity, soundness, truth, and falsehood.",
+          "standard_sense": "No exact standard term, but readers will map it either to 'mental causation' (philosophy of mind: how mental states cause physical events) or to 'logical entailment' (a formal relation between propositions).",
+          "misread_risk": "Severe. It is neither. Reading it as entailment makes 'truth = intellectual causality within undeniability' look like a category error; reading it as mental causation drags in mind-body debates the doc never touches. The doc's notion is a phenomenological event-regularity among thoughts — logic itself as something observed to happen."
+        },
+        {
+          "term": "truth",
+          "doc_sense": "Two coordinated senses: (a) primary, ladder step 10: 'intellectual causality, within the context of undeniability' — a thought whose denial produces inconsistency given what you currently know, always relative to a context/domain (the Newtonian example); (b) note 12.3.1: correspondence of an inferential structure with the ontic structure it refers to; final reduction: 'necessary ontological [non-willed] event, that is an undeniable imagination.'",
+          "standard_sense": "A mind-independent property of propositions — usually correspondence with fact — not relative to any knower's current knowledge state.",
+          "misread_risk": "Severe — the most dangerous collision in the document. The doc's operative 'truth' is knowledge-state-relative undeniability (epistemic), so what is 'true' can change under refinement. A reader importing the standard sense will read the framework as claiming absolute or infallible truth, then find the refinement and microbial-life notes contradictory. The internal duality (undeniability vs correspondence) compounds the hazard."
+        },
+        {
+          "term": "truth-value",
+          "doc_sense": "'Where an inferential structure may or may not correspond with the ontic structure it refers to' — i.e., the property of standing in a possible correspondence relation at all; possessing this is what promotes a statement to a claim.",
+          "standard_sense": "The value itself — True or False — assigned to a proposition; in classical logic every statement trivially has one.",
+          "misread_risk": "Moderate (near-miss). Most passages survive the standard reading, but 'claim = a statement with a truth-value' only carves out the intended class (statements that refer to an ontic structure) under the doc's sense; under the standard sense the claim/statement distinction collapses because everything has a truth-value."
+        },
+        {
+          "term": "claim",
+          "doc_sense": "'A statement with a truth-value' (a definitional structure that refers to an ontic structure). The final reduction sharpens this: 'claim = an undeniable set of definitions and their associations (where a false claim would be a deniable one), referring to a necessary ontological event...'",
+          "standard_sense": "Any assertion someone puts forward — contested by default, equally a claim whether true or false.",
+          "misread_risk": "High. A near-miss through most of the document, but the final reduction glosses claims as undeniable-by-default with falsehood as deniability; keeping the everyday sense makes the reduction read as 'all claims are true,' which is not what the framework says."
+        },
+        {
+          "term": "statement",
+          "doc_sense": "'An inferential structure'; elaborated as 'a set of definitions + their associations' — a structured composite of referring units, which may or may not carry a truth-value.",
+          "standard_sense": "A declarative sentence expressing something true or false; in logic, a near-synonym of proposition.",
+          "misread_risk": "Moderate-high. Under the standard senses of 'statement' and 'definition,' the formula 'statement = set of definitions + associations' is unintelligible (definitions are themselves statements, standardly). The reader must adopt the doc's sense of 'definition' simultaneously or the meaning pipeline appears viciously circular."
+        },
+        {
+          "term": "definition",
+          "doc_sense": "Any unit that 'references something specific' — 'encompasses concepts, terms, etc.' The atoms statements are built from, each grounded through chains of prior definitions ending in phenomenological primitives.",
+          "standard_sense": "A sentence-level explanatory act giving a term's meaning ('a bachelor is an unmarried man') — not the referring concept or term itself.",
+          "misread_risk": "High. The meaning pipeline 'claim <- cycle of (definition <- definition) <- phenomenological primitive' reads, under the standard sense, like a regress of dictionary entries and makes the framework look circular — exactly what it is built to avoid. Under the doc's sense it is a chain of referring concepts bottoming out in raw givens."
+        },
+        {
+          "term": "proof / justification",
+          "doc_sense": "'A sequence of claims in an inferential structure' — merely the sequence; grounded/valid/sound are separate optional properties. In pipeline 4, 'proof' is the external signs/support ('I feel wet... rain is occurring') observable by anyone — i.e., evidence, not derivation.",
+          "standard_sense": "A conclusive deductive derivation (mathematics/logic) whose existence guarantees the conclusion; everyday 'proof' also connotes decisive establishment.",
+          "misread_risk": "High. A reader importing the conclusive sense assumes every 'proof' in the framework certifies its conclusion; in the doc a proof can be ungrounded, invalid, and unsound and still be a proof. The external-evidence use in pipeline 4 vs the claim-sequence use in the definitions is an additional internal wobble the reader must track."
+        },
+        {
+          "term": "valid",
+          "doc_sense": "'When the link between a proof's conclusion and its previous steps occurs by intellectual causality' — a property of the final link only.",
+          "standard_sense": "A property of the entire argument: it is impossible for all premises to be true and the conclusion false; every step matters.",
+          "misread_risk": "Severe. The doc's valid/sound pair is shifted one notch from the standard pair: what logicians call 'valid' (every step good) is the doc's 'sound,' and the doc's 'valid' (last link good) has no standard name. Silent substitution corrupts every sentence using either word."
+        },
+        {
+          "term": "sound",
+          "doc_sense": "'When every link in a proof occurs by intellectual causality' — all inferential steps are good; says nothing about premises being true.",
+          "standard_sense": "Valid AND all premises actually true — the premise-truth condition is the entire point of the term.",
+          "misread_risk": "Severe. The doc's 'sound' is roughly the standard 'valid.' A reader will assume a 'sound' proof has true premises; in the doc, premise quality is handled separately by 'grounded.' The three-way grounded/valid/sound partition is invisible under standard usage."
+        },
+        {
+          "term": "grounded",
+          "doc_sense": "'When a proof's first step is phenomenological' — the chain bottoms out in a raw given. This is the anti-circularity requirement.",
+          "standard_sense": "Colloquially 'well-founded, based in reality'; in metaphysics, grounding is a dependence relation between facts; in logic, groundedness of semantics.",
+          "misread_risk": "Moderate (near-miss). The colloquial reading ('based on good reasons') is close enough to pass unnoticed while missing the precise criterion — specifically the FIRST step must be a phenomenological primitive — which is what does the anti-regress work."
+        },
+        {
+          "term": "deniability / undeniable",
+          "doc_sense": "Explicitly defined against the ordinary sense: 'whether or not denying it results in an inconsistency/knowing you're wrong... not the ability to openly deny something.' Relative to current knowledge ('based on what you know now'), and applied per scope layer — it can legitimately operate at the statistical/probabilistic level, as in the microbial-life walkthrough.",
+          "standard_sense": "'Deniability' evokes plausible deniability — the social/legal ability to deny involvement. 'Undeniable' means obviously and indisputably true to anyone.",
+          "misread_risk": "Severe — the author anticipates this one. Deniability drives the entire truth pipeline and both final reductions. Under the plausible-deniability reading, pipeline 6 is gibberish; under the everyday 'undeniable = self-evident' reading, the framework appears to claim only obvious things are true, missing the knowledge-relative, layer-by-layer inconsistency test."
+        },
+        {
+          "term": "falsehood",
+          "doc_sense": "Two coordinated senses: non-correspondence of inferential with ontic structure (12.3.2), and 'intellectual causality, within the context of deniability' — a thought whose denial is forced given what you know.",
+          "standard_sense": "Simply the property of being false; a false statement.",
+          "misread_risk": "Moderate. Parallel to 'truth': the reader misses that falsehood is knowledge-relative and produced by the same discovered intellectual-causality mechanism, rather than being a bare semantic value."
+        },
+        {
+          "term": "coherence / incoherence (and 'comprehensibility')",
+          "doc_sense": "Comprehensibility = imaginability regardless of observed context ('pink elephants' are imaginable even though elephants aren't pink); its positive form is coherence, negative is incoherence. Grounded in the limits of imagination, not in observed reality.",
+          "standard_sense": "Coherence = logical consistency, the hanging-together of a set of statements (cf. coherence theory of truth); incoherent = self-contradictory or unintelligible.",
+          "misread_risk": "High. The doc splits statement-evaluation into two axes — imaginability (coherence) vs fit-with-reality-precedent (rationality) — that standard usage merges into one notion of consistency. Hearing 'coherent = logically consistent' collapses the two levels the doc carefully separates."
+        },
+        {
+          "term": "rational / irrational / rationality",
+          "doc_sense": "A property of statements/definitions: comprehensible within their real-world contexts — 'a pink elephant is irrational because elephants aren't pink.' Grounded in precedent taken from reality; revisable via refinement.",
+          "standard_sense": "A property of agents, beliefs, or reasoning processes — conforming to reason. 'Irrational' suggests fallacious or unhinged; a pink elephant would standardly be called unrealistic or contrary to fact, never irrational.",
+          "misread_risk": "High. Readers will hear accusations of bad reasoning where the doc only means 'conflicts with observed regularities,' and will miss that rationality here is an empirical-fit property of statement content, explicitly revisable by new evidence."
+        },
+        {
+          "term": "cycle",
+          "doc_sense": "The recursive chains inside each pipeline ('cycle of (definition <- definition)', 'cycle of (cause <- cause)') — iterated regresses that must and do terminate in something outside themselves ('all cycles must originate from something that isn't the thing itself').",
+          "standard_sense": "A closed loop that returns to its starting point; in graph theory and logic, precisely the structure that does NOT terminate.",
+          "misread_risk": "High. Under the standard sense, 'cycle of definitions' means circular definition — the exact fallacy the framework exists to avoid — so this one word, misread, inverts the framework's central move. The doc means a terminating chain."
+        },
+        {
+          "term": "law of non-circularity",
+          "doc_sense": "An induced empirical law: every kind of thing is observed to originate from something that is not that kind (chicken from non-chicken, life from non-life, universe from non-universe; deductions from inductions, observations from phenomena). It licenses the termini of all chains: the uncaused first event and the phenomenological primitive.",
+          "standard_sense": "Readers will assume the informal norm against circular reasoning / begging the question in arguments.",
+          "misread_risk": "High. The standard rule is a norm about argument form; the doc's law is an inductive generalization about origins doing heavy metaphysical lifting. Substituting the fallacy-rule sense hides the strongest (and most load-bearing) inferential lever in the framework."
+        },
+        {
+          "term": "sign / support",
+          "doc_sense": "Anything that 'points to' a claim in the proof pipeline — external, publicly observable indicators (rain droplets pointing to 'I am wet'), deliberately separated from the rules of inference that connect them (held in pipeline 5).",
+          "standard_sense": "Semiotic sign (signifier/signified) or the casual 'indication'; 'support' as generic evidence.",
+          "misread_risk": "Low-moderate (near-miss). The everyday 'indicator' reading mostly works, but a semiotics-aware reader may import signifier/signified structure, and any reader may miss the deliberate separation of signs (pipeline 4) from inference rules (pipeline 5)."
+        },
+        {
+          "term": "meaning",
+          "doc_sense": "Pipeline 1's output: 'what the claim is talking about, like what to imagine' — imaginative content assembled from definition-chains grounded in phenomenological primitives.",
+          "standard_sense": "Semantic meaning as truth-conditions, sense and reference, or use.",
+          "misread_risk": "Moderate (near-miss). Truth-conditions belong to the doc's ontology and truth pipelines, not the meaning pipeline; importing truth-conditional semantics merges pipelines 1, 3, and 6 that the framework insists on keeping distinct."
+        },
+        {
+          "term": "imagination",
+          "doc_sense": "The entire domain of thoughts/mental representation — the medium in which intellectual causality operates; hence 'truth = ... an undeniable imagination.'",
+          "standard_sense": "The faculty of forming mental images, strongly connoting fiction, fancy, and the unreal.",
+          "misread_risk": "High. 'Truth is an undeniable imagination' sounds like 'truth is made up' under the standard connotation. The doc means: truth is a thought-event whose denial is blocked, referring to a non-willed event."
+        },
+        {
+          "term": "hard problem",
+          "doc_sense": "Generalized to any question about the intrinsic nature of something (causality, energy, dark energy, reality itself): 'hard problems are just synonyms for limits of knowledge,' present in every framework including physicalism.",
+          "standard_sense": "THE hard problem of consciousness (Chalmers): specifically why physical processing is accompanied by subjective experience.",
+          "misread_risk": "Moderate. A reader keeping the consciousness-specific sense reads note 6 as being only about consciousness debates; the doc's parity argument requires the generalized sense (every view has hard problems, so they cannot be selectively fatal to rivals)."
+        },
+        {
+          "term": "real / reality",
+          "doc_sense": "'Reality' = everything not willed / independent of will — so dreams, hallucinations, and illusions ARE real (non-willed occurrences), merely categorized differently within reality. The doc explicitly diagnoses standard usage as semantic drift between a 'universal' sense and a 'not-a-dream / what everyone corroborates' sense.",
+          "standard_sense": "Real = existing objectively and mind-independently, explicitly contrasted with illusions, dreams, and hallucinations.",
+          "misread_risk": "Severe. 'Illusions are real' is flatly false in the standard sense and a theorem in the doc's sense. The entire anti-hyperskeptical argument in note 6 depends on the doc's sense; a silent substitution makes it read as self-refuting."
+        },
+        {
+          "term": "abductive reasoning",
+          "doc_sense": "A metric-driven preference procedure for going beyond direct observation: 'by some metric X, we will discover if we prefer A or B' — with the explicit norms that the metric must be identified, that 'believing requires seeing' is not an admissible default metric, and that returning the prior state of ignorance as the outcome is a misuse.",
+          "standard_sense": "Inference to the best explanation: generating and choosing the hypothesis that best explains the available evidence.",
+          "misread_risk": "Low-moderate (near-miss). Roughly compatible, but the standard reading misses the doc's specific normative bite — name the metric, and never let 'we can't know' count as the abductive conclusion."
+        },
+        {
+          "term": "induction / deduction (scientific-method glosses)",
+          "doc_sense": "In the chain Observation -> Definition -> Induction -> Deduction -> Refinement: induction = 'identify/observe (assume?) the pattern behind the defined scopes'; deduction = 'apply observational precedent to patterns' and/or 'observe what occurs after intellectual causality occurs.'",
+          "standard_sense": "Induction = generalizing from instances to rules; deduction = deriving what necessarily follows from premises, an a priori operation independent of observation.",
+          "misread_risk": "Moderate. The doc recasts deduction itself as a species of observation (watching intellectual causality happen), consistent with 'I don't decide... I discover it.' A reader with the formal sense misses that in this framework even logic is phenomenologically grounded rather than stipulated."
+        },
+        {
+          "term": "faithfulness / faithful",
+          "doc_sense": "A defined technical property: 'a communicative structure may or may not correspond with the inferential/ontic structures it refers to' — the communication-layer analogue of truth-value, and the target of pipeline 7.",
+          "standard_sense": "Loose everyday fidelity: a faithful translation or retelling.",
+          "misread_risk": "Low (near-miss). The everyday sense points the right way but misses that faithfulness is the third layer of a precise three-layer correspondence scheme (communicative / inferential / ontic) parallel to truth."
+        },
+        {
+          "term": "will",
+          "doc_sense": "A type of quality that occurs phenomenologically (ladder rung 4), and the pivot for 'ontological': notably, will itself counts as ontological because it is independent of will — you do not will your willing — which is why intellectual events can have ontological causes 'even your own will.'",
+          "standard_sense": "The faculty of volition and choice, entangled with free-will debates.",
+          "misread_risk": "Moderate. The parenthetical '(including will itself)' is incoherent under the faculty sense but crucial under the doc's sense; missing it breaks the definitions of ontological, causality, and intellectual causality that stack on top of it."
+        },
+        {
+          "term": "objective(ly)",
+          "doc_sense": "'If you see an apple, then you objectively saw an apple' — the seeing-event is an indubitable given; whether a 'real' apple exists is a separate categorization/interpretation problem.",
+          "standard_sense": "Objective = mind-independent, observer-invariant fact about the external world.",
+          "misread_risk": "Moderate. Under the standard sense the sentence asserts the apple's mind-independent existence — exactly the claim the doc is withholding. The doc's 'objective' attaches to the occurrence of the experience, not to its interpretation."
+        },
+        {
+          "term": "demystification",
+          "doc_sense": "Pipeline 7's operation: word choice and selection tailored to audience knowledge, disposition, and language so the claim is communicated faithfully.",
+          "standard_sense": "Removing mystique or debunking — explaining away something that seemed mysterious.",
+          "misread_risk": "Low (near-miss). The debunking connotation is absent; the doc means audience-adapted wording. Mild confusion only, localized to the communication pipeline."
+        }
+      ]
+    }
+  }
+}

@@ -5,12 +5,18 @@ Every objection the project has met, in one place — like the dictionary, but f
 Contents:
 
 - [[#The claim is empty|The claim is empty]]
-    - [[#1. True-by-definition statements say nothing about the world|1. True-by-definition statements say nothing about the world]]
-    - [[#2. A claim that rules nothing out says nothing|2. A claim that rules nothing out says nothing]]
+ - [[#1. True-by-definition statements say nothing about the world|1. True-by-definition statements say nothing about the world]]
+ - [[#2. A claim that rules nothing out says nothing|2. A claim that rules nothing out says nothing]]
+ - [[#5. A claimed difference names no criterion|5. A claimed difference names no criterion]]
 - [[#The claim assumes too much|The claim assumes too much]]
-    - [[#3. Nothing can occur without someone it occurs to|3. Nothing can occur without someone it occurs to]]
+ - [[#3. Nothing can occur without someone it occurs to|3. Nothing can occur without someone it occurs to]]
 - [[#The claim is false|The claim is false]]
-    - [[#4. Consciousness is an illusion — nothing is actually happening|4. Consciousness is an illusion — nothing is actually happening]]
+ - [[#4. Consciousness is an illusion — nothing is actually happening|4. Consciousness is an illusion — nothing is actually happening]]
+ - [[#6. The distinctions are made, not found|6. The distinctions are made, not found]]
+ - [[#7. Experience is a continuous flow, not separate items|7. Experience is a continuous flow, not separate items]]
+ - [[#8. All distinctions are ultimately unreal — reality is one|8. All distinctions are ultimately unreal — reality is one]]
+- [[#The claim is redundant|The claim is redundant]]
+ - [[#9. The claim adds nothing beyond its neighbors|9. The claim adds nothing beyond its neighbors]]
 
 ## The claim is empty
 
@@ -26,6 +32,12 @@ The general objection: a real claim must draw a line between how things are and 
 
 - At [[PP1 - Phenomena]], objection 2, as: "describe what things would be like if 'Phenomena occur' were not so — there is nothing to describe." Answered there: the line is real but drawn among positions rather than situations — the opposite cannot even be held — and the claim is checked by denial, not exempted from checking.
 
+### 5. A claimed difference names no criterion
+
+The general objection: saying two things differ without saying what differs between them says nothing, and cannot be checked.
+
+- At [[PP2 - Distinction]], objection 1, as: "'Red is not hot' — in what respect?" Answered there: the awareness of a difference comes before the understanding of why — what the distinctions consist of is a question for the future nodes, and an open next question does not undo the observation that raised it.
+
 ## The claim assumes too much
 
 ### 3. Nothing can occur without someone it occurs to
@@ -33,6 +45,7 @@ The general objection: a real claim must draw a line between how things are and 
 The general objection: the idea of a happening drags along the idea of someone it happens to, so occurrence with nobody there is not a coherent idea.
 
 - At [[PP1 - Phenomena]], objection 3. Answered there: the node speaks from before the words for an experiencer exist; whether one exists stays an open unknown, answered by later nodes.
+- At [[PP2 - Distinction]], objection 5, as: "a distinction needs someone to draw it — differences require a differentiator." Answered there by the same answer: telling apart depends on a difference already occurring — comparing does not produce it; who or what experiences the differences is a question for the future nodes on awareness and selfhood.
 
 ## The claim is false
 
@@ -41,3 +54,29 @@ The general objection: the idea of a happening drags along the idea of someone i
 The general objection: experience is the brain misdescribing itself, and even genuine experience is the brain reconstructing what the senses receive — not reality as it truly is.
 
 - At [[PP1 - Phenomena]], objection 4. Answered there: the illusion, the theorizing, the denying, and the reconstructing are themselves happenings; what they reveal about anything beyond them is a later question.
+
+### 6. The distinctions are made, not found
+
+The general objection: what the claim reports as found is actually contributed — by attention, language, or culture — so it reveals our habits, not what is there.
+
+- At [[PP2 - Distinction]], objection 2. Answered there: attention selects among distinctions already occurring, and language labels them — neither can begin unless distinctions are already there; whether anything makes the differences before you become aware of them stays an open unknown.
+
+### 7. Experience is a continuous flow, not separate items
+
+The general objection: what occurs is continuous, and carving it into distinct items falsifies it — so claims built on distinct items describe the carving, not the occurring.
+
+- At [[PP2 - Distinction]], objection 3. Answered there: "distinct" means not like another, not cut apart with sharp borders — a flow is only a flow because this stretch is not that one; where one phenomenon ends and another begins stays an open unknown.
+
+### 8. All distinctions are ultimately unreal — reality is one
+
+The general objection (the position is called monism): what appears as many distinct things is one undivided reality, and the appearance of distinction is a product of ignorance.
+
+- At [[PP2 - Distinction]], objection 4. Answered there: "red is not hot" is a report about what occurs, not about what is ultimately real — even an illusion contains distinctions, and the position needs distinctions to state itself; what may be beneath the many stays an open unknown.
+
+## The claim is redundant
+
+### 9. The claim adds nothing beyond its neighbors
+
+The general objection: the claim is already contained in what came before it, or is what comes after it said vaguely — so it does not deserve its own place.
+
+- At [[PP2 - Distinction]], objection 6, as: "it is already inside 'Phenomena occur', or it is the next node said vaguely." Answered there: a position exists that accepts PP1 and denies PP2 — one uniform occurrence, alike in every way — so the claim can be denied on its own; and "distinct" says the phenomena are not alike without yet saying what each one is.
