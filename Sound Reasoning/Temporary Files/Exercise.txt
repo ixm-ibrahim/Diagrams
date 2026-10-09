@@ -123,25 +123,65 @@ This allows us to refine the two questions above into:
 
 ---
 
-3. <???>
+#3. From awareness to deduction#
 
+We've already established from D1 that d_a is produced such that it must be {true, a-deductive}. Now the question becomes: what comes before d_a?
 
+Let's consider one of our deductive premises in our previous example: "this object is a square". What do each of these terms mean? We'd need to know the source of understanding behind "this", "object", "is", "a", and "square", as well as how they come together as a claim for truth. So before we can establish that this is a "true" statement, we need to have awareness of all these things first.
 
+Here, awareness includes sensory experiences, thoughts, and understood relationships. It is the other endpoint identified at the start of the exercise. Let o represent the observations available in awareness, which is a broad term for noticing anything in awareness, from seeing a shape or color to being aware of a thought or new logical relationship. We can represent this with the following:
 
+o --[?]--> d_a
 
+Where ? represents this unknown mechanism, supplying d_a as a true, a-deductive claim.
 
+But the same observations can give rise to different claims, including false ones: noticing four sides, for example, could lead someone to call a rectangle (a shape with 4 sides that is not a square) a square. Therefore, simply producing a claim from observations is not enough to satisfy D1. The mechanism must also establish which claims are true, distinguishing them from false claims - which exposes a further constraint on the unknown mechanism: it must filter truth from falsehood.
 
-<this is wrong - d_m *ultimately* lives in the o_x --[t_m]-- d_a space>
+This reveals a few essential constraints behind this unknown mechanism: it must establish d_a's truth by filtering out what is false. And if these are known constraints about this mechanism, we can now represent that with:
 
-If d_a represents the space where truth is established, and the principles within d_m are truths themselves, then d_m must be derived in the same way any other truth is produced - as a manifestation of R_t. And if the output is d_m, then this results in the following representation:
+o --[t_m]--> d_a
 
-R_d_m = d_m_a --[d_m]--> d_m
+Where t_m is that truth_generating mechanism - covering the entire space between making observations and producing d_a. Combining this with the earlier representation gives us:
 
-Where R_d_m is reasoning towards the deductive mechanism and d_m_a is its a-deductive, truth-generating source.
+R_t = o --[t_m]--> d_a --[d_m]--> d
 
-Note how d_m is both the mechanism and the output here. This exposes that self-consistency is one of the constraints that must exist within d_m.
+We have now established the structure of the route from awareness to deduction when it comes to reasoning towards truth, with each part having a constrained role:
+ - o: observations available in awareness.
+ - t_m: the a-deductive mechanism by which those observations establish truth and remove falsehood.
+ - d_a: the resulting truth-bearing statement that is an input to deduction.
+ - d_m: the mechanism that preserves truth through deduction.
+ - d: the resulting deduction or deductive chain, which must also be true.
 
-<this is where selection shows up - how do we know that selection needs to happen to begin with?>
+And considering that D1 asks how d_a is produced, and t_m is the placeholder for that mechanism, then we now have the constraints by which D1 can be answered: what occurs within t_m such that it distinguishes truth from falsehood and produces d_a as {true, a-deductive}? Let's call this T1.
+
+---
+
+#4. Distinguishing the operations within t_m#
+
+Suppose someone points to something you can't see and says, "this shape is a square." Even without knowing whether or not that person said a correct statement, you can still understand what the claim conceptually means: you can perfectly represent that statement in your mind. And only when you see it yourself can you now assess whether that statement is true or false.
+
+This exposes a key distinction within t_m: understanding a claim does not itself establish its truth, but assessing its truth requires understanding what it claims. This distinction lets us investigate the mechanisms on either side: one produces meaningful concepts, and the other assesses their truth.
+
+Since our starting point is observations available in awareness, the first mechanism must account for how those observations give rise to meaningful content. Let c_m name this mechanism, with c being the resulting concept about reality. We can represent this with the following:
+
+o --[c_m]--> c
+
+Where o is the set of observations that c_m converts into a concept about reality. Once that operation occurs, we can now begin assessing whether the claim is true or false. Let a_m name that second part of t_m's mechanism, which converts the content produced by c_m into the d_a we started out with. We can represent that with:
+
+c --[a_m]--> d_a
+
+We can now explicitly expand t_m into its components, where it encompasses both concept formation (through c_m) and truth assessment (through a_m). What we previously represented as:
+
+o --[t_m]--> d_a
+
+Can now become:
+
+o --[c_m]--> c --[a_m]--> d_a
+
+Thus, if T1 asked what occurs within t_m such that it produces d_a as {true, a-deductive}, then answering that question divides its response into two confluential questions:
+ - T2: How does c_m produce meaningful concepts from observations available in awareness?
+ - T3: How does a_m assess that content to produce d_a as {true, a-deductive}?
+
 
 
 
