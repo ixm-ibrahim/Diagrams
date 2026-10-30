@@ -1,0 +1,1246 @@
+{
+  "summary": "Extract verbatim everything Ibrahim has already written about rules of inference, abduction, and confidence-building across his artifacts",
+  "agentCount": 3,
+  "logs": [
+    "3 extractors: data.json logical grounding / Building Confidence files / appendices + DAG"
+  ],
+  "result": {
+    "logical": {
+      "extracts": [
+        {
+          "quote": "\"Some things are true and some are false — and I want to be able to tell which is which.\"",
+          "where": "data.json line 20, node 1 claim",
+          "why_relevant": "States the framework's governing goal that every rule of inference and confidence criterion serves."
+        },
+        {
+          "quote": "Building Confidence in Logical and Historical Claims",
+          "where": "data.json line 51, node 3 claim",
+          "why_relevant": "Names confidence-building as an explicit top-level project of the framework."
+        },
+        {
+          "quote": "An interactive map for distinguishing truth from falsehood — using the same standards we apply everywhere else.",
+          "where": "data.json line 9, config.homeSubtitle",
+          "why_relevant": "Meta-rule of abduction: religious claims are to be judged by the same inferential standards used everywhere else, not special ones."
+        },
+        {
+          "quote": "Logical Grounding: statements can be true or false, and new statements can be derived from existing ones.",
+          "where": "data.json line 773, node 1.4 claim",
+          "why_relevant": "The summary rule of the logic layer: bivalence plus derivability of new statements."
+        },
+        {
+          "quote": "Statements about reality are true or false, and are held as beliefs.",
+          "where": "data.json line 4407, node 1.4.1 claim",
+          "why_relevant": "Bivalence rule for statements plus the belief attitude that confidence criteria apply to."
+        },
+        {
+          "quote": "Concepts have rationality and comprehensibility, and are either compatible or contradictory.",
+          "where": "data.json line 4422, node 1.4.2 claim",
+          "why_relevant": "Introduces the two evaluative dimensions of concepts used to test claims."
+        },
+        {
+          "quote": "Rationality and comprehensibility are independent, and truth corresponds with rationality.",
+          "where": "data.json line 4437, node 1.4.3 claim",
+          "why_relevant": "Core rule: truth tracks rationality (non-contradiction), not whether a concept can be visualized."
+        },
+        {
+          "quote": "A statement's truth depends on others.",
+          "where": "data.json line 4452, node 1.4.4 claim",
+          "why_relevant": "Grounds inferential dependency — the basis for necessity, sufficiency, and implication."
+        },
+        {
+          "quote": "Valid arguments derive new statements, including about what is not observed.",
+          "where": "data.json line 4465, node 1.4.5 claim",
+          "why_relevant": "The rule licensing inference beyond observation — derivation of unobserved conclusions."
+        },
+        {
+          "quote": "An abstraction is information about a pattern or class.",
+          "where": "data.json line 12276, node 1.4.1.1 claim",
+          "why_relevant": "Defines the target of induction (1.5.2 infers from pattern to abstraction)."
+        },
+        {
+          "quote": "Descriptions are either true or false.",
+          "where": "data.json line 12291, node 1.4.1.2 claim",
+          "why_relevant": "Bivalence stated at the level of descriptions."
+        },
+        {
+          "quote": "A statement is a description about reality.",
+          "where": "data.json line 12307, node 1.4.1.3 claim",
+          "why_relevant": "Restricts truth-apt statements to descriptions of reality — a condition on what reasoning operates over."
+        },
+        {
+          "quote": "Evidence is an observation that matches or mismatches what a statement describes.",
+          "where": "data.json line 12320, node 1.4.1.4 claim",
+          "why_relevant": "Defines evidence — the raw input to confidence in a claim — as observational match/mismatch."
+        },
+        {
+          "quote": "A belief is a statement thought to be true.",
+          "where": "data.json line 12336, node 1.4.1.5 claim",
+          "why_relevant": "Defines belief, the state that assumption/judgment criteria classify."
+        },
+        {
+          "quote": "An assumption is a belief without evidence.",
+          "where": "data.json line 12349, node 1.4.1.6 claim",
+          "why_relevant": "Confidence criterion: belief lacking observational evidence is demoted to assumption."
+        },
+        {
+          "quote": "A judgment is a belief with evidence.",
+          "where": "data.json line 12362, node 1.4.1.7 claim",
+          "why_relevant": "Confidence criterion: evidence is what upgrades belief to judgment."
+        },
+        {
+          "quote": "A description is information about an object.",
+          "where": "data.json line 18563, node 1.4.1.2.1 claim",
+          "why_relevant": "First step of the truth-definition chain under 1.4.1.2."
+        },
+        {
+          "quote": "A definition is a description of an identity.",
+          "where": "data.json line 18576, node 1.4.1.2.2 claim",
+          "why_relevant": "Definitions (used in rationality tests at 1.4.2) are grounded as descriptions of identities."
+        },
+        {
+          "quote": "Descriptions match or mismatch what they describe.",
+          "where": "data.json line 18591, node 1.4.1.2.3 claim",
+          "why_relevant": "The match/mismatch relation that truth and falsehood are defined by."
+        },
+        {
+          "quote": "A description is independent from what it describes.",
+          "where": "data.json line 18607, node 1.4.1.2.4 claim",
+          "why_relevant": "Condition making truth non-trivial: the description can differ from its object, so error is possible."
+        },
+        {
+          "quote": "Truth is when a description matches reality.",
+          "where": "data.json line 18620, node 1.4.1.2.5 claim",
+          "why_relevant": "The framework's correspondence definition of truth."
+        },
+        {
+          "quote": "Falsehood is when a description mismatches reality.",
+          "where": "data.json line 18633, node 1.4.1.2.6 claim",
+          "why_relevant": "The correspondence definition of falsehood."
+        },
+        {
+          "quote": "A concept is a set of definitions.",
+          "where": "data.json line 12376, node 1.4.2.1 claim",
+          "why_relevant": "Unit over which the compatibility/contradiction test operates."
+        },
+        {
+          "quote": "Compatibility is when imagining a concept's definitions results in a visualization.",
+          "where": "data.json line 12392, node 1.4.2.2 claim",
+          "why_relevant": "Operational test for compatibility: joint imaginability of the definitions."
+        },
+        {
+          "quote": "A contradiction is when imagining a concept's definitions does not result in a visualization.",
+          "where": "data.json line 12408, node 1.4.2.3 claim",
+          "why_relevant": "Operational test for contradiction — failure of joint imaginability — the framework's core negative rule."
+        },
+        {
+          "quote": "A concept is rational when its definitions are compatible.",
+          "where": "data.json line 12422, node 1.4.2.4 claim",
+          "why_relevant": "Defines rationality (the property truth corresponds with) as internal compatibility of definitions."
+        },
+        {
+          "quote": "A concept is comprehensible when imagining its object results in a visualization.",
+          "where": "data.json line 12436, node 1.4.2.5 claim",
+          "why_relevant": "Defines comprehensibility, which is explicitly severed from truth at 1.4.3.8."
+        },
+        {
+          "quote": "A concept is either rational or irrational.",
+          "where": "data.json line 12449, node 1.4.3.1 claim",
+          "why_relevant": "Bivalence of rationality — no middle status in the contradiction test."
+        },
+        {
+          "quote": "A concept is either comprehensible or incomprehensible.",
+          "where": "data.json line 12462, node 1.4.3.2 claim",
+          "why_relevant": "Bivalence of comprehensibility, setting up the 2x2 independence argument."
+        },
+        {
+          "quote": "A concept's rationality is independent from its comprehensibility.",
+          "where": "data.json line 12481, node 1.4.3.3 claim",
+          "why_relevant": "Rule preventing 'I can't picture it' from counting as 'it is contradictory'."
+        },
+        {
+          "quote": "Some concepts are rational and comprehensible.",
+          "where": "data.json line 12496, node 1.4.3.4 claim",
+          "why_relevant": "First quadrant of the independence proof for the rationality/comprehensibility distinction."
+        },
+        {
+          "quote": "Some concepts are irrational yet comprehensible.",
+          "where": "data.json line 12511, node 1.4.3.5 claim",
+          "why_relevant": "Shows visualizability does not certify rationality — a check against imagination-based inference."
+        },
+        {
+          "quote": "Some concepts are rational yet incomprehensible.",
+          "where": "data.json line 12526, node 1.4.3.6 claim",
+          "why_relevant": "Shows unvisualizable concepts can still be rational — blocks incomprehensibility as a refutation."
+        },
+        {
+          "quote": "Some concepts are irrational and incomprehensible.",
+          "where": "data.json line 12541, node 1.4.3.7 claim",
+          "why_relevant": "Completes the four-case demonstration of independence."
+        },
+        {
+          "quote": "Truth corresponds with rationality, not comprehensibility.",
+          "where": "data.json line 12557, node 1.4.3.8 claim",
+          "why_relevant": "Key abductive/confidence rule: judge claims by non-contradiction, not by whether they can be pictured."
+        },
+        {
+          "quote": "A possible statement is one that does not contradict what is known.",
+          "where": "data.json line 12570, node 1.4.4.1 claim",
+          "why_relevant": "Modal rule: possibility defined as consistency with the known."
+        },
+        {
+          "quote": "An impossible statement is one that contradicts what is known.",
+          "where": "data.json line 12583, node 1.4.4.2 claim",
+          "why_relevant": "Modal rule: impossibility defined as contradiction with the known — the elimination criterion."
+        },
+        {
+          "quote": "A dependency is when one statement's truth or falsehood contradicts another's.",
+          "where": "data.json line 12600, node 1.4.4.3 claim",
+          "why_relevant": "Defines inter-statement dependency, the raw relation from which inference rules are built."
+        },
+        {
+          "quote": "A statement is necessary for another when its falsehood contradicts the other's truth.",
+          "where": "data.json line 12616, node 1.4.4.4 claim",
+          "why_relevant": "Defines necessity via contradiction — one of the two primitive inference relations."
+        },
+        {
+          "quote": "A statement is sufficient for another when its truth contradicts the other's falsehood.",
+          "where": "data.json line 12632, node 1.4.4.5 claim",
+          "why_relevant": "Defines sufficiency via contradiction — the relation validity is defined from."
+        },
+        {
+          "quote": "A condition is a statement that is necessary or sufficient for another.",
+          "where": "data.json line 12646, node 1.4.4.6 claim",
+          "why_relevant": "Collects necessity and sufficiency into the general notion of a condition on truth."
+        },
+        {
+          "quote": "An implication is the relationship between a sufficient statement and what it is sufficient for.",
+          "where": "data.json line 12660, node 1.4.4.7 claim",
+          "why_relevant": "Defines implication — the licensed step in every deduction — from sufficiency."
+        },
+        {
+          "quote": "A premise is a statement from which an implication follows.",
+          "where": "data.json line 12673, node 1.4.5.1 claim",
+          "why_relevant": "Defines premise for the argument calculus."
+        },
+        {
+          "quote": "A conclusion is a statement that an implication leads to.",
+          "where": "data.json line 12686, node 1.4.5.2 claim",
+          "why_relevant": "Defines conclusion as the endpoint of implication."
+        },
+        {
+          "quote": "An argument is a set of premises and their conclusion.",
+          "where": "data.json line 12702, node 1.4.5.3 claim",
+          "why_relevant": "Defines the argument unit that validity applies to."
+        },
+        {
+          "quote": "An argument is valid when its premises are sufficient for its conclusion.",
+          "where": "data.json line 12718, node 1.4.5.4 claim",
+          "why_relevant": "The framework's explicit rule of validity: premise-sufficiency (truth of premises contradicts falsehood of conclusion)."
+        },
+        {
+          "quote": "A derivation is the conclusion of a valid argument.",
+          "where": "data.json line 12733, node 1.4.5.5 claim",
+          "why_relevant": "Defines derivation — only valid arguments produce derivations."
+        },
+        {
+          "quote": "A justification is a valid argument whose conclusion is a belief.",
+          "where": "data.json line 12746, node 1.4.5.6 claim",
+          "why_relevant": "Confidence criterion: a belief is justified only by a valid argument concluding in it."
+        },
+        {
+          "quote": "Unobserved derivations occur from valid arguments.",
+          "where": "data.json line 12759, node 1.4.5.7 claim",
+          "why_relevant": "Licenses inference to unobserved matters (the basis for historical/metaphysical claims) strictly via valid arguments."
+        },
+        {
+          "quote": "Reasoning verifies whether or not a statement is true or not.",
+          "where": "data.json line 788, node 1.5 claim",
+          "why_relevant": "Defines reasoning's function as truth-verification — the framework's master method."
+        },
+        {
+          "quote": "An inference is a new statement that results from other statements or observations.",
+          "where": "data.json line 4479, node 1.5.1 claim",
+          "why_relevant": "General definition of inference covering both observation-based and statement-based derivation."
+        },
+        {
+          "quote": "Induction is an inference from a pattern in observations to an abstraction.",
+          "where": "data.json line 4494, node 1.5.2 claim",
+          "why_relevant": "The framework's rule of induction."
+        },
+        {
+          "quote": "Deduction is an inference from premises through valid implication.",
+          "where": "data.json line 4509, node 1.5.3 claim",
+          "why_relevant": "The framework's rule of deduction, tied to validity at 1.4.5.4."
+        },
+        {
+          "quote": "A deduction is sound when its premises are true.",
+          "where": "data.json line 4524, node 1.5.4 claim",
+          "why_relevant": "Soundness condition: validity plus true premises."
+        },
+        {
+          "quote": "Verification is comparing a derivation against observation.",
+          "where": "data.json line 4539, node 1.5.5 claim",
+          "why_relevant": "The empirical check rule: derived statements must be compared back against observation."
+        },
+        {
+          "quote": "A prediction is a derivation about what is not yet observed.",
+          "where": "data.json line 4554, node 1.5.6 claim",
+          "why_relevant": "Defines prediction — the derivation type that verification tests."
+        },
+        {
+          "quote": "A proof is a sequence of sound deductions from premises to a conclusion.",
+          "where": "data.json line 4570, node 1.5.7 claim",
+          "why_relevant": "Defines proof as chained sound deductions — the maximal confidence structure."
+        },
+        {
+          "quote": "A process is a sequence where each step depends on the one before it.",
+          "where": "data.json line 4585, node 1.5.8 claim",
+          "why_relevant": "Grounds the step-dependency structure that reasoning-as-method requires."
+        },
+        {
+          "quote": "A method is a class of processes.",
+          "where": "data.json line 4600, node 1.5.9 claim",
+          "why_relevant": "Makes 'method' precise so that a method of reasoning can itself be evaluated (as done at 1.6)."
+        },
+        {
+          "quote": "Reasoning is the method of observation → identification → induction → deduction → verification.",
+          "where": "data.json line 4613, node 1.5.10 claim",
+          "why_relevant": "The framework's canonical five-step pipeline of valid reasoning."
+        },
+        {
+          "quote": "A method of reasoning that justifies falsehood can't distinguish it from truth.",
+          "where": "data.json line 803, node 1.6 claim",
+          "why_relevant": "The disqualification rule for methods: justifying any falsehood destroys the method's truth-discriminating power."
+        },
+        {
+          "quote": "A hope about something false can occur.",
+          "where": "data.json line 4626, node 1.6.1 claim",
+          "why_relevant": "Premise of the 1.6 argument: hope is not truth-tracking."
+        },
+        {
+          "quote": "An assumption about something false can occur.",
+          "where": "data.json line 4639, node 1.6.2 claim",
+          "why_relevant": "Premise of the 1.6 argument: evidence-free belief can be false."
+        },
+        {
+          "quote": "The outcome of reasoning can be false.",
+          "where": "data.json line 4655, node 1.6.3 claim",
+          "why_relevant": "Acknowledges fallibility of reasoning outcomes — why method-level criteria are needed."
+        },
+        {
+          "quote": "A method of reasoning that justifies falsehood is independent from truth.",
+          "where": "data.json line 4670, node 1.6.4 claim",
+          "why_relevant": "Derives that falsehood-justifying methods bear no relation to truth."
+        },
+        {
+          "quote": "Truth and falsehood lack distinction in a method of reasoning that is independent from truth.",
+          "where": "data.json line 4683, node 1.6.5 claim",
+          "why_relevant": "Completes the argument: such a method cannot deliver the distinction the whole project seeks."
+        },
+        {
+          "quote": "\"I want to know what is actually true — not what I want to be true.\"",
+          "where": "data.json line 816, node 1.7 claim",
+          "why_relevant": "The motivational rule against motivated reasoning — wanting must not select conclusions."
+        },
+        {
+          "quote": "This is the foundation — the most basic description of experience, from which everything that follows is built. Every observation, identification, and conclusion later in the tree traces back to these starting points.",
+          "where": "data.json line 163, node 1.1 Conclusion",
+          "why_relevant": "States the grounding rule: every later inference must trace back to the phenomenological starting points."
+        },
+        {
+          "quote": "The section's purpose is not to inform — it is to ground. Every technical term used later (information, identity, truth, reality, reasoning) needs to trace back to something undeniable.",
+          "where": "data.json line 248, node 1.1 Objections, 'What's Missing'",
+          "why_relevant": "Explicit grounding criterion: terms used in inference rules must trace to something undeniable."
+        },
+        {
+          "quote": "Either the illusion itself occurs — in which case occurrence, distinction, and quality are all present and this holds — or nothing occurs at all, not even the appearance of experience. To reject this, the objector must commit not to the claim that experience is misleading, but to the claim that there is no experience whatsoever.",
+          "where": "data.json line 289, node 1.1 Objections, 'Correction' (illusion objection)",
+          "why_relevant": "Shows the confidence rule for foundations: a claim is secured when its denial is self-undermining."
+        },
+        {
+          "quote": "Try collapsing any two of the five. Can you eliminate distinction without losing specificity? Can you eliminate connection without losing presence?",
+          "where": "data.json line 315, node 1.1 Objections, 'What's Missing' (collapse objection)",
+          "why_relevant": "Gives the collapse test — an operational procedure for deciding whether conceptual distinctions are genuine."
+        },
+        {
+          "quote": "Each step depends on the one before it — occurrence must precede distinction, which must precede specificity. The ordering is not arbitrary.",
+          "where": "data.json line 316, node 1.1 Objections, 'What's Missing'",
+          "why_relevant": "States the dependency-ordering condition on how grounding steps may be sequenced."
+        },
+        {
+          "quote": "The five steps are the order in which each aspect is *identified and named*, not the order in which they are *experienced*. The cost of collapsing is hidden dependencies; the cost of separating is mild redundancy. The tree chooses explicitness over brevity.",
+          "where": "data.json line 323, node 1.1 Objections, 'Correction'",
+          "why_relevant": "An explicit abductive preference rule: explicitness is preferred over parsimony because hidden dependencies cost more than redundancy."
+        },
+        {
+          "quote": "Parsimony of vocabulary is preferable to explicitness — fewer terms is better unless each one captures a genuinely different experience.",
+          "where": "data.json line 308, node 1.1 Objections, 'Objection Commitments' (objector's stated commitment)",
+          "why_relevant": "The parsimony metric the framework engages and qualifies — fewer terms wins only if no genuinely different experience is lost."
+        },
+        {
+          "quote": "Commitment #2 raises the real concern: can this framework distinguish knowledge from systematic error? At this level, no — and it explicitly acknowledges this in Unknowns. The distinction between knowledge and correct knowledge requires ontological vocabulary (1.3). But the concern does not show that the foundation is wrong — only that it is incomplete. An incomplete foundation that is correct is better than a complete framework built on ungrounded assumptions.",
+          "where": "data.json line 468, node 1.2 Objections, 'What's Missing'",
+          "why_relevant": "Abductive preference metric: correctness of an incomplete foundation outranks completeness built on ungrounded assumptions."
+        },
+        {
+          "quote": "This branch grounds the experiential structures — information, comparison, knowledge, and definition — that truth conditions, justification, and logic operate on. These later layers require this foundation; they do not replace it. The branch is incomplete by design: it establishes the base that the ontological (1.3), logical (1.4), and reasoning (1.5) layers build upon.",
+          "where": "data.json line 475, node 1.2 Objections, 'Correction'",
+          "why_relevant": "States how the rules of logic and reasoning are grounded: layered on epistemological and ontological foundations."
+        },
+        {
+          "quote": "Commitment #1 sets a standard that no foundational investigation can meet — including the objector's own. Any critique of the framework uses identification (singling out the problem), comparison (noting the difference between circular and non-circular reasoning), and knowledge (claiming to know that circularity is a flaw). If the standard is applied consistently, it defeats itself.",
+          "where": "data.json line 502, node 1.2 Objections, 'What's Missing' (circularity objection)",
+          "why_relevant": "Meta-rule for evaluating standards of reasoning: a standard that defeats itself when applied consistently is rejected."
+        },
+        {
+          "quote": "Commitment #2 misdescribes what the framework does. It does not use identification to *prove* identification. It *points at* the experience of singling out information and gives it a label. The observations — red distinguished from blue, a pattern recognized across features, a question asked and answered — are experiential data, not conclusions derived from prior epistemological theory. The framework is ostensive (pointing at experience), not inferential (deriving from premises).",
+          "where": "data.json line 503, node 1.2 Objections, 'What's Missing'",
+          "why_relevant": "States how foundational rules are discovered: ostensively from experiential data, not inferred from premises."
+        },
+        {
+          "quote": "The framework does not derive identification from identification. It points at experiential data — the occurrence of features, patterns, comparisons, knowledge, and definitions — and labels what is observed. The method is ostensive, not inferential. Awareness of a capacity is what the framework describes; a theory of that capacity is what it produces. These are not the same, and the first does not depend on the second.",
+          "where": "data.json line 510, node 1.2 Objections, 'Correction'",
+          "why_relevant": "The framework's account of how its own grounding avoids circularity — pointing versus deriving."
+        },
+        {
+          "quote": "The relevant test is not \"does every culture draw the same boundaries?\" but \"does every experiencing being encounter distinct information, recognize patterns, compare, and come to know?\" These structural features are what the branch grounds. The specific categories are ways of organizing the structures — they are revisable without undermining the foundation.",
+          "where": "data.json line 539, node 1.2 Objections, 'What's Missing' (subjectivity objection)",
+          "why_relevant": "Rule for what counts as the correct universality test for grounded structures, and which parts are revisable."
+        },
+        {
+          "quote": "If nothing is independent of wanting, there is nothing for a claim to match or miss. Asking \"is this true?\" has no standing outside \"is this what I want to be true?\" — and the distinction between true and false collapses into preference.",
+          "where": "data.json line 605, node 1.3 'If Rejected' (Knowledge loses its target)",
+          "why_relevant": "Grounds why truth requires a want-independent reality — the precondition for the match-based truth rule."
+        },
+        {
+          "quote": "Being wrong requires something to be wrong about. Without a reality independent of will, \"mistaken\" has no meaning — whatever one wants to be the case simply is.",
+          "where": "data.json line 609, node 1.3 'If Rejected' (Error becomes impossible)",
+          "why_relevant": "Condition on valid reasoning: error and correction are only possible against will-independent reality."
+        },
+        {
+          "quote": "The next step: logical structures (1.4) — how reality, once established, supports reasoning about what is and what is not the case.",
+          "where": "data.json line 632, node 1.3 'Unlocks'",
+          "why_relevant": "States the grounding order: logical rules are built on the established concept of reality."
+        },
+        {
+          "quote": "\"Nothing whatsoever is happening\" — since holding that position is itself *something* happening.",
+          "where": "data.json line 904, node 1.1.1 'Eliminates'",
+          "why_relevant": "Elimination-by-self-refutation: the primitive form of the framework's self-undermining test."
+        },
+        {
+          "quote": "A more basic starting point — occurrence is the floor. There is nothing beneath it to appeal to.",
+          "where": "data.json line 905, node 1.1.1 'Eliminates'",
+          "why_relevant": "States the regress-stopping condition for grounding chains."
+        },
+        {
+          "quote": "Commitment #1 is plausible for scientific claims, where informationally empty statements do no work. But foundations aren't scientific claims — they play a different role. Ask: what would it look like if 'phenomena occur' were *false*? Not false in a hypothetical way, but actually false — nothing occurring at all. In that case, there are no beliefs, no coherence relations, no justificatory chains, no objections. The coherentist framework the objector prefers (commitment #3) cannot even *begin* without something to cohere about.",
+          "where": "data.json line 947, node 1.1.1 Objections, 'What's Missing' (tautology objection)",
+          "why_relevant": "Distinguishes the evaluation rule for foundations from the falsifiability rule for empirical claims."
+        },
+        {
+          "quote": "The real concern behind the objection is that a claim this basic might not *do enough work* — that it's too thin to support anything. But the test of a foundation is not whether it asserts much. It is whether anything can be said at all without it. 'Phenomena occur' passes that test: its negation removes the possibility of any assertion, including the objector's own.",
+          "where": "data.json line 950, node 1.1.1 Objections, 'What's Missing'",
+          "why_relevant": "Explicit criterion for foundational confidence: nothing can be asserted without the claim."
+        },
+        {
+          "quote": "The coherentist alternative (beliefs justifying beliefs) requires content for beliefs to be about, and that content is phenomena occurring. The foundation's triviality is its strength: it cannot be denied without undermining the denier's own activity.",
+          "where": "data.json line 957, node 1.1.1 Objections, 'Correction'",
+          "why_relevant": "Confidence criterion: undeniability-without-self-undermining is what secures the base of all inference."
+        },
+        {
+          "quote": "The claim's undeniability is not a defect — it is what makes it foundational.",
+          "where": "data.json line 1003, node 1.1.1 Objections, 'Correction' (pseudo-statement objection)",
+          "why_relevant": "States undeniability as the defining mark of a foundational claim."
+        },
+        {
+          "quote": "The negation of 'phenomena occur' requires phenomena (your own thinking and speaking) to be stated. The objector's tools are made of the material they are trying to reject.",
+          "where": "data.json line 1004, node 1.1.1 Objections, 'Correction'",
+          "why_relevant": "The performative self-refutation rule applied concretely."
+        },
+        {
+          "quote": "Commitment #3 fails: the watcher model adds an assumption (a separate entity) without resolving what it was supposed to resolve.",
+          "where": "data.json line 1945, node 1.1.5 Objections, 'What's Missing' (watcher objection)",
+          "why_relevant": "Abduction metric: alternatives that add assumptions without resolving the problem are rejected."
+        },
+        {
+          "quote": "Positing a separate entity to do what occurrence already does is an extra assumption with no observational ground at this level.",
+          "where": "data.json line 1952, node 1.1.5 Objections, 'Correction'",
+          "why_relevant": "Abduction rule: posits must have observational ground and do work existing terms cannot."
+        },
+        {
+          "quote": "How matching relates to truth or verification — deferred to later nodes.",
+          "where": "data.json line 2412, node 1.2.3 'Unknowns'",
+          "why_relevant": "Shows match (the truth relation's core) is grounded first, then truth/verification rules are built on it."
+        },
+        {
+          "quote": "How mismatch relates to contradiction — deferred to (1.4.3).",
+          "where": "data.json line 2570, node 1.2.4 'Unknowns'",
+          "why_relevant": "Shows contradiction (the core negative inference rule) is grounded on the experiential concept of mismatch."
+        },
+        {
+          "quote": "Reasoning (1.5) evaluates whether or not statements are true. But evaluating a statement requires recognizing what is known and what is not — which requires the question-knowledge-ignorance structure. Without it, reasoning has nothing to work with.",
+          "where": "data.json line 2850, node 1.2.6 'If Rejected' (Reasoning has no starting point)",
+          "why_relevant": "Condition on valid reasoning: it presupposes the grounded knowledge/ignorance distinction."
+        },
+        {
+          "quote": "The sieve's governing claim — that some things are true and some are false — requires the capacity to know which is which. Without knowledge and ignorance as grounded states, \"knowing which is which\" has no experiential meaning.",
+          "where": "data.json line 2854, node 1.2.6 'If Rejected'",
+          "why_relevant": "Ties the whole inferential project's viability to grounded epistemic states."
+        },
+        {
+          "quote": "Commitment #3 asks the framework to represent degrees at the foundational level. But degrees of confidence require additional vocabulary — comparison between how well an answer matches what is wanted — that builds on this foundation rather than replacing it.",
+          "where": "data.json line 2931, node 1.2.6.3/knowledge Objections, 'What's Missing'",
+          "why_relevant": "States how degrees of confidence are to be constructed: as match-comparison built on the binary foundation."
+        },
+        {
+          "quote": "Partial knowledge is real, but it is not a third state between knowledge and ignorance. It is the coexistence of knowledge about some questions and ignorance about others within the same topic. The binary applies to each question individually; apparent gradation arises from the multiplicity of questions involved.",
+          "where": "data.json line 2937, node 1.2.6.3/knowledge Objections, 'Correction'",
+          "why_relevant": "Rule for handling graded confidence: decompose into per-question binary states."
+        },
+        {
+          "quote": "Whether or not claims about \"all\" are justified — the reliability of generalizations requires reasoning vocabulary (1.5).",
+          "where": "data.json line 3071, node 1.2.7 'Unknowns'",
+          "why_relevant": "Locates justification of generalizations (induction's output) in the reasoning layer."
+        },
+        {
+          "quote": "Whether or not an open scope's unknown members share the same patterns as its known members — the problem of induction, deferred.",
+          "where": "data.json line 3072, node 1.2.7 'Unknowns'",
+          "why_relevant": "Explicitly names and defers the problem of induction — a boundary condition on the induction rule."
+        },
+        {
+          "quote": "\"Defined\": classes have scope (1.2.7.1) and boundaries (1.2.7.2), information has meaning within a scope (1.2.7.3), a definition is the identifiable features of a scope's boundary (1.2.7.7), and \"all\" of a scope includes both known and unknown instances (1.2.7.4–6) — general claims extend beyond what has been encountered.",
+          "where": "data.json line 370, node 1.2 Conclusion",
+          "why_relevant": "Grounds the scope machinery that makes universal statements — the targets of induction — meaningful."
+        },
+        {
+          "quote": "What methods reliably distinguish knowledge from error — requires the vocabulary of logic (1.4) and reasoning (1.5).",
+          "where": "data.json line 436, node 1.2 'Unknowns'",
+          "why_relevant": "States that reliable error-distinguishing methods are exactly what the 1.4/1.5 rules supply."
+        },
+        {
+          "quote": "Whether or not a method that justifies falsehood can be trusted — addressed at (1.6).",
+          "where": "data.json line 437, node 1.2 'Unknowns'",
+          "why_relevant": "Points to 1.6 as the trust criterion for methods of reasoning."
+        },
+        {
+          "quote": "Introducing new terminology is only justified when it captures something the prior terms do not.",
+          "where": "data.json line 4792, node 1.2.1.1 Objections, 'Objection Commitments' (objector's commitment)",
+          "why_relevant": "A vocabulary-economy rule the framework engages when deciding which terms are legitimately introduced."
+        },
+        {
+          "quote": "The term is not redundant — it grounds a concept that later nodes depend on. Its value is not in adding new content but in giving a single, grounded referent for what later claims build on.",
+          "where": "data.json line 4807, node 1.2.1.1 Objections, 'Correction'",
+          "why_relevant": "The framework's counter-rule: a term is justified by grounding downstream dependence, not only by new content."
+        },
+        {
+          "quote": "The reliability of mental content — whether or not thoughts and possibilities are accurate — deferred to truth (1.4.1.2) and verification (1.5.5).",
+          "where": "data.json line 7060, node 1.2.5.6 'Unknowns'",
+          "why_relevant": "Assigns accuracy-assessment of thought to the truth and verification rules."
+        },
+        {
+          "quote": "Your own acceptance of \"only public evidence counts\" was itself a private judgment you found compelling — showing that private reasoning is already doing foundational work, even in frameworks that claim to reject it.",
+          "where": "data.json line 7132, node 1.2.5.6 Objections, 'Correction' (unverifiable mental content)",
+          "why_relevant": "Turns the self-application test on evidential standards: private reasoning is unavoidable at the foundation."
+        },
+        {
+          "quote": "This identifies the foundational state that all accounts of knowledge share: the wanted information has occurred. Justification and truth-correspondence are refinements that require vocabulary not yet built — they do not replace the basic experiential state of having an answer but add conditions to it.",
+          "where": "data.json line 7916, node 1.2.6.3 Objections, 'Correction' (JTB objection)",
+          "why_relevant": "States how justification and truth conditions are layered on top of the basic knowledge state."
+        },
+        {
+          "quote": "Commitment #1 sets a standard — full verification — that would eliminate most vocabulary already built. Patterns (1.2.1.6) are identified from a set of features and extended to new cases. Correlations (1.2.5.7.1) are recognized from observed sequences and expected in future ones. If only fully verified concepts are useful, then patterns, correlations, and expectations are all empty too.",
+          "where": "data.json line 9037, node 1.2.7.4/'all' Objections, 'What's Missing'",
+          "why_relevant": "Rejects full verification as the usefulness standard by showing it proves too much — a consistency test on proposed epistemic rules."
+        },
+        {
+          "quote": "The node does not claim that \"all\" is fully verified. It identifies what \"all\" *means*: each member of a scope, none absent. Whether or not a claim about \"all\" is justified is a question about reasoning (1.5), not about what the word refers to.",
+          "where": "data.json line 9038, node 1.2.7.4 Objections, 'What's Missing'",
+          "why_relevant": "Separates meaning from justification — justification of universal claims belongs to the reasoning rules."
+        },
+        {
+          "quote": "\"All\" identifies the complete membership of a scope — not a guarantee that every instance has been checked. Whether or not claims about all instances are justified is a question about reasoning, not about whether or not the scope itself is meaningful. The concept is what makes it possible to recognize that unknown instances exist at all.",
+          "where": "data.json line 9044, node 1.2.7.4 Objections, 'Correction'",
+          "why_relevant": "Restates the meaning/justification split governing how universal claims may be asserted."
+        },
+        {
+          "quote": "Commitment #2 assumes that formal logic is available prior to experiential grounding. But logic is addressed at (1.4), and the logical grounding depends on the epistemological grounding established here. The formal quantifier \"for all x\" presupposes that a totality beyond encountered instances is referrable — which is exactly what this node grounds experientially.",
+          "where": "data.json line 9070, node 1.2.7 Objections, 'What's Missing'",
+          "why_relevant": "States how logical rules are discovered/grounded: formal logic depends on prior experiential grounding, not vice versa."
+        },
+        {
+          "quote": "Commitment #2 moves from a particular fact to a universal claim without warrant. That some involuntary events can become voluntary through training is not yet that all can.",
+          "where": "data.json line 11827, node 1.3.7.3 Objections, 'What's Missing'",
+          "why_relevant": "Applied inference rule: generalizing from some to all without warrant is invalid."
+        },
+        {
+          "quote": "The determinist's own activity — reasoning toward the conclusion that will is illusory — is itself a phenomenological quality (the felt quality of following an argument to a conclusion). If causal determination eliminates the phenomenological quality of willing, it equally eliminates the phenomenological quality of reasoning — and the determinist has undermined the very process by which they reached their conclusion.",
+          "where": "data.json line 14056, node 1.2.5.1 (will) Objections, 'Correction'",
+          "why_relevant": "The self-undermining test applied to a rival position: a thesis that dissolves reasoning cannot be reasoned to."
+        },
+        {
+          "quote": "Consistently applied, commitment #2 dissolves not just willing but every experiential distinction, including the distinction between 'I reasoned my way here' and 'I arbitrarily arrived here.'",
+          "where": "data.json line 14057, node 1.2.5.1 Objections, 'Correction'",
+          "why_relevant": "Consistency-of-application rule: commitments are evaluated by what they dissolve when applied everywhere."
+        },
+        {
+          "quote": "A possibility is a thought that matches recognized patterns.",
+          "where": "data.json line 16826, node 1.2.5.6.4 claim",
+          "why_relevant": "Experiential definition of possibility — the pattern-matching precursor to the modal rules at 1.4.4."
+        },
+        {
+          "quote": "Apply the same test to perception: in a dream, you perceive a dragon. Waking, you perceive a table. The perceptual mechanism is the same (sensation occurring). Dream-perception is unreliable. Does the objector conclude that the *concept of perception* is epistemically worthless? No — the concept is sound; the environment changes. The same applies to possibility.",
+          "where": "data.json line 16960, node 1.2.5.6.4 Objections, 'What's Missing' (dream objection)",
+          "why_relevant": "Parity-of-standards rule: a reliability objection must be applied uniformly across analogous concepts."
+        },
+        {
+          "quote": "The objector wants a concept that comes with a built-in reliability marker — a concept that distinguishes good possibilities from bad ones at the moment of occurrence. But no experiential concept works this way. Perception doesn't come with a 'this is veridical' tag. Memory doesn't come with a 'this is accurate' tag. The experience happens; the reliability assessment is a separate, later operation.",
+          "where": "data.json line 16961, node 1.2.5.6.4 Objections, 'What's Missing'",
+          "why_relevant": "Rule about confidence: reliability assessment is a distinct downstream operation, never built into the experience itself."
+        },
+        {
+          "quote": "No experiential concept comes pre-labeled as reliable or unreliable — that assessment requires comparing the experience against other information, which is a later operation the tree can build from this foundation.",
+          "where": "data.json line 16969, node 1.2.5.6.4 Objections, 'Correction'",
+          "why_relevant": "Defines how reliability judgments are made: by comparison against other information."
+        },
+        {
+          "quote": "A correlation is when one event often follows another.",
+          "where": "data.json line 17146, node 1.2.5.7.1 claim",
+          "why_relevant": "Grounds the observational pattern that induction and expectation build from."
+        },
+        {
+          "quote": "An expectation is a possibility based on a correlation.",
+          "where": "data.json line 17301, node 1.2.5.7.3 claim",
+          "why_relevant": "The experiential proto-rule of inductive inference: correlation licenses expectation."
+        },
+        {
+          "quote": "An object's nature is consistent across observations.",
+          "where": "data.json line 10843, node 1.3.4 branch claim",
+          "why_relevant": "The uniformity condition that makes induction and repeated verification meaningful."
+        },
+        {
+          "quote": "An object's nature is independent from its observation.",
+          "where": "data.json line 10999, node 1.3.4 branch claim",
+          "why_relevant": "Observer-independence condition required for verification to test reality rather than the act of observing."
+        },
+        {
+          "quote": "Commitment #1 asks for necessity or mechanism — but at this level, neither is grounded. Necessary connection is a logical concept (deferred to 1.4). Physical mechanism presupposes external causation not yet established. What IS available is the experience described in the observations: wanting to move an arm and the arm moving, wanting to speak and hearing the word.",
+          "where": "data.json line 18354, node 1.2.5.7.x (cause) Objections, 'What's Missing'",
+          "why_relevant": "States that necessity is a logical concept grounded at 1.4, layered above experiential causation."
+        },
+        {
+          "quote": "Access is not containment. Objects are accessed through experience, but their nature is independent of that access. \"I\" is one object among them, traced by specific features of willing — not a container for the rest. Whether or not some stronger containment relation could be defended is a separate discussion; what grounds this claim is the consistent structure of willing itself, which fits the same object-criterion every other object does.",
+          "where": "data.json line 4390, node 1.3.7 Objections, 'Correction'",
+          "why_relevant": "Shows the same-criterion rule: a claim is grounded by fitting the same criterion every other case fits."
+        },
+        {
+          "quote": "What makes this more than a restatement of the children: \"I\" is in reality in a specific way. Will itself has features — its persistence, its continuity across changes in what is willed, its presence even when what is willed is resisted — that do not correlate with any want's direction. You cannot will yourself to stop willing; cannot will willing to have different fundamental features. By the independence criterion (1.3.1.4), will is, to itself, a limit. \"I\" meets the condition for being in reality not despite being will, but in a way that willing itself exhibits.",
+          "where": "data.json line 4230, node 1.3.7 Conclusion",
+          "why_relevant": "Demonstrates inference by explicit criterion-application (the independence criterion) — the framework's standard derivation form."
+        },
+        {
+          "quote": "With myself recognized as one object in a reality of objects, the descriptive framework is complete. The next step is reasoning about what is and is not the case (1.4).",
+          "where": "data.json line 4268, node 1.3.7 'Unlocks'",
+          "why_relevant": "Marks the handoff point where grounded description becomes the basis for the logical rules of 1.4."
+        },
+        {
+          "quote": "Commitment #2 identifies a real phenomenon — but one that requires additional vocabulary to describe. \"Not knowing what is not known\" presupposes the scope concept of \"all instances of a class\" — the idea that a class extends beyond what is currently known or asked about. That concept is addressed at (1.2.7).",
+          "where": "data.json line 8074, node 1.2.6.4 (ignorance) Objections, 'What's Missing'",
+          "why_relevant": "Illustrates the vocabulary-dependency rule: an objection is only assessable once its presupposed concepts are grounded."
+        },
+        {
+          "quote": "Whether or not knowledge requires justification in addition to having an answer — requires later vocabulary (1.5).",
+          "where": "data.json line 2899, node 1.2.6 'Unknowns'",
+          "why_relevant": "Defers the justification requirement on knowledge to the reasoning layer, where justification is defined (1.4.5.6)."
+        }
+      ]
+    },
+    "confidence": {
+      "extracts": [
+        {
+          "quote": "- The claim must have a clear and precise definition, with unambiguous terms, such that it can be evaluated as \"true\" or \"false\".\n - It must be presented as coherent and free of contradictions, so it can be distinguished from a falsehood.\n - It must be substantive (ie. not tautological) and claim to be grounded in reality.\n - The True religion should become more, not less, plausible as human knowledge expands.\n     - It must correspond with all of reality, so it should not fear new discoveries but should be able to integrate them seamlessly.",
+          "where": "3.1. Building Confidence in a Logical Claim.txt, node 1 'Philosophical/Religious Claim', Assumptions/Requirements, lines 7-11 (file '3.' is a verbatim concatenation of 3.1 and 3.2; this text also appears there at lines 11-15)",
+          "why_relevant": "Entry conditions for valid reasoning: a claim must be truth-apt, unambiguous, non-tautological, and contradiction-free before inference can apply, plus a diachronic confidence criterion (the true claim grows more plausible as knowledge expands)."
+        },
+        {
+          "quote": "- Vacuity or Triviality\n     - A claim without substance provides nothing concrete to test or defend.\n     - A claim that can't be assigned as \"true\" or \"false\" falls beyond the scope of reason.\n     - Without a clear claim, the entire process of evaluation cannot begin - leaving only un-testable opinions.",
+          "where": "3.1, node 1 'Philosophical/Religious Claim', Risks, lines 15-18",
+          "why_relevant": "Defines the boundary of reason itself: only truth-apt, testable claims fall within the scope of the inference rules."
+        },
+        {
+          "quote": "- Ambiguity Leading to Equivocation\n     - If terms are vague, then arguments can shift in meaning to explain apparent contradictions, rendering logical evaluation impossible.\n     - Evidence may be force-fitted to align with a belief, leading to premature commitment.",
+          "where": "3.1, node 1 'Philosophical/Religious Claim', Risks, lines 20-22",
+          "why_relevant": "Condition on valid reasoning: terms must hold fixed meanings across an argument or logical evaluation is impossible."
+        },
+        {
+          "quote": "- The claim is presented as a structured argument (premises leading to a conclusion).\n - All premises must be explicitly stated, with no hidden assumptions.\n - The argument corresponds with reality such that it is externally consistent.\n - The argument must follow established rules of logic (ex. inductive, deductive) such that it is internally consistent.",
+          "where": "3.1, node 2 'Possesses Logical Structure', Assumptions/Requirements, lines 35-38",
+          "why_relevant": "The framework's core statement of what a valid argument requires: explicit premises, internal consistency via established deductive/inductive rules, and external consistency with reality."
+        },
+        {
+          "quote": "- The claim can't speak to a context beyond what the premises necessarily encompass.\n - No valid argument can justify an internal contradiction.\n - No sound argument can justify an external contradiction.",
+          "where": "3.1, node 2 'Possesses Logical Structure', Limits, lines 41-43",
+          "why_relevant": "Three absolute rules of inference: a scope-limitation rule (conclusions cannot exceed premises) and two non-contradiction rules (internal for validity, external-to-reality for soundness)."
+        },
+        {
+          "quote": "- Ungrounded Assertion\n             - The claim becomes a mere statement without justification, making it impossible to evaluate (as \"true\" or \"false\") or distinguish from opinion.\n                 - Without a clear structure, evaluation defaults to subjective feelings, increasing vulnerability to bias.\n             - This makes it impossible to evaluate the claim rationally, as it necessarily reduces to \"it's true because I say so\".\n                 - The alternative would otherwise have been, \"it's true because of evidence A, B, and C\".",
+          "where": "3.1, node 2 'Possesses Logical Structure', Risks/If Missing, lines 60-64",
+          "why_relevant": "States the justification requirement: confidence in a claim demands evidential structure ('true because of evidence A, B, and C'), never bare assertion."
+        },
+        {
+          "quote": "- Formal and Informal Fallacies\n             - Identify the structure of the argument to verify soundness and eliminate alternatives.\n             - Evaluate the relevance of each premise to the conclusion.\n             - Strip away appeals to emotion, authority, or popularity to see if the evidence still holds.\n \n         - Oversimplification\n             - Compare the structure to real-world observations to identify ignored variables or assumptions.\n \n         - Equivocation\n             - Define all key terms explicitly at the start and check for consistency throughout.",
+          "where": "3.1, node 2 'Possesses Logical Structure', Mitigation/Risk Identification, lines 69-78",
+          "why_relevant": "Operational tests for valid reasoning: premise-relevance evaluation, stripping non-evidential appeals, checking structure against observation, and fixing term definitions up front."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Break the argument down into its fundamental premises and conclusion.\n         - Ensure that each logical step follows valid rules of inference, creating an unbroken chain of reasoning from the premises to the conclusion.",
+          "where": "3.1, node 2 'Possesses Logical Structure', Mitigation/Verifying Authenticity, lines 83-85",
+          "why_relevant": "The framework's master rule of inference: every step must follow valid rules of inference so the premises-to-conclusion chain is unbroken."
+        },
+        {
+          "quote": "- The source of the claim (ex. a specific text, author, or tradition) must be identifiable and accessible for evaluation.\n - The source must have a basis for its claims, whether through direct observation, logical deduction, or received tradition.\n - The context of the source (whether historical, cultural, philosophical) must be knowable to assess potential biases.\n - The source must be reliable and trustworthy, to verify resistance to agenda-driven influences.",
+          "where": "3.1, node 3 'Possesses Objective Source', Assumptions/Requirements, lines 90-93",
+          "why_relevant": "Confidence criterion tied to provenance: a claim's source must be identifiable, grounded (observation, deduction, or received tradition), contextually knowable, and reliable."
+        },
+        {
+          "quote": "- Orphan Assertion\n             - The claim has no traceable origin, making it impossible to verify its context, development, or reliability.\n                 - This makes it indistinguishable from speculation.\n             - This significantly weakens the claim, as it could have come from an unreliable source without detection.",
+          "where": "3.1, node 3 'Possesses Objective Source', Risks/If Missing, lines 113-116",
+          "why_relevant": "Confidence rule: untraceable claims are epistemically equivalent to speculation and cannot be credited."
+        },
+        {
+          "quote": "- Misattributed Source\n             - Trace the claim back to its earliest known appearance to verify the attribution.\n...\n    Verifying Authenticity\n         - Confirm that the source is cited accurately and that the claim is not taken out of context.\n         - Replicate the source's methodology: does it rely on evidence and reason, or does it appeal to emotion, wishful thinking, fabrication, or unverified authority?",
+          "where": "3.1, node 3 'Possesses Objective Source', Mitigation, lines 125-126 and 134-136 (ellipsis marks intervening bullets on unreliable sources and contextual misalignment)",
+          "why_relevant": "Rules for source verification: trace to earliest appearance, and test the source's own methodology against the evidence-and-reason standard versus non-rational appeals."
+        },
+        {
+          "quote": "- The argument's foundational starting points (ie. axioms) must correspond to universal, empirical observations or self-evident truths.\n     - This is opposed to speculation, or arguments from ignorance.\n - Axioms must be fundamental, verifiable through repeated observation, and not themselves require proof within the logical system.\n - They must be mutually consistent and not contradict one another.",
+          "where": "3.1, node 4 'Axioms Grounded in Reality', Assumptions/Requirements, lines 146-149",
+          "why_relevant": "States how the foundations of reasoning are grounded: axioms come from universal empirical observation or self-evidence, are verifiable by repeated observation, and must be mutually consistent."
+        },
+        {
+          "quote": "- Abstract hypotheticals or unobservable realms without empirical ties.\n - Axioms cannot be \"proven\" by the argument that rests upon them: their validity must be established externally.\n     - In other words, axioms are directly observed or inferred: they are \"proven\" by proving the system's internal and external consistency.",
+          "where": "3.1, node 4 'Axioms Grounded in Reality', Limits, lines 152-154",
+          "why_relevant": "Key grounding doctrine: axioms are validated externally — by direct observation/inference and by demonstrating the whole system's internal and external consistency — never circularly by the argument built on them."
+        },
+        {
+          "quote": "- Ungrounded Abstractions\n             - The axioms are based on speculation, feelings, or cultural tradition rather than objective reality.\n             - Even if the entire logical structure is entirely valid, following those axioms, the conclusions would be disconnected from the truth.",
+          "where": "3.1, node 4 'Axioms Grounded in Reality', Risks/If Invalid, lines 159-161",
+          "why_relevant": "Articulates the validity/soundness distinction: valid inference from ungrounded axioms still yields conclusions disconnected from truth."
+        },
+        {
+          "quote": "- Infinite Regress\n             - The argument lacks a solid starting point - meaning that all premises lack fundamental context.\n             - Every premise would require another premise to support it, leading to an endless chain of justifications with no foundation.",
+          "where": "3.1, node 4 'Axioms Grounded in Reality', Risks/If Missing, lines 172-174",
+          "why_relevant": "Grounding argument for why axioms are required: without foundational stopping points, justification regresses infinitely."
+        },
+        {
+          "quote": "- Ungrounded Abstractions\n             -  Test each axiom against the foundational inferences derived from reality, detecting unverified assumptions.\n \n         - Contradictory Foundations\n             - Place the axioms side-by-side and examine if they can all be true simultaneously, rejecting any that contradict consistent observation.\n \n         - Overgeneralization and Hidden Assumptions\n             - Explicitly list all axioms and check for implicit ones.\n             - Verify axioms across diverse contexts to ensure universality.",
+          "where": "3.1, node 4 'Axioms Grounded in Reality', Mitigation/Risk Identification, lines 179-187",
+          "why_relevant": "Procedural rules for validating axioms: test against inferences derived from reality, joint-consistency check, explicit enumeration, and cross-context universality verification."
+        },
+        {
+          "quote": "- The claim fundamentally requires blind faith to be considered true, as it can never be fully grounded in reality.\n                 - Without grounding in reality, nothing could be considered \"true\" as all axioms would have equal weight, thus making it impossible to distinguish between \"true\" and \"false\" axioms.",
+          "where": "3.1, node 4 'Axioms Grounded in Reality', Mitigation/If Missing, lines 190-191",
+          "why_relevant": "Grounding argument: empirical anchoring is what gives axioms differential weight; without it truth and falsehood among axioms are indistinguishable."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Ensure each axiom is a genuine first principle - a statement so fundamental that rejecting it would make further reasoning impossible.\n         - Ensure axioms align with established inferences from reality to rule out speculation.\n         - Confirm that the axioms are sufficient to support the rest of the argument without needing to introduce hidden assumptions later.",
+          "where": "3.1, node 4 'Axioms Grounded in Reality', Mitigation/Verifying Authenticity, lines 193-196",
+          "why_relevant": "Three-part criterion for a genuine axiom: indispensability to reasoning (retorsion-style test), alignment with established inferences from reality, and sufficiency without later hidden assumptions."
+        },
+        {
+          "quote": "- Every premise used in the argument must either be a foundational axiom or be logically derived from one.\n - The chain of derivation from axiom to premise must be explicit and follow valid rules of inference.\n - There should be no \"hidden\" premises, leaps, or unstated assumptions.",
+          "where": "3.1, node 5 'Premises Grounded in Axioms', Assumptions/Requirements, lines 206-208",
+          "why_relevant": "Rule of inference for argument construction: every premise must trace to an axiom through an explicit derivation chain governed by valid rules of inference, with no gaps."
+        },
+        {
+          "quote": "- Incoherent Argument\n             - The argument jumps from axioms to a conclusion without the necessary intermediate premises to form a valid bridge.\n             - This allows false claims to appear valid, as they fundamentally require a logical gap in order to jump from a true premise to a false conclusion.\n             - Without grounding, false premises become vulnerable to ad hoc justifications, as they can now be molded to resist any objection.",
+          "where": "3.1, node 5 'Premises Grounded in Axioms', Risks/If Missing, lines 231-234",
+          "why_relevant": "Theoretical grounding of the gapless-chain rule: false conclusions from true premises necessarily require a logical gap, so eliminating gaps eliminates that failure mode."
+        },
+        {
+          "quote": "- Unsupported Premise\n             -  For every premise, ask: \"Is this an axiom, or how was it derived?\"\n             -  Challenge any premise that cannot be traced back to the foundational axioms.\n \n         - Logical Leaps\n             - Explicitly map out the deductive or inductive steps from the axiom to the premise to ensure the connection is valid.\n \n         - Inconsistent Application\n             - Check for uniform use of axioms across all premises.\n             - Limit premises to direct implications of axioms.",
+          "where": "3.1, node 5 'Premises Grounded in Axioms', Mitigation/Risk Identification, lines 239-248",
+          "why_relevant": "Operational inference rules: the derivation interrogation ('axiom or derived?'), explicit mapping of deductive/inductive steps, uniform axiom application, and restriction of premises to direct implications."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Create a logical flowchart that traces each premise back to its foundational axioms.\n         - Articulate any implicit assumptions to turn them into explicit premises that can then be evaluated.",
+          "where": "3.1, node 5 'Premises Grounded in Axioms', Mitigation/Verifying Authenticity, lines 253-255",
+          "why_relevant": "Procedure for making inference chains auditable: full flowchart from premises to axioms and conversion of implicit assumptions into evaluable explicit premises."
+        },
+        {
+          "quote": "- A true logical claim must be able to withstand rigorous scrutiny, novel objections, and false counterarguments.\n     - All false claims necessarily contradict with reality.\n     - As such, even if false claims appear stronger at first, over time the true claim necessarily will correspond with reality stronger.\n - The process must involve engaging with the strongest possible versions of objections (steelmanning), not weak or misrepresented versions (strawmanning).\n - Both the objections and their responses must adhere to the same standards of logical rigor as the original claim.",
+          "where": "3.1, node 6 'Coherence and Internal Consistency', Assumptions/Requirements, lines 265-269 (repeated verbatim in node 7 'Robustness to Objections', lines 323-327)",
+          "why_relevant": "The metaphysical axiom underwriting the whole confidence method — all false claims necessarily contradict reality, so truth wins under sustained scrutiny — plus the steelmanning rule and the symmetry-of-rigor condition on objections and responses."
+        },
+        {
+          "quote": "- Ad Hoc Rescue\n             - The original claim is modified with novel, speculative, or unsupported exceptions solely to evade an objection.\n                 - This makes an argument from ignorance, allowing for the defense of any false claim.",
+          "where": "3.1, node 6 'Coherence and Internal Consistency', Risks/If Invalid, lines 284-286 (repeated in node 7, lines 342-344)",
+          "why_relevant": "Prohibition rule: ad hoc modifications to evade objections are classed as arguments from ignorance and invalidate the defense."
+        },
+        {
+          "quote": "- Brittle Belief\n             - Without being tested against objections, a belief remains unverified and vulnerable.\n                 - It becomes impossible to distinguish it from the countless falsehoods that also lack a robust defense.\n                 - Relying on the luck of holding an untested belief is not a methodology for seeking truth - it's a passive stance that leaves one susceptible to error.\n             - This prevents you from confidently knowing if the claim is wrong or not, as it can't be verified as the \"best\" option if it is never compared with others.",
+          "where": "3.1, node 6 'Coherence and Internal Consistency', Risks/If Missing, lines 290-294",
+          "why_relevant": "Confidence criterion: verification requires adversarial testing and comparison; untested belief is epistemic luck, not method."
+        },
+        {
+          "quote": "- Strawmanning\n             - \"Steelman\" objections instead: present them in their strongest form, then refute them.\n             - The Truth will never contradict reality, so presenting a false claim in its strongest form will only establish its own falsehood.\n \n         - Ad Hoc Rescue\n             - Check if the \"solution\" to an objection is a principled extension of the system's core axioms, or if it is an arbitrary patch with no other justification.",
+          "where": "3.1, node 6 'Coherence and Internal Consistency', Mitigation/Risk Identification, lines 301-306 (repeated in node 7, lines 358-363)",
+          "why_relevant": "Two working rules: steelmanning is epistemically safe because truth never contradicts reality, and the ad-hoc test — a legitimate response must be a principled extension of core axioms, not an arbitrary patch."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Actively seek out the most powerful and well-reasoned objections from opposing viewpoints.\n         - A claim demonstrates robustness if it can either (a) logically refute the objection or (b) integrate the objection's valid points in a way that strengthens the original claim's coherence and explanatory scope.",
+          "where": "3.1, node 6 'Coherence and Internal Consistency', Mitigation/Verifying Authenticity, lines 311-313 (repeated in node 7, lines 368-370)",
+          "why_relevant": "Explicit two-branch robustness criterion: refute the objection, or absorb its valid points such that coherence and explanatory scope increase."
+        },
+        {
+          "quote": "- Brittle Belief\n             - In a world where falsehood is necessarily more abundant for each truth, the probability that a claim is true is very slim - meaning that the probability of opposing beliefs being true is higher.\n                 - Of course, you could happen to already believe a true claim (without verifying it yourself), but then if everyone believed this (thus preventing them from considering alternatives that are true), then they'll never arrive at the truth.\n             - This prevents you from confidently knowing if the claim is wrong or not, as it can't ever be verified as the \"best\" option if you never compare it with others.",
+          "where": "3.1, node 7 'Robustness to Objections', Risks/If Missing, lines 348-351",
+          "why_relevant": "Prior-probability rationale for mandatory comparison: falsehoods outnumber truths, so an unverified belief has low prior probability of being true, making comparative testing a condition of confidence."
+        },
+        {
+          "quote": "- The claim requires blind faith to be considered true, as you're trusting factors beyond your control for why you're on the true belief (rather than educating yourself to be able to distinguish between truth and falsehood based on principles grounded in reality).",
+          "where": "3.1, node 7 'Robustness to Objections', Mitigation/If Missing, line 366 (near-identical variant at node 6, line 309)",
+          "why_relevant": "Grounding of epistemic responsibility: confidence must come from reality-grounded principles the reasoner can apply, not from accidents of inherited belief."
+        },
+        {
+          "quote": "- The claim must be the best-fit explanation, superior to alternatives in parsimony and explanatory power.\n     - It must be compared against other plausible, competing hypotheses.\n     - The best explanation is the one that accounts for the most data with the fewest unsupported assumptions (Occam's razor).\n - The evaluation must be fair and apply the same standards of evidence and logic to all competing explanations.\n     - The claim's uniqueness (in its alignment with the Truth) must be demonstrable through comparison.\n     - Otherwise, no distinguishing between truth and falsehood will ever occur.",
+          "where": "3.1, node 8 'Absence of Alternate Explanation', Assumptions/Requirements, lines 375-380",
+          "why_relevant": "The framework's central abduction rule: best explanation = most data accounted for with fewest unsupported assumptions (explicit Occam's razor), under a fairness condition of identical evidential standards for all competitors."
+        },
+        {
+          "quote": "- Your own ignorance: this method can only identify the best explanation among the currently known and formulated options.\n     - But, arguments from ignorance are still invalid: speculation is not refutation.\n     - The absence of known alternate explanations is the goal, not absence of all speculative alternate explanations.\n - Equally parsimonious explanations without decisive differentiators.",
+          "where": "3.1, node 8 'Absence of Alternate Explanation', Limits, lines 383-386",
+          "why_relevant": "Scope conditions on abduction: it ranks only known formulated hypotheses, speculation does not count as refutation, and ties in parsimony without decisive differentiators are beyond the method."
+        },
+        {
+          "quote": "- Premature Conclusion\n             - Without a thorough comparison to alternatives, a belief is adopted prematurely and lacks full justification\n                 - A claim's justification comes not only from its internal logic but also from its demonstrated superiority over competing explanations.\n                 - It might be a plausible explanation, but there would be no way to know if it is the best explanation, leaving the belief grounded in incomplete analysis rather than comparative evaluation.",
+          "where": "3.1, node 8 'Absence of Alternate Explanation', Risks/If Missing, lines 399-402",
+          "why_relevant": "Confidence criterion: full justification requires internal logic plus demonstrated comparative superiority — plausibility alone never suffices."
+        },
+        {
+          "quote": "- Confirmation Bias\n             -  Actively \"steelman\" competing hypotheses, articulating them in their most persuasive forms before comparing them.\n                 - If the best form of a competing argument can be refuted, then the claim must be stronger than the objection.\n \n         - False Dilemma\n             - Learn and discover all plausible alternatives rather than simply accepting the options presented.",
+          "where": "3.1, node 8 'Absence of Alternate Explanation', Mitigation/Risk Identification, lines 407-412",
+          "why_relevant": "Abductive procedure rules: steelman rivals before comparison (refuting a rival's best form establishes superiority) and exhaustively enumerate plausible alternatives rather than accept a presented dilemma."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Systematically compare the competing explanations using abductive reasoning:\n             - Which one explains the most evidence (ie. corresponds with reality the most)?\n             - Which one requires the fewest unsupported assumptions (to converge on the one without any)?",
+          "where": "3.1, node 8 'Absence of Alternate Explanation', Mitigation/Verifying Authenticity, lines 417-420",
+          "why_relevant": "The operational abduction metric stated as two ranking questions — maximal evidential coverage and minimal unsupported assumptions — with convergence toward an explanation with zero unsupported assumptions as the ideal."
+        },
+        {
+          "quote": "- Knowledge is provisional and must be open to revision in light of new, relevant evidence from any field (e.g., science, history, philosophy).\n     - A true claim will not only withstand new evidence but should actually be reinforced by it, its explanatory power necessarily growing over time.\n - The process requires intellectual humility and a commitment to truth over wishful thinking and ignorance.\n     - Conclusions must be corroborated by independent iterations to minimize error.",
+          "where": "3.1, node 9 'Iterative Verification', Assumptions/Requirements, lines 430-433",
+          "why_relevant": "Diachronic confidence rule: knowledge is provisional, a true claim's explanatory power necessarily grows with new evidence, and conclusions require corroboration by independent iterations."
+        },
+        {
+          "quote": "- A final, unchanging conclusion: verification is an ongoing process of refinement, not a one-time event that ends in absolute certainty.\n     - Note that, if your claim is on the Truth, then the \"changing conclusions\" will be more and more non-fundamental with more iterations.",
+          "where": "3.1, node 9 'Iterative Verification', Limits, lines 436-437",
+          "why_relevant": "Convergence criterion for confidence: no absolute certainty, but on a true claim revisions become progressively less fundamental across iterations."
+        },
+        {
+          "quote": "- Arrogant, Stubborn, or Wishful Thinking\n             - New evidence that contradicts the claim is ignored, denied, or explained away with ad hoc rationalizations to protect the belief from being falsified.\n                 - The belief becomes a closed, non-falsifiable system - thus indistinguishable from a false belief.\n \n         - Incoherent Patchwork\n             - New evidence is haphazardly integrated without ensuring it is consistent with the system's core axioms, resulting in a belief system that becomes increasingly contradictory over time.",
+          "where": "3.1, node 9 'Iterative Verification', Risks/If Invalid, lines 442-447",
+          "why_relevant": "Falsifiability condition: a claim shielded from contradicting evidence becomes non-falsifiable and therefore indistinguishable from falsehood; integrations must stay consistent with core axioms."
+        },
+        {
+          "quote": "- Incoherent Patchwork\n             - Test if recent additions or \"updates\" to the belief system are consistent with its foundational, non-negotiable axioms.\n...\n    Verifying Authenticity\n         - Actively seek new knowledge from relevant fields and test its compatibility with the claim.\n         - A claim demonstrates strong iterative verification if new discoveries fit naturally into its framework and are better explained by it than by competing theories.",
+          "where": "3.1, node 9 'Iterative Verification', Mitigation, lines 461-462 and 467-469 (ellipsis marks the 'If Missing' bullet)",
+          "why_relevant": "Ongoing abductive test: updates must cohere with foundational axioms, and confidence grows when new discoveries fit naturally and are better explained by the claim than by rival theories."
+        },
+        {
+          "quote": "- The event must be ontologically possible, requiring:\n     - Internally consistent, without contradictions\n     - Externally consistent, corresponding perfectly with what is known about reality.\n - It must be epistemologically distinguishable from falsehood (meaning there is a way to determine if it is true or not).\n      - In other words, it must have had the potential to generate evidence, plausibly leaving behind traces that can be discovered.\n - Fabricated claims necessarily contain logical contradictions with reality.\n     - As such, there must be some criterion that distinguishes false supernatural events from true ones.",
+          "where": "3.2. Building Confidence in a Historical Claim.txt, node 1 'Historical Event', Assumptions/Requirements, lines 7-13 (file '3.' duplicates this at lines 487-494)",
+          "why_relevant": "Preconditions for historical inference: ontological possibility (internal/external consistency), the evidential-potential rule (must plausibly leave discoverable traces), and the axiom that fabrications necessarily contradict reality — grounding a criterion for distinguishing true from false supernatural events."
+        },
+        {
+          "quote": "- Witnesses were present.\n - Witness accurately perceived the event, with:\n     - direct, first-hand perception\n     - good faith\n     - sound mind and memory\n     - accurate communication\n - Cultural context supports reliable oral traditions.\n - There should be access to the witnesses for direct recounting and verification of their testimony.",
+          "where": "3.2, node 2 'Oral Eyewitness Testimony', Assumptions/Requirements, lines 34-41",
+          "why_relevant": "Rules for accepting oral testimony: presence, first-hand perception, good faith, sound mind and memory, accurate communication, supportive transmission culture, and verifiability by access to the witnesses."
+        },
+        {
+          "quote": "- Distortion\n             - Check for inconsistencies in the testimony and evaluate potential bias by examining the historical context.\n \n         - Fabrication and Exaggeration\n             - Assess if the testimony is dissimilar from known facts.\n             - Ensure testimony is coherent with the witness' known actions.\n             - Check for absence (or mitigation) of self-serving motives.\n \n         - Cultural Misalignment\n             - Study the culture to see if it supports the accurate transmission of oral history.",
+          "where": "3.2, node 2 'Oral Eyewitness Testimony', Mitigation/Risk Identification, lines 68-77",
+          "why_relevant": "Testimony-evaluation criteria: internal consistency, dissimilarity from known facts, coherence with the witness's known actions, absence of self-serving motive, and cultural support for accurate transmission."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Cross-reference oral accounts with written testimony and archaeological evidence to reduce distortion.\n         - Ensure consistency with broader context to rule out anachronisms (details that don't fit the time period).\n         - Corroborating independent oral and written accounts mitigate exaggeration and expose distortion.\n \n    If Religious Beliefs are Already Established\n         - Assess the content of the testimony to verify alignment with religious beliefs.",
+          "where": "3.2, node 2 'Oral Eyewitness Testimony', Mitigation/Verifying Authenticity, lines 82-88",
+          "why_relevant": "Corroboration and anachronism rules for testimony, plus the conditional rule that an already-established religious framework becomes part of the evaluation baseline."
+        },
+        {
+          "quote": "- The author was an eyewitness with education, resources, and literacy to record promptly.\n - The document has been preserved in its original form or through verifiably accurate copies.\n - The language and script of the document are decipherable and can be reliably translated without significant loss of meaning.",
+          "where": "3.2, node 3 'Written Eyewitness Testimony', Assumptions/Requirements, lines 93-95",
+          "why_relevant": "Conditions under which written testimony confers confidence: eyewitness authorship with prompt recording capacity, preservation via original or verifiably accurate copies, and reliable translatability."
+        },
+        {
+          "quote": "- Forgery\n             - Cross-reference different textual variants and the manuscript's history to detect edits.\n             - Check the author's claims against the historical context.\n \n         - Bias\n             - Assess the document for dissimilarity to known facts.\n             - Ensure testimony is coherent with the author's known actions.\n             - Check for absence (or mitigation) of self-serving motives.",
+          "where": "3.2, node 3 'Written Eyewitness Testimony', Mitigation/Risk Identification, lines 127-134",
+          "why_relevant": "Document-criticism rules: variant cross-referencing and manuscript history for forgery detection, and the dissimilarity/coherence/motive triad for bias detection."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Cross-reference the written testimony with oral accounts and archaeological evidence to reduce distortion and confirm details.\n         - Ensure the account is consistent with the broader historical context to rule out anachronisms.\n         - Corroborating the account with independent oral and written sources helps mitigate exaggeration and expose distortion.",
+          "where": "3.2, node 3 'Written Eyewitness Testimony', Mitigation/Verifying Authenticity, lines 143-146",
+          "why_relevant": "Triangulation rule for written sources: cross-modal corroboration (oral, written, archaeological) and contextual anachronism screening as confidence builders."
+        },
+        {
+          "quote": "- The artifacts or sites discovered must be directly tied to the event.\n - The excavation methods used to uncover the artifacts must have been rigorous and uncontaminated.\n - The interpretation of the artifacts must align with historical records without forcing the evidence to fit a preconceived narrative.\n - There must be comparative artifacts available from the same period to provide context for the analysis.",
+          "where": "3.2, node 4 'Archaeological Alignment', Assumptions/Requirements, lines 154-157",
+          "why_relevant": "Conditions for archaeological evidence to count: direct tie to the event, uncontaminated recovery, non-forced interpretation, and comparative context."
+        },
+        {
+          "quote": "- Misinterpretation\n             - Verify dating with independently corroborated methods, like radiocarbon dating and stratigraphy.\n             - Cross-check interpretations with textual records.\n \n         - Contamination or Fraud\n             - Assess the excavation protocols and the artifact's provenance (its chain of custody and origin).\n \n         - Overreach\n             - Ensure that interpretations align with minimal assumptions by using comparative artifacts and anthropological knowledge.",
+          "where": "3.2, node 4 'Archaeological Alignment', Mitigation/Risk Identification, lines 188-196",
+          "why_relevant": "Archaeological inference rules including a parsimony constraint on interpretation ('align with minimal assumptions') and independent-method corroboration of dating."
+        },
+        {
+          "quote": "- The sources must be truly independent (ie. without common origins or influencing one another).\n - There must be a sufficient number of sources to ensure statistical reliability.\n\n - The sources must agree on the fundamental details of the event.\n     - Fundamental alignment, even with differences in secondary details, supports a reliable source.\n - Diversity in the types of sources support greater historical coverage and reliability.\n - The sources should be minimally influenced by overarching political or cultural pressures that could have skewed their accounts.",
+          "where": "3.2, node 5 'Multiple Independent Corroborations', Assumptions/Requirements, lines 218-224",
+          "why_relevant": "Corroboration rules: genuine independence, statistical sufficiency, agreement on fundamentals (secondary-detail divergence tolerated and even supportive), source-type diversity, and minimal shared pressure."
+        },
+        {
+          "quote": "- Echo Chamber\n             - Trace the origins and transmission paths of each source to confirm that they are truly independent.\n \n         - Bias Propagation\n             - Assess the historical and cultural contexts of the sources to identify any shared motives or agendas.\n...\n    Verifying Authenticity\n         - Cross-reference all sources (written, oral, and archaeological) with each other to confirm the core facts of the event.\n         - Ensure the corroborated details are consistent with the broader historical context to rule out anachronisms.\n         - Greater diversity in the sources provides better historical coverage while simultaneously challenging potential biases.",
+          "where": "3.2, node 5 'Multiple Independent Corroborations', Mitigation, lines 251-255 and 261-264 (ellipsis marks the 'If Missing' bullets)",
+          "why_relevant": "Procedures for verifying independence (tracing transmission paths), detecting shared agendas, and the diversity principle as a bias-challenging confidence multiplier."
+        },
+        {
+          "quote": "- Single Source Vulnerability\n             - Relying on only one account makes the claim highly vulnerable to fabrication or an honest error.\n...\n         - If Missing\n             - Scrutinize the single source heavily for internal bias and distortion.\n             - Seek consistency with the broader historical context.",
+          "where": "3.2, node 5 'Multiple Independent Corroborations', Risks/If Missing line 242-243 and Mitigation/If Missing lines 257-259",
+          "why_relevant": "Fallback rule: absence of corroboration lowers confidence and triggers heightened scrutiny of the lone source plus contextual consistency checks."
+        },
+        {
+          "quote": "- The evidence has been continuously documented from its origin to the present without any significant gaps in the record.\n - The custodians of the evidence have maintained accurate records of its handling, transfers, and storage.\n - The methods of transmission have preserved the integrity of the evidence, which requires:\n     - physical protection\n     - accurate copying\n     - detailed logs\n - The custodians have been trustworthy and resisted any incentives for tampering with the evidence.\n - The chain must be accessible for verification, allowing scholars to reconstruct and trace its history.\n - The overall strength of the chain is defined by its weakest link.",
+          "where": "3.2, node 6 'Unbroken Chain of Transmission', Assumptions/Requirements, lines 277-285",
+          "why_relevant": "The transmission/testimony-chain rules: gapless documentation, custodial integrity and trustworthiness, verifiable reconstructability, and the weakest-link metric governing overall chain strength."
+        },
+        {
+          "quote": "- The accuracy of the content if it was altered or incorrect before the chain of transmission began.\n - Interpretive changes that occur over time without altering the physical artifact or document itself.\n - The hidden motives of the custodians who preserved the evidence.",
+          "where": "3.2, node 6 'Unbroken Chain of Transmission', Limits, lines 288-290",
+          "why_relevant": "Scope condition separating transmission fidelity from origination accuracy: a perfect chain cannot vouch for content that was wrong before the chain began."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Trace the chain backward using archival records, comparing multiple copies or versions to check for fidelity.\n         - Integrate scientific verification methods (like carbon dating or stylistic analysis) to build confidence that no anachronistic alterations were made.\n         - Cross-reference with multiple independent corroborations to expose any breaks or inconsistencies in the chain of transmission.",
+          "where": "3.2, node 6 'Unbroken Chain of Transmission', Mitigation/Verifying Authenticity, lines 332-335",
+          "why_relevant": "Procedures for building confidence in a transmission chain: backward tracing, copy comparison, scientific dating against anachronistic alteration, and corroborative cross-referencing."
+        },
+        {
+          "quote": "- An established baseline of verified historical, cultural, and scientific knowledge must exist for comparison.\n - The details of the event must be specific enough to be tested against this broader context.\n - The contextual knowledge used for comparison must be comprehensive and up-to-date, incorporating recent scholarship and discoveries.\n - A neutral evaluation framework must be used, to avoid forcing the evidence to fit the context through selective interpretation while also avoiding hyper-skepticism.",
+          "where": "3.2, node 7 'Consistency with Broader Context', Assumptions/Requirements, lines 348-351",
+          "why_relevant": "Contextual-consistency rule with an explicit neutrality condition: evaluation must avoid both forced alignment and hyper-skepticism, and claims must be specific enough to be testable against a verified baseline."
+        },
+        {
+          "quote": "- Incomplete Context Exploitation\n             - Provisionally accept or reject claims based on the level of confidence in the overarching context (subject to later revision as more is learned).\n...\n    Verifying Authenticity\n         - Align the event with parallel historical records, archaeological data, and scientific principles to confirm that it fits the broader context.\n         - Continually update the context with new discoveries to refine the assessment of consistency over time.",
+          "where": "3.2, node 7 'Consistency with Broader Context', Mitigation, lines 387-388 and 393-395 (ellipsis marks the 'If Missing' bullet)",
+          "why_relevant": "Provisional-confidence rule: acceptance/rejection is graded by confidence in the surrounding context and remains revisable as the contextual baseline is updated."
+        },
+        {
+          "quote": "- Every source has the potential to be fabricated, as human beings can manipulate information for personal gain.\n - The sources should resist common political, religious, or personal motives that might lead to distorting, inventing, or exaggerating details.\n - Claims that are embarrassing, counterproductive, or contrary to the source's known interests have a reduced risk of being fabricated...\n     - ... While they also possess a higher risk of being fabricated specifically for attention.\n - There must be accessibility to contextual evidence, allowing scholars to evaluate the potential biases or motives behind a source.",
+          "where": "3.2, node 8 'Resistance to Fabrication', Assumptions/Requirements, lines 408-412",
+          "why_relevant": "The criterion of embarrassment stated with its own counterweight (attention-seeking fabrication), plus the default assumption that every source is potentially fabricated — a prior governing testimony evaluation."
+        },
+        {
+          "quote": "- Absolute certainty of neutrality, as all sources may carry subtle or unconscious biases.",
+          "where": "3.2, node 8 'Resistance to Fabrication', Limits, line 417",
+          "why_relevant": "Confidence ceiling: no source can be certified absolutely neutral, so bias assessment is always probabilistic."
+        },
+        {
+          "quote": "- False Neutrality\n             - Cross-check for the criterion of embarrassment or dissimilarity to detect subtle biases in a seemingly neutral account.\n \n         - Selective Reporting\n             - Compare the account with diverse, independent sources to identify significant omissions or inconsistencies.\n \n         - If Missing\n             - If it is significant to the claim that it's distinguishable from falsehood, yet it possesses a weak resistance to fabrication, then its logical resistance to fabrication must be more heavily scrutinized.",
+          "where": "3.2, node 8 'Resistance to Fabrication', Mitigation/Risk Identification, lines 448-455",
+          "why_relevant": "Names the criterion of embarrassment/dissimilarity as an operative detection tool, and states a compensation rule: weak evidential resistance to fabrication shifts the burden onto heavier scrutiny of the claim's logical resistance."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Cross-reference the account with multiple independent corroborations to confirm details against sources that are likely free of the same agenda.\n         - Use consistency with the broader context to rule out any motive-driven anachronisms or exaggerations\n         - Apply scientific verification, like dating artifacts or stylistic analysis of texts, to support or challenge the source’s claims.",
+          "where": "3.2, node 8 'Resistance to Fabrication', Mitigation/Verifying Authenticity, lines 457-460",
+          "why_relevant": "Rules for neutralizing agenda risk: corroborate against agenda-independent sources, contextual anachronism screening, and scientific tests as agenda-blind arbiters."
+        },
+        {
+          "quote": "- Surviving physical evidence that is directly linked to the event must exist and be accessible for testing.\n - Reliable and validated scientific methods, like radiocarbon dating or textual analysis, must be applicable and accurately applied.\n - There must be an unbroken chain of custody for the evidence to ensure its integrity from the moment of discovery to testing.\n - The conclusions must be corroborated by independent sources or labs to minimize the risk of misinterpretation.",
+          "where": "3.2, node 9 'Scientific Verification', Assumptions/Requirements, lines 473-476",
+          "why_relevant": "Conditions for scientific verification to raise confidence: direct linkage, validated methods, custody integrity, and independent replication."
+        },
+        {
+          "quote": "Verifying Authenticity\n         - Replicate the tests in multiple independent labs to confirm the results and reduce the chance of error.\n         - Cross-reference scientific findings with archaeological alignment and the broader historical context to ensure there are no anachronisms or inconsistencies.\n         - Integrate the findings with multiple independent corroborations to challenge biases and expose potential forgeries.\n \n    If Religious Beliefs are Already Established\n         - Assess whether scientific findings are being interpreted neutrally or are being forced to fit pre-existing religious beliefs.",
+          "where": "3.2, node 9 'Scientific Verification', Mitigation/Verifying Authenticity, lines 513-519",
+          "why_relevant": "Replication and cross-integration rules for scientific confidence, plus a reflexive neutrality check that guards against forcing interpretations to fit an already-established religious framework."
+        },
+        {
+          "quote": "- If Missing\n             - Heighten the scrutiny of written and oral artifacts, checking closely for internal textual consistency and coherence.",
+          "where": "3.2, node 9 'Scientific Verification', Mitigation/If Missing, lines 510-511",
+          "why_relevant": "Compensation rule: when scientific verification is unavailable, confidence must be sought by intensified internal-consistency scrutiny of textual evidence."
+        }
+      ]
+    },
+    "appendices": {
+      "extracts": [
+        {
+          "quote": "truth is subjective in the sense that *we* discover it, but objective in the sense that *we* don't decide what we discover",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.B. The Limits of Knowledge.txt, line 4 (Notes)",
+          "why_relevant": "Grounds the objectivity of truth claims: confidence comes from discovery being constrained by reality, not by the knower's decision."
+        },
+        {
+          "quote": "- use diagrams - start with \"knowledge\" in a circle of \"not knowledge\", correlating that with \"identification\" vs. \"really is\"\n - knowledge is a boundary: what's beyond it has been eliminated as \"what is false\" (ie. the circle \"I see red\" means that \"I see blue\" is beyond that boundary), whereas what's within that circle is what is unknown (ie. why do I see red? what kind of red is it? etc.)",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.B. The Limits of Knowledge.txt, lines 5-6 (Notes)",
+          "why_relevant": "States the eliminative model of knowledge: a claim earns confidence by ruling out contradictory alternatives, while remaining unknowns inside the boundary stay compatible with the truth."
+        },
+        {
+          "quote": "Many objections to the results of this project effectively reduce to the skeptical argument:\n\n\"You can’t really know X, because for all we know, some other unknown alternative could explain it better.\"\n\nAt face value, this sounds humble: it acknowledges that our ignorance exceeds our knowledge. But notice what the objection is doing: it responds to a claim supported by evidence, defined constraints, or an articulated mechanism, without providing a competing explanation that has comparable evidence, constraints, or mechanism of its own. Instead, it appeals to the mere possibility of an imagined unknown, as if that is enough to defeat an argument. In other words, it smuggles in a new inference: \"the possibility of being surprised by new information is a more rational stance than your knowledge - even when it lacks identifiable evidence\".",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 1-5 (opening)",
+          "why_relevant": "Names the invalid inference rule the framework rejects: bare possibility of an unknown alternative cannot defeat a claim backed by evidence, constraints, or mechanism unless the rival has comparable support."
+        },
+        {
+          "quote": "But treating this move as a valid refutation has a fatal consequence: it destroys rational preference. If an unconstrained \"maybe\" can defeat an evidence-based inference, then every claim - true or false - can be rejected by the same maneuver. The result is taking caution too far - leading to a method that collapses the difference between refuting a claim and merely not having certainty about it, effectively making truth and falsehood indistinguishable.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, line 7",
+          "why_relevant": "Grounds the abduction rule by consequence: any method that lets unconstrained possibility defeat evidence destroys rational preference and the truth/falsehood distinction, so it is invalid."
+        },
+        {
+          "quote": "For example, suppose you have a runny nose, cough, mild fever, and sore throat. A doctor says, \"this is almost certainly a viral cold.” A skeptic can then reply:\n\n\"You can't really know it's a cold, because for all we know, it could be some unknown disease that perfectly mimics cold symptoms.\"\n\nThat reply sounds cautious, as it humbly allows for the possibility of more diseases than we know now - but it is actually not a refutation of the doctor's claim. It offers no constraint, no evidence, and no reason that the \"unknown disease\" is a live competitor rather than an imagined placeholder. If we allow that kind of possibility to defeat the inference, then the doctor can never diagnose anything - because for any observed symptom pattern, an unknown mimic is always imaginable. Even though medicine must remain open to rare or novel conditions to meet the expectation of new diseases, that openness is still managed through constraints (risk factors, prevalence, test results, red flags, differential diagnosis) - not by granting every imagination unknown equal weight.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 9-13",
+          "why_relevant": "Gives the operative abduction metric: a rival explanation counts as a live competitor only if it carries constraint, evidence, and reason, and openness to unknowns must itself be managed through constraints rather than equal weighting of imagined possibilities."
+        },
+        {
+          "quote": "The project's results are simple: “it could be anything” is not a stronger explanation than one grounded in patterns and evidence It is unconstrained speculation: the objection is not \"you failed to rule out a plausible rival\" but actually \"you failed to rule out the possibility of being wrong”. Without accompanying evidence and constraints, it's not skepticism anymore but hyperskepticism. Ignorance is used as a substitute for evidence, rather than as the normal remainder that exists after any finite inquiry. And any method that can reject evidence cannot distinguish truth from falsehood.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, line 15",
+          "why_relevant": "States the preference rule directly: explanations grounded in patterns and evidence beat unconstrained speculation, ignorance is never a substitute for evidence, and a method that can reject evidence is disqualified as a truth-finding method."
+        },
+        {
+          "quote": "This appendix does 4 things:\n     1. Defines what it means to “know” anything, and what it means to be \"skeptical\" of a claim.\n     2. Distinguishes the boundary between valid and invalid skepticism - preserving the ability to distinguish truth from falsehood.\n     3. Lists the ways in which skepticism can validly manifest, teaching how to test its validity.\n     4. Exposes how common objections to the project's results use skepticism incorrectly, and what they result in when framed properly.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 17-21",
+          "why_relevant": "Announces that the appendix's purpose is to give explicit validity conditions for skepticism, including how to test whether a skeptical objection is valid."
+        },
+        {
+          "quote": "- To \"know\" something is to have awareness of some property or occurrence (whether \"real\" or an \"illusion\"). [...] In other words, to \"know\" anything is not to have ontological omnicience (ie. knowing all things as they \"really are\"), but only to make any kind of identification or definition.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 26 and 31 (section 1, Knowledge)",
+          "why_relevant": "Defines knowledge in a way that lowers the confidence threshold from omniscience to identification, which sets what any inference rule must deliver."
+        },
+        {
+          "quote": "- Knowledge is \"true\" when it corresponds with reality (not with feelings, intuition, or preference). [...] In other words, to know something is \"true\" is to have awareness of the fundamental features of some occurrence in reality.\n         - Note: context matters. \"Apples exist\" may not be true in the \"Star Wars universe\", and objects may not appear to fall in deep space, and someone can be trustworthy about one thing but a liar about another.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 33 and 38-39 (section 1, Truth)",
+          "why_relevant": "Gives the truth criterion (correspondence with reality, awareness of fundamental features) plus the context-relativity condition on applying it."
+        },
+        {
+          "quote": "- Knowledge is \"false\" when it contradicts with reality (not with feelings, intuition, or preference). [...] In other words, to know something is \"false\" is to have awareness that its defining features did not occur in reality.\n         - Note: context matters. A contradiction is only so when there is a conflict within the same context - a liar about apples can't be trustworthy about apples, but he could still be trustworthy about bananas.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 41 and 46-47 (section 1, Falsehood)",
+          "why_relevant": "Gives the falsehood criterion (contradiction with reality) and the same-context condition required for a contradiction to count."
+        },
+        {
+          "quote": "- As a result, when we say anything is \"true\", we are not saying: \"I know every feature about something\". Rather, we are only saying: \"I know enough features about something to identify it as real - ie. to distinguish it from competitors and contradictions\". Since \"enough\" does not equal \"all\", this does mean that the scope of knowledge is always limited: there is always more that could be known - even about true things.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, line 48",
+          "why_relevant": "States the confidence criterion explicitly: enough features to distinguish a claim from competitors and contradictions, with 'enough' rather than 'all' as the threshold."
+        },
+        {
+          "quote": "- But knowledge is also eliminative: as it grows, more alternatives are ruled out. What lies beyond that boundary are the eliminated contradictions, while what lies within that scope remains unknown - but still compatible with the truth. In other words, knowledge is a boundary of constraints: a shrinking circle that converges to a stable identification/definition (ie. truth), eliminates contradictory alternatives (ie. falsehood), and constrains what is unknown between known constraints.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, line 49",
+          "why_relevant": "Describes how confidence is built: knowledge is a boundary of constraints that converges on a stable identification by eliminating contradictory alternatives."
+        },
+        {
+          "quote": "- So when we are \"skeptical,” this is the context it applies to: it targets and challenges what is known and their constraints.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, line 50",
+          "why_relevant": "Restricts the valid scope of skepticism: it must target known constraints, not appeal to unknowns."
+        },
+        {
+          "quote": "- To be \"skeptical\" of something is to doubt its alignment with reality, to lack verification of its constraints (ie. asking what would make the claim true or false, and what evidence or logic can distinguish it from its competitors). [...] In other words, to be \"skeptical\" is not to reject a claim simply because unknowns exist, but to say: \"I can’t constrain the presented evidence enough to rationally prefer the explanation over its competitors.\"",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 55 and 60 (section 2, Skepticism)",
+          "why_relevant": "Defines valid skepticism as a constraint-verification test — asking what would make the claim true or false and what distinguishes it from competitors — tying doubt to rational preference rather than to the existence of unknowns."
+        },
+        {
+          "quote": "- To be \"hyperskeptical\" of something is to doubt its alignment with reality, regardless of the verification of its constraints (ie. being ambiguous about what would make the claim true or false, and what evidence or logic can distinguish it from its competitors). [...] In other words, to be \"hyperskeptical\" is not to resolve doubt but to keep it alive by expanding the space of possibilities without adding new evidence - treating the general idea of being wrong as if it were evidence of being wrong.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 62 and 67 (section 2, Hyperskepticism)",
+          "why_relevant": "Defines the invalid form of doubt: expanding possibility space without new evidence, and treating the general idea of being wrong as if it were evidence of being wrong."
+        },
+        {
+          "quote": "- The Difference\n     - Knowledge\n         - Constraints are enough (or known) to distinguish the true claim from the false one\n         - \"I have enough constraints to treat this as knowledge\"\n     - Skepticism\n         - Constraints aren't enough (or known) to distinguish the true claim from the false one\n         - \"I don't have enough constraints to treat this as knowledge\"\n     - Hyperskepticism\n         - Constraints are never enough (or known) to distinguish the true claim from the false one\n         - \"No amount of constraints can ever be enough to treat this as knowledge\"\n - In other words, \"skepticism\" preserves a claim's capacity to be \"true\", while hyperskepticism removes it - introducing the validity of ad hoc doubt.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/9.C. The Limits of Skepticism.txt, lines 68-78 (section 2, The Difference)",
+          "why_relevant": "Gives the three-way confidence rubric — enough constraints yields knowledge, insufficient constraints yields skepticism, constraints-can-never-suffice is invalid hyperskepticism — with preserving a claim's capacity to be true as the validity condition."
+        },
+        {
+          "quote": "- Something exists.\n     - This is the ultimate self-evident truth: its truth is demonstrated by the very act of questioning it.\n     - Reality can now be defined as \"the set of all things\".\n - You can't have thoughts without a thinker, doubts without a doubter, or observations without an observer. It is the necessary starting point for all knowledge.\n     - As such, there can't be \"nothing\" on a fundamental level, as any single \"thing\" is the counterexample to show otherwise.\n     - Any attempt to validate the denial of existence as a whole means that *something* is doing the denying.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 15-20 (Inference 1)",
+          "why_relevant": "Grounds the first inference by self-evidence: its truth is demonstrated performatively by the act of questioning it, making it the necessary starting point for all subsequent rules."
+        },
+        {
+          "quote": "What Happens When Not Inferred\n - The pursuit of knowledge (and, by extension, distinguishing between truth and falsehood) becomes impossible.\n     - If you don't accept that anything exists, then there is nothing for a statement to be true (or false) about.\n     - The entire concepts of knowledge, logic, and inquiry become meaningless because there is no subject matter to inquire about, all these sentences you've been reading themselves have no meaning, and there is not even a you to understand a thing to begin with.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 21-24 (Inference 1, What Happens When Not Inferred)",
+          "why_relevant": "Shows the document's grounding method for every inference rule: each is justified transcendentally by what its denial would destroy (here, knowledge, logic, and inquiry themselves)."
+        },
+        {
+          "quote": "- Things are defined by their consistent properties.\n     - We observe that for anything to be what it is, it must possess a stable nature or a set of core properties.\n     - If a property about a thing changes, then:\n         - The definition changes into a different thing (like a rock: rocks are consistently solid, and so if it becomes hotter and turns into a liquid, it's no longer considered a \"rock\" and now becomes \"magma\").\n         - The variability itself is a consistent property of the thing (like the hardness of a rock, as rocks can differ in how hard and soft they are - as long as they are solid).\n - Objects are knowable because they have stable, consistent identities.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 35-40 (Inference 2)",
+          "why_relevant": "States the rule that definition and knowability rest on consistent properties, the precondition for any valid identification or inference about a thing."
+        },
+        {
+          "quote": "- As such, we now have a basis for terms such as \"fundamental\" and \"superficial\":\n     - Fundamental properties refer to a thing's consistent properties, where its negation makes it not-the-thing (ex. rocks are solid, rocks have color, etc.).\n     - Superficial properties refer to a thing's inconsistent properties, where its negation does not make it not-the-thing (ex. rocks can be strong or brittle, rocks can be black or red, etc.).",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 41-43 (Inference 2)",
+          "why_relevant": "Provides the negation test for which properties are load-bearing in an identification — a rule for what evidence can actually confirm or refute a claim about a thing."
+        },
+        {
+          "quote": "- We can also now understand comprehensibility and rationality:\n     - Comprehensibility is the ability to accurately visualize, represent, or imagine observations in the mind.\n     - Rationality is the ability to identify/define a concept based on the comprehensible association of known observations.\n - As such, we can now distinguish between the various combinations of the two:\n     - Comprehensible & Rational: consistency between what is imagined and known observations (ex. a rock, 2+2=4, the mitochondria is the powerhouse of the cell)\n     - Comprehensible & Irrational: inconsistency between what is imagined and known observations (ex. a pink elephant, flying pig, talking door, any fiction story)\n     - Incomprehensible & Rational: inability to imagine known observations (ex. infinity, a color outside the visible spectrum, trying to remember before you were born)\n     - Incomprehensible & Irrational: inability to imagine unknown observations (ex. a square circle, a married bachelor, P and not P, neither P nor not P)",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 44-51 (Inference 2)",
+          "why_relevant": "Defines rationality as association with known observations and gives a fourfold classification separating valid reasoning from fiction and incoherence — a core condition on valid reasoning."
+        },
+        {
+          "quote": "What Happens When Not Inferred\n - Knowledge becomes impossible.\n     - If things do not have a stable and consistent nature, then nothing can be reliably known - nothing for us to point to and learn more about.\n     - Scientific laws would be meaningless (with never-ending counterexamples), language would be useless (with the meaning of words always changing), and reality would be an incomprehensible chaos where a cat could become a dog for no reason.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 52-55 (Inference 2, What Happens When Not Inferred)",
+          "why_relevant": "Grounds the consistency rule by consequence: without stable identities, no reliable knowledge or law-like inference is possible."
+        },
+        {
+          "quote": "- Things are identified (or known) by distinguishing their properties from others.\n     - The act of knowing what something is requires knowing what it is not (ie. a frame of reference). \n - Identification is an act of separation and distinction: we draw a conceptual line around a thing, separating it from everything else.\n     - That is what a \"contradiction\" is: when the distinguishing property between two objects is also shared by them (ex. triangles and squares are distinguished by the number of sides they have, and so it would be a contradiction to define a shape with both properties of 3 sides and 4 sides).\n         - This is the basis for \"The Principle of Non-Contradiction\", as there cannot be a true statement that has the same properties as a false statement (or vice versa).",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 64-68 (Inference 3)",
+          "why_relevant": "Derives the Principle of Non-Contradiction — a foundational rule of inference — from the observation that identification requires distinction."
+        },
+        {
+          "quote": "- All information comes from a source.\n     - We observe that information does not spontaneously generate from nothingness: it always comes from somewhere.\n - This inference allows every fact, claim, or piece of data to have an origin that can be investigated for its reliability.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 85-87 (Inference 4)",
+          "why_relevant": "Establishes the source-investigation rule: every claim's confidence can be assessed by investigating the reliability of its origin."
+        },
+        {
+          "quote": "- Distinguishing fact from fiction becomes impossible.\n     - There would be no reason to question the origin of a claim, as information could just \"be\" without any source.\n     - If the source of information is meaningless, and truth is defined by reality (and falsehoods by their contradiction with reality), then falsehoods would become indistinguishable from truth.\n     - Concepts like evidence, credibility, and citation would be meaningless because the origin of information would be irrelevant.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 89-92 (Inference 4, What Happens When Not Inferred)",
+          "why_relevant": "Grounds the source rule: evidence, credibility, and citation are only meaningful if information origins can be interrogated."
+        },
+        {
+          "quote": "- Phenomenal/conscious experience corresponds with reality.\n     - When the source of our phenomenal experience is removed, we lose the capacity for that experience (ex. you stop seeing when you close your eyes, you stop hearing when you cover your ears, you stop feeling when nothing touches your skin, etc.).\n - This means that we can interpret our experience like sensors, receptors, and transducers: there exist some object that transforms what occurs in reality into our own awareness.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 103-105 (Inference 5)",
+          "why_relevant": "Grounds why perception can serve as evidence at all: experience is treated as a sensor of reality, justified by covariation between experience and its source."
+        },
+        {
+          "quote": "- Perception, memory, and reasoning are imperfect and subject to error.\n     - We consistently observe that our senses can be deceived and our minds can make mistakes.\n - This implies our knowledge is always provisional (subject to either future change or confirmation) and must be open to revision in light of new evidence.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 120-122 (Inference 6)",
+          "why_relevant": "States the fallibilism condition on confidence: knowledge is provisional and must remain open to revision by new evidence."
+        },
+        {
+          "quote": "- Learning and self-correction become impossible.\n     - If we assume our minds are infallible, or that our knowledge is perfect and there is nothing else to learn (or, anything new must be filtered through our preconceived ideas), we prevent ourselves from being able to change our minds when we're wrong about something.\n     - This leads to a complete inability to identify and correct our own errors, preventing any growth in understanding.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 124-126 (Inference 6, What Happens When Not Inferred)",
+          "why_relevant": "Grounds the revision rule by consequence: denying fallibility destroys error-correction, a required capacity of valid reasoning."
+        },
+        {
+          "quote": "- Truth is defined by reality, not by feelings or intuition.\n     - We observe that reality is the ultimate judge of whether a claim is true, regardless of our internal state of certainty.\n     - This means that truth corresponds with rationality, not comprehensibility: it is possible for something to be true that you can't comprehend or fully understand.\n - This means truth is objective because it is based on something outside of ourselves.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 135-138 (Inference 7)",
+          "why_relevant": "Sets the truth criterion for confidence: reality is the judge regardless of felt certainty, and incomprehensibility alone does not disqualify a claim."
+        },
+        {
+          "quote": "- Falsehood is defined by contradiction, not by feelings or intuition.\n     - Because reality is consistent, a claim that is untrue (which would be inconsistent with reality) will inevitably clash with a known fact.\n     - This means that falsehood corresponds with irrationality, not incomprehensibility.\n - This contradiction - the clashing of a claim with a fact - is the objective marker of falsehood, regardless of how plausible the false claim may feel.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 152-155 (Inference 8)",
+          "why_relevant": "Gives the falsification rule: contradiction with a known fact is the objective marker of falsehood, and plausibility feelings carry no evidential weight."
+        },
+        {
+          "quote": "- Identifying falsehood becomes impossible.\n     - If contradiction is not the standard, any claim could be accepted so long as it \"feels right\".\n - We would have no logical tool to reject misinformation or any belief that is inconsistent with the observable world.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 157-159 (Inference 8, What Happens When Not Inferred)",
+          "why_relevant": "Grounds the contradiction standard by consequence: without it there is no logical tool for rejecting false claims."
+        },
+        {
+          "quote": "- Speculation is neither proof nor refutation.\n     - We see that ideas tied to clear facts and patterns (what matches reality) explain and predict the world better than ideas built on unknowns or \"what-ifs\" without proof.\n     - In other words, correspondence with reality is a stronger basis for truth than ignorance or speculation.\n - As a result, rules from what we've seen stay useful until real proof against them shows up.\n     - \"Maybe\" ideas don't disprove inferences that correspond with reality.\n     - In other words: if a claim can be made without definitive evidence, then it can also be dismissed without definitive evidence.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 169-174 (Inference 9)",
+          "why_relevant": "This is the framework's central abduction rule: evidence-grounded explanations are preferred over speculation, inferred rules persist until real counter-proof appears, and evidence-free claims can be dismissed evidence-free."
+        },
+        {
+          "quote": "What Happens When Not Inferred\n - Truth becomes unattainable.\n     - All hypotheses would be equally strong based on \"possibility\", causing science to stall endlessly on speculations without needing evidence.\n     - This also makes truth and falsehood indistinguishable from one another, as false possibilities now have equal (or more) weight as the truth (without you ever being able to figure that out).\n     - We would be forced to ignore or reject valid evidence simply because it does not fit our oversimplified models.\n - Knowledge would always reduce to skepticism or relativism, as no claim could be objectively preferred.\n     - Without correspondence with reality, the only alternative is emotion or ignorance: you could end up doubting everything or believing anything, as nothing could stand out without matching reality as the judge.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 175-181 (Inference 9, What Happens When Not Inferred)",
+          "why_relevant": "Grounds the abduction rule by consequence: without it, no claim can be objectively preferred and rational preference collapses into skepticism or relativism."
+        },
+        {
+          "quote": "- Proper reasoning corresponds with reality.\n     - We observe that the abstract rules of logic are incredibly effective at describing and predicting the physical world.\n - This means sound thinking is not just useful in the mind: it is a tool that reliably connects to the way the universe actually works.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 191-193 (Inference 10)",
+          "why_relevant": "Grounds the validity of logical rules themselves: their observed predictive success in reality is what licenses trusting reasoning as a truth-tracking tool."
+        },
+        {
+          "quote": "- Every inference has a limit.\n     - We observe that rules and principles are derived from a specific context and may not apply outside of that context.\n - This protects against overgeneralization, as any general rule we infer is limited by the scope of our observations.\n     - Therefore, this very principle - that \"every inference has a limit\" - must also have a limit, leading to the exploration of an ultimate, un-limited truth.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 211-214 (Inference 11)",
+          "why_relevant": "States a scope condition on all inference rules: each is bounded by the observational context it was derived from, and the meta-rule is self-applied."
+        },
+        {
+          "quote": "What Happens When Not Inferred\n - Knowledge becomes rigid and hyper-dogmatic.\n     - True inferences would be oversimplified, preventing the acceptance of more correct truths.\n     - We would mistakenly apply rules from one domain to another where they do not belong, leading to profound errors that appear beautifully sound.\n     - We would be forced to ignore or reject valid evidence simply because it does not fit our oversimplified models.\n - This prevents us from achieving a more complete understanding by mistaking the limits of our inferences and understanding for the limits of reality itself.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 215-220 (Inference 11, What Happens When Not Inferred)",
+          "why_relevant": "Identifies cross-domain rule application as a failure mode of reasoning that produces errors which appear sound — a condition on valid use of inference rules."
+        },
+        {
+          "quote": "Observations (non-exhaustive)\n - \"All information comes from a source\".\n - \"Speculation is not refutation\".",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 241-243 (Inference 13, Observations)",
+          "why_relevant": "Shows the derivation architecture: earlier inferred rules are themselves reused as observational premises for later inferences, which is how new rules are grounded on prior ones."
+        },
+        {
+          "quote": "- Every thing that has a beginning has a preceding cause.\n     - We infer this rule from our universal, unbroken experience that things do not happen without a reason.\n - This reflects our observation that reality can be interpreted as an ordered chain of events, not a series of random, disconnected occurrences.\n     - Note that this even encompasses quantum events, as they are still correspond with probabilistic laws and wave functions.\n     - Our ignorance over what actually causes the wave function collapse is not a refutation of this inference.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 252-256 (Inference 13)",
+          "why_relevant": "Shows how a rule is discovered (inferred from universal, unbroken experience) and applies the ignorance-is-not-refutation rule to defend it against a known unknown."
+        },
+        {
+          "quote": "- For a conclusion to be valid, it must be contingent on premises that are not the conclusion itself.\n     - Otherwise, it would either be a tautology, circular reasoning, or infinite regression.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 271-272 (Inference 14, Observations)",
+          "why_relevant": "States an explicit condition on valid argument: conclusions must depend on independent premises, ruling out tautology, circularity, and infinite regress."
+        },
+        {
+          "quote": "- All things are contingent on their causes (that are not the thing).\n     - We observe that things in the universe depend on external conditions and prior causes for their existence.\n     - This must include the universe, as its existence depends on its initial/external conditions.\n     - This is what \"determinism\" is: where an effect is contingent on a particular set of initial causes.\n - This means their existence is not a matter of logical necessity; they could have been otherwise.\n     - This is what a \"possibility\" is: what would have happened (in theory) based on manipulating variables and simulating the outcome based on a specified set of rules.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 280-285 (Inference 14)",
+          "why_relevant": "Defines 'possibility' as rule-constrained simulation of variable manipulation — the framework's constraint on what counts as a legitimate possibility in abductive reasoning."
+        },
+        {
+          "quote": "- Reality is ordered, operating according to consistent and intelligible laws.\n     - We observe that the universe is not a random chaos but is fundamentally structured and patterned.\n - Its orderly nature allows our minds to grasp and understand its workings: we can reduce complex behavior into an encompassing set of rules/laws.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 299-301 (Inference 15)",
+          "why_relevant": "Grounds the practice of inferring rules and laws at all: reality's observed order is what makes reduction of behavior to laws a valid move."
+        },
+        {
+          "quote": "- You are capable of intelligence, forming abstractions from observations.\n     - We observe that the human mind can move beyond raw, particular sensory data to identify universal patterns, principles, and concepts.\n - This ability to form abstract ideas is the basis for language, science, and all higher reasoning - including this very document. [...] Reason becomes impossible - especially the ability to infer general rules/laws from reality.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 432-434 and 436 (Inference 22 and its What Happens When Not Inferred)",
+          "why_relevant": "Explains how inference rules are discovered — by abstracting universal patterns from observations — and self-referentially grounds the document's own method."
+        },
+        {
+          "quote": "- Reality could have been different.\n     - We observe that the specific state of our reality - from the laws of physics to the details of our own lives - is the result of a long chain of tuned, contingent events. [...] This allows us to attach significance to an event based on probabilistic and statistical concepts.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 696-697 and 702 (Inference 37)",
+          "why_relevant": "Licenses probabilistic and statistical significance as an abduction metric, derived from contingency."
+        },
+        {
+          "quote": "- Concepts such as necessity, possibility, and statistics would be meaningless.\n     - Low probability events would be equally significant as high-probability events.\n     - Speculation (without data) would be equally significant as improbability.\n     - You would fail to grasp the extraordinary improbability of your own life.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Comparative Religion Diagram/2. Discovering Reality.txt, lines 704-707 (Inference 37, What Happens When Not Inferred)",
+          "why_relevant": "Grounds probability weighting by consequence: without it, data-free speculation would weigh the same as measured improbability — restating the anti-speculation preference rule in probabilistic terms."
+        },
+        {
+          "quote": "| PH1 | Phenomena occur. | --- | {occur, happen, thing, phenomenon, primitive, raw} | Starting point: this either happens, or it does not. \"Thing\" here means any phenomenological occurrence, and \"phenomenon\" is our label for anything that occurs. | Red, loud, hungry, happy, pain, want, 2, unicorn, etc. |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, node PH1 (Level 1, Phenomenological Primitives)",
+          "why_relevant": "Sets the DAG's foundational grounding move — an undeniable starting point ('this either happens, or it does not') from which all later definitions inherit."
+        },
+        {
+          "quote": "| T8 | A correlation is when a phenomenon often follows another. | T4,IP4 | {correlation} | How do patterns occur with change? Phenomena that often occur after each other is labelled as a \"correlation\". | loud sound often comes after a bright flash of light |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, node T8 (Temporality)",
+          "why_relevant": "Defines correlation as the phenomenological primitive underlying inductive inference from repeated succession."
+        },
+        {
+          "quote": "| WI7 | Success is the occurrence of what is wanted. | WI3 | {success, satisfaction, achievement, accomplishment} | How does direction occur? When it occurs, we label it \"success\". | \"arm moves\" occurs with \"want to move arm\" |\n| WI8 | Failure is the non-occurrence of what is wanted. | WI3 | {failure} | How does direction occur? When it does not occur, we label it \"failure\". | \"fly\" does not occur with \"want to fly\" |\n| WI11 | An outcome is a success or failure. | WI7,WI8 | {outcome, result} | How do successes and failures occur? The occurrence of either one is labelled an \"outcome\". | whether or not \"arm moves\" occurs with \"want to move arm\" |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, nodes WI7, WI8, WI11 (Wanting & Intensity)",
+          "why_relevant": "Defines success, failure, and outcome — the primitives on which the knowledge and ignorance nodes (QA3/QA4) are built."
+        },
+        {
+          "quote": "| OB1 | Independence is when variations in one pattern do not correlate with variations in another pattern. | IP*,T* | {independence} | How do features occur? The way in which a pattern is different across its features is labelled a \"variation\". | the taste fruits are independent from the sound of voices |\n| OB2 | Wants do not correlate with sensations. | WI6,OB1 | {} | How do wants and sensations occur? Wants occur independently from sensations. | \"want to fly\" does not correlate with \"occurrence of flight\" |\n| OB3 | Outcomes do not correlate with want. | WI11,OB1 | {} | How do outcomes and sensations occur? Wants occur independently from outcomes. | \"want to fly\" does not correlate with whether \"flight\" occurs or not |\n| OB4 | A limit is what is independent from want. | OB2,OB3 | {limit, constraint, boundary, against} | How do wants occur with outcomes and sensations? What occurs independently from want is labelled a \"limit\". | \"flight\" is a limit to want, as well as all \"sensations\" and \"outcomes\" |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, nodes OB1-OB4 (Ontological Bridge)",
+          "why_relevant": "Derives 'limit/constraint' — the key term in the knowledge and skepticism framework — as what is independent from want, grounding why constraints are objective rather than preference-driven."
+        },
+        {
+          "quote": "| RP2 | A thought is a set of imaginations and their associations. | T* | {thought, concept, idea, analysis} | How does imagination occur? Connected imaginations are labelled \"thoughts\". | {gray, elephant} with {big, cool}, {pink, elephant} with {fake, possible with pink paint}, {1, 1} with {2}  |\n| RP4 | Imagination and thoughts are independent from occurrence. | T7,OB1 | {} | How does imagination occur? What occurs is imagined occurs independently from what . | thinking of a new recipe, trying a new chess strategy, playing devil's advocate for a new concept |\n| RP5 | Possibility is a thought constrained by imagined limits. | RP2,OB4 | {possibility, potential, could} | How do imagination and limits occur? Thoughts constrained by imagined limits are labelled \"possibilities\". | {coin flip} has possibilities of {heads, tails}, {unicorn} has possibilities of {rainbow farts} |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, nodes RP2, RP4, RP5 (Recognition & Possibility)",
+          "why_relevant": "Defines possibility as a limit-constrained thought and states that imagination is independent from occurrence — the phenomenological grounding for why mere imagined possibilities carry no evidential weight."
+        },
+        {
+          "quote": "| AD9 | A phenomenon is meaningful when it is placed within a hierarchy. | AD8 | {meaning, context} | How do hierarchies occur? The placement of a phenomenon in a hierarchy is labelled \"meaningful\". | \"apple\" is meaningful when it is placed in the \"food\" hierarchy, but is not meaningful in the \"numbers\" hierarchy |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, node AD9 (Abstraction & Domain)",
+          "why_relevant": "Sets a contextual condition on meaningfulness — a claim is meaningful only when placed within an appropriate hierarchy, paralleling the 'context matters' condition on truth and contradiction."
+        },
+        {
+          "quote": "| QA1 | A question is a want for information that matches a set of abstractions. | WI*,AD5,RP5? | {question, inquiry} | How does learning and wants occur? Wanting to learn information that satisfies a set of abstractions is labelled a \"question\". | what color are apples? what is 2+2? do pink elephants exist? what is a square circle? |\n| QA2 | An answer is the outcome of a question. | QA1 | {answer} | How do questions occur? Their outcome is labelled a \"question\". | what color are apples? red. what is a square circle? <shrug> |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, nodes QA1-QA2 (TODO section 8, Questions & Answers)",
+          "why_relevant": "Defines inquiry itself: a question is a want for information matching abstractions, and an answer is its outcome — the machinery on which knowledge and ignorance are then defined."
+        },
+        {
+          "quote": "| QA3 | Knowledge is the successful result of a question. | QA2 | {knowledge} | How do answers occur? Successful answers are labelled \"knowledge\". | ??? |\n| QA4 | Ignorance is the failed result of a question. | QA2 | {ignorance} | How do answers occur? Failed answers are labelled \"ignorance\". | ??? |",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, nodes QA3-QA4 (TODO section 8, Questions & Answers)",
+          "why_relevant": "Defines knowledge as the successful outcome of a question and ignorance as the failed outcome — the DAG's criterion for when a claim counts as knowledge."
+        },
+        {
+          "quote": "| QA5 | Learning is the transition from ignorance to knowledge. | QA3,QA4 | {learn} | ??? ???. | ???\n| QA6 | Forgetting is the transition from knowledge to ignornace. | QA3,QA4 | {forget} | ??? ???. | ??? ",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, nodes QA5-QA6 (TODO section 8, Questions & Answers)",
+          "why_relevant": "Defines learning and forgetting as transitions between ignorance and knowledge, making epistemic state change explicit in the DAG (still marked incomplete with ???)."
+        },
+        {
+          "quote": "certainty? uncertainty?\n\nconcepts that can't be vizualized - square circle\n\n\nboundary? is what is limited\nresistance is the intensity of limit?\ncounter-will is boundary with resistance\n\ntheory is possible limit\n\nresponse?\nlimits occur independently from striving.",
+          "where": "C:/Users/IbrahimMahmoud/Documents/Personal/Diagrams/Comparative Religion/AI/Phenomenology Diagram/3. DAG Definitions.txt, lines 101-113 (TODO notes after section 8)",
+          "why_relevant": "Draft notes defining 'theory is possible limit' (a theory as a candidate constraint), flagging certainty/uncertainty as open nodes, and repeating that limits occur independently from striving — the seeds of the framework's account of theory and confidence."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+WRITING GOAL
+
+Demystification. Use plain, common language and keep cognitive load low,
+while staying precise enough that a specialist would agree it's
+accurate. Be hard on the topic, soft on the reader: anticipate where
+someone might feel defensive, but don't soften what's actually true.
+Where something is uncertain, contested, or where an expert would
+object, surface that directly in plain terms — don't hide it behind
+jargon, hedging, emotional appeals, or common misreadings the reader
+might bring in.
+
+Drifts to avoid:
+  (1) academic drift — reaching for Latinate words, nominalizations, or
+      jargon when a common word works.
+  (2) bland drift — hedging or both-sidesing until no real claim is
+      made.
+  (3) false accessibility — oversimplifying in a way a specialist would
+      object to.
+  (4) emotional cushioning that buries the actual point.
+  (5) weight drift — using a phrase that does more work than the point
+      requires. The phrase carries an extra connotation the writer did
+      not intend, and the reader spends effort deciding which reading
+      was meant. Recurring offenders:
+        - "the standard move is to X" reads as "this always happens."
+          If the point is that the move is socially permitted rather
+          than that it always occurs, "an accepted move is to X" is
+          closer to the actual claim and lighter on the reader.
+        - "is treated as" can usually be replaced by a plain verb —
+          "passes as," "counts as," "reads as," or just "is."
+        - "gets X-ed" / "gets X-ed as" ("gets met with," "gets heard
+          as," "gets read as") is a passive-voice tic that hides the
+          subject. Replace with the plain active verb: "gets met
+          with" → "is answered with"; "gets heard as" → "reads as";
+          "gets read as" → "reads as." If the writer can't name the
+          actor doing the action, the agentless "is" form is still
+          shorter than "gets X-ed."
+        - in-house jargon like "demand a ready policy solution"
+          reduces to "ask for a fix on the spot." If a phrase sounds
+          like a policy memo, it is doing too much work for its
+          content.
+If accessibility and precision seem to conflict in a sentence, flag
+that sentence rather than silently picking one.
+
+Connective tissue. Between two clauses joined by a semicolon, comma,
+or em-dash, the relationship between them should be explicit. If the
+second clause contradicts the first, say "but." If it replaces the
+first, say "instead." If it follows from the first, say "so." Reading
+"X; Y" and having to infer the relationship from context costs the
+reader effort the writer can spend a single word to save. Self-check:
+read each multi-clause sentence and ask whether a connective word
+would make the relationship one read shorter. If yes, add it.
+
+Self-check before releasing a version: a smart non-expert should
+understand it on first read; a specialist should read it and not
+wince; no sentence should hedge without saying anything. If any of
+those fail, rewrite.

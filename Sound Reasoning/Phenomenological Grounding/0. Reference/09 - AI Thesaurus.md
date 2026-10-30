@@ -1,0 +1,117 @@
+# 09 AI Thesaurus
+
+For each common AI word: what the author has accepted to say instead. "Thesaurus" is his analogy, not a promise of 1-to-1 swaps — the entries show that the right replacement depends on the context, and it may be a phrase, a restructured sentence, or a deletion rather than a word. Every entry traces to a ruling of his. The file grows with each verdict he gives; threads consult it before proposing a fix for a conditionally banned word (the live list is in [[03 - Demystification]]).
+
+- **attend** (added by him)
+ - "only become distinct when someone attends to them" → "when someone pays attention to them" (PP2, pending his ok).
+ - "you attend to them in your awareness" → "you pay attention to them in your awareness" (PP2, pending his ok — the original is his wording).
+ - "You attend to red rather than hot" → "You pay attention to red rather than hot" (PP2, pending his ok).
+ - Whether the noun "attention" is covered when it is the topic itself (PP2's attention objection) — his open call.
+- **arrive** (for how things come into experience; added from the audit — the third verb caught doing the "met" job)
+ - "inverts the order in which things actually arrive" → "inverts the actual order" (PP2, pending his ok).
+ - "mistakes how the difference arrives" → "has it backwards: the difference... is simply there the moment both occur" (PP2, pending his ok).
+ - "too many distinctions arriving at once" → "too many distinctions at once" (PP2, pending his ok).
+ - "experience does not arrive as a list" → "does not come as a list" (PP2, pending his ok).
+- **carry** (a claim "carries" information or weight)
+ - "Tautologies carry no information" → "Tautologies hold no information" (PP1).
+ - "otherwise it carries no weight" → "otherwise it holds nothing up" (PP1).
+ - "the shape of a claim while carrying nothing inside" → "the shape of a claim with nothing inside" (PP1).
+ - "experience carries no boundaries" → resolved by relocating the claim, not rewording it: "Reality is one undivided whole: without you to tell this from that, nothing is actually this rather than that" (his wording, polished; PP2 — see [[10 - Sentence Case Studies]], case 4).
+- **consult** (added by him)
+ - "the world was never consulted" → his rewrite drops the personification: "not from whether or not it aligns with reality" (PP1, his edit). The rules file's own good example carried the phrase and was rewritten to match.
+- **cure** (as in "the cure is the same everywhere") — no ratified replacement yet; "the fix" was used in the rules files.
+- **the chain** (a private name for the node sequence; caught by the audit — same coinage family as the banned "ladder"/"rungs")
+ - "It is the chain doing its job." → "it is exactly how the nodes are meant to follow one another" (PP2, pending his ok).
+- **decide** (added by him)
+ - "Whether experienced distinctions count as real is decided by ultimate reality" → "depends on ultimate reality" (PP2, pending his ok).
+- **dodge** (meant as "avoid") — added by him. First ruling: "is met here, not dodged" became "is answered here." — the fix was deleting the contrast, not swapping the word (PP1).
+- **does work** (the phrase — "this concept does real work"; "this solution works" is fine) — added by him.
+ - "Naming that position shows the node does separate work" → "shows the node adds a claim of its own" (PP2).
+ - "a node has to do work of its own, or it goes" → "a node has to add something of its own, or it goes" (PP2).
+ - "Before attention (or language) does its work" → the phrase was deleted with the sentence's rewrite (PP2 — see [[10 - Sentence Case Studies]], case 4).
+- **earns its place / earn its keep** (verdict idioms, siblings of "does work"; added from the audit)
+ - "it earns its place" / "each earns its place on its own" → "deserves its place" — the objector's own commitment says "to deserve its place", so the reply echoes his standard back (PP2, pending his ok).
+ - "a claim must earn its keep" → the proposal "a claim must add something" was turned back by him: "add something" is a criterion with the criterion missing — even a definition adds a term (see [[10 - Sentence Case Studies]], case 19). The next proposal, "a statement that only teaches vocabulary cannot support claims about what occurs", was also turned back: clean language, wrong concept — a definition can state reality-content too (his sky example; [[10 - Sentence Case Studies]], cases 19 and 21). Third proposal ratified by him (changes list, item 26): "a definition guarantees only what a word will mean — not that anything answers to it", with the sky-dome example and his core inferential principle as the closing clause.
+- **empty** (a claim "looks empty")
+ - "looks empty: a real report of a difference should say what the difference is" → "says nothing: a report of a difference is expected to say what the difference is" (PP2, ratified — the "expected" is his steer).
+ - Kept as plain speech where emptiness is itself the topic ("is not empty the way "triangles have three sides" is"; "conceptually empty" inside the Carnap explanation) (PP1).
+- **flagged** / **ladder** / **rungs** (added by him) — these lived only in the reference files' own prose (the case-studies file); renamed to "a word from the banned list", "where to look", and "each one deeper / a step deeper".
+- **gets right** (the phrase; added by him)
+ - It first appeared in a proposed fix ("What the demand gets right"), which was replaced before ratification — see the "honest" entry.
+- **honest** (added by him)
+ - "The demand's honest core — every claim must be checkable — is answered here" → first proposal "What the demand gets right..." was itself retired when he added "gets right" to the list; ratified by him: "The demand is right that every claim must be checkable — and that is answered here" (PP1; it reuses the Shared Ground formula "the objector is right that...").
+- **looks** — removed from the conditionally banned list by him: too broad. Plain uses ruled fine: "This looks like a claim" (PP1), "the slicing looks forced" and "Look at the sequence" (PP2).
+- **making / makes** as the fix for "shaping": "shapes the differences" → "makes the differences" — it echoes the objection's own title, "made, not found" (PP2, pending his ok). The Kant gloss took his verbs: "the mind adjusts and adds to experience before you actually become aware of it".
+- **terms minted with a hyphen** (the structure, added by him — "the entry is not any particular phrase but the concept/structure itself")
+ - "difference-claim" → "Saying that two things differ means nothing until what differs between them is specified." (PP2 commitment, with its restatement) and "A claim asserting that two things differ cannot be checked while no criterion is given." (PP2 Basis — the "asserting" is his).
+ - "the telling-apart" → "the act of telling two things apart" (his pick over "in being told apart"); "whether telling-apart is the act of a self" → "whether telling things apart is the act of a self" (PP2).
+ - "a true-by-definition statement reflects our word-choices" → "a statement that is true by definition reflects only our choice of words" (PP1, ratified — the "only" is his).
+ - "being-experienced" → the whole sentence reworked to drop the phrase (PP1, ratified — his catch: the passive collides with "experienced" meaning skilled): "It does not show that an occurrence must be experienced in order to occur."
+ - "The beliefs-holding-each-other alternative" → "The alternative — beliefs holding each other up —", whole sentence reworked (PP1, pending his ok).
+ - Kept, ruled fine: "The singling-out and comparing words" (PP2 Unlocks) — and with it the dictionary's "a singling-out word" entries.
+ - Boundary (thread's reading, standing unless he objects): ordinary everyday compounds, like "three-sided shape", are outside the target.
+ - Scope (his ruling): the reference files' own prose follows the same rule — swept too; examples that deliberately keep flaws stay.
+- **met / meet**
+ - a demand "is met" → "is answered" (PP1) or "is satisfied" (PP2).
+ - "we never meet reality as it truly is" → "we never experience reality as it truly is" (PP1).
+ - "no language's speakers meet a world where..." → "find a world where..." (PP2).
+ - "The difference is met first" → "The awareness of the difference itself comes first" (his wording, PP2).
+ - "you always meet occurrences as the one experiencing them" → "you never notice an occurrence except as the one experiencing it" (PP1).
+ - "the experiencer may be in the meeting, not in the occurring" → "in the noticing, not in the occurring" (PP1).
+ - Kept as plain speech: "the same objection PP1 met" (an objection someone faced).
+- **never** (added by him)
+ - "the world was never consulted" → removed with the sentence's rewrite (PP1, his edit).
+ - Open: the ratified fix "you never notice an occurrence except as the one experiencing it" contains it; listed for his verdict.
+- **naming / names / named** (added by him)
+ - "without naming what differs" → the first fix ("spelling out") was rejected by him: it is a metaphor for the meaning rather than the meaning, and its register is wrong ("spelling out" is for explanations that are a chore). His candidates: "explain", "expose", "identify", "isolate", "specify". Applied: "without specifying what differs" (PP2, pending his ok).
+ - "language names them" / "each name a feature" / "claimed and named" → "labels" — "label" is the project's own core word ("'Phenomenon' is our label...") (PP2, pending his ok).
+ - "Naming that position" → "Stating that position" (PP2, pending his ok — the "spelling out" version was rejected, see above).
+ - Kept, recommended: the gloss formula "a philosopher named X" (PP1 and PP2) — the record's deliberate demystifying pattern; his call.
+- **ours / yours** (added by him)
+ - "the lines are ours, not the world's" → "the lines are made by us, not found in the world" (PP2, pending his ok — echoes the objection's own title, "made, not found").
+ - "the labels are ours" → "the labels come from us" (PP2, pending his ok).
+- **points / point at** (the pointing-at sense; added by him — "starting point" is a different word, his call whether covered)
+ - "So it points at the raw material" → "So, it identifies the raw material" (his edit, PP1).
+ - Remaining uses across both pages are listed for his verdicts; candidates from his edit: "identifies", "refers to", "singles out".
+- **padding**
+ - "not padding" → "not one thing re-said three times" (PP2).
+- **raw material** (added by him) — he kept the phrase while editing its own sentence, so it is listed rather than replaced; candidate: drop "raw" (PP1's Correction already says "the material every further claim is made of").
+- **reach** (in the sense "reach an occurrence"; added from the audit — case 2 had already rejected it once as a failed fix for "met")
+ - "every distinction anyone has ever reached was reached in experience" → "ever noticed was noticed in experience" (PP2, pending his ok).
+ - Three PP1 twins are in the PP1 changes list as open proposals ("reach an occurrence" → "notice an occurrence").
+ - His verdict: ratified as a varied set (case 13's lesson, run on the proposals) — "notice" kept in the two already-ratified fixes and in "every occurrence you notice is one you are experiencing"; "know of" for the Shared Ground sentence ("no one has ever known of an occurrence except by experiencing it") and for the commitment and its restatement ("The only way to know of an occurrence is to be the one experiencing it" — replacing "You can never check on an occurrence except by being the one experiencing it", which held "never" and "check on" in the old "reach" job). Exact edits: PP1 changes list, items 21-24.
+- **real** (not on the banned list, but under the same watch — he removes it case by case)
+ - "a real question" → "a genuine question" (PP1, PP2), "an open question" (PP1), "a question for later" (PP2), or "worth considering" (PP2) — context picks (all).
+ - "a real claim must rule something out" → "a genuine claim..." (PP1).
+ - "a real question that needs a real answer" → "a good question that can be investigated" (his wording, PP2).
+ - Kept as plain speech where realness is the topic (the illusion, eliminativism, and monism objections) and as an everyday intensifier ("really wrong", "languages really do draw").
+- **reports / report** (added by him)
+ - The verb: "a true-by-definition statement reports our word-choices" → "reflects our word-choices" (his edit, PP1). The same pass kept the noun ("a report about our word-choices"), so the ban read as aimed at the verb's personification; noun uses were listed for his verdicts.
+ - The noun, pulled into scope by his question (""report" is a banned word, is it not?"): PP1's "a report about our word-choices" → "a statement about our choice of words" (ratified, changes list item 31); PP2's "a report of a difference is expected to say" → "someone claiming a difference is expected to say", and "is a report about what occurs" → "is a statement about what occurs" (both applied).
+ - Kept as plain speech (his ruling): "Some people in deep meditative states report exactly that" — people reporting.
+ - The reports-of-unity sentence — his verdict: unreadable in both versions — was reworked whole (PP2, applied, veto open): "Even the person who says all distinctions dissolved describes the state through distinctions:... And such an account is itself distinct from an account of a toothache."
+- **settle / settled** (added by him)
+ - "That the many occur is settled by the observations" → "The observations above already show that the many occur" (PP2, pending his ok).
+ - "is settled every time one thing is noticed" → "is confirmed every time one thing is noticed" (PP2, pending his ok).
+ - "choosing words settles nothing about the world": the fix "changes nothing about the world" was rejected by him — every claim changes nothing about the world, so the contrast proves too much (see [[10 - Sentence Case Studies]], case 20). New proposal deletes the clause and keeps his concrete half: "The objector is right that you cannot make something exist by defining a term for it — a definition adds a label, not a fact." Ratified by him — "exactly the framing that was missing".
+ - PP1's cluster of three in one bullet ("is settled by the world / cannot be settled the other way / nobody to settle anything"): the first proposal ("is made true by the world...") was redirected by him — say what makes it true concretely, and "the world" itself joined the banned list. New proposal: ""Phenomena occur" is true because something does occur — the occurring is what makes it true, not our choice of words. And it cannot turn out false the other way: if nothing occurred, nobody would be there to find that out." Ratified by him; its home moves with the Path B restructure (see the PP1 changes list).
+- **shaping / shapes** (added by him; his direction for the Kant gloss: "adjusts/formats/modifies/adds to... before you actually become aware of it")
+ - "shapes the differences before you become aware of them" → "makes the differences..." (PP2, pending his ok — see the "making" note above).
+ - "attention and language shape what gets noticed and named" → "affect what gets noticed and what things get called" (PP2, pending his ok).
+- **underneath** / **worry** (added by him)
+ - "The valid worry underneath the objection" → proposal: "What the objection is right about" (PP1 changes list, pending his ok); "the added worry" / "the reconstruction worry" → candidate: "objection".
+ - The tail of the same bullet, "might not be able to hold anything up", was turned back by him — "anything" too vague, now on the banned list; new proposal: "What the objection is right about: a claim this thin might not be enough to support any other claim." Ratified by him.
+- **shows up** (added by him — extracted from the Kant gloss he caught; it had been installed as the replacement for "met"/"attend" and became the next private verb — see [[10 - Sentence Case Studies]], case 13)
+ - "the mind shapes experience before it ever shows up" → "before you actually become aware of it" (his direction, PP2).
+ - "before they show up" → "before you become aware of them" (PP2).
+ - "distinctions already showing up" → "distinctions already occurring" (PP2).
+ - "no word shows up on its own authority" → "no word appears on its own authority" (PP2 — "appear" is a granted synonym of occur).
+ - "the world of appearances shows up as many" → "the world appears as many" (PP2).
+ - "in place of what shows up" → "in place of what occurs" (PP2).
+- **sits**
+ - "sits on its other side" → "is on its other side" (PP1).
+ - "sits under Unknowns" → "is listed under Unknowns" (PP1).
+ - "where they sit" (boundaries) → "where they are" (PP2). He rejected "where boundaries fall"; the concrete fix was ratified: "where one phenomenon ends and another begins".
+ - "sits beneath" → "is beneath" (PP2).
+ - "does not sit above checking" → "is not excused from checking" (PP1).
+- **stock (example)** — caught by him as a phrase most people would not follow: "its own stock example" → "its own classic example" (PP2).
