@@ -1,0 +1,159 @@
+{
+ "chunks": [
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 90.2
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 9.5
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 10.7
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 89.6
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 10.4
+  },
+  {
+   "label": "scan",
+   "start": 1009,
+   "end": 1308,
+   "code": 0,
+   "seconds": 861.1
+  },
+  {
+   "label": "scan",
+   "start": 1309,
+   "end": 1608,
+   "code": 0,
+   "seconds": 918.4
+  },
+  {
+   "label": "scan",
+   "start": 1609,
+   "end": 1908,
+   "code": 0,
+   "seconds": 2962.1
+  },
+  {
+   "label": "scan",
+   "start": 1909,
+   "end": 2208,
+   "code": 0,
+   "seconds": 407.6
+  },
+  {
+   "label": "scan",
+   "start": 2209,
+   "end": 2341,
+   "code": 0,
+   "seconds": 265.3
+  },
+  {
+   "label": "third_true_room",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 190.4
+  },
+  {
+   "label": "third_true_mind",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 373.0
+  },
+  {
+   "label": "true_first_room",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 87.7
+  },
+  {
+   "label": "true_first_mind",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 138.5
+  },
+  {
+   "label": "true16",
+   "start": 1249,
+   "end": 1548,
+   "code": 0,
+   "seconds": 516.7
+  },
+  {
+   "label": "true16",
+   "start": 1549,
+   "end": 1848,
+   "code": 3221225477,
+   "seconds": 4287.4
+  },
+  {
+   "label": "true16",
+   "start": 1549,
+   "end": 1848,
+   "code": 3221225477,
+   "seconds": 3.9,
+   "retry": true
+  },
+  {
+   "label": "true16",
+   "start": 1849,
+   "end": 2148,
+   "code": 0,
+   "seconds": 3935.9
+  },
+  {
+   "label": "true16",
+   "start": 2149,
+   "end": 2232,
+   "code": 0,
+   "seconds": 227.8
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 48.6
+  },
+  {
+   "label": "true16",
+   "start": 1549,
+   "end": 1848,
+   "code": 0,
+   "seconds": 277.6
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 54.7
+  }
+ ]
+}

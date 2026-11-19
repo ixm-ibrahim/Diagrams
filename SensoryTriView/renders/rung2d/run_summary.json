@@ -1,0 +1,375 @@
+{
+ "chunks": [
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 1,
+   "seconds": 27.0
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 113.0
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 110.7
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 129.3
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 109.4
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 85.0
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 9.5
+  },
+  {
+   "label": "scan",
+   "start": 1009,
+   "end": 1308,
+   "code": 0,
+   "seconds": 426.3
+  },
+  {
+   "label": "scan",
+   "start": 1309,
+   "end": 1608,
+   "code": 0,
+   "seconds": 369.0
+  },
+  {
+   "label": "scan",
+   "start": 1609,
+   "end": 1908,
+   "code": 0,
+   "seconds": 358.0
+  },
+  {
+   "label": "scan",
+   "start": 1909,
+   "end": 1909,
+   "code": 0,
+   "seconds": 6.2
+  },
+  {
+   "label": "third_true_room",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 194.4
+  },
+  {
+   "label": "third_true_mind",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 204.1
+  },
+  {
+   "label": "true_third_room",
+   "start": 1801,
+   "end": 1909,
+   "code": 0,
+   "seconds": 72.2
+  },
+  {
+   "label": "true_third_mind",
+   "start": 1801,
+   "end": 1909,
+   "code": 0,
+   "seconds": 97.8
+  },
+  {
+   "label": "true16",
+   "start": 1249,
+   "end": 1548,
+   "code": 0,
+   "seconds": 279.3
+  },
+  {
+   "label": "true16",
+   "start": 1549,
+   "end": 1800,
+   "code": 0,
+   "seconds": 229.4
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 21.5
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 87.7
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 8.8
+  },
+  {
+   "label": "third_true_room",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 171.8
+  },
+  {
+   "label": "third_true_mind",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 217.9
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 26.8
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 87.2
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 8.8
+  },
+  {
+   "label": "third_true_mind",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 196.9
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 20.3
+  },
+  {
+   "label": "true_third_mind",
+   "start": 1801,
+   "end": 1909,
+   "code": 0,
+   "seconds": 96.3
+  },
+  {
+   "label": "true16",
+   "start": 1249,
+   "end": 1584,
+   "code": 0,
+   "seconds": 189.0
+  },
+  {
+   "label": "true16",
+   "start": 1585,
+   "end": 1800,
+   "code": 0,
+   "seconds": 216.1
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 20.2
+  },
+  {
+   "label": "scan",
+   "start": 1910,
+   "end": 2209,
+   "code": 0,
+   "seconds": 404.2
+  },
+  {
+   "label": "scan",
+   "start": 2210,
+   "end": 2341,
+   "code": 0,
+   "seconds": 182.7
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 86.3
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 8.8
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 87.3
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 9.3
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 1,
+   "seconds": 4.1
+  },
+  {
+   "label": "third_true_mind",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 218.3
+  },
+  {
+   "label": "true_third_room",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 59.4
+  },
+  {
+   "label": "true_third_mind",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 130.8
+  },
+  {
+   "label": "true16",
+   "start": 1249,
+   "end": 1584,
+   "code": 0,
+   "seconds": 374.9
+  },
+  {
+   "label": "true16",
+   "start": 1585,
+   "end": 1920,
+   "code": 0,
+   "seconds": 383.3
+  },
+  {
+   "label": "true16",
+   "start": 1921,
+   "end": 2232,
+   "code": 0,
+   "seconds": 521.9
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 30.2
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 170.3
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 35.5
+  },
+  {
+   "label": "third_true_room",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 199.1
+  },
+  {
+   "label": "third_true_mind",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 229.8
+  },
+  {
+   "label": "true_third_room",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 71.3
+  },
+  {
+   "label": "true_third_mind",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 109.1
+  },
+  {
+   "label": "true16",
+   "start": 1921,
+   "end": 2232,
+   "code": 0,
+   "seconds": 158.9
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 38.2
+  }
+ ]
+}

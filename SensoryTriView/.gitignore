@@ -1,0 +1,31 @@
+# What this repository holds: the engine and its tools (triview, rungs, tools), the timeline data (data),
+# the scenes of record, the small records the builds write and read, and the documents (docs).
+# What stays on disk only: frames, scans, videos and test scenes. They are large and can be rendered again.
+
+# Python, Blender and Windows leftovers
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+exposure_probe_*.png
+Thumbs.db
+desktop.ini
+
+# Scenes: only the scenes named here are kept. Every other scene is a test build.
+# To keep a new scene of record, add a line for it below.
+/scenes/*
+!/scenes/rung2p_r14m48.blend
+!/scenes/rung2p_r14m49.blend
+!/scenes/rung2p_r14m50.blend
+!/scenes/rung2p_r14m51.blend
+
+# Renders: everything is left out except the small records (json, jsonl, npz)
+# and the pictured findings of a rung's audit.
+/renders/**
+!/renders/**/
+!/renders/**/*.json
+!/renders/**/*.jsonl
+!/renders/**/*.npz
+!/renders/rung2p/audit_r14/**
+# A broken link left in renders since rung 2j: named here so that git does not try to open it.
+/renders/rung2j$d

@@ -1,0 +1,8 @@
+{"view": "third", "frames": [1, 336], "rendered": 336, "skipped": 0, "seconds": 90.8, "per_frame_mean": 0.266, "per_frame_first": 3.08, "gpu": {"baseline_mb": 0, "peak_mb": 1099}, "size": [960, 432]}
+{"view": "third", "frames": [337, 672], "rendered": 336, "skipped": 0, "seconds": 94.6, "per_frame_mean": 0.272, "per_frame_first": 4.28, "gpu": {"baseline_mb": 0, "peak_mb": 1097}, "size": [960, 432]}
+{"view": "third", "frames": [673, 1008], "rendered": 336, "skipped": 0, "seconds": 91.6, "per_frame_mean": 0.268, "per_frame_first": 3.45, "gpu": {"baseline_mb": 0, "peak_mb": 1097}, "size": [960, 432]}
+{"view": "third", "frames": [1009, 1344], "rendered": 336, "skipped": 0, "seconds": 90.6, "per_frame_mean": 0.265, "per_frame_first": 3.13, "gpu": {"baseline_mb": 0, "peak_mb": 1097}, "size": [960, 432]}
+{"view": "third", "frames": [1345, 1680], "rendered": 336, "skipped": 0, "seconds": 88.6, "per_frame_mean": 0.259, "per_frame_first": 2.81, "gpu": {"baseline_mb": 0, "peak_mb": 1097}, "size": [960, 432]}
+{"view": "third", "frames": [1681, 2016], "rendered": 336, "skipped": 0, "seconds": 89.2, "per_frame_mean": 0.261, "per_frame_first": 3.84, "gpu": {"baseline_mb": 0, "peak_mb": 1097}, "size": [960, 432]}
+{"view": "third", "frames": [2017, 2352], "rendered": 336, "skipped": 0, "seconds": 90.7, "per_frame_mean": 0.266, "per_frame_first": 2.94, "gpu": {"baseline_mb": 0, "peak_mb": 1101}, "size": [960, 432]}
+{"view": "third", "frames": [2353, 2688], "rendered": 336, "skipped": 0, "seconds": 88.3, "per_frame_mean": 0.258, "per_frame_first": 2.89, "gpu": {"baseline_mb": 0, "peak_mb": 1097}, "size": [960, 432]}

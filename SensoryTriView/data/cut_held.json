@@ -1,0 +1,11 @@
+{
+ "note": "for a True-Person camera held still through the whole scene (the dev showcase of rung 2p): no camera moves, so the mind's model follows its own rules at every second. A cut with a mind move gives the model that move's twin phase (the room at one scale while the camera rides the twin of the room's camera), which a held camera would show as a step in the mind's zoom: found 2026-11-14 at 43.0 s, where data/cut_test.json holds its reveal.",
+ "showcase": [
+  {
+   "view": "true",
+   "t0": 0.0,
+   "t1": 116.0
+  }
+ ],
+ "moves": {}
+}

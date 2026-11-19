@@ -1,0 +1,11 @@
+{"view": "true", "frames": [1, 336], "rendered": 336, "skipped": 0, "seconds": 88.3, "per_frame_mean": 0.256, "per_frame_first": 2.88, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [337, 672], "rendered": 336, "skipped": 0, "seconds": 172.0, "per_frame_mean": 0.503, "per_frame_first": 3.92, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [673, 1008], "rendered": 336, "skipped": 0, "seconds": 122.0, "per_frame_mean": 0.351, "per_frame_first": 5.57, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [1009, 1344], "rendered": 336, "skipped": 0, "seconds": 94.3, "per_frame_mean": 0.274, "per_frame_first": 2.78, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [1345, 1680], "rendered": 336, "skipped": 0, "seconds": 94.7, "per_frame_mean": 0.275, "per_frame_first": 3.64, "gpu": {"baseline_mb": 0, "peak_mb": 658}, "size": [1920, 648]}
+{"view": "true", "frames": [1681, 2016], "rendered": 336, "skipped": 0, "seconds": 90.1, "per_frame_mean": 0.262, "per_frame_first": 3.12, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [2017, 2352], "rendered": 336, "skipped": 0, "seconds": 87.9, "per_frame_mean": 0.255, "per_frame_first": 3.02, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [2353, 2688], "rendered": 336, "skipped": 0, "seconds": 97.7, "per_frame_mean": 0.284, "per_frame_first": 2.87, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [280, 615], "rendered": 336, "skipped": 0, "seconds": 96.3, "per_frame_mean": 0.28, "per_frame_first": 3.13, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [616, 951], "rendered": 336, "skipped": 0, "seconds": 98.3, "per_frame_mean": 0.281, "per_frame_first": 3.99, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}
+{"view": "true", "frames": [952, 1260], "rendered": 309, "skipped": 0, "seconds": 91.8, "per_frame_mean": 0.29, "per_frame_first": 3.11, "gpu": {"baseline_mb": 0, "peak_mb": 647}, "size": [1920, 648]}

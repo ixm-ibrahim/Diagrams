@@ -1,0 +1,15 @@
+{
+ "frames": [
+  {
+   "frame": 2101,
+   "mad": 2.24,
+   "over24": 0.022,
+   "mad_scan": 2.01,
+   "holes": 0.0,
+   "scan_footprint_px": 2.23
+  }
+ ],
+ "mean_mad": 2.24,
+ "mean_mad_scan": 2.01,
+ "mean_holes": 0.0
+}

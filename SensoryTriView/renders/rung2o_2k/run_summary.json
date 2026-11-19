@@ -1,0 +1,46 @@
+{
+ "chunks": [
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 91.2
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 57.3
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 55.0
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 1555.2
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 7541.8
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 34.2
+  }
+ ]
+}

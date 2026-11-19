@@ -1,0 +1,144 @@
+{
+ "fps": 24,
+ "pace": 0.8,
+ "pace_note": "The chain's guessed seconds play at this pace: 1 as guessed, 0.8 a quarter longer (his tenth review of 2026-11-10: the man moved too fast). The render stays at 24 frames a second; a chain second is 24 / pace frames.",
+ "duration_seconds": 116.0,
+ "frame_of_second_zero": 1,
+ "timing": "guess",
+ "timing_note": "Every second here is a guess from the concept's chain as restaged on 2026-11-07. His own filmed performance replaces them in rung 4.",
+ "beats": [
+  {
+   "id": "asleep",
+   "start": 0,
+   "end": 4,
+   "name": "Asleep",
+   "shows": "Nearly black. The ghost barely there, nothing in its head, the soul the one lit thing."
+  },
+  {
+   "id": "alarm",
+   "start": 4,
+   "end": 8,
+   "name": "The alarm",
+   "shows": "Cyan waves from the table to the ears. The body and the room come up grey from memory. 'alarm' lights."
+  },
+  {
+   "id": "silence",
+   "start": 8,
+   "end": 12,
+   "name": "He silences it",
+   "shows": "'stop' drops from the soul. The arm goes out blind; the smack stops the sound and sends the phone skidding to the table's edge."
+  },
+  {
+   "id": "stretch1",
+   "start": 12,
+   "end": 17,
+   "name": "Stretch",
+   "shows": "Lying down, arms over the head, a yawn. Mint rivers along the limbs, the breath wide."
+  },
+  {
+   "id": "situp",
+   "start": 17,
+   "end": 22,
+   "name": "Sits up",
+   "shows": "'up'. The blanket a magenta field down the body. The room swings upright, the gravity arrow swings to the floor."
+  },
+  {
+   "id": "doze",
+   "start": 22,
+   "end": 27,
+   "name": "The doze",
+   "shows": "Eyes shut, the head sinks, jerks up once, sinks again. The room rocks with each nod."
+  },
+  {
+   "id": "reach",
+   "start": 27,
+   "end": 30,
+   "name": "The reach",
+   "shows": "The groggy hand knocks the phone off the edge; it falls, the hand snaps after it, the knuckles rap the table. The edge flares magenta."
+  },
+  {
+   "id": "pain",
+   "start": 30,
+   "end": 35,
+   "name": "Pain",
+   "shows": "The hand comes back; the other rubs it. The salmon comet arrives late and throbs. Breath held, heart quick."
+  },
+  {
+   "id": "pickup",
+   "start": 35,
+   "end": 40,
+   "name": "The phone from the floor",
+   "shows": "'phone'. He leans down for it, comes up with it, wakes the screen."
+  },
+  {
+   "id": "crest",
+   "start": 40,
+   "end": 50,
+   "name": "The crest",
+   "shows": "First light on the face bent over the phone: his lids shut, his head flinches, and the free hand comes up a quarter second after the light. The crow. Two breaths, then the head lifts to the window under the hand. 'look'. 'sun' lights."
+  },
+  {
+   "id": "rise",
+   "start": 50,
+   "end": 56,
+   "name": "Rise",
+   "shows": "'stand'. The phone face down, a hand on the bed, the room drops past the head, the sway."
+  },
+  {
+   "id": "walk",
+   "start": 56,
+   "end": 64,
+   "name": "Walk, hand up, hiccup",
+   "shows": "'go'. The room slides past, the hand over the sun. The toe catches the rug: the gravity arrow swings hard. 'rug' lights."
+  },
+  {
+   "id": "window",
+   "start": 64,
+   "end": 72,
+   "name": "Window",
+   "shows": "Touch on both hands, warmth, a blue stir of air. The model zooms out to the range and the sun."
+  },
+  {
+   "id": "stretch2",
+   "start": 72,
+   "end": 80,
+   "name": "Stretch at the window",
+   "shows": "'stretch'. Mint rivers along every limb, the breath wide and white."
+  },
+  {
+   "id": "eyes",
+   "start": 80,
+   "end": 88,
+   "name": "Eyes closed in the sun",
+   "shows": "From behind. Warmth and slow breath the only bright things. The reveal is made here."
+  },
+  {
+   "id": "chime",
+   "start": 88,
+   "end": 92,
+   "name": "The chime",
+   "shows": "One short cyan wave from behind. The phone comes back grey, the table and the bed with it. 'phone' lights again."
+  },
+  {
+   "id": "back",
+   "start": 92,
+   "end": 100,
+   "name": "Back to the bed",
+   "shows": "'back'. The room wheels round the head, the bed comes to the front. The foot clears the rug."
+  },
+  {
+   "id": "sit",
+   "start": 100,
+   "end": 106,
+   "name": "Sits, and the phone",
+   "shows": "The room wheels and drops as he sits. 'answer'. The hand closes magenta on the phone."
+  },
+  {
+   "id": "texting",
+   "start": 106,
+   "end": 116,
+   "name": "Texting",
+   "shows": "Word after word from the soul. Everything else sinks to faint grey. Wide from the front, as it began."
+  }
+ ]
+}

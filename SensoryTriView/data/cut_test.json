@@ -1,0 +1,73 @@
+{
+ "note": "the lidar test of 2026-11-08: the reveal while he looks at the crest, the True view through the rise, the walk, the window, the eyes shut in the sun and the chime behind him, the dive into his eyes as he turns back",
+ "showcase": [
+  {
+   "view": "move",
+   "move": "third_true",
+   "t0": 42.0,
+   "t1": 52.0
+  },
+  {
+   "view": "true",
+   "t0": 52.0,
+   "t1": 93.0
+  },
+  {
+   "view": "move",
+   "move": "true_first",
+   "t0": 93.0,
+   "t1": 97.5
+  }
+ ],
+ "moves": {
+  "third_first": {
+   "kind": "head",
+   "t0": 56.0,
+   "t1": 60.0
+  },
+  "first_third": {
+   "kind": "head",
+   "t0": 70.0,
+   "t1": 74.0
+  },
+  "third_true": {
+   "kind": "mind",
+   "direction": "to_true",
+   "t0": 42.0,
+   "t1": 52.0,
+   "hold": 43.0,
+   "twin_end": 46.5,
+   "ease1": 50.5,
+   "pull": 1.2,
+   "dissolve": [
+    43.5,
+    46.5
+   ]
+  },
+  "true_third": {
+   "kind": "mind",
+   "direction": "to_third",
+   "t0": 93.0,
+   "t1": 97.5,
+   "hold": 93.3,
+   "twin_start": 95.5,
+   "pull": 1.2,
+   "dissolve": [
+    95.5,
+    97.5
+   ]
+  },
+  "true_first": {
+   "kind": "mind",
+   "direction": "to_first",
+   "t0": 93.0,
+   "t1": 97.5,
+   "hold": 93.3,
+   "twin_start": 95.3,
+   "dissolve": [
+    95.5,
+    97.3
+   ]
+  }
+ }
+}

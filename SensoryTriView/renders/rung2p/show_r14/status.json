@@ -1,0 +1,704 @@
+{
+ "steps": [
+  {
+   "at": "2026-11-16 19:28:42",
+   "step": "true 1177-1273",
+   "frames": [
+    1177,
+    1273
+   ],
+   "wanted": 97,
+   "made": 97,
+   "seconds": 1330.3,
+   "per_frame": 13.71,
+   "code": 0
+  },
+  {
+   "at": "2026-11-16 19:37:33",
+   "step": "true 2392-2424",
+   "frames": [
+    2392,
+    2424
+   ],
+   "wanted": 33,
+   "made": 33,
+   "seconds": 530.7,
+   "per_frame": 16.08,
+   "code": 0
+  },
+  {
+   "at": "2026-11-16 19:46:55",
+   "step": "true 2664-2694",
+   "frames": [
+    2664,
+    2694
+   ],
+   "wanted": 31,
+   "made": 31,
+   "seconds": 562.3,
+   "per_frame": 18.14,
+   "code": 0
+  },
+  {
+   "at": "2026-11-16 20:47:20",
+   "step": "true 300-420",
+   "frames": [
+    300,
+    420
+   ],
+   "wanted": 121,
+   "made": 121,
+   "seconds": 3625.0,
+   "per_frame": 29.96,
+   "code": 0
+  },
+  {
+   "at": "2026-11-16 22:19:47",
+   "step": "true 634-664",
+   "frames": [
+    634,
+    664
+   ],
+   "wanted": 31,
+   "made": 31,
+   "seconds": 5546.9,
+   "per_frame": 178.93,
+   "code": 0
+  },
+  {
+   "at": "2026-11-16 23:37:32",
+   "step": "true 780-832",
+   "frames": [
+    780,
+    832
+   ],
+   "wanted": 53,
+   "made": 2,
+   "seconds": 4664.6,
+   "per_frame": 2332.3,
+   "code": 4294967295
+  },
+  {
+   "at": "2026-11-16 23:52:51",
+   "step": "true 780-832",
+   "frames": [
+    782,
+    832
+   ],
+   "wanted": 51,
+   "made": 0,
+   "seconds": 149.7,
+   "per_frame": 149.7,
+   "code": null,
+   "paused": "the graphics card too hot, the graphics card 94 C, the processor at 28 percent of its nominal speed, 27 percent busy"
+  },
+  {
+   "at": "2026-11-17 00:11:44",
+   "step": "true 780-832",
+   "frames": [
+    782,
+    832
+   ],
+   "wanted": 51,
+   "made": 2,
+   "seconds": 388.8,
+   "per_frame": 194.38,
+   "code": null,
+   "paused": "the graphics card too hot, the graphics card 90 C, the processor at 124 percent of its nominal speed, 9 percent busy"
+  },
+  {
+   "at": "2026-11-17 00:30:36",
+   "step": "true 780-832",
+   "frames": [
+    784,
+    832
+   ],
+   "wanted": 49,
+   "made": 1,
+   "seconds": 142.1,
+   "per_frame": 142.09,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 75 C, the processor at 66 percent of its nominal speed, 70 percent busy"
+  },
+  {
+   "at": "2026-11-17 00:41:46",
+   "step": "true 780-832",
+   "frames": [
+    785,
+    832
+   ],
+   "wanted": 48,
+   "made": 1,
+   "seconds": 173.0,
+   "per_frame": 172.98,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 74 C, the processor at 60 percent of its nominal speed, 72 percent busy"
+  },
+  {
+   "at": "2026-11-17 01:02:42",
+   "step": "true 780-832",
+   "frames": [
+    786,
+    832
+   ],
+   "wanted": 47,
+   "made": 1,
+   "seconds": 142.7,
+   "per_frame": 142.66,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 67 C, the processor at 70 percent of its nominal speed, 66 percent busy"
+  },
+  {
+   "at": "2026-11-17 01:37:06",
+   "step": "true 780-832",
+   "frames": [
+    787,
+    832
+   ],
+   "wanted": 46,
+   "made": 4,
+   "seconds": 328.5,
+   "per_frame": 82.13,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 72 C, the processor at 63 percent of its nominal speed, 71 percent busy"
+  },
+  {
+   "at": "2026-11-17 02:44:33",
+   "step": "true 780-832",
+   "frames": [
+    791,
+    832
+   ],
+   "wanted": 42,
+   "made": 4,
+   "seconds": 329.9,
+   "per_frame": 82.48,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 71 C, the processor at 77 percent of its nominal speed, 72 percent busy"
+  },
+  {
+   "at": "2026-11-17 03:55:46",
+   "step": "true 780-832",
+   "frames": [
+    795,
+    832
+   ],
+   "wanted": 38,
+   "made": 8,
+   "seconds": 556.2,
+   "per_frame": 69.52,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 71 C, the processor at 70 percent of its nominal speed, 64 percent busy"
+  },
+  {
+   "at": "2026-11-17 05:01:36",
+   "step": "true 780-832",
+   "frames": [
+    803,
+    832
+   ],
+   "wanted": 30,
+   "made": 7,
+   "seconds": 233.2,
+   "per_frame": 33.32,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 72 C, the processor at 69 percent of its nominal speed, 60 percent busy"
+  },
+  {
+   "at": "2026-11-17 06:06:57",
+   "step": "true 780-832",
+   "frames": [
+    810,
+    832
+   ],
+   "wanted": 23,
+   "made": 6,
+   "seconds": 203.3,
+   "per_frame": 33.88,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 72 C, the processor at 77 percent of its nominal speed, 78 percent busy"
+  },
+  {
+   "at": "2026-11-17 07:18:03",
+   "step": "true 780-832",
+   "frames": [
+    816,
+    832
+   ],
+   "wanted": 17,
+   "made": 17,
+   "seconds": 551.5,
+   "per_frame": 32.44,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 07:25:41",
+   "step": "true 1296-1344",
+   "frames": [
+    1296,
+    1344
+   ],
+   "wanted": 49,
+   "made": 49,
+   "seconds": 453.8,
+   "per_frame": 9.26,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 07:29:50",
+   "step": "true 1954-1984",
+   "frames": [
+    1954,
+    1984
+   ],
+   "wanted": 31,
+   "made": 31,
+   "seconds": 245.9,
+   "per_frame": 7.93,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 07:38:40",
+   "step": "true 2098-2128",
+   "frames": [
+    2098,
+    2128
+   ],
+   "wanted": 31,
+   "made": 31,
+   "seconds": 526.5,
+   "per_frame": 16.98,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 07:51:46",
+   "step": "true 2508-2550",
+   "frames": [
+    2508,
+    2550
+   ],
+   "wanted": 43,
+   "made": 43,
+   "seconds": 780.2,
+   "per_frame": 18.14,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 07:59:51",
+   "step": "true 2842-2872",
+   "frames": [
+    2842,
+    2872
+   ],
+   "wanted": 31,
+   "made": 31,
+   "seconds": 481.9,
+   "per_frame": 15.55,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 08:15:10",
+   "step": "true 3168-3216",
+   "frames": [
+    3168,
+    3216
+   ],
+   "wanted": 49,
+   "made": 49,
+   "seconds": 915.5,
+   "per_frame": 18.68,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 08:25:19",
+   "step": "true 1-240",
+   "frames": [
+    1,
+    240
+   ],
+   "wanted": 240,
+   "made": 191,
+   "seconds": 605.6,
+   "per_frame": 3.17,
+   "code": null,
+   "paused": "the processor held back for heat, the graphics card 72 C, the processor at 65 percent of its nominal speed, 60 percent busy"
+  },
+  {
+   "at": "2026-11-17 08:37:59",
+   "step": "true 1-240",
+   "frames": [
+    192,
+    240
+   ],
+   "wanted": 49,
+   "made": 49,
+   "seconds": 281.9,
+   "per_frame": 5.75,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 09:18:14",
+   "step": "true 241-480",
+   "frames": [
+    241,
+    480
+   ],
+   "wanted": 119,
+   "made": 119,
+   "seconds": 2410.8,
+   "per_frame": 20.26,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 13:50:00",
+   "step": "true 481-720",
+   "frames": [
+    681,
+    720
+   ],
+   "wanted": 40,
+   "made": 40,
+   "seconds": 3488.6,
+   "per_frame": 87.22,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 15:11:50",
+   "step": "true 721-960",
+   "frames": [
+    721,
+    960
+   ],
+   "wanted": 187,
+   "made": 187,
+   "seconds": 4904.9,
+   "per_frame": 26.23,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 15:50:34",
+   "step": "true 961-1200",
+   "frames": [
+    961,
+    1176
+   ],
+   "wanted": 216,
+   "made": 216,
+   "seconds": 2320.2,
+   "per_frame": 10.74,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 16:09:16",
+   "step": "true 1201-1440",
+   "frames": [
+    1274,
+    1440
+   ],
+   "wanted": 118,
+   "made": 118,
+   "seconds": 1118.2,
+   "per_frame": 9.48,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 16:46:11",
+   "step": "true 1441-1680",
+   "frames": [
+    1441,
+    1680
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 2209.6,
+   "per_frame": 9.21,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 17:14:37",
+   "step": "true 1681-1920",
+   "frames": [
+    1681,
+    1920
+   ],
+   "wanted": 240,
+   "made": 190,
+   "seconds": 1702.3,
+   "per_frame": 8.96,
+   "code": 1853227067
+  },
+  {
+   "at": "2026-11-17 17:23:43",
+   "step": "true 1681-1920",
+   "frames": [
+    1871,
+    1920
+   ],
+   "wanted": 50,
+   "made": 50,
+   "seconds": 541.0,
+   "per_frame": 10.82,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 18:13:53",
+   "step": "true 1921-2160",
+   "frames": [
+    1921,
+    2160
+   ],
+   "wanted": 178,
+   "made": 178,
+   "seconds": 3005.3,
+   "per_frame": 16.88,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 20:27:39",
+   "step": "true 2161-2400",
+   "frames": [
+    2161,
+    2391
+   ],
+   "wanted": 231,
+   "made": 231,
+   "seconds": 8020.2,
+   "per_frame": 34.72,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 21:34:43",
+   "step": "true 2401-2640",
+   "frames": [
+    2425,
+    2640
+   ],
+   "wanted": 173,
+   "made": 173,
+   "seconds": 4019.0,
+   "per_frame": 23.23,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 22:34:41",
+   "step": "true 2641-2880",
+   "frames": [
+    2641,
+    2880
+   ],
+   "wanted": 178,
+   "made": 178,
+   "seconds": 3592.5,
+   "per_frame": 20.18,
+   "code": 0
+  },
+  {
+   "at": "2026-11-17 23:47:52",
+   "step": "true 2881-3120",
+   "frames": [
+    2881,
+    3120
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 4384.0,
+   "per_frame": 18.27,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 00:57:09",
+   "step": "true 3121-3360",
+   "frames": [
+    3121,
+    3360
+   ],
+   "wanted": 191,
+   "made": 191,
+   "seconds": 4152.5,
+   "per_frame": 21.74,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 01:18:49",
+   "step": "true 3361-3480",
+   "frames": [
+    3361,
+    3480
+   ],
+   "wanted": 120,
+   "made": 120,
+   "seconds": 1294.7,
+   "per_frame": 10.79,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 05:13:12",
+   "step": "true 481-720",
+   "frames": [
+    482,
+    719
+   ],
+   "wanted": 123,
+   "made": 123,
+   "seconds": 6243.8,
+   "per_frame": 50.76,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 06:05:36",
+   "step": "true 721-960",
+   "frames": [
+    757,
+    959
+   ],
+   "wanted": 89,
+   "made": 89,
+   "seconds": 3139.8,
+   "per_frame": 35.28,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 06:16:11",
+   "step": "true 961-1200",
+   "frames": [
+    964,
+    1143
+   ],
+   "wanted": 68,
+   "made": 68,
+   "seconds": 629.6,
+   "per_frame": 9.26,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 06:29:19",
+   "step": "true 1201-1440",
+   "frames": [
+    1212,
+    1391
+   ],
+   "wanted": 55,
+   "made": 55,
+   "seconds": 784.0,
+   "per_frame": 14.26,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 06:36:26",
+   "step": "true 1441-1680",
+   "frames": [
+    1518,
+    1678
+   ],
+   "wanted": 55,
+   "made": 55,
+   "seconds": 422.1,
+   "per_frame": 7.67,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 06:48:53",
+   "step": "true 1681-1920",
+   "frames": [
+    1681,
+    1920
+   ],
+   "wanted": 99,
+   "made": 99,
+   "seconds": 743.3,
+   "per_frame": 7.51,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 07:02:36",
+   "step": "true 1921-2160",
+   "frames": [
+    1923,
+    2098
+   ],
+   "wanted": 85,
+   "made": 85,
+   "seconds": 818.5,
+   "per_frame": 9.63,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 10:38:59",
+   "step": "true 2161-2400",
+   "frames": [
+    2353,
+    2400
+   ],
+   "wanted": 18,
+   "made": 18,
+   "seconds": 329.4,
+   "per_frame": 18.3,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 10:52:09",
+   "step": "true 2401-2640",
+   "frames": [
+    2411,
+    2435
+   ],
+   "wanted": 25,
+   "made": 25,
+   "seconds": 785.9,
+   "per_frame": 31.44,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 11:11:52",
+   "step": "true 2641-2880",
+   "frames": [
+    2651,
+    2782
+   ],
+   "wanted": 56,
+   "made": 56,
+   "seconds": 1177.5,
+   "per_frame": 21.03,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 11:24:56",
+   "step": "true 2881-3120",
+   "frames": [
+    3011,
+    3120
+   ],
+   "wanted": 43,
+   "made": 43,
+   "seconds": 779.4,
+   "per_frame": 18.13,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 11:47:00",
+   "step": "true 3121-3360",
+   "frames": [
+    3121,
+    3351
+   ],
+   "wanted": 70,
+   "made": 70,
+   "seconds": 1319.5,
+   "per_frame": 18.85,
+   "code": 0
+  },
+  {
+   "at": "2026-11-18 11:55:12",
+   "step": "true 3361-3480",
+   "frames": [
+    3364,
+    3475
+   ],
+   "wanted": 30,
+   "made": 30,
+   "seconds": 486.9,
+   "per_frame": 16.23,
+   "code": 0
+  }
+ ]
+}

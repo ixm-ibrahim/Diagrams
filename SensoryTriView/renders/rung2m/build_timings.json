@@ -1,0 +1,21 @@
+{
+ "blender": "5.2.3 LTS",
+ "frames": [
+  1,
+  2784
+ ],
+ "moves": false,
+ "room_build_s": 0.86,
+ "room_keyframes": 247286,
+ "true_build_s": 9.93,
+ "engine_s": 7.41,
+ "bake_s": 0.63,
+ "true_keyframes": 156297,
+ "probes_s": 0.18,
+ "probes": {
+  "first": 465,
+  "third": 117
+ },
+ "objects": 108,
+ "total_s": 19.02
+}

@@ -1,0 +1,74 @@
+{
+ "timing": "guess",
+ "timing_note": "Seconds from the start of the scene, guessed from the concept's chain like the senses; rung 4 replaces them from his performance.",
+ "closures": [
+  [
+   0.0,
+   16.0
+  ],
+  [
+   22.8,
+   25.0
+  ],
+  [
+   25.4,
+   27.0
+  ],
+  [
+   40.43,
+   41.5
+  ],
+  [
+   80.0,
+   89.0
+  ]
+ ],
+ "closures_note": "asleep and through the stretch until the yawn ends; the doze with one jerk; shut for a moment at first light (40.2 s: the lids begin to close 0.13 s after it, by reflex, and are shut at 40.43); closed in the sun until a moment after the chime.",
+ "lids": {
+  "close_frames": 3,
+  "open_frames": 6,
+  "first_open_frames": 10,
+  "blink_profile": [
+   0.5,
+   1.0,
+   1.0,
+   0.65,
+   0.35,
+   0.12
+  ],
+  "upper_share": 0.75
+ },
+ "blink": {
+  "seed": 7,
+  "min_gap": 2.6,
+  "max_gap": 6.5,
+  "frames": 6,
+  "clear_of_closure": 0.7
+ },
+ "exposure_first": {
+  "target": 1.2,
+  "lo": -7.0,
+  "hi": 3.0,
+  "tau_brighter": 1.2,
+  "tau_darker": 6.0,
+  "lid_transmission": 0.08,
+  "bright_percent": 10,
+  "probe_step": 0.25
+ },
+ "exposure_third": {
+  "target_mean": 0.1,
+  "lo": -6.0,
+  "hi": 3.0,
+  "tau": 2.5,
+  "probe_step": 1.0
+ },
+ "lid_colour": [
+  0.55,
+  0.1,
+  0.03
+ ],
+ "tint": {
+  "strength": 0.4,
+  "feather": 0.32
+ }
+}

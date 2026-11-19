@@ -1,0 +1,112 @@
+{
+ "timing": "guess",
+ "timing_note": "The showcase's order from the concept (Third, then First, then Third by the other side, then True, then First again by the dive, then all three), placed on the chain's guessed seconds while he is up. Rung 4's timing moves these with the beats.",
+ "showcase": [
+  {
+   "view": "third",
+   "t0": 0.0,
+   "t1": 56.0
+  },
+  {
+   "view": "move",
+   "move": "third_first",
+   "t0": 56.0,
+   "t1": 60.0
+  },
+  {
+   "view": "first",
+   "t0": 60.0,
+   "t1": 70.0
+  },
+  {
+   "view": "move",
+   "move": "first_third",
+   "t0": 70.0,
+   "t1": 74.0
+  },
+  {
+   "view": "third",
+   "t0": 74.0,
+   "t1": 80.0
+  },
+  {
+   "view": "move",
+   "move": "third_true",
+   "t0": 80.0,
+   "t1": 90.0
+  },
+  {
+   "view": "true",
+   "t0": 90.0,
+   "t1": 99.5
+  },
+  {
+   "view": "move",
+   "move": "true_first",
+   "t0": 99.5,
+   "t1": 104.0
+  },
+  {
+   "view": "first",
+   "t0": 104.0,
+   "t1": 106.0
+  },
+  {
+   "view": "all",
+   "t0": 106.0,
+   "t1": 116.0
+  }
+ ],
+ "moves": {
+  "third_first": {
+   "kind": "head",
+   "t0": 56.0,
+   "t1": 60.0
+  },
+  "first_third": {
+   "kind": "head",
+   "t0": 70.0,
+   "t1": 74.0
+  },
+  "third_true": {
+   "kind": "mind",
+   "direction": "to_true",
+   "t0": 80.0,
+   "t1": 90.0,
+   "hold": 81.0,
+   "twin_end": 84.5,
+   "ease1": 88.5,
+   "pull": 1.2,
+   "dissolve": [
+    81.5,
+    84.5
+   ]
+  },
+  "true_third": {
+   "kind": "mind",
+   "direction": "to_third",
+   "t0": 99.5,
+   "t1": 104.0,
+   "hold": 99.8,
+   "twin_start": 102.0,
+   "pull": 1.2,
+   "dissolve": [
+    102.0,
+    104.0
+   ]
+  },
+  "true_first": {
+   "kind": "mind",
+   "direction": "to_first",
+   "t0": 99.5,
+   "t1": 104.0,
+   "hold": 99.8,
+   "twin_start": 101.8,
+   "dissolve": [
+    102.0,
+    103.8
+   ]
+  }
+ },
+ "moves_note": "Third to First leaves the Third road as he starts to walk and arrives on the eyes before the toe catches the rug. First to Third leaves the eyes at the sill and lands on the Third road as he straightens for the stretch. Third to True is the reveal: from behind his shoulder with his eyes closed in the sun, the camera pulls straight back out of the skull while the room dissolves into the mind's model of it, and goes on to the True road's wide station behind the ghost. True to Third is the mirror at the bedside: the camera pushes in through the back of the skull onto the Third road's station as the model dissolves into the room. True to First is the dive (his review of 2026-11-08: the eye expects it): the camera goes in through the back of the skull to the simulated eyes, where the model's picture is the eyes' own, and the model dissolves into the room seen from the eyes. Every move exists; the showcase uses Third to First, First to Third, Third to True and True to First."
+}

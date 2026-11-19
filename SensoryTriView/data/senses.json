@@ -1,0 +1,1827 @@
+{
+ "timing": "guess",
+ "timing_note": "Seconds from the start of the scene, all guessed from the concept's chain as restaged on 2026-11-07 (the smack, the stretch, the knock, the rap and rub, the pick-up, the crest at 40); rung 4 replaces them from his performance.",
+ "budget": {
+  "ceiling": 1.5,
+  "held_floor": 0.05,
+  "held_base": 0.15
+ },
+ "awareness": [
+  {
+   "t": 0.0,
+   "level": 0.0
+  },
+  {
+   "t": 4.0,
+   "level": 0.0
+  },
+  {
+   "t": 7.0,
+   "level": 1.0
+  },
+  {
+   "t": 22.0,
+   "level": 1.0
+  },
+  {
+   "t": 23.2,
+   "level": 0.45
+  },
+  {
+   "t": 25.0,
+   "level": 0.45
+  },
+  {
+   "t": 25.3,
+   "level": 0.8
+  },
+  {
+   "t": 26.0,
+   "level": 0.4
+  },
+  {
+   "t": 27.0,
+   "level": 0.4
+  },
+  {
+   "t": 27.5,
+   "level": 0.75
+  },
+  {
+   "t": 28.3,
+   "level": 1.0
+  },
+  {
+   "t": 80.0,
+   "level": 1.0
+  },
+  {
+   "t": 83.0,
+   "level": 0.6
+  },
+  {
+   "t": 88.3,
+   "level": 0.6
+  },
+  {
+   "t": 89.0,
+   "level": 1.0
+  },
+  {
+   "t": 108.0,
+   "level": 1.0
+  },
+  {
+   "t": 116.0,
+   "level": 0.35
+  }
+ ],
+ "events": [
+  {
+   "id": "alarm",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 4.0,
+   "t1": 10.0,
+   "source": "phone",
+   "rhythm": "pulses",
+   "strength": 0.8,
+   "attention": [
+    0.55,
+    0.95
+   ],
+   "doubt": 0.08,
+   "rate_hz": 2.0
+  },
+  {
+   "id": "reach_prop",
+   "sense": "proprioception",
+   "kind": "river",
+   "t0": 8.6,
+   "t1": 10.4,
+   "chain": "arm_r",
+   "strength": 0.6,
+   "attention": [
+    0.45,
+    0.35
+   ]
+  },
+  {
+   "id": "phone_touch_1",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 9.65,
+   "part": "hand_r",
+   "strength": 0.7,
+   "attention": 0.7,
+   "place": "phone"
+  },
+  {
+   "id": "phone_hold_1",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 9.65,
+   "t1": 10.5,
+   "chain": "arm_r",
+   "strength": 0.35,
+   "attention": [
+    0.5,
+    0.3
+   ],
+   "part": "hand_r",
+   "place": "phone"
+  },
+  {
+   "id": "smack_effort",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 10.0,
+   "t1": 10.45,
+   "parts": [
+    "upper_arm_r",
+    "forearm_r"
+   ],
+   "strength": 0.7,
+   "attention": [
+    0.5,
+    0.3
+   ]
+  },
+  {
+   "id": "smack_sound",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 10.15,
+   "t1": 10.6,
+   "source": "phone",
+   "rhythm": "single",
+   "strength": 0.45,
+   "attention": [
+    0.45,
+    0.25
+   ],
+   "doubt": 0.08
+  },
+  {
+   "id": "stretch_lie_prop",
+   "sense": "proprioception",
+   "kind": "river",
+   "t0": 12.2,
+   "t1": 16.8,
+   "chain": "all",
+   "strength": 0.75,
+   "attention": [
+    0.6,
+    0.35
+   ]
+  },
+  {
+   "id": "stretch_lie_effort",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 12.4,
+   "t1": 15.6,
+   "parts": [
+    "upper_arm_r",
+    "upper_arm_l",
+    "chest"
+   ],
+   "strength": 0.8,
+   "attention": [
+    0.45,
+    0.25
+   ]
+  },
+  {
+   "id": "breath_yawn",
+   "sense": "breath",
+   "kind": "breath",
+   "t0": 12.8,
+   "t1": 16.8,
+   "rate_hz": 0.0,
+   "held_until": 14.9,
+   "attention": [
+    0.6,
+    0.3
+   ],
+   "depth": 1.0
+  },
+  {
+   "id": "sight_wake",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 16.2,
+   "t1": 21.6,
+   "spread_deg": 20,
+   "attention": [
+    0.5,
+    0.35
+   ]
+  },
+  {
+   "id": "blanket",
+   "sense": "touch",
+   "kind": "field",
+   "t0": 17.0,
+   "t1": 20.8,
+   "parts": [
+    "chest",
+    "pelvis",
+    "thigh_r",
+    "thigh_l",
+    "shin_r",
+    "shin_l"
+   ],
+   "strength": 0.6,
+   "attention": [
+    0.45,
+    0.2
+   ],
+   "sweep": [
+    "chest",
+    "shin_r"
+   ]
+  },
+  {
+   "id": "balance_situp",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 17.0,
+   "t1": 23.5,
+   "attention": [
+    0.4,
+    0.15
+   ]
+  },
+  {
+   "id": "prop_touch",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 17.8,
+   "part": "hand_r",
+   "strength": 0.6,
+   "attention": 0.5,
+   "place": "bed"
+  },
+  {
+   "id": "prop_hold",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 17.8,
+   "t1": 20.2,
+   "chain": "arm_r",
+   "strength": 0.35,
+   "attention": [
+    0.4,
+    0.2
+   ],
+   "part": "hand_r",
+   "place": "bed"
+  },
+  {
+   "id": "situp_effort",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 17.2,
+   "t1": 20.0,
+   "parts": [
+    "chest",
+    "upper_arm_r",
+    "thigh_r"
+   ],
+   "strength": 0.7,
+   "attention": [
+    0.5,
+    0.3
+   ]
+  },
+  {
+   "id": "balance_nod_1",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 24.0,
+   "t1": 25.6,
+   "attention": [
+    0.35,
+    0.1
+   ]
+  },
+  {
+   "id": "balance_nod_2",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 26.2,
+   "t1": 27.4,
+   "attention": [
+    0.2,
+    0.1
+   ]
+  },
+  {
+   "id": "reach_prop_2",
+   "sense": "proprioception",
+   "kind": "river",
+   "t0": 27.0,
+   "t1": 28.3,
+   "chain": "arm_r",
+   "strength": 0.5,
+   "attention": [
+    0.35,
+    0.3
+   ]
+  },
+  {
+   "id": "sight_reach",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 27.0,
+   "t1": 28.3,
+   "spread_deg": 10,
+   "attention": [
+    0.3,
+    0.35
+   ],
+   "target": "phone"
+  },
+  {
+   "id": "phone_knock",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 28.25,
+   "part": "hand_r",
+   "strength": 0.7,
+   "attention": 0.6,
+   "place": "phone",
+   "speed": 2.5
+  },
+  {
+   "id": "sight_fall",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 28.3,
+   "t1": 31.0,
+   "spread_deg": 10,
+   "attention": [
+    0.85,
+    0.5
+   ],
+   "target": "phone"
+  },
+  {
+   "id": "effort_snap",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 28.3,
+   "t1": 29.0,
+   "parts": [
+    "upper_arm_r",
+    "forearm_r"
+   ],
+   "strength": 0.8,
+   "attention": [
+    0.5,
+    0.3
+   ]
+  },
+  {
+   "id": "rap_touch",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 28.55,
+   "part": "hand_r",
+   "strength": 1.0,
+   "attention": 0.75,
+   "place": "table_edge",
+   "speed": 2.5
+  },
+  {
+   "id": "rap_sound",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 28.55,
+   "t1": 29.0,
+   "source": "hand_r",
+   "rhythm": "single",
+   "strength": 0.5,
+   "attention": [
+    0.5,
+    0.3
+   ],
+   "doubt": 0.05
+  },
+  {
+   "id": "phone_thud",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 28.72,
+   "t1": 29.15,
+   "source": "phone",
+   "rhythm": "single",
+   "strength": 0.6,
+   "attention": [
+    0.6,
+    0.3
+   ],
+   "doubt": 0.1
+  },
+  {
+   "id": "effort_retract",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 28.75,
+   "t1": 29.4,
+   "parts": [
+    "upper_arm_r",
+    "forearm_r"
+   ],
+   "strength": 0.7,
+   "attention": [
+    0.5,
+    0.3
+   ]
+  },
+  {
+   "id": "pain_comet",
+   "sense": "pain",
+   "kind": "comet",
+   "t": 29.9,
+   "part": "hand_r",
+   "strength": 1.0,
+   "attention": 0.9,
+   "speed": 0.55
+  },
+  {
+   "id": "pain_throb",
+   "sense": "pain",
+   "kind": "throb",
+   "t0": 31.2,
+   "t1": 116.0,
+   "part": "hand_r",
+   "strength": 1.0,
+   "rate_hz": 1.6,
+   "attention": [
+    0.95,
+    0.95
+   ],
+   "decay": [
+    {
+     "t": 31.2,
+     "a": 0.95
+    },
+    {
+     "t": 32.0,
+     "a": 0.95
+    },
+    {
+     "t": 33.0,
+     "a": 0.5
+    },
+    {
+     "t": 35.0,
+     "a": 0.3
+    },
+    {
+     "t": 36.8,
+     "a": 0.55
+    },
+    {
+     "t": 38.5,
+     "a": 0.25
+    },
+    {
+     "t": 64.0,
+     "a": 0.14
+    },
+    {
+     "t": 65.3,
+     "a": 0.14
+    },
+    {
+     "t": 65.8,
+     "a": 0.6
+    },
+    {
+     "t": 67.5,
+     "a": 0.15
+    },
+    {
+     "t": 116.0,
+     "a": 0.08
+    }
+   ]
+  },
+  {
+   "id": "rub_touch",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 30.6,
+   "part": "hand_l",
+   "strength": 0.6,
+   "attention": 0.5
+  },
+  {
+   "id": "rub_hold_l",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 30.6,
+   "t1": 34.2,
+   "chain": "arm_l",
+   "strength": 0.4,
+   "attention": [
+    0.5,
+    0.25
+   ],
+   "part": "hand_l"
+  },
+  {
+   "id": "rub_hold_r",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 30.6,
+   "t1": 34.2,
+   "chain": "arm_r",
+   "strength": 0.4,
+   "attention": [
+    0.4,
+    0.2
+   ],
+   "part": "hand_r"
+  },
+  {
+   "id": "breath_caught",
+   "sense": "breath",
+   "kind": "breath",
+   "t0": 31.0,
+   "t1": 35.0,
+   "rate_hz": 0.0,
+   "held_until": 33.2,
+   "attention": [
+    0.85,
+    0.3
+   ],
+   "depth": 0.7
+  },
+  {
+   "id": "heart_quick",
+   "sense": "heartbeat",
+   "kind": "heart",
+   "t0": 31.2,
+   "t1": 35.5,
+   "rate_hz": 1.6,
+   "attention": [
+    0.7,
+    0.2
+   ]
+  },
+  {
+   "id": "sight_knuckle",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 30.4,
+   "t1": 35.0,
+   "spread_deg": 7,
+   "attention": [
+    0.35,
+    0.3
+   ],
+   "target": "hand_r"
+  },
+  {
+   "id": "lean_prop",
+   "sense": "proprioception",
+   "kind": "river",
+   "t0": 35.0,
+   "t1": 37.0,
+   "chain": "torso",
+   "strength": 0.5,
+   "attention": [
+    0.35,
+    0.25
+   ]
+  },
+  {
+   "id": "balance_lean",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 35.2,
+   "t1": 38.5,
+   "attention": [
+    0.4,
+    0.15
+   ]
+  },
+  {
+   "id": "sight_floor_phone",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 35.3,
+   "t1": 38.3,
+   "spread_deg": 8,
+   "attention": [
+    0.6,
+    0.5
+   ],
+   "target": "phone"
+  },
+  {
+   "id": "phone_pick",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 36.75,
+   "part": "hand_r",
+   "strength": 0.7,
+   "attention": 0.6,
+   "place": "phone"
+  },
+  {
+   "id": "phone_hold_3",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 36.75,
+   "t1": 51.3,
+   "chain": "arm_r",
+   "strength": 0.3,
+   "attention": [
+    0.4,
+    0.06
+   ],
+   "part": "hand_r",
+   "place": "phone"
+  },
+  {
+   "id": "effort_pick",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 36.9,
+   "t1": 38.3,
+   "parts": [
+    "upper_arm_r",
+    "chest"
+   ],
+   "strength": 0.6,
+   "attention": [
+    0.4,
+    0.2
+   ]
+  },
+  {
+   "id": "sight_screen_1",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 38.4,
+   "t1": 44.3,
+   "spread_deg": 7,
+   "attention": [
+    0.75,
+    0.3
+   ],
+   "target": "phone"
+  },
+  {
+   "id": "shade_effort",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 40.45,
+   "t1": 41.25,
+   "parts": [
+    "upper_arm_l",
+    "forearm_l"
+   ],
+   "strength": 0.6,
+   "attention": [
+    0.45,
+    0.2
+   ]
+  },
+  {
+   "id": "warmth_face_1",
+   "sense": "temperature",
+   "kind": "field",
+   "t0": 40.6,
+   "t1": 56.0,
+   "parts": [
+    "head"
+   ],
+   "strength": 0.7,
+   "attention": [
+    0.75,
+    0.15
+   ],
+   "ray_to": "sun"
+  },
+  {
+   "id": "crow",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 41.0,
+   "t1": 44.0,
+   "source": "window",
+   "rhythm": "swell",
+   "strength": 0.9,
+   "attention": [
+    0.7,
+    0.4
+   ],
+   "doubt": 0.3,
+   "note": "three seconds long (his word of 2026-11-12), a stand-in waveform until the sound file"
+  },
+  {
+   "id": "sight_crest",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 44.5,
+   "t1": 50.5,
+   "spread_deg": 18,
+   "attention": [
+    0.9,
+    0.6
+   ],
+   "narrowed": true
+  },
+  {
+   "id": "sight_walk",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 50.5,
+   "t1": 64.6,
+   "spread_deg": 10,
+   "attention": [
+    0.7,
+    0.5
+   ],
+   "narrowed": true
+  },
+  {
+   "id": "phone_down",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 51.1,
+   "part": "hand_r",
+   "strength": 0.5,
+   "attention": 0.4,
+   "place": "table"
+  },
+  {
+   "id": "touch_bed_hand",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 51.9,
+   "t1": 53.5,
+   "chain": "arm_l",
+   "strength": 0.6,
+   "attention": [
+    0.45,
+    0.2
+   ],
+   "part": "hand_l",
+   "place": "bed"
+  },
+  {
+   "id": "effort_rise",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 52.0,
+   "t1": 54.4,
+   "parts": [
+    "thigh_r",
+    "thigh_l",
+    "upper_arm_l"
+   ],
+   "strength": 0.8,
+   "attention": [
+    0.5,
+    0.2
+   ]
+  },
+  {
+   "id": "balance_rise",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 52.2,
+   "t1": 56.7,
+   "attention": [
+    0.45,
+    0.15
+   ]
+  },
+  {
+   "id": "toe",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 60.3,
+   "part": "foot_r",
+   "strength": 0.9,
+   "attention": 0.85,
+   "place": "rug_edge",
+   "speed": 2.0
+  },
+  {
+   "id": "balance_hiccup",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 60.35,
+   "t1": 63.0,
+   "attention": [
+    0.95,
+    0.15
+   ],
+   "swing": 1.0
+  },
+  {
+   "id": "leg_report",
+   "sense": "proprioception",
+   "kind": "river",
+   "t0": 60.5,
+   "t1": 62.2,
+   "chain": "leg_r",
+   "strength": 0.8,
+   "attention": [
+    0.7,
+    0.2
+   ]
+  },
+  {
+   "id": "sill_touch_r",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 64.9,
+   "part": "hand_r",
+   "strength": 0.8,
+   "attention": 0.7,
+   "place": "sill"
+  },
+  {
+   "id": "sill_touch_l",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 65.0,
+   "part": "hand_l",
+   "strength": 0.8,
+   "attention": 0.7,
+   "place": "sill"
+  },
+  {
+   "id": "sill_hold_r",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 64.9,
+   "t1": 72.5,
+   "chain": "arm_r",
+   "strength": 0.6,
+   "attention": [
+    0.6,
+    0.05
+   ],
+   "part": "hand_r",
+   "place": "sill"
+  },
+  {
+   "id": "sill_hold_l",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 65.0,
+   "t1": 72.5,
+   "chain": "arm_l",
+   "strength": 0.6,
+   "attention": [
+    0.6,
+    0.05
+   ],
+   "part": "hand_l",
+   "place": "sill"
+  },
+  {
+   "id": "sight_window",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 65.4,
+   "t1": 72.6,
+   "spread_deg": 18,
+   "attention": [
+    0.9,
+    0.55
+   ]
+  },
+  {
+   "id": "warmth_face_2",
+   "sense": "temperature",
+   "kind": "field",
+   "t0": 65.2,
+   "t1": 72.5,
+   "parts": [
+    "head"
+   ],
+   "strength": 0.9,
+   "attention": [
+    0.7,
+    0.08
+   ],
+   "ray_to": "sun"
+  },
+  {
+   "id": "warmth_hands",
+   "sense": "temperature",
+   "kind": "field",
+   "t0": 65.6,
+   "t1": 71.0,
+   "parts": [
+    "hand_r",
+    "hand_l"
+   ],
+   "strength": 0.6,
+   "attention": [
+    0.5,
+    0.05
+   ]
+  },
+  {
+   "id": "air_face",
+   "sense": "airflow",
+   "kind": "field",
+   "t0": 65.8,
+   "t1": 72.0,
+   "parts": [
+    "head"
+   ],
+   "strength": 0.4,
+   "attention": [
+    0.35,
+    0.05
+   ],
+   "offset": "edge"
+  },
+  {
+   "id": "bird_1",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 66.6,
+   "t1": 67.3,
+   "source": "range_a",
+   "rhythm": "single",
+   "strength": 0.35,
+   "attention": [
+    0.35,
+    0.2
+   ],
+   "doubt": 0.5
+  },
+  {
+   "id": "bird_2",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 67.9,
+   "t1": 68.6,
+   "source": "ground_a",
+   "rhythm": "single",
+   "strength": 0.3,
+   "attention": [
+    0.3,
+    0.2
+   ],
+   "doubt": 0.5
+  },
+  {
+   "id": "bird_3",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 69.1,
+   "t1": 69.8,
+   "source": "range_b",
+   "rhythm": "single",
+   "strength": 0.35,
+   "attention": [
+    0.3,
+    0.2
+   ],
+   "doubt": 0.55
+  },
+  {
+   "id": "bird_4",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 70.4,
+   "t1": 71.1,
+   "source": "ground_b",
+   "rhythm": "single",
+   "strength": 0.3,
+   "attention": [
+    0.25,
+    0.15
+   ],
+   "doubt": 0.5
+  },
+  {
+   "id": "bird_5",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 71.4,
+   "t1": 72.1,
+   "source": "range_a",
+   "rhythm": "single",
+   "strength": 0.3,
+   "attention": [
+    0.25,
+    0.15
+   ],
+   "doubt": 0.5
+  },
+  {
+   "id": "stretch_prop",
+   "sense": "proprioception",
+   "kind": "river",
+   "t0": 72.6,
+   "t1": 79.0,
+   "chain": "all",
+   "strength": 0.8,
+   "attention": [
+    0.75,
+    0.35
+   ]
+  },
+  {
+   "id": "stretch_effort",
+   "sense": "effort",
+   "kind": "field",
+   "t0": 73.0,
+   "t1": 78.5,
+   "parts": [
+    "upper_arm_r",
+    "upper_arm_l",
+    "chest"
+   ],
+   "strength": 0.9,
+   "attention": [
+    0.5,
+    0.2
+   ]
+  },
+  {
+   "id": "stretch_pleasure",
+   "sense": "pleasure",
+   "kind": "field",
+   "t0": 73.5,
+   "t1": 79.0,
+   "parts": [
+    "chest",
+    "upper_arm_r",
+    "upper_arm_l"
+   ],
+   "strength": 0.7,
+   "attention": [
+    0.55,
+    0.3
+   ],
+   "note": "the stretch felt in his back and shoulders (rung 2p, his specification of 2026-11-12: a sunlight gold on a touched part)"
+  },
+  {
+   "id": "breath_stretch",
+   "sense": "breath",
+   "kind": "breath",
+   "t0": 74.0,
+   "t1": 79.5,
+   "rate_hz": 0.18,
+   "attention": [
+    0.85,
+    0.4
+   ],
+   "depth": 1.0
+  },
+  {
+   "id": "heart_slow",
+   "sense": "heartbeat",
+   "kind": "heart",
+   "t0": 77.0,
+   "t1": 80.5,
+   "rate_hz": 1.0,
+   "attention": [
+    0.5,
+    0.2
+   ]
+  },
+  {
+   "id": "warmth_face_3",
+   "sense": "temperature",
+   "kind": "field",
+   "t0": 80.0,
+   "t1": 92.0,
+   "parts": [
+    "head"
+   ],
+   "strength": 0.8,
+   "attention": [
+    0.6,
+    0.5
+   ],
+   "ray_to": "sun",
+   "dip": [
+    {
+     "t": 88.3,
+     "a": 0.5
+    },
+    {
+     "t": 89.0,
+     "a": 0.15
+    },
+    {
+     "t": 92.0,
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "breath_sun",
+   "sense": "breath",
+   "kind": "breath",
+   "t0": 80.5,
+   "t1": 92.0,
+   "rate_hz": 0.17,
+   "attention": [
+    0.55,
+    0.5
+   ],
+   "depth": 0.8,
+   "dip": [
+    {
+     "t": 88.3,
+     "a": 0.5
+    },
+    {
+     "t": 89.0,
+     "a": 0.12
+    },
+    {
+     "t": 92.0,
+     "a": 0.05
+    }
+   ]
+  },
+  {
+   "id": "chime",
+   "sense": "hearing",
+   "kind": "wave",
+   "t0": 88.3,
+   "t1": 89.3,
+   "source": "phone",
+   "rhythm": "single",
+   "strength": 0.6,
+   "attention": [
+    0.9,
+    0.5
+   ],
+   "doubt": 0.15,
+   "note": "one second long (his word of 2026-11-12), a stand-in waveform until the sound file"
+  },
+  {
+   "id": "balance_turn_window",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 92.4,
+   "t1": 95.0,
+   "attention": [
+    0.4,
+    0.12
+   ]
+  },
+  {
+   "id": "sight_floor",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 92.5,
+   "t1": 100.4,
+   "spread_deg": 20,
+   "attention": [
+    0.7,
+    0.5
+   ]
+  },
+  {
+   "id": "sight_bed",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 100.4,
+   "t1": 104.0,
+   "spread_deg": 12,
+   "attention": [
+    0.6,
+    0.5
+   ],
+   "target": "bed"
+  },
+  {
+   "id": "balance_turn_bed",
+   "sense": "balance",
+   "kind": "plumb",
+   "t0": 99.8,
+   "t1": 103.0,
+   "attention": [
+    0.4,
+    0.12
+   ]
+  },
+  {
+   "id": "touch_sit",
+   "sense": "touch",
+   "kind": "field",
+   "t0": 101.3,
+   "t1": 104.0,
+   "parts": [
+    "pelvis",
+    "thigh_r",
+    "thigh_l"
+   ],
+   "strength": 0.6,
+   "attention": [
+    0.45,
+    0.1
+   ],
+   "place": "bed"
+  },
+  {
+   "id": "sight_table",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 104.0,
+   "t1": 106.5,
+   "spread_deg": 12,
+   "attention": [
+    0.8,
+    0.7
+   ],
+   "target": "phone"
+  },
+  {
+   "id": "phone_touch_2",
+   "sense": "touch",
+   "kind": "comet",
+   "t": 105.0,
+   "part": "hand_r",
+   "strength": 0.7,
+   "attention": 0.6,
+   "place": "phone"
+  },
+  {
+   "id": "phone_hold_4",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 105.0,
+   "t1": 116.0,
+   "chain": "arm_r",
+   "strength": 0.3,
+   "attention": [
+    0.4,
+    0.1
+   ],
+   "part": "hand_r",
+   "place": "phone"
+  },
+  {
+   "id": "sight_screen_2",
+   "sense": "sight",
+   "kind": "rays",
+   "t0": 106.5,
+   "t1": 116.0,
+   "spread_deg": 7,
+   "attention": [
+    0.9,
+    0.85
+   ],
+   "target": "phone"
+  },
+  {
+   "id": "thumbs",
+   "sense": "touch",
+   "kind": "river",
+   "t0": 107.8,
+   "t1": 116.0,
+   "chain": "arm_l",
+   "strength": 0.3,
+   "attention": [
+    0.3,
+    0.15
+   ],
+   "part": "hand_l",
+   "place": "phone"
+  },
+  {
+   "id": "warmth_end",
+   "sense": "temperature",
+   "kind": "field",
+   "t0": 106.5,
+   "t1": 113.0,
+   "parts": [
+    "head",
+    "hand_r",
+    "hand_l"
+   ],
+   "strength": 0.6,
+   "attention": [
+    0.35,
+    0.0
+   ],
+   "ray_to": "sun"
+  }
+ ],
+ "will": [
+  {
+   "t": 9.0,
+   "word": "stop"
+  },
+  {
+   "t": 17.0,
+   "word": "up"
+  },
+  {
+   "t": 35.0,
+   "word": "phone"
+  },
+  {
+   "t": 44.5,
+   "word": "look"
+  },
+  {
+   "t": 51.0,
+   "word": "stand"
+  },
+  {
+   "t": 56.4,
+   "word": "go"
+  },
+  {
+   "t": 72.4,
+   "word": "stretch"
+  },
+  {
+   "t": 92.3,
+   "word": "back"
+  },
+  {
+   "t": 103.8,
+   "word": "answer"
+  },
+  {
+   "t": 107.6,
+   "word": "ok"
+  },
+  {
+   "t": 108.3,
+   "word": "yes"
+  },
+  {
+   "t": 109.0,
+   "word": "no"
+  },
+  {
+   "t": 109.8,
+   "word": "ha"
+  },
+  {
+   "t": 110.5,
+   "word": "sure"
+  },
+  {
+   "t": 111.2,
+   "word": "when"
+  },
+  {
+   "t": 112.0,
+   "word": "now"
+  },
+  {
+   "t": 112.7,
+   "word": "fine"
+  },
+  {
+   "t": 113.5,
+   "word": "soon"
+  },
+  {
+   "t": 114.2,
+   "word": "see"
+  },
+  {
+   "t": 115.0,
+   "word": "you"
+  }
+ ],
+ "recognition": [
+  {
+   "t": 5.0,
+   "word": "alarm"
+  },
+  {
+   "t": 10.1,
+   "word": "phone"
+  },
+  {
+   "t": 45.0,
+   "word": "sun"
+  },
+  {
+   "t": 61.1,
+   "word": "rug"
+  },
+  {
+   "t": 89.3,
+   "word": "phone"
+  }
+ ],
+ "words": [
+  "alarm",
+  "phone",
+  "bed",
+  "table",
+  "window",
+  "sun",
+  "rug",
+  "cup",
+  "door",
+  "cat"
+ ],
+ "memory": [
+  {
+   "region": "phone",
+   "t": 4.4,
+   "in_mind": true,
+   "finish": "sharp"
+  },
+  {
+   "region": "ceiling",
+   "t": 4.6,
+   "in_mind": true,
+   "finish": "sharp"
+  },
+  {
+   "region": "bed",
+   "t": 4.8,
+   "in_mind": true,
+   "finish": "sharp"
+  },
+  {
+   "region": "table",
+   "t": 5.0,
+   "in_mind": true,
+   "finish": "sharp"
+  },
+  {
+   "region": "table_far",
+   "t": 5.0,
+   "in_mind": true,
+   "finish": "filled"
+  },
+  {
+   "region": "wall_w",
+   "t": 5.2,
+   "in_mind": true,
+   "finish": "sharp"
+  },
+  {
+   "region": "wall_s",
+   "t": 5.4,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "wall_e",
+   "t": 5.6,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "window",
+   "t": 5.6,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "sill",
+   "t": 5.6,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "wall_n",
+   "t": 6.0,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "floor",
+   "t": 6.0,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "rug",
+   "t": 6.2,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "sun",
+   "t": 41.0,
+   "in_mind": true,
+   "finish": "sharp"
+  },
+  {
+   "region": "ridge",
+   "t": 46.8,
+   "in_mind": true,
+   "finish": "sharp"
+  },
+  {
+   "region": "ground",
+   "t": 65.5,
+   "in_mind": true,
+   "finish": "soft"
+  },
+  {
+   "region": "phone",
+   "t": 54.0,
+   "in_mind": false,
+   "fade": 6.0
+  },
+  {
+   "region": "table",
+   "t": 68.0,
+   "in_mind": false,
+   "fade": 4.5
+  },
+  {
+   "region": "table_far",
+   "t": 68.0,
+   "in_mind": false,
+   "fade": 4.5
+  },
+  {
+   "region": "bed",
+   "t": 69.5,
+   "in_mind": false,
+   "fade": 4.0
+  },
+  {
+   "region": "phone",
+   "t": 89.2,
+   "in_mind": true,
+   "finish": "keep"
+  },
+  {
+   "region": "table",
+   "t": 89.6,
+   "in_mind": true,
+   "finish": "keep"
+  },
+  {
+   "region": "table_far",
+   "t": 89.6,
+   "in_mind": true,
+   "finish": "keep"
+  },
+  {
+   "region": "bed",
+   "t": 90.0,
+   "in_mind": true,
+   "finish": "keep"
+  }
+ ],
+ "thoughts_note": "Conscious memory (his seventh review of 2026-11-10): what he thinks of at the moment, each thought naming the regions it holds, from t0 (rising over 0.4 s, or over its own rise where it names one) to t1 and fading from there over fade seconds. The mind's model lights a remembered thing by the thought on it alone, or whole while the eyes are shut; the memory list above is what the mind knows, for the unconscious fill of a later rung. Seconds guessed like the rest.",
+ "thoughts": [
+  {
+   "regions": [
+    "phone",
+    "table",
+    "table_far",
+    "table_edge"
+   ],
+   "t0": 4.0,
+   "t1": 10.0,
+   "fade": 3.0,
+   "note": "the alarm reaches him in his sleep: the phone and its place, and nothing else of the room (his word of 2026-11-12: at the very beginning only the nightstand and his ears; a thing comes to mind as its shape first and its colour after)"
+  },
+  {
+   "regions": [
+    "bed"
+   ],
+   "t0": 10.4,
+   "t1": 16.0,
+   "fade": 3.0,
+   "rise": 3.0,
+   "note": "then the bed, once the alarm is off and he is waking (his word of 2026-11-14, fourteenth round: it came at 5.0 s, a second after the alarm, and hid the sleeping simulated mannequin; he asked for 13 to 15 s of the player's clock, which is 10.4 to 12.0 s here: its shape from 10.4 s, its colour a second and a half later); held until his eyes open at 16.0 s. More of himself comes by touch as he grows aware, wherever he is touched (the model's contact rule, not a thought) His word of 2026-11-14 on the stills of that day: it happens too fast, it needs to be slower, matching the gradual increase in awareness when waking up: rise 3.0 s, the length of his awareness's own rise at the alarm, its shape thickening in over the first 1.2 s and its light whole by 13.4 s (14.5 and 16.8 s of the player)"
+  },
+  {
+   "regions": [
+    "wall_e",
+    "window",
+    "sill"
+   ],
+   "t0": 17.0,
+   "t1": 22.0,
+   "fade": 3.0,
+   "note": "then the rest of the room, one thing after another, as he sits up with his eyes open (his word of 2026-11-12, fourth round: the room comes into view as he sits up, not at the alarm; these six thoughts stood at 5.6 to 7.6 s until then)"
+  },
+  {
+   "regions": [
+    "floor",
+    "rug",
+    "rug_edge"
+   ],
+   "t0": 17.4,
+   "t1": 22.0,
+   "fade": 3.0
+  },
+  {
+   "regions": [
+    "ceiling"
+   ],
+   "t0": 17.8,
+   "t1": 22.0,
+   "fade": 3.0
+  },
+  {
+   "regions": [
+    "wall_w"
+   ],
+   "t0": 18.2,
+   "t1": 22.0,
+   "fade": 3.0
+  },
+  {
+   "regions": [
+    "wall_n"
+   ],
+   "t0": 18.6,
+   "t1": 22.0,
+   "fade": 3.0
+  },
+  {
+   "regions": [
+    "wall_s"
+   ],
+   "t0": 19.0,
+   "t1": 22.0,
+   "fade": 3.0
+  },
+  {
+   "regions": [
+    "ridge",
+    "ground",
+    "sun"
+   ],
+   "t0": 68.0,
+   "t1": 80.0,
+   "fade": 1.0,
+   "note": "the view: a while into the window beat he thinks of what he sees, until his eyes close in the sun"
+  },
+  {
+   "regions": [
+    "phone",
+    "table",
+    "table_far",
+    "table_edge"
+   ],
+   "t0": 88.8,
+   "t1": 92.3,
+   "fade": 6.0,
+   "note": "the chime reaches him: the phone and its place, the nightstand as last seen, held until he turns back for it and fading slowly (his eleventh review of 2026-11-11: the bed is not what he thinks of)"
+  }
+ ],
+ "body_memory": [
+  {
+   "parts": [
+    "head",
+    "neck",
+    "chest",
+    "pelvis",
+    "upper_arm_r",
+    "upper_arm_l",
+    "forearm_r",
+    "forearm_l",
+    "hand_r",
+    "hand_l"
+   ],
+   "t": 4.8,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "thigh_r",
+    "thigh_l",
+    "shin_r",
+    "shin_l"
+   ],
+   "t": 5.6,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l"
+   ],
+   "t": 17.2,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l",
+    "shin_r",
+    "shin_l"
+   ],
+   "t": 26.0,
+   "in_mind": false,
+   "fade": 3.0
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l",
+    "shin_r",
+    "shin_l"
+   ],
+   "t": 51.5,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l",
+    "shin_r",
+    "shin_l",
+    "thigh_r",
+    "thigh_l"
+   ],
+   "t": 66.0,
+   "in_mind": false,
+   "fade": 3.0
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l",
+    "shin_r",
+    "shin_l",
+    "thigh_r",
+    "thigh_l"
+   ],
+   "t": 72.5,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l",
+    "shin_r",
+    "shin_l",
+    "thigh_r",
+    "thigh_l",
+    "upper_arm_r",
+    "upper_arm_l",
+    "forearm_r",
+    "forearm_l"
+   ],
+   "t": 81.0,
+   "in_mind": false,
+   "fade": 3.0
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l",
+    "shin_r",
+    "shin_l",
+    "thigh_r",
+    "thigh_l"
+   ],
+   "t": 92.6,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "upper_arm_r",
+    "forearm_r",
+    "hand_r"
+   ],
+   "t": 104.0,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "upper_arm_l",
+    "forearm_l",
+    "hand_l"
+   ],
+   "t": 107.6,
+   "in_mind": true
+  },
+  {
+   "parts": [
+    "foot_r",
+    "foot_l",
+    "shin_r",
+    "shin_l"
+   ],
+   "t": 108.0,
+   "in_mind": false,
+   "fade": 3.0
+  }
+ ]
+}

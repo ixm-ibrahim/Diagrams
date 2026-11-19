@@ -1,0 +1,116 @@
+{
+ "chunks": [
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 19.8
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 15.0
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 15.1
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 14.1
+  },
+  {
+   "label": "scan",
+   "start": 1009,
+   "end": 2341,
+   "code": 0,
+   "seconds": 543.5
+  },
+  {
+   "label": "scan_move_third_true",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 103.1
+  },
+  {
+   "label": "third",
+   "start": 1009,
+   "end": 1708,
+   "code": 0,
+   "seconds": 160.6
+  },
+  {
+   "label": "third",
+   "start": 1709,
+   "end": 2341,
+   "code": 0,
+   "seconds": 129.4
+  },
+  {
+   "label": "first",
+   "start": 1009,
+   "end": 1708,
+   "code": 0,
+   "seconds": 166.0
+  },
+  {
+   "label": "first",
+   "start": 1709,
+   "end": 2341,
+   "code": 0,
+   "seconds": 100.9
+  },
+  {
+   "label": "third_true_room",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 61.1
+  },
+  {
+   "label": "third_true_mind",
+   "start": 1009,
+   "end": 1249,
+   "code": 0,
+   "seconds": 212.0
+  },
+  {
+   "label": "true_first_room",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 25.9
+  },
+  {
+   "label": "true_first_mind",
+   "start": 2233,
+   "end": 2341,
+   "code": 0,
+   "seconds": 76.8
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 20.6
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 2784,
+   "code": 0,
+   "seconds": 82.0
+  }
+ ]
+}

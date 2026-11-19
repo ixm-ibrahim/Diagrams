@@ -1,0 +1,328 @@
+{
+ "beats": [
+  {
+   "beat": "asleep",
+   "frame": 49,
+   "third_camera": [
+    3.55,
+    4.1,
+    1.8
+   ],
+   "third_lens": 24.0,
+   "exp_third": 3.0,
+   "exp_first": 3.0,
+   "closed": 1,
+   "sense": "none",
+   "tint_a": 0.0,
+   "bright": 0.00316,
+   "face_sun": 0.0
+  },
+  {
+   "beat": "alarm",
+   "frame": 145,
+   "third_camera": [
+    3.55,
+    4.1,
+    1.8
+   ],
+   "third_lens": 24.0,
+   "exp_third": 3.0,
+   "exp_first": 3.0,
+   "closed": 1,
+   "sense": "hearing",
+   "tint_a": 0.683,
+   "bright": 0.00795,
+   "face_sun": 0.0
+  },
+  {
+   "beat": "silence",
+   "frame": 241,
+   "third_camera": [
+    3.55,
+    4.1,
+    1.8
+   ],
+   "third_lens": 24.0,
+   "exp_third": 3.0,
+   "exp_first": 3.0,
+   "closed": 1,
+   "sense": "hearing",
+   "tint_a": 0.95,
+   "bright": 0.0172,
+   "face_sun": 0.0
+  },
+  {
+   "beat": "stretch1",
+   "frame": 349,
+   "third_camera": [
+    3.52,
+    4.04,
+    1.78
+   ],
+   "third_lens": 24.8,
+   "exp_third": 3.0,
+   "exp_first": 3.0,
+   "closed": 1,
+   "sense": "proprioception",
+   "tint_a": 0.475,
+   "bright": 0.03793,
+   "face_sun": 0.0
+  },
+  {
+   "beat": "situp",
+   "frame": 469,
+   "third_camera": [
+    3.35,
+    3.7,
+    1.68
+   ],
+   "third_lens": 27.7,
+   "exp_third": 2.667,
+   "exp_first": 3.0,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.408,
+   "bright": 0.0768,
+   "face_sun": 0.005
+  },
+  {
+   "beat": "doze",
+   "frame": 589,
+   "third_camera": [
+    3.2,
+    3.41,
+    1.57
+   ],
+   "third_lens": 30.5,
+   "exp_third": 1.954,
+   "exp_first": 1.079,
+   "closed": 1,
+   "sense": "balance",
+   "tint_a": 0.272,
+   "bright": 0.0963,
+   "face_sun": 0.678
+  },
+  {
+   "beat": "reach",
+   "frame": 685,
+   "third_camera": [
+    2.95,
+    2.75,
+    1.4
+   ],
+   "third_lens": 40.0,
+   "exp_third": 1.436,
+   "exp_first": 1.783,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.824,
+   "bright": 0.13139,
+   "face_sun": 0.368
+  },
+  {
+   "beat": "pain",
+   "frame": 781,
+   "third_camera": [
+    2.9,
+    2.61,
+    1.4
+   ],
+   "third_lens": 41.9,
+   "exp_third": 1.063,
+   "exp_first": 2.37,
+   "closed": 0,
+   "sense": "pain",
+   "tint_a": 0.725,
+   "bright": 0.14028,
+   "face_sun": 0.575
+  },
+  {
+   "beat": "pickup",
+   "frame": 901,
+   "third_camera": [
+    3.06,
+    2.7,
+    1.43
+   ],
+   "third_lens": 37.0,
+   "exp_third": 0.778,
+   "exp_first": 2.705,
+   "closed": 0,
+   "sense": "touch",
+   "tint_a": 0.6,
+   "bright": 0.16301,
+   "face_sun": 0.438
+  },
+  {
+   "beat": "crest",
+   "frame": 1081,
+   "third_camera": [
+    2.99,
+    2.7,
+    1.42
+   ],
+   "third_lens": 39.4,
+   "exp_third": -1.234,
+   "exp_first": 0.628,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.875,
+   "bright": 0.91041,
+   "face_sun": 0.798
+  },
+  {
+   "beat": "rise",
+   "frame": 1273,
+   "third_camera": [
+    3.2,
+    2.91,
+    1.53
+   ],
+   "third_lens": 30.7,
+   "exp_third": -2.085,
+   "exp_first": -1.063,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.665,
+   "bright": 2.57475,
+   "face_sun": 0.983
+  },
+  {
+   "beat": "walk",
+   "frame": 1441,
+   "third_camera": [
+    3.65,
+    1.8,
+    1.6
+   ],
+   "third_lens": 29.0,
+   "exp_third": -2.484,
+   "exp_first": -1.398,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.565,
+   "bright": 4.13262,
+   "face_sun": 0.986
+  },
+  {
+   "beat": "window",
+   "frame": 1633,
+   "third_camera": [
+    3.75,
+    0.42,
+    1.55
+   ],
+   "third_lens": 38.0,
+   "exp_third": -2.53,
+   "exp_first": -4.338,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.774,
+   "bright": 53.50703,
+   "face_sun": 0.978
+  },
+  {
+   "beat": "stretch2",
+   "frame": 1825,
+   "third_camera": [
+    3.65,
+    0.15,
+    1.45
+   ],
+   "third_lens": 24.0,
+   "exp_third": -2.828,
+   "exp_first": -4.354,
+   "closed": 0,
+   "sense": "breath",
+   "tint_a": 0.686,
+   "bright": 6.97337,
+   "face_sun": 0.988
+  },
+  {
+   "beat": "eyes",
+   "frame": 2017,
+   "third_camera": [
+    2.25,
+    1.2,
+    1.72
+   ],
+   "third_lens": 45.0,
+   "exp_third": -3.707,
+   "exp_first": -2.347,
+   "closed": 1,
+   "sense": "temperature",
+   "tint_a": 0.567,
+   "bright": 15.08963,
+   "face_sun": 0.992
+  },
+  {
+   "beat": "chime",
+   "frame": 2161,
+   "third_camera": [
+    2.49,
+    0.89,
+    1.69
+   ],
+   "third_lens": 41.5,
+   "exp_third": -3.827,
+   "exp_first": -1.716,
+   "closed": 0,
+   "sense": "temperature",
+   "tint_a": 0.133,
+   "bright": 7.00053,
+   "face_sun": 0.749
+  },
+  {
+   "beat": "back",
+   "frame": 2305,
+   "third_camera": [
+    3.64,
+    1.32,
+    1.61
+   ],
+   "third_lens": 28.8,
+   "exp_third": -3.936,
+   "exp_first": -2.315,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.611,
+   "bright": 7.0521,
+   "face_sun": 0.0
+  },
+  {
+   "beat": "sit",
+   "frame": 2473,
+   "third_camera": [
+    2.9,
+    1.9,
+    1.5
+   ],
+   "third_lens": 30.0,
+   "exp_third": -4.001,
+   "exp_first": -2.509,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.528,
+   "bright": 4.71431,
+   "face_sun": 0.931
+  },
+  {
+   "beat": "texting",
+   "frame": 2665,
+   "third_camera": [
+    3.55,
+    4.1,
+    1.8
+   ],
+   "third_lens": 24.0,
+   "exp_third": -3.142,
+   "exp_first": -0.9,
+   "closed": 0,
+   "sense": "sight",
+   "tint_a": 0.876,
+   "bright": 1.11168,
+   "face_sun": 0.651
+  }
+ ],
+ "blinks": 19
+}

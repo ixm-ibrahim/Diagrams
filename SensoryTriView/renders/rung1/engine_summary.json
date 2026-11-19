@@ -1,0 +1,5667 @@
+{
+ "beats": [
+  {
+   "beat": "asleep",
+   "frame": 49,
+   "t": 2.0,
+   "awareness": 0.0,
+   "budget_scale": 1.0,
+   "regions": {},
+   "parts": {},
+   "rays": 0,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.0,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.0,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    4.13,
+    0.0,
+    1.11
+   ],
+   "phone_in_model": false,
+   "rug_curled": false
+  },
+  {
+   "beat": "alarm",
+   "frame": 145,
+   "t": 6.0,
+   "awareness": 0.67,
+   "budget_scale": 1.0,
+   "regions": {
+    "ceiling": [
+     "remembered",
+     0.1
+    ],
+    "wall_s": [
+     "remembered",
+     0.084
+    ],
+    "wall_e": [
+     "remembered",
+     0.05
+    ],
+    "wall_w": [
+     "remembered",
+     0.1
+    ],
+    "window": [
+     "remembered",
+     0.05
+    ],
+    "sill": [
+     "remembered",
+     0.05
+    ],
+    "bed": [
+     "remembered",
+     0.1
+    ],
+    "table": [
+     "remembered",
+     0.1
+    ],
+    "table_far": [
+     "filled",
+     0.08
+    ],
+    "phone": [
+     "remembered",
+     0.1
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.1
+    ],
+    "neck": [
+     "remembered",
+     0.1
+    ],
+    "chest": [
+     "remembered",
+     0.1
+    ],
+    "pelvis": [
+     "remembered",
+     0.1
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.1
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.1
+    ],
+    "forearm_r": [
+     "remembered",
+     0.1
+    ],
+    "forearm_l": [
+     "remembered",
+     0.1
+    ],
+    "hand_r": [
+     "remembered",
+     0.1
+    ],
+    "hand_l": [
+     "remembered",
+     0.1
+    ],
+    "thigh_r": [
+     "remembered",
+     0.05
+    ],
+    "thigh_l": [
+     "remembered",
+     0.05
+    ],
+    "shin_r": [
+     "remembered",
+     0.05
+    ],
+    "shin_l": [
+     "remembered",
+     0.05
+    ]
+   },
+   "rays": 0,
+   "waves": 2,
+   "plumb": 0.0,
+   "throb": 0.0,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.0,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {
+    "alarm": 0.3
+   },
+   "will_live": [],
+   "camera": [
+    3.58,
+    0.0,
+    1.29
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "silence",
+   "frame": 241,
+   "t": 10.0,
+   "awareness": 1.0,
+   "budget_scale": 0.281,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.078
+    ],
+    "ceiling": [
+     "remembered",
+     0.078
+    ],
+    "wall_n": [
+     "remembered",
+     0.078
+    ],
+    "wall_s": [
+     "remembered",
+     0.078
+    ],
+    "wall_e": [
+     "remembered",
+     0.078
+    ],
+    "wall_w": [
+     "remembered",
+     0.078
+    ],
+    "window": [
+     "remembered",
+     0.078
+    ],
+    "sill": [
+     "remembered",
+     0.078
+    ],
+    "bed": [
+     "remembered",
+     0.078
+    ],
+    "table": [
+     "remembered",
+     0.078
+    ],
+    "table_far": [
+     "filled",
+     0.063
+    ],
+    "rug": [
+     "remembered",
+     0.078
+    ],
+    "phone": [
+     "sensed",
+     0.197
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.084
+    ],
+    "neck": [
+     "sensed",
+     0.084
+    ],
+    "chest": [
+     "remembered",
+     0.078
+    ],
+    "pelvis": [
+     "remembered",
+     0.078
+    ],
+    "upper_arm_r": [
+     "sensed",
+     0.084
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.078
+    ],
+    "forearm_r": [
+     "sensed",
+     0.084
+    ],
+    "forearm_l": [
+     "remembered",
+     0.078
+    ],
+    "hand_r": [
+     "sensed",
+     0.197
+    ],
+    "hand_l": [
+     "remembered",
+     0.078
+    ],
+    "thigh_r": [
+     "remembered",
+     0.078
+    ],
+    "thigh_l": [
+     "remembered",
+     0.078
+    ],
+    "shin_r": [
+     "remembered",
+     0.078
+    ],
+    "shin_l": [
+     "remembered",
+     0.078
+    ]
+   },
+   "rays": 0,
+   "waves": 2,
+   "plumb": 0.0,
+   "throb": 0.0,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.118,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    2.33,
+    0.01,
+    1.68
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "situp",
+   "frame": 385,
+   "t": 16.0,
+   "awareness": 1.0,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.15
+    ],
+    "ceiling": [
+     "remembered",
+     0.15
+    ],
+    "wall_n": [
+     "remembered",
+     0.15
+    ],
+    "wall_s": [
+     "remembered",
+     0.15
+    ],
+    "wall_e": [
+     "remembered",
+     0.15
+    ],
+    "wall_w": [
+     "remembered",
+     0.15
+    ],
+    "window": [
+     "remembered",
+     0.15
+    ],
+    "sill": [
+     "remembered",
+     0.15
+    ],
+    "bed": [
+     "remembered",
+     0.15
+    ],
+    "table": [
+     "remembered",
+     0.15
+    ],
+    "table_far": [
+     "filled",
+     0.12
+    ],
+    "rug": [
+     "remembered",
+     0.15
+    ],
+    "phone": [
+     "sensed",
+     0.341
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.15
+    ],
+    "neck": [
+     "remembered",
+     0.15
+    ],
+    "chest": [
+     "remembered",
+     0.15
+    ],
+    "pelvis": [
+     "remembered",
+     0.15
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.15
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.15
+    ],
+    "forearm_r": [
+     "remembered",
+     0.15
+    ],
+    "forearm_l": [
+     "remembered",
+     0.15
+    ],
+    "hand_r": [
+     "sensed",
+     0.341
+    ],
+    "hand_l": [
+     "remembered",
+     0.15
+    ],
+    "thigh_r": [
+     "remembered",
+     0.225
+    ],
+    "thigh_l": [
+     "remembered",
+     0.329
+    ],
+    "shin_r": [
+     "sensed",
+     0.234
+    ],
+    "shin_l": [
+     "sensed",
+     0.234
+    ],
+    "foot_r": [
+     "remembered",
+     0.15
+    ],
+    "foot_l": [
+     "remembered",
+     0.15
+    ]
+   },
+   "rays": 0,
+   "waves": 0,
+   "plumb": 0.281,
+   "throb": 0.0,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.154,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    1.77,
+    -0.02,
+    1.87
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "doze",
+   "frame": 577,
+   "t": 24.0,
+   "awareness": 0.45,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.068
+    ],
+    "ceiling": [
+     "remembered",
+     0.068
+    ],
+    "wall_n": [
+     "remembered",
+     0.068
+    ],
+    "wall_s": [
+     "remembered",
+     0.068
+    ],
+    "wall_e": [
+     "remembered",
+     0.068
+    ],
+    "wall_w": [
+     "remembered",
+     0.068
+    ],
+    "window": [
+     "remembered",
+     0.068
+    ],
+    "sill": [
+     "remembered",
+     0.068
+    ],
+    "bed": [
+     "remembered",
+     0.068
+    ],
+    "table": [
+     "remembered",
+     0.068
+    ],
+    "table_far": [
+     "filled",
+     0.054
+    ],
+    "table_edge": [
+     "remembered",
+     0.068
+    ],
+    "rug": [
+     "remembered",
+     0.068
+    ],
+    "phone": [
+     "sensed",
+     0.173
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.068
+    ],
+    "neck": [
+     "remembered",
+     0.068
+    ],
+    "chest": [
+     "remembered",
+     0.068
+    ],
+    "pelvis": [
+     "remembered",
+     0.068
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.068
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.068
+    ],
+    "forearm_r": [
+     "remembered",
+     0.068
+    ],
+    "forearm_l": [
+     "remembered",
+     0.068
+    ],
+    "hand_r": [
+     "sensed",
+     0.173
+    ],
+    "hand_l": [
+     "remembered",
+     0.068
+    ],
+    "thigh_r": [
+     "remembered",
+     0.068
+    ],
+    "thigh_l": [
+     "remembered",
+     0.068
+    ],
+    "shin_r": [
+     "remembered",
+     0.023
+    ],
+    "shin_l": [
+     "remembered",
+     0.023
+    ],
+    "foot_r": [
+     "remembered",
+     0.023
+    ],
+    "foot_l": [
+     "remembered",
+     0.023
+    ]
+   },
+   "rays": 0,
+   "waves": 0,
+   "plumb": 0.327,
+   "throb": 0.0,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.027,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    1.88,
+    -0.13,
+    1.83
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "fumble",
+   "frame": 709,
+   "t": 29.5,
+   "awareness": 1.0,
+   "budget_scale": 0.33,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.229
+    ],
+    "ceiling": [
+     "remembered",
+     0.083
+    ],
+    "wall_n": [
+     "remembered",
+     0.083
+    ],
+    "wall_s": [
+     "remembered",
+     0.083
+    ],
+    "wall_e": [
+     "remembered",
+     0.083
+    ],
+    "wall_w": [
+     "remembered",
+     0.083
+    ],
+    "window": [
+     "remembered",
+     0.083
+    ],
+    "sill": [
+     "remembered",
+     0.083
+    ],
+    "bed": [
+     "remembered",
+     0.083
+    ],
+    "table": [
+     "sensed",
+     0.623
+    ],
+    "table_far": [
+     "filled",
+     0.066
+    ],
+    "table_edge": [
+     "sensed",
+     0.493
+    ],
+    "rug": [
+     "remembered",
+     0.083
+    ],
+    "phone": [
+     "sensed",
+     0.753
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.083
+    ],
+    "neck": [
+     "remembered",
+     0.083
+    ],
+    "chest": [
+     "remembered",
+     0.083
+    ],
+    "pelvis": [
+     "remembered",
+     0.083
+    ],
+    "upper_arm_r": [
+     "sensed",
+     0.106
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.083
+    ],
+    "forearm_r": [
+     "sensed",
+     0.518
+    ],
+    "forearm_l": [
+     "remembered",
+     0.083
+    ],
+    "hand_r": [
+     "sensed",
+     0.247
+    ],
+    "hand_l": [
+     "remembered",
+     0.083
+    ],
+    "thigh_r": [
+     "sensed",
+     0.688
+    ],
+    "thigh_l": [
+     "remembered",
+     0.083
+    ]
+   },
+   "rays": 27,
+   "waves": 1,
+   "plumb": 0.0,
+   "throb": 0.0,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.06,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    0.07,
+    -1.28,
+    1.72
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "pain",
+   "frame": 805,
+   "t": 33.5,
+   "awareness": 1.0,
+   "budget_scale": 0.688,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.119
+    ],
+    "ceiling": [
+     "remembered",
+     0.119
+    ],
+    "wall_n": [
+     "remembered",
+     0.119
+    ],
+    "wall_s": [
+     "remembered",
+     0.119
+    ],
+    "wall_e": [
+     "remembered",
+     0.119
+    ],
+    "wall_w": [
+     "remembered",
+     0.119
+    ],
+    "window": [
+     "remembered",
+     0.119
+    ],
+    "sill": [
+     "remembered",
+     0.119
+    ],
+    "bed": [
+     "remembered",
+     0.119
+    ],
+    "table": [
+     "remembered",
+     0.119
+    ],
+    "table_far": [
+     "filled",
+     0.095
+    ],
+    "table_edge": [
+     "remembered",
+     0.119
+    ],
+    "rug": [
+     "remembered",
+     0.119
+    ],
+    "phone": [
+     "sensed",
+     0.218
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.119
+    ],
+    "neck": [
+     "remembered",
+     0.119
+    ],
+    "chest": [
+     "sensed",
+     0.331
+    ],
+    "pelvis": [
+     "remembered",
+     0.119
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.119
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.119
+    ],
+    "forearm_r": [
+     "remembered",
+     0.119
+    ],
+    "forearm_l": [
+     "remembered",
+     0.119
+    ],
+    "hand_r": [
+     "sensed",
+     0.218
+    ],
+    "hand_l": [
+     "remembered",
+     0.119
+    ],
+    "thigh_r": [
+     "remembered",
+     0.119
+    ],
+    "thigh_l": [
+     "remembered",
+     0.119
+    ]
+   },
+   "rays": 0,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.2,
+   "breath": 0.662,
+   "heart": 0.151,
+   "glow": 0.06,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    0.11,
+    -1.31,
+    1.7
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "crest",
+   "frame": 985,
+   "t": 41.0,
+   "awareness": 1.0,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.15
+    ],
+    "ceiling": [
+     "remembered",
+     0.15
+    ],
+    "wall_n": [
+     "remembered",
+     0.15
+    ],
+    "wall_s": [
+     "remembered",
+     0.15
+    ],
+    "wall_e": [
+     "remembered",
+     0.15
+    ],
+    "wall_w": [
+     "remembered",
+     0.15
+    ],
+    "window": [
+     "remembered",
+     0.15
+    ],
+    "sill": [
+     "remembered",
+     0.15
+    ],
+    "bed": [
+     "remembered",
+     0.15
+    ],
+    "table": [
+     "remembered",
+     0.15
+    ],
+    "table_far": [
+     "filled",
+     0.12
+    ],
+    "table_edge": [
+     "remembered",
+     0.15
+    ],
+    "rug": [
+     "remembered",
+     0.15
+    ],
+    "phone": [
+     "sensed",
+     0.222
+    ],
+    "sun": [
+     "remembered",
+     0.15
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.579
+    ],
+    "neck": [
+     "remembered",
+     0.15
+    ],
+    "chest": [
+     "remembered",
+     0.15
+    ],
+    "pelvis": [
+     "remembered",
+     0.15
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.15
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.15
+    ],
+    "forearm_r": [
+     "remembered",
+     0.15
+    ],
+    "forearm_l": [
+     "remembered",
+     0.15
+    ],
+    "hand_r": [
+     "sensed",
+     0.3
+    ],
+    "hand_l": [
+     "remembered",
+     0.15
+    ],
+    "thigh_r": [
+     "remembered",
+     0.15
+    ],
+    "thigh_l": [
+     "remembered",
+     0.15
+    ]
+   },
+   "rays": 27,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.174,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.06,
+   "sun": 0.0,
+   "ridge_points": 0,
+   "words_lit": {},
+   "will_live": [
+    2
+   ],
+   "camera": [
+    -1.29,
+    -0.8,
+    1.95
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "rise",
+   "frame": 1177,
+   "t": 49.0,
+   "awareness": 1.0,
+   "budget_scale": 0.39,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.11
+    ],
+    "ceiling": [
+     "remembered",
+     0.089
+    ],
+    "wall_n": [
+     "remembered",
+     0.089
+    ],
+    "wall_s": [
+     "remembered",
+     0.158
+    ],
+    "wall_e": [
+     "sensed",
+     0.692
+    ],
+    "wall_w": [
+     "remembered",
+     0.089
+    ],
+    "window": [
+     "sensed",
+     0.753
+    ],
+    "sill": [
+     "remembered",
+     0.089
+    ],
+    "bed": [
+     "sensed",
+     0.095
+    ],
+    "table": [
+     "remembered",
+     0.089
+    ],
+    "table_far": [
+     "filled",
+     0.071
+    ],
+    "table_edge": [
+     "remembered",
+     0.089
+    ],
+    "rug": [
+     "remembered",
+     0.103
+    ],
+    "rug_edge": [
+     "remembered",
+     0.089
+    ],
+    "phone": [
+     "remembered",
+     0.165
+    ],
+    "ridge": [
+     "sensed",
+     0.836
+    ],
+    "sun": [
+     "sensed",
+     0.62
+    ],
+    "ground": [
+     "sensed",
+     0.62
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.104
+    ],
+    "neck": [
+     "remembered",
+     0.089
+    ],
+    "chest": [
+     "remembered",
+     0.089
+    ],
+    "pelvis": [
+     "remembered",
+     0.089
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.089
+    ],
+    "upper_arm_l": [
+     "sensed",
+     0.136
+    ],
+    "forearm_r": [
+     "remembered",
+     0.089
+    ],
+    "forearm_l": [
+     "remembered",
+     0.089
+    ],
+    "hand_r": [
+     "sensed",
+     0.042
+    ],
+    "hand_l": [
+     "sensed",
+     0.095
+    ],
+    "thigh_r": [
+     "sensed",
+     0.136
+    ],
+    "thigh_l": [
+     "sensed",
+     0.136
+    ],
+    "shin_r": [
+     "remembered",
+     0.089
+    ],
+    "shin_l": [
+     "remembered",
+     0.089
+    ],
+    "foot_r": [
+     "remembered",
+     0.089
+    ],
+    "foot_l": [
+     "remembered",
+     0.089
+    ]
+   },
+   "rays": 27,
+   "waves": 0,
+   "plumb": 0.149,
+   "throb": 0.041,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.108,
+   "sun": 0.62,
+   "ridge_points": 6,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    -1.59,
+    0.03,
+    2.0
+   ],
+   "phone_in_model": true,
+   "rug_curled": false
+  },
+  {
+   "beat": "walk",
+   "frame": 1345,
+   "t": 56.0,
+   "awareness": 1.0,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.15
+    ],
+    "ceiling": [
+     "remembered",
+     0.15
+    ],
+    "wall_n": [
+     "remembered",
+     0.15
+    ],
+    "wall_s": [
+     "remembered",
+     0.15
+    ],
+    "wall_e": [
+     "sensed",
+     0.499
+    ],
+    "wall_w": [
+     "remembered",
+     0.15
+    ],
+    "window": [
+     "sensed",
+     0.686
+    ],
+    "sill": [
+     "remembered",
+     0.15
+    ],
+    "bed": [
+     "remembered",
+     0.15
+    ],
+    "table": [
+     "remembered",
+     0.15
+    ],
+    "table_far": [
+     "filled",
+     0.12
+    ],
+    "table_edge": [
+     "remembered",
+     0.15
+    ],
+    "rug": [
+     "remembered",
+     0.15
+    ],
+    "rug_edge": [
+     "remembered",
+     0.15
+    ],
+    "ridge": [
+     "remembered",
+     0.15
+    ],
+    "sun": [
+     "remembered",
+     0.15
+    ],
+    "ground": [
+     "sensed",
+     0.762
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.15
+    ],
+    "neck": [
+     "remembered",
+     0.15
+    ],
+    "chest": [
+     "remembered",
+     0.15
+    ],
+    "pelvis": [
+     "remembered",
+     0.15
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.15
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.15
+    ],
+    "forearm_r": [
+     "remembered",
+     0.15
+    ],
+    "forearm_l": [
+     "remembered",
+     0.15
+    ],
+    "hand_r": [
+     "sensed",
+     0.093
+    ],
+    "hand_l": [
+     "remembered",
+     0.15
+    ],
+    "thigh_r": [
+     "remembered",
+     0.15
+    ],
+    "thigh_l": [
+     "remembered",
+     0.15
+    ],
+    "shin_r": [
+     "remembered",
+     0.15
+    ],
+    "shin_l": [
+     "remembered",
+     0.15
+    ],
+    "foot_r": [
+     "remembered",
+     0.15
+    ],
+    "foot_l": [
+     "remembered",
+     0.15
+    ]
+   },
+   "rays": 27,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.128,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.149,
+   "sun": 0.18,
+   "ridge_points": 11,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    -1.52,
+    0.08,
+    1.99
+   ],
+   "phone_in_model": false,
+   "rug_curled": false
+  },
+  {
+   "beat": "window",
+   "frame": 1537,
+   "t": 64.0,
+   "awareness": 1.0,
+   "budget_scale": 0.375,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.088
+    ],
+    "ceiling": [
+     "remembered",
+     0.088
+    ],
+    "wall_n": [
+     "remembered",
+     0.088
+    ],
+    "wall_s": [
+     "remembered",
+     0.088
+    ],
+    "wall_e": [
+     "remembered",
+     0.088
+    ],
+    "wall_w": [
+     "remembered",
+     0.088
+    ],
+    "window": [
+     "sensed",
+     0.61
+    ],
+    "sill": [
+     "sensed",
+     0.143
+    ],
+    "bed": [
+     "remembered",
+     0.088
+    ],
+    "table": [
+     "remembered",
+     0.088
+    ],
+    "table_far": [
+     "filled",
+     0.07
+    ],
+    "table_edge": [
+     "remembered",
+     0.088
+    ],
+    "rug": [
+     "remembered",
+     0.088
+    ],
+    "rug_edge": [
+     "remembered",
+     0.088
+    ],
+    "ridge": [
+     "remembered",
+     0.088
+    ],
+    "sun": [
+     "remembered",
+     0.088
+    ],
+    "ground": [
+     "sensed",
+     0.677
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.174
+    ],
+    "neck": [
+     "remembered",
+     0.088
+    ],
+    "chest": [
+     "remembered",
+     0.088
+    ],
+    "pelvis": [
+     "remembered",
+     0.088
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.088
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.088
+    ],
+    "forearm_r": [
+     "remembered",
+     0.088
+    ],
+    "forearm_l": [
+     "remembered",
+     0.088
+    ],
+    "hand_r": [
+     "sensed",
+     0.141
+    ],
+    "hand_l": [
+     "sensed",
+     0.143
+    ],
+    "thigh_r": [
+     "remembered",
+     0.029
+    ],
+    "thigh_l": [
+     "remembered",
+     0.029
+    ],
+    "shin_r": [
+     "remembered",
+     0.029
+    ],
+    "shin_l": [
+     "remembered",
+     0.029
+    ],
+    "foot_r": [
+     "remembered",
+     0.029
+    ],
+    "foot_l": [
+     "remembered",
+     0.029
+    ]
+   },
+   "rays": 27,
+   "waves": 1,
+   "plumb": 0.0,
+   "throb": 0.033,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.06,
+   "sun": 0.105,
+   "ridge_points": 50,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    -1.43,
+    0.1,
+    1.97
+   ],
+   "phone_in_model": false,
+   "rug_curled": true
+  },
+  {
+   "beat": "stretch",
+   "frame": 1729,
+   "t": 72.0,
+   "awareness": 1.0,
+   "budget_scale": 0.464,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.096
+    ],
+    "ceiling": [
+     "remembered",
+     0.096
+    ],
+    "wall_n": [
+     "remembered",
+     0.096
+    ],
+    "wall_s": [
+     "remembered",
+     0.096
+    ],
+    "wall_e": [
+     "remembered",
+     0.096
+    ],
+    "wall_w": [
+     "remembered",
+     0.096
+    ],
+    "window": [
+     "sensed",
+     0.248
+    ],
+    "sill": [
+     "remembered",
+     0.096
+    ],
+    "table_edge": [
+     "remembered",
+     0.096
+    ],
+    "rug": [
+     "remembered",
+     0.096
+    ],
+    "rug_edge": [
+     "remembered",
+     0.096
+    ],
+    "ridge": [
+     "remembered",
+     0.103
+    ],
+    "sun": [
+     "sensed",
+     0.204
+    ],
+    "ground": [
+     "remembered",
+     0.096
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.2
+    ],
+    "neck": [
+     "sensed",
+     0.2
+    ],
+    "chest": [
+     "sensed",
+     0.343
+    ],
+    "pelvis": [
+     "sensed",
+     0.2
+    ],
+    "upper_arm_r": [
+     "sensed",
+     0.2
+    ],
+    "upper_arm_l": [
+     "sensed",
+     0.2
+    ],
+    "forearm_r": [
+     "sensed",
+     0.2
+    ],
+    "forearm_l": [
+     "sensed",
+     0.2
+    ],
+    "hand_r": [
+     "sensed",
+     0.2
+    ],
+    "hand_l": [
+     "sensed",
+     0.2
+    ],
+    "thigh_r": [
+     "sensed",
+     0.2
+    ],
+    "thigh_l": [
+     "sensed",
+     0.2
+    ],
+    "shin_r": [
+     "sensed",
+     0.2
+    ],
+    "shin_l": [
+     "sensed",
+     0.2
+    ],
+    "foot_r": [
+     "sensed",
+     0.2
+    ],
+    "foot_l": [
+     "sensed",
+     0.2
+    ]
+   },
+   "rays": 27,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.038,
+   "breath": 0.686,
+   "heart": 0.0,
+   "glow": 0.069,
+   "sun": 0.204,
+   "ridge_points": 31,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    -2.6,
+    0.2,
+    2.1
+   ],
+   "phone_in_model": false,
+   "rug_curled": true
+  },
+  {
+   "beat": "eyes",
+   "frame": 1921,
+   "t": 80.0,
+   "awareness": 0.6,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.09
+    ],
+    "ceiling": [
+     "remembered",
+     0.09
+    ],
+    "wall_n": [
+     "remembered",
+     0.09
+    ],
+    "wall_s": [
+     "remembered",
+     0.09
+    ],
+    "wall_e": [
+     "remembered",
+     0.09
+    ],
+    "wall_w": [
+     "remembered",
+     0.09
+    ],
+    "window": [
+     "remembered",
+     0.09
+    ],
+    "sill": [
+     "remembered",
+     0.09
+    ],
+    "table_edge": [
+     "remembered",
+     0.09
+    ],
+    "rug": [
+     "remembered",
+     0.09
+    ],
+    "rug_edge": [
+     "remembered",
+     0.09
+    ],
+    "ridge": [
+     "remembered",
+     0.09
+    ],
+    "sun": [
+     "remembered",
+     0.09
+    ],
+    "ground": [
+     "remembered",
+     0.09
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.567
+    ],
+    "neck": [
+     "remembered",
+     0.09
+    ],
+    "chest": [
+     "sensed",
+     0.267
+    ],
+    "pelvis": [
+     "remembered",
+     0.09
+    ],
+    "hand_r": [
+     "sensed",
+     0.076
+    ],
+    "hand_l": [
+     "remembered",
+     0.09
+    ]
+   },
+   "rays": 0,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.108,
+   "breath": 0.535,
+   "heart": 0.0,
+   "glow": 0.036,
+   "sun": 0.108,
+   "ridge_points": 31,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    -4.6,
+    0.3,
+    1.5
+   ],
+   "phone_in_model": false,
+   "rug_curled": true
+  },
+  {
+   "beat": "chime",
+   "frame": 2065,
+   "t": 86.0,
+   "awareness": 1.0,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.15
+    ],
+    "ceiling": [
+     "remembered",
+     0.15
+    ],
+    "wall_n": [
+     "remembered",
+     0.15
+    ],
+    "wall_s": [
+     "remembered",
+     0.15
+    ],
+    "wall_e": [
+     "remembered",
+     0.15
+    ],
+    "wall_w": [
+     "remembered",
+     0.15
+    ],
+    "window": [
+     "remembered",
+     0.15
+    ],
+    "sill": [
+     "remembered",
+     0.15
+    ],
+    "table": [
+     "remembered",
+     0.075
+    ],
+    "table_far": [
+     "filled",
+     0.06
+    ],
+    "table_edge": [
+     "remembered",
+     0.15
+    ],
+    "rug": [
+     "remembered",
+     0.15
+    ],
+    "rug_edge": [
+     "remembered",
+     0.15
+    ],
+    "phone": [
+     "remembered",
+     0.15
+    ],
+    "ridge": [
+     "remembered",
+     0.15
+    ],
+    "sun": [
+     "remembered",
+     0.15
+    ],
+    "ground": [
+     "remembered",
+     0.15
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.133
+    ],
+    "neck": [
+     "remembered",
+     0.15
+    ],
+    "chest": [
+     "sensed",
+     0.048
+    ],
+    "pelvis": [
+     "remembered",
+     0.15
+    ],
+    "hand_r": [
+     "sensed",
+     0.071
+    ],
+    "hand_l": [
+     "remembered",
+     0.15
+    ]
+   },
+   "rays": 0,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.098,
+   "breath": 0.097,
+   "heart": 0.0,
+   "glow": 0.06,
+   "sun": 0.18,
+   "ridge_points": 31,
+   "words_lit": {
+    "phone": 0.7
+   },
+   "will_live": [],
+   "camera": [
+    -2.27,
+    1.34,
+    1.65
+   ],
+   "phone_in_model": true,
+   "rug_curled": true
+  },
+  {
+   "beat": "back",
+   "frame": 2209,
+   "t": 92.0,
+   "awareness": 1.0,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "sensed",
+     0.63
+    ],
+    "ceiling": [
+     "remembered",
+     0.15
+    ],
+    "wall_n": [
+     "remembered",
+     0.15
+    ],
+    "wall_s": [
+     "remembered",
+     0.15
+    ],
+    "wall_e": [
+     "remembered",
+     0.15
+    ],
+    "wall_w": [
+     "remembered",
+     0.15
+    ],
+    "window": [
+     "remembered",
+     0.15
+    ],
+    "sill": [
+     "remembered",
+     0.15
+    ],
+    "bed": [
+     "remembered",
+     0.15
+    ],
+    "table": [
+     "remembered",
+     0.15
+    ],
+    "table_far": [
+     "filled",
+     0.12
+    ],
+    "table_edge": [
+     "remembered",
+     0.15
+    ],
+    "rug": [
+     "remembered",
+     0.15
+    ],
+    "rug_edge": [
+     "remembered",
+     0.247
+    ],
+    "phone": [
+     "remembered",
+     0.15
+    ],
+    "ridge": [
+     "remembered",
+     0.15
+    ],
+    "sun": [
+     "remembered",
+     0.15
+    ],
+    "ground": [
+     "remembered",
+     0.15
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.15
+    ],
+    "neck": [
+     "remembered",
+     0.15
+    ],
+    "chest": [
+     "remembered",
+     0.15
+    ],
+    "pelvis": [
+     "remembered",
+     0.15
+    ],
+    "hand_r": [
+     "sensed",
+     0.065
+    ],
+    "hand_l": [
+     "remembered",
+     0.15
+    ],
+    "thigh_r": [
+     "remembered",
+     0.15
+    ],
+    "thigh_l": [
+     "remembered",
+     0.15
+    ],
+    "shin_r": [
+     "remembered",
+     0.15
+    ],
+    "shin_l": [
+     "remembered",
+     0.15
+    ],
+    "foot_r": [
+     "remembered",
+     0.15
+    ],
+    "foot_l": [
+     "remembered",
+     0.15
+    ]
+   },
+   "rays": 27,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.065,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.143,
+   "sun": 0.18,
+   "ridge_points": 13,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    -1.01,
+    1.19,
+    1.92
+   ],
+   "phone_in_model": true,
+   "rug_curled": true
+  },
+  {
+   "beat": "sit",
+   "frame": 2377,
+   "t": 99.0,
+   "awareness": 1.0,
+   "budget_scale": 1.0,
+   "regions": {
+    "floor": [
+     "sensed",
+     0.446
+    ],
+    "ceiling": [
+     "remembered",
+     0.15
+    ],
+    "wall_n": [
+     "remembered",
+     0.15
+    ],
+    "wall_s": [
+     "remembered",
+     0.317
+    ],
+    "wall_e": [
+     "remembered",
+     0.317
+    ],
+    "wall_w": [
+     "remembered",
+     0.15
+    ],
+    "window": [
+     "remembered",
+     0.317
+    ],
+    "sill": [
+     "remembered",
+     0.206
+    ],
+    "bed": [
+     "sensed",
+     0.359
+    ],
+    "table": [
+     "sensed",
+     0.65
+    ],
+    "table_far": [
+     "filled",
+     0.12
+    ],
+    "table_edge": [
+     "remembered",
+     0.372
+    ],
+    "rug": [
+     "remembered",
+     0.15
+    ],
+    "rug_edge": [
+     "remembered",
+     0.15
+    ],
+    "phone": [
+     "sensed",
+     0.786
+    ],
+    "ridge": [
+     "remembered",
+     0.233
+    ],
+    "sun": [
+     "remembered",
+     0.15
+    ],
+    "ground": [
+     "remembered",
+     0.317
+    ]
+   },
+   "parts": {
+    "head": [
+     "remembered",
+     0.15
+    ],
+    "neck": [
+     "remembered",
+     0.15
+    ],
+    "chest": [
+     "remembered",
+     0.15
+    ],
+    "pelvis": [
+     "sensed",
+     0.359
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.103
+    ],
+    "forearm_r": [
+     "sensed",
+     0.571
+    ],
+    "hand_r": [
+     "sensed",
+     0.65
+    ],
+    "hand_l": [
+     "remembered",
+     0.15
+    ],
+    "thigh_r": [
+     "sensed",
+     0.359
+    ],
+    "thigh_l": [
+     "sensed",
+     0.359
+    ],
+    "shin_r": [
+     "remembered",
+     0.15
+    ],
+    "shin_l": [
+     "remembered",
+     0.15
+    ],
+    "foot_r": [
+     "remembered",
+     0.15
+    ],
+    "foot_l": [
+     "remembered",
+     0.15
+    ]
+   },
+   "rays": 27,
+   "waves": 0,
+   "plumb": 0.12,
+   "throb": 0.058,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.06,
+   "sun": 0.18,
+   "ridge_points": 6,
+   "words_lit": {},
+   "will_live": [],
+   "camera": [
+    -1.62,
+    0.02,
+    2.01
+   ],
+   "phone_in_model": true,
+   "rug_curled": true
+  },
+  {
+   "beat": "texting",
+   "frame": 2569,
+   "t": 107.0,
+   "awareness": 0.76,
+   "budget_scale": 0.607,
+   "regions": {
+    "floor": [
+     "remembered",
+     0.084
+    ],
+    "ceiling": [
+     "remembered",
+     0.084
+    ],
+    "wall_n": [
+     "remembered",
+     0.084
+    ],
+    "wall_s": [
+     "remembered",
+     0.084
+    ],
+    "wall_e": [
+     "remembered",
+     0.084
+    ],
+    "wall_w": [
+     "remembered",
+     0.084
+    ],
+    "window": [
+     "remembered",
+     0.084
+    ],
+    "sill": [
+     "remembered",
+     0.084
+    ],
+    "bed": [
+     "remembered",
+     0.084
+    ],
+    "table": [
+     "sensed",
+     0.573
+    ],
+    "table_far": [
+     "filled",
+     0.067
+    ],
+    "table_edge": [
+     "sensed",
+     0.648
+    ],
+    "rug": [
+     "remembered",
+     0.084
+    ],
+    "rug_edge": [
+     "remembered",
+     0.084
+    ],
+    "phone": [
+     "sensed",
+     0.875
+    ],
+    "ridge": [
+     "remembered",
+     0.084
+    ],
+    "sun": [
+     "remembered",
+     0.084
+    ],
+    "ground": [
+     "remembered",
+     0.084
+    ]
+   },
+   "parts": {
+    "head": [
+     "sensed",
+     0.065
+    ],
+    "neck": [
+     "remembered",
+     0.084
+    ],
+    "chest": [
+     "remembered",
+     0.084
+    ],
+    "pelvis": [
+     "remembered",
+     0.084
+    ],
+    "upper_arm_r": [
+     "remembered",
+     0.084
+    ],
+    "upper_arm_l": [
+     "remembered",
+     0.084
+    ],
+    "forearm_r": [
+     "remembered",
+     0.084
+    ],
+    "forearm_l": [
+     "remembered",
+     0.084
+    ],
+    "hand_r": [
+     "sensed",
+     0.648
+    ],
+    "hand_l": [
+     "sensed",
+     0.142
+    ],
+    "thigh_r": [
+     "sensed",
+     0.648
+    ],
+    "thigh_l": [
+     "remembered",
+     0.084
+    ],
+    "shin_r": [
+     "sensed",
+     0.573
+    ]
+   },
+   "rays": 27,
+   "waves": 0,
+   "plumb": 0.0,
+   "throb": 0.032,
+   "breath": 0.0,
+   "heart": 0.0,
+   "glow": 0.225,
+   "sun": 0.1,
+   "ridge_points": 6,
+   "words_lit": {},
+   "will_live": [
+    12
+   ],
+   "camera": [
+    0.48,
+    3.1,
+    1.48
+   ],
+   "phone_in_model": true,
+   "rug_curled": true
+  }
+ ],
+ "per_second": [
+  {
+   "t": 0,
+   "aw": 0.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [],
+   "body": []
+  },
+  {
+   "t": 1,
+   "aw": 0.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [],
+   "body": []
+  },
+  {
+   "t": 2,
+   "aw": 0.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [],
+   "body": []
+  },
+  {
+   "t": 3,
+   "aw": 0.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [],
+   "body": []
+  },
+  {
+   "t": 4,
+   "aw": 0.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [],
+   "body": []
+  },
+  {
+   "t": 5,
+   "aw": 0.33,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "bed",
+    "ceiling",
+    "phone"
+   ],
+   "body": []
+  },
+  {
+   "t": 6,
+   "aw": 0.67,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "bed",
+    "ceiling",
+    "phone",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": []
+  },
+  {
+   "t": 7,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": []
+  },
+  {
+   "t": 8,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": []
+  },
+  {
+   "t": 9,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "forearm_r",
+    "hand_r",
+    "head",
+    "neck",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 10,
+   "aw": 1.0,
+   "scale": 0.28,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "forearm_r",
+    "hand_r",
+    "head",
+    "neck",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 11,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 12,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 13,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r"
+   ]
+  },
+  {
+   "t": 14,
+   "aw": 1.0,
+   "scale": 0.69,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "pelvis"
+   ]
+  },
+  {
+   "t": 15,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "thigh_l",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 16,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "shin_l",
+    "shin_r"
+   ]
+  },
+  {
+   "t": 17,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "floor",
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "rug",
+    "sill",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 18,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "floor",
+    "phone",
+    "table"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "rug",
+    "sill",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 19,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 20,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 21,
+   "aw": 0.82,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 22,
+   "aw": 0.63,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 23,
+   "aw": 0.45,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 24,
+   "aw": 0.45,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 25,
+   "aw": 0.73,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 26,
+   "aw": 0.4,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 27,
+   "aw": 0.4,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 28,
+   "aw": 0.4,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 29,
+   "aw": 1.0,
+   "scale": 0.38,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "forearm_r",
+    "hand_r",
+    "thigh_r",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 30,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "forearm_r",
+    "hand_r",
+    "shin_r",
+    "thigh_r",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 31,
+   "aw": 1.0,
+   "scale": 0.67,
+   "rays": 27,
+   "lit": [
+    "floor",
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "rug",
+    "sill",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 32,
+   "aw": 1.0,
+   "scale": 0.44,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 33,
+   "aw": 1.0,
+   "scale": 0.59,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r"
+   ]
+  },
+  {
+   "t": 34,
+   "aw": 1.0,
+   "scale": 0.61,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r"
+   ]
+  },
+  {
+   "t": 35,
+   "aw": 1.0,
+   "scale": 0.8,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r"
+   ]
+  },
+  {
+   "t": 36,
+   "aw": 1.0,
+   "scale": 0.88,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r"
+   ]
+  },
+  {
+   "t": 37,
+   "aw": 1.0,
+   "scale": 0.68,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 38,
+   "aw": 1.0,
+   "scale": 0.59,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 39,
+   "aw": 1.0,
+   "scale": 0.69,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 40,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 41,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 42,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 43,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [
+    "phone"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 44,
+   "aw": 1.0,
+   "scale": 0.63,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "phone",
+    "ridge",
+    "sun",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 45,
+   "aw": 1.0,
+   "scale": 0.46,
+   "rays": 27,
+   "lit": [
+    "ceiling",
+    "phone",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 46,
+   "aw": 1.0,
+   "scale": 0.84,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "ridge",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 47,
+   "aw": 1.0,
+   "scale": 0.97,
+   "rays": 27,
+   "lit": [
+    "floor",
+    "phone",
+    "rug",
+    "wall_e",
+    "wall_s"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "ground",
+    "ridge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 48,
+   "aw": 1.0,
+   "scale": 0.37,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "ground",
+    "ridge",
+    "sun",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l"
+   ]
+  },
+  {
+   "t": 49,
+   "aw": 1.0,
+   "scale": 0.39,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "ground",
+    "ridge",
+    "sun",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l"
+   ]
+  },
+  {
+   "t": 50,
+   "aw": 1.0,
+   "scale": 0.6,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "sun",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r",
+    "head",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l"
+   ]
+  },
+  {
+   "t": 51,
+   "aw": 1.0,
+   "scale": 0.93,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "sun",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 52,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "sun",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 53,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 54,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 55,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 56,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 57,
+   "aw": 1.0,
+   "scale": 0.28,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "rug_edge",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_r",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 58,
+   "aw": 1.0,
+   "scale": 0.6,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "rug_edge",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_r",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 59,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 60,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 61,
+   "aw": 1.0,
+   "scale": 0.58,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 62,
+   "aw": 1.0,
+   "scale": 0.19,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 63,
+   "aw": 1.0,
+   "scale": 0.3,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 64,
+   "aw": 1.0,
+   "scale": 0.38,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 65,
+   "aw": 1.0,
+   "scale": 0.53,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 66,
+   "aw": 1.0,
+   "scale": 0.64,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 67,
+   "aw": 1.0,
+   "scale": 0.86,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 68,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "sill",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 69,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_l",
+    "foot_r",
+    "forearm_l",
+    "forearm_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_l",
+    "shin_r",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 70,
+   "aw": 1.0,
+   "scale": 0.55,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "sun",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_l",
+    "foot_r",
+    "forearm_l",
+    "forearm_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_l",
+    "shin_r",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 71,
+   "aw": 1.0,
+   "scale": 0.37,
+   "rays": 27,
+   "lit": [
+    "sun",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_l",
+    "foot_r",
+    "forearm_l",
+    "forearm_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_l",
+    "shin_r",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 72,
+   "aw": 1.0,
+   "scale": 0.46,
+   "rays": 27,
+   "lit": [
+    "sun",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_l",
+    "foot_r",
+    "forearm_l",
+    "forearm_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_l",
+    "shin_r",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 73,
+   "aw": 1.0,
+   "scale": 0.57,
+   "rays": 27,
+   "lit": [
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_l",
+    "foot_r",
+    "forearm_l",
+    "forearm_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_l",
+    "shin_r",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 74,
+   "aw": 1.0,
+   "scale": 0.52,
+   "rays": 27,
+   "lit": [
+    "sun",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_l",
+    "foot_r",
+    "forearm_l",
+    "forearm_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_l",
+    "shin_r",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 75,
+   "aw": 1.0,
+   "scale": 0.72,
+   "rays": 27,
+   "lit": [
+    "sun",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "chest",
+    "foot_l",
+    "foot_r",
+    "forearm_l",
+    "forearm_r",
+    "hand_l",
+    "hand_r",
+    "head",
+    "neck",
+    "pelvis",
+    "shin_l",
+    "shin_r",
+    "thigh_l",
+    "thigh_r",
+    "upper_arm_l",
+    "upper_arm_r"
+   ]
+  },
+  {
+   "t": 76,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "sun",
+    "window"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 77,
+   "aw": 0.87,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 78,
+   "aw": 0.73,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 79,
+   "aw": 0.6,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 80,
+   "aw": 0.6,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 81,
+   "aw": 0.6,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 82,
+   "aw": 0.6,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 83,
+   "aw": 0.6,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 84,
+   "aw": 0.6,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 85,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 86,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 87,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 88,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 0,
+   "lit": [],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "chest",
+    "hand_r",
+    "head"
+   ]
+  },
+  {
+   "t": 89,
+   "aw": 1.0,
+   "scale": 0.88,
+   "rays": 27,
+   "lit": [
+    "wall_s"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 90,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "floor"
+   ],
+   "held": [
+    "ceiling",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 91,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "floor",
+    "rug_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 92,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "floor"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 93,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "floor"
+   ],
+   "held": [
+    "ceiling",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 94,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "bed"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 95,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "bed"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 96,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "wall_w"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "phone",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "window"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 97,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "wall_e",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_s",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 98,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "ground",
+    "ridge",
+    "wall_e",
+    "wall_s",
+    "window"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "phone",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table",
+    "table_edge",
+    "table_far",
+    "wall_n",
+    "wall_w"
+   ],
+   "body": [
+    "hand_r"
+   ]
+  },
+  {
+   "t": 99,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "floor",
+    "phone",
+    "table"
+   ],
+   "held": [
+    "ceiling",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_edge",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "forearm_r",
+    "hand_r",
+    "pelvis",
+    "thigh_l",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 100,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "forearm_r",
+    "hand_r",
+    "pelvis",
+    "thigh_l",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 101,
+   "aw": 1.0,
+   "scale": 0.51,
+   "rays": 27,
+   "lit": [
+    "bed",
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "forearm_r",
+    "hand_r",
+    "pelvis",
+    "thigh_l",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 102,
+   "aw": 1.0,
+   "scale": 1.0,
+   "rays": 27,
+   "lit": [
+    "floor",
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 103,
+   "aw": 1.0,
+   "scale": 0.67,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 104,
+   "aw": 1.0,
+   "scale": 0.58,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 105,
+   "aw": 0.92,
+   "scale": 0.47,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 106,
+   "aw": 0.84,
+   "scale": 0.53,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 107,
+   "aw": 0.76,
+   "scale": 0.61,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 108,
+   "aw": 0.68,
+   "scale": 0.63,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "head",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 109,
+   "aw": 0.59,
+   "scale": 0.73,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 110,
+   "aw": 0.51,
+   "scale": 0.83,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  },
+  {
+   "t": 111,
+   "aw": 0.43,
+   "scale": 0.8,
+   "rays": 27,
+   "lit": [
+    "phone",
+    "table",
+    "table_edge"
+   ],
+   "held": [
+    "bed",
+    "ceiling",
+    "floor",
+    "ground",
+    "ridge",
+    "rug",
+    "rug_edge",
+    "sill",
+    "sun",
+    "table_far",
+    "wall_e",
+    "wall_n",
+    "wall_s",
+    "wall_w",
+    "window"
+   ],
+   "body": [
+    "hand_l",
+    "hand_r",
+    "shin_r",
+    "thigh_r"
+   ]
+  }
+ ]
+}

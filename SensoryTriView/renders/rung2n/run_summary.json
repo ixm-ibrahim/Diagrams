@@ -1,0 +1,368 @@
+{
+ "chunks": [
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 43.4
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 23.6
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 23.5
+  },
+  {
+   "label": "scan",
+   "start": 2101,
+   "end": 2101,
+   "code": 0,
+   "seconds": 29.1
+  },
+  {
+   "label": "scan",
+   "start": 2551,
+   "end": 2551,
+   "code": 0,
+   "seconds": 9.1
+  },
+  {
+   "label": "scan",
+   "start": 1,
+   "end": 1,
+   "code": 0,
+   "seconds": 8.2
+  },
+  {
+   "label": "scan",
+   "start": 241,
+   "end": 241,
+   "code": 0,
+   "seconds": 7.7
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 22.5
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 31.4
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 36.5
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 38.0
+  },
+  {
+   "label": "scan",
+   "start": 2431,
+   "end": 2431,
+   "code": 0,
+   "seconds": 10.9
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 37.7
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 38.7
+  },
+  {
+   "label": "scan",
+   "start": 1261,
+   "end": 1560,
+   "code": 0,
+   "seconds": 240.3
+  },
+  {
+   "label": "scan",
+   "start": 1561,
+   "end": 1860,
+   "code": 0,
+   "seconds": 210.7
+  },
+  {
+   "label": "scan",
+   "start": 1861,
+   "end": 2160,
+   "code": 0,
+   "seconds": 150.2
+  },
+  {
+   "label": "scan",
+   "start": 2161,
+   "end": 2460,
+   "code": 0,
+   "seconds": 97.6
+  },
+  {
+   "label": "scan",
+   "start": 2461,
+   "end": 2760,
+   "code": 0,
+   "seconds": 86.7
+  },
+  {
+   "label": "scan",
+   "start": 2761,
+   "end": 2926,
+   "code": 0,
+   "seconds": 53.6
+  },
+  {
+   "label": "scan",
+   "start": 1,
+   "end": 300,
+   "code": 0,
+   "seconds": 97.4
+  },
+  {
+   "label": "scan",
+   "start": 301,
+   "end": 600,
+   "code": 0,
+   "seconds": 93.5
+  },
+  {
+   "label": "scan",
+   "start": 601,
+   "end": 720,
+   "code": 0,
+   "seconds": 41.7
+  },
+  {
+   "label": "true16",
+   "start": 1561,
+   "end": 1860,
+   "code": 0,
+   "seconds": 456.5
+  },
+  {
+   "label": "true16",
+   "start": 1861,
+   "end": 2160,
+   "code": 0,
+   "seconds": 400.4
+  },
+  {
+   "label": "true16",
+   "start": 2161,
+   "end": 2460,
+   "code": 0,
+   "seconds": 485.1
+  },
+  {
+   "label": "true16",
+   "start": 2461,
+   "end": 2760,
+   "code": 0,
+   "seconds": 444.0
+  },
+  {
+   "label": "true16",
+   "start": 2761,
+   "end": 2790,
+   "code": 0,
+   "seconds": 35.2
+  },
+  {
+   "label": "true16",
+   "start": 1,
+   "end": 300,
+   "code": 0,
+   "seconds": 132.6
+  },
+  {
+   "label": "true16",
+   "start": 301,
+   "end": 600,
+   "code": 0,
+   "seconds": 144.2
+  },
+  {
+   "label": "true16",
+   "start": 601,
+   "end": 720,
+   "code": 0,
+   "seconds": 60.6
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 69.3
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 155.0
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 61.4
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 65.4
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 45.3
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 45.3
+  },
+  {
+   "label": "true16",
+   "start": 1561,
+   "end": 1860,
+   "code": 0,
+   "seconds": 396.1
+  },
+  {
+   "label": "true16",
+   "start": 1861,
+   "end": 2160,
+   "code": 0,
+   "seconds": 319.6
+  },
+  {
+   "label": "true16",
+   "start": 2461,
+   "end": 2760,
+   "code": 0,
+   "seconds": 202.5
+  },
+  {
+   "label": "true16",
+   "start": 2761,
+   "end": 2790,
+   "code": 0,
+   "seconds": 35.8
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 70.5
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 156.1
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 65.4
+  },
+  {
+   "label": "build",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 45.7
+  },
+  {
+   "label": "build_moves",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 42.5
+  },
+  {
+   "label": "true16",
+   "start": 1561,
+   "end": 1860,
+   "code": 0,
+   "seconds": 395.1
+  },
+  {
+   "label": "true16",
+   "start": 1861,
+   "end": 2160,
+   "code": 0,
+   "seconds": 319.5
+  },
+  {
+   "label": "true16",
+   "start": 2461,
+   "end": 2760,
+   "code": 0,
+   "seconds": 204.7
+  },
+  {
+   "label": "true16",
+   "start": 2761,
+   "end": 2790,
+   "code": 0,
+   "seconds": 34.8
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 70.0
+  },
+  {
+   "label": "assemble",
+   "start": 1,
+   "end": 3480,
+   "code": 0,
+   "seconds": 147.7
+  }
+ ]
+}

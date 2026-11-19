@@ -1,0 +1,1148 @@
+{
+ "steps": [
+  {
+   "at": "2026-11-13 21:51:07",
+   "step": "first 846-875",
+   "frames": [
+    846,
+    875
+   ],
+   "wanted": 29,
+   "made": 29,
+   "seconds": 40.8,
+   "per_frame": 1.41,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 21:55:09",
+   "step": "true 846-875",
+   "frames": [
+    846,
+    875
+   ],
+   "wanted": 30,
+   "made": 30,
+   "seconds": 242.4,
+   "per_frame": 8.08,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 21:55:35",
+   "step": "third 846-875",
+   "frames": [
+    846,
+    875
+   ],
+   "wanted": 30,
+   "made": 30,
+   "seconds": 25.5,
+   "per_frame": 0.85,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 21:56:02",
+   "step": "scans 928-928",
+   "frames": [
+    928,
+    928
+   ],
+   "wanted": 1,
+   "made": 1,
+   "seconds": 27.2,
+   "per_frame": 27.2,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 21:56:29",
+   "step": "scans 930-930",
+   "frames": [
+    930,
+    930
+   ],
+   "wanted": 1,
+   "made": 1,
+   "seconds": 27.0,
+   "per_frame": 27.04,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 21:56:42",
+   "step": "first 919-930",
+   "frames": [
+    919,
+    930
+   ],
+   "wanted": 12,
+   "made": 12,
+   "seconds": 12.8,
+   "per_frame": 1.07,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 21:58:25",
+   "step": "true 919-930",
+   "frames": [
+    919,
+    930
+   ],
+   "wanted": 12,
+   "made": 12,
+   "seconds": 102.2,
+   "per_frame": 8.52,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 21:58:38",
+   "step": "third 919-930",
+   "frames": [
+    919,
+    930
+   ],
+   "wanted": 12,
+   "made": 12,
+   "seconds": 13.3,
+   "per_frame": 1.11,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 22:19:41",
+   "step": "true 846-875",
+   "frames": [
+    846,
+    875
+   ],
+   "wanted": 30,
+   "made": 30,
+   "seconds": 262.2,
+   "per_frame": 8.74,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 22:21:41",
+   "step": "true 919-930",
+   "frames": [
+    919,
+    930
+   ],
+   "wanted": 12,
+   "made": 12,
+   "seconds": 119.6,
+   "per_frame": 9.97,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 22:22:20",
+   "step": "scans 2-5",
+   "frames": [
+    2,
+    5
+   ],
+   "wanted": 4,
+   "made": 4,
+   "seconds": 37.2,
+   "per_frame": 9.3,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 22:35:54",
+   "step": "scans 1-240",
+   "frames": [
+    7,
+    240
+   ],
+   "wanted": 188,
+   "made": 188,
+   "seconds": 626.3,
+   "per_frame": 3.33,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 22:39:12",
+   "step": "first 1-240",
+   "frames": [
+    1,
+    240
+   ],
+   "wanted": 239,
+   "made": 239,
+   "seconds": 197.6,
+   "per_frame": 0.83,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 23:30:11",
+   "step": "true 1-240",
+   "frames": [
+    1,
+    240
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 3059.5,
+   "per_frame": 12.75,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 23:33:14",
+   "step": "third 1-240",
+   "frames": [
+    1,
+    240
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 183.0,
+   "per_frame": 0.76,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 23:43:42",
+   "step": "scans 241-480",
+   "frames": [
+    242,
+    480
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 627.4,
+   "per_frame": 3.27,
+   "code": 0
+  },
+  {
+   "at": "2026-11-13 23:46:33",
+   "step": "first 241-480",
+   "frames": [
+    241,
+    480
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 171.0,
+   "per_frame": 0.71,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 01:13:11",
+   "step": "true 241-480",
+   "frames": [
+    241,
+    480
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 5198.0,
+   "per_frame": 21.66,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 01:16:10",
+   "step": "third 241-480",
+   "frames": [
+    241,
+    480
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 179.3,
+   "per_frame": 0.75,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 01:28:24",
+   "step": "scans 481-720",
+   "frames": [
+    482,
+    720
+   ],
+   "wanted": 191,
+   "made": 191,
+   "seconds": 733.6,
+   "per_frame": 3.84,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 01:31:23",
+   "step": "first 481-720",
+   "frames": [
+    481,
+    720
+   ],
+   "wanted": 238,
+   "made": 238,
+   "seconds": 179.1,
+   "per_frame": 0.75,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 02:47:47",
+   "step": "true 481-720",
+   "frames": [
+    481,
+    720
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 4583.7,
+   "per_frame": 19.1,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 02:50:25",
+   "step": "third 481-720",
+   "frames": [
+    481,
+    720
+   ],
+   "wanted": 238,
+   "made": 238,
+   "seconds": 158.0,
+   "per_frame": 0.66,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 02:55:29",
+   "step": "scans 721-900",
+   "frames": [
+    722,
+    894
+   ],
+   "wanted": 112,
+   "made": 112,
+   "seconds": 304.3,
+   "per_frame": 2.72,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 02:56:58",
+   "step": "first 721-900",
+   "frames": [
+    721,
+    900
+   ],
+   "wanted": 146,
+   "made": 146,
+   "seconds": 88.3,
+   "per_frame": 0.6,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 03:25:12",
+   "step": "true 721-900",
+   "frames": [
+    721,
+    900
+   ],
+   "wanted": 150,
+   "made": 150,
+   "seconds": 1694.2,
+   "per_frame": 11.29,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 03:26:55",
+   "step": "third 721-900",
+   "frames": [
+    721,
+    900
+   ],
+   "wanted": 146,
+   "made": 146,
+   "seconds": 103.6,
+   "per_frame": 0.71,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 03:38:07",
+   "step": "scans 901-1140",
+   "frames": [
+    932,
+    1140
+   ],
+   "wanted": 150,
+   "made": 150,
+   "seconds": 402.2,
+   "per_frame": 2.68,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 03:40:25",
+   "step": "first 901-1140",
+   "frames": [
+    902,
+    1140
+   ],
+   "wanted": 224,
+   "made": 224,
+   "seconds": 138.2,
+   "per_frame": 0.62,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 04:06:59",
+   "step": "true 901-1140",
+   "frames": [
+    901,
+    1140
+   ],
+   "wanted": 228,
+   "made": 228,
+   "seconds": 1593.3,
+   "per_frame": 6.99,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 04:09:35",
+   "step": "third 901-1140",
+   "frames": [
+    901,
+    1140
+   ],
+   "wanted": 227,
+   "made": 227,
+   "seconds": 156.4,
+   "per_frame": 0.69,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 04:16:52",
+   "step": "scans 1141-1380",
+   "frames": [
+    1142,
+    1380
+   ],
+   "wanted": 155,
+   "made": 155,
+   "seconds": 436.6,
+   "per_frame": 2.82,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 04:19:23",
+   "step": "first 1141-1380",
+   "frames": [
+    1141,
+    1380
+   ],
+   "wanted": 215,
+   "made": 215,
+   "seconds": 151.1,
+   "per_frame": 0.7,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 04:47:38",
+   "step": "true 1141-1380",
+   "frames": [
+    1141,
+    1380
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1694.9,
+   "per_frame": 7.06,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 04:50:40",
+   "step": "third 1141-1380",
+   "frames": [
+    1141,
+    1380
+   ],
+   "wanted": 239,
+   "made": 239,
+   "seconds": 182.3,
+   "per_frame": 0.76,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 04:59:40",
+   "step": "scans 1381-1620",
+   "frames": [
+    1382,
+    1620
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 539.6,
+   "per_frame": 2.81,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 05:01:55",
+   "step": "first 1381-1620",
+   "frames": [
+    1382,
+    1620
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 135.1,
+   "per_frame": 0.7,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 05:29:35",
+   "step": "true 1381-1620",
+   "frames": [
+    1381,
+    1620
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1660.1,
+   "per_frame": 6.92,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 05:32:32",
+   "step": "third 1381-1620",
+   "frames": [
+    1381,
+    1620
+   ],
+   "wanted": 239,
+   "made": 239,
+   "seconds": 177.2,
+   "per_frame": 0.74,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 05:38:58",
+   "step": "scans 1621-1800",
+   "frames": [
+    1622,
+    1800
+   ],
+   "wanted": 144,
+   "made": 144,
+   "seconds": 385.5,
+   "per_frame": 2.68,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 05:40:30",
+   "step": "first 1621-1800",
+   "frames": [
+    1622,
+    1800
+   ],
+   "wanted": 144,
+   "made": 144,
+   "seconds": 92.0,
+   "per_frame": 0.64,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 06:01:16",
+   "step": "true 1621-1800",
+   "frames": [
+    1621,
+    1800
+   ],
+   "wanted": 180,
+   "made": 180,
+   "seconds": 1246.4,
+   "per_frame": 6.92,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 06:03:22",
+   "step": "third 1621-1800",
+   "frames": [
+    1621,
+    1800
+   ],
+   "wanted": 180,
+   "made": 180,
+   "seconds": 125.5,
+   "per_frame": 0.7,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 06:13:30",
+   "step": "scans 1801-2040",
+   "frames": [
+    1802,
+    2040
+   ],
+   "wanted": 157,
+   "made": 157,
+   "seconds": 409.2,
+   "per_frame": 2.61,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 06:14:46",
+   "step": "first 1801-2040",
+   "frames": [
+    1802,
+    2040
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 75.9,
+   "per_frame": 0.4,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 06:42:50",
+   "step": "true 1801-2040",
+   "frames": [
+    1801,
+    2040
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1684.3,
+   "per_frame": 7.02,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 07:14:48",
+   "step": "true 1291-1530",
+   "frames": [
+    1291,
+    1530
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1657.4,
+   "per_frame": 6.91,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 07:25:21",
+   "step": "true 1531-1620",
+   "frames": [
+    1531,
+    1620
+   ],
+   "wanted": 90,
+   "made": 90,
+   "seconds": 632.3,
+   "per_frame": 7.03,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 07:31:08",
+   "step": "third 1801-2040",
+   "frames": [
+    1801,
+    2040
+   ],
+   "wanted": 233,
+   "made": 233,
+   "seconds": 160.9,
+   "per_frame": 0.69,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 07:39:14",
+   "step": "scans 2041-2280",
+   "frames": [
+    2042,
+    2280
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 485.0,
+   "per_frame": 2.53,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 07:40:13",
+   "step": "first 2041-2280",
+   "frames": [
+    2042,
+    2280
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 59.7,
+   "per_frame": 0.31,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 08:10:18",
+   "step": "true 2041-2280",
+   "frames": [
+    2041,
+    2280
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1804.3,
+   "per_frame": 7.52,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 08:12:59",
+   "step": "third 2041-2280",
+   "frames": [
+    2042,
+    2280
+   ],
+   "wanted": 235,
+   "made": 235,
+   "seconds": 161.1,
+   "per_frame": 0.69,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 08:21:07",
+   "step": "scans 2281-2520",
+   "frames": [
+    2282,
+    2520
+   ],
+   "wanted": 191,
+   "made": 191,
+   "seconds": 488.5,
+   "per_frame": 2.56,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 08:22:10",
+   "step": "first 2281-2520",
+   "frames": [
+    2282,
+    2520
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 62.8,
+   "per_frame": 0.33,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 08:53:32",
+   "step": "true 2281-2520",
+   "frames": [
+    2281,
+    2520
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1881.6,
+   "per_frame": 7.84,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 08:55:41",
+   "step": "third 2281-2520",
+   "frames": [
+    2282,
+    2520
+   ],
+   "wanted": 235,
+   "made": 235,
+   "seconds": 129.8,
+   "per_frame": 0.55,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 09:01:58",
+   "step": "scans 2521-2700",
+   "frames": [
+    2522,
+    2700
+   ],
+   "wanted": 144,
+   "made": 144,
+   "seconds": 376.2,
+   "per_frame": 2.61,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 09:02:47",
+   "step": "first 2521-2700",
+   "frames": [
+    2522,
+    2700
+   ],
+   "wanted": 144,
+   "made": 144,
+   "seconds": 49.9,
+   "per_frame": 0.35,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 09:25:55",
+   "step": "true 2521-2700",
+   "frames": [
+    2521,
+    2700
+   ],
+   "wanted": 180,
+   "made": 180,
+   "seconds": 1387.7,
+   "per_frame": 7.71,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 09:27:29",
+   "step": "third 2521-2700",
+   "frames": [
+    2522,
+    2700
+   ],
+   "wanted": 175,
+   "made": 175,
+   "seconds": 94.1,
+   "per_frame": 0.54,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 09:39:50",
+   "step": "scans 2701-2940",
+   "frames": [
+    2702,
+    2940
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 515.7,
+   "per_frame": 2.69,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 09:41:49",
+   "step": "first 2701-2940",
+   "frames": [
+    2702,
+    2940
+   ],
+   "wanted": 194,
+   "made": 194,
+   "seconds": 118.7,
+   "per_frame": 0.61,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 10:10:14",
+   "step": "true 2701-2940",
+   "frames": [
+    2701,
+    2940
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1704.7,
+   "per_frame": 7.1,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 10:12:48",
+   "step": "third 2701-2940",
+   "frames": [
+    2702,
+    2940
+   ],
+   "wanted": 235,
+   "made": 235,
+   "seconds": 154.7,
+   "per_frame": 0.66,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 10:21:10",
+   "step": "scans 2941-3180",
+   "frames": [
+    2942,
+    3180
+   ],
+   "wanted": 188,
+   "made": 188,
+   "seconds": 501.2,
+   "per_frame": 2.67,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 10:23:35",
+   "step": "first 2941-3180",
+   "frames": [
+    2942,
+    3180
+   ],
+   "wanted": 235,
+   "made": 235,
+   "seconds": 145.0,
+   "per_frame": 0.62,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 10:52:53",
+   "step": "true 2941-3180",
+   "frames": [
+    2941,
+    3180
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1758.4,
+   "per_frame": 7.33,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 10:55:36",
+   "step": "third 2941-3180",
+   "frames": [
+    2942,
+    3180
+   ],
+   "wanted": 235,
+   "made": 235,
+   "seconds": 163.2,
+   "per_frame": 0.69,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:04:32",
+   "step": "scans 3181-3420",
+   "frames": [
+    3182,
+    3420
+   ],
+   "wanted": 192,
+   "made": 192,
+   "seconds": 535.4,
+   "per_frame": 2.79,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:07:07",
+   "step": "first 3181-3420",
+   "frames": [
+    3182,
+    3420
+   ],
+   "wanted": 236,
+   "made": 236,
+   "seconds": 155.6,
+   "per_frame": 0.66,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:36:11",
+   "step": "true 3181-3420",
+   "frames": [
+    3181,
+    3420
+   ],
+   "wanted": 240,
+   "made": 240,
+   "seconds": 1743.2,
+   "per_frame": 7.26,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:39:03",
+   "step": "third 3181-3420",
+   "frames": [
+    3182,
+    3420
+   ],
+   "wanted": 236,
+   "made": 236,
+   "seconds": 172.4,
+   "per_frame": 0.73,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:41:36",
+   "step": "scans 3421-3480",
+   "frames": [
+    3422,
+    3480
+   ],
+   "wanted": 48,
+   "made": 48,
+   "seconds": 153.3,
+   "per_frame": 3.19,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:42:17",
+   "step": "first 3421-3480",
+   "frames": [
+    3422,
+    3480
+   ],
+   "wanted": 58,
+   "made": 58,
+   "seconds": 40.7,
+   "per_frame": 0.7,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:49:24",
+   "step": "true 3421-3480",
+   "frames": [
+    3421,
+    3480
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 427.4,
+   "per_frame": 7.12,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 11:50:07",
+   "step": "third 3421-3480",
+   "frames": [
+    3422,
+    3480
+   ],
+   "wanted": 58,
+   "made": 58,
+   "seconds": 42.5,
+   "per_frame": 0.73,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 12:50:36",
+   "step": "true 482-721",
+   "frames": [
+    482,
+    721
+   ],
+   "wanted": 46,
+   "made": 46,
+   "seconds": 838.9,
+   "per_frame": 18.24,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:11:52",
+   "step": "true 722-961",
+   "frames": [
+    722,
+    830
+   ],
+   "wanted": 92,
+   "made": 92,
+   "seconds": 1276.1,
+   "per_frame": 13.87,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:17:32",
+   "step": "true 1202-1441",
+   "frames": [
+    1221,
+    1264
+   ],
+   "wanted": 44,
+   "made": 44,
+   "seconds": 339.4,
+   "per_frame": 7.71,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:23:19",
+   "step": "true 2402-2641",
+   "frames": [
+    2412,
+    2452
+   ],
+   "wanted": 41,
+   "made": 41,
+   "seconds": 346.9,
+   "per_frame": 8.46,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:24:33",
+   "step": "scans 2642-2800",
+   "frames": [
+    2776,
+    2798
+   ],
+   "wanted": 23,
+   "made": 23,
+   "seconds": 74.2,
+   "per_frame": 3.22,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:24:50",
+   "step": "first 2642-2800",
+   "frames": [
+    2776,
+    2798
+   ],
+   "wanted": 23,
+   "made": 23,
+   "seconds": 17.4,
+   "per_frame": 0.76,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:30:41",
+   "step": "true 2642-2800",
+   "frames": [
+    2672,
+    2798
+   ],
+   "wanted": 43,
+   "made": 43,
+   "seconds": 350.5,
+   "per_frame": 8.15,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:30:59",
+   "step": "third 2642-2800",
+   "frames": [
+    2776,
+    2798
+   ],
+   "wanted": 23,
+   "made": 23,
+   "seconds": 17.9,
+   "per_frame": 0.78,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 13:59:08",
+   "step": "true 482-721",
+   "frames": [
+    482,
+    501
+   ],
+   "wanted": 20,
+   "made": 20,
+   "seconds": 417.5,
+   "per_frame": 20.87,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 14:07:29",
+   "step": "true 722-961",
+   "frames": [
+    752,
+    830
+   ],
+   "wanted": 39,
+   "made": 39,
+   "seconds": 501.3,
+   "per_frame": 12.85,
+   "code": 0
+  },
+  {
+   "at": "2026-11-14 14:10:04",
+   "step": "true 1202-1264",
+   "frames": [
+    1247,
+    1264
+   ],
+   "wanted": 18,
+   "made": 18,
+   "seconds": 155.4,
+   "per_frame": 8.63,
+   "code": 0
+  }
+ ]
+}

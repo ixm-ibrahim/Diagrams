@@ -1,0 +1,1 @@
+{"view": "scan", "frames": [2101, 2101], "rendered": 1, "skipped": 0, "seconds": 3.2, "per_frame_mean": 1.587, "per_frame_first": 1.59, "gpu": {"baseline_mb": 0, "peak_mb": 792}, "size": [1024, 1024], "engine": "CYCLES", "samples": 24}

@@ -1,0 +1,47 @@
+{
+ "frames": [
+  {
+   "frame": 1651,
+   "mad": 4.7,
+   "over24": 0.0709,
+   "mad_scan": 4.59,
+   "holes": 0.0002,
+   "scan_footprint_px": 1.12
+  },
+  {
+   "frame": 2101,
+   "mad": 2.2,
+   "over24": 0.0205,
+   "mad_scan": 2.15,
+   "holes": 0.0,
+   "scan_footprint_px": 1.12
+  },
+  {
+   "frame": 2251,
+   "mad": 2.31,
+   "over24": 0.0256,
+   "mad_scan": 2.27,
+   "holes": 0.0,
+   "scan_footprint_px": 1.12
+  },
+  {
+   "frame": 2731,
+   "mad": 1.04,
+   "over24": 0.0073,
+   "mad_scan": 1.0,
+   "holes": 0.0,
+   "scan_footprint_px": 1.12
+  },
+  {
+   "frame": 2861,
+   "mad": 1.54,
+   "over24": 0.0044,
+   "mad_scan": 1.49,
+   "holes": 0.0,
+   "scan_footprint_px": 1.12
+  }
+ ],
+ "mean_mad": 2.36,
+ "mean_mad_scan": 2.3,
+ "mean_holes": 0.0
+}
