@@ -1,0 +1,16 @@
+{
+ "uv_box": [
+  0.625,
+  0.995,
+  0.145,
+  0.83
+ ],
+ "relief_clip_m": 0.0003,
+ "tile_m": 0.052348799999999994,
+ "ra_target_m": 2e-05,
+ "source": "LPS head: Infinite, 3D Head Scan by Lee Perry-Smith (Infinite-Realities / I-R Entertainment Ltd.), CC BY 3.0, via the McGuire Computer Graphics Archive",
+ "size": [
+  2212,
+  4096
+ ]
+}

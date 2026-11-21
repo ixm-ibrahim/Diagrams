@@ -11,6 +11,19 @@ exposure_probe_*.png
 Thumbs.db
 desktop.ini
 
+# Assets (rung 3 on): the scans and asset packs as downloaded and what is made from them. Since 2026-11-21 they travel
+# in git, at his word, so that the work can go on from another computer, by tools/bigfiles.py (what it carries is
+# listed in bigfiles/carry.txt; the files themselves are named in the block at the end of this file).
+# assets/licensed holds a scan that is free to use with credit but whose files may not be given on. Nothing in it is a
+# git file as itself: it enters git only as encrypted parts under bigfiles/, and so do the scenes that pack its maps.
+/assets/licensed/
+# assets/open is free to publish: its small files are plain git files, its files over 45 MB go in plain parts.
+# Left out there: copies of what the zip beside them already holds.
+/assets/open/lpshead/unpacked/
+# A file that `join` is still writing, and any key file that strays in here.
+*.joining
+*.key
+
 # Scenes: only the scenes named here are kept. Every other scene is a test build.
 # To keep a new scene of record, add a line for it below.
 /scenes/*
@@ -29,3 +42,87 @@ desktop.ini
 !/renders/rung2p/audit_r14/**
 # A broken link left in renders since rung 2j: named here so that git does not try to open it.
 /renders/rung2j$d
+
+# >>> tools/bigfiles.py: carried in parts under bigfiles/ (written by the tool: do not edit by hand)
+/assets/licensed/digitalrealitylab/Marcus_Clean_Sample_01.zip
+/assets/licensed/digitalrealitylab/Marcus_PBR_Sample_01.zip
+/assets/licensed/digitalrealitylab/derived/head_colour.png
+/assets/licensed/digitalrealitylab/derived/head_fine.png
+/assets/licensed/digitalrealitylab/derived/head_relief.png
+/assets/licensed/digitalrealitylab/derived/head_rough.png
+/assets/licensed/digitalrealitylab/derived/head_trust.png
+/assets/licensed/digitalrealitylab/derived/neck_colour.png
+/assets/licensed/digitalrealitylab/derived/neck_relief.png
+/assets/licensed/digitalrealitylab/derived/neck_trust.png
+/assets/licensed/digitalrealitylab/derived/skin_detail.json
+/assets/licensed/digitalrealitylab/derived/tile_relief.png
+/assets/licensed/digitalrealitylab/derived/tile_tint.png
+/assets/licensed/digitalrealitylab/work/bake_state.json
+/assets/licensed/digitalrealitylab/work/head_colour.png
+/assets/licensed/digitalrealitylab/work/head_colour_8k.png
+/assets/licensed/digitalrealitylab/work/head_relief.png
+/assets/licensed/digitalrealitylab/work/head_rough.png
+/assets/licensed/digitalrealitylab/work/head_trust.png
+/assets/licensed/digitalrealitylab/work/marcus_clean_mesh.npz
+/assets/licensed/digitalrealitylab/work/marcus_match.npz
+/assets/licensed/digitalrealitylab/work/marcus_mesh.npz
+/assets/licensed/digitalrealitylab/work/marcus_relief.npy
+/assets/licensed/digitalrealitylab/work/marcus_views.npz
+/assets/licensed/digitalrealitylab/work/neck_colour.png
+/assets/licensed/digitalrealitylab/work/neck_relief.png
+/assets/licensed/digitalrealitylab/work/neck_trust.png
+/assets/licensed/digitalrealitylab/work/scripts/clean_dump.py
+/assets/licensed/digitalrealitylab/work/scripts/export_his_head.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_bake.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_bake2.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_bake3.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_bake4.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_exr.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_match.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_prep1.py
+/assets/licensed/digitalrealitylab/work/scripts/marcus_prep2.py
+/assets/licensed/digitalrealitylab/work/scripts/meshnear.py
+/assets/licensed/digitalrealitylab/work/scripts/nape.sh
+/assets/licensed/digitalrealitylab/work/scripts/notes_turn3_sent.py
+/assets/licensed/digitalrealitylab/work/scripts/patch_bake4.py
+/assets/licensed/digitalrealitylab/work/scripts/patch_lashes.py
+/assets/licensed/digitalrealitylab/work/scripts/patch_lashes2.py
+/assets/licensed/digitalrealitylab/work/scripts/patch_lids.py
+/assets/licensed/digitalrealitylab/work/scripts/round3_final.sh
+/assets/licensed/digitalrealitylab/work/scripts/round3_final_v2.sh
+/assets/licensed/digitalrealitylab/work/scripts/round3_sheets.py
+/assets/licensed/digitalrealitylab/work/scripts/round3_still.sh
+/assets/licensed/digitalrealitylab/work/scripts/round3_v2_sheet.py
+/assets/licensed/digitalrealitylab/work/scripts/round4_sheet.py
+/assets/licensed/digitalrealitylab/work/scripts/round4_still.sh
+/assets/licensed/digitalrealitylab/work/scripts/round5_final.sh
+/assets/licensed/digitalrealitylab/work/scripts/round5_sheet.py
+/assets/licensed/digitalrealitylab/work/scripts/skinlib.py
+/assets/licensed/digitalrealitylab/work/scripts/turn3_beside.py
+/assets/licensed/digitalrealitylab/work/scripts/turn3_check.py
+/assets/licensed/digitalrealitylab/work/scripts/turn3_first.sh
+/assets/licensed/digitalrealitylab/work/scripts/turn3_watch2.sh
+/assets/licensed/digitalrealitylab/work/scripts/turn_check.py
+/assets/licensed/digitalrealitylab/work/scripts/turn_check2.py
+/assets/licensed/digitalrealitylab/work/scripts/verdict_sheet.py
+/assets/licensed/digitalrealitylab/work/skin_detail.json
+/assets/licensed/digitalrealitylab/work/tile_relief.png
+/assets/licensed/digitalrealitylab/work/tile_tint.png
+/assets/open/lpshead/work/scripts/export_his_head.py
+/assets/open/lpshead/work/scripts/nape.sh
+/assets/open/lpshead/work/scripts/round2_still.sh
+/assets/open/lpshead/work/scripts/skin_bake.py
+/assets/open/lpshead/work/scripts/skin_prep1.py
+/assets/open/lpshead/work/scripts/skin_prep2.py
+/assets/open/lpshead/work/scripts/skin_prep3.py
+/assets/open/lpshead/work/scripts/skin_prep4.py
+/assets/open/lpshead/work/scripts/skinlib.py
+/assets/open/lpshead/work/scripts/turn_check.py
+/assets/open/lpshead/work/scripts/turn_check2.py
+/assets/open/zips/makehuman_system_assets_cc0.zip
+/assets/open/zips/pants03_ccby.zip
+/assets/open/zips/skins02_cc0.zip
+/assets/open/zips/underwear01_cc0.zip
+/scenes/rung3_man_c.blend
+/scenes/rung3_sill_c.blend
+# <<< tools/bigfiles.py

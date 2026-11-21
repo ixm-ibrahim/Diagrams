@@ -1,2 +1,6 @@
 # Every file is stored byte for byte as it is on disk: no line-ending conversion on the way in or out.
 * -text
+# The parts of big files (tools/bigfiles.py) and the assets are not searched for likenesses when git packs them: that
+# would take long and find none.
+/bigfiles/**/*.part* -delta
+/assets/** -delta

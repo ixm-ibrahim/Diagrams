@@ -1,0 +1,251 @@
+{
+ "steps": [
+  {
+   "at": "2026-11-19 17:44:30",
+   "step": "room third_first 1681-1740",
+   "frames": [
+    1681,
+    1740
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 41.2,
+   "per_frame": 0.69,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:45:15",
+   "step": "room third_first 1741-1801",
+   "frames": [
+    1741,
+    1801
+   ],
+   "wanted": 61,
+   "made": 61,
+   "seconds": 42.0,
+   "per_frame": 0.69,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:45:49",
+   "step": "room first_third 2101-2160",
+   "frames": [
+    2101,
+    2160
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 31.4,
+   "per_frame": 0.52,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:46:30",
+   "step": "room first_third 2161-2221",
+   "frames": [
+    2161,
+    2221
+   ],
+   "wanted": 61,
+   "made": 61,
+   "seconds": 37.3,
+   "per_frame": 0.61,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:53:48",
+   "step": "scans third_true",
+   "frames": [
+    2401,
+    2701
+   ],
+   "wanted": 301,
+   "made": 301,
+   "seconds": 435.0,
+   "per_frame": 1.45,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:54:23",
+   "step": "room third_true 2401-2460",
+   "frames": [
+    2401,
+    2460
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 31.3,
+   "per_frame": 0.52,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:55:00",
+   "step": "room third_true 2461-2520",
+   "frames": [
+    2461,
+    2520
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 32.3,
+   "per_frame": 0.54,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:55:38",
+   "step": "room third_true 2521-2580",
+   "frames": [
+    2521,
+    2580
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 34.6,
+   "per_frame": 0.58,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:56:16",
+   "step": "room third_true 2581-2640",
+   "frames": [
+    2581,
+    2640
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 34.6,
+   "per_frame": 0.58,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 17:56:57",
+   "step": "room third_true 2641-2701",
+   "frames": [
+    2641,
+    2701
+   ],
+   "wanted": 61,
+   "made": 61,
+   "seconds": 38.2,
+   "per_frame": 0.63,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 18:15:26",
+   "step": "mind third_true 2401-2460",
+   "frames": [
+    2401,
+    2460
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 1105.1,
+   "per_frame": 18.42,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 18:32:18",
+   "step": "mind third_true 2461-2520",
+   "frames": [
+    2461,
+    2520
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 1008.9,
+   "per_frame": 16.81,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 18:49:49",
+   "step": "mind third_true 2521-2580",
+   "frames": [
+    2521,
+    2580
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 1046.5,
+   "per_frame": 17.44,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 19:05:39",
+   "step": "mind third_true 2581-2640",
+   "frames": [
+    2581,
+    2640
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 945.2,
+   "per_frame": 15.75,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 19:23:11",
+   "step": "mind third_true 2641-2701",
+   "frames": [
+    2641,
+    2701
+   ],
+   "wanted": 61,
+   "made": 61,
+   "seconds": 1048.0,
+   "per_frame": 17.18,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 19:24:02",
+   "step": "room true_first 2986-3045",
+   "frames": [
+    2986,
+    3045
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 47.3,
+   "per_frame": 0.79,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 19:24:54",
+   "step": "room true_first 3046-3121",
+   "frames": [
+    3046,
+    3121
+   ],
+   "wanted": 76,
+   "made": 76,
+   "seconds": 48.9,
+   "per_frame": 0.64,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 19:39:21",
+   "step": "mind true_first 2986-3045",
+   "frames": [
+    2986,
+    3045
+   ],
+   "wanted": 60,
+   "made": 60,
+   "seconds": 863.5,
+   "per_frame": 14.39,
+   "code": 0
+  },
+  {
+   "at": "2026-11-19 19:57:03",
+   "step": "mind true_first 3046-3121",
+   "frames": [
+    3046,
+    3121
+   ],
+   "wanted": 76,
+   "made": 76,
+   "seconds": 1057.1,
+   "per_frame": 13.91,
+   "code": 0
+  }
+ ]
+}

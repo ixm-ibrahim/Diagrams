@@ -779,9 +779,11 @@ class Build:
         return self.by_frame[f].M
 
     def first_at(self, t):
-        """The First-Person camera at t: on the eyes, looking where the head looks."""
+        """The First-Person camera at t: on the eyes, looking where the eyes look. Since rung 2p the eyes turn in the
+        head (body.Motion._eyes) and the First-Person camera follows them; with the head's own forward here the dive's
+        model camera looked level at the window while the eyes looked down at the rug (found in rung 3, 2026-11-19)."""
         hf = self.head_at(t)
-        return Vector(hf["eye"]), Vector(hf["eye"]) + Vector(hf["fwd"]), cameras.FIRST_LENS
+        return Vector(hf["eye"]), Vector(hf["eye"]) + Vector(hf.get("eye_fwd", hf["fwd"])), cameras.FIRST_LENS
 
     def believed_point(self, t, p_model):
         """A point of the room, already in the model's frame as the twin camera is, to where the mind
@@ -841,12 +843,14 @@ class Build:
                     w = ms.eye_weight
                     exp = anim.lerp(er.get("exp_third", 0.0), er.get("exp_first", 0.0), w)
                     # the eye's own lids count once the camera is more the eye than the road
-                    own = float(er.get("cover", 0.0)) if w > 0.5 else 0.0
-                    cover = max(ms.cover, own)
+                    # (named own_cover since rung 3: as "own" it overwrote the list of his head and eyes above,
+                    # so the moves could not be baked once the eyes had joined that list in rung 2p)
+                    own_cover = float(er.get("cover", 0.0)) if w > 0.5 else 0.0
+                    cover = max(ms.cover, own_cover)
                     closed = bool(er.get("closed", 0)) and w > 0.5
                     rows.append({"f": f, "t": round(t, 4), "cover": round(cover, 3), "blink": int(cover >= 0.999),
                                  "closed": int(closed), "eye_weight": round(w, 3), "exp": round(exp, 3),
-                                 "lid": er.get("lid", [0, 0, 0]) if (closed or own > 0) else [0, 0, 0],
+                                 "lid": er.get("lid", [0, 0, 0]) if (closed or own_cover > 0) else [0, 0, 0],
                                  "tint": er.get("tint", [0, 0, 0]), "tint_a": round(er.get("tint_a", 0.0) * w, 3),
                                  "sun_uv": er.get("sun_uv"), "face_sun": er.get("face_sun", 0.0), "pain": pain_at(er, w),
                                  "pos": [round(v, 3) for v in ms.pos], "lens": round(ms.lens, 2)})

@@ -1,0 +1,1362 @@
+[
+ {
+  "f": 1966,
+  "scene_second": 65.5,
+  "player_second": 81.88,
+  "samples": 256,
+  "seconds": 39.35,
+  "gpu_peak_mb": 1072,
+  "exposure": -1.753,
+  "cover": 0.0
+ },
+ {
+  "f": 1967,
+  "scene_second": 65.53,
+  "player_second": 81.92,
+  "samples": 256,
+  "seconds": 38.98,
+  "gpu_peak_mb": 1147,
+  "exposure": -1.751,
+  "cover": 0.0
+ },
+ {
+  "f": 1968,
+  "scene_second": 65.57,
+  "player_second": 81.96,
+  "samples": 256,
+  "seconds": 38.94,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.749,
+  "cover": 0.0
+ },
+ {
+  "f": 1969,
+  "scene_second": 65.6,
+  "player_second": 82.0,
+  "samples": 256,
+  "seconds": 39.5,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.747,
+  "cover": 0.0
+ },
+ {
+  "f": 1970,
+  "scene_second": 65.63,
+  "player_second": 82.04,
+  "samples": 256,
+  "seconds": 39.37,
+  "gpu_peak_mb": 1482,
+  "exposure": -1.745,
+  "cover": 0.0
+ },
+ {
+  "f": 1971,
+  "scene_second": 65.67,
+  "player_second": 82.08,
+  "samples": 256,
+  "seconds": 39.48,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.742,
+  "cover": 0.0
+ },
+ {
+  "f": 1972,
+  "scene_second": 65.7,
+  "player_second": 82.12,
+  "samples": 256,
+  "seconds": 39.08,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.74,
+  "cover": 0.0
+ },
+ {
+  "f": 1973,
+  "scene_second": 65.73,
+  "player_second": 82.17,
+  "samples": 256,
+  "seconds": 38.86,
+  "gpu_peak_mb": 1083,
+  "exposure": -1.738,
+  "cover": 0.0
+ },
+ {
+  "f": 1974,
+  "scene_second": 65.77,
+  "player_second": 82.21,
+  "samples": 256,
+  "seconds": 38.86,
+  "gpu_peak_mb": 1149,
+  "exposure": -1.736,
+  "cover": 0.5
+ },
+ {
+  "f": 1975,
+  "scene_second": 65.8,
+  "player_second": 82.25,
+  "samples": 256,
+  "seconds": 38.79,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.734,
+  "cover": 1.0
+ },
+ {
+  "f": 1976,
+  "scene_second": 65.83,
+  "player_second": 82.29,
+  "samples": 256,
+  "seconds": 38.53,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.732,
+  "cover": 1.0
+ },
+ {
+  "f": 1977,
+  "scene_second": 65.87,
+  "player_second": 82.33,
+  "samples": 256,
+  "seconds": 38.71,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.73,
+  "cover": 0.65
+ },
+ {
+  "f": 1978,
+  "scene_second": 65.9,
+  "player_second": 82.38,
+  "samples": 256,
+  "seconds": 39.41,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.728,
+  "cover": 0.35
+ },
+ {
+  "f": 1979,
+  "scene_second": 65.93,
+  "player_second": 82.42,
+  "samples": 256,
+  "seconds": 39.13,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.726,
+  "cover": 0.12
+ },
+ {
+  "f": 1980,
+  "scene_second": 65.97,
+  "player_second": 82.46,
+  "samples": 256,
+  "seconds": 38.83,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.724,
+  "cover": 0.0
+ },
+ {
+  "f": 1981,
+  "scene_second": 66.0,
+  "player_second": 82.5,
+  "samples": 256,
+  "seconds": 38.87,
+  "gpu_peak_mb": 1079,
+  "exposure": -1.723,
+  "cover": 0.0
+ },
+ {
+  "f": 1982,
+  "scene_second": 66.03,
+  "player_second": 82.54,
+  "samples": 256,
+  "seconds": 39.1,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.721,
+  "cover": 0.0
+ },
+ {
+  "f": 1983,
+  "scene_second": 66.07,
+  "player_second": 82.58,
+  "samples": 256,
+  "seconds": 39.12,
+  "gpu_peak_mb": 1518,
+  "exposure": -1.719,
+  "cover": 0.0
+ },
+ {
+  "f": 1984,
+  "scene_second": 66.1,
+  "player_second": 82.62,
+  "samples": 256,
+  "seconds": 39.09,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.717,
+  "cover": 0.0
+ },
+ {
+  "f": 1985,
+  "scene_second": 66.13,
+  "player_second": 82.67,
+  "samples": 256,
+  "seconds": 39.07,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.715,
+  "cover": 0.0
+ },
+ {
+  "f": 1986,
+  "scene_second": 66.17,
+  "player_second": 82.71,
+  "samples": 256,
+  "seconds": 39.08,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.714,
+  "cover": 0.0
+ },
+ {
+  "f": 1987,
+  "scene_second": 66.2,
+  "player_second": 82.75,
+  "samples": 256,
+  "seconds": 39.06,
+  "gpu_peak_mb": 1147,
+  "exposure": -1.712,
+  "cover": 0.0
+ },
+ {
+  "f": 1988,
+  "scene_second": 66.23,
+  "player_second": 82.79,
+  "samples": 256,
+  "seconds": 38.93,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.71,
+  "cover": 0.0
+ },
+ {
+  "f": 1989,
+  "scene_second": 66.27,
+  "player_second": 82.83,
+  "samples": 256,
+  "seconds": 38.94,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.708,
+  "cover": 0.0
+ },
+ {
+  "f": 1990,
+  "scene_second": 66.3,
+  "player_second": 82.88,
+  "samples": 256,
+  "seconds": 39.44,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.707,
+  "cover": 0.0
+ },
+ {
+  "f": 1991,
+  "scene_second": 66.33,
+  "player_second": 82.92,
+  "samples": 256,
+  "seconds": 38.92,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.705,
+  "cover": 0.0
+ },
+ {
+  "f": 1992,
+  "scene_second": 66.37,
+  "player_second": 82.96,
+  "samples": 256,
+  "seconds": 38.78,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.704,
+  "cover": 0.0
+ },
+ {
+  "f": 1993,
+  "scene_second": 66.4,
+  "player_second": 83.0,
+  "samples": 256,
+  "seconds": 38.88,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.702,
+  "cover": 0.0
+ },
+ {
+  "f": 1994,
+  "scene_second": 66.43,
+  "player_second": 83.04,
+  "samples": 256,
+  "seconds": 38.87,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.7,
+  "cover": 0.0
+ },
+ {
+  "f": 1995,
+  "scene_second": 66.47,
+  "player_second": 83.08,
+  "samples": 256,
+  "seconds": 38.74,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.699,
+  "cover": 0.0
+ },
+ {
+  "f": 1996,
+  "scene_second": 66.5,
+  "player_second": 83.12,
+  "samples": 256,
+  "seconds": 38.84,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.697,
+  "cover": 0.0
+ },
+ {
+  "f": 1997,
+  "scene_second": 66.53,
+  "player_second": 83.17,
+  "samples": 256,
+  "seconds": 38.85,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.696,
+  "cover": 0.0
+ },
+ {
+  "f": 1998,
+  "scene_second": 66.57,
+  "player_second": 83.21,
+  "samples": 256,
+  "seconds": 39.06,
+  "gpu_peak_mb": 1518,
+  "exposure": -1.694,
+  "cover": 0.0
+ },
+ {
+  "f": 1999,
+  "scene_second": 66.6,
+  "player_second": 83.25,
+  "samples": 256,
+  "seconds": 38.99,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.693,
+  "cover": 0.0
+ },
+ {
+  "f": 2000,
+  "scene_second": 66.63,
+  "player_second": 83.29,
+  "samples": 256,
+  "seconds": 39.13,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.691,
+  "cover": 0.0
+ },
+ {
+  "f": 2001,
+  "scene_second": 66.67,
+  "player_second": 83.33,
+  "samples": 256,
+  "seconds": 39.26,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.69,
+  "cover": 0.0
+ },
+ {
+  "f": 2002,
+  "scene_second": 66.7,
+  "player_second": 83.38,
+  "samples": 256,
+  "seconds": 39.67,
+  "gpu_peak_mb": 1478,
+  "exposure": -1.689,
+  "cover": 0.0
+ },
+ {
+  "f": 2003,
+  "scene_second": 66.73,
+  "player_second": 83.42,
+  "samples": 256,
+  "seconds": 39.57,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.687,
+  "cover": 0.0
+ },
+ {
+  "f": 2004,
+  "scene_second": 66.77,
+  "player_second": 83.46,
+  "samples": 256,
+  "seconds": 39.55,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.686,
+  "cover": 0.0
+ },
+ {
+  "f": 2005,
+  "scene_second": 66.8,
+  "player_second": 83.5,
+  "samples": 256,
+  "seconds": 39.76,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.685,
+  "cover": 0.0
+ },
+ {
+  "f": 2006,
+  "scene_second": 66.83,
+  "player_second": 83.54,
+  "samples": 256,
+  "seconds": 39.79,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.683,
+  "cover": 0.0
+ },
+ {
+  "f": 2007,
+  "scene_second": 66.87,
+  "player_second": 83.58,
+  "samples": 256,
+  "seconds": 39.48,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.682,
+  "cover": 0.0
+ },
+ {
+  "f": 2008,
+  "scene_second": 66.9,
+  "player_second": 83.62,
+  "samples": 256,
+  "seconds": 39.33,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.681,
+  "cover": 0.0
+ },
+ {
+  "f": 2009,
+  "scene_second": 66.93,
+  "player_second": 83.67,
+  "samples": 256,
+  "seconds": 39.35,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.68,
+  "cover": 0.0
+ },
+ {
+  "f": 2010,
+  "scene_second": 66.97,
+  "player_second": 83.71,
+  "samples": 256,
+  "seconds": 39.16,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.678,
+  "cover": 0.0
+ },
+ {
+  "f": 2011,
+  "scene_second": 67.0,
+  "player_second": 83.75,
+  "samples": 256,
+  "seconds": 39.79,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.677,
+  "cover": 0.0
+ },
+ {
+  "f": 2012,
+  "scene_second": 67.03,
+  "player_second": 83.79,
+  "samples": 256,
+  "seconds": 40.08,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.676,
+  "cover": 0.0
+ },
+ {
+  "f": 2013,
+  "scene_second": 67.07,
+  "player_second": 83.83,
+  "samples": 256,
+  "seconds": 41.1,
+  "gpu_peak_mb": 1470,
+  "exposure": -1.675,
+  "cover": 0.0
+ },
+ {
+  "f": 2014,
+  "scene_second": 67.1,
+  "player_second": 83.88,
+  "samples": 256,
+  "seconds": 40.49,
+  "gpu_peak_mb": 1476,
+  "exposure": -1.674,
+  "cover": 0.0
+ },
+ {
+  "f": 2015,
+  "scene_second": 67.13,
+  "player_second": 83.92,
+  "samples": 256,
+  "seconds": 39.59,
+  "gpu_peak_mb": 1072,
+  "exposure": -1.672,
+  "cover": 0.0
+ },
+ {
+  "f": 2016,
+  "scene_second": 67.17,
+  "player_second": 83.96,
+  "samples": 256,
+  "seconds": 40.12,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.671,
+  "cover": 0.0
+ },
+ {
+  "f": 2017,
+  "scene_second": 67.2,
+  "player_second": 84.0,
+  "samples": 256,
+  "seconds": 41.61,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.67,
+  "cover": 0.0
+ },
+ {
+  "f": 2018,
+  "scene_second": 67.23,
+  "player_second": 84.04,
+  "samples": 256,
+  "seconds": 41.38,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.669,
+  "cover": 0.0
+ },
+ {
+  "f": 2019,
+  "scene_second": 67.27,
+  "player_second": 84.08,
+  "samples": 256,
+  "seconds": 40.26,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.668,
+  "cover": 0.0
+ },
+ {
+  "f": 2020,
+  "scene_second": 67.3,
+  "player_second": 84.12,
+  "samples": 256,
+  "seconds": 39.34,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.667,
+  "cover": 0.0
+ },
+ {
+  "f": 2021,
+  "scene_second": 67.33,
+  "player_second": 84.17,
+  "samples": 256,
+  "seconds": 39.09,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.666,
+  "cover": 0.0
+ },
+ {
+  "f": 2022,
+  "scene_second": 67.37,
+  "player_second": 84.21,
+  "samples": 256,
+  "seconds": 38.46,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.665,
+  "cover": 0.0
+ },
+ {
+  "f": 2023,
+  "scene_second": 67.4,
+  "player_second": 84.25,
+  "samples": 256,
+  "seconds": 38.47,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.664,
+  "cover": 0.0
+ },
+ {
+  "f": 2024,
+  "scene_second": 67.43,
+  "player_second": 84.29,
+  "samples": 256,
+  "seconds": 39.11,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.663,
+  "cover": 0.0
+ },
+ {
+  "f": 2025,
+  "scene_second": 67.47,
+  "player_second": 84.33,
+  "samples": 256,
+  "seconds": 39.09,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.662,
+  "cover": 0.0
+ },
+ {
+  "f": 2026,
+  "scene_second": 67.5,
+  "player_second": 84.38,
+  "samples": 256,
+  "seconds": 40.09,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.662,
+  "cover": 0.0
+ },
+ {
+  "f": 2027,
+  "scene_second": 67.53,
+  "player_second": 84.42,
+  "samples": 256,
+  "seconds": 39.5,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.661,
+  "cover": 0.0
+ },
+ {
+  "f": 2028,
+  "scene_second": 67.57,
+  "player_second": 84.46,
+  "samples": 256,
+  "seconds": 39.47,
+  "gpu_peak_mb": 1482,
+  "exposure": -1.66,
+  "cover": 0.0
+ },
+ {
+  "f": 2029,
+  "scene_second": 67.6,
+  "player_second": 84.5,
+  "samples": 256,
+  "seconds": 39.34,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.659,
+  "cover": 0.0
+ },
+ {
+  "f": 2030,
+  "scene_second": 67.63,
+  "player_second": 84.54,
+  "samples": 256,
+  "seconds": 39.43,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.658,
+  "cover": 0.0
+ },
+ {
+  "f": 2031,
+  "scene_second": 67.67,
+  "player_second": 84.58,
+  "samples": 256,
+  "seconds": 39.19,
+  "gpu_peak_mb": 1482,
+  "exposure": -1.657,
+  "cover": 0.0
+ },
+ {
+  "f": 2032,
+  "scene_second": 67.7,
+  "player_second": 84.62,
+  "samples": 256,
+  "seconds": 39.22,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.657,
+  "cover": 0.0
+ },
+ {
+  "f": 2033,
+  "scene_second": 67.73,
+  "player_second": 84.67,
+  "samples": 256,
+  "seconds": 39.35,
+  "gpu_peak_mb": 1482,
+  "exposure": -1.656,
+  "cover": 0.0
+ },
+ {
+  "f": 2034,
+  "scene_second": 67.77,
+  "player_second": 84.71,
+  "samples": 256,
+  "seconds": 39.1,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.655,
+  "cover": 0.0
+ },
+ {
+  "f": 2035,
+  "scene_second": 67.8,
+  "player_second": 84.75,
+  "samples": 256,
+  "seconds": 39.22,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.654,
+  "cover": 0.0
+ },
+ {
+  "f": 2036,
+  "scene_second": 67.83,
+  "player_second": 84.79,
+  "samples": 256,
+  "seconds": 39.68,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.654,
+  "cover": 0.0
+ },
+ {
+  "f": 2037,
+  "scene_second": 67.87,
+  "player_second": 84.83,
+  "samples": 256,
+  "seconds": 39.71,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.653,
+  "cover": 0.0
+ },
+ {
+  "f": 2038,
+  "scene_second": 67.9,
+  "player_second": 84.88,
+  "samples": 256,
+  "seconds": 40.56,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.652,
+  "cover": 0.0
+ },
+ {
+  "f": 2039,
+  "scene_second": 67.93,
+  "player_second": 84.92,
+  "samples": 256,
+  "seconds": 39.54,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.652,
+  "cover": 0.0
+ },
+ {
+  "f": 2040,
+  "scene_second": 67.97,
+  "player_second": 84.96,
+  "samples": 256,
+  "seconds": 39.86,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.651,
+  "cover": 0.0
+ },
+ {
+  "f": 2041,
+  "scene_second": 68.0,
+  "player_second": 85.0,
+  "samples": 256,
+  "seconds": 40.02,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.651,
+  "cover": 0.0
+ },
+ {
+  "f": 2042,
+  "scene_second": 68.03,
+  "player_second": 85.04,
+  "samples": 256,
+  "seconds": 39.85,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.65,
+  "cover": 0.0
+ },
+ {
+  "f": 2043,
+  "scene_second": 68.07,
+  "player_second": 85.08,
+  "samples": 256,
+  "seconds": 39.76,
+  "gpu_peak_mb": 1482,
+  "exposure": -1.649,
+  "cover": 0.0
+ },
+ {
+  "f": 2044,
+  "scene_second": 68.1,
+  "player_second": 85.12,
+  "samples": 256,
+  "seconds": 40.55,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.649,
+  "cover": 0.0
+ },
+ {
+  "f": 2045,
+  "scene_second": 68.13,
+  "player_second": 85.17,
+  "samples": 256,
+  "seconds": 40.02,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.648,
+  "cover": 0.0
+ },
+ {
+  "f": 2046,
+  "scene_second": 68.17,
+  "player_second": 85.21,
+  "samples": 256,
+  "seconds": 39.66,
+  "gpu_peak_mb": 1482,
+  "exposure": -1.648,
+  "cover": 0.0
+ },
+ {
+  "f": 2047,
+  "scene_second": 68.2,
+  "player_second": 85.25,
+  "samples": 256,
+  "seconds": 39.38,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.647,
+  "cover": 0.0
+ },
+ {
+  "f": 2048,
+  "scene_second": 68.23,
+  "player_second": 85.29,
+  "samples": 256,
+  "seconds": 39.52,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.646,
+  "cover": 0.0
+ },
+ {
+  "f": 2049,
+  "scene_second": 68.27,
+  "player_second": 85.33,
+  "samples": 256,
+  "seconds": 39.56,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.646,
+  "cover": 0.0
+ },
+ {
+  "f": 2050,
+  "scene_second": 68.3,
+  "player_second": 85.38,
+  "samples": 256,
+  "seconds": 40.45,
+  "gpu_peak_mb": 1516,
+  "exposure": -1.645,
+  "cover": 0.0
+ },
+ {
+  "f": 2051,
+  "scene_second": 68.33,
+  "player_second": 85.42,
+  "samples": 256,
+  "seconds": 39.85,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.645,
+  "cover": 0.0
+ },
+ {
+  "f": 2052,
+  "scene_second": 68.37,
+  "player_second": 85.46,
+  "samples": 256,
+  "seconds": 39.79,
+  "gpu_peak_mb": 1112,
+  "exposure": -1.644,
+  "cover": 0.0
+ },
+ {
+  "f": 2053,
+  "scene_second": 68.4,
+  "player_second": 85.5,
+  "samples": 256,
+  "seconds": 40.05,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.644,
+  "cover": 0.0
+ },
+ {
+  "f": 2054,
+  "scene_second": 68.43,
+  "player_second": 85.54,
+  "samples": 256,
+  "seconds": 40.47,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.643,
+  "cover": 0.0
+ },
+ {
+  "f": 2055,
+  "scene_second": 68.47,
+  "player_second": 85.58,
+  "samples": 256,
+  "seconds": 41.62,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.643,
+  "cover": 0.0
+ },
+ {
+  "f": 2056,
+  "scene_second": 68.5,
+  "player_second": 85.62,
+  "samples": 256,
+  "seconds": 41.46,
+  "gpu_peak_mb": 1114,
+  "exposure": -1.642,
+  "cover": 0.0
+ },
+ {
+  "f": 2057,
+  "scene_second": 68.53,
+  "player_second": 85.67,
+  "samples": 256,
+  "seconds": 41.19,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.641,
+  "cover": 0.0
+ },
+ {
+  "f": 2058,
+  "scene_second": 68.57,
+  "player_second": 85.71,
+  "samples": 256,
+  "seconds": 41.82,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.641,
+  "cover": 0.0
+ },
+ {
+  "f": 2059,
+  "scene_second": 68.6,
+  "player_second": 85.75,
+  "samples": 256,
+  "seconds": 40.01,
+  "gpu_peak_mb": 1147,
+  "exposure": -1.64,
+  "cover": 0.0
+ },
+ {
+  "f": 2060,
+  "scene_second": 68.63,
+  "player_second": 85.79,
+  "samples": 256,
+  "seconds": 39.26,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.64,
+  "cover": 0.0
+ },
+ {
+  "f": 2061,
+  "scene_second": 68.67,
+  "player_second": 85.83,
+  "samples": 256,
+  "seconds": 39.36,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.639,
+  "cover": 0.0
+ },
+ {
+  "f": 2062,
+  "scene_second": 68.7,
+  "player_second": 85.88,
+  "samples": 256,
+  "seconds": 40.53,
+  "gpu_peak_mb": 1145,
+  "exposure": -1.639,
+  "cover": 0.0
+ },
+ {
+  "f": 2063,
+  "scene_second": 68.73,
+  "player_second": 85.92,
+  "samples": 256,
+  "seconds": 39.77,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.638,
+  "cover": 0.0
+ },
+ {
+  "f": 2064,
+  "scene_second": 68.77,
+  "player_second": 85.96,
+  "samples": 256,
+  "seconds": 39.71,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.638,
+  "cover": 0.0
+ },
+ {
+  "f": 2065,
+  "scene_second": 68.8,
+  "player_second": 86.0,
+  "samples": 256,
+  "seconds": 39.96,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.637,
+  "cover": 0.0
+ },
+ {
+  "f": 2066,
+  "scene_second": 68.83,
+  "player_second": 86.04,
+  "samples": 256,
+  "seconds": 39.85,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.637,
+  "cover": 0.0
+ },
+ {
+  "f": 2067,
+  "scene_second": 68.87,
+  "player_second": 86.08,
+  "samples": 256,
+  "seconds": 39.68,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.636,
+  "cover": 0.0
+ },
+ {
+  "f": 2068,
+  "scene_second": 68.9,
+  "player_second": 86.12,
+  "samples": 256,
+  "seconds": 39.62,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.636,
+  "cover": 0.0
+ },
+ {
+  "f": 2069,
+  "scene_second": 68.93,
+  "player_second": 86.17,
+  "samples": 256,
+  "seconds": 39.89,
+  "gpu_peak_mb": 1147,
+  "exposure": -1.635,
+  "cover": 0.0
+ },
+ {
+  "f": 2070,
+  "scene_second": 68.97,
+  "player_second": 86.21,
+  "samples": 256,
+  "seconds": 39.89,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.635,
+  "cover": 0.0
+ },
+ {
+  "f": 2071,
+  "scene_second": 69.0,
+  "player_second": 86.25,
+  "samples": 256,
+  "seconds": 39.82,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.634,
+  "cover": 0.0
+ },
+ {
+  "f": 2072,
+  "scene_second": 69.03,
+  "player_second": 86.29,
+  "samples": 256,
+  "seconds": 39.86,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.634,
+  "cover": 0.0
+ },
+ {
+  "f": 2073,
+  "scene_second": 69.07,
+  "player_second": 86.33,
+  "samples": 256,
+  "seconds": 39.36,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.634,
+  "cover": 0.0
+ },
+ {
+  "f": 2074,
+  "scene_second": 69.1,
+  "player_second": 86.38,
+  "samples": 256,
+  "seconds": 39.97,
+  "gpu_peak_mb": 1072,
+  "exposure": -1.633,
+  "cover": 0.0
+ },
+ {
+  "f": 2075,
+  "scene_second": 69.13,
+  "player_second": 86.42,
+  "samples": 256,
+  "seconds": 39.74,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.633,
+  "cover": 0.0
+ },
+ {
+  "f": 2076,
+  "scene_second": 69.17,
+  "player_second": 86.46,
+  "samples": 256,
+  "seconds": 40.05,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.632,
+  "cover": 0.0
+ },
+ {
+  "f": 2077,
+  "scene_second": 69.2,
+  "player_second": 86.5,
+  "samples": 256,
+  "seconds": 41.72,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.632,
+  "cover": 0.0
+ },
+ {
+  "f": 2078,
+  "scene_second": 69.23,
+  "player_second": 86.54,
+  "samples": 256,
+  "seconds": 43.59,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.631,
+  "cover": 0.0
+ },
+ {
+  "f": 2079,
+  "scene_second": 69.27,
+  "player_second": 86.58,
+  "samples": 256,
+  "seconds": 40.47,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.631,
+  "cover": 0.0
+ },
+ {
+  "f": 2080,
+  "scene_second": 69.3,
+  "player_second": 86.62,
+  "samples": 256,
+  "seconds": 39.61,
+  "gpu_peak_mb": 1114,
+  "exposure": -1.63,
+  "cover": 0.0
+ },
+ {
+  "f": 2081,
+  "scene_second": 69.33,
+  "player_second": 86.67,
+  "samples": 256,
+  "seconds": 39.79,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.63,
+  "cover": 0.0
+ },
+ {
+  "f": 2082,
+  "scene_second": 69.37,
+  "player_second": 86.71,
+  "samples": 256,
+  "seconds": 39.4,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.63,
+  "cover": 0.0
+ },
+ {
+  "f": 2083,
+  "scene_second": 69.4,
+  "player_second": 86.75,
+  "samples": 256,
+  "seconds": 39.23,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.629,
+  "cover": 0.0
+ },
+ {
+  "f": 2084,
+  "scene_second": 69.43,
+  "player_second": 86.79,
+  "samples": 256,
+  "seconds": 40.49,
+  "gpu_peak_mb": 1482,
+  "exposure": -1.629,
+  "cover": 0.0
+ },
+ {
+  "f": 2085,
+  "scene_second": 69.47,
+  "player_second": 86.83,
+  "samples": 256,
+  "seconds": 40.08,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.628,
+  "cover": 0.0
+ },
+ {
+  "f": 2086,
+  "scene_second": 69.5,
+  "player_second": 86.88,
+  "samples": 256,
+  "seconds": 40.67,
+  "gpu_peak_mb": 1072,
+  "exposure": -1.628,
+  "cover": 0.0
+ },
+ {
+  "f": 2087,
+  "scene_second": 69.53,
+  "player_second": 86.92,
+  "samples": 256,
+  "seconds": 40.23,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.628,
+  "cover": 0.0
+ },
+ {
+  "f": 2088,
+  "scene_second": 69.57,
+  "player_second": 86.96,
+  "samples": 256,
+  "seconds": 40.04,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.627,
+  "cover": 0.0
+ },
+ {
+  "f": 2089,
+  "scene_second": 69.6,
+  "player_second": 87.0,
+  "samples": 256,
+  "seconds": 40.77,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.627,
+  "cover": 0.0
+ },
+ {
+  "f": 2090,
+  "scene_second": 69.63,
+  "player_second": 87.04,
+  "samples": 256,
+  "seconds": 41.37,
+  "gpu_peak_mb": 1518,
+  "exposure": -1.627,
+  "cover": 0.0
+ },
+ {
+  "f": 2091,
+  "scene_second": 69.67,
+  "player_second": 87.08,
+  "samples": 256,
+  "seconds": 41.0,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.626,
+  "cover": 0.0
+ },
+ {
+  "f": 2092,
+  "scene_second": 69.7,
+  "player_second": 87.12,
+  "samples": 256,
+  "seconds": 39.93,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.626,
+  "cover": 0.0
+ },
+ {
+  "f": 2093,
+  "scene_second": 69.73,
+  "player_second": 87.17,
+  "samples": 256,
+  "seconds": 39.2,
+  "gpu_peak_mb": 1480,
+  "exposure": -1.625,
+  "cover": 0.0
+ },
+ {
+  "f": 2094,
+  "scene_second": 69.77,
+  "player_second": 87.21,
+  "samples": 256,
+  "seconds": 39.07,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.625,
+  "cover": 0.0
+ },
+ {
+  "f": 2095,
+  "scene_second": 69.8,
+  "player_second": 87.25,
+  "samples": 256,
+  "seconds": 39.41,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.625,
+  "cover": 0.0
+ },
+ {
+  "f": 2096,
+  "scene_second": 69.83,
+  "player_second": 87.29,
+  "samples": 256,
+  "seconds": 39.46,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.624,
+  "cover": 0.0
+ },
+ {
+  "f": 2097,
+  "scene_second": 69.87,
+  "player_second": 87.33,
+  "samples": 256,
+  "seconds": 38.98,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.624,
+  "cover": 0.0
+ },
+ {
+  "f": 2098,
+  "scene_second": 69.9,
+  "player_second": 87.38,
+  "samples": 256,
+  "seconds": 39.64,
+  "gpu_peak_mb": 1516,
+  "exposure": -1.624,
+  "cover": 0.0
+ },
+ {
+  "f": 2099,
+  "scene_second": 69.93,
+  "player_second": 87.42,
+  "samples": 256,
+  "seconds": 39.15,
+  "gpu_peak_mb": 1076,
+  "exposure": -1.623,
+  "cover": 0.0
+ },
+ {
+  "f": 2100,
+  "scene_second": 69.97,
+  "player_second": 87.46,
+  "samples": 256,
+  "seconds": 39.24,
+  "gpu_peak_mb": 1077,
+  "exposure": -1.623,
+  "cover": 0.0
+ },
+ {
+  "f": 2101,
+  "scene_second": 70.0,
+  "player_second": 87.5,
+  "samples": 256,
+  "seconds": 39.26,
+  "gpu_peak_mb": 1074,
+  "exposure": -1.623,
+  "cover": 0.0
+ }
+]

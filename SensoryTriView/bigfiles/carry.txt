@@ -1,0 +1,27 @@
+# What tools/bigfiles.py carries through git in parts: one pattern a line, relative to the project folder.
+# A plain line: a file there that is over 45 MB is cut into parts under bigfiles/; smaller files are plain git files.
+# A line that starts with `lock`: every file there, whatever its size, enters git only as encrypted parts.
+# `**` is any run of folders, `*` any run of characters inside one name, `!` takes files out again.
+
+# The man of rung 3 as he passed: alone, and standing at the sill. Both scenes pack the scanned skin maps, so both
+# are locked.
+lock scenes/rung3_man_c.blend
+lock scenes/rung3_sill_c.blend
+
+# The scan his skin comes from (Digital Reality Lab, free to use with credit, its files not to be given on): the two
+# zips as downloaded, the maps made from them for his head, and the working files of the bake. All locked.
+lock assets/licensed/**
+# Copies of what the two zips hold. On another computer: unzip them again (see the end of this file).
+!assets/licensed/digitalrealitylab/unpacked/**
+!assets/licensed/digitalrealitylab/clean/**
+
+# The open assets: the generator's asset packs as downloaded and the open head scan of round two. Free to publish.
+assets/open/**
+!assets/open/lpshead/unpacked/**
+# The working scripts of round two's bake name folders of the laptop, so they travel locked.
+lock assets/open/lpshead/work/scripts/**
+
+# After `python tools/bigfiles.py join` on another computer, only if the skin is to be baked again:
+#   python -m zipfile -e assets/licensed/digitalrealitylab/Marcus_PBR_Sample_01.zip assets/licensed/digitalrealitylab/unpacked
+#   python -m zipfile -e assets/licensed/digitalrealitylab/Marcus_Clean_Sample_01.zip assets/licensed/digitalrealitylab/clean
+#   python -m zipfile -e assets/open/lpshead/lpshead.zip assets/open/lpshead/unpacked

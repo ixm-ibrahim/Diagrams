@@ -1,0 +1,949 @@
+{
+ "what": "files carried in parts by tools/bigfiles.py. A plain file: its size, SHA-256 and the sizes of its parts. A locked file: its size, nonce, seal and keyed fingerprint; its parts are encrypted.",
+ "part_bytes": 47185920,
+ "block_bytes": 5242880,
+ "lock": {
+  "n": 65536,
+  "r": 8,
+  "p": 1,
+  "kdf": "scrypt",
+  "salt": "bd9f0ff9c831e64da84213aa46f8db67",
+  "check": "42fa902b4141674d52d27d8ddd6808bba6b1a1e4f1625615771398f25bea0e15"
+ },
+ "files": [
+  {
+   "path": "assets/licensed/digitalrealitylab/Marcus_Clean_Sample_01.zip",
+   "bytes": 703073761,
+   "locked": true,
+   "nonce": "030906a39099d8b16b0b1791c091f2f0",
+   "mac": "bd2712e29f8171588efd6a4fcbe815c0c5712107da1a93342bafba314bc1949b",
+   "keyed": "4e8e30ab249aa1483e30557e2e2e6f97643a35dcb9a1476dec5f402237e7c30d",
+   "parts": [
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    42470881
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/Marcus_PBR_Sample_01.zip",
+   "bytes": 928494471,
+   "locked": true,
+   "nonce": "f588d348e9aa321e947b7a987d58a6fa",
+   "mac": "03aceb2559e60301125abfd5d09670cc45042ee0e06a4268dbe63e98f046e1ea",
+   "keyed": "72e542700c43961540f466084d3f25e7c6e62434012bcb084d19e7ab46a1f2e8",
+   "parts": [
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    31961991
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/head_colour.png",
+   "bytes": 91167119,
+   "locked": true,
+   "nonce": "02441c8669a4268b49264c648a9978ad",
+   "mac": "14f736faa69cb2b0da1ea587e20865415be37f2b45f88f932dc4b6f815d920d3",
+   "keyed": "269361c38a25f7afe269a50c0ee221b984e85293087b1fd6476f801823326f92",
+   "parts": [
+    47185920,
+    43981199
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/head_fine.png",
+   "bytes": 7913358,
+   "locked": true,
+   "nonce": "4498d9f3b91841f46517d959134439be",
+   "mac": "bde777e453304aef1b83716ff9411c1c8c61494be1d18c5c1d3ddabbb10969bf",
+   "keyed": "d52b1df13a23aefa27714f868a4b6b7b6e92c72cc0c74aed6507d6b4b6272025",
+   "parts": [
+    7913358
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/head_relief.png",
+   "bytes": 36452248,
+   "locked": true,
+   "nonce": "0bee2d6be8aa23380fe2edc8caf14666",
+   "mac": "b8fefa80dfe4717829a05dfb0008be0515499d5d5d77d702bc3fdb28e48c5d54",
+   "keyed": "921983f1abf261dc4aeae5e95baf7f6f6380890baedfd66f34b059a77cd82631",
+   "parts": [
+    36452248
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/head_rough.png",
+   "bytes": 2917757,
+   "locked": true,
+   "nonce": "812eff4354835136ca1db9b5861e8b7f",
+   "mac": "9f5620672708d7e619b33fc50c7b5c8eb599695737925bd951a3803dce7c3176",
+   "keyed": "6e0528405bc1cfa9875e298d878aa478ebc362e6bb1362b33f0347da83777821",
+   "parts": [
+    2917757
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/head_trust.png",
+   "bytes": 520642,
+   "locked": true,
+   "nonce": "d1ba715d0f66af7bc2ec2e8b9d97994a",
+   "mac": "082e718cda3865c3605555748bfe03ff3946900f492136fa3d50e3cc55d4028e",
+   "keyed": "11f9f2f1c824975fd926ec219c2a42d274ff526e8a8f9594ebe920d913692c7c",
+   "parts": [
+    520642
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/neck_colour.png",
+   "bytes": 1114287,
+   "locked": true,
+   "nonce": "de99378393fb19aaaa30c022f2f85b39",
+   "mac": "7597b90c2b725ad0303b2a49008935feab7cff82a495717324d9d2ab3b242e0c",
+   "keyed": "c83cf8b5119025a52bf33d177bb832142de3ffcea752471ed74f393986be0475",
+   "parts": [
+    1114287
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/neck_relief.png",
+   "bytes": 1181016,
+   "locked": true,
+   "nonce": "6234e3a85eda252845cf51b45c4f31f5",
+   "mac": "0a41541ab056b1c26addeeb1974ace207ce76a415d9aaa71080f2988c6f23200",
+   "keyed": "34c33205e751b8341fb608c18f1f35b0472adc724a46cf820b30e5cec00487d9",
+   "parts": [
+    1181016
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/neck_trust.png",
+   "bytes": 67138,
+   "locked": true,
+   "nonce": "ecaa4a809d3db1143c55ceb3c3d1bcfd",
+   "mac": "18321c1887c4f7dfed2471c9528f38701987004ecf3952b8e390f5664ac78a64",
+   "keyed": "7dacac6899728d42e42288e159e3aaec5e1e243198a0785fb97df7468e7fa201",
+   "parts": [
+    67138
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/skin_detail.json",
+   "bytes": 930,
+   "locked": true,
+   "nonce": "7328803d1a9be1e859a742c7d53c5967",
+   "mac": "4ada68b454f5d576f0f673f8837982f96677cdb699ad889ae73351b08f40bda9",
+   "keyed": "cd2adfc1cdfaa56e051bf77b51c69028af260f4d89eadb77d3e95b31dd269a1b",
+   "parts": [
+    930
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/tile_relief.png",
+   "bytes": 1137529,
+   "locked": true,
+   "nonce": "bd8c5fdc33c56ec92b2965c3ddd6b57d",
+   "mac": "b2196de69e3e8e3c43478ac69c8ef1a4585889806b72488ecea30bf13edc001c",
+   "keyed": "fb660da69cf9ad56b92e5da12095c85e82c2b8ac141655fdf077afa31c358306",
+   "parts": [
+    1137529
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/derived/tile_tint.png",
+   "bytes": 846253,
+   "locked": true,
+   "nonce": "a67445ac03241cf082698c680b1ca505",
+   "mac": "f65229ef031be7134c6179b5b413f426edf80c267a3496f45956361ddca7f4ca",
+   "keyed": "6055635ee19436d704c5bbfadee25a0974cd281e2e5caa57afb12050cf386ec3",
+   "parts": [
+    846253
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/bake_state.json",
+   "bytes": 131,
+   "locked": true,
+   "nonce": "b4cb3b530f382352a9ea974751f100c5",
+   "mac": "cc432bc26f517cb2c6edc59aa49acdd661b7270b9a3d9cafa9f662001c3e3ad5",
+   "keyed": "a27c86176df1be039ca859e7bb599fd002f79b967dc1f3518c2315eefd66b54d",
+   "parts": [
+    131
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/head_colour.png",
+   "bytes": 8207063,
+   "locked": true,
+   "nonce": "5282d424197d3021043ade8ea16bd967",
+   "mac": "ea2b3fc1ebdafb172d0636f8caa3d0523e7770f740178fce2ab1be867065a4dd",
+   "keyed": "61eb4d4727c2fc6f164637d6cf65b40bc515af53ce8827d0dca41c56553e6004",
+   "parts": [
+    8207063
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/head_colour_8k.png",
+   "bytes": 25045524,
+   "locked": true,
+   "nonce": "dffaca0e871a3f3f0f46ade9d648b255",
+   "mac": "510c02f4885e5d8c697b690c10c77d50528ffb19b30231c0f3f61c21973b3a46",
+   "keyed": "c0251da2c27f34360578946a57521d65267edc9ee38c9509fdfeac4807d594b8",
+   "parts": [
+    25045524
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/head_relief.png",
+   "bytes": 9666007,
+   "locked": true,
+   "nonce": "8f9240c82fc4b638817401dd238775d3",
+   "mac": "d6382716dba66769f1b8a68685af455ec52f9b7ea3620112fb9ad69c461ed283",
+   "keyed": "516cf095c2430b13ae03769f13b1db54d096246cfee7b3c873dcff568d20d1d9",
+   "parts": [
+    9666007
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/head_rough.png",
+   "bytes": 2902652,
+   "locked": true,
+   "nonce": "3e657f135595982ecb87a85c18959fb7",
+   "mac": "d6aab9a355a31ebcc2b836b06a45eea2cf5a7fc42451f3511c20fe9daa2c984c",
+   "keyed": "44345c6080b63962981da190722641de52a01f680ca136a6b02400cce3daea3e",
+   "parts": [
+    2902652
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/head_trust.png",
+   "bytes": 193933,
+   "locked": true,
+   "nonce": "5c21832172e8e6ea3cd373e6ec32b6c6",
+   "mac": "1fa68476c0a1f227fb4687800f1670eadd531f516d0aa7b159dac3938a82e251",
+   "keyed": "6dd80f653627494e44b466747410a5604f61055976e33cf71087e4d56e89b47b",
+   "parts": [
+    193933
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/marcus_clean_mesh.npz",
+   "bytes": 78147540,
+   "locked": true,
+   "nonce": "a0dc5b1e2d68d169c38a142c70593548",
+   "mac": "5c42d7c1e368dc5417c9533a27db4d7a2152cb07f70061f4f91c38dad23d2f23",
+   "keyed": "176afddf1cd724028c21dea9659ff758ae6336bf6504427040bbca68fd9ad099",
+   "parts": [
+    47185920,
+    30961620
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/marcus_match.npz",
+   "bytes": 5220,
+   "locked": true,
+   "nonce": "64763c9f70fb1d311f55107daf3e1f71",
+   "mac": "d321e6e68736828914e41d85c8a36b739ea55a87532078ddb9bad17764b0f54b",
+   "keyed": "c36f0223e42aa1d90092901b2e82ec4fa10fac883c4199f4de5d3e06df1ac8de",
+   "parts": [
+    5220
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/marcus_mesh.npz",
+   "bytes": 6025698,
+   "locked": true,
+   "nonce": "672ef9446461b6fb66e6c06779369093",
+   "mac": "1aabfe46c3eb86f7ad8fd973577259924b3345e0658c2acb48940b51d7788815",
+   "keyed": "6f5c1c97427e22fadb26f7807ccdbfc23a6e091d566f441d359883cdbe5877d7",
+   "parts": [
+    6025698
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/marcus_relief.npy",
+   "bytes": 268435584,
+   "locked": true,
+   "nonce": "a05ef7dc59d4cb99709583d081e927f5",
+   "mac": "dc10f22e5284b258f919ceecd044dcd4f7a10d6e856b4375cf9c1810af37837c",
+   "keyed": "5c92edc9858742c107c683aeb417a0ea098445d0ff2beff57f1e66778a660150",
+   "parts": [
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    32505984
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/marcus_views.npz",
+   "bytes": 76112251,
+   "locked": true,
+   "nonce": "8e5b493f9719fb7f565388b78b34173e",
+   "mac": "239739e47e1b53b0de136129bd8c3ee84ae468f8e652023f26decb1eed0f4d7d",
+   "keyed": "ca7f02339fa63ed8165c70953cc41d3db075e52927e6887db1b575acea275480",
+   "parts": [
+    47185920,
+    28926331
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/neck_colour.png",
+   "bytes": 1101759,
+   "locked": true,
+   "nonce": "8e71a9aee9b962c6a5349e63550126f6",
+   "mac": "3f4fa1b2673a0489ad1a2bff9d1e30a931ad9f10d75fa37faef746c33d989318",
+   "keyed": "7f28f87acabb3b2ceeef04ee6973ec3222feedf4e5efc2815b81f0f78c21912b",
+   "parts": [
+    1101759
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/neck_relief.png",
+   "bytes": 1171889,
+   "locked": true,
+   "nonce": "8bc14534fd7b20a889371843727138d9",
+   "mac": "894ed10574225127143fbe810c992fb559b3bb3dfdda2d5108514a5e7b5fc928",
+   "keyed": "d6000a61f0c94ed78b004bd20e54c881f3f05b6f660a8c1de14e15f4b8f07037",
+   "parts": [
+    1171889
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/neck_trust.png",
+   "bytes": 67572,
+   "locked": true,
+   "nonce": "3af5cbefc8341e63777b01469589412c",
+   "mac": "ea219fee47376ff185031f614359a73896d15723e07290581cccf5414cb4d54d",
+   "keyed": "47279d5abf253b66d466ce978c167126d5d488a3ea460de61dcc4aaaa06fee5c",
+   "parts": [
+    67572
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/clean_dump.py",
+   "bytes": 1950,
+   "locked": true,
+   "nonce": "32dac0464906bc703cfa7cf4b2f168f8",
+   "mac": "ed7ba203fd4187540b40f8e5451fec7f851827c42219d4fdeb22c6887d725467",
+   "keyed": "5d361cc194a6406627e8abbecbbb9f275b9c464138f2808ed00e782c5bb0b86c",
+   "parts": [
+    1950
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/export_his_head.py",
+   "bytes": 2954,
+   "locked": true,
+   "nonce": "01183302b780fa18838a014642b106f0",
+   "mac": "9afcc7e8e40595489890f8b2617d62cb57d73e8b4a161a83ad8a66b2d9a2bde0",
+   "keyed": "011e5c69cc253e179d5442dc808f0b6d329cc79f78b6e90b96ac89b9e9be7287",
+   "parts": [
+    2954
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_bake.py",
+   "bytes": 14262,
+   "locked": true,
+   "nonce": "171a8ca56b9704983299279527bd6efd",
+   "mac": "49db358a688394b7585dc6d6696f7799d05fe4bbd6d46f9c85b700650081f46f",
+   "keyed": "0c10fb3fc9a0e21b12b4f2e4d59da9484bd040710f7a6eb80e2c97d60d9f8e20",
+   "parts": [
+    14262
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_bake2.py",
+   "bytes": 16459,
+   "locked": true,
+   "nonce": "eaf6d069acc050c52bd07eac336dc951",
+   "mac": "29ad1d588acd5ab1bfabe5c899fe195c26c8337a84db32d86124f60e69ae083d",
+   "keyed": "422f3841b604be45f33c4d95d7931b0ed734cb2663d317a85b8e5ca907d2237e",
+   "parts": [
+    16459
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_bake3.py",
+   "bytes": 15515,
+   "locked": true,
+   "nonce": "6c07bd443dacf3ce40292cbdc7971db2",
+   "mac": "7561ad872b7431d61c75d677f1fda5f5ff67056503b4c28a32b52384268d43a3",
+   "keyed": "857b8befbaf8140b8db1375d067dfca39c914945a5adb4088521995724b16385",
+   "parts": [
+    15515
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_bake4.py",
+   "bytes": 13580,
+   "locked": true,
+   "nonce": "e979e4ef1605affee2a9c9f47a45f865",
+   "mac": "1a9b924ed72815208c252631132dee321c54bad7753c83817ed5060c66b126c3",
+   "keyed": "afaf355537750a95d960e701e7d33353dd0588b635a73bd5f6f9d4994d106709",
+   "parts": [
+    13580
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_exr.py",
+   "bytes": 1272,
+   "locked": true,
+   "nonce": "34fdf5e51e834ef210e3592028e9591e",
+   "mac": "9f47828a87d91b7ec92dc121809c342c03e8f703fe296efc5d2cc9ce238d3a9d",
+   "keyed": "f8cc002485862d9f2e307708623aa1f0de2f0f759281f7e4f4f46d3900c094f5",
+   "parts": [
+    1272
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_match.py",
+   "bytes": 7922,
+   "locked": true,
+   "nonce": "fe409393b0fa514d740811fcd70bf36f",
+   "mac": "34415fd7c87418de9bbaf3225fef74d2de4963fbb55a71e9207092eb45856b8b",
+   "keyed": "10e929f6b5f2dc4a0a1aa00c2e8a36ab1269f35da1098d10830183205a0af733",
+   "parts": [
+    7922
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_prep1.py",
+   "bytes": 2431,
+   "locked": true,
+   "nonce": "b7f7ea41b84851d08fa8947a59219adb",
+   "mac": "37674255b2a3d0324c434b0c3f8862e0b8386acb35ebd20d7cce81d6fe99acca",
+   "keyed": "6a730226d5e3e96aaa651aa94a0c63b7fea926c91aa8e621d431fc5103f93358",
+   "parts": [
+    2431
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/marcus_prep2.py",
+   "bytes": 3110,
+   "locked": true,
+   "nonce": "a17afd2eec67caf9c15e89011300b55e",
+   "mac": "6bc36f513a1559adb37219819d0c2ce21e7cf2ff7010d8a9a5d42985bb0cb778",
+   "keyed": "85dadfacd214c24d650531e6b5d6708146d0e3ccd6031d6fa95b5c7bb7dfaf3c",
+   "parts": [
+    3110
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/meshnear.py",
+   "bytes": 4046,
+   "locked": true,
+   "nonce": "ec419f9cc3302d5b877efbcda0763015",
+   "mac": "02c346812102ac61b6fa7492ce0902d7efd13ba5e7289f919dc879336bb3916c",
+   "keyed": "62694ee8ac7c8941e3ae6640fbdacaa79ada645499f309fafb4794d726c9c532",
+   "parts": [
+    4046
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/nape.sh",
+   "bytes": 1734,
+   "locked": true,
+   "nonce": "2bb44417ceadc54a16eb9ba03b6fa1ee",
+   "mac": "b057a3c9aa0f7a3e2ded9c6386da2eeee3b4c23600a20829de3528b16cada542",
+   "keyed": "02462f04e0a22fa88f2098aa3559790b741bc2f2043276ee80af7fa84aabab6c",
+   "parts": [
+    1734
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/notes_turn3_sent.py",
+   "bytes": 6732,
+   "locked": true,
+   "nonce": "e4b53108ae0b50e8ae0443c720ab2cf1",
+   "mac": "749ed45e19c35bc09fd514a1025eef42542fec3799b4b9b8a14edf6c04994e7a",
+   "keyed": "25a49f861d7305e74aa39200d5422673a5855dea491120cb627b0b52bd4b1685",
+   "parts": [
+    6732
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/patch_bake4.py",
+   "bytes": 3444,
+   "locked": true,
+   "nonce": "0621024ba6983fa3c382336cbe470e7f",
+   "mac": "426e6faf984b11460f66b764867b51d7826e104740d5a9ce0972103cb9ef8610",
+   "keyed": "2ca5270f889e43a012d59919e094946ecd6c05e51e61f2f5e17bedc37a937a3e",
+   "parts": [
+    3444
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/patch_lashes.py",
+   "bytes": 8197,
+   "locked": true,
+   "nonce": "f6b9be3264581f39ea6444fef8d9bb46",
+   "mac": "a18bcec77e48a75e4e706fc08e72e29e8a8de7f734fa9c96a75d7c2ffe5a0025",
+   "keyed": "c6f480a610412b73257faa3efa9ab98b4e1aea8496473222dc9192f40df389ac",
+   "parts": [
+    8197
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/patch_lashes2.py",
+   "bytes": 13562,
+   "locked": true,
+   "nonce": "0df5775dc6868580bb097c144ed0b9b5",
+   "mac": "2d5cc2dbf9f0027f2a4c46c8c3988786309076508048e0f107271c39de527e7e",
+   "keyed": "a7dbd337175b8fe621afff6435521bec8577c9e1b941bb22618c8cf44e4232f4",
+   "parts": [
+    13562
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/patch_lids.py",
+   "bytes": 5298,
+   "locked": true,
+   "nonce": "a13a7da9fa4a35f5f206e6cd5b81759f",
+   "mac": "9c55a5489a7e0c417746bb630bf3bd2fd8d93423122599e157a5cebb53c65bf2",
+   "keyed": "27f99a99a2acb7d40fe5338a89b391b55d85c04b0cd545e222897aa79659eed5",
+   "parts": [
+    5298
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round3_final.sh",
+   "bytes": 1476,
+   "locked": true,
+   "nonce": "ed5e496e36e292e13f9f71adb13b0dfc",
+   "mac": "ac26dfee0b789b70e14725c0940e2545ac57d51f6e13beb7b39aa6dc3fedc7ce",
+   "keyed": "498a7cdf10d4cea916cdefbf42defce70b71a11b52a9ed2185dca526c26b827f",
+   "parts": [
+    1476
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round3_final_v2.sh",
+   "bytes": 1491,
+   "locked": true,
+   "nonce": "d7d3e1a647897e07dfd885acbbc0f2ac",
+   "mac": "b13d0c52038f1d72d5cb2e68dc0a82c26b336f36229e760f93712b1639a57019",
+   "keyed": "7e2dab822a4da33d13ac329117545a132c55425dcd5094cc0bb50ee4cadd1f63",
+   "parts": [
+    1491
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round3_sheets.py",
+   "bytes": 2875,
+   "locked": true,
+   "nonce": "854434cae04750bbe841007a6d877d9d",
+   "mac": "616afddc3f1b6823db043423fac01412a62f1f4d8feb19a6e362ef2c91a05380",
+   "keyed": "8e3e10db5f50faf410baa0be901a48558e36e4e095b4f40bd76ec0dcc66e4d3c",
+   "parts": [
+    2875
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round3_still.sh",
+   "bytes": 2495,
+   "locked": true,
+   "nonce": "f118f86f8bdf2ff01dee269663996887",
+   "mac": "34001cb3ae9d9769ce83be91249ea22590d129398543ceb113583b072068bcfa",
+   "keyed": "de895c96f064dc30c0cfc023e60fba61d9ddf63958d8cc44607e80699e5bb76c",
+   "parts": [
+    2495
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round3_v2_sheet.py",
+   "bytes": 2335,
+   "locked": true,
+   "nonce": "697960d853e4e90fc46cd7469bd9f8a2",
+   "mac": "ee221d12a5b2774d5a1aa4bd7364d8e824949da5ca2d12fedcb11224a04c6d06",
+   "keyed": "7d81c3ea0a8b4ddc9959467ace09f3e1e45dbfe9e519205c1df7ff5fd4b3c287",
+   "parts": [
+    2335
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round4_sheet.py",
+   "bytes": 1319,
+   "locked": true,
+   "nonce": "e17065375ecc07cf26234c9635cc42c2",
+   "mac": "eb1449da61476a900b2c3ccf353a9f82841f7b646ac32bc1781451b366a66c75",
+   "keyed": "fce43290a7540ef37d74a26fec0878362648f5b947198f44b4d6cb57876fcd08",
+   "parts": [
+    1319
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round4_still.sh",
+   "bytes": 1976,
+   "locked": true,
+   "nonce": "049ba7348bfa6e1f00da1d6b5cbc414b",
+   "mac": "b841848ae3baebd9a41e3b6ec2da747fb6ffb8dfcf57b284e065ff1bbdd8ed7b",
+   "keyed": "47f39b683d70f3ec0af19ac8f562f1397749d55207a2ed6141c684d28708bfd7",
+   "parts": [
+    1976
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round5_final.sh",
+   "bytes": 1361,
+   "locked": true,
+   "nonce": "917a0b3743680f57877b4fff13bcf194",
+   "mac": "ba372c044435d421062f76760b516631d7c4e2a0b6be3833bc75da83a39fb756",
+   "keyed": "7cf4b041ff1814e8d4a9f50c3ae3f04190e77898754878bbdb234348d6308816",
+   "parts": [
+    1361
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/round5_sheet.py",
+   "bytes": 1539,
+   "locked": true,
+   "nonce": "289813e728b591c252c2ad4e931128b9",
+   "mac": "2c442c112af15d65a32ebe8dfe1be725c3c8169bd4b9091f31acc292e7917bf0",
+   "keyed": "afc997efb10168177abf2aacef18e114a09b42182800a2626e0163d9aaff1e1f",
+   "parts": [
+    1539
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/skinlib.py",
+   "bytes": 10322,
+   "locked": true,
+   "nonce": "6eba64773e12c5f218276be2121a654f",
+   "mac": "d9b004f017aa62527d4cede8f3c15641bd7f66b9fd1cdf4c59dec6bbdbae4fbe",
+   "keyed": "ac50f87717c54a57d5a6313e8d0a1ba01c52dac7958007e2723eeee6d325f8b7",
+   "parts": [
+    10322
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/turn3_beside.py",
+   "bytes": 1779,
+   "locked": true,
+   "nonce": "531841065df03e1239d448eef6894906",
+   "mac": "ec9b53bcbfb70a91e0f7a5f689b3ecf7f58ba6fe0d78a5308e7589513ad17e0b",
+   "keyed": "d1cfb2086269b8cafebf8b10b0045c0eead848b4c02b172e764697c104bc869c",
+   "parts": [
+    1779
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/turn3_check.py",
+   "bytes": 5341,
+   "locked": true,
+   "nonce": "d6c71dc19c2bf214875e6dc44648deb8",
+   "mac": "4ac9cccd88cf7fced9598e59949a478d74fe8e6bf08854b17e29911cd8d180d8",
+   "keyed": "f93975b92e4a6a74ad0cf8e6b27483b1fde7e46abe2ec67d04eb9a2cf083c193",
+   "parts": [
+    5341
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/turn3_first.sh",
+   "bytes": 972,
+   "locked": true,
+   "nonce": "73d3f1c656577ba419cb729091cd9c37",
+   "mac": "d369ae165181472cf1cd264f3e63aeb01853d12be3fe0881ade99237211dc055",
+   "keyed": "b385b2bb3f36534b1bae88933bb2bc0cc2de0bfcf7889088a352cf3ef121e72f",
+   "parts": [
+    972
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/turn3_watch2.sh",
+   "bytes": 1126,
+   "locked": true,
+   "nonce": "317fdd471db861c9e84d1aa81fa0ae6e",
+   "mac": "d614e96779b96a68495c01e208dea8df594a87ac97fff936525c98b28f88c40d",
+   "keyed": "5a8b8a3612b658c608f8869c634553bc61f331fbe0a0700fd80436de7f8d0f25",
+   "parts": [
+    1126
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/turn_check.py",
+   "bytes": 4003,
+   "locked": true,
+   "nonce": "df7a98eb5c45234a528569bec9647c2c",
+   "mac": "abde208bc3300b0a3e76b25d21b921e3721190620bc8e60aa5fe1eeef047c880",
+   "keyed": "b6b97a12f5b54a67f593d9336598d685bc56734764745ae3730839b7257c9af7",
+   "parts": [
+    4003
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/turn_check2.py",
+   "bytes": 1991,
+   "locked": true,
+   "nonce": "47d52e68bd04b62b26371855f252e99b",
+   "mac": "7f19f251a1b4361f7500f7370517dc26b6f1e08397ef70a5abb43a2552c69ed4",
+   "keyed": "c5500b48a62583d7cd8cd9b948cb4a927f6581ec525746a7464eb281871e9415",
+   "parts": [
+    1991
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/scripts/verdict_sheet.py",
+   "bytes": 2415,
+   "locked": true,
+   "nonce": "d7f0e843d92eb162c44abc0a858826f1",
+   "mac": "6776badd9b0d4a41636ab2270ed1ae7b5f7a3d2a69bf4f07b7149a6993affa61",
+   "keyed": "1e3798804e9761736b69d6993828037f9aa90aac75516360e51e35ff5c884061",
+   "parts": [
+    2415
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/skin_detail.json",
+   "bytes": 735,
+   "locked": true,
+   "nonce": "6f1452168b1b950332aee0fd995deb2c",
+   "mac": "05d11b5d8f607ddd17ecf7a21ec6b9596cc8ceaafe3499d957f95b04ec7fb8b1",
+   "keyed": "02f93f53ea8a9d99e84124dab75bd2d2a0225d0bf925ae16884308aaa7d9efee",
+   "parts": [
+    735
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/tile_relief.png",
+   "bytes": 1118071,
+   "locked": true,
+   "nonce": "568e108565ed8f970f1190ddd078d884",
+   "mac": "27338c844475f0465fb3908f29842d60ec96959803b942856286f2ada5d03f67",
+   "keyed": "a3baf8d0242352e02236d33ad8108a61a4c7e6889ab33f47a2e18ed738373e02",
+   "parts": [
+    1118071
+   ]
+  },
+  {
+   "path": "assets/licensed/digitalrealitylab/work/tile_tint.png",
+   "bytes": 239071,
+   "locked": true,
+   "nonce": "44aea43c93a27650e5382815faeb46b6",
+   "mac": "5005719a795b233a7d2058ec00f877bc9d4b5c6e431c235f924eb9ccc47fd554",
+   "keyed": "232c1984bf75f366c847dab26c8b7ced9fb9ccfb88d4c606fe0be92ef825a62a",
+   "parts": [
+    239071
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/export_his_head.py",
+   "bytes": 2954,
+   "locked": true,
+   "nonce": "602353b1b5bc350d7716f053892dbe53",
+   "mac": "d6ccdd746d87855bde4284cfe2a55a618e8328eb2a358c7ef4c2aa95fb105634",
+   "keyed": "011e5c69cc253e179d5442dc808f0b6d329cc79f78b6e90b96ac89b9e9be7287",
+   "parts": [
+    2954
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/nape.sh",
+   "bytes": 1734,
+   "locked": true,
+   "nonce": "6f37ff93efcd5efe3c56098d72888974",
+   "mac": "0fc31cf8191896041e76ad6ca2fc28e3149b38bb045084431f2fddc961c39f5d",
+   "keyed": "02462f04e0a22fa88f2098aa3559790b741bc2f2043276ee80af7fa84aabab6c",
+   "parts": [
+    1734
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/round2_still.sh",
+   "bytes": 1804,
+   "locked": true,
+   "nonce": "d5c3bf388184d8e5c3fe310181766172",
+   "mac": "ff8ce0fd9d6d711054c49a569253beebb9191eabed36dab4d84bc1966f8a8789",
+   "keyed": "6e9efbd13919ec9ecd2fe197f725f53281eac7558b1f643398614c4c95ad2c0b",
+   "parts": [
+    1804
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/skin_bake.py",
+   "bytes": 12248,
+   "locked": true,
+   "nonce": "6c15bcce2b08e9763161ea766de669ba",
+   "mac": "1caf6402879ea75d5868f778ce614f49029ac6608b135e8515629d6dfeeb799e",
+   "keyed": "b35e5f043f6aa9a9d32497552f87bcf5537d0f809c072a423dc41aba81e57880",
+   "parts": [
+    12248
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/skin_prep1.py",
+   "bytes": 3384,
+   "locked": true,
+   "nonce": "fa93e357c85462a3dc4de57bcc93f23c",
+   "mac": "eece83a5028a9f0a47ef99e50792bf6856d38c19e7079715c041a67fa64d66ab",
+   "keyed": "496a6515ec28c04719366650e9465aeff90eab978c913c67c1e65e38a35df69c",
+   "parts": [
+    3384
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/skin_prep2.py",
+   "bytes": 1956,
+   "locked": true,
+   "nonce": "de4efe811264da0df9f1d4e439129223",
+   "mac": "6e233aa6ef3d5e4c2ad8cd7f56642b2003f5a05aae19d419efdc74c4e8dd6944",
+   "keyed": "6cd5afcbf46030a7e4f7a0b03cc7ea54d163b560d66007da11c2dd1123c8b050",
+   "parts": [
+    1956
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/skin_prep3.py",
+   "bytes": 2028,
+   "locked": true,
+   "nonce": "336904c866a41da1c8dd9342fd096052",
+   "mac": "47fd3b9d21df400c53434eecb7d3f2f57719236ee7209c998496637c4e9e8c9f",
+   "keyed": "0f37c5bf911f9f02c7fb6f5ab04b66e25ea19eb2c7a0a99e2fd9e730dc4e90e0",
+   "parts": [
+    2028
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/skin_prep4.py",
+   "bytes": 5272,
+   "locked": true,
+   "nonce": "4bcde477c5c0fed3c49001ad5236eb8a",
+   "mac": "ee37f0b937a12c3950a88bc5ece4a8b670aa278a813a27548e5cbaed0d1ad06f",
+   "keyed": "813c659be5267bd238b0aa3c9f17ded1baaac6a6499910c2ae14246ad95aaf86",
+   "parts": [
+    5272
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/skinlib.py",
+   "bytes": 10322,
+   "locked": true,
+   "nonce": "d620b67fc64fc85d8ecdf1a17bdda6d8",
+   "mac": "8c983272ab6352ec6701d7a7ba569315151c84db91335fa9b2fbabf78cf76039",
+   "keyed": "ac50f87717c54a57d5a6313e8d0a1ba01c52dac7958007e2723eeee6d325f8b7",
+   "parts": [
+    10322
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/turn_check.py",
+   "bytes": 4003,
+   "locked": true,
+   "nonce": "a61f99e45d16ebacb2caad5e8446724c",
+   "mac": "cb1048bc67a4206af6354408a2a00b44e195455756d93c89c988de497e4c37ea",
+   "keyed": "b6b97a12f5b54a67f593d9336598d685bc56734764745ae3730839b7257c9af7",
+   "parts": [
+    4003
+   ]
+  },
+  {
+   "path": "assets/open/lpshead/work/scripts/turn_check2.py",
+   "bytes": 1991,
+   "locked": true,
+   "nonce": "60744ed29f55e7ff6be170c85dd0b00a",
+   "mac": "f2b0e4b14762ac97dafc98550e7086f5936adfe2a1a45a99085ba2a15929097d",
+   "keyed": "c5500b48a62583d7cd8cd9b948cb4a927f6581ec525746a7464eb281871e9415",
+   "parts": [
+    1991
+   ]
+  },
+  {
+   "path": "assets/open/zips/makehuman_system_assets_cc0.zip",
+   "bytes": 280737770,
+   "sha256": "b542127a8e25547c7c29c19f2d1d2adb9a664c80396ecd694095dbc8028a0107",
+   "parts": [
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    47185920,
+    44808170
+   ]
+  },
+  {
+   "path": "assets/open/zips/pants03_ccby.zip",
+   "bytes": 48825857,
+   "sha256": "8753f0cd79a9987a6f490ec5621a4a392df90647ca504fa2c1a500f9c3c2f26a",
+   "parts": [
+    47185920,
+    1639937
+   ]
+  },
+  {
+   "path": "assets/open/zips/skins02_cc0.zip",
+   "bytes": 76112708,
+   "sha256": "1613f1ef3afca53094511d26620ed7cf1d2dedc29ed3d384d60bdebe250698ae",
+   "parts": [
+    47185920,
+    28926788
+   ]
+  },
+  {
+   "path": "assets/open/zips/underwear01_cc0.zip",
+   "bytes": 60561755,
+   "sha256": "8c3b51cf18d26ea096cb92b79a7a379d1a00273ef029b5779715486180fd47d5",
+   "parts": [
+    47185920,
+    13375835
+   ]
+  },
+  {
+   "path": "scenes/rung3_man_c.blend",
+   "bytes": 173891558,
+   "locked": true,
+   "nonce": "a49c9c6942b2b6affaa764875f57c6f4",
+   "mac": "d7a7560adb665b764b524bcc66757a8dff907ed234cba1f2519e26c50642a51f",
+   "keyed": "c7cfa7f6d7ed00fa2c84f84ebe44e1d17d448176814cbd568ae5605d0d50c47d",
+   "parts": [
+    47185920,
+    47185920,
+    47185920,
+    32333798
+   ]
+  },
+  {
+   "path": "scenes/rung3_sill_c.blend",
+   "bytes": 181998919,
+   "locked": true,
+   "nonce": "2cec5d69766bf863ba6182cf1230f9b5",
+   "mac": "80daf7f1a1a5f6075076d82fac84c76b418612efefbd2e79be4c289e5ec57262",
+   "keyed": "0a294cc343a3324aa7b93bc255204a4abd6584253e9b53f570953e74a644b57a",
+   "parts": [
+    47185920,
+    47185920,
+    47185920,
+    40441159
+   ]
+  }
+ ]
+}

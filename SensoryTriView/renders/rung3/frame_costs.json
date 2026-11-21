@@ -1,0 +1,6389 @@
+{
+ "note": "Rung 3, the man: the time and the graphics memory of his frames, for rungs 5 and 6. One row per measured render. Laptop: Dell Pro Max 14, NVIDIA RTX PRO 2000 Blackwell, 8151 MiB, Cycles on OptiX with the OptiX denoiser, Blender 5.2.3.",
+ "rows": [
+  {
+   "date": "2026-11-19",
+   "what": "BASELINE, the stand-in mannequin at the sill before any of the man is built",
+   "scene": "scenes/rung2p_r14m51.blend, scene Room",
+   "view": "third",
+   "camera": "Cam_Third at its sill station (3.75, 0.42, 1.55), 38 mm, 0.808 m from the head's centre",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 6,
+   "denoised": true,
+   "seconds": 20.4,
+   "gpu_peak_mb": 890,
+   "gpu_baseline_mb": 0,
+   "exposure": -0.197,
+   "sun_elevation_deg": 6.857,
+   "picture": "renders/rung3/stock/standin_third_player083_frame1996.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin toigo_light_skin_male_bronze: first generation, the generator's own skin setup",
+   "scene": "rung3_man.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.59,
+   "gpu_peak_mb": 1306,
+   "gpu_baseline_mb": 0,
+   "exposure": -0.2,
+   "picture": "renders/rung3/look/man_v01_bronze.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin toigo_light_skin_male_bronze: this project's skin over the painted map, brown eyes, grey T-shirt",
+   "scene": "rung3_man.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.57,
+   "gpu_peak_mb": 1382,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look/man_v02_skin.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin toigo_light_skin_male_bronze: with the crop, the stubble and the brows as strands",
+   "scene": "rung3_man.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.22,
+   "gpu_peak_mb": 996,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look/man_v03_hair.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin toigo_light_skin_male_bronze: true height, darker hair, lower hairline",
+   "scene": "rung3_man.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.51,
+   "gpu_peak_mb": 994,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look/man_v04_hair.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin toigo_light_skin_male_bronze: his height read from the shaped mesh, darker hair, lower hairline",
+   "scene": "rung3_man.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.29,
+   "gpu_peak_mb": 996,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look/man_v05_hair.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin toigo_light_skin_male_bronze: temple corner, black hair, hair marked under the skin, darker skin",
+   "scene": "rung3_man.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.11,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look/man_v06.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: first time in the scene",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 28.88,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -0.197,
+   "picture": "renders/rung3/sill/third_1996_v01.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: tanned skin without the oily film, duller shirt",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 27.57,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -0.197,
+   "picture": "renders/rung3/sill/third_1996_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: exposed for his sunlit face, 1.5 stops under the table",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 27.37,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill/third_1996_v03.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the other T-shirt in charcoal",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 26.5,
+   "gpu_peak_mb": 1038,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill/third_1996_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the camera on his eyes",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "first",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.01,
+   "gpu_peak_mb": 1444,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill/first_1996_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: his eyes' whole field",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.41,
+   "gpu_peak_mb": 994,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill/field/scan/frame_1996.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: checking view of his whole figure",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1280,
+    960
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 3.88,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.397,
+   "picture": "renders/rung3/sill/qa_1996_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: checking view of his whole figure",
+   "scene": "rung3_sill.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1280,
+    960
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.9,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -0.7969999999999999,
+   "picture": "renders/rung3/sill/qa_1996_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin young_caucasian_male2: the second man, first look",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.53,
+   "gpu_peak_mb": 1066,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v01_sill.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin young_caucasian_male2: the second man v02, the Third-Person camera's side",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 14.17,
+   "gpu_peak_mb": 1072,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v02_sill.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v02, front",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.83,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v02_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v02, threeq",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.09,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v02_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v02, left",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.09,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v02_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v02, back",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.64,
+   "gpu_peak_mb": 1278,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v02_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin young_caucasian_male2: the second man v03, the Third-Person camera's side",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.3,
+   "gpu_peak_mb": 1238,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v03_sill.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v03, front",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.9,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v03_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v03, threeq",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.94,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v03_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v03, back",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.63,
+   "gpu_peak_mb": 1302,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v03_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin young_caucasian_male2: the second man v04, the Third-Person camera's side",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 20.2,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v04_sill.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v04, front",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.67,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v04_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v04, threeq",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.04,
+   "gpu_peak_mb": 1278,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v04_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v04, back",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.07,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v04_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin young_caucasian_male2: the second man v05, the Third-Person camera's side",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 21.6,
+   "gpu_peak_mb": 1078,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v05_sill.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v05, threeq",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.15,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v05_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v01, 1.5 stops under the eye table",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 58.38,
+   "gpu_peak_mb": 1482,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/third_1996_b_v01.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v01, checking view",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 28.34,
+   "gpu_peak_mb": 1074,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/qa_1996_b_v01.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v05, front",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 14.29,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v05_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v05, back",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.61,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v05_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the generated man, skin young_caucasian_male2: the second man v06, the Third-Person camera's side",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 23.28,
+   "gpu_peak_mb": 1058,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v06_sill.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v06, front",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 16.26,
+   "gpu_peak_mb": 1030,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v06_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v06, three-quarter",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.54,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v06_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the second man v06, back",
+   "scene": "rung3_man_b.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.89,
+   "gpu_peak_mb": 1008,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_b/b_v06_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v02, 1.5 stops under the eye table",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 100.79,
+   "gpu_peak_mb": 1100,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/third_1996_b_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v02, checking view",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 97.18,
+   "gpu_peak_mb": 1062,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/qa_1996_b_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v02, his eyes' whole field",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.35,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_b/first_field_1996_b_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v03, checking view, hem fixed",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 26.84,
+   "gpu_peak_mb": 1062,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/qa_1996_b_v03.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v03, his face, lids at cover 0.0",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 84.91,
+   "gpu_peak_mb": 1270,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/face_1996_b_v03_cover_0.0.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v03, his face, lids at cover 0.5",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 46.13,
+   "gpu_peak_mb": 1010,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/face_1996_b_v03_cover_0.5.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v03, his face, lids at cover 1.0",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 36.51,
+   "gpu_peak_mb": 1010,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/face_1996_b_v03_cover_1.0.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v04, checking view, hem 40 mm under the waistband",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 59.51,
+   "gpu_peak_mb": 1506,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/qa_1996_b_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v04, his face, lids at cover 0.5, travel corrected",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 30.77,
+   "gpu_peak_mb": 1010,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_b/face_1996_b_v04_cover_0.5.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the second man v04, his face at a blink frame, lids from the eye table",
+   "scene": "rung3_sill_b.blend, scene Room",
+   "view": "face",
+   "frame": 1975,
+   "scene_second": 65.8,
+   "player_second": 82.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 25.3,
+   "gpu_peak_mb": 1010,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.734,
+   "picture": "renders/rung3/sill_b/face_1975_b_v04_table.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v01, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.02,
+   "gpu_peak_mb": 1500,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v01_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v01, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.37,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v01_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v01, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.04,
+   "gpu_peak_mb": 1006,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v01_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v01, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.21,
+   "gpu_peak_mb": 1004,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v01_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v01, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.58,
+   "gpu_peak_mb": 1268,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v01_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v02, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.4,
+   "gpu_peak_mb": 1078,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v02_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v02, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.38,
+   "gpu_peak_mb": 1028,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v02_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v02, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.06,
+   "gpu_peak_mb": 1026,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v02_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v02, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.9,
+   "gpu_peak_mb": 1028,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v02_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v02, bodyback",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.49,
+   "gpu_peak_mb": 1288,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v02_bodyback.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v03, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.94,
+   "gpu_peak_mb": 1080,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v03_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v03, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.58,
+   "gpu_peak_mb": 1026,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v03_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v03, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.61,
+   "gpu_peak_mb": 1026,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v03_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v03, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.53,
+   "gpu_peak_mb": 1026,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v03_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v03, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.17,
+   "gpu_peak_mb": 1026,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v03_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v03, back",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.34,
+   "gpu_peak_mb": 1290,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v03_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v01, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 36.6,
+   "gpu_peak_mb": 1080,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v01.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v01, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.35,
+   "gpu_peak_mb": 1080,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v01.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v01, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 20.49,
+   "gpu_peak_mb": 1028,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v01.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v01, field",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.14,
+   "gpu_peak_mb": 1034,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_c/field_1996_c_v01.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v04, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.86,
+   "gpu_peak_mb": 1072,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v04_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v04, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.17,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v04_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v04, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.84,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v04_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v04, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.92,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v04_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v04, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.63,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v04_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v04, back",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.23,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v04_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v02, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 37.02,
+   "gpu_peak_mb": 1476,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v02, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.25,
+   "gpu_peak_mb": 1514,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v02, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 21.26,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v02, field",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.21,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_c/field_1996_c_v02.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v02, his face, lids half shut by hand",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 17.18,
+   "gpu_peak_mb": 1280,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v02_half_shut.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v02, his face at a blink frame, lids from the eye table",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1975,
+   "scene_second": 65.8,
+   "player_second": 82.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 17.49,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.734,
+   "picture": "renders/rung3/sill_c/face_1975_c_v02_blink.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v03, his face at a blink frame, lids from the eye table, lids riding out",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1975,
+   "scene_second": 65.8,
+   "player_second": 82.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 16.87,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.734,
+   "picture": "renders/rung3/sill_c/face_1975_c_v03_blink.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v03, his face in the long closure, lids from the eye table",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 2551,
+   "scene_second": 85.0,
+   "player_second": 106.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.63,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.076,
+   "picture": "renders/rung3/sill_c/face_2551_c_v03_shut.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v05, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.54,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v05_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v05, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.98,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v05_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v05, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.03,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v05_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v05, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.29,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v05_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v06, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.98,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v06_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v06, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.18,
+   "gpu_peak_mb": 1304,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v06_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v06, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.18,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v06_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v06, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.29,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v06_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v03, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 38.66,
+   "gpu_peak_mb": 1476,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v03.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v03, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 22.58,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v03.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v07, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.35,
+   "gpu_peak_mb": 2371,
+   "gpu_baseline_mb": 460,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v07_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v03, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 20.8,
+   "gpu_peak_mb": 2087,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v03.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v07, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.12,
+   "gpu_peak_mb": 1129,
+   "gpu_baseline_mb": 1070,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v07_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v03, field",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.99,
+   "gpu_peak_mb": 1435,
+   "gpu_baseline_mb": 1018,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_c/field_1996_c_v03.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v07, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.78,
+   "gpu_peak_mb": 1411,
+   "gpu_baseline_mb": 1024,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v07_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v07, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.23,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v07_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v07, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.77,
+   "gpu_peak_mb": 1280,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v07_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v07, back",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.28,
+   "gpu_peak_mb": 1040,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v07_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v04, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 37.96,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v04, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 22.02,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v04, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.91,
+   "gpu_peak_mb": 1068,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v04, field",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.31,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_c/field_1996_c_v04.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v04, his face, lids half shut by hand",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 18.02,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v04_half_shut.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v04, his face at a blink frame, lids from the eye table",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1975,
+   "scene_second": 65.8,
+   "player_second": 82.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 18.38,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.734,
+   "picture": "renders/rung3/sill_c/face_1975_c_v04_blink.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.44,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.15,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.87,
+   "gpu_peak_mb": 1476,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.79,
+   "gpu_peak_mb": 1268,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.5,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, back",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.78,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.59,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.6,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.44,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.46,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.91,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v08, back",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.73,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v08_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v05, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 36.62,
+   "gpu_peak_mb": 1068,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v05.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v05, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 21.08,
+   "gpu_peak_mb": 1302,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v05.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v05, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.97,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v05.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v05, field",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.7,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_c/field_1996_c_v05.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v05, his face, lids half shut by hand",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 17.28,
+   "gpu_peak_mb": 1278,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v05_half_shut.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v05, his face at a blink frame, lids from the eye table",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1975,
+   "scene_second": 65.8,
+   "player_second": 82.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 18.11,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.734,
+   "picture": "renders/rung3/sill_c/face_1975_c_v05_blink.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v09, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.04,
+   "gpu_peak_mb": 1042,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v09_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v09, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.16,
+   "gpu_peak_mb": 1476,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v09_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v09, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.72,
+   "gpu_peak_mb": 1016,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v09_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v09, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.71,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v09_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v10, back",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.19,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v10_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v10, backq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.61,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v10_backq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v10, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.62,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v10_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v10, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.72,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v10_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v10, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.81,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v10_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v10, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.63,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v10_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v10, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 5.21,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v10_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v06, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.85,
+   "gpu_peak_mb": 1068,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v06.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v06, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 24.49,
+   "gpu_peak_mb": 1018,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v06.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v06, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.83,
+   "gpu_peak_mb": 1474,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v06.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v06, field",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.25,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_c/field_1996_c_v06.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v06, his face, lids half shut by hand",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 19.48,
+   "gpu_peak_mb": 1300,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v06_half_shut.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v06, his face at a blink frame, lids from the eye table",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1975,
+   "scene_second": 65.8,
+   "player_second": 82.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 19.48,
+   "gpu_peak_mb": 1280,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.734,
+   "picture": "renders/rung3/sill_c/face_1975_c_v06_blink.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v11, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.49,
+   "gpu_peak_mb": 1076,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v11_side.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v11, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.53,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v11_left.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v11, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.1,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v11_front.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v11, backq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.62,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v11_backq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v11, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.04,
+   "gpu_peak_mb": 1286,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v11_threeq.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v11, body",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.69,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v11_body.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the saved man: the third man v11, back",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 4.73,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v11_back.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v07, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.7,
+   "gpu_peak_mb": 1072,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v07.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v07, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 24.33,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v07.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v07, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 14.03,
+   "gpu_peak_mb": 1072,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v07.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v07, field",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "field",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1024,
+    1024
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 7.9,
+   "gpu_peak_mb": 1028,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/sill_c/field_1996_c_v07.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v07, his face, lids half shut by hand",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 19.24,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v07_half_shut.png"
+  },
+  {
+   "date": "2026-11-19",
+   "what": "the man at the sill: the third man v07, his face at a blink frame, lids from the eye table",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1975,
+   "scene_second": 65.8,
+   "player_second": 82.2,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 19.18,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.734,
+   "picture": "renders/rung3/sill_c/face_1975_c_v07_blink.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v12, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.93,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v12_left.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v12, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.69,
+   "gpu_peak_mb": 1520,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v12_side.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v12, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.09,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v12_front.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v12, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.06,
+   "gpu_peak_mb": 1284,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v12_threeq.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v08, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.34,
+   "gpu_peak_mb": 1074,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v08.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v08, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 24.41,
+   "gpu_peak_mb": 1044,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v08.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v08, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.82,
+   "gpu_peak_mb": 1074,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v08.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v13, left",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.69,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v13_left.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v13, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.39,
+   "gpu_peak_mb": 1074,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v13_side.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v13, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.05,
+   "gpu_peak_mb": 1286,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v13_front.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v13, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 6.25,
+   "gpu_peak_mb": 1020,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v13_threeq.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v09, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 40.0,
+   "gpu_peak_mb": 1072,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v09.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v09, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 23.95,
+   "gpu_peak_mb": 1070,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v09.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v09, qa",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "qa",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 13.81,
+   "gpu_peak_mb": 1074,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/qa_1996_c_v09.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round one, the judged still",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 152.32,
+   "gpu_peak_mb": 1072,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round1/third_1996_round1.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round one, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 72.92,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round1/face_1996_round1.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: a rough of the turn, every fifth frame",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1966,
+    2101
+   ],
+   "count": 28,
+   "size": [
+    960,
+    432
+   ],
+   "samples": 48,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 3.31,
+   "gpu_peak_mb": 986,
+   "picture": "renders/rung3/turn/rough"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1966,
+    1977
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.04,
+   "gpu_peak_mb": 1482,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1978,
+    1989
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.05,
+   "gpu_peak_mb": 1518,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1990,
+    2001
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 38.98,
+   "gpu_peak_mb": 1518,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2002,
+    2013
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.72,
+   "gpu_peak_mb": 1478,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2014,
+    2025
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.75,
+   "gpu_peak_mb": 1480,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2026,
+    2037
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.44,
+   "gpu_peak_mb": 1482,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2038,
+    2049
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.86,
+   "gpu_peak_mb": 1482,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2050,
+    2061
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 40.44,
+   "gpu_peak_mb": 1516,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2062,
+    2073
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.83,
+   "gpu_peak_mb": 1480,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2074,
+    2085
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 40.34,
+   "gpu_peak_mb": 1482,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2086,
+    2097
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 40.01,
+   "gpu_peak_mb": 1518,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round one",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2098,
+    2101
+   ],
+   "count": 4,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.32,
+   "gpu_peak_mb": 1516,
+   "picture": "renders/rung3/turn/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: check: the First-Person view in the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 1966,
+   "scene_second": 65.5,
+   "player_second": 81.9,
+   "size": [
+    960,
+    432
+   ],
+   "samples": 64,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 2.15,
+   "gpu_peak_mb": 984,
+   "gpu_baseline_mb": 0,
+   "exposure": -4.67,
+   "picture": "renders/rung3/turn/first_check/first_1966.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: check: the First-Person view in the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    960,
+    432
+   ],
+   "samples": 64,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 2.19,
+   "gpu_peak_mb": 984,
+   "gpu_baseline_mb": 0,
+   "exposure": -4.785,
+   "picture": "renders/rung3/turn/first_check/first_1996.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: check: the First-Person view in the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 2041,
+   "scene_second": 68.0,
+   "player_second": 85.0,
+   "size": [
+    960,
+    432
+   ],
+   "samples": 64,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 2.16,
+   "gpu_peak_mb": 982,
+   "gpu_baseline_mb": 0,
+   "exposure": -4.872,
+   "picture": "renders/rung3/turn/first_check/first_2041.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: check: the First-Person view in the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 2101,
+   "scene_second": 70.0,
+   "player_second": 87.5,
+   "size": [
+    960,
+    432
+   ],
+   "samples": 64,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 2.12,
+   "gpu_peak_mb": 982,
+   "gpu_baseline_mb": 0,
+   "exposure": -4.911,
+   "picture": "renders/rung3/turn/first_check/first_2101.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v0, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.99,
+   "gpu_peak_mb": 1044,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v0_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v0, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.96,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v0_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v0, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.95,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v0_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v0, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.29,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v0_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v1, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.86,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v1_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v1, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.93,
+   "gpu_peak_mb": 1026,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v1_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v1, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.09,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v1_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v1, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.06,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v1_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v10, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 41.44,
+   "gpu_peak_mb": 1076,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v10.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v10, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 25.55,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v10.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v2, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.76,
+   "gpu_peak_mb": 1022,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v2_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v2, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.48,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v2_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v2, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.39,
+   "gpu_peak_mb": 1026,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v2_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v2, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.81,
+   "gpu_peak_mb": 1024,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v2_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v11, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 41.02,
+   "gpu_peak_mb": 1480,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v11.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v14, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.68,
+   "gpu_peak_mb": 1512,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v14_front.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v14, threeq",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.52,
+   "gpu_peak_mb": 1250,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v14_threeq.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v14, side",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.83,
+   "gpu_peak_mb": 1744,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v14_side.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v12, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 42.7,
+   "gpu_peak_mb": 1300,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v12.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v12, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 26.95,
+   "gpu_peak_mb": 1248,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v12.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the third man v15, front",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.47,
+   "gpu_peak_mb": 1422,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/look_c/c_v15_front.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v13, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 42.97,
+   "gpu_peak_mb": 1298,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v13.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v13, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 26.92,
+   "gpu_peak_mb": 1248,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v13.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round two a, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 75.16,
+   "gpu_peak_mb": 1248,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round2/face_1996_round2a.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round two a, the judged still",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 157.53,
+   "gpu_peak_mb": 1706,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round2/third_1996_round2a.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round2",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1966,
+    1969
+   ],
+   "count": 4,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 39.43,
+   "gpu_peak_mb": 1514,
+   "picture": "renders/rung3/turn2/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v3, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.17,
+   "gpu_peak_mb": 1554,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v3_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v3, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.15,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v3_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v3, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.64,
+   "gpu_peak_mb": 1292,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v3_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: the nape v3, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.38,
+   "gpu_peak_mb": 1290,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/nape/nape_v3_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v14, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 41.55,
+   "gpu_peak_mb": 1340,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v14.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v14, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 25.65,
+   "gpu_peak_mb": 1290,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v14.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v15, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 41.99,
+   "gpu_peak_mb": 1748,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/third_1996_c_v15.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: the third man v15, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 26.55,
+   "gpu_peak_mb": 1288,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/sill_c/face_1996_c_v15.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three a, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.77,
+   "gpu_peak_mb": 1574,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_a_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three a, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.07,
+   "gpu_peak_mb": 1290,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_a_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three a, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.49,
+   "gpu_peak_mb": 1290,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_a_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three a, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.29,
+   "gpu_peak_mb": 1290,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_a_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three a, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 28.91,
+   "gpu_peak_mb": 1288,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3a.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three a, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 47.16,
+   "gpu_peak_mb": 1342,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3a.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three b, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 18.83,
+   "gpu_peak_mb": 1748,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_b_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three b, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.31,
+   "gpu_peak_mb": 1728,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_b_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three b, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.37,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_b_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three b, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.35,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_b_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three b, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 160,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 29.28,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3b.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three b, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 47.52,
+   "gpu_peak_mb": 1792,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3b.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three c, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.9,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_c_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three c, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.31,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_c_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three c, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.09,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_c_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three c, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 12.48,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_c_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three c, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 45.23,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3c.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three c, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 48.02,
+   "gpu_peak_mb": 1516,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3c.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three d, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 11.63,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_d_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three d, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 16.78,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_d_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three d, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.82,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_d_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three d, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.98,
+   "gpu_peak_mb": 1488,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_d_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three d, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 46.86,
+   "gpu_peak_mb": 1462,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3d.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three d, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 50.93,
+   "gpu_peak_mb": 2094,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3d.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 81.61,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, the judged still",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 180.44,
+   "gpu_peak_mb": 2132,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three f, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 16.02,
+   "gpu_peak_mb": 1748,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_f_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three f, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 14.94,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_f_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three f, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 15.23,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_f_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three f, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 14.85,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_f_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three f, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 38.07,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3f.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three f, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 41.01,
+   "gpu_peak_mb": 2090,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3f.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three g, r61",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 10.07,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_g_r61.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three g, r100",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.49,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_g_r100.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three g, r135",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.62,
+   "gpu_peak_mb": 1466,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_g_r135.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the saved man: round three g, r180",
+   "scene": "rung3_man_c.blend",
+   "view": "a first look, the Third-Person camera's place at the sill relative to his head, rest pose, preview sky",
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 128,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 9.26,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.6,
+   "picture": "renders/rung3/round3/look_g_r180.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three g, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 37.76,
+   "gpu_peak_mb": 1806,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3g.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three g, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 40.89,
+   "gpu_peak_mb": 1516,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3g.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three v2, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 73.66,
+   "gpu_peak_mb": 1464,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3_v2.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three v2, the judged still",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 189.47,
+   "gpu_peak_mb": 2094,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3_v2.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three h, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 43.55,
+   "gpu_peak_mb": 1828,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3h.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three h, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 48.01,
+   "gpu_peak_mb": 1514,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3h.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three i, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 37.82,
+   "gpu_peak_mb": 1462,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3i.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three i, the still at the window",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 41.36,
+   "gpu_peak_mb": 1514,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3i.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three v2, his face close",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 75.35,
+   "gpu_peak_mb": 1804,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round3_v2.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three v2, the judged still",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 151.67,
+   "gpu_peak_mb": 1682,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round3_v2.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three v2, check: his head turned away",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 2041,
+   "scene_second": 68.0,
+   "player_second": 85.0,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 42.62,
+   "gpu_peak_mb": 1516,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.651,
+   "picture": "renders/rung3/round3/third_2041_check.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin a, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 41.72,
+   "gpu_peak_mb": 2454,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4a.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin a, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 40.63,
+   "gpu_peak_mb": 2088,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round4a.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin b, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 42.49,
+   "gpu_peak_mb": 2090,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4b.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin c, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 80.59,
+   "gpu_peak_mb": 2454,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4c.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin c, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 78.65,
+   "gpu_peak_mb": 2432,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round4c.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin d, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 164.42,
+   "gpu_peak_mb": 2226,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round4d.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin e, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 45.74,
+   "gpu_peak_mb": 2088,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4e.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin f, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 58.69,
+   "gpu_peak_mb": 2090,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4f.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin g, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 63.19,
+   "gpu_peak_mb": 2090,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4g.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin h, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 58.28,
+   "gpu_peak_mb": 2088,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4h.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin i, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 1025.39,
+   "gpu_peak_mb": 2632,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4i.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin j, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 58.01,
+   "gpu_peak_mb": 2432,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4j.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin k, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 200,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 46.52,
+   "gpu_peak_mb": 2090,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4k.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin l, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 200,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 46.98,
+   "gpu_peak_mb": 2504,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4l.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin m, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 58.05,
+   "gpu_peak_mb": 2718,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4m.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin n, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 112.15,
+   "gpu_peak_mb": 2504,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4n.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin n, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 108.07,
+   "gpu_peak_mb": 2846,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round4n.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin n3, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 202.23,
+   "gpu_peak_mb": 2554,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round4n3.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, the eye at double pixel size n",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    2200,
+    1728
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 193.22,
+   "gpu_peak_mb": 4100,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4n_double.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin o, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 46.76,
+   "gpu_peak_mb": 3056,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4o.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin p, eye",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 88.77,
+   "gpu_peak_mb": 3422,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4p.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin p, face",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "face",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1100,
+    864
+   ],
+   "samples": 512,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 89.12,
+   "gpu_peak_mb": 3058,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/face_1996_round4p.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, eyes and finer skin p3, third",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 1024,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 198.94,
+   "gpu_peak_mb": 3680,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/third_1996_round4p3.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, the eye at double pixel size p",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "eye",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    2200,
+    1728
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 195.56,
+   "gpu_peak_mb": 4654,
+   "gpu_baseline_mb": 0,
+   "exposure": -1.697,
+   "picture": "renders/rung3/round3/eye_1996_round4p_double.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round three, the look he passed 2026-11-20",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2041,
+    2042
+   ],
+   "count": 2,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 46.23,
+   "gpu_peak_mb": 3628,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1966,
+    1977
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 48.04,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1983,
+    1994
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 52.7,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    1995,
+    2006
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 56.93,
+   "gpu_peak_mb": 3722,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2007,
+    2018
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 53.56,
+   "gpu_peak_mb": 3799,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2019,
+    2030
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 52.35,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2031,
+    2040
+   ],
+   "count": 10,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 50.44,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2043,
+    2054
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 50.64,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2055,
+    2066
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 51.45,
+   "gpu_peak_mb": 3718,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2067,
+    2078
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 47.38,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2079,
+    2090
+   ],
+   "count": 12,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 50.9,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man's turn at the sill: round-three",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "third",
+   "frames": [
+    2091,
+    2101
+   ],
+   "count": 11,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 256,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 50.79,
+   "gpu_peak_mb": 3726,
+   "picture": "renders/rung3/turn3/frames"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, First-Person check of the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 1966,
+   "scene_second": 65.5,
+   "player_second": 81.9,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.5,
+   "gpu_peak_mb": 3110,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.17,
+   "picture": "renders/rung3/turn3/first_check/first_1966.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, First-Person check of the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 1976,
+   "scene_second": 65.83,
+   "player_second": 82.3,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.17,
+   "gpu_peak_mb": 3718,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.212,
+   "picture": "renders/rung3/turn3/first_check/first_1976.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, First-Person check of the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 1996,
+   "scene_second": 66.5,
+   "player_second": 83.1,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.5,
+   "gpu_peak_mb": 3108,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.285,
+   "picture": "renders/rung3/turn3/first_check/first_1996.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, First-Person check of the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 2041,
+   "scene_second": 68.0,
+   "player_second": 85.0,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.68,
+   "gpu_peak_mb": 3420,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.372,
+   "picture": "renders/rung3/turn3/first_check/first_2041.png"
+  },
+  {
+   "date": "2026-11-20",
+   "what": "the man at the sill: round three, First-Person check of the turn",
+   "scene": "rung3_sill_c.blend, scene Room",
+   "view": "first",
+   "frame": 2101,
+   "scene_second": 70.0,
+   "player_second": 87.5,
+   "size": [
+    1920,
+    864
+   ],
+   "samples": 96,
+   "adaptive_threshold": 0.01,
+   "max_bounces": 8,
+   "denoised": true,
+   "seconds": 8.47,
+   "gpu_peak_mb": 3726,
+   "gpu_baseline_mb": 0,
+   "exposure": -3.411,
+   "picture": "renders/rung3/turn3/first_check/first_2101.png"
+  }
+ ]
+}
