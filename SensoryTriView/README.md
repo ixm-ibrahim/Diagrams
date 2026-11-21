@@ -20,18 +20,17 @@ python tools/bigfiles.py status
 
 The scanned head the man's skin comes from, and the two scenes that carry its maps, are in git only as encrypted parts. Without the key those parts are noise, so they can sit in a public repository while the files themselves are given to no one. The scan is free to use with credit to Digital Reality Lab, but its files may not be given on.
 
-The key is one line of text in one small file, kept outside this folder and never in git:
+The key is one line of text in one small file, kept outside this folder and never in this repository:
 
 ```
 <your home folder>/.sensory_triview/bigfiles.key
 ```
 
-On another computer, do one of these once, before `join`:
+On another computer there is nothing to do: with no key file there, `join` fetches the key by itself from a private repository, named by the `key-from` line of `bigfiles/carry.txt`. Git asks for the GitHub sign-in of that repository's owner if the computer is not signed in yet. Nobody else can fetch it.
 
-- Copy that file to the same place there.
-- Or run `python tools/bigfiles.py key --set` there and type or paste its one line.
+If that ever fails, the old ways still work: copy the key file to the same place there, or run `python tools/bigfiles.py key --set` and type or paste its one line.
 
-Keep a copy of the key somewhere safe. Without it the locked files in git cannot be opened, and the files on a computer that has them are then the only copies.
+The key now lives in two places, the key file on each computer and the private repository. If both were lost, the locked files in git could not be opened, and the files on a computer that has them would be the only copies.
 
 ## Before a commit, after a carried file has changed
 

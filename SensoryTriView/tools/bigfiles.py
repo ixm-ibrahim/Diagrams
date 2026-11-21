@@ -20,10 +20,15 @@ files themselves are named in a marked block at the end of .gitignore, and bigfi
 needs to put each one together and to prove it is right.
 
 THE KEY is one line of text in a file outside the project: by default .sensory_triview/bigfiles.key in the user's home
-folder (the variable BIGFILES_KEY names another place). `split` makes one when there is none. It never enters git and
-this tool never prints it. To work from another computer, copy that file to the same place there, or run
-`python tools/bigfiles.py key --set` there and type or paste its one line. Lose it and the locked files in git cannot
-be opened: the files on a computer that has them are then the only copies.
+folder (the variable BIGFILES_KEY names another place). `split` makes one when there is none. It never enters this
+repository and this tool never prints it. Lose it and the locked files in git cannot be opened: the files on a
+computer that has them are then the only copies.
+On another computer the key comes by itself when carry.txt has a line `key-from <address of a private git
+repository>`: with no key file there, `join` fetches the key from that repository with the user's own sign-in and
+keeps it. `python tools/bigfiles.py key --put` puts this computer's key into that repository. A place that can be
+read without signing in is refused both ways: a key there would open the locked files for everyone. Without such a
+line: copy the key file to the same place on the other computer, or run `python tools/bigfiles.py key --set` there
+and type or paste its one line.
 
 How a file is locked, with Python's standard library alone: the key line is stretched by scrypt (2^16, 8, 1, a random
 salt kept in the manifest) into a master key. Each file gets a random 16 byte nonce and two keys of its own, both
@@ -95,9 +100,13 @@ class Rules:
     def __init__(self):
         if not CARRY.exists():
             sys.exit(f"{CARRY} is missing: it lists what is carried")
-        self.take, self.locks, self.leave = [], [], []
+        self.take, self.locks, self.leave, self.key_from = [], [], [], []
         for line in CARRY.read_text(encoding="utf-8").splitlines():
-            line = line.split("#", 1)[0].strip().replace("\\", "/")
+            line = line.split("#", 1)[0].strip()
+            if line.split(None, 1)[:1] == ["key-from"] and len(line.split(None, 1)) == 2:
+                self.key_from.append(line.split(None, 1)[1].strip())
+                continue
+            line = line.replace("\\", "/")
             if not line:
                 continue
             if line.startswith("!"):
@@ -245,12 +254,77 @@ class NoKey(Exception):
     pass
 
 
-def master_for(lock, make=False):
-    """(master key, lock record). With make, a key file and a lock record are made when there are none."""
+def quiet_git(*args, anonymous=False, cwd=None):
+    """Run git without a window or a question. anonymous: with no stored sign-in, as a stranger would."""
+    env = dict(os.environ)
+    cmd = ["git"]
+    if anonymous:
+        env.update(GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never", GIT_ASKPASS="", SSH_ASKPASS="")
+        cmd += ["-c", "credential.helper="]
+    return subprocess.run(cmd + list(args), capture_output=True, env=env, cwd=cwd)
+
+
+def open_to_strangers(url):
+    """True when the place can be read with no sign-in at all: no key may ever be kept there."""
+    return os.environ.get("BIGFILES_TEST_OPEN_KEY_PLACE") != "1" and quiet_git("ls-remote", url, anonymous=True).returncode == 0
+
+
+def fetch_secret(sources):
+    """The key fetched from the first private place of carry.txt's `key-from` lines that gives it, and kept in the key file."""
+    import shutil
+    import tempfile
+    for url in sources:
+        if open_to_strangers(url):
+            print(f"NOTE  {url} can be read without signing in: no key is taken from there", flush=True)
+            continue
+        tmp = tempfile.mkdtemp(prefix="bigfiles_key_")
+        try:
+            if quiet_git("clone", "-q", "--depth", "1", "--branch", "main", url, tmp).returncode == 0 and (pathlib.Path(tmp) / "bigfiles.key").is_file():
+                lines = (pathlib.Path(tmp) / "bigfiles.key").read_text(encoding="utf-8").strip().splitlines()
+                if lines and lines[0].strip():
+                    p = write_secret(lines[0].strip())
+                    print(f"KEY   fetched from {url} with your sign-in and kept in {p}", flush=True)
+                    return True
+        finally:
+            shutil.rmtree(tmp, onerror=lambda f, path, e: (os.chmod(path, 0o700), f(path)))
+    return False
+
+
+def put_secret(url):
+    """The key of this computer put into the private place `url`, as its one file bigfiles.key."""
+    import shutil
+    import tempfile
     secret = read_secret()
     if secret is None:
+        sys.exit(f"no key here to put there: {key_file()} is missing")
+    if open_to_strangers(url):
+        sys.exit(f"{url} can be read without signing in. A key there would open the locked files for everyone: nothing was sent")
+    tmp = tempfile.mkdtemp(prefix="bigfiles_key_")
+    try:
+        (pathlib.Path(tmp) / "bigfiles.key").write_text(secret + "\n", encoding="utf-8", newline="\n")
+        (pathlib.Path(tmp) / "README.md").write_text("The key of tools/bigfiles.py for the Sensory Tri-View folder. Keep this repository private.\n", encoding="utf-8", newline="\n")
+        steps = (["init", "-q", "-b", "main"], ["add", "bigfiles.key", "README.md"],
+                 ["-c", "user.name=bigfiles", "-c", "user.email=bigfiles@localhost", "commit", "-q", "-m", "the key"],
+                 ["push", "-q", "--force", url, "HEAD:refs/heads/main"])
+        for step in steps:
+            r = quiet_git(*step, cwd=tmp)
+            if r.returncode != 0:
+                sys.exit(f"could not put the key into {url}: git {step[0]} said {r.stderr.decode('utf-8', 'replace').strip()[:300]}")
+    finally:
+        shutil.rmtree(tmp, onerror=lambda f, path, e: (os.chmod(path, 0o700), f(path)))
+    print(f"KEY   put into {url}", flush=True)
+
+
+def master_for(lock, make=False, sources=()):
+    """(master key, lock record). With make, a key file and a lock record are made when there are none.
+    With no key file here, the private places of carry.txt's `key-from` lines are asked first."""
+    secret = read_secret()
+    if secret is None and lock is not None and sources and fetch_secret(sources):
+        secret = read_secret()
+    if secret is None:
         if not make or lock is not None:          # files are locked already: only their own key will do, never a new one
-            raise NoKey(f"no key here: copy the key file to {key_file()}, or run `python tools/bigfiles.py key --set`")
+            raise NoKey(f"no key here: copy the key file to {key_file()}, or run `python tools/bigfiles.py key --set`"
+                        + (f" (it could not be fetched from {', '.join(sources)}: sign in to it first)" if sources else ""))
         p = write_secret(new_secret())
         secret = read_secret()
         print(f"KEY   a new key was made and kept in {p}. It is not in git. Copy that file to your other computer.", flush=True)
@@ -348,7 +422,7 @@ def split(a):
         if a.rekey:
             lock = None
         try:
-            master, lock = master_for(lock, make=True)
+            master, lock = master_for(lock, make=True, sources=rules.key_from)
         except NoKey as e:
             sys.exit(f"{e}\n(`split --rekey` locks everything again with the key that is here)")
     cut = kept = 0
@@ -434,11 +508,12 @@ def same_as_committed(e, master):
 
 
 def join(a):
+    rules = Rules()
     entries, lock = read_manifest()
     master, why = None, None
     if any(e.get("locked") for e in entries.values()):
         try:
-            master, lock = master_for(lock)
+            master, lock = master_for(lock, sources=rules.key_from)
         except NoKey as e:
             why = str(e)
     made = whole = bad = nokey = 0
@@ -483,7 +558,7 @@ def status(a):
     master = None
     if any(e.get("locked") for e in entries.values()):
         try:
-            master, lock = master_for(lock)
+            master, lock = master_for(lock, sources=rules.key_from)
         except NoKey as e:
             print(f"NOTE  {e}; locked files are compared by size only", flush=True)
     wrong = 0
@@ -514,7 +589,14 @@ def status(a):
 
 def key(a):
     p = key_file()
+    rules = Rules()
     entries, lock = read_manifest()
+    if a.put:
+        if not rules.key_from:
+            sys.exit("carry.txt has no `key-from` line: it names the private place the key is kept in")
+        put_secret(rules.key_from[0])
+    if not p.is_file() and not a.set and lock is not None and rules.key_from:
+        fetch_secret(rules.key_from)
     if a.set:
         one = getpass.getpass("The key, one line (it is not shown): ").strip()
         if not one:
@@ -574,6 +656,7 @@ def main():
     ap.add_argument("--quick", action="store_true", help="status: compare sizes only, do not read the files")
     ap.add_argument("--brief", action="store_true", help="status: list only what is not whole")
     ap.add_argument("--set", action="store_true", help="key: type the key in and keep it in the key file")
+    ap.add_argument("--put", action="store_true", help="key: put this computer's key into the private place of carry.txt's key-from line")
     a = ap.parse_args()
     {"split": split, "join": join, "status": status, "key": key, "audit": audit}[a.what](a)
 

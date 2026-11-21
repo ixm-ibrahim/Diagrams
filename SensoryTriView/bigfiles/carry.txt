@@ -3,6 +3,10 @@
 # A line that starts with `lock`: every file there, whatever its size, enters git only as encrypted parts.
 # `**` is any run of folders, `*` any run of characters inside one name, `!` takes files out again.
 
+# Where the key of the locked files is kept: a private repository, read only with its owner's sign-in. With no key
+# file on a computer, `join` fetches the key from here by itself. A place that can be read without signing in is refused.
+key-from https://github.com/ixm-ibrahim/sensory-triview-key.git
+
 # The man of rung 3 as he passed: alone, and standing at the sill. Both scenes pack the scanned skin maps, so both
 # are locked.
 lock scenes/rung3_man_c.blend
