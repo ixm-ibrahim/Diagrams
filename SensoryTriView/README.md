@@ -2,6 +2,16 @@
 
 What this folder holds is said at the top of `.gitignore`. This page says how to stand the folder up on another computer.
 
+## On a new computer, all of it
+
+```
+git clone --single-branch --branch sensory-tri-view https://github.com/ixm-ibrahim/Diagrams.git
+cd Diagrams/SensoryTriView
+python tools/bigfiles.py join
+```
+
+Git asks for the owner's GitHub sign-in once, if the computer is not signed in yet. The key and every carried file follow from that.
+
 ## After a clone or a pull
 
 ```
@@ -26,7 +36,7 @@ The key is one line of text in one small file, kept outside this folder and neve
 <your home folder>/.sensory_triview/bigfiles.key
 ```
 
-On another computer there is nothing to do: with no key file there, `join` fetches the key by itself from a private repository, named by the `key-from` line of `bigfiles/carry.txt`. Git asks for the GitHub sign-in of that repository's owner if the computer is not signed in yet. Nobody else can fetch it.
+On another computer there is nothing to do: with no key file there, `join` fetches the key by itself from the owner's private repository of keys. That repository holds the keys of his development projects, one folder a project, and the `key-from` line of `bigfiles/carry.txt` names it and this project's key inside it. Git asks for the GitHub sign-in of that repository's owner if the computer is not signed in yet. Nobody else can fetch it.
 
 If that ever fails, the old ways still work: copy the key file to the same place there, or run `python tools/bigfiles.py key --set` and type or paste its one line.
 

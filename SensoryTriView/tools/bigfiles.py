@@ -24,10 +24,11 @@ folder (the variable BIGFILES_KEY names another place). `split` makes one when t
 repository and this tool never prints it. Lose it and the locked files in git cannot be opened: the files on a
 computer that has them are then the only copies.
 On another computer the key comes by itself when carry.txt has a line `key-from <address of a private git
-repository>`: with no key file there, `join` fetches the key from that repository with the user's own sign-in and
-keeps it. `python tools/bigfiles.py key --put` puts this computer's key into that repository. A place that can be
-read without signing in is refused both ways: a key there would open the locked files for everyone. Without such a
-line: copy the key file to the same place on the other computer, or run `python tools/bigfiles.py key --set` there
+repository> <path of the key inside it>`: with no key file there, `join` fetches the key from that repository with
+the user's own sign-in and keeps it. The repository may hold the keys of many projects, each at its own path.
+`python tools/bigfiles.py key --put` puts this computer's key there and leaves everything else in it alone. A
+place that can be read without signing in is refused both ways: a key there would open the locked files for
+everyone. Without such a line: copy the key file to the same place on the other computer, or run `python tools/bigfiles.py key --set` there
 and type or paste its one line.
 
 How a file is locked, with Python's standard library alone: the key line is stretched by scrypt (2^16, 8, 1, a random
@@ -104,7 +105,11 @@ class Rules:
         for line in CARRY.read_text(encoding="utf-8").splitlines():
             line = line.split("#", 1)[0].strip()
             if line.split(None, 1)[:1] == ["key-from"] and len(line.split(None, 1)) == 2:
-                self.key_from.append(line.split(None, 1)[1].strip())
+                words = line.split()[1:]                     # the repository's address, then the key's path inside it
+                inside = (words[1] if len(words) > 1 else "bigfiles.key").replace("\\", "/").strip("/")
+                if ".." in inside.split("/") or not inside:
+                    sys.exit(f"{CARRY}: the key's path in a key-from line must lie inside the repository: {line}")
+                self.key_from.append((words[0], inside))
                 continue
             line = line.replace("\\", "/")
             if not line:
@@ -269,30 +274,38 @@ def open_to_strangers(url):
     return os.environ.get("BIGFILES_TEST_OPEN_KEY_PLACE") != "1" and quiet_git("ls-remote", url, anonymous=True).returncode == 0
 
 
-def fetch_secret(sources):
-    """The key fetched from the first private place of carry.txt's `key-from` lines that gives it, and kept in the key file."""
+def scrub(folder):
     import shutil
+    shutil.rmtree(folder, onerror=lambda f, path, e: (os.chmod(path, 0o700), f(path)))
+
+
+def fetch_secret(sources):
+    """The key fetched from the first private place of carry.txt's `key-from` lines that gives it, and kept in the key file.
+    A place is (the address of a private git repository, the key's path inside it)."""
     import tempfile
-    for url in sources:
+    for url, inside in sources:
         if open_to_strangers(url):
             print(f"NOTE  {url} can be read without signing in: no key is taken from there", flush=True)
             continue
-        tmp = tempfile.mkdtemp(prefix="bigfiles_key_")
-        try:
-            if quiet_git("clone", "-q", "--depth", "1", "--branch", "main", url, tmp).returncode == 0 and (pathlib.Path(tmp) / "bigfiles.key").is_file():
-                lines = (pathlib.Path(tmp) / "bigfiles.key").read_text(encoding="utf-8").strip().splitlines()
-                if lines and lines[0].strip():
-                    p = write_secret(lines[0].strip())
-                    print(f"KEY   fetched from {url} with your sign-in and kept in {p}", flush=True)
-                    return True
-        finally:
-            shutil.rmtree(tmp, onerror=lambda f, path, e: (os.chmod(path, 0o700), f(path)))
+        for branch in ([], ["--branch", "main"]):          # the repository's own main line first, then one named main
+            tmp = tempfile.mkdtemp(prefix="bigfiles_key_")
+            try:
+                found = pathlib.Path(tmp) / inside
+                if quiet_git("clone", "-q", "--depth", "1", *branch, url, tmp).returncode == 0 and found.is_file():
+                    lines = found.read_text(encoding="utf-8").strip().splitlines()
+                    if lines and lines[0].strip():
+                        p = write_secret(lines[0].strip())
+                        print(f"KEY   fetched from {url} ({inside}) with your sign-in and kept in {p}", flush=True)
+                        return True
+            finally:
+                scrub(tmp)
     return False
 
 
-def put_secret(url):
-    """The key of this computer put into the private place `url`, as its one file bigfiles.key."""
-    import shutil
+def put_secret(url, inside):
+    """The key of this computer put into the private repository `url` as the file `inside`. Whatever else the
+    repository holds, other projects' keys among it, is left as it is: the repository is fetched, the one file is
+    written, and the change is pushed on top without force."""
     import tempfile
     secret = read_secret()
     if secret is None:
@@ -300,19 +313,40 @@ def put_secret(url):
     if open_to_strangers(url):
         sys.exit(f"{url} can be read without signing in. A key there would open the locked files for everyone: nothing was sent")
     tmp = tempfile.mkdtemp(prefix="bigfiles_key_")
+
+    def git(*args, must=True):
+        r = quiet_git(*args, cwd=tmp)
+        if must and r.returncode != 0:
+            scrub(tmp)
+            sys.exit(f"could not put the key into {url}: git {args[0]} said {r.stderr.decode('utf-8', 'replace').strip()[:300]}")
+        return r
+
     try:
-        (pathlib.Path(tmp) / "bigfiles.key").write_text(secret + "\n", encoding="utf-8", newline="\n")
-        (pathlib.Path(tmp) / "README.md").write_text("The key of tools/bigfiles.py for the Sensory Tri-View folder. Keep this repository private.\n", encoding="utf-8", newline="\n")
-        steps = (["init", "-q", "-b", "main"], ["add", "bigfiles.key", "README.md"],
-                 ["-c", "user.name=bigfiles", "-c", "user.email=bigfiles@localhost", "commit", "-q", "-m", "the key"],
-                 ["push", "-q", "--force", url, "HEAD:refs/heads/main"])
-        for step in steps:
-            r = quiet_git(*step, cwd=tmp)
-            if r.returncode != 0:
-                sys.exit(f"could not put the key into {url}: git {step[0]} said {r.stderr.decode('utf-8', 'replace').strip()[:300]}")
+        git("init", "-q", "-b", "main")
+        git("remote", "add", "origin", url)
+        heads = git("ls-remote", "--heads", "origin").stdout.decode("utf-8", "replace").split()
+        names = [h.split("refs/heads/", 1)[1] for h in heads if h.startswith("refs/heads/")]
+        branch = "main" if "main" in names or not names else names[0]
+        if names:                                     # the repository holds something already: build on it
+            git("fetch", "-q", "origin", branch)
+            git("checkout", "-q", "-B", branch, "FETCH_HEAD")
+        target = pathlib.Path(tmp) / inside
+        if target.is_file() and target.read_text(encoding="utf-8").strip().splitlines()[:1] == [secret]:
+            print(f"KEY   {url} ({inside}) holds this key already", flush=True)
+            return
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(secret + "\n", encoding="utf-8", newline="\n")
+        readme = pathlib.Path(tmp) / "README.md"
+        if not readme.exists():
+            readme.write_text("Private keys for development projects, one folder a project. Keep this repository private.\n", encoding="utf-8", newline="\n")
+            git("add", "README.md")
+        git("add", inside)
+        git("-c", "user.name=bigfiles", "-c", "user.email=bigfiles@localhost", "commit", "-q", "-m", f"the key of {inside}")
+        git("push", "-q", "origin", f"HEAD:refs/heads/{branch}")
     finally:
-        shutil.rmtree(tmp, onerror=lambda f, path, e: (os.chmod(path, 0o700), f(path)))
-    print(f"KEY   put into {url}", flush=True)
+        if os.path.isdir(tmp):
+            scrub(tmp)
+    print(f"KEY   put into {url} as {inside}", flush=True)
 
 
 def master_for(lock, make=False, sources=()):
@@ -324,10 +358,11 @@ def master_for(lock, make=False, sources=()):
     if secret is None:
         if not make or lock is not None:          # files are locked already: only their own key will do, never a new one
             raise NoKey(f"no key here: copy the key file to {key_file()}, or run `python tools/bigfiles.py key --set`"
-                        + (f" (it could not be fetched from {', '.join(sources)}: sign in to it first)" if sources else ""))
+                        + (f" (it could not be fetched from {', '.join(u for u, _ in sources)}: sign in to it first)" if sources else ""))
         p = write_secret(new_secret())
         secret = read_secret()
-        print(f"KEY   a new key was made and kept in {p}. It is not in git. Copy that file to your other computer.", flush=True)
+        print(f"KEY   a new key was made and kept in {p}. It is not in git. "
+              + ("`python tools/bigfiles.py key --put` puts it into the private place of carry.txt." if sources else "Copy that file to your other computer."), flush=True)
     if lock is None:
         if not make:
             raise NoKey("the manifest holds no lock record")
@@ -594,7 +629,7 @@ def key(a):
     if a.put:
         if not rules.key_from:
             sys.exit("carry.txt has no `key-from` line: it names the private place the key is kept in")
-        put_secret(rules.key_from[0])
+        put_secret(*rules.key_from[0])
     if not p.is_file() and not a.set and lock is not None and rules.key_from:
         fetch_secret(rules.key_from)
     if a.set:
